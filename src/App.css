@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/****** Hide Google Translate UI ******/
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-gadget-simple,
+.goog-te-gadget {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+}
+
+/* Hide iframe for Google Translate banner */
+iframe[style*="visibility: visible"] {
+  display: none !important;
+}
+
+
+/* Hide Google Translate toolbar */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide the Google Translate popup and frame */
+.goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Hide language dropdown */
+.goog-te-combo {
+  display: none !important;
+}
+
+/* Hide Google Translate overlay */
+.goog-te-gadget {
+  display: none !important;
+}
+
+.skiptranslate{
+  display: none !important;
+}
+/* .VIPg3d-yAWNEb-VlPg3d-fmcms-sn54Q:active{
+  background: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+} */

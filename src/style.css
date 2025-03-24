@@ -1,0 +1,14 @@
+p {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-gadget-simple {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+}

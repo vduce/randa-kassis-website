@@ -1,0 +1,39 @@
+p{
+    color: red;
+}
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-gadget-simple {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+}
+/* Hide Google Translate toolbar */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide the Google Translate popup and frame */
+.goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Hide language dropdown */
+.goog-te-combo {
+  display: none !important;
+}
+
+/* Hide Google Translate overlay */
+.goog-te-gadget {
+  display: none !important;
+}
+.skiptranslate{
+  display: none !important;
+}
