@@ -5,7 +5,7 @@ import VideoModal from '../ModalVideo/VideoModal'
 import FunFactVideo from '../FunFactVideo/FunFactVideo'
 import { Link } from "react-router-dom";
 
-import Hero2 from '../../components/about2/about-photo.jpeg'
+import Hero2 from '../../components/about2/about-photo.png'
 const About2 = (props) => {
     return (
         <section className="wpo-about-section-s4 section-padding">
@@ -24,7 +24,7 @@ const About2 = (props) => {
                         <div className="col-lg-6 col-md-12 col-12">
                             <div className="wpo-about-text">
                                 <div className="wpo-section-title">
-                                    <span>Consilium & Vision</span>
+                                <span className="notranslate">Consilium & Vision</span>
                                     {/* <h2>Kassis meets Rayburn, US Special Envoy for Syria.</h2> */}
                                 </div>
                                 <p>My political beliefs have been shaped by a lifetime of intellectual rebellion, activism, and a deep engagement with history, philosophy, and the realities of power. I reject all forms of ideological rigidity, recognising that dogma—no matter its source—inevitably leads to oppression. </p>        

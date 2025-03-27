@@ -97,18 +97,33 @@ const blogs2 = [
         title: "A rebel at heart: My Story",
         slug: "a-rebel-at-heart-my-story",
         screens: pImg3,
-        description: `Photo 1 Photo 2<strong> died 24 June 1990</strong> <strong>died 26 February 2025.</strong> </strong>
-I have no right to weep for you, for I was never by your side. I have no right to speak of pain, for I was always far from you.
-I cannot even ask for your forgiveness, for you have departed this life, and there is no life for you beyond it. How, then, can I console myself, when I have spent years burdened by the bitterness of self-reproach since my father’s passing? I left just days before his death and never stayed. Was I fleeing from grief, from finality? Or was I simply placing myself above all else? I do not know…
-`,
-        des2: "But I do know that I have done it again—with you. I returned to Syria a month before your death, yet I left you once more. Was it something in my blood, an instinct to escape? Or do I carry a detachment that even I do not fully understand? Perhaps… I will find no answer until my own final moments—only then will I know what you both felt when your children were absent.",
-        des3: "And I do not know why I write these words. Am I confessing my failures, declaring to the world that I was a daughter who never truly thought of you? Or am I simply trying to release the weight that chokes me? Perhaps I am just someone incapable of keeping emotions locked within, needing to declare to all: I am who I am.",
-        des4: "Nothing has stripped me of my strength as your absence has. Nothing has left me so exposed to my sorrow as your passing has. I know you devoted yourself to others, but I am certain that our distance caused you sadness—even if you never admitted it, even if you refused to acknowledge it. And I know, too, that we all disappointed you. You had every right to feel that way. For had my own daughter done to me what I did to you, I would have felt the same.",
-        des5: "At night, when I struggle to sleep despite the breathing exercises and techniques that no longer work, my mind drifts far away. I stare into the void, drowning in memories of all those I have loved—you among them. And I admit that I was harsh with you—or perhaps harshness has simply become a part of me. I search for you, for all those I have loved and lost, within the corridors of my mind, which still clings to your memory and theirs. No doubt you are present now with greater intensity because your departure is the most recent, while my memory pushes away those who left long ago. I wonder in silence: Can you hear me, wherever you are? But reason whispers back: There is no one there to listen.",
-        des6: "All I have left of you are memories and the image of your face in my mind, just like those who passed before you. I will carry your memory like an ember in my heart—painful, yet the only thing that keeps me close to you. No other world will reunite us, but you will remain alive within me, an eternal presence that will stay with me for the rest of my days.",
-        des7: "My only solace is knowing that you are free from pain.",
-        des8: "And so, I write—not to seek redemption, nor to be absolved of what I cannot change, but simply because silence is unbearable.",
-
+        description: `<strong>Prologue</strong>`,
+        des2: `Photo 1 Photo 2 `,
+        des3: `<div class="responsive-text">
+      <strong>Died 26 February 2025</strong>
+      <strong>Died 24 June 1990</strong>
+    </div>
+    <style>
+      .responsive-text {
+        display: flex;
+        gap: 140px;
+        width: 100%;
+        justify-content: center;
+      }
+      @media (max-width: 600px) {
+        .responsive-text {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+    </style>`,
+        des4: `I have no right to weep for you, for I was never by your side. I have no right to speak of pain, for I was always far from you.
+I cannot even ask for your forgiveness, for you have departed this life, and there is no life for you beyond it. How, then, can I console myself, when I have spent years burdened by the bitterness of self-reproach since my father's passing? I left just days before his death and never stayed. Was I fleeing from grief, from finality? Or was I simply placing myself above all else? I do not know…`,
+        des5: "But I do know that I have done it again—with you. I returned to Syria a month before your death, yet I left you once more. Was it something in my blood, an instinct to escape? Or do I carry a detachment that even I do not fully understand? Perhaps… I will find no answer until my own final moments—only then will I know what you both felt when your children were absent.",
+        des6: "And I do not know why I write these words. Am I confessing my failures, declaring to the world that I was a daughter who never truly thought of you? Or am I simply trying to release the weight that chokes me? Perhaps I am just someone incapable of keeping emotions locked within, needing to declare to all: I am who I am.",
+        des7: "Nothing has stripped me of my strength as your absence has. Nothing has left me so exposed to my sorrow as your passing has. I know you devoted yourself to others, but I am certain that our distance caused you sadness—even if you never admitted it, even if you refused to acknowledge it. And I know, too, that we all disappointed you. You had every right to feel that way. For had my own daughter done to me what I did to you, I would have felt the same.",
+        des8: "At night, when I struggle to sleep despite the breathing exercises and techniques that no longer work, my mind drifts far away. I stare into the void, drowning in memories of all those I have loved—you among them. And I admit that I was harsh with you—or perhaps harshness has simply become a part of me. I search for you, for all those I have loved and lost, within the corridors of my mind, which still clings to your memory and theirs. No doubt you are present now with greater intensity because your departure is the most recent, while my memory pushes away those who left long ago. I wonder in silence: Can you hear me, wherever you are? But reason whispers back: There is no one there to listen.",
+        des9:`All I have left of you are memories and the image of your face in my mind, just like those who passed before you. I will carry your memory like an ember in my heart—painful, yet the only thing that keeps me close to you. No other world will reunite us, but you will remain alive within me, an eternal presence that will stay with me for the rest of my days.My only solace is knowing that you are free from pain.And so, I write not to seek redemption, nor to be absolved of what I cannot change, but simply because silence is unbearable.`,
         author: "randa-kassis",
         authorTitle: "politician",
         date: "25 Sep 2023",
@@ -120,7 +135,7 @@ I cannot even ask for your forgiveness, for you have departed this life, and the
     },
     {
         Id: '1',
-        screens: sImgS1,   
+        screens: sImgS1,
         title: 'Opposition Leader: Resolution of Syrian Crisis Should Be Kick-Started in Sochit',
         slug: 'Opposition-Leader',
         author: 'john doe',
@@ -129,29 +144,29 @@ I cannot even ask for your forgiveness, for you have departed this life, and the
 The Russia-hosted Syrian National Dialogue Congress in Sochi may pave the way to the resolution of the Syrian crisis, Randa Kassis, the leader of the “Astana platform” of the Syrian opposition, has told Sputnik, highlighting the necessity of the creation of the constitutional commission during the ongoing summit to facilitate the peace process.`,
         des2: `Those who have come to the Syrian National Dialogue Congress in the Russian resort city of Sochi are motivated by patriotism and responsibility for the future of their country, Randa Kassis, the leader of the “Astana platform” of the Syrian opposition, told Sputnik Arabic, slamming those who snubbed the summit.`,
         des3: `“Anyone who refused to participate in the Sochi congress is irresponsible,” the politician highlighted.`,
-        des4:`According to Kassis, all the members of her delegation understand that the Syrian crisis could not be resolved under the aegis of the United States. The Syrians have to kick-start the process themselves, here, in Sochi, she stressed.`,
-        des5:`
+        des4: `According to Kassis, all the members of her delegation understand that the Syrian crisis could not be resolved under the aegis of the United States. The Syrians have to kick-start the process themselves, here, in Sochi, she stressed.`,
+        des5: `
 “We must continue to work despite numerous difficulties faced by the Syrian opposition,” the politician said. “We must do everything to ensure the success of the Sochi talks.”`,
-        des6:`
+        des6: `
 Kassis underscored that President Vladimir Putin's initiative to hold the Syrian National Dialogue Congress in Sochi is an important step, which, unfortunately, was not accepted by some political figures.`,
-        des7:`“If Vladimir Putin initiated something, it means not just the intention to do something, but the implementation of the objectives,” she pointed out. “Therefore, I pin my hopes on the event and this is why we arrived in Sochi.”`,
-        des8:`
+        des7: `“If Vladimir Putin initiated something, it means not just the intention to do something, but the implementation of the objectives,” she pointed out. “Therefore, I pin my hopes on the event and this is why we arrived in Sochi.”`,
+        des8: `
 The politician emphasized that she had made efforts to gather as many representatives of the Syrian opposition as possible to form a working group. “We need to start finding the way out of the crisis immediately. I believe that it is impossible without the creation of a new constitution,” she noted.`,
-        des9:`
+        des9: `
 Speaking to Sputnik, Kassis shed light on the Astana platform’s plans and program. The politician emphasized the necessity to create a “constitutional commission” within the framework of the negotiations.`,
-        des10:`
+        des10: `
 “We need to start working on a new Syrian constitution,” she said. “We have prepared our own draft constitution, on which we have spent a year working on.”`,
-        des11:`According to the politician one of the most important issues concerning the future Syrian constitution is the maintenance of a secular state: “To clarify this issue I offered the following [definition]: the secularism is defined by the state’s neutrality to religious or non-religious beliefs of a Syrian citizen,” she said, “Beliefs could be not only religious, it could be views or a position and a person should have freedom [to express them].”`,
-        des12:`
+        des11: `According to the politician one of the most important issues concerning the future Syrian constitution is the maintenance of a secular state: “To clarify this issue I offered the following [definition]: the secularism is defined by the state’s neutrality to religious or non-religious beliefs of a Syrian citizen,” she said, “Beliefs could be not only religious, it could be views or a position and a person should have freedom [to express them].”`,
+        des12: `
 The present Syrian constitution offers four options to define a Syrian citizen’s religious beliefs: Sunni Muslim, Druze, Orthodox or Catholic Christian. Kassis explained that for ordinary Syrians the matters of marriages and inheritance are closely connected with their religious beliefs and existing state laws.
 `,
-        des13:`
+        des13: `
 She noted that “in order to overcome the potential difficulties” she proposes “to introduce the fifth category — “a Syrian citizen” — without any religious references.`,
-        des14:`“It is necessary to give the Syrians the freedom of choice. A person may prefer to live in an exclusively secular legal field,” Kassis suggested.`,
-        des15:`On January 30 the Syrian national dialogue congress officially opened in Sochi. The summit has brought together various opposition and pro-governmental forces, as well as representatives of the country’s numerous ethnic and religious groups in order to facilitate the peace process with the focus on the Syrian constitution and elections.`,
-        des16:`
+        des14: `“It is necessary to give the Syrians the freedom of choice. A person may prefer to live in an exclusively secular legal field,” Kassis suggested.`,
+        des15: `On January 30 the Syrian national dialogue congress officially opened in Sochi. The summit has brought together various opposition and pro-governmental forces, as well as representatives of the country’s numerous ethnic and religious groups in order to facilitate the peace process with the focus on the Syrian constitution and elections.`,
+        des16: `
 The UN Security Council permanent members as well as Egypt, Iraq, Jordan, Kazakhstan, Lebanon and Saudi Arabia were also invited to participate in the event as observers. However, a number of states including the US and France, refused to attend, as did the Syrian Negotiation Commission (SNC) opposition group.`,
-        des17:``,
+        des17: ``,
         icon: 'flaticon-credit',
         ssImg1: sImgS1,
         ssImg2: sImgS1,
@@ -302,7 +317,7 @@ Those talks were delayed once but have now begun. But without main members of th
         des5: "My first physical confrontation was a defining moment. It happened in the schoolyard, a place that, for many children, is merely a setting for games and lessons, but for me, it became an early battlefield. A group of boys, emboldened by their own sense of entitlement, sought to intimidate me. I refused to shrink. When one of them made his move, I retaliated. I knocked him to the ground, but that act of defiance came at a price. The boys turned on me, pelting me with stones.",
         des6: "The pain was real, but it wasn’t what left a mark on me. What I remember most vividly isn’t the pain—it’s the realisation that fear is a weapon. And I could choose not to carry it. I stood there, battered but unbroken, and something shifted within me. I knew that mere defence was not enough. I had to go on the offensive.",
         des7: "I charged toward one of the boys, grabbed a stone larger than the ones they had thrown, and raised it high. For a brief second, I hesitated. Did I truly intend to strike? Or was it enough that they believed I would? I will never know the answer. What I do know is that in that moment, the balance of power changed. I saw fear flicker in their eyes, and with it, I understood something fundamental: power is an illusion, sustained only by submission. I had refused to submit.",
-        des8:`That moment did not just shape how others saw me; it shaped how I saw myself. It changed my place in that school. The girls, who had once been passive observers, now looked to me for protection. The boys, who had sought to put me in my place, now knew I would not be tamed. But beyond that, something deeper had taken root in me. I understood, in a visceral way, that authority—whether in the form of a schoolyard bully or a greater system—was only as strong as our willingness to accept it. That lesson stayed with me. Over time, I distanced myself from all girls who had once followed the script written for them. I questioned religion, society, morality—every structure that sought to define my existence. My father, an agnostic, had instilled in me the value of independent thought, and I took that lesson to its extreme. I rejected all imposed beliefs, seeing them as viruses infecting human minds. My disdain for authority extended beyond the personal to the political, and my involvement in Syria’s revolution was not just a political stance—it was an extension of who I had become.`,
+        des8: `That moment did not just shape how others saw me; it shaped how I saw myself. It changed my place in that school. The girls, who had once been passive observers, now looked to me for protection. The boys, who had sought to put me in my place, now knew I would not be tamed. But beyond that, something deeper had taken root in me. I understood, in a visceral way, that authority—whether in the form of a schoolyard bully or a greater system—was only as strong as our willingness to accept it. That lesson stayed with me. Over time, I distanced myself from all girls who had once followed the script written for them. I questioned religion, society, morality—every structure that sought to define my existence. My father, an agnostic, had instilled in me the value of independent thought, and I took that lesson to its extreme. I rejected all imposed beliefs, seeing them as viruses infecting human minds. My disdain for authority extended beyond the personal to the political, and my involvement in Syria’s revolution was not just a political stance—it was an extension of who I had become.`,
         // des9:`Algeria was my second birth. It was there that I first saw myself clearly, as though I had been shedding layers all along, waiting for the moment when my true nature would finally emerge. Perhaps my first physical fight with the boys at school had been the catalyst for this change. In that moment, I understood—as did everyone else—that the quiet Syrian Randa no longer existed. Fear had left her, and no authority, no God, could intimidate her again`,
         // des10:`Since childhood, I had wrestled with life’s most perplexing questions: What is life? Why do we cling to it so fiercely? Is it driven by our egocentrism, or merely the cowardice to sever what procreation has set in motion?`,
         // des8:``,
@@ -326,14 +341,14 @@ Those talks were delayed once but have now begun. But without main members of th
         description: `Algeria was my second birth. It was there that I first saw myself clearly, as though I had been shedding layers all along, waiting for the moment when my true nature would finally emerge. Perhaps my first physical fight with the boys at school had been the catalyst for this change. In that moment, I understood—as did everyone else—that the quiet Syrian Randa no longer existed. Fear had left her, and no authority, no God, could intimidate her again.
 `,
         des2: "Since childhood, I had wrestled with life’s most perplexing questions: What is life? Why do we cling to it so fiercely? Is it driven by our egocentrism, or merely the cowardice to sever what procreation has set in motion?  Photo 7 Photo 8 Photo 9 ",
-        des3: "<strong>Returning to Syria: A Turbulent Teenage Rebel</strong>",
+        des3: `<strong style="text-align: start; display: block;">Returning to Syria: A Turbulent Teenage Rebel</strong>`,
         des4: "When I returned to Syria at 12,I rebelled against everyone—authority, the police, and especially the political system. I refused to be enrolled in the Shabiba (Ba’ath Youth), rejecting the indoctrination and slogans forced upon students. I never accepted to be just a number in this country, a cog in the system that dictated how we should think, act, and exist.",
         des5: "Since the age of fourteen, I had engaged my friends in Damascus in debates over the existence of God. Back then, no one dared question religion or the notion of a creator. They labelled me a heretic, believingthat me disregard for social and political order was a direct result ofmy rejection of both God and authority.",
 
         des6: "At fifteen, my rebellion deepened. I made acquaintances with French employees at the French Cultural Center, where I found an intellectual and cultural connection that was absent amongmy own friends. At the same time, I traveled across Syria with friends my age, engaging in endless debates about God, religions, and the taboos that society tried to impose on us. Photo 10 Photo 11 Photo 12 Photo 13",
         des7: "After my baccalaureate, I went to Germany to study, but I quickly realised that its structured, rigid, and highly organised society did not suit me. It felt too constrained, too predictable, too confining.",
-        des8:`There, I met refugees who had fled war—Lebanese, Palestinians—and for the first time, I truly connected with the full scope of Palestinian suffering, beyond the fragments I had heard from my mother, who worked at UNRWA in Damascus, or the stories of resistance I had encountered at school. Photo 14 Photo 15 Photo 16 Photo 17`,
-         des9:`I went to Paris, the city I had first fallen in love with at 10 years old, a place that had left an imprint on my mind. Paris had always felt like home—its intellectual vibrancy, its artistic defiance, its embrace of free thought resonated with the spirit of rebellion I carried within me.`,
+        des8: `There, I met refugees who had fled war—Lebanese, Palestinians—and for the first time, I truly connected with the full scope of Palestinian suffering, beyond the fragments I had heard from my mother, who worked at UNRWA in Damascus, or the stories of resistance I had encountered at school. Photo 14 Photo 15 Photo 16 Photo 17`,
+        des9: `I went to Paris, the city I had first fallen in love with at 10 years old, a place that had left an imprint on my mind. Paris had always felt like home—its intellectual vibrancy, its artistic defiance, its embrace of free thought resonated with the spirit of rebellion I carried within me.`,
 
         author: "randa-kassis",
         authorTitle: "politician",
@@ -358,9 +373,9 @@ Those talks were delayed once but have now begun. But without main members of th
 
         des6: "At the beginning of 1994, I started painting. My brother, Jean—one of the greatest contemporary painters in my eyes—was my first inspiration. I was drawn to his creative style, captivated by the raw intensity of his work.",
         des7: "For me, painting was never just a craft; it was an act of defiance—a rebellion against imposed narratives and the rigid expectations of what a woman should be. My work was raw, unfiltered, unapologetic. From the very beginning, my art was a form of resistance, a means to challenge the world as I saw it, to reject the suffocating conventions that sought to dictate how a woman, a body, or an artist should be perceived.",
-        des8:`The female form has always been central to my work, but not in the way it’s been commodified for centuries. I refused to depicted it as a passive object of beauty or desire. To me, the body is a battlefield—a paradox, both a prison and a tool of liberation. My brushstrokes were never meant to comfort; they were meant to provoke, to unearth something unsettling, something that forces the viewer to confront their own gaze, their own biases.`,
-         des9:`I never cared for perfect symmetry or predictable aesthetics. I paint to merge chaos with structure, to blend dream and reality until the line between them collapses. My canvases don’t tell linear stories—they vibrate, they pulse with contradictions. Critics have said my work feels like music—that it carries its own rhythm. I like that idea. Because art, for me, has always been about breaking silence, shattering complacency.`,
-         des10:`I’ve exhibited my work in different places, seen people stare, question, sometimes even recoil. And I embrace that. Art should be unsettling. It should gnaw at something inside you, push you to see beyond the surface.Photo 25 Photo 26 Photo 27 Photo 28 Photo 29 `,
+        des8: `The female form has always been central to my work, but not in the way it’s been commodified for centuries. I refused to depicted it as a passive object of beauty or desire. To me, the body is a battlefield—a paradox, both a prison and a tool of liberation. My brushstrokes were never meant to comfort; they were meant to provoke, to unearth something unsettling, something that forces the viewer to confront their own gaze, their own biases.`,
+        des9: `I never cared for perfect symmetry or predictable aesthetics. I paint to merge chaos with structure, to blend dream and reality until the line between them collapses. My canvases don’t tell linear stories—they vibrate, they pulse with contradictions. Critics have said my work feels like music—that it carries its own rhythm. I like that idea. Because art, for me, has always been about breaking silence, shattering complacency.`,
+        des10: `I’ve exhibited my work in different places, seen people stare, question, sometimes even recoil. And I embrace that. Art should be unsettling. It should gnaw at something inside you, push you to see beyond the surface.Photo 25 Photo 26 Photo 27 Photo 28`,
 
         author: "randa-kassis",
         authorTitle: "politician",
@@ -380,15 +395,15 @@ Those talks were delayed once but have now begun. But without main members of th
         screens: pImg3,
         description: `<strong>1997–2007: A Life of Art, Motherhood, and Fighting Spirit</strong>`,
         des2: "Between 1997 and 2007, I balanced motherhood, art, and self-discipline. I had separated from my daughter’s father when she was almost two years old. Until she was 14, when the Syrian revolt began, my life was intertwined with hers.",
-        des3: "I drove her to her activities,to seefriends—we traveled together, went out often, even with my own friends. I was never absent from her life. But at the same time, I pursued my own path, refusing to let motherhood define me entirely.Photo 30 Photo 31 Photo 32 Photo 33 Photo 34 Photo 35 Photo 36 Photo 37 Photo 38",
+        des3: "I drove her to her activities,to seefriends—we traveled together, went out often, even with my own friends. I was never absent from her life. But at the same time, I pursued my own path, refusing to let motherhood define me entirely.Photo 30 Photo 31 Photo 32 Photo 33 Photo 34 Photo 35 Photo 36 Photo 37",
         des4: "Along side this, I trained in kickboxing and Muay Thai—not just for self-defence, but for self-control. The disciplineI gained in combat extended beyond the ring, shaping how I approached life itself.Photo 39 Photo 40 Photo 41",
         des5: "Seeking another artistic outlet, I enrolled at “Cours Florent,” immersing myself in performance and storytelling. Theatre gave me a voice—a structured yet liberating way to channel my thoughts and emotions. It was through this experience that I later began writing for Al Hiwar Al Mutamadin. Photo 42 Photo 43 Photo 44 Photo 45",
 
         des6: "<strong>2007: The Turning Point—My Atheist and Political Activism</strong>",
         des7: "In 2007, I began writing to challenge religious and political dogmas in the Arab world. My knowledge of psychology and anthropology helped me dissect religions and cultures, which became the foundation of my first articles, writings, and TV program.",
-        des8:`I wrote publicly, encouraged by my elder brother Nabil, who believed in me and in my ability to write. Perhaps I had inherited this gift from my father—the ability to dismantle the dogmas that governed so many aspects of life in the Arab world.`,
-         des9:`At the time, platforms like Al Hiwar Al Mutamadin (Civil Discourse) were among the few spaces where secularists, atheists, and free thinkers could engage in meaningful discussions without censorship. Through these debates, I connected with like-minded individuals such as Kacem El Ghazzali, Waleed Al-Husseini, and many others who, like me, waged an intellectual rebellion against the constraints imposed by religion and tradition.`,
-         des10:`My activism wasn’t confined to words—it was action. I helped ex-Muslims escape persecution—providing financially and logistical support, and at times, offering them refuge when they had nowhere else to turn.Photo 46 Photo 47 Photo 48`,
+        des8: `I wrote publicly, encouraged by my elder brother Nabil, who believed in me and in my ability to write. Perhaps I had inherited this gift from my father—the ability to dismantle the dogmas that governed so many aspects of life in the Arab world.`,
+        des9: `At the time, platforms like Al Hiwar Al Mutamadin (Civil Discourse) were among the few spaces where secularists, atheists, and free thinkers could engage in meaningful discussions without censorship. Through these debates, I connected with like-minded individuals such as Kacem El Ghazzali, Waleed Al-Husseini, and many others who, like me, waged an intellectual rebellion against the constraints imposed by religion and tradition.`,
+        des10: `My activism wasn’t confined to words—it was action. I helped ex-Muslims escape persecution—providing financially and logistical support, and at times, offering them refuge when they had nowhere else to turn.Photo 46 Photo 47 Photo 48`,
 
         author: "randa-kassis",
         authorTitle: "politician",
@@ -414,9 +429,9 @@ Those talks were delayed once but have now begun. But without main members of th
 
         des6: "<strong>A New Political Vision: Building a Pluralistic Future</strong>",
         des7: "During this turbulent period, my life took botha personal and political turn. I met my love,Fabien Baussart, who would later become my husband and a partner in political initiatives. Together, we launched multiple political projects to counter the forces that had excluded me.Photo 52 Photo 53 Photo 54 Photo 55 Photo 56 Photo 57 Photo 58 Photo 59 ",
-        des8:`Determined to continue my fight for a secular, pluralistic Syria, I established the Movement for a Pluralistic Societywith the help of Fabien after my exclusion from both the SNC and the secular democratic forces. This was my way of ensuring that the principles of secularism, democracy, and coexistence did not disappear amid the chaos of war and extremism.Photo 60 Photo 61 Photo 62 `,
-         des9:`One of the key political initiatives I spearheaded was the Astana Platform, which I launched with Fabien in 2015 afterrequestingthat the President of Kazakhstanestablish a spaceto unitemoderate Syrian opposition figures. Video 1`,
-         des10:`I participated in the 2016 Geneva Peace Talks as part of the Moscow/Astana groups, serving as Co-President alongside Qadri Jamil in the Syrian secular and democratic opposition delegation.Photo 63 Photo 64 Photo 65`,
+        des8: `Determined to continue my fight for a secular, pluralistic Syria, I established the Movement for a Pluralistic Societywith the help of Fabien after my exclusion from both the SNC and the secular democratic forces. This was my way of ensuring that the principles of secularism, democracy, and coexistence did not disappear amid the chaos of war and extremism.Photo 60 Photo 61 Photo 62 `,
+        des9: `One of the key political initiatives I spearheaded was the Astana Platform, which I launched with Fabien in 2015 afterrequestingthat the President of Kazakhstanestablish a spaceto unitemoderate Syrian opposition figures. Video 1`,
+        des10: `I participated in the 2016 Geneva Peace Talks as part of the Moscow/Astana groups, serving as Co-President alongside Qadri Jamil in the Syrian secular and democratic opposition delegation.Photo 63 Photo 64 Photo 65`,
         author: "randa-kassis",
         authorTitle: "politician",
         date: "25 Sep 2023",
@@ -441,8 +456,8 @@ Those talks were delayed once but have now begun. But without main members of th
 
         des6: "Yet, despite their attempts to silence me, I remained unwavering. I created new platforms, new alliances, and alternative pathways to keep the secular, democratic vision for Syria alive. My political fight was never about seeking a position or personal recognition—it was and remains a struggle to defend a Syria where secularism and pluralism are not erased by either authoritarianism or fundamentalism.",
         des7: "<strong>Legacy of Resistance and Political Survival</strong>",
-        des8:`The political landscape remains treacherous, but survival is its own form of resistance. While many of my former allies turned against me, I continue to shape discussions, influence policy, and push forward alternatives to religious and authoritarian rule.`,
-         des9:`Exclusion did not weaken me—it strengthened my resolve. In a war where voices are either bought, silenced, or erased, mine standsdefiant.`,
+        des8: `The political landscape remains treacherous, but survival is its own form of resistance. While many of my former allies turned against me, I continue to shape discussions, influence policy, and push forward alternatives to religious and authoritarian rule.`,
+        des9: `Exclusion did not weaken me—it strengthened my resolve. In a war where voices are either bought, silenced, or erased, mine standsdefiant.`,
         author: "randa-kassis",
         authorTitle: "politician",
         date: "25 Sep 2023",
@@ -467,10 +482,10 @@ Those talks were delayed once but have now begun. But without main members of th
 
         des6: "In 2016, I co-organised two major conferences. The first, held in Brussels, was titled The Roots of Terrorism: Secularism as the Solution and brought together influential voices such as the Syrian poet Adonis, the Egyptian thinker Sayyid Al-Qimni, and Ensaf Haidar, wife of the imprisoned Saudi blogger Raif Badawi. The second, later that year, tackled the subject of Islamic Fascism, featuring speakers like Hamed Abdel-Samad and the Moroccan philosopher Said Nachid. These events were not just about discussion—they were an assertion of the presence of Arab secularists in a region where they are often silenced.. Photo 76 Photo 77",
         des7: "<strong>Loss, Grief, and the Search for Meaning</strong>",
-        des8:`Since my withdrawal from political life in 2019 and the loss of my beloved dog, Nietzsche, I plunged into a deep state of grief. Nietzsche was more than just a pet; he was an exceptional companion. He possessed an extraordinary sensitivity to music and a remarkable intelligence. His presence was a silent symphony, an extension of the philosopher whose name he bore.`,
-         des9:`To ease my sorrow, I delved into Roger Penrose’s hypothesis of “quantum consciousness”. Yet, as an atheist, I struggled to reconcile my grief with any notion of continuity after death. It felt like a desperate attempt to bridge the gap between loss and logic. I remember vividly that he passed away just one day before Queen Elizabeth—a coincidence that felt both meaningless and strangely poetic.`,
-         des10:`My path has always spiraled inward, rejecting simplicity and craving unfiltered truth. This contradiction within me—my relentless pursuit of change despite my belief in life’s futility—defines who I am. Perhaps the end is the moment peace arrives. Perhaps that is why I never settle, always seeking to escape life’s monotonous routine.`,
-         des11:`Occasionally, life would surprise me, overwhelming me with its fleeting beauty. In those moments, I felt the whisper of freedom—a breeze that stirred me, as if chasing an elusive fragrance. I longed to immerse myself in its breath, to feel it brush my face. Yet even in those flashes of vitality, life revealed itself to me as “Thanatos,” a kaleidoscope of memories and meanings intertwined with the faces of the departed. The image of my beloved Nietzsche would often emerge, igniting an ache that nestled deep within my heart.Photo 78 Photo 79 Video 4 `,
+        des8: `Since my withdrawal from political life in 2019 and the loss of my beloved dog, Nietzsche, I plunged into a deep state of grief. Nietzsche was more than just a pet; he was an exceptional companion. He possessed an extraordinary sensitivity to music and a remarkable intelligence. His presence was a silent symphony, an extension of the philosopher whose name he bore.`,
+        des9: `To ease my sorrow, I delved into Roger Penrose’s hypothesis of “quantum consciousness”. Yet, as an atheist, I struggled to reconcile my grief with any notion of continuity after death. It felt like a desperate attempt to bridge the gap between loss and logic. I remember vividly that he passed away just one day before Queen Elizabeth—a coincidence that felt both meaningless and strangely poetic.`,
+        des10: `My path has always spiraled inward, rejecting simplicity and craving unfiltered truth. This contradiction within me—my relentless pursuit of change despite my belief in life’s futility—defines who I am. Perhaps the end is the moment peace arrives. Perhaps that is why I never settle, always seeking to escape life’s monotonous routine.`,
+        des11: `Occasionally, life would surprise me, overwhelming me with its fleeting beauty. In those moments, I felt the whisper of freedom—a breeze that stirred me, as if chasing an elusive fragrance. I longed to immerse myself in its breath, to feel it brush my face. Yet even in those flashes of vitality, life revealed itself to me as “Thanatos,” a kaleidoscope of memories and meanings intertwined with the faces of the departed. The image of my beloved Nietzsche would often emerge, igniting an ache that nestled deep within my heart.Photo 78 Photo 79 Video 4 `,
         author: "randa-kassis",
         authorTitle: "politician",
         date: "25 Sep 2023",
@@ -495,7 +510,7 @@ Those talks were delayed once but have now begun. But without main members of th
 
         des6: "I recognise the absurdity of emotions—love, fear, joy, grief—but I also saw their fleeting intensity as the fabric of life’s meaning, even if that meaning was illusory.",
         des7: "Humans, I thought, were burdened by their awareness of life’s absurdity, suffering more profoundly than other creatures who simply existed in harmony with nature. This is why I saw animals as superior to humans—free fromexistential dread, they lived in harmony with nature.",
-        des8:`My thoughts often wandered toward reordering the hierarchy of existence. I would elevate dogs to the pinnacle, seeing in them a purity and harmony with nature that humans had long forsaken. If I could, I would burn the gods and uproot the virus of religion from human minds.  If I had the power, I would sterilise humanity as I did my stray animals—not out of cruelty, but mercy.Like them, humans are trapped in a cycle of suffering they are too blind to break. In Greece, I spared strays the misery of endless reproduction; if only humans could be pared from their own self-inflicted torment.`,
+        des8: `My thoughts often wandered toward reordering the hierarchy of existence. I would elevate dogs to the pinnacle, seeing in them a purity and harmony with nature that humans had long forsaken. If I could, I would burn the gods and uproot the virus of religion from human minds.  If I had the power, I would sterilise humanity as I did my stray animals—not out of cruelty, but mercy.Like them, humans are trapped in a cycle of suffering they are too blind to break. In Greece, I spared strays the misery of endless reproduction; if only humans could be pared from their own self-inflicted torment.`,
         author: "randa-kassis",
         authorTitle: "politician",
         date: "25 Sep 2023",
@@ -543,7 +558,7 @@ Those talks were delayed once but have now begun. But without main members of th
         des4: 'Yet, I am not naive about politics. The pursuit of a utopian system is futile; history has shown that every ideological promise of salvation ends in disillusionment. Instead, I believe in pragmatism—seeking solutions that work, adapting to realities without sacrificing core principles. Politics, like life, is fluid, and those who fail to adapt are doomed to irrelevance',
         des5: 'I stand against authoritarianism in all its forms, whether it wears the mask of extremism or the guise of a revolutionary movement that seeks to replace one tyranny with another. True liberation comes not from replacing one ruler with another but from dismantling the structures of oppression themselves.',
         des6: 'Leading the secular movement in Syria as a woman is no easy feat. But despite the challenges, we, along with fellow secularists, stand resolute against oppressive forces. Syria was under Bashar al-Assad and is now under Islamist jihadists like al-Jolani, who attempt to drag us back in time. No one ever said Syria’s struggle would be easy, but I believe that, with time, we will prevail. I am dedicated to working tirelessly for a just and free society in our country.',
-        des7: '<strong> Vision for Syria and the Region </strong>' ,
+        des7: '<strong> Vision for Syria and the Region </strong>',
         des8: 'I have been involved in the Syrian revolution for 15 years, advocating for a political transformation that goes beyond removing a regime or replacing one authority with another. From the very beginning, I recognised that Syria needed structural change, not just a change of leadership. The failure of past revolutionary movements was due, in part, to their inability to offer an alternative model that could bring stability, inclusivity, and governance rooted in the interests of all Syrians.',
         des9: 'My vision for Syria is based on decentralised governance, where regions have the autonomy to manage their affairs while remaining part of a cohesive national framework with Damascus as its capital. Establishing autonomous administrative areas is not just a theoretical idea—it is a necessity for breaking the cycle of conflict and ensuring that governance is not monopolised by any single faction, sect, or ideology.',
         des10: 'The northeast of Syria pioneered an autonomous administration model a decade ago, demonstrating that decentralisation is possible. However, while it laid the groundwork, it also exposed its limitations. The challenge now is to build a more sustainable and inclusive model—one that does not privilege one group over another but integrates all components of Syrian society. To succeed, this model must not be confined to a single region; it must expand to other areas where conditions allow.',
@@ -558,6 +573,6 @@ Those talks were delayed once but have now begun. But without main members of th
         ssImg1: sImgS3,
         ssImg2: sImgS3,
     },
-    
+
 ];
 export default blogs2;

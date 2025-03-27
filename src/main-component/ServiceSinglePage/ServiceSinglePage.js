@@ -184,10 +184,10 @@ const ServiceSinglePage = (props) => {
     "Video 2": "https://www.youtube.com/embed/_BDVw_0xXIo",
     "Video 3": "https://www.youtube.com/embed/nIbriciFyRo",
     "Video 4": "https://www.youtube.com/embed/ElS1l1VMr5A",
-  };  
+  };
   const renderContent = (text) => {
     if (typeof text !== "string") return null; // Prevents errors if text is undefined or not a string
-  
+
     const content = text.split(/(Photo \d+|Video \d+)/).map((part, index) => {
       if (images[part]) {
         // Render image
@@ -197,8 +197,9 @@ const ServiceSinglePage = (props) => {
             src={images[part]}
             alt={part}
             style={{
-              width: "200px",
               height: "auto",
+              width: "250px",
+              height:"350px",
               margin: "10px",
               borderRadius: "10px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -209,12 +210,12 @@ const ServiceSinglePage = (props) => {
       } else if (videos[part]) {
         const videoUrl = videos[part];
         return (
-            <div
+          <div
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              width:"600px",
+              width: "600px",
               minHeight: "200px",
               borderRadius: "15px",
               overflow: "hidden",
@@ -228,28 +229,28 @@ const ServiceSinglePage = (props) => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               style={{
-                width: "80%",
-                height: "60vh",
+                width: "100%",
+                height: "50vh",
                 borderRadius: "12px",
                 transition: "all 0.3s ease-in-out",
               }}
             />
           </div>
-      );
-    } else {
-      return (
-        <div key={index} dangerouslySetInnerHTML={{ __html: part }} />
-      );
-    }
-  });
-  
+        );
+      } else {
+        return (
+          <div style={{textAlign:"start"}} key={index} dangerouslySetInnerHTML={{ __html: part }} />
+        );
+      }
+    });
+
     return (
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "15px"}}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "15px", justifyContent: "center" }}>
         {content}
       </div>
     );
   };
-  
+
   const currentPath = location.pathname;
   const basePath = "/blog/a-rebel-at-heart-my-story";
 
@@ -299,39 +300,39 @@ const ServiceSinglePage = (props) => {
                   <div className="wpo-service-single-title">
                     {/* <h3>{serviceDetails.title}</h3> */}
                   </div>
-                  <div className="max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg">
+                  <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                     <>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.description)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des2)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des3)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des4)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des5)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des6)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des7)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des8)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des9)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des10)}
                       </div>
-                      <div className="max-w-2xl mx-auto p-4">
+                      <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des11)}
                       </div>
                     </>
@@ -374,7 +375,39 @@ const ServiceSinglePage = (props) => {
                       </ul>
                     </div>
                   )}
+                  <style jsx>{`
+        .pagination-wrapper {
+          display: flex;
+          justify-content: start;
+          padding: 20px 0;
+        }
+        .pg-pagination {
+          list-style: none;
+          display: flex;
+          gap: 10px;
+        }
+        .pg-pagination li {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          background-color: #F9F9F9;
+          transition: background-color 0.3s, transform 0.2s;
+        }
+        .pg-pagination li a, .pg-pagination li span {
+          color: #2C1237;
+          font-size: 18px;
+        }
+        .pg-pagination li.disabled {
+          background-color: #f5f5f5;
+          color: #A0A0A0;
+          cursor: not-allowed;
+                    border-radius: 8px;
 
+        }
+      `}</style>
                   {/* <div className="row mt-4">
                                         <div className="col-md-6 col-sm-6 col-12">
                                             <div className="wpo-p-details-img">

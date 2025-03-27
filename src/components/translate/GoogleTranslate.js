@@ -34,12 +34,10 @@ const GoogleTranslate = () => {
         script.async = true;
         script.onload = () => {
           window.googleTranslateElementInit = () => {
-            if (window.google.translate) {
-              new window.google.translate.TranslateElement(
-                { pageLanguage: "en", autoDisplay: false },
-                "google_translate_element"
-              );
-            }
+            new window.google.translate.TranslateElement(
+              { pageLanguage: "en", autoDisplay: false },
+              "google_translate_element"
+            );
             applySavedLanguage();
 
             // Hide Google Translate's dropdown and restrict options

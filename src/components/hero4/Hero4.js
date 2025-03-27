@@ -7,7 +7,7 @@ import Shape1 from '../../images/slider/back-shape-3.png'
 import Shape2 from '../../images/slider/back-shape-4.png'
 import randalogo from '../../components/hero4/randa-logo.png'
 
-import smallthumb from '../../components/hero4/hero-video.jpeg'
+import smallthumb from '../../components/hero4/hero-video.png'
 import Hero from '../../images/hero.png'
 import { Link } from "react-router-dom";
 
