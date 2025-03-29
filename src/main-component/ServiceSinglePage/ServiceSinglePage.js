@@ -199,7 +199,7 @@ const ServiceSinglePage = (props) => {
             style={{
               height: "auto",
               width: "250px",
-              height:"350px",
+              height: "350px",
               margin: "10px",
               borderRadius: "10px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -239,13 +239,24 @@ const ServiceSinglePage = (props) => {
         );
       } else {
         return (
-          <div style={{textAlign:"start"}} key={index} dangerouslySetInnerHTML={{ __html: part }} />
+          <div
+            style={{ textAlign: "start" }}
+            key={index}
+            dangerouslySetInnerHTML={{ __html: part }}
+          />
         );
       }
     });
 
     return (
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "15px", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "15px",
+          justifyContent: "center",
+        }}
+      >
         {content}
       </div>
     );
@@ -335,79 +346,134 @@ const ServiceSinglePage = (props) => {
                       <div className="max-w-2xl mx-auto p-3">
                         {renderContent(serviceDetails.des11)}
                       </div>
+                      <div className="max-w-2xl mx-auto p-3">
+                        {renderContent(serviceDetails.des12)}
+                      </div>
+                      <div className="max-w-2xl mx-auto p-3">
+                        {renderContent(serviceDetails.des13)}
+                      </div>
+                      <div className="max-w-2xl mx-auto p-3">
+                        {renderContent(serviceDetails.des14)}
+                      </div>
                     </>
-                  </div>
-                  {serviceDetails.slug !== "political-beliefs" && (
+                    {serviceDetails.slug !== "political-beliefs" && (
                     <div className="pagination-wrapper pagination-wrapper-left">
                       <ul className="pg-pagination">
                         {/* Previous Button */}
-                        {/* Previous Button */}
                         <li className={prevPage ? "" : "disabled"}>
                           {prevPage ? (
-                            <Link to={prevPage} aria-label="Previous">
-                              <i className="fi ti-angle-left"></i>
+                            <Link
+                              to={prevPage}
+                              aria-label="Previous"
+                              className=""
+                            >  <i className="fi ti-angle-left"></i><span style={{backgroundColor:"transparent",borderBottom:"2px solid black"}}>
+                              Back
+                            </span>
+                              
                             </Link>
                           ) : (
-                            <span
-                              aria-label="Previous"
-                              style={{ pointerEvents: "none", opacity: 0.5 }}
-                            >
-                              <i className="fi ti-angle-left"></i>
-                            </span>
+                            <sp an className="disabled">
+                              <i className="fi ti-angle-left"></i> <span style={{backgroundColor:"transparent",borderBottom:"2px solid black",fontSize:'1.0666666667rem'}}>
+                              Back
+                              </span>
+                            </sp>
                           )}
                         </li>
 
-                        {/* Next Button */}
-                        <li className={nextPage ? "" : "disabled"}>
+                        {/* Next/Completed Button */}
+                        <li>
                           {nextPage ? (
-                            <Link to={nextPage} aria-label="Next">
-                              <i className="fi ti-angle-right"></i>
-                            </Link>
-                          ) : (
-                            <span
+                            <Link
+                              to={nextPage}
                               aria-label="Next"
-                              style={{ pointerEvents: "none", opacity: 0.5 }}
+                              className=""
+                              
                             >
-                              <i className="fi ti-angle-right"></i>
-                            </span>
+                              
+                             <span style={{backgroundColor:"transparent",borderBottom:"2px solid black"}}>Continue Reading...</span>
+                            </Link>
+                            
+                          ) : (
+                            <span className="btn completed-btn">Completed</span>
                           )}
                         </li>
                       </ul>
                     </div>
                   )}
-                  <style jsx>{`
-        .pagination-wrapper {
-          display: flex;
-          justify-content: start;
-          padding: 20px 0;
-        }
-        .pg-pagination {
-          list-style: none;
-          display: flex;
-          gap: 10px;
-        }
-        .pg-pagination li {
-          width: 50px;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 8px;
-          background-color: #F9F9F9;
-          transition: background-color 0.3s, transform 0.2s;
-        }
-        .pg-pagination li a, .pg-pagination li span {
-          color: #2C1237;
-          font-size: 18px;
-        }
-        .pg-pagination li.disabled {
-          background-color: #f5f5f5;
-          color: #A0A0A0;
-          cursor: not-allowed;
-                    border-radius: 8px;
+                  </div>
+                 
 
-        }
-      `}</style>
+                  <style jsx>{`
+                    .pagination-wrapper {
+                      display: flex;
+                      justify-content: space-between;
+                    }
+
+                    .pg-pagination {
+                      list-style: none;
+                      display: flex;
+                      gap: 15px;
+                      align-items: center;
+                      justify-content: space-between;
+                    }
+
+                    .pg-pagination li {
+                      display: flex;
+                      align-items: center;
+                    }
+
+                    /* Button Styling */
+                    .pagination-wrapper .btn {
+                      font-size: 16px;
+                      color: #000;
+                      // background: #f1f1f1;
+                      padding: 12px 30px;
+                      border: 1px solid #ccc;
+                      border-radius: 8px;
+                      transition: 0.3s;
+                      text-decoration: none;
+                      display: inline-block;
+                      text-align: center;
+                      min-width: 180px;
+                      font-weight: 500;
+                    }
+                    /* Continue Reading Button */
+                    .continue-btn {
+                      background: #f9f9f9;
+                    }
+
+                    .continue-btn:hover {
+                      background: #eaeaea;
+                    }
+                    /* Navigation Buttons */
+                    .pagination-wrapper .nav-btn {
+                      font-size: 16px;
+                      color: #000;
+                      padding: 10px 20px;
+                      border: 1px solid #ccc;
+                      border-radius: 8px;
+                      text-decoration: none;
+                      transition: 0.3s;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 8px;
+                    }
+
+                    .pagination-wrapper .nav-btn:hover {
+                      background: #e0e0e0;
+                    }
+
+                    .pagination-wrapper .nav-btn.disabled {
+                      color: #aaa;
+                      background: #f5f5f5;
+                      cursor: not-allowed;
+                    }
+
+                    .pagination-wrapper .nav-btn i {
+                      font-size: 18px;
+                    }
+                  `}</style>
+
                   {/* <div className="row mt-4">
                                         <div className="col-md-6 col-sm-6 col-12">
                                             <div className="wpo-p-details-img">
