@@ -366,14 +366,14 @@ const ServiceSinglePage = (props) => {
                               to={prevPage}
                               aria-label="Previous"
                               className=""
-                            >  <i className="fi ti-angle-left"></i><span style={{backgroundColor:"transparent",borderBottom:"2px solid black"}}>
+                            >  <i className="fi ti-angle-left"></i><span style={{backgroundColor:"transparent",fontSize:'1.0666666667rem'}}>
                               Back
                             </span>
                               
                             </Link>
                           ) : (
                             <sp an className="disabled">
-                              <i className="fi ti-angle-left"></i> <span style={{backgroundColor:"transparent",borderBottom:"2px solid black",fontSize:'1.0666666667rem'}}>
+                              <i className="fi ti-angle-left"></i> <span style={{backgroundColor:"transparent",fontSize:'1.0666666667rem'}}>
                               Back
                               </span>
                             </sp>
