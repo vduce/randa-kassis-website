@@ -14,51 +14,73 @@ import { Link } from "react-router-dom";
 
 const Hero4 = () => {
     return (
-        <section className="static-hero-s3">
-            <div className="hero-container">
-                <div className="hero-inner">
-                    <div className="container-fluid">
-                        <div className="hero-content">
-                            <div className="hero-content-wrap">
-                                <div data-swiper-parallax="300" className="slide-title">
-                                    <h2 className="notranslate" >My Story</h2>
-                                </div>
-                                <div data-swiper-parallax="400" className="slide-text">
-                                    <p  >Randa Kassis is a Franco-Syrian politician. During the Syrian civil war, she was until 2012 a member of the Syrian National Council.</p>
-                                    <Link className="text-white"  to={`/blog/a-rebel-at-heart-my-story`} style={{borderBottom:"2px solid white"}}>Continue Reading</Link>
-                                </div>
-                                <div className="clearfix"></div>
-                                <div data-swiper-parallax="500" className="slide-video-content">
-                                    <div className="slide-video-img">
-                                        <img src={smallthumb} alt="" />
-                                        <VideoModal props={"_Z7Pv7dNSao"} />
-                                        {/* <VideoModal /> */}
-                                    </div>
-                                    <div className="slide-video-text">
-                                        <div className="d-flex gap-2">
-                                            <div><h4>Join The Party</h4></div>
-                                            <div><a href="https://mspsy.com/" target="blank">
-                                            <img src={randalogo} alt="" width={"40px"} style={{borderRadius:"20px"}}/></a></div>
-                                        </div>
-                                        <p>Movement for a pluralistic society</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div className="politian-pic">
-                                <div className="inner">
-                                    <img src={Hero} alt="" />
-                                </div>
-                                <div className="back-shape"></div>
-                                {/* <div className="back-shape-2"><img src={Shape1} alt="" /></div> */}
-                                {/* <div className="back-shape-3"><img src={Shape2} alt="" /></div> */}
-                            </div>
-                            {/* <div className="right-shape"><img src={Shape3} alt="" /></div> */}
-                        </div>
+      <section className="static-hero-s3">
+        <div className="hero-container">
+          <div className="hero-inner">
+            <div className="container-fluid">
+              <div className="hero-content">
+                <div className="hero-content-wrap">
+                  <div data-swiper-parallax="300" className="slide-title">
+                    <h4 className="notranslate">A rebel at heart: My Story</h4>
+                  </div>
+                  <div data-swiper-parallax="400" className="slide-text">
+                    <p>
+                      Randa Kassis is a Franco-Syrian politician. During the
+                      Syrian civil war, she was until 2012 a member of the
+                      Syrian National Council.
+                    </p>
+                    <Link
+                      className="text-white"
+                      to={`/blog/a-rebel-at-heart-my-story`}
+                      style={{ borderBottom: "2px solid white" }}
+                    >
+                      Continue Reading
+                    </Link>
+                  </div>
+                  <div className="clearfix"></div>
+                  <div
+                    data-swiper-parallax="500"
+                    className="slide-video-content"
+                  >
+                    <div className="slide-video-img">
+                      <img src={smallthumb} alt="" />
+                      <VideoModal props={"_Z7Pv7dNSao"} />
+                      {/* <VideoModal /> */}
                     </div>
+                    <div className="slide-video-text">
+                      <div className="d-flex gap-2">
+                        <div>
+                          <h4>Join The Party</h4>
+                        </div>
+                        <div>
+                          <a href="https://mspsy.com/" target="blank">
+                            <img
+                              src={randalogo}
+                              alt=""
+                              width={"40px"}
+                              style={{ borderRadius: "20px" }}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <p>Movement for a pluralistic society</p>
+                    </div>
+                  </div>
                 </div>
+                <div className="politian-pic">
+                  <div className="inner">
+                    <img src={Hero} alt="" />
+                  </div>
+                  <div className="back-shape"></div>
+                  {/* <div className="back-shape-2"><img src={Shape1} alt="" /></div> */}
+                  {/* <div className="back-shape-3"><img src={Shape2} alt="" /></div> */}
+                </div>
+                {/* <div className="right-shape"><img src={Shape3} alt="" /></div> */}
+              </div>
             </div>
-        </section>
-    )
+          </div>
+        </div>
+      </section>
+    );
 }
 export default Hero4;
