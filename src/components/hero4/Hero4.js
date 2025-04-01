@@ -27,7 +27,7 @@ const Hero4 = () => {
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
                     <p>
-                      This is not a tale of triumph, but of resistance—a
+                      This is not a tale of triumph, but of resistance — a
                       personal journey shaped by questions, defiance, and the
                       courage to walk alone
                     </p>
