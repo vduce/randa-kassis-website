@@ -22,14 +22,14 @@ const Hero4 = () => {
                 <div className="hero-content-wrap">
                   <div data-swiper-parallax="300" className="slide-title">
                     <h3 className="notranslate text-white">
-                      A rebel at heart: My Story
+                      My Story: A Rebel at Heart
                     </h3>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
                     <p>
-                      Randa Kassis is a Franco-Syrian politician. During the
-                      Syrian civil war, she was until 2012 a member of the
-                      Syrian National Council.
+                      This is not a tale of triumph, but of resistance—a
+                      personal journey shaped by questions, defiance, and the
+                      courage to walk alone
                     </p>
                     <Link
                       className="text-white"
