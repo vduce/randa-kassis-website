@@ -21,7 +21,9 @@ const Hero4 = () => {
               <div className="hero-content">
                 <div className="hero-content-wrap">
                   <div data-swiper-parallax="300" className="slide-title">
-                    <h4 className="notranslate">A rebel at heart: My Story</h4>
+                    <h3 className="notranslate text-white">
+                      A rebel at heart: My Story
+                    </h3>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
                     <p>
