@@ -197,9 +197,8 @@ const ServiceSinglePage = (props) => {
             src={images[part]}
             alt={part}
             style={{
-              height: "auto",
               width: "250px",
-              height: "350px",
+              height: "300px",
               margin: "10px",
               borderRadius: "10px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",

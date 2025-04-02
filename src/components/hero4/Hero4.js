@@ -21,15 +21,18 @@ const Hero4 = () => {
               <div className="hero-content">
                 <div className="hero-content-wrap">
                   <div data-swiper-parallax="300" className="slide-title">
-                    <h3 className="notranslate text-white">
+                    <h3
+                      className="notranslate text-white"
+                      style={{ fontSize: "35px" }}
+                    >
                       My Story: A Rebel at Heart
                     </h3>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p>
+                    <p style={{ fontSize: "22px", lineHeight: "40px" }}>
                       This is not a tale of triumph, but of resistance — a
                       personal journey shaped by questions, defiance, and the
-                      courage to walk alone
+                      courage to walk alone...
                     </p>
                     <Link
                       className="text-white"
