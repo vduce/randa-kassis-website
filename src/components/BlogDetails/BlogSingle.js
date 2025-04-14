@@ -120,6 +120,45 @@ const BlogSingle = (props) => {
                                     <div className="max-w-2xl mx-auto p-2">
                                         {BlogDetails.des17}
                                     </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des18}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des19}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des20}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des21}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des22}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des23}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des24}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des25}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des26}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des27}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des28}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des29}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2">
+                                        {BlogDetails.des30}
+                                    </div>
                                     </>
                                     {/* <div className="gallery">
                                     <div>
