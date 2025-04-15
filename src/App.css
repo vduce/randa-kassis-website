@@ -87,3 +87,11 @@ body {
   color: inherit !important;
   box-shadow: none !important;
 } */
+
+.wpo-page-title .wpo-breadcumb-wrap h2 {
+  font-size: 35px !important;
+  color: #fff;
+  line-height: 60px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
