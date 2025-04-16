@@ -46,7 +46,7 @@ const Header = (props) => {
                                         </li>
                                         {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
                                        <li><Link className='text-capitalize' onClick={ClickHandler} to="/media">Media</Link></li> 
-                                       <li><Link className='text-capitalize' onClick={ClickHandler} to="/article">Article</Link></li>
+                                       <li><Link className='text-capitalize' onClick={ClickHandler} to="/article">Articles</Link></li>
                                           <li><Link className='text-capitalize' onClick={ClickHandler} to="/conference-and-symposium">Conference And Symposiums</Link></li>
                                            <li><Link  className='text-capitalize'onClick={ClickHandler} to="/gallery">Gallery</Link></li>
 
