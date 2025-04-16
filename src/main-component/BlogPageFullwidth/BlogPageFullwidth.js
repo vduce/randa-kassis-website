@@ -10,7 +10,7 @@ const BlogPageFullwidth = () => {
     return (
         <Fragment>
             <Navbar hclass={'wpo-site-header-s1'} />
-            <PageTitle pageTitle={'Article'} pagesub={'Blog'} />
+            <PageTitle pageTitle={'Articles'} pagesub={'Blog'} />
             <BlogList blLeft={'d-none'} blRight={'col-lg-10 offset-lg-1 col-12'} />
             <Footer />
             <Scrollbar />

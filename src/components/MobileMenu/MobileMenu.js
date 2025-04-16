@@ -21,7 +21,7 @@ const menus = [
 
     {
         id: 6,
-        title: 'Article',
+        title: 'Articles',
         link: '/blog-fullwidth',
         
     },
