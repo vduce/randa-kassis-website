@@ -15,7 +15,7 @@ const BlogList = (props) => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
   // Ensure that the last page only shows the remaining posts (e.g., 5 blogs for page 6)
-  const currentBlogs = currentPage === 6 ? blogs.slice(indexOfFirstPost, 55) : blogs.slice(indexOfFirstPost, indexOfLastPost);
+  const currentBlogs = currentPage === 6 ? blogs.slice(indexOfFirstPost, 52) : blogs.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
