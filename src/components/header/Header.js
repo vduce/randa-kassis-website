@@ -4,63 +4,136 @@ import MobileMenu from '../MobileMenu/MobileMenu'
 import Logo from '../../images/logo.png'
 
 const Header = (props) => {
+
     const [menuActive, setMenuState] = useState(false);
+
+    const storyList = {
+      "a-rebel-at-heart-my-story": "Prologue",
+      "a-rebel-at-heart-my-story1": "I was not born a rebel...",
+      "a-rebel-at-heart-my-story2": "Returning to Syria...",
+      "a-rebel-at-heart-my-story3": "Painting-a style of life",
+      "a-rebel-at-heart-my-story4": "A Life of Art, Motherhood...",
+      "a-rebel-at-heart-my-story5": "Political Fight: A Struggle...",
+      "a-rebel-at-heart-my-story6": "Fighting for Secularism Against",
+      "a-rebel-at-heart-my-story7": "Looking Back: The Unyielding...",
+      "a-rebel-at-heart-my-story8": "The Contradiction That Defines Me",
+    };
     const SubmitHandler = (e) => {
-        e.preventDefault()
-    }
+      e.preventDefault();
+    };
 
     const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+      window.scrollTo(10, 0);
+    };
 
     return (
-        <header id="header">
-            <div className={`wpo-site-header ${props.hclass}`}>
-                <nav className="navigation navbar navbar-expand-lg navbar-light">
-                    <div className="container-fluid">
-                        <div className="row align-items-center">
-                            <div className="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
-                                <div className="mobail-menu">
-                                    <MobileMenu />
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-4 col-6">
-                                <div className="navbar-header">
-                                    <Link onClick={ClickHandler} className="navbar-brand" to="/"><img src={Logo}
-                                        alt="logo"/></Link>
-                                </div>
-                            </div>
-                            <div className="col-lg-8 col-md-1 col-1">
-                                <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                                    <button className="menu-close"><i className="ti-close"></i></button>
-                                    <ul className="nav navbar-nav mb-2 mb-lg-0 text-capitalize">
-                                        <li className="menu-item-has-children">
-                                            <Link className='text-capitalize' onClick={ClickHandler} to="/">Home</Link>
-                                           
-                                            {/* <ul className="sub-menu">
+      <header id="header">
+        <div className={`wpo-site-header ${props.hclass}`}>
+          <nav className="navigation navbar navbar-expand-lg navbar-light">
+            <div className="container-fluid">
+              <div className="row align-items-center">
+                <div className="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
+                  <div className="mobail-menu">
+                    <MobileMenu />
+                  </div>
+                </div>
+                <div className="col-lg-2 col-md-4 col-6">
+                  <div className="navbar-header">
+                    <Link
+                      onClick={ClickHandler}
+                      className="navbar-brand"
+                      to="/"
+                    >
+                      <img src={Logo} alt="logo" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="col-lg-8 col-md-1 col-1">
+                  <div
+                    id="navbar"
+                    className="collapse navbar-collapse navigation-holder"
+                  >
+                    <button className="menu-close">
+                      <i className="ti-close"></i>
+                    </button>
+                    <ul className="nav navbar-nav mb-2 mb-lg-0 text-capitalize">
+                      <li className="menu-item-has-children">
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/"
+                        >
+                          Home
+                        </Link>
+
+                        {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/home">Main Home</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home2">Election Home</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home3">Male Candidate</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home4">Female Candidate</Link></li>
                                             </ul> */}
-                                        </li>
-                                        {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
-                                       <li><Link className='text-capitalize' onClick={ClickHandler} to="/media">Media</Link></li> 
-                                       <li><Link className='text-capitalize' onClick={ClickHandler} to="/article">Articles</Link></li>
-                                          <li><Link className='text-capitalize' onClick={ClickHandler} to="/conference-and-symposium">Conference And Symposiums</Link></li>
-                                           <li><Link  className='text-capitalize'onClick={ClickHandler} to="/gallery">Gallery</Link></li>
+                      </li>
+                      {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
+                      <li>
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/media"
+                        >
+                          Media
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/articles"
+                        >
+                          Articles
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/conference-and-symposium"
+                        >
+                          Conference And Symposiums
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/gallery"
+                        >
+                          Gallery
+                        </Link>
+                      </li>
 
-
-                                        {/* <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} to="/">Campaign</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} to="/campaign">Campaign Style 1</Link></li>
-                                                <li><Link onClick={ClickHandler} to="/campaign-2">Campaign Style 2</Link></li>
-                                                <li><Link onClick={ClickHandler} to="/campaign-3">Campaign Style 3</Link></li>
-                                                <li><Link onClick={ClickHandler} to="/campaign-single/Support-for-Womans">Campaign single</Link></li>
-                                            </ul>
-                                        </li> */}
-                                        {/* <li className="menu-item-has-children">
+                      <li className="menu-item-has-children">
+                        <Link
+                          onClick={ClickHandler}
+                          className="text-capitalize"
+                          to="/"
+                        >
+                          My Story
+                        </Link>
+                        <ul className="sub-menu">
+                          {Object.entries(storyList).map(([key, value]) => (
+                            <li key={key}>
+                              <Link
+                                onClick={ClickHandler}
+                                className="text-capitalize"
+                                to={`/blog/${key}`}
+                              >
+                                {value}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                      {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} to="/">Pages</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/gallery">Gallery</Link></li>
@@ -85,7 +158,7 @@ const Header = (props) => {
                                                 <li><Link onClick={ClickHandler} to="/register">Register</Link></li>
                                             </ul>
                                         </li> */}
-                                        {/* <li className="menu-item-has-children">
+                      {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} to="/blog-fullwidth">Blog</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
@@ -104,14 +177,14 @@ const Header = (props) => {
                                                 </li>
                                             </ul>
                                         </li> */}
-                                        {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-3 col-2">
-                                <div className="header-right">
-                                    <div className="header-search-form-wrapper">
-                                        {/* <div className="cart-search-contact">
+                      {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-lg-2 col-md-3 col-2">
+                  <div className="header-right">
+                    <div className="header-search-form-wrapper">
+                      {/* <div className="cart-search-contact">
                                             <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
                                                 className={`fi ti-search ${menuActive ? "ti-close" : "fi "}`}></i></button>
                                             <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
@@ -125,22 +198,27 @@ const Header = (props) => {
                                                 </form>
                                             </div>
                                         </div> */}
-                                    </div>
-                                    <div className="close-form">
-                                        <Link onClick={ClickHandler} className="theme-btn" to="/contact"><span className="text">Contact</span>
-                                            <span className="mobile">
-                                                <i className="fi flaticon-charity"></i>
-                                            </span>
-                                            </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </nav>
+                    <div className="close-form">
+                      <Link
+                        onClick={ClickHandler}
+                        className="theme-btn"
+                        to="/contact"
+                      >
+                        <span className="text">Contact</span>
+                        <span className="mobile">
+                          <i className="fi flaticon-charity"></i>
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
-    )
+          </nav>
+        </div>
+      </header>
+    );
 }
 
 export default Header;

@@ -72,7 +72,7 @@ const blogs = [
   },
   {
     id: "3",
-    title: "Syria’s Identity: Variety in Minorities",
+    title: "Syria's Identity: Variety in Minorities",
     slug: "syrias-identity-variety-in-minorities",
     screens: [],
     description: `In the face of the fierce battle that the regime is waging against its people, it has become apparent that the opposition leadership is unable to face this movement. There are many reasons for this...`,
@@ -91,24 +91,21 @@ const blogs = [
     screens: [],
     description:
       "an article exploring america's perceived role as global guardian, the persistence of binary thinking, and the illusion of moral supremacy.",
-    des1: "As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine\u2014amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia\u2014the West hoisted the banner of \u201cpride and resistance.\u201d",
-    des2: "Zelensky appealed to Europe and the United States for unequivocal support, believing\u2014or perhaps merely hoping\u2014that America, in particular, would come to his rescue.",
-    des3: "The Ukrainian president is not alone in regarding the United States as the ultimate guardian and sleepless sentinel, watching over its \u201cflock\u201d with unwavering vigilance. In this worldview, democracy is under its guardianship, and justice is its responsibility. This perspective is not exclusive to him; many across the globe share this vision. Just as some assume America\u2019s superiority, others see it as the enemy of peoples and nations\u2014a hegemonic power orchestrating conspiracies to dismantle governments that oppose its interests.",
-    des4: "There is no denying that America\u2019s \u201cfailed\u201d wars and \u201cuninspired\u201d strategies\u2014draped in the rhetoric of moral intervention and bent on exporting a simplistic democratic model without regard for the complexities of culture\u2014have entrenched binary thinking. This dualism, the backbone of many cultures, offers a shallow and convenient answer for those unwilling to confront the layered nature of human societies. Thus, America becomes either an ally or an enemy\u2014nothing in between.",
-    des5: "Hollywood\u2019s industrial-scale film production has only deepened this image, recasting the United States as a mythic hero in the imagination of some\u2014particularly those desperate to escape harsh realities. And so, reality blurs with longing, giving rise to the romanticism of the powerless.",
-    des6: "This idea of American supremacy is not confined to those chasing the illusion of the \u201cAmerican dream\u201d; it extends equally to those who see the United States as a malevolent force, intent on crushing the aspirations of nations. Both sides, in their own way, reinforce the notion of a unipolar world, ignoring the emergence of other political, economic, and military powers\u2014and denying the reality of a multipolar global order.",
-    des7: "The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one\u2019s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day \u201chero\u201d\u2014a figure shaped by fantasies and longings\u2014only to fall prey to propaganda.",
-    des8: "This propaganda is by no means exclusive to the United States, but I highlight it here because of its vast cinematic machinery, which has fuelled its rise and prolonged its tiresome narrative\u2014one that no longer captures the imagination of any but the na\u00efve.",
-    des9: "Many individuals and groups continue to suffer from binary thinking\u2014a legacy inherited from Plato, who equated justice with the health of the soul, and injustice with its illness. He laid the foundations of this dualistic framework, dividing the world into pairs: good and evil, justice and injustice, war and famine, health and disease, chaos and order, and so on.",
+    des0: "As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine\u2014amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia\u2014the West hoisted the banner of \u201cpride and resistance.\u201d",
+    des1: "Zelensky appealed to Europe and the United States for unequivocal support, believing\u2014or perhaps merely hoping\u2014that America, in particular, would come to his rescue.",
+    des2: "The Ukrainian president is not alone in regarding the United States as the ultimate guardian and sleepless sentinel, watching over its \u201cflock\u201d with unwavering vigilance. In this worldview, democracy is under its guardianship, and justice is its responsibility. This perspective is not exclusive to him; many across the globe share this vision. Just as some assume America\u2019s superiority, others see it as the enemy of peoples and nations\u2014a hegemonic power orchestrating conspiracies to dismantle governments that oppose its interests.",
+    des3: "Hollywood\u2019s industrial-scale film production has only deepened this image, recasting the United States as a mythic hero in the imagination of some\u2014particularly those desperate to escape harsh realities. And so, reality blurs with longing, giving rise to the romanticism of the powerless.",
+    des4: "This idea of American supremacy is not confined to those chasing the illusion of the \u201cAmerican dream\u201d; it extends equally to those who see the United States as a malevolent force, intent on crushing the aspirations of nations. Both sides, in their own way, reinforce the notion of a unipolar world, ignoring the emergence of other political, economic, and military powers\u2014and denying the reality of a multipolar global order.",
+    des5: "The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one\u2019s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day \u201chero\u201d\u2014a figure shaped by fantasies and longings\u2014only to fall prey to propaganda.",
+    des6: "This propaganda is by no means exclusive to the United States, but I highlight it here because of its vast cinematic machinery, which has fuelled its rise and prolonged its tiresome narrative\u2014one that no longer captures the imagination of any but the na\u00efve.",
+    des7: "Many individuals and groups continue to suffer from binary thinking\u2014a legacy inherited from Plato, who equated justice with the health of the soul, and injustice with its illness. He laid the foundations of this dualistic framework, dividing the world into pairs: good and evil, justice and injustice, war and famine, health and disease, chaos and order, and so on.",
+    des8: "Later philosophical traditions moved towards more pluralistic understandings, recognising the complex and multi-faceted nature of human psychology. Yet, even today, many cultures still rely heavily on binaries. Within them, the individual often retreats to a \u201cparadise\u201d of romantic elements\u2014constructs of imagined perfection.",
+    des9: "For many, this paradise represents a sustained emotional or physical state, free of pain or injustice\u2014a realm of perpetual fairness, happiness, and tranquillity. And although some societies have managed to break free from the oppressive triad of power, granting broader rights to individuals and ensuring a greater degree of equality before the law, binary thinking still dominates. It prevails even among those engaged in public affairs.",
     des10:
-      "Later philosophical traditions moved towards more pluralistic understandings, recognising the complex and multi-faceted nature of human psychology. Yet, even today, many cultures still rely heavily on binaries. Within them, the individual often retreats to a \u201cparadise\u201d of romantic elements\u2014constructs of imagined perfection.",
-    des11:
-      "For many, this paradise represents a sustained emotional or physical state, free of pain or injustice\u2014a realm of perpetual fairness, happiness, and tranquillity. And although some societies have managed to break free from the oppressive triad of power, granting broader rights to individuals and ensuring a greater degree of equality before the law, binary thinking still dominates. It prevails even among those engaged in public affairs.",
-    des12:
       "It is clear that the implementation of justice in its \u201cfantastical\u201d sense remains, to this day, an impossibility\u2014incapable of aligning with the intricate nature of human behaviour, or of adapting to the multiplicity of cultures, political dynamics, military conflicts, or personal struggles. Binary thinking, then, is nothing more than a form of na\u00efve romanticism\u2014a delusion that many still insist on maintaining.",
-    des13:
+    des11:
       "A brief glance at human history reveals a landscape riddled with conflict and primitive behaviours\u2014those which surface in times of war, famine, or existential threat.",
-    des14:
+    des12:
       "From this, we can conclude that romantic idealism is an artificial construct\u2014alien to our nature. Humans do not inhabit a planet filled with cartoonish characters. Life is not a tidy dichotomy of good and evil, justice and injustice, peace and war, right and wrong. Rather, it is a complex entanglement of all these elements\u2014alongside countless others\u2014working together, however chaotically, in service of continuity.",
   },
   {
@@ -118,22 +115,21 @@ const blogs = [
     screens: [],
     description:
       "an article critiquing performative empathy and emotional sensationalism in modern digital and media cultures.",
-    des1: "Over the past decade \u2014 ever since social media infiltrated nearly every home, bar, and street corner \u2014 we\u2019ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of \u201chumanity.\u201d These medals, of course, are nothing more than symbolic gestures \u2014 emojis, empty phrases, and at best, dotless, hollow expressions.",
-    des2: "Social networks have constructed a new social order \u2014 one partly driven by collective emotional exaggeration \u2014 giving rise to grand gestures, noble declarations, and what are touted as elevated \u201chuman values.\u201d But the foundation of these values lies in fantasy: a kind of escapist illusion that feeds an inflated \u201cgreat ego.\u201d And that ego is easily gratified \u2014 after all, such values demand no more than a few clich\u00e9d words or symbols.",
-    des3: "We saw this flood of \u201chumanity\u201d in recent days with the tragic story of the Moroccan child, Rayan. No one denies the pain of the incident, especially for his family. But what invites reflection is the scale of the media coverage (I stress the word \u201cscale\u201d \u2014 we now live in an age of grand words, grand values, grand emotions), and the sweeping emotional response. It was, yet again, a race \u2014 a race to display the softest, most refined expressions of \u201chumanity,\u201d where individuals competed to earn the honorary badge of \u201ccivilisation.\u201d",
-    des4: "Rayan died, and all of \u201chumanity\u201d mourned \u2014 wiping its tears, raising its hands in prayer, drained by its collective emotional labour. The child died, and \u201chumanity\u201d once more slipped into a coma, briefly awakened by his cries before returning to sleep.",
-    des5: "And so, other children might rightly wonder what this \u201chumanity\u201d means for them \u2014 especially those whose deaths go unnoticed, perhaps because they perish in groups rather than as individuals. Children in Syria, Yemen, Libya, Iraq \u2014 dying in droves from hunger, cold, disease \u2014 do not qualify for such coverage. They are no longer \u201cnewsworthy.\u201d Nor are African children, some killed by tragic incidents \u2014 trampled by a hippo, or simply by poverty and lack of basic necessities. They, too, have become \u201cold stories.\u201d",
-    des6: "None of these children can hope to inspire the kind of noble, global sentiment we recently witnessed. Because \u201chumanity,\u201d as it now functions, requires emotionally charged, individual stories. It cannot survive constant exposure to systemic suffering. To avoid emotional collapse, it must ration its sympathy.",
-    des7: "So \u201chumanity,\u201d in its need for self-preservation, reveals itself in herd-like behaviour \u2014 crossing borders, fuelled by sensory globalisation. It performs empathy on demand.",
-    des8: "And it\u2019s not only individuals. Television networks, too, compete: who can add the most pathos to the script? Which presenter can cry more believably, perform the most heartfelt gesture? Who can win the title of Most Human? It would not be surprising to one day see a televised contest called \u201cWho Will Win Humanity?\u201d",
-    des9: "This race is pushing many rational individuals \u2014 those who respond thoughtfully and without affectation to tragedy \u2014 either into silence or into mimicking the herd, out of fear they\u2019ll be labelled \u201cinhuman.\u201d",
+    des0: "Over the past decade \u2014 ever since social media infiltrated nearly every home, bar, and street corner \u2014 we\u2019ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of \u201chumanity.\u201d These medals, of course, are nothing more than symbolic gestures \u2014 emojis, empty phrases, and at best, dotless, hollow expressions.",
+    des1: "Social networks have constructed a new social order \u2014 one partly driven by collective emotional exaggeration \u2014 giving rise to grand gestures, noble declarations, and what are touted as elevated \u201chuman values.\u201d But the foundation of these values lies in fantasy: a kind of escapist illusion that feeds an inflated \u201cgreat ego.\u201d And that ego is easily gratified \u2014 after all, such values demand no more than a few clich\u00e9d words or symbols.",
+    des2: "We saw this flood of \u201chumanity\u201d in recent days with the tragic story of the Moroccan child, Rayan. No one denies the pain of the incident, especially for his family. But what invites reflection is the scale of the media coverage (I stress the word \u201cscale\u201d \u2014 we now live in an age of grand words, grand values, grand emotions), and the sweeping emotional response. It was, yet again, a race \u2014 a race to display the softest, most refined expressions of \u201chumanity,\u201d where individuals competed to earn the honorary badge of \u201ccivilisation.\u201d",
+    des3: "Rayan died, and all of \u201chumanity\u201d mourned \u2014 wiping its tears, raising its hands in prayer, drained by its collective emotional labour. The child died, and \u201chumanity\u201d once more slipped into a coma, briefly awakened by his cries before returning to sleep.",
+    des4: "And so, other children might rightly wonder what this \u201chumanity\u201d means for them \u2014 especially those whose deaths go unnoticed, perhaps because they perish in groups rather than as individuals. Children in Syria, Yemen, Libya, Iraq \u2014 dying in droves from hunger, cold, disease \u2014 do not qualify for such coverage. They are no longer \u201cnewsworthy.\u201d Nor are African children, some killed by tragic incidents \u2014 trampled by a hippo, or simply by poverty and lack of basic necessities. They, too, have become \u201cold stories.\u201d",
+    des5: "None of these children can hope to inspire the kind of noble, global sentiment we recently witnessed. Because \u201chumanity,\u201d as it now functions, requires emotionally charged, individual stories. It cannot survive constant exposure to systemic suffering. To avoid emotional collapse, it must ration its sympathy.",
+    des6: "So \u201chumanity,\u201d in its need for self-preservation, reveals itself in herd-like behaviour \u2014 crossing borders, fuelled by sensory globalisation. It performs empathy on demand.",
+    des7: "And it\u2019s not only individuals. Television networks, too, compete: who can add the most pathos to the script? Which presenter can cry more believably, perform the most heartfelt gesture? Who can win the title of Most Human? It would not be surprising to one day see a televised contest called \u201cWho Will Win Humanity?\u201d",
+    des8: "This race is pushing many rational individuals \u2014 those who respond thoughtfully and without affectation to tragedy \u2014 either into silence or into mimicking the herd, out of fear they\u2019ll be labelled \u201cinhuman.\u201d",
+    des9: "Such uniform emotional reactions \u2014 disconnected from nature and blind to human diversity \u2014 ultimately pave the way for media authoritarianism. This, in turn, dulls the viewer\u2019s ability to feel and think. I do not exaggerate when I say that one-dimensional media can manufacture emotionally impaired human templates \u2014 models of \u201cideal\u201d selective compassion. We end up with a strange creature: a human being whose values and meanings are utterly confused.",
     des10:
-      "Such uniform emotional reactions \u2014 disconnected from nature and blind to human diversity \u2014 ultimately pave the way for media authoritarianism. This, in turn, dulls the viewer\u2019s ability to feel and think. I do not exaggerate when I say that one-dimensional media can manufacture emotionally impaired human templates \u2014 models of \u201cideal\u201d selective compassion. We end up with a strange creature: a human being whose values and meanings are utterly confused.",
-    des11:
       "This is not the first, nor will it be the last, tragic incident of its kind. Life overflows with daily personal catastrophes \u2014 and their coverage, if any, should be the responsibility of local media, nothing more.",
-    des12:
+    des11:
       "A person who is truly conscious of life and death does not need to follow the crowd, nor become an echo, simply to prove they care. The amplified, theatrical emotions we now witness \u2014 steeped in hypocrisy and herd instinct \u2014 are no proof of anything. They reflect only a deep inability to generate change or to carve out new paths for humanity. They offer nothing more than melodrama, performed before a stone.",
-    des13:
+    des12:
       "For years now, we\u2019ve heard endless talk of \u201cnew\u201d human values \u2014 limitless, borderless, all-embracing. Yet we remain caught in the same cycle of emojis, hashtags, and body language. Real values are not acrobatic displays, tearful theatrics, or reactive posturing. They are a form of sustained awareness \u2014 one that is neither fragmented nor conditioned by context.",
   },
   {
@@ -143,6 +139,247 @@ const blogs = [
     screens: [],
     description:
       "an article discussing the illusion of democracy and political movements in the Middle East, comparing them with historical examples.",
+    des0: "Many mistakenly believe that tyranny is confined to autocratic rulers. In truth, it often conceals itself beneath the guise of reform and piety, preying on a population's yearning for change. From Renaissance Florence to the modern Middle East, the syndrome recurs — the faces change, but the structures of deception remain eerily familiar.",
+    des1: "In the late fifteenth century, Girolamo Savonarola captivated a significant portion of Florence's population with his fervent sermons and alignment with the poor and disenfranchised. Promising a people's republic, he presented himself as a righteous preacher, condemning Rome and the Pope — whom he saw as the very embodiment of corruption.",
+    des2: "Savonarola's rejection of art, poetry, and philosophy — which he deemed distractions from divine devotion — resonated with many, not only among the masses, but also among the opponents of Lorenzo the Magnificent, the famed patron of the arts under whose reign Florence flourished artistically, commercially, and architecturally.",
+    des3: "Two years after Lorenzo's death, and following the flight of his son Piero during the French invasion of 1494, Savonarola managed to negotiate with King Charles VIII of France, securing the right for Florentines to choose their own government — a right previously reserved for a select elite.",
+    des4: "Though this shift appeared democratic on the surface, in reality it ushered in a theocratic rule under Savonarola's iron grip. His reign, known as the \"years of darkness\", saw the burning of books, the destruction of Botticelli's paintings, and even the smashing of Michelangelo's sculptures.",
+    des5: "It is difficult not to draw parallels between Savonarola's Florence — seduced by the illusion of democracy — and our own societies, which embraced revolutionary slogans without questioning the cultural foundations upon which real change must be built.",
+    des6: "In more recent times, particularly following the uprisings across parts of the Middle East and North Africa, we witnessed a surge in political dissidents and human rights activists. Yet their conception of rights remained conditional, filtered through the lens of their own inherited cultural values.",
+    des7: "They called for political freedom without first understanding its essence, or freeing it from the cultural strictures that constrain individual autonomy. In this, they differed little from the rulers they opposed — figures who, despite their lack of vision or competence, clung to power not through merit, but through inertia and the absence of alternatives.",
+    des8: "Many of these rulers evoke the image of medieval monarchs. Take, for instance, Louis XI of France, who imprisoned his adversaries in narrow cages — a precursor to modern methods of repression, perfected by successors who crammed hundreds into cells scarcely four square metres in size.",
+    des9: 'Nor is Charles VI — the so-called "mad king" — so far removed; the traits are disturbingly familiar.',
+    des10:
+      "As for today's activists and self-styled defenders of liberty and democracy, one finds more than a faint echo of Savonarola's moral absolutism. The difference lies only in their diminished eloquence and inability to rally the masses.",
+    des11:
+      "The so-called Arab Spring allowed many to purge their long-repressed frustrations, and transformed some into vocal opponents of authoritarianism. But their slogans, however legitimate in content, were devoid of cultural introspection.",
+    des12:
+      'We cannot democratise governance without first anchoring the rights of the individual — the right to express oneself freely and to live authentically, unburdened by traditional formulas such as "customs", "tradition", or "the forbidden".',
+    des13:
+      "This is why so many activists and opposition figures, for over a decade now, continue to recite the same mantras about democracy and human rights, without ever working to chart a path towards them.",
+    des14:
+      "Subconsciously, they parrot these phrases not out of principle, but to mask their intellectual impotence — their inability to conceive of genuine frameworks for change.",
+    des15:
+      "It is this confusion — this lack of conceptual clarity — that leads to what I call the Parrot Syndrome.",
+    des16:
+      "In functioning democracies, activist movements are often capable of generating public debate, pressuring political actors to engage with emerging demands. Whether related to the environment, animal welfare, or individual freedoms, such movements are often the very expression of ongoing cultural and social transformation.",
+    des17:
+      "But such shifts cannot occur without first emancipating the imagination — liberating the individual from inherited taboos and disabling fixations that suffocate human potential.",
+    des18:
+      "We must also distinguish between the role of the activist and that of the politician or political dissident.",
+    des19:
+      "The activist's role is to spotlight barriers to transformation, to awaken collective consciousness, and to galvanise groups into action — so that change becomes a political necessity embraced by parties or institutions.",
+    des20:
+      "Sadly, this distinction is rarely observed in our region. Both activists and dissidents tend to repeat the same empty slogans, mechanically and uncritically — parroting them with no real strategy for change.",
+    des21:
+      "Worse still, some Western governments encourage this sterile performance, failing to distinguish between those with genuine capability and those who merely imitate.",
+    des22:
+      "Yet we are not bound by this dilemma, nor by these two dismal archetypes.",
+    des23:
+      "We possess many pathways — and many tools — for real, substantive change: the kind that leads to the democratisation of meaning, of culture, and of society at large.",
+    des24: "But this can only be achieved by conscious individuals.",
+    des25:
+      "History is not solely the domain of institutions — it is written by those who dare to break the cycle of repetition… and liberate themselves from the Parrot Syndrome.",
+  },
+  {
+    id: "7",
+    title: "Turkey—A Spring of Peace, or a Fountain of Death and Destruction?",
+    slug: "turkey-spring-of-peace-or-fountain-of-destruction",
+    screens: "Al-Shorouk Newspaper - 19 October 2019",
+    description:
+      "An opinion article analyzing Turkey's military intervention in Syria following the U.S. troop withdrawal, highlighting geopolitical, humanitarian, and institutional implications.",
+    des0: "The decision to withdraw US forces from northeastern Syria was both hasty and profoundly misguided—a strategic blunder that effectively eliminated any prospect of peace in an already fragmented country.",
+    des1: "President Trump's reckless move handed the region over to the Turks, who wasted no time launching their offensive, killing and displacing innocent civilians in the process. We are now witnessing the early stages of a deliberate plan to alter the demographic fabric of the region.",
+    des2: "It is nothing short of disgraceful that some Syrians have chosen to side with Turkish aggression—some even celebrating this military operation that endangers the lives of Syrians of all backgrounds: Kurds, Assyrians, Arabs, and Yazidis alike. Worse still, this incursion may pave the way for a resurgence of ISIS. It is pure fantasy to imagine, even for a moment, that the Turkish government is capable of managing or containing 118,000 detainees—fighters and their families—even if one were naïve enough to believe in Ankara's goodwill.",
+    des3: "In reality, these human time bombs are set to become bargaining chips in Turkey's hands—deployed at will as leverage against any state that dares oppose its policies. Beyond that, Turkey will likely unleash these jihadists to complete its dirty work: assassinating members of the Autonomous Administration and sowing further instability across the region.",
+    des4: "President Erdoğan still clings to the delusion of becoming a leader of the Islamist world—a modern-day caliph. We see this clearly in his determination to establish extremist institutions across northern Syria, particularly in areas under Turkish military occupation and the control of its Syrian proxies.",
+    des5: 'Against this grim backdrop, the United Nations chases the mirage of a "constitutional committee", while doing nothing to condemn Turkey\'s blatant aggression on Syrian soil. But one should hardly be surprised by such inaction from a tired, antiquated institution that repeatedly demonstrates its inability to respond meaningfully to global crises. The UN has become little more than a revolving door for incompetent politicians and diplomats whom their governments are eager to discard.',
+    des6: "Since the appointment of Geir Pedersen—whom I had thought could not possibly fare worse than his predecessor, Staffan de Mistura—it has become painfully clear that we have yet to hit rock bottom. Rather than act with urgency or vision, the new envoy confined himself for nearly a year to engaging with opposition figures, most of whom are beholden to belligerent Turkey. This alone reveals both his naivety and his failure to craft fresh approaches to an increasingly complex conflict.",
+    des7: "What hope is there when a UN envoy seeks to build trust between a deranged regime and a fragmented opposition bankrolled by agents of destruction?",
+    des8: "And what can one reasonably expect from António Guterres—the current UN Secretary-General—who previously failed spectacularly in resolving the Cyprus conflict during his tenure as special envoy?",
+    des9: 'In a final, bitter irony, the long-delayed constitutional committee—after one year and seven months of repeated stillbirths—was finally brought into being, malformed and impotent, just days before Turkey launched its assault. And one of the guarantors of this very committee is a state actively working to carve up and annex Syrian territory under the cynical banner of "Operation Peace Spring"—more truthfully named the Fountain of Death and Destruction.',
+  },
+  {
+    id: "8",
+    title: "In Syria: Revolt and Secularity",
+    slug: "syria-revolt-and-secularity",
+    screens: "Published - 10 June 2015",
+    description:
+      "A critical examination of the impact of the Arab Spring on women's rights in the MENA region, especially Syria, and the role of secularism in the quest for gender equality.",
+    des0: "The recent wave of protests across several Arab countries raised significant hopes among women. These mass movements were, at the time, seen as the dawn of a new awareness, with the ultimate aim of achieving change. This period was preceded by a surge in secular and anti-religious movements, particularly in the virtual sphere, expressing a clear desire for substantial reforms. The goal of these secularists was to establish a democracy rooted in individual rights, allowing people at last to speak freely. Women were deeply involved in these secular movements, both prior to and during the emergence of the Arab Spring. Naturally, they hoped to lay the groundwork for gender equality and to bring an end to all forms of discrimination.",
+    des1: 'Contrary to these aspirations, the Arab Spring gave rise to radical Islamism, grounded in a literal interpretation of certain violent verses from the Qur\'an—verses that reflect a deep-seated contempt for women, manifesting in misogynistic attitudes and discriminatory jurisprudence. While this "Spring" succeeded in toppling a few Arab dictators, it has, in many cases, replaced authoritarianism with a new form of tyranny: religious despotism. With the return of theocratic governance, women were among the first to suffer. Indeed, their situation has worsened in several Arab Spring countries, despite their active role in opposing authoritarian regimes and challenging social taboos.',
+    des2: "Paradoxically, women's rights have regressed following the uprisings in the MENA region (Middle East and North Africa). In many of these countries, women have become primary targets of violence—be it physical, social, or economic. Nonetheless, the outcomes vary widely depending on the circumstances and diversity of each nation.",
+    des3: "Take Syria, for instance: women's status varies significantly depending on their social, religious, or ethnic background. Syrian society is highly heterogeneous, and Common Law differs from one community to another. Four distinct personal status codes exist, pertaining to Catholic, Orthodox, Druze, and Sunni communities. For Sunnis, the code is based on Islamic Sharia. Although the Syrian Constitution proclaims secularity and freedom of worship, it also stipulates in Article 3 that the President of the Republic must be Muslim. Moreover, while the Constitution affirms gender equality in the workplace—promoting women's financial independence—it still contains discriminatory provisions, including penal codes that legally justify so-called \"honour crimes\".",
+    des4: "Since the uprising of 2011, many women have fallen victim to rape—by both regime forces and rebel factions. The situation has further deteriorated, particularly in areas under Islamist rebel control. In territories held by the Islamic State, women accused of adultery have been stoned to death, and many are now confined to their homes by fear and force.",
+    des5: "It is important to emphasise that other Islamist rebel groups also promote a rigid and restrictive interpretation of Islam, pushing to impose backward ideologies that obstruct women's liberation.",
+    des6: "There is, however, a glimmer of hope in Syria. This can be seen in the Kurdish-held regions, where a secular and egalitarian model has been implemented. The self-administered Kurdish authorities have adopted a system that rejects all forms of discrimination against women, establishing legal and social equality between the sexes. In these areas, Kurdish women hold around forty percent of local council seats, and female fighters play a prominent role on the front lines against a barbaric enemy.",
+    des7: "In conclusion, it is clear that in societies shaped by religion and entrenched taboos, women are deprived of meaningful emancipation. The prevailing culture in many Arab-Muslim societies is one that enslaves the individual, with women as its primary victims.",
+    des8: "The Islamisation of these societies, and the rise to power of Islamist forces in certain states, have rendered women the principal losers. They face patriarchal injustices drawn from Qur'anic verses that give men superiority in legal rights and inheritance.",
+    des9: "In the twenty-first century, the condition of Arab-Muslim women has deteriorated to the point where they are reduced to a reproductive function. This generates profound frustration, particularly as these same women, through access to information and social networks, are exposed to more emancipated models. The sense of revolt that this stirs is understandable.",
+    des10:
+      "Syrian women, however, have a unique opportunity. They can align themselves with the minorities—making up thirty-five percent of the population—who favour secularism. This remains the only path toward enshrining a Common Law based on the principles of equality and parity between women and men.",
+    des11:
+      "In the face of the Islamic State's barbarism, Muslim women have nothing to lose. They must adopt a critical mindset. They must question their belief system. They must scrutinise their adherence to a rigid, literalist interpretation of Islam. In this struggle, it is time for them—alongside enlightened men—to embark on the path towards secularism.",
+  },
+  {
+    id: "9",
+    title: "Turkey: Is It Still Our Ally?",
+    slug: "turkey-is-it-still-our-ally",
+    screens: "Le Figaro",
+    description:
+      "An analysis of Turkey's stance during the fight against ISIS and its role as an ally in NATO.",
+    des0: "To combat the Islamic State (IS)—that totalitarian monstrosity intent on subjugating the Middle East and, ultimately, the world—ten regional powers signed the 'Jeddah Communiqué,' pledging to support President Barack Obama's campaign against IS. But one key signature was missing: that of Turkey under President Recep Tayyip Erdoğan.",
+    des1: "When US Secretary of Defense Chuck Hagel attempted to persuade Turkey to join the international coalition, Ankara flatly refused. In doing so, it disrupted the core of Atlantic solidarity. Not only did Turkey decline to participate militarily, but it also prohibited American and NATO aircraft—those best placed to reach Iraq—from taking off from its airbases.",
+    des2: "Many mistakenly believe that tyranny is confined to autocratic rulers. In truth, it often conceals itself beneath the guise of reform and piety, preying on a population's yearning for change. From Renaissance Florence to the modern Middle East, the syndrome recurs — the faces change, but the structures of deception remain eerily familiar.",
+    des3: "In the late fifteenth century, Girolamo Savonarola captivated a significant portion of Florence's population with his fervent sermons and alignment with the poor and disenfranchised. Promising a people's republic, he presented himself as a righteous preacher, condemning Rome and the Pope — whom he saw as the very embodiment of corruption.",
+    des4: "Savonarola's rejection of art, poetry, and philosophy — which he deemed distractions from divine devotion — resonated with many, not only among the masses, but also among the opponents of Lorenzo the Magnificent, the famed patron of the arts under whose reign Florence flourished artistically, commercially, and architecturally.",
+    des5: "Two years after Lorenzo's death, and following the flight of his son Piero during the French invasion of 1494, Savonarola managed to negotiate with King Charles VIII of France, securing the right for Florentines to choose their own government — a right previously reserved for a select elite.",
+    des6: "Though this shift appeared democratic on the surface, in reality it ushered in a theocratic rule under Savonarola's iron grip. His reign, known as the \"years of darkness\", saw the burning of books, the destruction of Botticelli's paintings, and even the smashing of Michelangelo's sculptures.",
+    des7: "It is difficult not to draw parallels between Savonarola's Florence — seduced by the illusion of democracy — and our own societies, which embraced revolutionary slogans without questioning the cultural foundations upon which real change must be built.",
+    des8: "In more recent times, particularly following the uprisings across parts of the Middle East and North Africa, we witnessed a surge in political dissidents and human rights activists. Yet their conception of rights remained conditional, filtered through the lens of their own inherited cultural values.",
+    des9: "They called for political freedom without first understanding its essence, or freeing it from the cultural strictures that constrain individual autonomy. In this, they differed little from the rulers they opposed — figures who, despite their lack of vision or competence, clung to power not through merit, but through inertia and the absence of alternatives.",
+    des10:
+      "Many of these rulers evoke the image of medieval monarchs. Take, for instance, Louis XI of France, who imprisoned his adversaries in narrow cages — a precursor to modern methods of repression, perfected by successors who crammed hundreds into cells scarcely four square metres in size.",
+    des11:
+      'Nor is Charles VI — the so-called "mad king" — so far removed; the traits are disturbingly familiar.',
+    des12:
+      "As for today's activists and self-styled defenders of liberty and democracy, one finds more than a faint echo of Savonarola's moral absolutism. The difference lies only in their diminished eloquence and inability to rally the masses.",
+    des13:
+      "The so-called Arab Spring allowed many to purge their long-repressed frustrations, and transformed some into vocal opponents of authoritarianism. But their slogans, however legitimate in content, were devoid of cultural introspection.",
+    des14:
+      'We cannot democratise governance without first anchoring the rights of the individual — the right to express oneself freely and to live authentically, unburdened by traditional formulas such as "customs", "tradition", or "the forbidden".',
+    des15:
+      "This is why so many activists and opposition figures, for over a decade now, continue to recite the same mantras about democracy and human rights, without ever working to chart a path towards them.",
+    des16:
+      "Subconsciously, they parrot these phrases not out of principle, but to mask their intellectual impotence — their inability to conceive of genuine frameworks for change.",
+    des17:
+      "It is this confusion — this lack of conceptual clarity — that leads to what I call the Parrot Syndrome.",
+    des18:
+      "In functioning democracies, activist movements are often capable of generating public debate, pressuring political actors to engage with emerging demands. Whether related to the environment, animal welfare, or individual freedoms, such movements are often the very expression of ongoing cultural and social transformation.",
+    des19:
+      "But such shifts cannot occur without first emancipating the imagination — liberating the individual from inherited taboos and disabling fixations that suffocate human potential.",
+    des20:
+      "We must also distinguish between the role of the activist and that of the politician or political dissident.",
+    des21:
+      "The activist's role is to spotlight barriers to transformation, to awaken collective consciousness, and to galvanise groups into action — so that change becomes a political necessity embraced by parties or institutions.",
+    des22:
+      "Sadly, this distinction is rarely observed in our region. Both activists and dissidents tend to repeat the same empty slogans, mechanically and uncritically — parroting them with no real strategy for change.",
+    des23:
+      "Worse still, some Western governments encourage this sterile performance, failing to distinguish between those with genuine capability and those who merely imitate.",
+    des24:
+      "Yet we are not bound by this dilemma, nor by these two dismal archetypes.",
+    des25:
+      "We possess many pathways — and many tools — for real, substantive change: the kind that leads to the democratisation of meaning, of culture, and of society at large.",
+    des26: "But this can only be achieved by conscious individuals.",
+    des27:
+      "History is not solely the domain of institutions — it is written by those who dare to break the cycle of repetition… and liberate themselves from the Parrot Syndrome.",
+  },
+  {
+    id: "7",
+    title: "Turkey—A Spring of Peace, or a Fountain of Death and Destruction?",
+    slug: "turkey-spring-of-peace-or-fountain-of-destruction",
+    screens: "Al-Shorouk Newspaper - 19 October 2019",
+    description:
+      "An opinion article analyzing Turkey's military intervention in Syria following the U.S. troop withdrawal, highlighting geopolitical, humanitarian, and institutional implications.",
+    des0: "The decision to withdraw US forces from northeastern Syria was both hasty and profoundly misguided—a strategic blunder that effectively eliminated any prospect of peace in an already fragmented country.",
+    des1: "President Trump's reckless move handed the region over to the Turks, who wasted no time launching their offensive, killing and displacing innocent civilians in the process. We are now witnessing the early stages of a deliberate plan to alter the demographic fabric of the region.",
+    des2: "It is nothing short of disgraceful that some Syrians have chosen to side with Turkish aggression—some even celebrating this military operation that endangers the lives of Syrians of all backgrounds: Kurds, Assyrians, Arabs, and Yazidis alike. Worse still, this incursion may pave the way for a resurgence of ISIS. It is pure fantasy to imagine, even for a moment, that the Turkish government is capable of managing or containing 118,000 detainees—fighters and their families—even if one were naïve enough to believe in Ankara's goodwill.",
+    des3: "In reality, these human time bombs are set to become bargaining chips in Turkey's hands—deployed at will as leverage against any state that dares oppose its policies. Beyond that, Turkey will likely unleash these jihadists to complete its dirty work: assassinating members of the Autonomous Administration and sowing further instability across the region.",
+    des4: "President Erdoğan still clings to the delusion of becoming a leader of the Islamist world—a modern-day caliph. We see this clearly in his determination to establish extremist institutions across northern Syria, particularly in areas under Turkish military occupation and the control of its Syrian proxies.",
+    des5: 'Against this grim backdrop, the United Nations chases the mirage of a "constitutional committee", while doing nothing to condemn Turkey\'s blatant aggression on Syrian soil. But one should hardly be surprised by such inaction from a tired, antiquated institution that repeatedly demonstrates its inability to respond meaningfully to global crises. The UN has become little more than a revolving door for incompetent politicians and diplomats whom their governments are eager to discard.',
+    des6: "Since the appointment of Geir Pedersen—whom I had thought could not possibly fare worse than his predecessor, Staffan de Mistura—it has become painfully clear that we have yet to hit rock bottom. Rather than act with urgency or vision, the new envoy confined himself for nearly a year to engaging with opposition figures, most of whom are beholden to belligerent Turkey. This alone reveals both his naivety and his failure to craft fresh approaches to an increasingly complex conflict.",
+    des7: "What hope is there when a UN envoy seeks to build trust between a deranged regime and a fragmented opposition bankrolled by agents of destruction?",
+    des8: "And what can one reasonably expect from António Guterres—the current UN Secretary-General—who previously failed spectacularly in resolving the Cyprus conflict during his tenure as special envoy?",
+    des9: 'In a final, bitter irony, the long-delayed constitutional committee—after one year and seven months of repeated stillbirths—was finally brought into being, malformed and impotent, just days before Turkey launched its assault. And one of the guarantors of this very committee is a state actively working to carve up and annex Syrian territory under the cynical banner of "Operation Peace Spring"—more truthfully named the Fountain of Death and Destruction.',
+  },
+  {
+    id: "8",
+    title: "In Syria: Revolt and Secularity",
+    slug: "syria-revolt-and-secularity",
+    screens: "Published - 10 June 2015",
+    description:
+      "A critical examination of the impact of the Arab Spring on women's rights in the MENA region, especially Syria, and the role of secularism in the quest for gender equality.",
+    des0: "The recent wave of protests across several Arab countries raised significant hopes among women. These mass movements were, at the time, seen as the dawn of a new awareness, with the ultimate aim of achieving change. This period was preceded by a surge in secular and anti-religious movements, particularly in the virtual sphere, expressing a clear desire for substantial reforms. The goal of these secularists was to establish a democracy rooted in individual rights, allowing people at last to speak freely. Women were deeply involved in these secular movements, both prior to and during the emergence of the Arab Spring. Naturally, they hoped to lay the groundwork for gender equality and to bring an end to all forms of discrimination.",
+    des1: 'Contrary to these aspirations, the Arab Spring gave rise to radical Islamism, grounded in a literal interpretation of certain violent verses from the Qur\'an—verses that reflect a deep-seated contempt for women, manifesting in misogynistic attitudes and discriminatory jurisprudence. While this "Spring" succeeded in toppling a few Arab dictators, it has, in many cases, replaced authoritarianism with a new form of tyranny: religious despotism. With the return of theocratic governance, women were among the first to suffer. Indeed, their situation has worsened in several Arab Spring countries, despite their active role in opposing authoritarian regimes and challenging social taboos.',
+    des2: "Paradoxically, women's rights have regressed following the uprisings in the MENA region (Middle East and North Africa). In many of these countries, women have become primary targets of violence—be it physical, social, or economic. Nonetheless, the outcomes vary widely depending on the circumstances and diversity of each nation.",
+    des3: "Take Syria, for instance: women's status varies significantly depending on their social, religious, or ethnic background. Syrian society is highly heterogeneous, and Common Law differs from one community to another. Four distinct personal status codes exist, pertaining to Catholic, Orthodox, Druze, and Sunni communities. For Sunnis, the code is based on Islamic Sharia. Although the Syrian Constitution proclaims secularity and freedom of worship, it also stipulates in Article 3 that the President of the Republic must be Muslim. Moreover, while the Constitution affirms gender equality in the workplace—promoting women's financial independence—it still contains discriminatory provisions, including penal codes that legally justify so-called \"honour crimes\".",
+    des4: "Since the uprising of 2011, many women have fallen victim to rape—by both regime forces and rebel factions. The situation has further deteriorated, particularly in areas under Islamist rebel control. In territories held by the Islamic State, women accused of adultery have been stoned to death, and many are now confined to their homes by fear and force.",
+    des5: "It is important to emphasise that other Islamist rebel groups also promote a rigid and restrictive interpretation of Islam, pushing to impose backward ideologies that obstruct women's liberation.",
+    des6: "There is, however, a glimmer of hope in Syria. This can be seen in the Kurdish-held regions, where a secular and egalitarian model has been implemented. The self-administered Kurdish authorities have adopted a system that rejects all forms of discrimination against women, establishing legal and social equality between the sexes. In these areas, Kurdish women hold around forty percent of local council seats, and female fighters play a prominent role on the front lines against a barbaric enemy.",
+    des7: "In conclusion, it is clear that in societies shaped by religion and entrenched taboos, women are deprived of meaningful emancipation. The prevailing culture in many Arab-Muslim societies is one that enslaves the individual, with women as its primary victims.",
+    des8: "The Islamisation of these societies, and the rise to power of Islamist forces in certain states, have rendered women the principal losers. They face patriarchal injustices drawn from Qur'anic verses that give men superiority in legal rights and inheritance.",
+    des9: "In the twenty-first century, the condition of Arab-Muslim women has deteriorated to the point where they are reduced to a reproductive function. This generates profound frustration, particularly as these same women, through access to information and social networks, are exposed to more emancipated models. The sense of revolt that this stirs is understandable.",
+    des10:
+      "Syrian women, however, have a unique opportunity. They can align themselves with the minorities—making up thirty-five percent of the population—who favour secularism. This remains the only path toward enshrining a Common Law based on the principles of equality and parity between women and men.",
+    des11:
+      "In the face of the Islamic State's barbarism, Muslim women have nothing to lose. They must adopt a critical mindset. They must question their belief system. They must scrutinise their adherence to a rigid, literalist interpretation of Islam. In this struggle, it is time for them—alongside enlightened men—to embark on the path towards secularism.",
+  },
+  {
+    id: "9",
+    title: "Turkey: Is It Still Our Ally?",
+    slug: "turkey-is-it-still-our-ally",
+    screens: "Le Figaro",
+    description:
+      "An analysis of Turkey's stance during the fight against ISIS and its role as an ally in NATO.",
+    des0: "To combat the Islamic State (IS)—that totalitarian monstrosity intent on subjugating the Middle East and, ultimately, the world—ten regional powers signed the 'Jeddah Communiqué,' pledging to support President Barack Obama's campaign against IS. But one key signature was missing: that of Turkey under President Recep Tayyip Erdoğan.",
+    des1: "When US Secretary of Defense Chuck Hagel attempted to persuade Turkey to join the international coalition, Ankara flatly refused. In doing so, it disrupted the core of Atlantic solidarity. Not only did Turkey decline to participate militarily, but it also prohibited American and NATO aircraft—those best placed to reach Iraq—from taking off from its airbases.",
+    des2: "Many mistakenly believe that tyranny is confined to autocratic rulers. In truth, it often conceals itself beneath the guise of reform and piety, preying on a population's yearning for change. From Renaissance Florence to the modern Middle East, the syndrome recurs — the faces change, but the structures of deception remain eerily familiar.",
+    des3: "In the late fifteenth century, Girolamo Savonarola captivated a significant portion of Florence's population with his fervent sermons and alignment with the poor and disenfranchised. Promising a people's republic, he presented himself as a righteous preacher, condemning Rome and the Pope — whom he saw as the very embodiment of corruption.",
+    des4: "Savonarola's rejection of art, poetry, and philosophy — which he deemed distractions from divine devotion — resonated with many, not only among the masses, but also among the opponents of Lorenzo the Magnificent, the famed patron of the arts under whose reign Florence flourished artistically, commercially, and architecturally.",
+    des5: "Two years after Lorenzo's death, and following the flight of his son Piero during the French invasion of 1494, Savonarola managed to negotiate with King Charles VIII of France, securing the right for Florentines to choose their own government — a right previously reserved for a select elite.",
+    des6: "Though this shift appeared democratic on the surface, in reality it ushered in a theocratic rule under Savonarola's iron grip. His reign, known as the \"years of darkness\", saw the burning of books, the destruction of Botticelli's paintings, and even the smashing of Michelangelo's sculptures.",
+    des7: "It is difficult not to draw parallels between Savonarola's Florence — seduced by the illusion of democracy — and our own societies, which embraced revolutionary slogans without questioning the cultural foundations upon which real change must be built.",
+    des8: "In more recent times, particularly following the uprisings across parts of the Middle East and North Africa, we witnessed a surge in political dissidents and human rights activists. Yet their conception of rights remained conditional, filtered through the lens of their own inherited cultural values.",
+    des9: "They called for political freedom without first understanding its essence, or freeing it from the cultural strictures that constrain individual autonomy. In this, they differed little from the rulers they opposed — figures who, despite their lack of vision or competence, clung to power not through merit, but through inertia and the absence of alternatives.",
+    des10:
+      "Many of these rulers evoke the image of medieval monarchs. Take, for instance, Louis XI of France, who imprisoned his adversaries in narrow cages — a precursor to modern methods of repression, perfected by successors who crammed hundreds into cells scarcely four square metres in size.",
+    des11:
+      'Nor is Charles VI — the so-called "mad king" — so far removed; the traits are disturbingly familiar.',
+    des12:
+      "As for today's activists and self-styled defenders of liberty and democracy, one finds more than a faint echo of Savonarola's moral absolutism. The difference lies only in their diminished eloquence and inability to rally the masses.",
+    des13:
+      "The so-called Arab Spring allowed many to purge their long-repressed frustrations, and transformed some into vocal opponents of authoritarianism. But their slogans, however legitimate in content, were devoid of cultural introspection.",
+    des14:
+      'We cannot democratise governance without first anchoring the rights of the individual — the right to express oneself freely and to live authentically, unburdened by traditional formulas such as "customs", "tradition", or "the forbidden".',
+    des15:
+      "This is why so many activists and opposition figures, for over a decade now, continue to recite the same mantras about democracy and human rights, without ever working to chart a path towards them.",
+    des16:
+      "Subconsciously, they parrot these phrases not out of principle, but to mask their intellectual impotence — their inability to conceive of genuine frameworks for change.",
+    des17:
+      "It is this confusion — this lack of conceptual clarity — that leads to what I call the Parrot Syndrome.",
+    des18:
+      "In functioning democracies, activist movements are often capable of generating public debate, pressuring political actors to engage with emerging demands. Whether related to the environment, animal welfare, or individual freedoms, such movements are often the very expression of ongoing cultural and social transformation.",
+    des19:
+      "But such shifts cannot occur without first emancipating the imagination — liberating the individual from inherited taboos and disabling fixations that suffocate human potential.",
+    des20:
+      "We must also distinguish between the role of the activist and that of the politician or political dissident.",
+    des21:
+      "The activist's role is to spotlight barriers to transformation, to awaken collective consciousness, and to galvanise groups into action — so that change becomes a political necessity embraced by parties or institutions.",
+    des22:
+      "Sadly, this distinction is rarely observed in our region. Both activists and dissidents tend to repeat the same empty slogans, mechanically and uncritically — parroting them with no real strategy for change.",
+    des23:
+      "Worse still, some Western governments encourage this sterile performance, failing to distinguish between those with genuine capability and those who merely imitate.",
+    des24:
+      "Yet we are not bound by this dilemma, nor by these two dismal archetypes.",
+    des25:
+      "We possess many pathways — and many tools — for real, substantive change: the kind that leads to the democratisation of meaning, of culture, and of society at large.",
+    des26: "But this can only be achieved by conscious individuals.",
+    des27:
+      "History is not solely the domain of institutions — it is written by those who dare to break the cycle of repetition… and liberate themselves from the Parrot Syndrome.",
+  },
+  {
+    id: "10",
+    title:
+      "The Arab Spring: Caught Between a Siberian Winter and a Desert Summer – A Crisis of Extremes",
+    slug: "the-arab-spring-caught-between-a-siberian-winter-and-a-desert-summer-a-crisis-of-extremes",
+    screens: "Al-Hiwar al-Mutamaddin",
+    description:
+      "An exploration of the Arab Spring, its complex origins, and the impact of repression and extremism on the region's political dynamics.",
+    des0: "What came to be known as the 'Arab Spring' – as many prefer to call it – was the result of a complex accumulation of factors over decades. This reinforces the belief that it was not a spontaneous eruption but rather the outcome of psychological and social tensions, intensified by external stimuli that compelled millions to release their repressed internal frustrations. This release began gradually, eventually evolving into revolutions that toppled entrenched regimes plagued by corruption and authoritarianism.",
+    des1: "Excessive repression by authoritarian regimes played a decisive role in activating the collective unconscious, which instinctively sought outlets to release the growing pressure, especially under the constraints on freedom of expression. In a bid to maintain power, some regimes in Arab-Islamic societies employed a calculated strategy by instrumentalising fundamentalist religion. They played a double game—on one hand, feigning secularism by attacking religious-based political parties, while on the other, fuelling extremism and undermining individual awareness.",
+    des2: "The religious foundation of Arab societies, which often restricts individuals within a value system at odds with human psychological needs, made it easier for these regimes to dominate. Religion, rather than acting as a source of transcendence, became a refuge for those escaping their own realities and a world that denied their essential needs. This fusion of religion and authoritarian rule eroded national identity, particularly given that religion is inherently transnational, and religiosity does not necessarily uphold patriotism.",
+    des3: "These regimes also co-opted nationalistic discourse, donning patriotism as a mask in a masquerade of despotism. The repetitive use of nationalist slogans led—especially among younger generations—to an unconscious aversion, stripping the language of its genuine substance.",
+    des4: "In this vacuum, hard-line Islam—detached from the collective historical memory—began permeating the social fabric of certain communities. Islamist movements exploited a deep-rooted sense of defeat, offering a religious identity to individuals confined within cultural and ethical-religious structures resistant to change. Through this identity, they found a semblance of security and a psychological substitute for unmet desires.",
     des1: "Many mistakenly believe that tyranny is confined to autocratic rulers. In truth, it often conceals itself beneath the guise of reform and piety, preying on a population’s yearning for change. From Renaissance Florence to the modern Middle East, the syndrome recurs — the faces change, but the structures of deception remain eerily familiar.",
     des2: "In the late fifteenth century, Girolamo Savonarola captivated a significant portion of Florence’s population with his fervent sermons and alignment with the poor and disenfranchised. Promising a people’s republic, he presented himself as a righteous preacher, condemning Rome and the Pope — whom he saw as the very embodiment of corruption.",
     des3: "Savonarola’s rejection of art, poetry, and philosophy — which he deemed distractions from divine devotion — resonated with many, not only among the masses, but also among the opponents of Lorenzo the Magnificent, the famed patron of the arts under whose reign Florence flourished artistically, commercially, and architecturally.",

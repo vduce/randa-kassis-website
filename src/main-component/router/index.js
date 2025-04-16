@@ -74,7 +74,7 @@ const AllRoute = () => {
           <Route path='contact' element={<ContactPage/>}/>
           <Route path='blog' element={<BlogPage />} />
           <Route path='blog-left-sidebar' element={<BlogPageLeft />} />
-          <Route path='article' element={<BlogPageFullwidth />} />
+          <Route path='articles' element={<BlogPageFullwidth />} />
           <Route path='conference-and-symposium' element={<ServicePageFullwidth />} />
           <Route path='blog-single/:slug' element={<BlogDetails />} />
           <Route path='blog-single-left-sidebar/:slug' element={<BlogDetailsLeftSiide />} />

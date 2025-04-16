@@ -25,10 +25,13 @@ const Footer = (props) => {
             window.googleTranslateLoaded = true;
 
             window.googleTranslateElementInit = () => {
-                new window.google.translate.TranslateElement(
-                    { pageLanguage: "en", autoDisplay: false },
-                    "google_translate_element"
-                );
+                if (window.google.translate) {
+                    new window.google.translate.TranslateElement(
+                        { pageLanguage: "en", autoDisplay: false },
+                        "google_translate_element"
+                    );
+                  }
+             
             };
         }
     }, []);
@@ -79,7 +82,7 @@ const Footer = (props) => {
                                 <ul>
                                     <li><Link onClick={ClickHandler} to="/">Home </Link></li>
                                     <li><Link onClick={ClickHandler} to="/media">Media</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog-fullwidth">Article</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/articles">Articles</Link></li>
                                     <li><Link onClick={ClickHandler} to="/service-fullwidth">Conference And Symposiums</Link></li>
                                     <li><Link onClick={ClickHandler} to="/gallery">Gallery</Link></li>
 
