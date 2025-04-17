@@ -2,17 +2,20 @@
 html {
     font-size: $base-font-size + px;
 }
+
 :root {
     scroll-behavior: unset;
 }
+
 body {
     font-family: $base-font;
-    color:$body-color;
+    color: $body-color;
     background-color: $body-bg-color;
     font-size: 18px;
     font-size: calc-rem-value(18);
     overflow-x: hidden;
-    @include media-query( 767px ) {
+
+    @include media-query(767px) {
         font-size: 14px;
     }
 }
@@ -20,7 +23,7 @@ body {
 p {
     font-size: 18px;
     color: $body-color;
-    line-height: 1.8em;
+    line-height: 1.4em;
 }
 
 h1,
@@ -49,11 +52,11 @@ a:hover {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -100,33 +103,39 @@ img{
         font-size: 14px;
     }
 }
+
 .section-padding {
     padding: 10px 0;
 
-    @include media-query( 991px ) {
+    @include media-query(991px) {
         padding: 90px 0;
     }
-    @include media-query( 767px ) {
+
+    @include media-query(767px) {
         padding: 80px 0;
     }
 }
+
 .section-padding1 {
     padding: 60px 0;
 
-    @include media-query( 991px ) {
+    @include media-query(991px) {
         padding: 90px 0;
     }
-    @include media-query( 767px ) {
+
+    @include media-query(767px) {
         padding: 80px 0;
     }
 }
+
 .pt-100 {
     padding-top: 100px;
 
-    @include media-query( 991px ) {
+    @include media-query(991px) {
         padding-top: 80px;
     }
-    @include media-query( 767px ) {
+
+    @include media-query(767px) {
         padding-top: 70px;
     }
 }
@@ -174,7 +183,7 @@ img{
         text-align: center;
         display: none;
 
-        @include media-query(767px)  {
+        @include media-query(767px) {
             font-size: 15px;
         }
     }
@@ -218,8 +227,8 @@ img{
 }
 
 .rotating {
-  -webkit-animation: rotating 5s alternate infinite;
-  animation: rotating 5s alternate infinite;
+    -webkit-animation: rotating 5s alternate infinite;
+    animation: rotating 5s alternate infinite;
 }
 
 
@@ -280,6 +289,7 @@ img{
 .mfp-with-zoom.mfp-ready .mfp-container {
     opacity: 1;
 }
+
 .mfp-with-zoom.mfp-ready.mfp-bg {
     opacity: 0.8;
 }
@@ -291,14 +301,10 @@ img{
 
 /*** for fancybox video ***/
 .fancybox-overlay {
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 9999 !important;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999 !important;
 }
 
 .fancybox-wrap {
-  z-index: 99999 !important;
+    z-index: 99999 !important;
 }
-
-
-
-
