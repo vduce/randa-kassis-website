@@ -33,7 +33,7 @@ const ArticleSingle = (props) => {
                       className="mx-2"
                       style={{ fontSize: "16px", color: "#848892" }}
                     >
-                      {new Date(article.publishedDate).toLocaleDateString()}{" "}
+                      {article.publishedDate}{" "}
                     </label>
                   </p>
                   <>
