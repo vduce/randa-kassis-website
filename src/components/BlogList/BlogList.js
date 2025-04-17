@@ -77,12 +77,18 @@ const BlogList = (props) => {
                   key={bitem}
                 >
                   <div className="entry-details p-3">
-                    <h3>{blog.title}</h3>
-                    <p>{blog.description}</p>
+                    <h4>{blog.title}</h4>
+                    <p style={{ fontSize: "14px", marginTop: "10px" }}>
+                      {blog.publishedDate}
+                    </p>
+                    <p style={{ fontSize: "14px", marginTop: "10px" }}>
+                      {blog.description}
+                    </p>
                     <Link
                       onClick={ClickHandler}
                       to={`/blog-single/${blog.slug}`}
                       className="read-more"
+                      style={{ fontSize: "14px", marginTop: "10px" }}
                     >
                       READ MORE...
                     </Link>
@@ -91,13 +97,18 @@ const BlogList = (props) => {
               ))}
 
               {/* Pagination */}
-              <div className="pagination-wrapper pagination-wrapper-left" style={paginationWrapperStyles}>
+              <div
+                className="pagination-wrapper pagination-wrapper-left"
+                style={paginationWrapperStyles}
+              >
                 <ul style={paginationStyles}>
                   <li>
                     <Link
                       to="#"
                       aria-label="Previous"
-                      onClick={() => currentPage > 1 && paginate(currentPage - 1)}
+                      onClick={() =>
+                        currentPage > 1 && paginate(currentPage - 1)
+                      }
                       style={pageLinkStyles}
                     >
                       <i className="fi ti-angle-left"></i>
@@ -124,8 +135,7 @@ const BlogList = (props) => {
                       to="#"
                       aria-label="Next"
                       onClick={() =>
-                        currentPage < totalPages &&
-                        paginate(currentPage + 1)
+                        currentPage < totalPages && paginate(currentPage + 1)
                       }
                       style={pageLinkStyles}
                     >
