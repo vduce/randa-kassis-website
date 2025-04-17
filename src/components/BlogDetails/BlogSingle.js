@@ -76,6 +76,9 @@ const BlogSingle = (props) => {
                                         {BlogDetails.description}
                                     </div>
                                     <div className="max-w-2xl mx-auto p-2 ">
+                                        {BlogDetails.des1}
+                                    </div>
+                                    <div className="max-w-2xl mx-auto p-2 ">
                                         {BlogDetails.des2}
                                     </div>
                                    <div className="max-w-2xl mx-auto p-2">
