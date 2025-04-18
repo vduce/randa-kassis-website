@@ -95,7 +95,10 @@ const ArticlesList = (props) => {
                         {article.publishedDate}{" "}
                       </label>
                     </p>
-                    <p>{article.description}</p>
+                    <p>
+                      {article.description.substring(0, 200)}
+                      {article.description.length > 200 && "..."}
+                    </p>
                     <Link
                       onClick={ClickHandler}
                       to={`/article-single/${article.slug}`}
