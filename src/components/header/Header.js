@@ -18,6 +18,11 @@ const Header = (props) => {
       "a-rebel-at-heart-my-story7": "Looking Back: The Unyielding...",
       "a-rebel-at-heart-my-story8": "The Contradiction That Defines Me",
     };
+    const interviewList = {
+      "the-politician": "The Politician",
+      "the-essayist-the-critic": "The Essayist & The Critic",
+      "the-painter": "The Painter",
+    };
     const SubmitHandler = (e) => {
       e.preventDefault();
     };
@@ -74,15 +79,7 @@ const Header = (props) => {
                                             </ul> */}
                       </li>
                       {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
-                      <li>
-                        <Link
-                          className="text-capitalize"
-                          onClick={ClickHandler}
-                          to="/media"
-                        >
-                          Media
-                        </Link>
-                      </li>
+
                       <li>
                         <Link
                           className="text-capitalize"
@@ -92,25 +89,46 @@ const Header = (props) => {
                           Articles
                         </Link>
                       </li>
+                      <li className="menu-item-has-children">
+                        <Link
+                          onClick={ClickHandler}
+                          className="text-capitalize"
+                          to="/media"
+                        >
+                          Interviews
+                        </Link>
+                        <ul className="sub-menu">
+                          {Object.entries(interviewList).map(([key, value]) => (
+                            <li key={key}>
+                              <Link
+                                onClick={ClickHandler}
+                                className="text-capitalize"
+                                to={`/interview/${key}`}
+                              >
+                                {value}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
                       <li>
                         <Link
                           className="text-capitalize"
                           onClick={ClickHandler}
                           to="/conference-and-symposium"
                         >
-                          Conference And Symposiums
+                          Encounters & Dialogues
                         </Link>
                       </li>
                       <li>
                         <Link
                           className="text-capitalize"
                           onClick={ClickHandler}
-                          to="/gallery"
+                          to="/conference-and-symposium"
                         >
-                          Gallery
+                          Beyond Politics
                         </Link>
                       </li>
-
                       <li className="menu-item-has-children">
                         <Link
                           onClick={ClickHandler}
@@ -133,6 +151,16 @@ const Header = (props) => {
                           ))}
                         </ul>
                       </li>
+                      <li>
+                        <Link
+                          className="text-capitalize"
+                          onClick={ClickHandler}
+                          to="/gallery"
+                        >
+                          Gallery
+                        </Link>
+                      </li>
+
                       {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} to="/">Pages</Link>
                                             <ul className="sub-menu">
