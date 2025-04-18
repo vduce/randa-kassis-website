@@ -70,7 +70,7 @@ I cannot even ask for your forgiveness, for you have departed this life, and the
   },
 
   {
-    Id: "1",
+    id: "1",
     screens: sImgS1,
     title:
       "Opposition Leader: Resolution of Syrian Crisis Should Be Kick-Started in Sochit",
@@ -109,7 +109,7 @@ The UN Security Council permanent members as well as Egypt, Iraq, Jordan, Kazakh
     ssImg2: sImgS1,
   },
   {
-    Id: "2",
+    id: "2",
     screens: sImgS2,
     title: "Kassis meets Rayburn, US Special Envoy for Syria",
     slug: "kassis-meets-rayburn",
@@ -127,7 +127,7 @@ They also discussed the need to support the constructive and balanced approach o
     ssImg2: sImgS2,
   },
   {
-    Id: "3",
+    id: "3",
     screens: sImgS3,
     title:
       "Kassis meets Beibut Atamkulov, Minister of Foreign Affairs of Kazakhstan",
@@ -149,7 +149,7 @@ Kazakhstan’s contribution to peace has been paramount.`,
     ssImg2: sImgS3,
   },
   {
-    Id: "4",
+    id: "4",
     screens: sImgS4,
     title: "A “road map” to peace.. will be presented over the next few weeks",
     slug: "road-map-to-peace",
@@ -163,7 +163,7 @@ Kazakhstan’s contribution to peace has been paramount.`,
     ssImg2: sImgS4,
   },
   {
-    Id: "5",
+    id: "5",
     screens: sImgS5,
     title: "Trump’s son meets Randa Kassis",
     slug: "trumps-son-meets-randa-kassis",
@@ -181,7 +181,7 @@ Reports suggest Trump’s eldest son, Donald Trump Junior, met the pro-Russia Sy
     ssImg2: sImgS5,
   },
   {
-    Id: "6",
+    id: "6",
     screens: sImgS6,
     title: "Is there any hope for the Syria talks?",
     slug: "is-there-any-hope-for-the-syria-talks",
@@ -201,7 +201,7 @@ Those talks were delayed once but have now begun. But without main members of th
     ssImg2: sImgS6,
   },
   {
-    Id: "7",
+    id: "7",
     screens: sImgS7,
     title: "In Syria: Revolt and Secularity",
     slug: "in-syria-revolt-and-secularity",
@@ -215,7 +215,7 @@ Those talks were delayed once but have now begun. But without main members of th
     ssImg2: sImgS7,
   },
   {
-    Id: "8",
+    id: "8",
     screens: sImgS8,
     title: "Turkey: is it still our ally?",
     slug: "turkey-is-it-still-our-ally",
@@ -229,7 +229,7 @@ Those talks were delayed once but have now begun. But without main members of th
     ssImg2: sImgS8,
   },
   {
-    Id: "9",
+    id: "9",
     screens: sImgS9,
     title: "Syria’s Identity: Variety in Minorities",
     slug: "syrias-identity-variety-in-minorities",
@@ -458,7 +458,7 @@ Those talks were delayed once but have now begun. But without main members of th
     title: "A rebel at heart: My Story",
     slug: "a-rebel-at-heart-my-story8",
     screens: pImg3,
-    description: `A Life Without Meaning, Yet Full of Contradiction`,
+    description: `11A Life Without Meaning, Yet Full of Contradiction`,
     des2: "Life, to me, was a poorly scripted tragedy—its characters stumbling through their lines, obliviousto the absence of direction, climax, or resolution.The scenes unfolded haphazardly, devoid of meaning, and the audience—humanity—was too preoccupied to question the chaos. I watched this performance with quiet indifference, as though seated in the front row of a tragicomic play. Humans, mere puppets, marched unthinking towards their fates, oblivious to the strings that bound them.",
     des3: "On one hand, I had no desire to reform the world, finding solace in my freedom to move untethered, unshackled by dogma or the rigidity of systems. On the other hand, I work tirelessly and passionately to make a difference—whether striving to improve the conditions for animals or seeking solutions for Syria.",
     des4: "This paradox defines me—a restless spirit, torn between accepting life’s futility and a fierce determination to leave my mark on it.",
@@ -476,7 +476,7 @@ Those talks were delayed once but have now begun. But without main members of th
     blClass: "format-standard-image",
   },
   {
-    Id: "1",
+    id: "1",
     screens: sImgS1,
     title:
       "Opposition Leader: Resolution of Syrian Crisis Should Be Kick-Started in Sochit",
@@ -522,7 +522,7 @@ The UN Security Council permanent members as well as Egypt, Iraq, Jordan, Kazakh
     ssImg2: sImgS1,
   },
   {
-    Id: "2",
+    id: "2",
     screens: sImgS2,
     title: "Kassis meets Rayburn, US Special Envoy for Syria",
     slug: "kassis-meets-rayburn",
@@ -540,7 +540,7 @@ Randa Kassis, President of the Astana platform, and Joel D. Rayburn, US Special 
     ssImg2: sImgS2,
   },
   {
-    Id: "3",
+    id: "3",
     screens: sImgS3,
     title:
       "Kassis meets Beibut Atamkulov, Minister of Foreign Affairs of Kazakhstan",
@@ -561,7 +561,7 @@ They had a friendly and fruitful discussion, where they spoke about the crisis i
     ssImg2: sImgS3,
   },
   {
-    Id: "4",
+    id: "4",
     screens: sImgS4,
     title: "A “road map” to peace.. will be presented over the next few weeks",
     slug: "road-map-to-peace",
@@ -575,7 +575,7 @@ They had a friendly and fruitful discussion, where they spoke about the crisis i
     ssImg2: sImgS4,
   },
   {
-    Id: "5",
+    id: "5",
     screens: sImgS5,
     title: "Trump’s son meets Randa Kassis",
     slug: "trumps-son-meets-randa-kassis",
@@ -593,7 +593,7 @@ Reports suggest Trump’s eldest son, Donald Trump Junior, met the pro-Russia Sy
     ssImg2: sImgS5,
   },
   {
-    Id: "6",
+    id: "6",
     screens: sImgS6,
     title: "Is there any hope for the Syria talks?",
     slug: "is-there-any-hope-for-the-syria-talks",
@@ -612,7 +612,7 @@ Opposition groups held multiple meetings in Riyadh to decide who would attend th
     ssImg2: sImgS6,
   },
   {
-    Id: "7",
+    id: "7",
     screens: sImgS7,
     title: "In Syria: Revolt and Secularity",
     slug: "in-syria-revolt-and-secularity",
@@ -626,7 +626,7 @@ Opposition groups held multiple meetings in Riyadh to decide who would attend th
     ssImg2: sImgS7,
   },
   {
-    Id: "8",
+    id: "8",
     screens: sImgS8,
     title: "Turkey: is it still our ally?",
     slug: "turkey-is-it-still-our-ally",
@@ -640,7 +640,7 @@ Opposition groups held multiple meetings in Riyadh to decide who would attend th
     ssImg2: sImgS8,
   },
   {
-    Id: "9",
+    id: "9",
     screens: sImgS9,
     title: "Syria’s Identity: Variety in Minorities",
     slug: "syrias-identity-variety-in-minorities",
@@ -654,7 +654,7 @@ Opposition groups held multiple meetings in Riyadh to decide who would attend th
     ssImg2: sImgS9,
   },
   {
-    Id: "10",
+    id: "10",
     screens: sImgS1,
     title: "MEDays 2015",
     slug: "medays2015",
@@ -669,7 +669,7 @@ MEDays 2015: The Fail of the Global War against the Terrorism.`,
     ssImg2: sImgS1,
   },
   {
-    Id: "11",
+    id: "11",
     screens: sImgS2,
     title: "Geneva Peace Talks 2014",
     slug: "geneva=peace=talks",
@@ -687,7 +687,7 @@ The Geneva Peace Talks are a public event organized on the occasion of the Inter
     ssImg2: sImgS2,
   },
   {
-    Id: "12",
+    id: "12",
     screens: sImgS3,
     title: "Law and Religion",
     slug: "law-and-religion",
@@ -709,7 +709,7 @@ The second session will be instead dedicated to the analysis of the concepts of 
     ssImg2: sImgS3,
   },
   {
-    Id: "50",
+    id: "50",
     screens: sImgS3,
     title: "Political Beliefs",
     slug: "political-beliefs",
