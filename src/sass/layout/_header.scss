@@ -1538,9 +1538,9 @@
     width: 100%;
     z-index: 99;
 
-    // @media (min-width: 1200px) {
-    //     padding: 0 100px;
-    // }
+    @media (min-width: 1200px) {
+        padding: 0 100px;
+    }
 
     @media (max-width:1199px) {
         padding: 0 30px;
