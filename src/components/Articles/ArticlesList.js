@@ -78,7 +78,10 @@ const ArticlesList = (props) => {
                   key={sitem}
                 >
                   <div className="entry-details">
-                    <h4 style={{ color: "#471d58" }}>{article.title}</h4>
+                    <h4
+                      dangerouslySetInnerHTML={{ __html: article.title }}
+                    ></h4>
+
                     <p className="d-flex">
                       <i
                         className="fi flaticon-calendar"

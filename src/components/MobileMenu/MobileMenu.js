@@ -6,49 +6,42 @@ import { NavLink } from "react-router-dom";
 import './style.css';
 
 const menus = [
-    {
-        id: 1,
-        title: 'Home',
-        link: '/',
-        
-    },
+  {
+    id: 1,
+    title: "Home",
+    link: "/",
+  },
 
-    {
-        id: 2,
-        title: 'media',
-        link: '/media',
-    },
+  {
+    id: 2,
+    title: "media",
+    link: "/media",
+  },
 
-    {
-        id: 6,
-        title: 'Articles',
-        link: '/blog-fullwidth',
-        
-    },
-    {
-        id: 3,
-        title: 'Conference And Symposiums',
-        link: '/service-fullwidth',
-      
-    },
+  {
+    id: 6,
+    title: "Articles",
+    link: "/blog-fullwidth",
+  },
+  // {
+  //     id: 3,
+  //     title: 'Conference And Symposiums',
+  //     link: '/service-fullwidth',
 
-    {
-        id: 5,
-        title: 'Gallery',
-        link: '/gallery',
-      
-    },
-  
-    {
-        id: 6,
-        title: 'Contact',
-        link: '/Contact',
-      
-    },
-  
+  // },
 
+  {
+    id: 5,
+    title: "Gallery",
+    link: "/gallery",
+  },
 
-]
+  {
+    id: 6,
+    title: "Contact",
+    link: "/Contact",
+  },
+];
 
 
 const MobileMenu = () => {

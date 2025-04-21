@@ -12,14 +12,18 @@ import ServiceList from '../../components/ServiceList/ServiceList.js';
 
 const ServicePageFullwidth = () => {
     return (
-        <Fragment>
-            <Navbar hclass={'wpo-site-header-s1'} />
-            <PageTitle pageTitle={'Conference And Symposium'} pagesub={'Blog'} />
-            <ServiceList blLeft={'d-none'} blRight={'col-lg-10 offset-lg-1 col-12'} services={services} />
-            <Footer />
-            <Scrollbar />
-        </Fragment>
-    )
+      <Fragment>
+        <Navbar hclass={"wpo-site-header-s1"} />
+        {/* <PageTitle pageTitle={'Conference And Symposium'} pagesub={'Blog'} /> */}
+        <ServiceList
+          blLeft={"d-none"}
+          blRight={"col-lg-10 offset-lg-1 col-12"}
+          services={services}
+        />
+        <Footer />
+        <Scrollbar />
+      </Fragment>
+    );
 };
 export default ServicePageFullwidth;
 

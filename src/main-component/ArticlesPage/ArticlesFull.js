@@ -10,7 +10,7 @@ const ArticlesFullwidth = () => {
   return (
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} />
-      <PageTitle pageTitle={"Conference And Symposium"} pagesub={"Blog"} />
+      <PageTitle pageTitle={""} pagesub={"Blog"} />
       <ArticlesList
         blLeft={"d-none"}
         blRight={"col-lg-10 offset-lg-1 col-12"}

@@ -23,6 +23,11 @@ const Header = (props) => {
       "the-essayist-the-critic": "The Essayist & The Critic",
       "the-painter": "The Painter",
     };
+
+    const beyondPolitics = {
+      "the-politician": "Paintings",
+      "the-essayist-the-critic": "Exhibitions & Moments",
+    };
     const SubmitHandler = (e) => {
       e.preventDefault();
     };
@@ -120,20 +125,35 @@ const Header = (props) => {
                           Encounters & Dialogues
                         </Link>
                       </li>
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link
-                          className="text-capitalize"
                           onClick={ClickHandler}
-                          to="/conference-and-symposium"
+                          className="text-capitalize"
+                          to="/media"
                         >
                           Beyond Politics
                         </Link>
+                        <ul className="sub-menu">
+                          {Object.entries(beyondPolitics).map(
+                            ([key, value]) => (
+                              <li key={key}>
+                                <Link
+                                  onClick={ClickHandler}
+                                  className="text-capitalize"
+                                  to={`/beyondPolitics/${key}`}
+                                >
+                                  {value}
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
                       </li>
                       <li className="menu-item-has-children">
                         <Link
                           onClick={ClickHandler}
                           className="text-capitalize"
-                          to="/"
+                          to="/blog/a-rebel-at-heart-my-story"
                         >
                           My Story
                         </Link>

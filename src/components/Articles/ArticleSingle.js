@@ -14,13 +14,12 @@ const ArticleSingle = (props) => {
           <div className={`col col-lg-12 col-12 `}>
             <div className="wpo-blog-content">
               <div className="post format-standard-image">
-                <div className="entry-media">
-                  <img src={article.screens} alt="" />
-                </div>
-
                 <div className="post2">
-                  <h3 style={{ color: "#471d58" }}>{article.title}</h3>
-                  <p className="d-flex" style={{ marginBottom: '0.5rem'}}>
+                  <h4 dangerouslySetInnerHTML={{ __html: article.title }}></h4>
+                  <p
+                    className="d-flex"
+                    style={{ marginBottom: "0.1rem", marginTop: "1rem" }}
+                  >
                     <i
                       className="fi flaticon-house"
                       style={{ marginRight: "1rem" }}
@@ -53,8 +52,10 @@ const ArticleSingle = (props) => {
                     </label>
                   </p>
                   <>
-                    <div className="max-w-2xl mx-auto mb-3" dangerouslySetInnerHTML={{__html: article.description}}>
-                    </div>
+                    <div
+                      className="max-w-2xl mx-auto mb-3"
+                      dangerouslySetInnerHTML={{ __html: article.description }}
+                    ></div>
                   </>
                 </div>
               </div>
