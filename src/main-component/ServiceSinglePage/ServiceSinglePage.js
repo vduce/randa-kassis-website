@@ -7,8 +7,8 @@ import { useLocation, useParams, Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Logo from "../../images/logo.png";
-import story from "../../api/stories.json";
-
+// import story from "../../api/stories.json";
+import story from "../../api/story";
 // Import all photos from the correct path
 import Photo1 from "../../images/blog/1.jpeg";
 import Photo2 from "../../images/blog/2.jpeg";
@@ -231,7 +231,7 @@ const StyledVideo = ({ url }) => (
 const ServiceSinglePage = () => {
   const { slug } = useParams();
   const location = useLocation();
-  const serviceDetails = story.stories.find((item) => item.slug === slug);
+  const serviceDetails = story.find((item) => item.slug === slug);
 
   // Extract current page number from pathname
   const match = location.pathname.match(
