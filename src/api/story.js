@@ -344,7 +344,7 @@ Those talks were delayed once but have now begun. But without main members of th
   },
   {
     id: "15",
-    title: "A rebel at heart: My Story",
+    title: "A Rebel at Heart: My Story",
     slug: "a-rebel-at-heart-my-story2",
     screens: pImg3,
     storyTitle: `<strong style="text-align: start; display: block;">Returning to Syria: A Turbulent Teenage Rebel</strong>`,
