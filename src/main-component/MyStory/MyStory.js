@@ -11,13 +11,78 @@ import StyledVideo from "./StoryVideo";
 const storySections = [
   {
     id: 1,
-    title: "A rebel at heart: My Story",
+    title: "A Rebel at Heart: My Story",
     markdownFile: "/story/story1.md",
   },
   {
     id: 2,
-    title: "Chapter 2",
+    title: "A Rebel at Heart: My Story",
     markdownFile: "/story/story2.md",
+  },
+  {
+    id: 3,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story3.md",
+  },
+  {
+    id: 4,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story4.md",
+  },
+  {
+    id: 5,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story5.md",
+  },
+  {
+    id: 6,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story6.md",
+  },
+  {
+    id: 7,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story7.md",
+  },
+  {
+    id: 8,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story8.md",
+  },
+  {
+    id: 9,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story9.md",
+  },
+  {
+    id: 10,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story10.md",
+  },
+  {
+    id: 11,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story11.md",
+  },
+  {
+    id: 12,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story12.md",
+  },
+  {
+    id: 13,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story13.md",
+  },
+  {
+    id: 14,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story14.md",
+  },
+  {
+    id: 15,
+    title: "A Rebel at Heart: My Story",
+    markdownFile: "/story/story15.md",
   },
 ];
 

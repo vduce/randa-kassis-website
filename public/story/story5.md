@@ -1,5 +1,5 @@
 
-<center><h4>Painting – A style of Life<center><h4>
+<center><h4>Painting – A style of Life<center></h4>
 
 At the beginning of 1994, I started painting. My brother, Jean—one of the greatest contemporary painters in my eyes—was my first inspiration. I was drawn to his creative style, captivated by the raw intensity of his work.
 
@@ -11,8 +11,9 @@ I never cared for perfect symmetry or predictable aesthetics. I paint to merge c
 
 I’ve exhibited my work in different places, seen people stare, question, sometimes even recoil. And I embrace that. Art should be unsettling. It should gnaw at something inside you—push you to see beyond the surface. 
 
-![Photo 25](25.jpeg)
-![Photo 26](26.jpeg)
-![Photo 27](27.jpeg)
-![Photo 28](28.jpeg)
-![Photo 29](29.jpeg)
+![](25.jpeg)
+![](26.jpeg)
+![](27.jpeg)
+![](28.jpeg)
+![](29.jpeg)
+<p></p>

@@ -1,5 +1,5 @@
 
-<center><h4>The First Battle: Defying Power<center><h4>
+<center><h4>The First Battle: Defying Power<center></h4>
 
 My first physical confrontation was a defining moment. It happened in the schoolyard—a place that, for many children, is merely a setting for games and lessons, but for me, it became an early battlefield. A group of boys, emboldened by their own sense of entitlement, sought to intimidate me. I refused to shrink. When one of them made his move, I retaliated. I knocked him to the ground, but that act of defiance came at a price. The boys turned on me, pelting me with stones.
 
@@ -15,6 +15,7 @@ Algeria was my second birth. It was there that I first saw myself clearly, as th
 
 Since childhood, I had wrestled with life’s most perplexing questions: What is life? Why do we cling to it so fiercely? Is it driven by our egocentrism, or merely the cowardice to sever what procreation has set in motion?
 
-![Photo 7](7.jpeg)
-![Photo 8](8.jpeg)
-![Photo 9](9.jpeg)
+![](7.jpeg)
+![](8.jpeg)
+![](9.jpeg)
+<p></p>
