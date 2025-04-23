@@ -16,6 +16,7 @@ Nothing has stripped me of my strength as your absence has. Nothing has left me 
 At night, when I struggle to sleep, despite the breathing exercises and techniques that no longer bring relief, my mind drifts far away. I stare into the void, drowning in memories of all those I have loved—you among them. And I admit that I was harsh with you—or perhaps harshness has simply become a part of me. I search for you, for all those I have loved and lost, within the corridors of my mind, which still clings to your memory and theirs. No doubt you are more vivid now because your departure is the most recent, while my memory has pushed away those who left long ago. I wonder in silence: Can you hear me, wherever you are? But reason whispers back: There is no one there to listen.
 
 All I have left of you are memories and the image of your face in my mind, just like those who passed before you. I will carry your memory like an ember in my heart—painful, yet the only thing that keeps me close to you. No other world will reunite us, but you will remain alive within me—an eternal presence, with me for the rest of my days.
+
 My only solace is knowing that you are free from pain.
 
 And so, I write—not to seek redemption, nor to be absolved of what I cannot change, but simply because silence is unbearable. 
