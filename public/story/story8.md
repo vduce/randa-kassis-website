@@ -2,7 +2,7 @@
 
 Yet, entring politics forced me to reorganise my ideas—for I knew that most people needed some structures to order their lives. Thus emerged my quest to find a balance—one that respected individual freedom while ensuring enough structure to maintain order, without stripping away personal identity or crushing the human desire for self-fulfilment.
 
-The Arab Spring and My Exclusion from the Opposition
+<i>text</i>The Arab Spring and My Exclusion from the Opposition<i>text</i>
 
 In 2010, I played a key role in commenting on and writing about the Tunisian revolution. As the Arab Spring gathered momentum, I felt compelled to return to Syrian political life. Together, with other opponents, I co-founded, alongside other opponents, the secular democratic forces against Bashar al-Assad, which led to my position in the Syrian National Council (SNC).
 
@@ -12,7 +12,7 @@ In 2010, I played a key role in commenting on and writing about the Tunisian rev
 
 However, my outspoken warnings about the rise of radical islamists in Syria and Muslim fundamentalists within the opposition made me a target. By May 2012, I was expelled from the SNC, cast aside by the very movement I had helped to build. Many within the Syrian opposition, including former allies, actively worked against me, seeking to silence my voice and remove me from political life. My unwavering secular stance had made me an outsider, but I refused to retreat.
 
-A New Political Vision: Building a Pluralistic Future
+<i>text</i>A New Political Vision: Building a Pluralistic Future<i>text</i>
 
 During this turbulent period, my life took a turn—both personal and political. I met my partner in life and politics, Fabien Baussart, who would later become my husband and a collaborator in political initiatives. Together, we launched several projects aimed at countering the forces that had sought to sideline me.
 
@@ -31,7 +31,7 @@ Determined to continue my fight for a secular, pluralistic Syria, I established 
 ![Photo 61](61.jpeg)
 ![Photo 62](62.jpeg)
 
-The Astana Platform: A Path to Diplomacy
+<i>text</i>The Astana Platform: A Path to Diplomacy<i>text</i>
 
 One of the key political initiatives I led was the Astana Platform, which I launched with Fabien in 2015 after requesting that the President of Kazakhstan create a space to bring together moderate Syrian opposition figures.
 
@@ -52,13 +52,13 @@ On 13 January 2018, I, along with other members of the Astana Platform, took par
 ![Photo 64](66.jpeg)
 ![Photo 65](67.jpeg)
 
-Fighting for Secularism Against Political Exclusion
+<i>text</i>Fighting for Secularism Against Political Exclusion<i>text</i>
 
 My journey in Syrian politics has been marked by exclusion, betrayal, and relentless struggle—not only against Assad, but also against factions within the opposition intent on purging the movement of its secular voices.
 
 Yet, despite their attempts to silence me, I remained steadfast. I built new platforms, forged fresh alliances, and pursued alternative pathways to keep the secular, democratic vision for Syria alive. My political engagement was never about seeking a position or personal recognition—it was and remains a fight to defend a Syria where secularism and pluralism are not erased by either authoritarianism or fundamentalism.
 
-Legacy of Resistance and Political Survival
+<i>text</i>Legacy of Resistance and Political Survival<i>text</i>
 
 The political landscape remains treacherous, but survival is itself a form of resistance. While many of my former allies turned against me, I continue to shape discourse, influence policy, and advance alternatives to both religious and authoritarian rule.
 
