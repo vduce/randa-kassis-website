@@ -8,8 +8,7 @@ const GoogleTranslate = () => {
   );
 
   // Function to apply the selected language
-  const applySavedLanguage = () => {
-    const savedLang = localStorage.getItem("selectedLanguage") || "en";
+  const applyLanguage = (lang) => {
     const selectField = document.querySelector(".goog-te-combo");
 
     if (selectField) {
@@ -20,7 +19,7 @@ const GoogleTranslate = () => {
         }
       });
 
-      selectField.value = savedLang;
+      selectField.value = lang;
       selectField.dispatchEvent(new Event("change", { bubbles: true }));
     }
   };
@@ -40,15 +39,12 @@ const GoogleTranslate = () => {
                 "google_translate_element"
               );
             }
-           
-            applySavedLanguage();
 
-            // Hide Google Translate's dropdown and restrict options
+            // Hide Google Translate's dropdown
             setTimeout(() => {
               const googleSelect = document.querySelector(".goog-te-combo");
               if (googleSelect) {
                 googleSelect.style.display = "none"; // Hide the dropdown
-                applySavedLanguage(); // Ensure only English & Arabic
               }
             }, 1000);
           };
@@ -56,27 +52,18 @@ const GoogleTranslate = () => {
         };
         document.body.appendChild(script);
         window.googleTranslateLoaded = true;
-      } else {
-        applySavedLanguage();
       }
     };
 
     loadGoogleTranslate();
   }, []);
 
-  // Reapply translation on route change
-  useEffect(() => {
-    setTimeout(() => {
-      applySavedLanguage();
-    }, 500);
-  }, [location.pathname]);
-
   // Handle language selection
   const handleLanguageChange = (lang) => {
     if (lang !== selectedLanguage) {
       localStorage.setItem("selectedLanguage", lang);
       setSelectedLanguage(lang);
-      window.location.reload(); // Force full page reload to apply translation
+      applyLanguage(lang); // Apply translation only on button click
     }
   };
 

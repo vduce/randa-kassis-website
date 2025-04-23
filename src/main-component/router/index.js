@@ -37,6 +37,7 @@ import Media from "../Media/Media";
 import ServicePageFullwidth from "../BlogPageFullwidth copy/servicePageFullwidth";
 import ArticlesFullwidth from "../ArticlesPage/ArticlesFull";
 import ArticleDetails from "../ArticlesPage/ArticleDetails";
+import MyStory from "../MyStory/MyStory";
 
 const AllRoute = () => {
   return (
@@ -58,6 +59,7 @@ const AllRoute = () => {
           />
           <Route path="service" element={<ServicePage />} />
           <Route path="blog/:slug" element={<ServiceSinglePage />} />
+          <Route path="story/:id" element={<MyStory />} />
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="team" element={<TeamPage />} />

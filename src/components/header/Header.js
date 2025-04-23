@@ -153,7 +153,7 @@ const Header = (props) => {
                         <Link
                           onClick={ClickHandler}
                           className="text-capitalize"
-                          to="/blog/a-rebel-at-heart-my-story"
+                          to="/story/1"
                         >
                           My Story
                         </Link>
