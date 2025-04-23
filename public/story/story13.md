@@ -1,9 +1,10 @@
-<center><h4>The Contradiction That Defines Me<center><h4>
+<center><h4>The Absurdity of Emotions and the Hierarchy of Beings<center><h4>
 
-Since adolescence, I had embraced nihilism—living each day as it came, indifferent to the future. But the birth of my daughter stirred something imperceptible within me: an unseen force that subtly tempered my once unrestrained defiance.
+I recognise the absurdity of emotions—love, fear, joy, grief—but I also saw their fleeting intensity as the very fabric of life’s meaning, even if that meaning was illusion.
 
-In those rare moments of stillness, I would catch my own reflection in her eyes and think, _“What if I were to disappear all of a sudden?”_ It was an uninvited thought, yet one that recurred often enough to become a part of me. After all, my daughter had no one but me.
+Humans, I believed, are burdened by their awareness of life’s absurdity, suffering more profoundly than other creatures who simply exist in harmony with nature. This is why I regarded animals as superior—free from existential dread, they live in accordance with the rhythms of the nature world. 
 
-My profound love and fierce attachment to her inevitably compelled me to reconsider my anarchic tendencies—not to abandon them, but at least to rein in the chaos within. And yet, I still savoured the taste of disorder—the raw, untamed freedom that refused to be buried.
+My thoughts often drifted towards reordering the hierarchy of existence. I would elevate dogs to the pinnacle, seeing in them a purity and equilibrium that humanity had long abandoned. If I could, I would burn the gods and eradicate the virus of religion from the human minds.  If I had the power, I would sterilise humanity as I did the stray—not out of cruelty, but out of mercy. Like them, humans are trapped in a cycle of suffering they are too blind to break. In Greece, I spared strays the misery of endless reproduction; if only humankind could be spared its own self-inflicted torment.
+
 
 
