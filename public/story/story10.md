@@ -1,6 +1,6 @@
+<center><h4>AD-HOC Organisation<center><h4>
 
-The Absurdity of Emotions and the Hierarchy of Beings
+In 2016, I co-organised two major conferences. The first, held in Brussels, was titled </i>The Roots and causes of Islamic violence? Secularism is the Solution</i>, and brought together influential voices such as the Syrian poet Adonis, the Egyptian thinker Sayyid Al-Qimni, and Ensaf Haidar, wife of the imprisoned Saudi blogger Raif Badawi. The second, later that year, addressed the subject of Islamic Fascism, and featured speakers including Hamed Abdel-Samad and the Moroccan philosopher Said Nachid. These events were not just about discussion—they were an assertion of the presence of Arab secularists in a region where they are often silenced..
 
-I recognise the absurdity of emotions—love, fear, joy, grief—yet I also saw their fleeting intensity as the very fabric of life’s meaning, even if that meaning was an illusion.
-Humans, I thought, were burdened by their awareness of life’s absurdity, suffering more profoundly than other creatures who simply existed in harmony with nature. This is why I considered animals superior to humans—free from existential dread, they lived in peaceful accord with the natural world.
-My thoughts often wandered towards reordering the hierarchy of existence. I would elevate dogs to the pinnacle and demote humans to the level of worms. If I could, I would burn the gods and uproot the virus of religion from the human mind. If I had the power, I would sterilise humanity as I did with the stray animals—not out of cruelty, but out of mercy. Like them, humans are trapped in a cycle of suffering they are too blind to break. In Greece, I spared the strays the misery of endless reproduction; if only humans could be spared their own self-inflicted torment.
+![Photo 76](76.jpeg)
+![Photo 77](77.jpeg)
