@@ -59,7 +59,7 @@ const AllRoute = () => {
           />
           <Route path="service" element={<ServicePage />} />
           <Route path="blog/:slug" element={<ServiceSinglePage />} />
-          <Route path="story/:id" element={<MyStory />} />
+          <Route path="story/:sectionId" element={<MyStory />} />
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="team" element={<TeamPage />} />

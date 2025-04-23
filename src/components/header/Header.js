@@ -8,15 +8,21 @@ const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
 
     const storyList = {
-      "a-rebel-at-heart-my-story": "Prologue",
-      "a-rebel-at-heart-my-story1": "I was not born a rebel...",
-      "a-rebel-at-heart-my-story2": "Returning to Syria...",
-      "a-rebel-at-heart-my-story3": "Painting-a style of life",
-      "a-rebel-at-heart-my-story4": "A Life of Art, Motherhood...",
-      "a-rebel-at-heart-my-story5": "Political Fight: A Struggle...",
-      "a-rebel-at-heart-my-story6": "Fighting for Secularism Against",
-      "a-rebel-at-heart-my-story7": "Looking Back: The Unyielding...",
-      "a-rebel-at-heart-my-story8": "The Contradiction That Defines Me",
+      1: "Prologue",
+      2: "I was not born a rebel...",
+      3: "The First Battle..",
+      4: "Back to Syria...",
+      5: "Painting...",
+      6: "A Life of Art...",
+      7: "The Turning Point...",
+      8: "Political Fight: A Struggle...",
+      9: "Looking Back: The...",
+      10: "AD-HOC Organisation",
+      11: "Loss, Grief, and the...",
+      12: "The Contradiction That...",
+      13: "The Absurdity of Emotions...",
+      14: "A Life Without Meaning...",
+      15: "Moving Forward..."
     };
     const interviewList = {
       "the-politician": "The Politician",
@@ -163,7 +169,8 @@ const Header = (props) => {
                               <Link
                                 onClick={ClickHandler}
                                 className="text-capitalize"
-                                to={`/blog/${key}`}
+                                to={`/story/${key}`}
+                                replace={true}
                               >
                                 {value}
                               </Link>
