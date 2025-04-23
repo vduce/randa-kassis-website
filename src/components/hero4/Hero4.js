@@ -36,7 +36,7 @@ const Hero4 = () => {
                     </p>
                     <Link
                       className="text-white"
-                      to={`/blog/a-rebel-at-heart-my-story`}
+                      to={`/story/1`}
                       style={{ borderBottom: "2px solid white" }}
                     >
                       Continue Reading
