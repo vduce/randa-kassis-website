@@ -1,9 +1,6 @@
-<center><h4>The Contradiction That Defines Me<center><h4>
+<center><h4>Moving Forward, Without Illusions<center><h4>
 
-Since adolescence, I had embraced nihilism—living each day as it came, indifferent to the future. But the birth of my daughter stirred something imperceptible within me: an unseen force that subtly tempered my once unrestrained defiance.
+Today, I continue to live within that contradiction. I advocate for change while questioning its value. I embrace the temporary, fully aware that permanence is an illusion. I do not believe in an ideal world, nor do I seek one. Instead, I move forward, navigating life’s currents much as I always have—without illusions, without submission, and without regret.
 
-In those rare moments of stillness, I would catch my own reflection in her eyes and think, _“What if I were to disappear all of a sudden?”_ It was an uninvited thought, yet one that recurred often enough to become a part of me. After all, my daughter had no one but me.
-
-My profound love and fierce attachment to her inevitably compelled me to reconsider my anarchic tendencies—not to abandon them, but at least to rein in the chaos within. And yet, I still savoured the taste of disorder—the raw, untamed freedom that refused to be buried.
 
 
