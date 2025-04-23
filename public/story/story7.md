@@ -1,10 +1,13 @@
+<center><h4>2007: The Turning Point—My Atheist and Political Activism<center><h4>
 
-Looking Back: The Unyielding Fight for Free Thought and Meaning
+In 2007, I began writing to challenge religious and political dogmas in the Arab world. My knowledge of psychology and anthropology helped me dissect religions and cultures, which became the foundation of my first articles, writings, and TV program.
 
-Looking back, my journey has always been about questioning the unquestionable—about pushing against the boundaries imposed by both religion and politics. And while the landscape has shifted in many ways, the fight for free thought in the Arab world remains as urgent as ever.
+I wrote publicly, encouraged by my elder brother Nabil, who believed in me and in my ability to write. Perhaps I had inherited this gift from my father—the ability to dismantle the dogmas that governed so many aspects of life in the Arab world.
 
-Beyond my political work, I devoted myself to animal welfare. In Porto Heli, Fabien and I managed a shelter for stray animals, providing healthcare, sterilisation, and rehoming efforts. The fight for human liberation and the fight for animal welfare were, in my eyes, intertwined—both driven by a desire to challenge the structures that perpetuate suffering.
+At the time, platforms like Al Hiwar Al Mutamadin (Civil Discourse) were among the few spaces where secularists, atheists, and free thinkers could engage in meaningful discussions without censorship. Through these debates, I connected with like-minded individuals such as Kacem El Ghazzali, Waleed Al-Husseini, and many others who, like me, waged an intellectual rebellion against the constraints imposed by religion and tradition.
 
-(Photos 68, 69, 70, 71, 72, 73, 74 and 75)
+My activism wasn’t confined to words—it was action. I helped ex-Muslims escape persecution—providing financial and logistical support, and at times, offering them refuge when they had nowhere else to turn.
 
-With Fabien, we rescued many pets from the streets—animals that had been abandoned or left to fend for themselves. They became our cherished companions, each one carrying a story of survival. 
+![Photo 46](46.jpeg)
+![Photo 47](47.jpeg)
+![Photo 48](48.jpeg)
