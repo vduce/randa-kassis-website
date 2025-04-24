@@ -1,4 +1,4 @@
-<center><h4>The Absurdity of Emotions and the Hierarchy of Beings<h4><center>
+<center><h4>The Absurdity of Emotions and the Hierarchy of Beings</h4></center>
 
 I recognise the absurdity of emotions—love, fear, joy, grief—but I also saw their fleeting intensity as the very fabric of life’s meaning, even if that meaning was illusion.
 

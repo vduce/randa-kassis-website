@@ -1,4 +1,4 @@
-<center><h4>2007: The Turning Point—My Atheist and Political Activism<h4><center>
+<center><h4>2007: The Turning Point—My Atheist and Political Activism</h4></center>
 
 In 2007, I began writing to challenge religious and political dogmas in the Arab world. My knowledge of psychology and anthropology helped me dissect religions and cultures, which became the foundation of my first articles, writings, and TV program.
 
@@ -8,6 +8,7 @@ At the time, platforms like Al Hiwar Al Mutamadin (Civil Discourse) were among t
 
 My activism wasn’t confined to words—it was action. I helped ex-Muslims escape persecution—providing financial and logistical support, and at times, offering them refuge when they had nowhere else to turn.
 
-![Photo 46](46.jpeg)
-![Photo 47](47.jpeg)
-![Photo 48](48.jpeg)
+![](46.jpeg)
+![](47.jpeg)
+![](48.jpeg)
+<p></p>
