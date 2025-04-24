@@ -79,11 +79,6 @@ const storySections = [
     title: "A Rebel at Heart: My Story",
     markdownFile: "/story/story14.md",
   },
-  {
-    id: 15,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story15.md",
-  },
 ];
 
 const MyStory = () => {

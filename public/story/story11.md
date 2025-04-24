@@ -11,6 +11,7 @@ Occasionally, life would surprise me, overwhelming me with its fleeting beauty. 
 ![](78.jpeg)
 ![](79.jpeg)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ElS1l1VMr5A" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ElS1l1VMr5A" frameborder="0" allowfullscreen></iframe></center>
+
 
 
