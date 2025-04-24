@@ -1,4 +1,4 @@
-<center><h4>Looking Back: The Unyielding Fight for Free Thought and Meaning<center><h4>
+<center><h4>Looking Back: The Unyielding Fight for Free Thought and Meaning<h4><center>
 
 Looking back, my journey has always been about questioning the unquestionable—about challenging the boundaries imposed by both religion and politics. And while the landscape has shifted in many ways, the fight for free thought in the Arab world remains as urgent as ever.
 
