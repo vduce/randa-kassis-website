@@ -1,4 +1,5 @@
 <center><h4>A Life Without Meaning, Yet Full of Contradiction</h4></center>
+<br/>
 
 Life, to me, was a poorly scripted tragedy—its characters stumbling through their lines, oblivious to the absence of direction, climax, or resolution.The scenes unfolded haphazardly, devoid of meaning, while the audience—humanity—was too preoccupied to question the chaos. I observed this performance with quiet indifference, as though seated in the front row of a tragicomic play. Humans, mere puppets, marched unthinking towards their fates, unaware of the strings that bound them.
 

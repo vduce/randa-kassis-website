@@ -1,4 +1,5 @@
 <center><h4>The Contradiction That Defines Me</h4></center>
+<br/>
 
 Since adolescence, I had embraced nihilism—living each day as it came, indifferent to the future. But the birth of my daughter stirred something imperceptible within me: an unseen force that subtly tempered my once unrestrained defiance.
 
