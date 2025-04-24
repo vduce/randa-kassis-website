@@ -90,11 +90,17 @@ const MyStory = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
 
-  const initialPage = sectionId
-    ? Math.max(0, Math.min(storySections.length - 1, parseInt(sectionId) - 1))
-    : 0;
+  // Calculate initial page and validate sectionId
+  const getPageIndex = (id) => {
+    if (!id || isNaN(id)) return 0; // Default to first page if invalid
+    const index = parseInt(id) - 1; // Convert to zero-based index
+    return Math.max(0, Math.min(storySections.length - 1, index)); // Clamp to valid range
+  };
 
-  const [currentPage, setCurrentPage] = useState(initialPage);
+ 
+
+  const [currentPage, setCurrentPage] = useState(getPageIndex(sectionId));
+  
   const [sections, setSections] = useState(storySections);
 
   useEffect(() => {
@@ -116,17 +122,22 @@ const MyStory = () => {
     fetchMarkdown();
   }, []);
 
-  useEffect(() => {
-    const newPage = sectionId
-      ? Math.max(0, Math.min(storySections.length - 1, parseInt(sectionId) - 1))
-      : 0;
-    setCurrentPage(newPage);
-  }, [sectionId]);
+ useEffect(() => {
+    const newPage = getPageIndex(sectionId);
+    if (!sectionId || isNaN(sectionId) || parseInt(sectionId) !== sectionId || parseInt(sectionId) < 1) {
+      // Redirect to /story/1 if sectionId is invalid or missing
+      // navigate("/story/1", { replace: true });
+      setCurrentPage(newPage);
+    } else if (newPage !== currentPage) {
+      setCurrentPage(newPage);
+    }
+  }, [sectionId, navigate, currentPage]);
 
   const handleNext = () => {
     if (currentPage < sections.length - 1) {
       const newPage = currentPage + 1;
       setCurrentPage(newPage);
+      window.scrollTo(0, 0);
       navigate(`/story/${newPage + 1}`);
     }
   };

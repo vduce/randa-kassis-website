@@ -19,12 +19,7 @@ import { addToCart } from '../../store/actions/action';
 import BookSection from '../../components/BookSection/BookSection';
 import PortfolioSection from '../../components/PortfolioSection';
 
-import pImg1 from '../../images/blog/85.png'
-import pImg2 from'../../images/blog/83.png'
-import pImg3 from'../../images/blog/82.png'
-import pImg4 from'../../images/blog/84.png'
-import pImg5 from'../../images/blog/81.png'
-import pImg6 from '../../images/blog/86.png'
+import pImg1 from '../../images/portfolio/1.jpg'
 
 const HomePage2 = () => {
 
@@ -41,19 +36,19 @@ const HomePage2 = () => {
             Pimg: pImg1,
         },
         {
-            Pimg: pImg2,
+            Pimg: pImg1,
         },
         {
-            Pimg: pImg3,
+            Pimg: pImg1,
         },
         {
-            Pimg: pImg4,
+            Pimg: pImg1,
         },
         {
-            Pimg: pImg5,
+            Pimg: pImg1,
         },
         {
-            Pimg: pImg6,
+            Pimg: pImg1,
         }
      ]
     return (

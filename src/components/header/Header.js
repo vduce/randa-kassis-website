@@ -8,20 +8,33 @@ const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
 
     const storyList = {
-      "a-rebel-at-heart-my-story": "Prologue",
-      "a-rebel-at-heart-my-story1": "I was not born a rebel...",
-      "a-rebel-at-heart-my-story2": "Returning to Syria...",
-      "a-rebel-at-heart-my-story3": "Painting-a style of life",
-      "a-rebel-at-heart-my-story4": "A Life of Art, Motherhood...",
-      "a-rebel-at-heart-my-story5": "Political Fight: A Struggle...",
-      "a-rebel-at-heart-my-story6": "Fighting for Secularism Against",
-      "a-rebel-at-heart-my-story7": "Looking Back: The Unyielding...",
-      "a-rebel-at-heart-my-story8": "The Contradiction That Defines Me",
+      1: "Prologue",
+      2: "I was not born a rebel...",
+      3: "The First Battle..",
+      4: "Back to Syria...",
+      5: "Painting...",
+      6: "A Life of Art...",
+      7: "The Turning Point...",
+      8: "Political Fight: A Struggle...",
+      9: "Looking Back: The...",
+      10: "AD-HOC Organisation",
+      11: "Loss, Grief, and the...",
+      12: "The Contradiction That...",
+      13: "The Absurdity of Emotions...",
+      14: "A Life Without Meaning...",
+      15: "Moving Forward..."
     };
     const interviewList = {
       "the-politician": "The Politician",
       "the-essayist-the-critic": "The Essayist & The Critic",
       "the-painter": "The Painter",
+    };
+
+    const galleryList = {
+      1: "Section 1",
+      2: "Section 2",
+      3: "Section 3",
+      4: "Section 4",
     };
 
     const beyondPolitics = {
@@ -120,7 +133,7 @@ const Header = (props) => {
                         <Link
                           className="text-capitalize"
                           onClick={ClickHandler}
-                          to="/conference-and-symposium"
+                          to="/404"
                         >
                           Encounters & Dialogues
                         </Link>
@@ -129,7 +142,7 @@ const Header = (props) => {
                         <Link
                           onClick={ClickHandler}
                           className="text-capitalize"
-                          to="/media"
+                          to="/404"
                         >
                           Beyond Politics
                         </Link>
@@ -163,7 +176,8 @@ const Header = (props) => {
                               <Link
                                 onClick={ClickHandler}
                                 className="text-capitalize"
-                                to={`/blog/${key}`}
+                                to={`/story/${key}`}
+                                replace={true}
                               >
                                 {value}
                               </Link>
@@ -171,14 +185,29 @@ const Header = (props) => {
                           ))}
                         </ul>
                       </li>
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link
-                          className="text-capitalize"
                           onClick={ClickHandler}
+                          className="text-capitalize"
                           to="/gallery"
                         >
                           Gallery
                         </Link>
+                        <ul className="sub-menu">
+                          {Object.entries(galleryList).map(
+                            ([key, value]) => (
+                              <li key={key}>
+                                <Link
+                                  onClick={ClickHandler}
+                                  className="text-capitalize"
+                                  to={`/gallery/${key}`}
+                                >
+                                  {value}
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
                       </li>
 
                       {/* <li className="menu-item-has-children">

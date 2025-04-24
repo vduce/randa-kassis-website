@@ -180,7 +180,7 @@ const VIDEOS = {
   "Video 4": "https://www.youtube.com/embed/ElS1l1VMr5A",
 };
 
-const BASE_PATH = "/blog/a-rebel-at-heart-my-story";
+const BASE_PATH = "/story/1";
 const MAX_PAGES = 8;
 
 // Components
