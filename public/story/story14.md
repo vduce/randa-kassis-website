@@ -10,7 +10,8 @@ On one hand, I had no desire to reform the world, finding solace in my freedom t
 This paradox defines me: a restless spirit, torn between accepting life’s futility and a fierce determination to leave my mark upon it.
 
 <center><h4>Moving Forward, Without Illusions</h4></center>
-  
+<br/>
+
 Today, I continue to live within that contradiction. I advocate for change while questioning its value. I embrace the temporary, fully aware that permanence is an illusion. I do not believe in an ideal world, nor do I seek one. Instead, I move forward, navigating life’s currents much as I always have—without illusions, without submission, and without regret.
 
 
