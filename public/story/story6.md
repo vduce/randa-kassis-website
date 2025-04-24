@@ -1,5 +1,4 @@
-
-<center><h4>1997–2007: A Life of Art, Motherhood, and Fighting Spirit<center><h4>
+<center><h4>1997–2007: A Life of Art, Motherhood, and Fighting Spirit<h4><center>
 
 Between 1997 and 2007, I balanced motherhood, art, and self-discipline. I had separated from my daughter’s father when she was almost two years old. Until she was fourteen, when the Syrian revolt began, my life was intertwined with hers.
 
