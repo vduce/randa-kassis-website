@@ -30,6 +30,13 @@ const Header = (props) => {
       "the-painter": "The Painter",
     };
 
+    const galleryList = {
+      1: "Section 1",
+      2: "Section 2",
+      3: "Section 3",
+      4: "Section 4",
+    };
+
     const beyondPolitics = {
       "the-politician": "Paintings",
       "the-essayist-the-critic": "Exhibitions & Moments",
@@ -126,7 +133,7 @@ const Header = (props) => {
                         <Link
                           className="text-capitalize"
                           onClick={ClickHandler}
-                          to="/conference-and-symposium"
+                          to="/404"
                         >
                           Encounters & Dialogues
                         </Link>
@@ -135,7 +142,7 @@ const Header = (props) => {
                         <Link
                           onClick={ClickHandler}
                           className="text-capitalize"
-                          to="/media"
+                          to="/404"
                         >
                           Beyond Politics
                         </Link>
@@ -178,14 +185,29 @@ const Header = (props) => {
                           ))}
                         </ul>
                       </li>
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link
-                          className="text-capitalize"
                           onClick={ClickHandler}
+                          className="text-capitalize"
                           to="/gallery"
                         >
                           Gallery
                         </Link>
+                        <ul className="sub-menu">
+                          {Object.entries(galleryList).map(
+                            ([key, value]) => (
+                              <li key={key}>
+                                <Link
+                                  onClick={ClickHandler}
+                                  className="text-capitalize"
+                                  to={`/gallery/${key}`}
+                                >
+                                  {value}
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
                       </li>
 
                       {/* <li className="menu-item-has-children">

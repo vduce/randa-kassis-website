@@ -17,7 +17,7 @@ const Media = () => {
         <Fragment>
                        <Navbar hclass={'wpo-site-header-s1'} />
            
-            <PageTitle pageTitle={'Media'} pagesub={'Media'} />
+            <PageTitle pageTitle={''} pagesub={'Media'} />
             {/* <About2 /> */}
             <ServiceSectionS4/>
             {/* <Donors /> */}

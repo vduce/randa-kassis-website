@@ -155,35 +155,45 @@ Version:        1.0.0
 @import "page/terms";
 
 @import "page/volunteer";
+
 /* Hide Google Translate toolbar */
 #google_translate_element {
-	display: none !important;
-  }
-  
-  /* Hide the Google Translate popup and frame */
-  .goog-te-banner-frame {
-	display: none !important;
-  }
-  body {
-	top: 0px !important;
-  }
-  
-  /* Hide language dropdown */
-  .goog-te-combo {
-	display: none !important;
-  }
-  
-  /* Hide Google Translate overlay */
-  .goog-te-gadget {
-	display: none !important;
-  }
-  
+  display: none !important;
+}
 
-  .skiptranslate{
-	display: none !important;
-  }
+/* Hide the Google Translate popup and frame */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Hide language dropdown */
+.goog-te-combo {
+  display: none !important;
+}
+
+/* Hide Google Translate overlay */
+.goog-te-gadget {
+  display: none !important;
+}
 
 
-  .shadow-lg {
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, .175) !important;
+.skiptranslate {
+  display: none !important;
+}
+
+
+.shadow-lg {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, .175) !important;
+}
+
+.gallery-section {
+  .wpo-section-title {
+    h2 {
+      color: black;
+    }
+  }
 }
