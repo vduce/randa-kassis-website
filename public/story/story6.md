@@ -27,3 +27,5 @@ Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself i
 ![](43.jpeg)
 ![](44.jpeg)
 ![](45.jpeg)
+
+<p></p>
