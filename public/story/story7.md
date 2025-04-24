@@ -1,4 +1,4 @@
-<center><h4>2007: The Turning Point—My Atheist and Political Activism<center><h4>
+<center><h4>2007: The Turning Point—My Atheist and Political Activism<h4><center>
 
 In 2007, I began writing to challenge religious and political dogmas in the Arab world. My knowledge of psychology and anthropology helped me dissect religions and cultures, which became the foundation of my first articles, writings, and TV program.
 
