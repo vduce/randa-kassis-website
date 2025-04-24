@@ -236,7 +236,10 @@ const MyStory = () => {
                     <div className="max-w-2xl mx-auto p-3">
                       {renderMarkdown(sections[currentPage]?.content || "")}
                     </div>
-                    <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                    <div
+                      className="d-flex mt-6"
+                      style={{ justifyContent: "space-between" }}
+                    >
                       <button
                         onClick={handlePrevious}
                         disabled={currentPage === 0}
@@ -257,7 +260,9 @@ const MyStory = () => {
                             : "bg-blue-500 hover:bg-blue-600"
                         }`}
                       >
-                        Next
+                        {currentPage === sections.length - 1
+                          ? "Completed"
+                          : "Next"}
                       </button>
                     </div>
                   </div>
