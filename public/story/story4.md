@@ -1,4 +1,4 @@
-<center><h4>Back to Syria: A Turbulent Teenage Rebel</h4><center>
+<center><h4>Back to Syria: A Turbulent Teenage Rebel</h4></center>
 
 When I returned to Syria at twelve, I rebelled against everyone—authority, the police, and especially the political system. I refused to be enrolled in the Shabiba (Ba’ath Youth), rejecting the indoctrination and slogans forced upon students. I never accepted being just a number in this country—a cog in the system that dictated how we should think, act, and exist.
 
