@@ -31,6 +31,7 @@ Determined to continue my fight for a secular, pluralistic Syria, I established 
 ![](61.jpeg)
 ![](62.jpeg)
 
+<p></p>
 <center><i>The Astana Platform: A Path to Diplomacy</i></center>
 
 One of the key political initiatives I led was the Astana Platform, which I launched with Fabien in 2015 after requesting that the President of Kazakhstan create a space to bring together moderate Syrian opposition figures.
@@ -58,6 +59,7 @@ On 13 January 2018, I, along with other members of the Astana Platform, took par
 ![](66.jpeg)
 ![](67.jpeg)
 
+<p></p>
 <center><i>Fighting for Secularism Against Political Exclusion</i></center>
 
 My journey in Syrian politics has been marked by exclusion, betrayal, and relentless struggle—not only against Assad, but also against factions within the opposition intent on purging the movement of its secular voices.
