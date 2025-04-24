@@ -1,5 +1,7 @@
 <center><h4>The Absurdity of Emotions and the Hierarchy of Beings</h4></center>
 
+<br/>
+
 I recognise the absurdity of emotions—love, fear, joy, grief—but I also saw their fleeting intensity as the very fabric of life’s meaning, even if that meaning was illusion.
 
 Humans, I believed, are burdened by their awareness of life’s absurdity, suffering more profoundly than other creatures who simply exist in harmony with nature. This is why I regarded animals as superior—free from existential dread, they live in accordance with the rhythms of the nature world. 
