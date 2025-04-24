@@ -1,4 +1,4 @@
-<center><h4>Political Fight: A Struggle for Secularism and Inclusion<center><h4>
+<center><h4>Political Fight: A Struggle for Secularism and Inclusion<h4><center>
 
 Yet, entring politics forced me to reorganise my ideas—for I knew that most people needed some structures to order their lives. Thus emerged my quest to find a balance—one that respected individual freedom while ensuring enough structure to maintain order, without stripping away personal identity or crushing the human desire for self-fulfilment.
 
