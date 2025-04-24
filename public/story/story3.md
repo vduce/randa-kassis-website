@@ -1,5 +1,5 @@
 
-<center><h4>The First Battle: Defying Power<center></h4>
+<center><h4>The First Battle: Defying Power</h4></center>
 
 My first physical confrontation was a defining moment. It happened in the schoolyard—a place that, for many children, is merely a setting for games and lessons, but for me, it became an early battlefield. A group of boys, emboldened by their own sense of entitlement, sought to intimidate me. I refused to shrink. When one of them made his move, I retaliated. I knocked him to the ground, but that act of defiance came at a price. The boys turned on me, pelting me with stones.
 

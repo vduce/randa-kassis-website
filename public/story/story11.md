@@ -1,4 +1,4 @@
-<center><h4>Loss, Grief, and the Search for Meaning<center></h4>
+<center><h4>Loss, Grief, and the Search for Meaning</h4></center>
 
 Since my withdrawal from political life in 2019 and the loss of my beloved dog, Nietzsche, I have plunged into a deep state of grief. Nietzsche was more than just a pet; he was an exceptional companion, possessing an extraordinary sensitivity to music and a remarkable intelligence. His presence was a silent symphony—an extension of the philosopher whose name he bore.
 
@@ -11,6 +11,7 @@ Occasionally, life would surprise me, overwhelming me with its fleeting beauty. 
 ![](78.jpeg)
 ![](79.jpeg)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ElS1l1VMr5A" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ElS1l1VMr5A" frameborder="0" allowfullscreen></iframe></center>
+
 
 
