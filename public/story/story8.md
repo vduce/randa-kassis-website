@@ -49,8 +49,8 @@ Once again, both allies and adversaries conspired to exclude me from the Geneva 
  
 On 13 January 2018, I, along with other members of the Astana Platform, took part in the Syrian National Congress as President of the Astana Platform. There, I emphasised the urgency of establishing a constitutional committee to facilitate Syria’s peace process. The proposal was later adopted by the United Nations and the Astana Troika (Russia, Iran, and Turkey), marking a significant step towards a political resolution.
 
-![Photo 64](66.jpeg)
-![Photo 65](67.jpeg)
+![Photo 66](66.jpeg)
+![Photo 67](67.jpeg)
 
 <i>Fighting for Secularism Against Political Exclusion<i>
 
