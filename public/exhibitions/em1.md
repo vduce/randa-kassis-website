@@ -1,5 +1,6 @@
 <center>Exhibitions & Moments<center>
 <br/>
+  
 My first exhibition took place in Damascus from 15 to 25 March 1995. I chose my birthplace as the starting point of my artistic journey—not out of a sense of identity, but to engage with its culture and society.
 ![](1.jpeg)
 ![](2.jpeg)
