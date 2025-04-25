@@ -60,7 +60,7 @@ const HomePage2 = () => {
             {/* <FunFactS2 fnTpClass={'funfact-wrap-sec'} fnClass={'wpo-fun-fact-section-s4'}/> */}
             <FunFactVideo props={"/blog1.pmh"} />         
             {/* <BlogSection /> */}
-            <ServiceSectionS3 />
+            {/* <ServiceSectionS3 /> */}
             <PortfolioSection props={Portfolios} />
             <BookSection />
             <Footer />

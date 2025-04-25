@@ -18,7 +18,7 @@ const ServiceSectionS2 = () => {
     }
 
     return (
-        <div className="wpo-campaign-area-s4 ">
+        <div className="wpo-campaign-area-s4 mt-5">
             <div className="container">
                 <div className="wpo-campaign-wrap">
                     <Nav tabs>
