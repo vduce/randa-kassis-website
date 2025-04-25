@@ -14,3 +14,13 @@ These are not simply nudes. They are acts of desecration—of the hymen, of mode
 ![](7.jpeg)
 ![](8.jpeg)
 
+The naked female body in my paintings is neither an object of desire nor a symbol of shame. It is a battlefield. A site of memory, pleasure, rebellion, and reclaiming. In a region where women’s bodies are hidden, judged, legislated, and mythologised, I choose to expose them—not to please, but to confront. Stripped of names and faces, my women are not anonymous but universal. Their nudity is not vulnerability—it is power, unfiltered. These bodies do not whisper; they howl.
+
+![](9.jpeg)
+![](10.jpeg)
+![](11.jpeg)
+![](12.jpeg)
+![](13.jpeg)
+![](14.jpeg)
+
+
