@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import articles from "../../api/articles.json";
 
@@ -9,11 +9,33 @@ const ClickHandler = () => {
 const ArticlesList = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
+  const [articleContents, setArticleContents] = useState([]);
+
+  // Fetch content from markdown files
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const fetchedArticles = await Promise.all(
+        articles.map(async (article) => {
+          try {
+            const response = await fetch(`/articles/${article.filename}`);
+            const content = await response.text();
+            return { ...article, content };
+          } catch (error) {
+            console.error(`Error fetching ${article.filename}:`, error);
+            return { ...article, description: "Error loading content." };
+          }
+        })
+      );
+      setArticleContents(fetchedArticles);
+    };
+
+    fetchArticles();
+  }, []);
 
   // Calculate the posts to show on the current page
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentArticles = articles.articles.slice(
+  const currentArticles = articleContents.slice(
     indexOfFirstPost,
     indexOfLastPost
   );
@@ -22,7 +44,7 @@ const ArticlesList = (props) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // Calculate the range of page numbers to show in pagination
-  const totalPages = Math.ceil(articles.articles.length / postsPerPage);
+  const totalPages = Math.ceil(articleContents.length / postsPerPage);
   let pageNumbers = [];
 
   for (let i = 1; i <= totalPages; i++) {
@@ -70,42 +92,41 @@ const ArticlesList = (props) => {
     <section className="wpo-blog-pg-section section-padding">
       <div className="container">
         <div className="row">
-          <div className={`col col-lg-5 col-5 ${props.blRight} mt-2`}>
+          <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>
             <div className="wpo-blog-content">
-              {currentArticles.map((article, sitem) => (
+              {currentArticles.map((article, index) => (
                 <div
                   className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
-                  key={sitem}
+                  key={index}
                 >
                   <div className="entry-details">
-                    <h4
+                    <h5
                       dangerouslySetInnerHTML={{ __html: article.title }}
-                    ></h4>
+                    ></h5>
 
-                    <p className="d-flex">
-                      <i
-                        className="fi flaticon-calendar"
-                        style={{ marginRight: "1rem" }}
-                      ></i>{" "}
-                      <label style={{ fontSize: "16px", color: "#848892" }}>
-                        Published on:
-                      </label>
-                      {"  "}
-                      <label
-                        className="mx-2"
-                        style={{ fontSize: "16px", color: "#848892" }}
-                      >
-                        {article.publishedDate}{" "}
-                      </label>
-                    </p>
-                    <p>
+                    <label style={{ fontSize: "14px", color: "#848892" }}>
+                      {article.publishedIn}{" "}
+                    </label>
+                    <br />
+                    <label
+                      style={{
+                        fontSize: "14px",
+                        color: "#848892",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      {article.publishedAt}{" "}
+                    </label>
+                    <br />
+                    <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       {article.description.substring(0, 200)}
                       {article.description.length > 200 && "..."}
                     </p>
                     <Link
                       onClick={ClickHandler}
-                      to={`/article-single/${article.slug}`}
+                      to={`/article-single/${article.id}`}
                       className="read-more"
+                      style={{ fontSize: "15px" }}
                     >
                       Read more...
                     </Link>

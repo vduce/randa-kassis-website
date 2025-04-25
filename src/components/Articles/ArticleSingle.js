@@ -1,62 +1,58 @@
-import React from "react";
-import articles from "../../api/articles.json";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
-const ArticleSingle = (props) => {
-  const { slug } = useParams();
+import articles from "../../api/articles.json";
 
-  const article = articles.articles.find((item) => item.slug === slug);
+const ArticleSingle = () => {
+  const { id } = useParams(); // Get the article ID from the URL
+  const [article, setArticle] = useState(null); // State to store the article
+  const [content, setContent] = useState(""); // State to store the article content
+
+  useEffect(() => {
+    // Find the article by ID
+    const selectedArticle = articles.find((item) => item.id === parseInt(id));
+    setArticle(selectedArticle);
+
+    // Fetch the content of the article's Markdown file
+    if (selectedArticle && selectedArticle.filename) {
+      const fetchContent = async () => {
+        try {
+          const response = await fetch(`/articles/${selectedArticle.filename}`);
+          const text = await response.text();
+          setContent(text);
+        } catch (error) {
+          console.error("Error fetching article content:", error);
+          setContent("Error loading article content.");
+        }
+      };
+
+      fetchContent();
+    }
+  }, [id]);
+
+  if (!article) {
+    return <p>Article not found.</p>;
+  }
 
   return (
     <section className="wpo-blog-single-section section-padding">
       <div className="container">
         <div className="row">
-          <div className={`col col-lg-12 col-12 `}>
+          <div className={`col col-lg-12 col-12`}>
             <div className="wpo-blog-content">
               <div className="post format-standard-image">
                 <div className="post2">
-                  <h4 dangerouslySetInnerHTML={{ __html: article.title }}></h4>
-                  <p
-                    className="d-flex"
-                    style={{ marginBottom: "0.1rem", marginTop: "1rem" }}
-                  >
-                    <i
-                      className="fi flaticon-house"
-                      style={{ marginRight: "1rem" }}
-                    ></i>{" "}
-                    <label style={{ fontSize: "16px", color: "#848892" }}>
-                      Published in
-                    </label>
-                    {"  "}
-                    <label
-                      className="mx-2"
-                      style={{ fontSize: "16px", color: "#848892" }}
+                  <div className="max-w-2xl mx-auto mb-3">
+                    <Markdown
+                      rehypePlugins={[rehypeRaw]}
+                      remarkPlugins={[remarkGfm]} // Enable GFM support
                     >
-                      {article.publishedIn}{" "}
-                    </label>
-                  </p>
-                  <p className="d-flex">
-                    <i
-                      className="fi flaticon-calendar"
-                      style={{ marginRight: "1rem" }}
-                    ></i>{" "}
-                    <label style={{ fontSize: "16px", color: "#848892" }}>
-                      Published on:
-                    </label>
-                    {"  "}
-                    <label
-                      className="mx-2"
-                      style={{ fontSize: "16px", color: "#848892" }}
-                    >
-                      {article.publishedDate}{" "}
-                    </label>
-                  </p>
-                  <>
-                    <div
-                      className="max-w-2xl mx-auto mb-3"
-                      dangerouslySetInnerHTML={{ __html: article.description }}
-                    ></div>
-                  </>
+                      {content}
+                    </Markdown>
+                  </div>
                 </div>
               </div>
             </div>

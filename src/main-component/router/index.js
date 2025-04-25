@@ -81,7 +81,7 @@ const AllRoute = () => {
             element={<ServicePageFullwidth />}
           />
           <Route path="blog-single/:slug" element={<BlogDetails />} />
-          <Route path="article-single/:slug" element={<ArticleDetails />} />
+          <Route path="article-single/:id" element={<ArticleDetails />} />
           <Route
             path="blog-single-left-sidebar/:slug"
             element={<BlogDetailsLeftSiide />}

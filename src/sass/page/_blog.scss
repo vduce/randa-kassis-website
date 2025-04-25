@@ -5,7 +5,7 @@
     .wpo-blog-content {
 
         .post {
-            margin-bottom: 70px;
+            margin-bottom: 1rem;
 
             @include media-query(991px) {
                 margin-bottom: 50px;
