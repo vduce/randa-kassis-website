@@ -5,83 +5,47 @@ import Logo from "../../images/logo.png";
 import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm"; // Added for GFM support
-import StyledVideo from "./StoryVideo";
+import remarkGfm from "remark-gfm";
 
-const storySections = [
+const paintingSections = [
   {
     id: 1,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story1.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting1.md",
   },
   {
     id: 2,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story2.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting2.md",
   },
   {
     id: 3,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story3.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting3.md",
   },
   {
     id: 4,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story4.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting4.md",
   },
   {
     id: 5,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story5.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting5.md",
   },
   {
     id: 6,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story6.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting6.md",
   },
   {
     id: 7,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story7.md",
-  },
-  {
-    id: 8,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story8.md",
-  },
-  {
-    id: 9,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story9.md",
-  },
-  {
-    id: 10,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story10.md",
-  },
-  {
-    id: 11,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story11.md",
-  },
-  {
-    id: 12,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story12.md",
-  },
-  {
-    id: 13,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story13.md",
-  },
-  {
-    id: 14,
-    title: "A Rebel at Heart: My Story",
-    markdownFile: "/story/story14.md",
+    title: "On My Collections",
+    markdownFile: "/paintings/painting7.md",
   },
 ];
 
-const MyStory = () => {
+const Paintings = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
 
@@ -89,17 +53,17 @@ const MyStory = () => {
   const getPageIndex = (id) => {
     if (!id || isNaN(id)) return 0; // Default to first page if invalid
     const index = parseInt(id) - 1; // Convert to zero-based index
-    return Math.max(0, Math.min(storySections.length - 1, index)); // Clamp to valid range
+    return Math.max(0, Math.min(paintingSections.length - 1, index)); // Clamp to valid range
   };
 
   const [currentPage, setCurrentPage] = useState(getPageIndex(sectionId));
-  
-  const [sections, setSections] = useState(storySections);
+
+  const [sections, setSections] = useState(paintingSections);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
       const updatedSections = await Promise.all(
-        storySections.map(async (section) => {
+        paintingSections.map(async (section) => {
           try {
             const response = await fetch(section.markdownFile);
             const content = await response.text();
@@ -115,11 +79,16 @@ const MyStory = () => {
     fetchMarkdown();
   }, []);
 
- useEffect(() => {
+  useEffect(() => {
     const newPage = getPageIndex(sectionId);
-    if (!sectionId || isNaN(sectionId) || parseInt(sectionId) !== sectionId || parseInt(sectionId) < 1) {
-      // Redirect to /story/1 if sectionId is invalid or missing
-      // navigate("/story/1", { replace: true });
+    if (
+      !sectionId ||
+      isNaN(sectionId) ||
+      parseInt(sectionId) !== sectionId ||
+      parseInt(sectionId) < 1
+    ) {
+      // Redirect to /paintings/1 if sectionId is invalid or missing
+      // navigate("/paintings/1", { replace: true });
       setCurrentPage(newPage);
     } else if (newPage !== currentPage) {
       setCurrentPage(newPage);
@@ -131,7 +100,7 @@ const MyStory = () => {
       const newPage = currentPage + 1;
       setCurrentPage(newPage);
       window.scrollTo(0, 0);
-      navigate(`/story/${newPage + 1}`);
+      navigate(`/beyondPolitics/the-politician/${newPage + 1}`);
     }
   };
 
@@ -139,7 +108,7 @@ const MyStory = () => {
     if (currentPage > 0) {
       const newPage = currentPage - 1;
       setCurrentPage(newPage);
-      navigate(`/story/${newPage + 1}`);
+      navigate(`/beyondPolitics/the-politician/${newPage + 1}`);
     }
   };
 
@@ -151,7 +120,7 @@ const MyStory = () => {
     const imgs = imageBuffer.map(({ src, alt }, i) => (
       <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
         <img
-          src={`/photos/${src}`} // Ensure this path is correct
+          src={`/paintings/photos/${src}`} // Ensure this path is correct
           alt={alt || ""}
           className="w-full mx-auto rounded shadow-sm"
           style={{ width: "250px", height: "300px" }}
@@ -161,9 +130,7 @@ const MyStory = () => {
     ));
     imageBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
-        {imgs}
-      </div>
+      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">{imgs}</div>
     );
   };
 
@@ -171,12 +138,7 @@ const MyStory = () => {
 
   const components = {
     img: ({ src, alt, ...props }) => {
-      console.log("Processing image:", { src, alt, props }); // Debug
-      const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
-      if (isVideo) {
-        lastWasMedia = true;
-        return <StyledVideo url={src} />;
-      }
+      // console.log("Processing image:", { src, alt, props }); // Debug
       imageBuffer.push({ src, alt });
       return null;
     },
@@ -208,7 +170,7 @@ const MyStory = () => {
         {content}
       </Markdown>
     );
-    console.log("Image buffer before flush:", imageBuffer); // Debug
+    // console.log("Image buffer before flush:", imageBuffer); // Debug
     const flushed = flushImages();
     return (
       <>
@@ -234,10 +196,7 @@ const MyStory = () => {
                     <div className="max-w-2xl mx-auto p-3">
                       {renderMarkdown(sections[currentPage]?.content || "")}
                     </div>
-                    <div
-                      className="d-flex mt-6"
-                      style={{ justifyContent: "space-between" }}
-                    >
+                    <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                       <button
                         onClick={handlePrevious}
                         disabled={currentPage === 0}
@@ -258,9 +217,7 @@ const MyStory = () => {
                             : "bg-blue-500 hover:bg-blue-600"
                         }`}
                       >
-                        {currentPage === sections.length - 1
-                          ? "Completed"
-                          : "Next"}
+                        {currentPage === sections.length - 1 ? "Completed" : "Next"}
                       </button>
                     </div>
                   </div>
@@ -274,4 +231,4 @@ const MyStory = () => {
   );
 };
 
-export default MyStory;
+export default Paintings;

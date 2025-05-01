@@ -1,216 +1,192 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import MobileMenu from '../MobileMenu/MobileMenu'
-import Logo from '../../images/logo.png'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "../../images/logo.png";
 
 const Header = (props) => {
+  const [menuActive, setMenuState] = useState(false);
 
-    const [menuActive, setMenuState] = useState(false);
+  const storyList = {
+    1: "Prologue",
+    2: "I was not born a rebel...",
+    3: "The First Battle..",
+    4: "Back to Syria...",
+    5: "Painting...",
+    6: "A Life of Art...",
+    7: "The Turning Point...",
+    8: "Political Fight: A Struggle...",
+    9: "Looking Back: The...",
+    10: "AD-HOC Organisation",
+    11: "Loss, Grief, and the...",
+    12: "The Contradiction That...",
+    13: "The Absurdity of Emotions...",
+    14: "A Life Without Meaning...",
+    15: "Moving Forward...",
+  };
+  const interviewList = {
+    "the-politician": "The Politician",
+    "the-essayist-the-critic": "The Essayist & The Critic",
+    "the-painter": "The Painter",
+  };
 
-    const storyList = {
-      1: "Prologue",
-      2: "I was not born a rebel...",
-      3: "The First Battle..",
-      4: "Back to Syria...",
-      5: "Painting...",
-      6: "A Life of Art...",
-      7: "The Turning Point...",
-      8: "Political Fight: A Struggle...",
-      9: "Looking Back: The...",
-      10: "AD-HOC Organisation",
-      11: "Loss, Grief, and the...",
-      12: "The Contradiction That...",
-      13: "The Absurdity of Emotions...",
-      14: "A Life Without Meaning...",
-      15: "Moving Forward..."
-    };
-    const interviewList = {
-      "the-politician": "The Politician",
-      "the-essayist-the-critic": "The Essayist & The Critic",
-      "the-painter": "The Painter",
-    };
+  const galleryList = {
+    1: "Section 1",
+    2: "Section 2",
+    3: "Section 3",
+    4: "Section 4",
+  };
 
-    const galleryList = {
-      1: "Section 1",
-      2: "Section 2",
-      3: "Section 3",
-      4: "Section 4",
-    };
+  const beyondPolitics = {
+    "the-politician": "Paintings",
+    "the-essayist-the-critic": "Exhibitions & Moments",
+  };
 
-    const beyondPolitics = {
-      "the-politician": "Paintings",
-      "the-essayist-the-critic": "Exhibitions & Moments",
-    };
-    const SubmitHandler = (e) => {
-      e.preventDefault();
-    };
+  const paintingList = {
+    1: "Acts of the Body – Resistance in Flesh",
+    2: "Nue Cachée – Hidden Naked",
+    3: "States of Mind and Memory",
+    4: "The Universe – A Return to Nothingness",
+    5: "Celestial Fragments over Dunes",
+    6: "Desert Echoes – A Journey Through the Nomad’s Mind",
+    7: "Totems and Emotional Cartographies",
+  };
 
-    const ClickHandler = () => {
-      window.scrollTo(10, 0);
-    };
+  const exhibitionAndMomentList = {
+    1: "Exhibition 1",
+    2: "Exhibition 2",
+  };
 
-    return (
-      <header id="header">
-        <div className={`wpo-site-header ${props.hclass}`}>
-          <nav className="navigation navbar navbar-expand-lg navbar-light">
-            <div className="container-fluid">
-              <div className="row align-items-center">
-                <div className="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
-                  <div className="mobail-menu">
-                    <MobileMenu />
-                  </div>
+  const SubmitHandler = (e) => {
+    e.preventDefault();
+  };
+
+  const ClickHandler = () => {
+    window.scrollTo(10, 0);
+  };
+
+  return (
+    <header id="header">
+      <div className={`wpo-site-header ${props.hclass}`}>
+        <nav className="navigation navbar navbar-expand-lg navbar-light">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-lg-3 col-md-4 col-3 d-lg-none dl-block">
+                <div className="mobail-menu">
+                  <MobileMenu />
                 </div>
-                <div className="col-lg-2 col-md-4 col-6">
-                  <div className="navbar-header">
-                    <Link
-                      onClick={ClickHandler}
-                      className="navbar-brand"
-                      to="/"
-                    >
-                      <img src={Logo} alt="logo" />
-                    </Link>
-                  </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-6">
+                <div className="navbar-header">
+                  <Link onClick={ClickHandler} className="navbar-brand" to="/">
+                    <img src={Logo} alt="logo" />
+                  </Link>
                 </div>
-                <div className="col-lg-8 col-md-1 col-1">
-                  <div
-                    id="navbar"
-                    className="collapse navbar-collapse navigation-holder"
-                  >
-                    <button className="menu-close">
-                      <i className="ti-close"></i>
-                    </button>
-                    <ul className="nav navbar-nav mb-2 mb-lg-0 text-capitalize">
-                      <li className="menu-item-has-children">
-                        <Link
-                          className="text-capitalize"
-                          onClick={ClickHandler}
-                          to="/"
-                        >
-                          Home
-                        </Link>
+              </div>
+              <div className="col-lg-8 col-md-1 col-1">
+                <div id="navbar" className="collapse navbar-collapse navigation-holder">
+                  <button className="menu-close">
+                    <i className="ti-close"></i>
+                  </button>
+                  <ul className="nav navbar-nav mb-2 mb-lg-0 text-capitalize">
+                    <li className="menu-item-has-children">
+                      <Link className="text-capitalize" onClick={ClickHandler} to="/">
+                        Home
+                      </Link>
 
-                        {/* <ul className="sub-menu">
+                      {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/home">Main Home</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home2">Election Home</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home3">Male Candidate</Link></li>
                                                 <li><Link onClick={ClickHandler} to="/home4">Female Candidate</Link></li>
                                             </ul> */}
-                      </li>
-                      {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
+                    </li>
+                    {/* <li><Link onClick={ClickHandler} to="/about">About us</Link></li> */}
 
-                      <li>
-                        <Link
-                          className="text-capitalize"
-                          onClick={ClickHandler}
-                          to="/articles"
-                        >
-                          Articles
-                        </Link>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <Link
-                          onClick={ClickHandler}
-                          className="text-capitalize"
-                          to="/media"
-                        >
-                          Interviews
-                        </Link>
-                        <ul className="sub-menu">
-                          {Object.entries(interviewList).map(([key, value]) => (
-                            <li key={key}>
-                              <Link
-                                onClick={ClickHandler}
-                                className="text-capitalize"
-                                to={`/interview/${key}`}
-                              >
-                                {value}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                      <li>
-                        <Link
-                          className="text-capitalize"
-                          onClick={ClickHandler}
-                          to="/404"
-                        >
-                          Encounters & Dialogues
-                        </Link>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <Link
-                          onClick={ClickHandler}
-                          className="text-capitalize"
-                          to="/404"
-                        >
-                          Beyond Politics
-                        </Link>
-                        <ul className="sub-menu">
-                          {Object.entries(beyondPolitics).map(
-                            ([key, value]) => (
-                              <li key={key}>
-                                <Link
-                                  onClick={ClickHandler}
-                                  className="text-capitalize"
-                                  to={`/beyondPolitics/${key}`}
-                                >
-                                  {value}
-                                </Link>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <Link
-                          onClick={ClickHandler}
-                          className="text-capitalize"
-                          to="/story/1"
-                        >
-                          My Story
-                        </Link>
-                        <ul className="sub-menu">
-                          {Object.entries(storyList).map(([key, value]) => (
-                            <li key={key}>
-                              <Link
-                                onClick={ClickHandler}
-                                className="text-capitalize"
-                                to={`/story/${key}`}
-                                replace={true}
-                              >
-                                {value}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <Link
-                          onClick={ClickHandler}
-                          className="text-capitalize"
-                          to="/gallery"
-                        >
-                          Gallery
-                        </Link>
-                        <ul className="sub-menu">
-                          {Object.entries(galleryList).map(
-                            ([key, value]) => (
-                              <li key={key}>
-                                <Link
-                                  onClick={ClickHandler}
-                                  className="text-capitalize"
-                                  to={`/gallery/${key}`}
-                                >
-                                  {value}
-                                </Link>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </li>
+                    <li>
+                      <Link className="text-capitalize" onClick={ClickHandler} to="/articles">
+                        Articles
+                      </Link>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/media">
+                        Interviews
+                      </Link>
+                      <ul className="sub-menu">
+                        {Object.entries(interviewList).map(([key, value]) => (
+                          <li key={key}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/interview/${key}`}
+                            >
+                              {value}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                    <li>
+                      <Link className="text-capitalize" onClick={ClickHandler} to="/404">
+                        Encounters & Dialogues
+                      </Link>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/404">
+                        Beyond Politics
+                      </Link>
+                      <ul className="sub-menu">
+                        {Object.entries(beyondPolitics).map(([key, value]) => (
+                          <li key={key}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/beyondPolitics/${key}/${1}`}
+                            >
+                              {value}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/story/1">
+                        My Story
+                      </Link>
+                      <ul className="sub-menu">
+                        {Object.entries(storyList).map(([key, value]) => (
+                          <li key={key}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/story/${key}`}
+                              replace={true}
+                            >
+                              {value}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/gallery">
+                        Gallery
+                      </Link>
+                      <ul className="sub-menu">
+                        {Object.entries(galleryList).map(([key, value]) => (
+                          <li key={key}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/gallery/${key}`}
+                            >
+                              {value}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
 
-                      {/* <li className="menu-item-has-children">
+                    {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} to="/">Pages</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/gallery">Gallery</Link></li>
@@ -235,7 +211,7 @@ const Header = (props) => {
                                                 <li><Link onClick={ClickHandler} to="/register">Register</Link></li>
                                             </ul>
                                         </li> */}
-                      {/* <li className="menu-item-has-children">
+                    {/* <li className="menu-item-has-children">
                                             <Link onClick={ClickHandler} to="/blog-fullwidth">Blog</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
@@ -254,14 +230,14 @@ const Header = (props) => {
                                                 </li>
                                             </ul>
                                         </li> */}
-                      {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
-                    </ul>
-                  </div>
+                    {/* <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li> */}
+                  </ul>
                 </div>
-                <div className="col-lg-2 col-md-3 col-2">
-                  <div className="header-right">
-                    <div className="header-search-form-wrapper">
-                      {/* <div className="cart-search-contact">
+              </div>
+              <div className="col-lg-2 col-md-3 col-2">
+                <div className="header-right">
+                  <div className="header-search-form-wrapper">
+                    {/* <div className="cart-search-contact">
                                             <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
                                                 className={`fi ti-search ${menuActive ? "ti-close" : "fi "}`}></i></button>
                                             <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
@@ -275,27 +251,23 @@ const Header = (props) => {
                                                 </form>
                                             </div>
                                         </div> */}
-                    </div>
-                    <div className="close-form">
-                      <Link
-                        onClick={ClickHandler}
-                        className="theme-btn"
-                        to="/contact"
-                      >
-                        <span className="text">Contact</span>
-                        <span className="mobile">
-                          <i className="fi flaticon-charity"></i>
-                        </span>
-                      </Link>
-                    </div>
+                  </div>
+                  <div className="close-form">
+                    <Link onClick={ClickHandler} className="theme-btn" to="/contact">
+                      <span className="text">Contact</span>
+                      <span className="mobile">
+                        <i className="fi flaticon-charity"></i>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-          </nav>
-        </div>
-      </header>
-    );
-}
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

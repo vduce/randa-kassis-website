@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage4 from "../HomePage4/HomePage4";
 import AboutPage from "../AboutPage/AboutPage";
@@ -38,6 +38,8 @@ import ServicePageFullwidth from "../BlogPageFullwidth copy/servicePageFullwidth
 import ArticlesFullwidth from "../ArticlesPage/ArticlesFull";
 import ArticleDetails from "../ArticlesPage/ArticleDetails";
 import MyStory from "../MyStory/MyStory";
+import Paintings from "../Paintings/Paintings";
+import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
 
 const AllRoute = () => {
   return (
@@ -53,22 +55,25 @@ const AllRoute = () => {
           <Route path="campaign" element={<CampaignPage />} />
           <Route path="campaign-2" element={<CampaignPageS2 />} />
           <Route path="campaign-3" element={<CampaignPageS3 />} />
-          <Route
-            path="campaign-single/:slug"
-            element={<CampaignSinglePage />}
-          />
+          <Route path="campaign-single/:slug" element={<CampaignSinglePage />} />
           <Route path="service" element={<ServicePage />} />
           <Route path="blog/:slug" element={<ServiceSinglePage />} />
           <Route path="story/:sectionId" element={<MyStory />} />
+          <Route path="beyondPolitics/the-politician/:sectionId" element={<Paintings />} />
+          <Route
+            path="beyondPolitics/the-essayist-the-critic/:sectionId"
+            element={<ExibitionMoments />}
+          />
+          <Route path="my-story" element={<MyStory />} />
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="team" element={<TeamPage />} />
           <Route path="team-single/:slug" element={<TeamSinglePage />} />
-          <Route path="shop" element={<ShopPage />} />
-          <Route path="product-single/:slug" element={<ProductSinglePage />} />
-          <Route path="cart" element={<CartPage />} />
-          <Route path="checkout" element={<CheckoutPage />} />
-          <Route path="order_received" element={<OrderRecived />} />
+          {/* <Route path="shop" element={<ShopPage />} /> */}
+          {/* <Route path="product-single/:slug" element={<ProductSinglePage />} /> */}
+          {/* <Route path="cart" element={<CartPage />} /> */}
+          {/* <Route path="checkout" element={<CheckoutPage />} /> */}
+          {/* <Route path="order_received" element={<OrderRecived />} /> */}
           <Route path="faq" element={<FaqPage />} />
           <Route path="volunteer" element={<VolunteerPage />} />
           <Route path="donate" element={<DonatePage />} />
@@ -76,27 +81,18 @@ const AllRoute = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog-left-sidebar" element={<BlogPageLeft />} />
           <Route path="articles" element={<ArticlesFullwidth />} />
-          <Route
-            path="conference-and-symposium"
-            element={<ServicePageFullwidth />}
-          />
+          <Route path="conference-and-symposium" element={<ServicePageFullwidth />} />
           <Route path="blog-single/:slug" element={<BlogDetails />} />
           <Route path="article-single/:id" element={<ArticleDetails />} />
-          <Route
-            path="blog-single-left-sidebar/:slug"
-            element={<BlogDetailsLeftSiide />}
-          />
-          <Route
-            path="blog-single-fullwidth/:slug"
-            element={<BlogDetailsFull />}
-          />
+          <Route path="blog-single-left-sidebar/:slug" element={<BlogDetailsLeftSiide />} />
+          <Route path="blog-single-fullwidth/:slug" element={<BlogDetailsFull />} />
           <Route path="privacy" element={<PrivacyPage />} />
           <Route path="terms" element={<TermsPage />} />
           <Route path="media" element={<Media />} />
           <Route path="404" element={<ErrorPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<SignUpPage />} />
-          <Route path="forgot-password" element={<ForgotPassword />} />
+          {/* <Route path="login" element={<LoginPage />} /> */}
+          {/* <Route path="register" element={<SignUpPage />} /> */}
+          {/* <Route path="forgot-password" element={<ForgotPassword />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
