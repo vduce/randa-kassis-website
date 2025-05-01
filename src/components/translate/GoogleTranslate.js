@@ -33,22 +33,31 @@ const GoogleTranslate = () => {
         script.async = true;
         script.onload = () => {
           window.googleTranslateElementInit = () => {
-            if (window.google.translate) {
+            if (
+              window.google &&
+              window.google.translate &&
+              window.google.translate.TranslateElement
+            ) {
               new window.google.translate.TranslateElement(
                 { pageLanguage: "en", autoDisplay: false },
                 "google_translate_element"
               );
-            }
 
-            // Hide Google Translate's dropdown
-            setTimeout(() => {
-              const googleSelect = document.querySelector(".goog-te-combo");
-              if (googleSelect) {
-                googleSelect.style.display = "none"; // Hide the dropdown
-              }
-            }, 1000);
+              // Hide Google Translate's dropdown
+              setTimeout(() => {
+                const googleSelect = document.querySelector(".goog-te-combo");
+                if (googleSelect) {
+                  googleSelect.style.display = "none"; // Hide the dropdown
+                }
+              }, 1000);
+            } else {
+              console.error("Google Translate script failed to load properly.");
+            }
           };
           window.googleTranslateElementInit();
+        };
+        script.onerror = () => {
+          console.error("Failed to load Google Translate script.");
         };
         document.body.appendChild(script);
         window.googleTranslateLoaded = true;
