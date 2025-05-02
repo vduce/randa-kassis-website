@@ -1,5 +1,3 @@
-<center><h4>Exhibitions & Moments</h4></center>
-<br/>
   
 My first exhibition took place in Damascus from 15 to 25 March 1995. I chose my birthplace as the starting point of my artistic journey—not out of a sense of identity, but to engage with its culture and society.
 ![](1.JPG)
@@ -55,7 +53,7 @@ In April 1996, I embarked on a different kind of experience. Alongside a directo
 ![](30.JPG)
 ![](31.JPG)
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/XYN2H_2E5W4" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/aHxk2S0ODx4?si=nhfc3dXD9pQBfTGG" frameborder="0" allowfullscreen></iframe></center>
 
 I was incredibly active at the time, as if driven by an instinctive feeling that I would soon be distanced from my paintings and artistic lifestyle.” I organised another exhibition in
 Damascus from 3 to 13 October, under the patronage of the Syrian Minister of Information, Mohamad Salman.

@@ -11,33 +11,40 @@ const menus = [
     title: "Home",
     link: "/",
   },
-
   {
     id: 2,
-    title: "media",
-    link: "/media",
-  },
-
-  {
-    id: 6,
     title: "Articles",
-    link: "/blog-fullwidth",
+    link: "/articles",
   },
-  // {
-  //     id: 3,
-  //     title: 'Conference And Symposiums',
-  //     link: '/service-fullwidth',
-
-  // },
-
   {
     id: 5,
-    title: "Gallery",
-    link: "/gallery",
+    title: "Media",
+    link: "/media",
   },
-
   {
     id: 6,
+    title: "Beyond Politics",
+    link: "/beyondPolitics",
+    submenu: [
+      {
+        id: 1,
+        title: "Paintings",
+        link: "/beyondPolitics/the-politician/1",
+      },
+      {
+        id: 2,
+        title: "Exhibitions & Moments",
+        link: "/beyondPolitics/the-essayist-the-critic/1",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "My Story",
+    link: "/story/1",
+  },
+  {
+    id: 8,
     title: "Contact",
     link: "/Contact",
   },
@@ -66,7 +73,10 @@ const MobileMenu = () => {
               <ListItem className={item.id === openId ? "active" : null} key={mn}>
                 {item.submenu ? (
                   <Fragment>
-                    <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>
+                    <p
+                      onClick={() => setOpenId(item.id === openId ? 0 : item.id)}
+                      style={{ marginBottom: "0px" }}
+                    >
                       {item.title}
                       <i className={item.id === openId ? "fa fa-angle-up" : "fa fa-angle-down"}></i>
                     </p>
