@@ -1,7 +1,7 @@
 <h4>The Syrian Regime and the Philosophy of Despotism</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 14 April 2011
 
 There is no doubt that cultural structures and historical heritage vary considerably across Arab countries. Yet, despite these differences, totalitarian regimes throughout the region repeat and reproduce the same mechanisms of repression to which they subject their populations. This is because the very architecture of these regimes—and the power apparatuses that sustain them—are shaped by analogous developmental processes and rest upon a similar psychological foundation. Totalitarian regimes are inherently incapable of comprehending anything that transcends their repressive tools and methods.

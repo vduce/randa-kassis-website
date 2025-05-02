@@ -1,7 +1,7 @@
 <h4>An Anthropological Perspective on the Origins of Morality</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 16 June 2009
 
 We continue to chase after words, manuscripts, and myths in pursuit of a history steeped in mystery. Few things are more essential to the human condition than the thirst for knowledge. It is this yearning that prevents us from halting midway or reconciling religion with science—for science marks an evolution in human consciousness, moving beyond the early religious phases. Religions, after all, derive their texts from earlier periods shaped by magic, mana, totems, and other such frameworks. These narratives and myths, crafted by humans, often emerged from real events which were later magnified, allowing the human mind to venture into boundless realms of creativity and imagination.

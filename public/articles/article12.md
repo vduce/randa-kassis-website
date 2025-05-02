@@ -1,7 +1,7 @@
 <h4>Memory and Consciousness – Part II</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 29 May 2011
 
 In the first part, I paused at the mechanism behind the evolution of consciousness. In this article, I turn to a more contemporary theory: the Theory of Neuronal Group Selection, proposed by Gerald Edelman, a biologist and director of the Neurosciences Institute in La Jolla, California.

@@ -1,7 +1,7 @@
 <h4>The Parrot Syndrome</h4>
 
 Published in Al-Shorouk Newspaper
-
+<br>
 1 February 2022
 
 Many mistakenly believe that tyranny is confined to autocratic rulers. In truth, it often conceals itself beneath the guise of reform and piety, preying on a population’s yearning for change. From Renaissance Florence to the modern Middle East, the syndrome recurs — the faces change, but the structures of deception remain eerily familiar.

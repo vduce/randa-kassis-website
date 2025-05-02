@@ -1,7 +1,7 @@
 <h4>The Delirium of Prophets</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 13 March 2010
 
 Human beings engage with their environment through two interwoven perceptual experiences. The first is internal, arising from sensory interaction with the external world. Over time, however, this internal experience is shaped by collective structures and environmental influences, eventually forming a shared inner framework—what we might term the collective internal experience, manifesting as cultural norms and values.

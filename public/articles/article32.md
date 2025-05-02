@@ -1,7 +1,7 @@
 <h4>Sexual Intercourse and the Return to the Womb</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 28 May 2010
 
 In a previous article, “The Sex and Death Syndrome”, I explored the underlying fear within the male psyche of losing his genital organ. In this piece, I turn to examine the psychological roots of that fear, commonly known in psychoanalysis as the castration complex.

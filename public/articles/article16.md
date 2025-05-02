@@ -1,7 +1,7 @@
 <h4>Samurai Wisdom and the Islamist Threat</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 27 January 2011
 
 Now that the Tunisian anti-power virus has begun to take effect, it must swiftly seek vaccines to counter smaller, emerging viruses disguised in religious thought. In doing so, this nascent new consciousness may discover a viable path towards life.

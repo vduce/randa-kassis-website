@@ -1,7 +1,7 @@
 <h4>Religion… and the Projection of Infantile Instincts Part I</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 21 June 2010
 
 The fantasies which overwhelm our rational thinking are, in their essence, the fruits of a mental image that compensates for disappointments or psychological anxiety. When freed from restrictions and external taboos, these fantasies are given free rein, evolving into imaginary fictions that gradually develop and solidify into influential narratives with far-reaching implications for our lives and ways of thinking. They give birth to all kinds of monsters, gods, and demons.

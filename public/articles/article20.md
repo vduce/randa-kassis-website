@@ -1,7 +1,7 @@
 <h4>In the Beginning was the Totem Animal — Part II</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 28 November 2010
 
 In a previous article, I began my exploration of the origins of the totem. In this second part, I will turn to a closely related subject: the question of the taboo—a notion intimately tied to the earliest human reactions to fatal natural phenomena.

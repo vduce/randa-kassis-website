@@ -1,7 +1,7 @@
 <h4>Sectarian Thought and Intellectual Sterility</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 23 June 2008
 
 If sectarianism constitutes the most acute form of psychological isolation among individuals and groups, it likewise represents the most advanced stage of intellectual sterility. The mind enclosed within the confines of sectarian identity is deprived of renewal and creativity. As Nietzsche once observed, “The inability to exchange our thoughts with others is the most dreadful form of solitude.” The sectarian, encircled by the narrow boundaries of dogma, paralyses his capacity for reason, stifling thought at its very inception.

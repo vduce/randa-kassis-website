@@ -35,10 +35,7 @@ const ArticlesList = (props) => {
   // Calculate the posts to show on the current page
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentArticles = articleContents.slice(
-    indexOfFirstPost,
-    indexOfLastPost
-  );
+  const currentArticles = articleContents.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -99,25 +96,22 @@ const ArticlesList = (props) => {
                   className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
                   key={index}
                 >
-                  <div className="entry-details">
-                    <h5
-                      dangerouslySetInnerHTML={{ __html: article.title }}
-                    ></h5>
-
+                  <div className="entry-details" style={{ display: "flex", flexDirection: "column" }}>
+                    <h5 dangerouslySetInnerHTML={{ __html: article.title }}></h5>
                     <label style={{ fontSize: "14px", color: "#848892" }}>
                       {article.publishedIn}{" "}
                     </label>
-                    <br />
+                    {/* <br /> */}
                     <label
                       style={{
                         fontSize: "14px",
                         color: "#848892",
-                        marginBottom: "10px",
+                        marginBottom: "15px",
                       }}
                     >
                       {article.publishedAt}{" "}
                     </label>
-                    <br />
+                    {/* <br /> */}
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       {article.description.substring(0, 200)}
                       {article.description.length > 200 && "..."}
@@ -144,9 +138,7 @@ const ArticlesList = (props) => {
                     <Link
                       to="#"
                       aria-label="Previous"
-                      onClick={() =>
-                        currentPage > 1 && paginate(currentPage - 1)
-                      }
+                      onClick={() => currentPage > 1 && paginate(currentPage - 1)}
                       style={pageLinkStyles}
                     >
                       <i className="fi ti-angle-left"></i>
@@ -171,9 +163,7 @@ const ArticlesList = (props) => {
                     <Link
                       to="#"
                       aria-label="Next"
-                      onClick={() =>
-                        currentPage < totalPages && paginate(currentPage + 1)
-                      }
+                      onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
                       style={pageLinkStyles}
                     >
                       <i className="fi ti-angle-right"></i>

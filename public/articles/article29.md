@@ -1,7 +1,7 @@
 <h4>Religion… and the Projection of Infantile Instincts — Part II</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 25 June 2010
 
 With the previous article, I stopped at the discussion of the idea of the mother–son mutual sexual desire, which results, on the one hand, from the mother’s penis envy and, on the other, from the child’s castration complex, as it is known and explained in psychoanalytic theory.

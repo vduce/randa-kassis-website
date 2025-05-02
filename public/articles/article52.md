@@ -1,7 +1,7 @@
 <h4>The “Group” Effect</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 10 June 2008
 
 From the moment he is born, the Arab citizen remains bound to his destiny and to the society in which he places an unquestioned and absolute faith. As a result, he rejects the psychological evolution that challenges him, depriving himself of the ability to be open to external ideas. In doing so, he cuts himself off from self-discovery and from becoming part of a greater whole.

@@ -1,7 +1,7 @@
 <h4>Turkey: Is It Still Our Ally?</h4>
 
 Published in Le Figaro
-
+<br>
 24 September 2014
 
 To combat the Islamic State (IS)—that totalitarian monstrosity intent on subjugating the Middle East and, ultimately, the world—ten regional powers signed the “Jeddah Communiqué,” pledging to support President Barack Obama’s campaign against IS. But one key signature was missing: that of Turkey under President Recep Tayyip Erdoğan.

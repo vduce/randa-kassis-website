@@ -1,7 +1,7 @@
 <h4>The Islamisation of the Uprising and the Loss of Syria</h4>
 
 Published in Fikra Forum
-
+<br>
 27 April 2012
 
 Since its eruption, the Syrian uprising—confronting a totalitarian regime—has struggled to win over ethnic and religious minorities, as well as other groups wary of losing the individual freedoms they had under Assad should Islamists rise to power. Various factors have fuelled the fears and hesitation of these communities. Chief among them is a growing sense of hopelessness that any genuine social or cultural transformation will take place, particularly given the territorial and societal inroads made by religious rebels, who have managed to penetrate the very fabric of Syrian society. The censorship imposed on individuals has allowed radical religious currents to infiltrate daily life, becoming a last refuge for many. The psychological toll inflicted by the regime’s repressive mechanisms has stripped individuals of the capacity to envision self-sufficient ways of improving their conditions. Faced with these frustrations—present at every level of society—it is understandable that many seek refuge in religion as a means of coping with their daily realities, a way to compensate for their losses, even if this compensation is illusory or unrealistic. This pattern is often seen in societies subjected to totalitarian oppression.
