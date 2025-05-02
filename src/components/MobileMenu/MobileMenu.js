@@ -17,12 +17,17 @@ const menus = [
     link: "/articles",
   },
   {
-    id: 5,
-    title: "Media",
+    id: 3,
+    title: "Interviews",
     link: "/media",
   },
   {
-    id: 6,
+    id: 4,
+    title: "Encounters & dialogues",
+    link: "/404",
+  },
+  {
+    id: 5,
     title: "Beyond Politics",
     link: "/beyondPolitics",
     submenu: [
@@ -39,9 +44,14 @@ const menus = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     title: "My Story",
     link: "/story/1",
+  },
+  {
+    id: 7,
+    title: "Gallery",
+    link: "/gallery",
   },
   {
     id: 8,
