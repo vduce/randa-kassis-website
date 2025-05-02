@@ -1,7 +1,7 @@
 <h4>Religion in Its Relation to Verbal Aggression</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 12 July 2010
 
 Following the debate broadcast on France 24 — “The Burka Ban Debate in France” (08/07/2010) — I received a deluge of hostile emails laced with aggressive insults and loaded innuendos. This prompted me to devote an analytic article to the phenomenon of insults and verbal aggression, particularly as exhibited by religious individuals, in an effort to understand their apparent inability to resort to a more elevated form of language. My aim is to explore the reasons that confine them within a narrow and enclosed cognitive frame.

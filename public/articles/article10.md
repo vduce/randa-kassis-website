@@ -1,7 +1,7 @@
 <h4>Arab Revolutions and Political Islam</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 12 July 2011
 
 Amid the popular uprisings erupting across the Arab world in defiance of tyranny, concerns persist over the ascendancy of Islamist movements and their potential to appropriate these revolutionary currents—particularly given the religious and ideological leanings of the masses involved. In this context, it becomes increasingly plausible that political Islam will seek to exploit the unconscious energies fuelling these revolts, especially in societies that lack clear political vision or well-defined institutional frameworks.

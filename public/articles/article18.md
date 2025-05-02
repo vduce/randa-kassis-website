@@ -1,7 +1,7 @@
 <h4>Bouazizi’s Revolt: The Birth of a New Life Project</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 1 January 2011
 
 Mohamed Bouazizi’s spontaneous act of defiance against the degrading conditions in his society—and the wave of strikes and protests it ignited across Tunisia—marks a defining moment. It reminds us that, at times, death can become the threshold for a new beginning: the inception of a life project born out of rupture.

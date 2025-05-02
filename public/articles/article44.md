@@ -1,7 +1,7 @@
 <h4>Ardi Between Darwin and Religion</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 17 October 2009
 
 I have long wondered why Arab societies remain distant from scientific facts, and why myth and religious legend continue to exert such magnetic pull. Over time, I’ve come to see that the root of the problem lies in the inability of our journalists and editors to relay information with accuracy. Instead, they often distort facts to align with their personal beliefs and psychological predispositions.

@@ -1,7 +1,7 @@
 <h4>Who Will Win “Humanity”?</h4>
 
 Published in Al-Ahram Newspaper
-
+<br>
 9 February 2022
 
 Over the past decade — ever since social media infiltrated nearly every home, bar, and street corner — we’ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of “humanity.” These medals, of course, are nothing more than symbolic gestures — emojis, empty phrases, and at best, dotless, hollow expressions.

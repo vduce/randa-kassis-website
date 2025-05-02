@@ -1,7 +1,7 @@
 <h4>The Sons of Sin</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 7 April 2010
 
 Our Arab societies, one notices, are suffering from a culture shaped by the sin complex, which is firmly and strongly established in our religious doctrines and value systems. We are the grandsons and granddaughters of a culture of self-crucifixion and knowledge-flogging, inheritors of the original sin that is deeply rooted in us. Ours is a culture of hell and torture, engraved in our minds and desires — a culture built over time, gradually becoming entrenched in its doctrines, traditions, and immutable concepts. It does not refrain from criminalising any effort or attempt to soften its coarse and rough teachings. It directs the arrows of its masochists — those who reject all forms of change or renewal — at every form of criticism.

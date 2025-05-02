@@ -1,7 +1,7 @@
 <h4>No Freedom for the Thieves of Freedom</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 23 April 2010
 
 Whilst boasting of their god’s forbearance, “believers” are often the first to cast accusations at those who differ from them. They perpetually whinge and whine, claiming to be victims of moral persecution—especially when they constitute a religious minority in foreign societies which, according to them, are curtailing their freedoms.

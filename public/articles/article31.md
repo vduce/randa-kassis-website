@@ -1,7 +1,7 @@
 <h4>The Ego’s Enmity Towards Freedom</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 30 May 2010
 
 Most often, we make sense of ideas in relation to how much they correspond with our own private notions. Take, for instance, the moment we encounter a face and attempt to assess its relevance to us: a complex neurological operation unfolds, wherein some regions of the brain identify the person while others retrieve associated memories or relational links. This cooperation between different neural functions informs the conscious stream of recognition and response.

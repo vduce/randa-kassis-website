@@ -1,7 +1,7 @@
 <h4>The Street’s Revolt and the New Artisan of Peoples’ Destiny</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 13 February 2011
 
 There is no doubt that numerous factors enabled the Wahhabi brand of fundamentalism, emanating from Saudi Arabia, to tighten its grip and extend its influence over the deepest fabrics of Arab societies—societies still plagued by poverty, soaring unemployment, corrupt governance, and the widespread persecution, brainwashing, and marginalisation of individuals.

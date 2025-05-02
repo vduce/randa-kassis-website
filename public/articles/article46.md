@@ -1,7 +1,7 @@
 <h4>The Deification of the Superego</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 15 October 2008
 
 For much of human history, people lived in a state of unconsciousness, driven by primal urges and the instinctive pursuit of their satisfaction. Yet the need for safety—and protection from predatory creatures—compelled humans to seek refuge in the collective. Thus began a long journey towards individual consciousness.

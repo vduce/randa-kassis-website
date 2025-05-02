@@ -1,7 +1,7 @@
 <h4>Syria’s Identity: The Richness of Minorities</h4>
 
 Published in Fikra Forum
-
+<br>
 2 August 2012
 
 In light of the fierce battle waged by the regime against its own people, it has become increasingly evident that the opposition’s leadership is struggling to respond effectively. There are several reasons for this: foremost among them is the absence of a diverse foundation of political parties within the Syrian body politic—save for the Kurdish parties, who, despite enduring harsh repression, have long been engaged in activism and moments of heightened mobilisation. Another key reason is the lack of pluralistic thought embedded within Syrian culture and society.

@@ -1,7 +1,7 @@
 <h4>The Arab Spring: Caught Between a Siberian Winter and a Desert Summer – A Crisis of Extremes</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 4 August 2013
 
 The Arab Spring: The Formation of Consciousness and the Clash Between the Self and Repression

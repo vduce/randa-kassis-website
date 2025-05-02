@@ -1,7 +1,7 @@
 <h4>The Dysfunction of Perception in the Presence of the Absolute</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 23 August 2010
 
 I begin this article with a familiar maxim:

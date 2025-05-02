@@ -1,7 +1,7 @@
 <h4>Argument for a National Deflower Day</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 9 September 2010
 
 I have, for a long time now, heard persistent voices calling for sexual equality in male-dominated societies. I am not an activist in this regard, as I have chosen to live far from that particular struggle, so that one day I might delve into the essence of life in its comprehensive, existential meaning. That said, the ongoing debate has led me to reflect on the subject and attempt to understand some of the obstacles preventing women from lifting themselves out of their dark, stagnant ponds. I believe such transformation will only be possible through a radical shift in feminine behaviour and dreams.

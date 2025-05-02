@@ -1,7 +1,7 @@
 <h4>In the Swoon of Arab Societies</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 18 June 2008
 
 Arab societies appear as immovable and unchanging entities—resistant to transformation, retreating into isolation, intolerant of the “other”, and unwilling to engage with difference. This results in a persistent tendency to draw nationalist distinctions, a division between “us” and “them”. Ironically, many Arab societies apply this same logic of exclusion and discrimination internally, turning it against their own people.

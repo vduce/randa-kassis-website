@@ -1,7 +1,7 @@
 <h4>In the Beginning Was the Totem Animal – Part I</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 5 December 2010
 
 In order to act effectively against all that obstructs the path of progress and paralyses modern intelligence, we must collectively strive for a better understanding of the roots of ignorant and regressive thought. Residual ideas inherited from bygone centuries—ideas that hurl us back to prehistoric times—must be identified and discredited. This pursuit of understanding is not driven by a desire to respect these beliefs, but rather by the necessity to expose their savage origins and explain the extent to which they remain an entangled, confused snarl in the minds of individuals and groups who continue to uphold them.

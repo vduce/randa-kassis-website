@@ -1,7 +1,7 @@
 <h4>The Right to Differ in the Methodology of Thought</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 14 September 2010
 
 Following the failure of my “miraculous invention” to dissolve the hymen, and my inability to lead an army to conquer virginity—a failure naturally owed to the ever-watchful guardians of the sexual realm, sworn to thwart any attempt at plundering “masculine treasures”—I was reminded once more that, in our culture, to violate chastity is akin to violating one’s livelihood: both are sacred.

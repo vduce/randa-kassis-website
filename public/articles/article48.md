@@ -1,7 +1,7 @@
 <h4>The Influence of Chinese Philosophy on Eighteenth-Century Europe</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 13 July 2008
 
 There is little doubt that societies pass through various phases and undergo profound upheavals that lead to pivotal shifts in their structure. These transformations result in the emergence of new characteristics that help societies expand and progress. Such transitional periods are often accompanied by significant obstacles, frequently posed by religious groups entrenched in positions of power or closely allied with authoritarian regimes.

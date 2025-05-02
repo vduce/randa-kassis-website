@@ -1,7 +1,7 @@
 <h4>The Unconscious: Between the Fixed and the Fluid</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 6 February 2010
 
 Psychology, in its various schools and branches, has offered us a deeper understanding of the self and of our inner psychological stirrings. Yet some still cast doubt on its status as a science—a scepticism which, in my view, arises less from objective reasoning than from deeply rooted beliefs and psychological resistance. This hesitancy may, in part, be traced back to the early stance of the behaviourist school, which rejected mental processes as legitimate explanations for observable behaviour. Behaviourists remained firmly opposed to concepts such as consciousness and the unconscious, while cognitive psychology initially adopted a neutral position, only later beginning to engage with these notions in earnest in the 1980s.

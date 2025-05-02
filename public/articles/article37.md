@@ -1,7 +1,7 @@
 <h4>Paris and What it Means to Me — Part 2</h4>
 
 Published in Al-Hiwar al-Mutamaddin
-
+<br>
 21 April 2010
 
 France, in the context of the reflections above, appears to me as a sum of contradictory emotions stirred each time I utter her name. I feel lost here. Her history of struggle, which led to the downfall of monarchical tyranny and the rejection of any constraint on the freedom of the French people, gives me a certain sense of comfort—perhaps even a justification—for choosing to live here. It is a testimony to what I once believed and still do: that a human being creates her or his own destiny.
