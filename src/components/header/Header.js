@@ -131,7 +131,11 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} className="text-capitalize" to="/404">
+                      <Link
+                        onClick={ClickHandler}
+                        className="text-capitalize"
+                        to="/beyondPolitics/the-politician/1"
+                      >
                         Beyond Politics
                       </Link>
                       <ul className="sub-menu">
