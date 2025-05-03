@@ -40,6 +40,8 @@ import ArticleDetails from "../ArticlesPage/ArticleDetails";
 import MyStory from "../MyStory/MyStory";
 import Paintings from "../Paintings/Paintings";
 import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
+import EncAndDialFullWidth from "../EncounterAndDialogue/EncAndDialFull";
+import EncAndDialDetails from "../EncounterAndDialogue/EncAndDialDetails";
 
 const AllRoute = () => {
   return (
@@ -81,9 +83,11 @@ const AllRoute = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog-left-sidebar" element={<BlogPageLeft />} />
           <Route path="articles" element={<ArticlesFullwidth />} />
+          <Route path="encounter-and-dialogue" element={<EncAndDialFullWidth />} />
           <Route path="conference-and-symposium" element={<ServicePageFullwidth />} />
           <Route path="blog-single/:slug" element={<BlogDetails />} />
           <Route path="article-single/:id" element={<ArticleDetails />} />
+          <Route path="encounter-and-dialogue-single/:id" element={<EncAndDialDetails />} />
           <Route path="blog-single-left-sidebar/:slug" element={<BlogDetailsLeftSiide />} />
           <Route path="blog-single-fullwidth/:slug" element={<BlogDetailsFull />} />
           <Route path="privacy" element={<PrivacyPage />} />

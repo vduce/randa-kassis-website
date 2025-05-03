@@ -5,6 +5,7 @@ import Collapse from "@material-ui/core/Collapse";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 
+
 const menus = [
   {
     id: 1,
@@ -46,7 +47,83 @@ const menus = [
   {
     id: 6,
     title: "My Story",
-    link: "/story/1",
+    submenu: [
+      {
+        id: 1,
+        title: "Prologue",
+        link: "/story/1",
+      },
+      {
+        id: 2,
+        title: "I was not born a rebel",
+        link: "/story/2",
+      },
+      {
+        id: 3,
+        title: "The First Battle",
+        link: "/story/3",
+      },
+      {
+        id: 4,
+        title: "Back to Syria",
+        link: "/story/4",
+      },
+      {
+        id: 5,
+        title: "Painting",
+        link: "/story/5",
+      },
+      {
+        id: 6,
+        title: "A Life of Art",
+        link: "/story/6",
+      },
+      {
+        id: 7,
+        title: "The Turning Point",
+        link: "/story/7",
+      },
+      {
+        id: 8,
+        title: "Political Fight: A Struggle",
+        link: "/story/8",
+      },
+      {
+        id: 9,
+        title: "Looking Back",
+        link: "/story/9",
+      },
+      {
+        id: 10,
+        title: "AD-HOC Organisation",
+        link: "/story/10",
+      },
+      {
+        id: 11,
+        title: "Loss, Grief, and...",
+        link: "/story/11",
+      },
+      {
+        id: 12,
+        title: "The Contradiction That...",
+        link: "/story/12",
+      },
+      {
+        id: 13,
+        title: "The Absurdity of Emotions",
+        link: "/story/13",
+      },
+      {
+        id: 14,
+        title: "A Life Without Meaning",
+        link: "/story/14",
+      },
+      {
+        id: 15,
+        title: "Moving Forward",
+        link: "/story/15",
+      },
+    ],
   },
   {
     id: 7,
@@ -66,6 +143,7 @@ const MobileMenu = () => {
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
+    setMenuState(false);
   };
 
   return (

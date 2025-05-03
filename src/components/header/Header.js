@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Logo from "../../images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
+  const navigate = useNavigate();
   const [menuActive, setMenuState] = useState(false);
 
   const storyList = {
@@ -39,21 +41,6 @@ const Header = (props) => {
   const beyondPolitics = {
     "the-politician": "Paintings",
     "the-essayist-the-critic": "Exhibitions & Moments",
-  };
-
-  const paintingList = {
-    1: "Acts of the Body – Resistance in Flesh",
-    2: "Nue Cachée – Hidden Naked",
-    3: "States of Mind and Memory",
-    4: "The Universe – A Return to Nothingness",
-    5: "Celestial Fragments over Dunes",
-    6: "Desert Echoes – A Journey Through the Nomad’s Mind",
-    7: "Totems and Emotional Cartographies",
-  };
-
-  const exhibitionAndMomentList = {
-    1: "Exhibition 1",
-    2: "Exhibition 2",
   };
 
   const SubmitHandler = (e) => {
@@ -126,7 +113,11 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li>
-                      <Link className="text-capitalize" onClick={ClickHandler} to="/404">
+                      <Link
+                        className="text-capitalize"
+                        onClick={ClickHandler}
+                        to="/encounter-and-dialogue"
+                      >
                         Encounters & Dialogues
                       </Link>
                     </li>
@@ -134,7 +125,11 @@ const Header = (props) => {
                       <Link
                         onClick={ClickHandler}
                         className="text-capitalize"
-                        to="/beyondPolitics/the-politician/1"
+                        to={
+                          window.location.pathname.startsWith("/beyondPolitics/the-politician")
+                            ? `${window.location.pathname}`
+                            : "/beyondPolitics/the-politician/1"
+                        }
                       >
                         Beyond Politics
                       </Link>
@@ -153,7 +148,15 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} className="text-capitalize" to="/story/1">
+                      <Link
+                        onClick={ClickHandler}
+                        className="text-capitalize"
+                        to={
+                          window.location.pathname.startsWith("/story/")
+                            ? `${window.location.pathname}`
+                            : "/story/1"
+                        }
+                      >
                         My Story
                       </Link>
                       <ul className="sub-menu">

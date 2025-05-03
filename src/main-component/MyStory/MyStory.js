@@ -93,7 +93,7 @@ const MyStory = () => {
   };
 
   const [currentPage, setCurrentPage] = useState(getPageIndex(sectionId));
-  
+
   const [sections, setSections] = useState(storySections);
 
   useEffect(() => {
@@ -115,9 +115,14 @@ const MyStory = () => {
     fetchMarkdown();
   }, []);
 
- useEffect(() => {
+  useEffect(() => {
     const newPage = getPageIndex(sectionId);
-    if (!sectionId || isNaN(sectionId) || parseInt(sectionId) !== sectionId || parseInt(sectionId) < 1) {
+    if (
+      !sectionId ||
+      isNaN(sectionId) ||
+      parseInt(sectionId) !== sectionId ||
+      parseInt(sectionId) < 1
+    ) {
       // Redirect to /story/1 if sectionId is invalid or missing
       // navigate("/story/1", { replace: true });
       setCurrentPage(newPage);
@@ -161,9 +166,7 @@ const MyStory = () => {
     ));
     imageBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
-        {imgs}
-      </div>
+      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">{imgs}</div>
     );
   };
 
@@ -171,7 +174,7 @@ const MyStory = () => {
 
   const components = {
     img: ({ src, alt, ...props }) => {
-      console.log("Processing image:", { src, alt, props }); // Debug
+      // console.log("Processing image:", { src, alt, props }); // Debug
       const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
       if (isVideo) {
         lastWasMedia = true;
@@ -222,7 +225,7 @@ const MyStory = () => {
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} Logo={Logo} />
       <PageTitle pageTitle={sections[currentPage]?.title} />
-      <div className="wpo-service-single-area section-padding">
+      <div className="wpo-service-single-area section-padding" style={{ paddingTop: "0px" }}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-12">
@@ -234,10 +237,7 @@ const MyStory = () => {
                     <div className="max-w-2xl mx-auto p-3">
                       {renderMarkdown(sections[currentPage]?.content || "")}
                     </div>
-                    <div
-                      className="d-flex mt-6"
-                      style={{ justifyContent: "space-between" }}
-                    >
+                    <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                       <button
                         onClick={handlePrevious}
                         disabled={currentPage === 0}
@@ -258,9 +258,7 @@ const MyStory = () => {
                             : "bg-blue-500 hover:bg-blue-600"
                         }`}
                       >
-                        {currentPage === sections.length - 1
-                          ? "Completed"
-                          : "Next"}
+                        {currentPage === sections.length - 1 ? "Completed" : "Next"}
                       </button>
                     </div>
                   </div>
