@@ -1,8 +1,10 @@
 <h4>Reviving the God from Within: The Roots of Inner Conflict</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 7 June 2010
+
 
 Neuroscience and psychology have revealed much about the internal struggles of the human mind—particularly the tension between the rational clarity that governs us during the day and the illusions and imaginings that overtake us at night. These nightly visions transport us to the mazes of childhood, to distant memories accumulated over time, memories that shift in form, merge with others, and create entirely new mental images.
 
