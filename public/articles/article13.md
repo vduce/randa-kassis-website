@@ -1,8 +1,10 @@
 <h4>The Syrian Regime and the Philosophy of Despotism</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 14 April 2011
+
 
 There is no doubt that cultural structures and historical heritage vary considerably across Arab countries. Yet, despite these differences, totalitarian regimes throughout the region repeat and reproduce the same mechanisms of repression to which they subject their populations. This is because the very architecture of these regimes—and the power apparatuses that sustain them—are shaped by analogous developmental processes and rest upon a similar psychological foundation. Totalitarian regimes are inherently incapable of comprehending anything that transcends their repressive tools and methods.
 
@@ -39,3 +41,6 @@ Revolutions are, at their inception, an unconscious effort. The psychological de
 At this critical juncture, the role of intellectuals and experts becomes vital. They must help to structure and guide this raw, apolitical, and socially unanchored desire for change. A theoretical framework must be developed to support revolutionary movements, helping them navigate the disorder of revolutionary periods and their aftermath. This intervention is not meant to contain or subdue the revolutionary impulse, but rather to offer a forward-looking vision and to lay the foundations of diversity for future political and social engagement.
 
 It is also clear that revolutions can unleash counter-revolutionary energies that work against their founding principles. We have witnessed such dangers in the aftermath of the Tunisian and Egyptian revolutions. The sudden rise and mobilisation of religious fundamentalism in both countries illustrates how revolutionary movements remain vulnerable to being hijacked, and how their democratic aspirations can be thwarted. Political Islam is capable of distorting the original motives that inspired revolutionary action, transforming them into new instruments of repression—not unlike those wielded by the very regimes they sought to overthrow.
+
+
+
