@@ -1,5 +1,8 @@
 <h4>Political Islam and Ideology: Two Faces of Tyranny</h4>
 
+
+Published in Al-Hiwar al-Mutamaddin
+<br>
 19 March 2011
 
 At a time when popular uprisings across the Arab world intensify in their call for freedom, social justice, and an end to the tyranny and exploitation practised by authoritarian regimes, we are confronted with a striking contradiction in how different movements and ideologies understand the very notion of freedom. Among these, political Islam presents itself as the most fitting project for societies where the majority profess the Islamic faith. Yet in doing so, it excludes all who do not share its beliefs or vision—advancing a narrow political framework that, in essence, mirrors the same authoritarianism it claims to oppose.
