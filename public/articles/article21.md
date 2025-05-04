@@ -1,8 +1,10 @@
 <h4>Where Does Arab Culture Stand in Relation to Secularism?</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 21 November 2010
+
 
 From time to time, proposals resurface affirming the inevitability of secularism within Arab societies. These are swiftly met with louder and more numerous voices from opposing religious factions, accompanied by cries of denunciation from within the public sphere, protesting what they perceive as a grand conspiracy that has been meticulously woven for centuries against their communities.
 
