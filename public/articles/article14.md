@@ -5,6 +5,7 @@ Published in Al-Hiwar al-Mutamaddin
 
 19 March 2011
 
+
 At a time when popular uprisings across the Arab world intensify in their call for freedom, social justice, and an end to the tyranny and exploitation practised by authoritarian regimes, we are confronted with a striking contradiction in how different movements and ideologies understand the very notion of freedom. Among these, political Islam presents itself as the most fitting project for societies where the majority profess the Islamic faith. Yet in doing so, it excludes all who do not share its beliefs or vision—advancing a narrow political framework that, in essence, mirrors the same authoritarianism it claims to oppose.
 
 To realise its project, political Islam begins with the Islamisation of everyday life—seeking to permeate all aspects of social and personal existence. It aims to subjugate the individual through the imposition of rules and norms set by those who call themselves scholars of Islam. In this vision, the individual is not recognised as an autonomous being but merely as a component of the collective. Individual beliefs and freedoms are acceptable only if they conform to the prescribed religious framework. Simply put, there is no freedom outside the sacred texts.
