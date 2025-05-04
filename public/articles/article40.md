@@ -1,8 +1,10 @@
 <h4>The Delirium of Prophets</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 13 March 2010
+
 
 Human beings engage with their environment through two interwoven perceptual experiences. The first is internal, arising from sensory interaction with the external world. Over time, however, this internal experience is shaped by collective structures and environmental influences, eventually forming a shared inner framework—what we might term the collective internal experience, manifesting as cultural norms and values.
 
@@ -12,9 +14,7 @@ Internal perception itself is further divided into individual cognitive experien
 
 Before addressing the religious dimension within individuals and communities, I wish to explore the nature of internal perception and the fragile mental images that often dominate those who experience them. In particular, I refer to prophets and messengers, and the link between prophecy, high altitudes (such as mountain ascents), and fasting. Take, for example, Moses ascending the mountain to receive the Ten Commandments. To understand this phenomenon, we must examine the role of hypoxaemia—a deficiency of oxygen in the blood—which occurs at high altitudes and is known to affect activity in the temporal lobe of the brain. Factors that can induce hypoxaemia include elevation, rapid ascent, and intense physical exertion.
 
-Studies of hallucinations and delirium experienced by mountain climbers—often symptoms of altitude sickness—shed light on why individuals seeking divine contact may have gravitated towards elevated terrains. Fasting, too, plays a key role. Moses is said to have fasted before his encounter with God. Starving the body alters brain function and can induce states akin to delirium. Hence, fasting and ritual deprivation have long been part of spiritual preparation among numerous tribal cultures—such as Native American rites—described by Michael Persinger as part of what he terms the “God experience”. Over time, this extreme deprivation
-
-was institutionalised in milder forms as partial fasting and incorporated into the obligatory practices of organised religions.
+Studies of hallucinations and delirium experienced by mountain climbers—often symptoms of altitude sickness—shed light on why individuals seeking divine contact may have gravitated towards elevated terrains. Fasting, too, plays a key role. Moses is said to have fasted before his encounter with God. Starving the body alters brain function and can induce states akin to delirium. Hence, fasting and ritual deprivation have long been part of spiritual preparation among numerous tribal cultures—such as Native American rites—described by Michael Persinger as part of what he terms the “God experience”. Over time, this extreme deprivation was institutionalised in milder forms as partial fasting and incorporated into the obligatory practices of organised religions.
 
 Persinger drew a critical distinction between the experience of God and the concept of God. He considered the former a subjective, internal phenomenon—an intense perceptual episode often marked by overwhelming emotion, an inner sense of revelation, and even auditory phenomena interpreted as the divine voice.
 
