@@ -1,10 +1,14 @@
-<h4>The American Mirage: Between the Guardian Illusion and the Naivety of Dualism</h4>
+<h4>The American Mirage: Between the Illusion of Guardianship and the Naïvety of Dualism</h4>
 
 
 Published in Al-Ahram Newspaper
 <br>
 28 February 2022
 
+
+The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one’s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day “hero”—a figure shaped by fantasies and longings—only to fall prey to propaganda.
+
+This propaganda is by no means exclusive to the United States, but I highlight it here because of its vast cinematic machinery, which has fuelled its rise and prolonged its tiresome narrative—one that no longer captures the imagination of any but the naïve.
 
 As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine—amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia—the West hoisted the banner of “pride and resistance.”
 
@@ -18,10 +22,6 @@ Hollywood’s industrial-scale film production has only deepened this image, rec
 
 This idea of American supremacy is not confined to those chasing the illusion of the “American dream”; it extends equally to those who see the United States as a malevolent force, intent on crushing the aspirations of nations. Both sides, in their own way, reinforce the notion of a unipolar world, ignoring the emergence of other political, economic, and military powers—and denying the reality of a multipolar global order.
 
-The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one’s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day “hero”—a figure shaped by fantasies and longings—only to fall prey to propaganda.
-
-This propaganda is by no means exclusive to the United States, but I highlight it here because of its vast cinematic machinery, which has fuelled its rise and prolonged its tiresome narrative—one that no longer captures the imagination of any but the naïve.
-
 Many individuals and groups continue to suffer from binary thinking—a legacy inherited from Plato, who equated justice with the health of the soul, and injustice with its illness. He laid the foundations of this dualistic framework, dividing the world into pairs: good and evil, justice and injustice, war and famine, health and disease, chaos and order, and so on.
 
 Later philosophical traditions moved towards more pluralistic understandings, recognising the complex and multi-faceted nature of human psychology. Yet, even today, many cultures still rely heavily on binaries. Within them, the individual often retreats to a “paradise” of romantic elements—constructs of imagined perfection.
@@ -33,3 +33,4 @@ It is clear that the implementation of justice in its “fantastical” sense re
 A brief glance at human history reveals a landscape riddled with conflict and primitive behaviours—those which surface in times of war, famine, or existential threat.
 
 From this, we can conclude that romantic idealism is an artificial construct—alien to our nature. Humans do not inhabit a planet filled with cartoonish characters. Life is not a tidy dichotomy of good and evil, justice and injustice, peace and war, right and wrong. Rather, it is a complex entanglement of all these elements—alongside countless others—working together, however chaotically, in service of continuity.
+
