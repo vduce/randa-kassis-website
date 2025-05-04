@@ -55,3 +55,5 @@ We possess many pathways — and many tools — for real, substantive change: th
 But this can only be achieved by conscious individuals.
 
 History is not solely the domain of institutions — it is written by those who dare to break the cycle of repetition… and liberate themselves from the Parrot Syndrome.
+
+
