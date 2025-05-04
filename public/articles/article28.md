@@ -1,8 +1,10 @@
 <h4>Religion… and the Projection of Infantile Instincts Part I</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 21 June 2010
+
 
 The fantasies which overwhelm our rational thinking are, in their essence, the fruits of a mental image that compensates for disappointments or psychological anxiety. When freed from restrictions and external taboos, these fantasies are given free rein, evolving into imaginary fictions that gradually develop and solidify into influential narratives with far-reaching implications for our lives and ways of thinking. They give birth to all kinds of monsters, gods, and demons.
 
@@ -34,7 +36,9 @@ We must grasp the nature of this unique bond between mother and son. This was th
 
 Analytical studies of neuroses in the field of psychological anthropology show that the first masculine anxiety stems from the castration complex—not before, but during intercourse. The fear of the female sexual organ (experienced during the act) becomes confused with the fear of castration (which should precede it). These are two distinct anxieties, but they collapse into a single moment and are experienced anachronistically. Likewise, the child’s longing to return to the maternal womb reflects a paradox—simultaneous sexual desire and fear.
 
-In the myth of Biliku (a female spider), the mother figure represents protection from danger. Tarai (a monitor lizard) is both son and husband—subject to her authority, yet complicit with her. (Notably, Biliku and Tarai are also the Andaman names for the two dominant monsoon winds.) The mother-son relationship here reflects mutual sexual desire maintained in a perpetual state of tension. In Freudian terms, this becomes the inner conflict between the superego—associated with religion and morality—and the feminine principle, which represents libido and a return to primal instinct. Perhaps this is why spiritual religions have granted women a privileged yet restricted role, often as objects of sexual temptation.
+In the myth of Biliku (a female spider), the mother figure represents protection from danger. Tarai (a monitor lizard) is both son and husband—subject to her authority, yet complicit with her. 
+
+(Notably, Biliku and Tarai are also the Andaman names for the two dominant monsoon winds.) The mother-son relationship here reflects mutual sexual desire maintained in a perpetual state of tension. In Freudian terms, this becomes the inner conflict between the superego—associated with religion and morality—and the feminine principle, which represents libido and a return to primal instinct. Perhaps this is why spiritual religions have granted women a privileged yet restricted role, often as objects of sexual temptation.
 
 One might say that the marginalisation of the feminine, the reduction of her role to procreation, and the denial of her sexual agency all stem from this ambiguous relationship between mother and son. On one hand, there is the son’s fear of and desire for the mother; on the other, the mother’s control, her protective nature—and her penis envy, expressed through a persistent drive to compensate for lack.
 
