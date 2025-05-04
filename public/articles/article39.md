@@ -1,8 +1,10 @@
 <h4>Thought and Religion: Two Separate Paths</h4>
 
-Published in Al-Hiwar al-Mutamaddin
+
+Published in Elaph
 <br>
 31 March 2010
+
 
 In Arab societies, the rational individual aspires to separate religion from politics, hoping to replicate the secularisation experienced elsewhere. Yet upon closer examination, it becomes clear that a more urgent demand precedes this political aim: the total and unconditional separation of religion from thought itself.
 
