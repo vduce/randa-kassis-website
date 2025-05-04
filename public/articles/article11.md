@@ -1,8 +1,10 @@
 <h4>Memory and Consciousness — Part I</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 24 May 2011
+
 
 There is no doubt that the cultural framework — encompassing beliefs, customs, and behaviours — is a product of the level of consciousness within a given society. Equally, it is undeniable that we all strive to elevate our consciousness to grasp what currently lies beyond our understanding. It may also be necessary to revisit the past in order to comprehend what was once obscure to humankind — to understand how humans became prey to psychological fears, which they sought to suppress through myth, spiritual practices, and eventually, religion. With this in mind, I have chosen to clarify in this article the mechanism by which the brain has evolved over time, drawing on certain contemporary neurological theories.
 

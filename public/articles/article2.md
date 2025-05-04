@@ -1,8 +1,10 @@
 <h4>Who Will Win “Humanity”?</h4>
 
+
 Published in Al-Ahram Newspaper
 <br>
 9 February 2022
+
 
 Over the past decade — ever since social media infiltrated nearly every home, bar, and street corner — we’ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of “humanity.” These medals, of course, are nothing more than symbolic gestures — emojis, empty phrases, and at best, dotless, hollow expressions.
 
@@ -29,3 +31,4 @@ This is not the first, nor will it be the last, tragic incident of its kind. Lif
 A person who is truly conscious of life and death does not need to follow the crowd, nor become an echo, simply to prove they care. The amplified, theatrical emotions we now witness — steeped in hypocrisy and herd instinct — are no proof of anything. They reflect only a deep inability to generate change or to carve out new paths for humanity. They offer nothing more than melodrama, performed before a stone.
 
 For years now, we’ve heard endless talk of “new” human values — limitless, borderless, all-embracing. Yet we remain caught in the same cycle of emojis, hashtags, and body language. Real values are not acrobatic displays, tearful theatrics, or reactive posturing. They are a form of sustained awareness — one that is neither fragmented nor conditioned by context.
+

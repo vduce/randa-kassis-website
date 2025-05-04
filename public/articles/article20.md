@@ -1,8 +1,10 @@
 <h4>In the Beginning was the Totem Animal — Part II</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 28 November 2010
+
 
 In a previous article, I began my exploration of the origins of the totem. In this second part, I will turn to a closely related subject: the question of the taboo—a notion intimately tied to the earliest human reactions to fatal natural phenomena.
 
@@ -16,7 +18,7 @@ Let us return to the relationship between primitive humans and nature. While tod
 
 There is no doubt that the human need for many ancient myths and fables has waned over time. Perhaps humanity simply grew weary of repeating the same failed experiences, eventually realising that rituals grounded in sorcery and shamanism had not succeeded in mastering the external world (what we now refer to as the external or empirical experience). When this external experience clashes with inner consciousness, a confused mind—unable to resolve the consequences of this confrontation between inner and outer forces—often defaults to supernatural interpretations.
 
-Historical records offer numerous examples of how, during the post-agricultural and pastoral stages of evolution, humans used animals to detect danger or locate water sources. These early humans may have come to recognise the keenness of animal senses. The Roman historian Tacitus, for instance, observed that ancient Jews venerated donkeys, referencing a tale in which a wild variant of this animal led Moses to a water spring. In the same account, Tacitus offers insight into the sacrificial ritual involving a calf—seen as an act of vengeance against the ancient Egyptians, who revered the sacred bull Apis.
+Historical records offer numerous examples of how, during the post-agricultural and pastoral stages of evolution, humans used animals to detect danger or locate water sources. These early humans may have come to recognise the keenness of animal senses. The Roman historian Tacitus, for instance, observed that ancient Jews venerated donkeys, referencing a tale in which a wild variant of this animal led Moses to a water spring.In the same account, Tacitus offers insight into the sacrificial ritual involving a calf—seen as an act of vengeance against the ancient Egyptians, who revered the sacred bull Apis.
 
 From this, we may trace the roots of the totemic system to the very regions in which the Abrahamic religions would later arise. The totemic structure evolved alongside each stage of human development, from hunting and gathering to agriculture and settled farming.
 

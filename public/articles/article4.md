@@ -1,8 +1,10 @@
 <h4>Turkey—A Spring of Peace, or a Fountain of Death and Destruction?</h4>
 
+
 Published in Al-Shorouk Newspaper
 <br>
 19 October 2019
+
 
 The decision to withdraw US forces from northeastern Syria was both hasty and profoundly misguided—a strategic blunder that effectively eliminated any prospect of peace in an already fragmented country.
 
