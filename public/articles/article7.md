@@ -1,10 +1,11 @@
 <h4>The Arab Spring: Caught Between a Siberian Winter and a Desert Summer – A Crisis of Extremes</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 4 August 2013
 
-The Arab Spring: The Formation of Consciousness and the Clash Between the Self and Repression
+<i>The Arab Spring: The Formation of Consciousness and the Clash Between the Self and Repression</i>
 
 What came to be known as the “Arab Spring” – as many prefer to call it – was the result of a complex accumulation of factors over decades. This reinforces the belief that it was not a spontaneous eruption but rather the outcome of psychological and social tensions, intensified by external stimuli that compelled millions to release their repressed internal frustrations. This release began gradually, eventually evolving into revolutions that toppled entrenched regimes plagued by corruption and authoritarianism. Each phase of this so-called “Spring” revealed its distinct manifestations of upheaval.
 
@@ -24,7 +25,7 @@ It must be emphasised that repression—be it political, social, or religious—
 
 In such conditions, Islamist movements—better organised than their secular or liberal counterparts—quickly filled the political and cultural vacuum left behind. Although they gained momentum, their ability to sustain long-term governance remained questionable, as their structure mirrored that of the repressive regimes they opposed, particularly in their approach to censorship and control. More importantly, these movements remained trapped in a past era, disconnected from contemporary realities. Egypt is perhaps the clearest example of political Islam’s dwindling support base.
 
-Syria: The Complexity of the Uprising and Shifting Realities
+<i>Syria: The Complexity of the Uprising and Shifting Realities</i>
 
 Among all Arab uprisings, the Syrian case emerged as the most complex, for a multitude of intertwined reasons. What began as calls for reform quickly met with violent repression, causing the demands to escalate into calls for regime change and the removal of President Bashar al-Assad.
 
@@ -48,12 +49,11 @@ From a psychological and anthropological perspective, morality emerges from indi
 
 Societies built on perpetual tension generate individuals unable to adapt to changing conditions. This explains why some opposition factions reduced the conflict to simplistic binaries—good versus evil, right versus wrong. They lacked strategic vision and remained confined by emotional responses, bound to shallow assumptions incompatible with Syria’s multifaceted reality.
 
-The International Dimension: Hesitation and the Weight of Calculations
+<i>The International Dimension: Hesitation and the Weight of Calculations</i>
 
 Two crucial questions posed by Russia remain unanswered by the United States:
 
 – Who is the viable alternative to the current regime—capable of governing, safeguarding international interests, and maintaining control in Syria?
-
 – If Assad agrees to step down, where would he and his leadership go? And what happens to their assets? No country will finance their exile.
 
 To date, no American team with adequate experience has emerged to manage the complexities of the Syrian file. U.S. policymakers appear to have internalised the opposition’s slogans, echoing them in a superficial attempt to promote certain figures and structures.
@@ -63,7 +63,6 @@ This lack of coherence is not unique to Washington. France and Britain have simi
 Many Western actors remain opposed to arming the opposition for several reasons:
 
 • The absence of a clear mechanism to distribute weapons safely, amid concerns that arms might fall into jihadist hands—with over 800 European jihadists reportedly active in Syria.
-
 • Fears that such actions would be seen as a strategic challenge to Russia, prompting it to escalate arms transfers to the regime and intensify the conflict.
 
 • The lack of a credible political alternative, reinforcing Russia’s insistence on a political settlement that maintains its influence in the region.
@@ -72,7 +71,7 @@ Russia views negotiation as an integral part of warfare. A comprehensive settlem
 
 A lasting solution cannot be reached without engaging moderate voices capable of articulating pragmatic demands and safeguarding the interests of all segments of society. Syria’s pluralism must be acknowledged and reflected in any viable settlement. The illusion of majority rule, if misapplied, risks dismantling the very unity it seeks to preserve.
 
-Towards a Comprehensive Settlement: The Heart of the Matter Lies Within
+<i>Towards a Comprehensive Settlement: The Heart of the Matter Lies Within</i>
 
 While international consensus is essential, internal reconciliation is even more pressing. Ending the bloodshed demands the inclusion of all political forces and social groups in Syria. A serious dialogue must begin—one that addresses the root causes of the crisis, not just its symptoms.
 
@@ -83,3 +82,6 @@ The United States and other influential powers must ease their insistence on the
 The path to resolution lies in empowering moderate voices capable of articulating shared interests and identifying common ground. Recognising Syria’s diverse social makeup is essential; a distorted reading of majority rule can destroy both national aspirations and the hopes of those it claims to represent.
 
 Ultimately, emotional rhetoric must give way to pragmatic realism. History does not honour slogans—it remembers only what brings real change. That change is born not of idealism, but of the courage to confront reality and shape it from within, with resolve and responsibility.
+
+
+
