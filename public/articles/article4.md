@@ -1,4 +1,4 @@
-<h4>Turkey—A Spring of Peace, or a Fountain of Death and Destruction?</h4>
+<h4>Turkey — A Spring of Peace, or a Fountain of Death and Destruction?</h4>
 
 
 Published in Al-Shorouk Newspaper
