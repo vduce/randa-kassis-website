@@ -1,11 +1,12 @@
 <h4>Memory and Consciousness – Part II</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 29 May 2011
 
-In the first part, I paused at the mechanism behind the evolution of consciousness. In this article, I turn to a more contemporary theory: the Theory of Neuronal Group Selection, proposed by Gerald Edelman, a biologist and director of the Neurosciences Institute in La Jolla, California.
 
+In the first part, I paused at the mechanism behind the evolution of consciousness. In this article, I turn to a more contemporary theory: the Theory of Neuronal Group Selection, proposed by Gerald Edelman, a biologist and director of the Neurosciences Institute in La Jolla, California.
 Edelman divided consciousness into two levels: primary consciousness and higher-order consciousness—the latter being distinguished by its greater complexity and cognitive depth.
 
 What is primary consciousness?
@@ -21,9 +22,7 @@ Over evolutionary time, these two systems became interconnected, giving rise to 
 According to Edelman, primary consciousness developed in parallel with evolution, and was enabled by three key mechanisms:
 
 1. The cortical system, which allowed for the integration of cognitive concepts with emotional processes, thereby expanding the brain’s capacity to learn.
-
 2. A novel form of conceptual memory, capable of organising and categorising inputs from various brain systems, thus enabling the classification of perceptual processes.
-
 3. Reentrant loops—complex neural circuits that permit continuous, recursive exchange of information (feedback) across connected structures. These loops enable memory to process perceptual classification in real-time, facilitating adaptive responses.
 
 Edelman, alongside Giulio Tononi, emphasised the importance of the thalamo-cortical loops in the emergence of consciousness. They argue that primary consciousness in both humans and animals stems from the interaction between short-term memory and perceptual classification—a dynamic interplay that gives rise to conscious experience.
@@ -37,7 +36,6 @@ Although this capacity is most developed in humans, studies suggest that chimpan
 These social interactions, and the resulting ability to store symbolic relationships over extended periods—through the convergence of multiple memory systems and the emergence of experience-based memory—enabled humans to link the past with the present and imagine the future. This played a pivotal role in the development of higher-order consciousness.
 
 According to Edelman, the brain is subject to two selective processes: natural selection, and somatic selection, the latter being a refinement within the former. These mechanisms enable the brain to connect sensory signals with mental representations, leading to the formation of consciousness based on the interplay between perception, conceptual frameworks, and memory—all shaped by a value system that evolved over time.
-
 In The Biology of Consciousness, Edelman explains how higher-order consciousness contributes to the emergence of imagination, emotion, sensation, thought, selfhood, and volition. Human behaviour, he argues, is driven by memory, which is itself shaped by reclassification processes that respond to biological shifts and evolving value systems.
 
 When considering these modern theories, it becomes evident that our engagement with concepts—whether social or religious—is rooted in an ongoing process of transformation across time. There is no fixed perception, no immutable concept. Rather, the values we ascribe to the external world stem from a consciousness that is itself in flux, adjusting in response to life and nature.

@@ -1,8 +1,10 @@
 <h4>Tunisia on Life Support</h4>
 
-Published in Tunisia
+
+Published in Al-Hiwar al-Mutamaddin
 <br>
 11 January 2011
+
 
 For decades, Arab regimes have succeeded in numbing the collective consciousness of their peoples through a range of tactics: repression, violence, exile—whether abroad or beneath the soil—and the systematic marginalisation of those who remained on the land. All this has served one ultimate goal: the entrenchment of absolute power. In pursuit of this goal, these governments have deliberately silenced knowledge and stifled information that runs counter to the principle of domination, preventing it from reaching the public domain.
 

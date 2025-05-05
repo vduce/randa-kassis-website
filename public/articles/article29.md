@@ -1,8 +1,10 @@
 <h4>Religion… and the Projection of Infantile Instincts — Part II</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 25 June 2010
+
 
 With the previous article, I stopped at the discussion of the idea of the mother–son mutual sexual desire, which results, on the one hand, from the mother’s penis envy and, on the other, from the child’s castration complex, as it is known and explained in psychoanalytic theory.
 
@@ -24,7 +26,9 @@ We must understand that this process—whereby authority is delegated to the son
 
 It is therefore no surprise that many Aboriginal tribes and certain religions prohibited polygamy. Monogamous societies reflect the privileged position of the son’s relationship with his mother and his desire to return to a state of infancy by attaching himself to one woman—that is, aspiring to a second childhood. This behaviour is also observed in some species of monogamous monkeys.
 
-Let us return to tribal societies that subscribe to monogamy. In these, we find practices grounded in the mother–son–father triangle and in the sanctification of marriage upon the birth of a child. This is particularly evident in Christianity, where the mother is symbolically replaced by the Holy Spirit. Such a shift reflects a digression in the authority of the woman—especially the mother—within these societies at the time. And, of course, the condition of women in these societies has not improved, due to the weight of inherited historical, cultural, and religious values.
+Let us return to tribal societies that subscribe to monogamy. In these, we find practices grounded in the mother–son–father triangle and in the sanctification of marriage upon the birth of a child. 
+
+This is particularly evident in Christianity, where the mother is symbolically replaced by the Holy Spirit. Such a shift reflects a digression in the authority of the woman—especially the mother—within these societies at the time. And, of course, the condition of women in these societies has not improved, due to the weight of inherited historical, cultural, and religious values.
 
 So God represents an act of sublimation of a masculinity built on the complex of guilt born out of a forbidden sexual relation between mother and son, while the invention of demons and monsters reflects the original condition of the child’s pure sexual drives according to the analysis of experts in psychological anthropology. This in turn has been proved by many psychoanalysts through various clinical analyses carried out on different children, best summed up in the child’s desire to penetrate the mother’s body which also results in psychological anxiety. This condition which affects the child pushes him to seek refuge in imagination and fantasies which invent stories of goblins, demons and monsters.
 

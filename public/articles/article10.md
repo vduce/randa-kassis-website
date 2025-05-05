@@ -1,8 +1,10 @@
 <h4>Arab Revolutions and Political Islam</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 12 July 2011
+
 
 Amid the popular uprisings erupting across the Arab world in defiance of tyranny, concerns persist over the ascendancy of Islamist movements and their potential to appropriate these revolutionary currents—particularly given the religious and ideological leanings of the masses involved. In this context, it becomes increasingly plausible that political Islam will seek to exploit the unconscious energies fuelling these revolts, especially in societies that lack clear political vision or well-defined institutional frameworks.
 
@@ -23,7 +25,6 @@ This calls for a critical reassessment of the history curriculum in Arab schools
 Undoubtedly, the Muslim individual’s experience of marginalisation and their repeated frustrations—stemming from an inability to contribute creatively or civilisationally, as others do—has led to a kind of internalised, limited awareness, one that is constantly nourished by sacred history and unquestioned texts.
 
 Let me reiterate: the problem does not lie with Islam per se, but with the structure of all religions, which tend to deprive the individual of even their most basic physical needs. Religions enclose individuals within a shell through which clerics extend their control over communities.
-
 It must also be noted that most religions and belief systems engage in a process of erasing what preceded them—even as they borrow and absorb the ideas of those prior systems. They claim for themselves the mantle of salvation, enlightenment, or truth. This is made especially clear in Islam’s depiction of pre-Islamic Arabia as an age of ignorance (jahiliyyah), thereby dismissing all prior knowledge and heritage—even though Islam itself is a product of that very cultural and historical milieu.
 
 Our pride in religious or cultural identity is often the result of a process of self-glorification. Individuals tend to affirm that which mirrors their own psychological and cultural structure, while rejecting what is unfamiliar or different. This is what we mean by perception. Expanding one’s awareness requires openness to difference. The rigidity with which individuals cling to their beliefs, cultures, or inherited knowledge is largely the product of conditioned indoctrination.

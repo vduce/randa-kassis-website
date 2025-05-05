@@ -1,8 +1,10 @@
 <h4>Men of the Cloth and Their Neuroses</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 3 September 2010
+
 
 As time passes, we observe an increasing hysteria surrounding religion in Arab societies—albeit with varying degrees from one to another, depending largely on differences in social structures and historical heritage. This hysteria, which engulfs both individuals and groups, entraps them within the confines of an oppressive religious authority and transforms them into marionettes manipulated by the clergy. It is precisely for this reason that I believe we are entitled to question the mental health of these self-proclaimed ‘spiritual leaders’, as well as their legitimacy to assume the role of moral guides to individuals and society—especially given the unprecedented proliferation of global religious channels, financed either by official bodies or covertly supported by state institutions.
 

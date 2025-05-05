@@ -1,8 +1,10 @@
 <h4>Paris and What it Means to Me — Part 1</h4>
 
-Published in Al-Hiwar al-Mutamaddin
+
+Published in Elaph
 <br>
 15 April 2010
+
 
 The quest for something lost and found after many years has long stirred my imagination. It has been a major driving force throughout my life. I was seeking a kind of freedom—one that allows the self to inhabit every being and become one with Mother Nature, much like a child who, without understanding why, longs to return to the sanctuary of the womb.
 

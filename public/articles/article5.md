@@ -1,8 +1,8 @@
 <h4>In Syria: Revolt and Secularity</h4>
 
-Published in Syria
-<br>
+
 10 June 2015
+
 
 The recent wave of protests across several Arab countries raised significant hopes among women. These mass movements were, at the time, seen as the dawn of a new awareness, with the ultimate aim of achieving change. This period was preceded by a surge in secular and anti-religious movements, particularly in the virtual sphere, expressing a clear desire for substantial reforms. The goal of these secularists was to establish a democracy rooted in individual rights, allowing people at last to speak freely. Women were deeply involved in these secular movements, both prior to and during the emergence of the Arab Spring. Naturally, they hoped to lay the groundwork for gender equality and to bring an end to all forms of discrimination.
 
