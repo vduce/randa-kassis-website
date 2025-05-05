@@ -1,8 +1,10 @@
 <h4>The Deification of the Superego</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 15 October 2008
+
 
 For much of human history, people lived in a state of unconsciousness, driven by primal urges and the instinctive pursuit of their satisfaction. Yet the need for safety—and protection from predatory creatures—compelled humans to seek refuge in the collective. Thus began a long journey towards individual consciousness.
 
@@ -41,3 +43,5 @@ Or was it that the strong individual egos of these prophets drove them to bind c
 What is certain is that the conflation of culture and divinity became deeply embedded in the collective unconscious of the region’s inhabitants. As a result, the existence of both individual and community became inextricably linked to the existence of God. And with this came a profound obstacle: any individual attempt to break free from this collective destiny is met not with curiosity, but with rejection—and often, erasure.
 
 I can only conclude with Nietzsche’s words: “Man cannot rise high if he remains ignorant of his destiny.”
+
+
