@@ -34,4 +34,4 @@ It is true that all peoples and cultures grapple with some aspect of this ancest
 
 In my view, the Western populace has failed to live up to the universal values it claims to defend. Chauvinism remains a potent weapon wielded by philistines—those who boast of nothing but their nationality, their legislation, and their intellectual forebears. Today, more than ever, we need an intellectual awakening to restrain Western governments from stoking chauvinism within their native populations through a media that is increasingly tabloid-driven and feudal in tone. Complacency and pride are among the greatest enemies of human progress—and this applies equally, if not more so, to the Western variety.
 
-To be continued: Paris and What it Means to Me — Part 2
+To be continued: [Paris and What it Means to Me — Part 2](article37.md)
