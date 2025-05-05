@@ -1,8 +1,10 @@
 <h4>The Pinnacle of Pleasure and Consonance</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 30 July 2010
+
 
 This is a follow-up to the previous article, as I felt it warranted further clarification. I wanted to begin with the expression “a struggle for existence”, a phrase employed in various ways and often taking on aggressive overtones that inflame a confrontational stance towards the other. At face value, it appears to be a legitimate argument for self-preservation. Increasingly, this attitude has become central to the way groups and individuals interact with those outside their sphere. At this point, we must ask ourselves about the affinities between the principle of the struggle for existence and the principle of domination.
 

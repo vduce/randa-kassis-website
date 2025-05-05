@@ -125,11 +125,6 @@ const Header = (props) => {
                       <Link
                         onClick={ClickHandler}
                         className="text-capitalize"
-                        to={
-                          window.location.pathname.startsWith("/beyondPolitics/the-politician")
-                            ? `${window.location.pathname}`
-                            : "/beyondPolitics/the-politician/1"
-                        }
                       >
                         Beyond Politics
                       </Link>
@@ -151,11 +146,6 @@ const Header = (props) => {
                       <Link
                         onClick={ClickHandler}
                         className="text-capitalize"
-                        to={
-                          window.location.pathname.startsWith("/story/")
-                            ? `${window.location.pathname}`
-                            : "/story/1"
-                        }
                       >
                         My Story
                       </Link>

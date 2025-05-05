@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -8,8 +8,14 @@ import articles from "../../api/articles.json";
 
 const ArticleSingle = () => {
   const { id } = useParams(); // Get the article ID from the URL
+  const navigate = useNavigate();
   const [article, setArticle] = useState(null); // State to store the article
   const [content, setContent] = useState(""); // State to store the article content
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // Find the article by ID
@@ -49,6 +55,29 @@ const ArticleSingle = () => {
                     <Markdown
                       rehypePlugins={[rehypeRaw]}
                       remarkPlugins={[remarkGfm]} // Enable GFM support
+                      components={{
+                        a: ({ href, children }) => {
+                          // Check if the link is a Markdown file
+                          if (href.endsWith(".md")) {
+                            // Extract the article ID from the filename
+                            const articleId = href.replace("article", "").replace(".md", "");
+                            return (
+                              <a
+                                href="#"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  navigate(`/article-single/${articleId}`);
+                                  window.scrollTo(0, 0);
+                                }}
+                              >
+                                {children}
+                              </a>
+                            );
+                          }
+                          // Default behavior for other links
+                          return <a href={href}>{children}</a>;
+                        },
+                      }}
                     >
                       {content}
                     </Markdown>

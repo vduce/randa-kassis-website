@@ -1,8 +1,10 @@
 <h4>Sexual Intercourse and the Return to the Womb</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 28 May 2010
+
 
 In a previous article, “The Sex and Death Syndrome”, I explored the underlying fear within the male psyche of losing his genital organ. In this piece, I turn to examine the psychological roots of that fear, commonly known in psychoanalysis as the castration complex.
 
@@ -11,7 +13,6 @@ Otto Rank proposed that the origin of this complex lies not merely in the threat
 The concept of alloplastic adaptation, as formulated by Freud, Ferenczi, and Alexander Franz, rests on the idea that the organism adapts to external pressures in one of two ways:
 
 • Through internal transformations in response to its environment, a process known as autoplastic adaptation;
-
 • Or by actively reshaping the external world to better suit its needs, which constitutes alloplastic adaptation.
 
 Returning to the notion of re-entering the womb, we observe this desire manifesting symbolically in the sexual act across species. For example, copulation among certain spiders can last several hours, while in some parasitic species, the male remains embedded within the female’s body in a state of permanent union.
@@ -40,4 +41,5 @@ Here, I find a meaningful parallel between de Vries’s conclusions and Ferenczi
 
 Sex, from this perspective, is far more than a physical act—it is a symbolic endeavour to reverse the foundational expulsion from the womb and to reconnect with the serenity and totality of pre-birth existence. Though such a return is forever barred, the human being remains driven to simulate it—through the body, through the unconscious, and through symbolic rituals of desire, separation, and the eternal longing for origin.
 
+<footer> </footer>
 Note: The paragraph marked with an asterisk *—which addresses the idea of the female’s desire to possess the male organ as a symbolic substitute for returning to the womb—belongs to a specific tradition within Freudian psychoanalysis. It does not claim to offer a universal interpretation of femininity or gender, but rather reflects a symbolic reading shaped by particular cultural and theoretical contexts of its time.

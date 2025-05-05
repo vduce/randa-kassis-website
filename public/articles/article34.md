@@ -1,8 +1,10 @@
 <h4>The Sex–Death Syndrome</h4>
 
-Published in Al-Hiwar al-Mutamaddin
+
+Published in Elaph
 <br>
 2 May 2010
+
 
 Over the years, many psychologists and anthropologists have delved into ancient belief systems, and some have concluded that understanding the human sexual instinct is key to deciphering the myths that gave rise to spirituality and religion. According to this view, the genital region lies at the symbolic heart of many early beliefs.
 

@@ -1,6 +1,7 @@
 <h4>The Ego’s Enmity Towards Freedom</h4>
 
-Published in Al-Hiwar al-Mutamaddin
+
+Published in Elaph
 <br>
 30 May 2010
 

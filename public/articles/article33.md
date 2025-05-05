@@ -1,8 +1,10 @@
 <h4>The Belligerence of the Abrahamic Covenant</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 14 May 2010
+
 
 My mind drifts, then collapses—it betrays me. I can neither focus nor accomplish anything. I attempt to rearrange my thoughts, to organise facts, only to falter before I’ve even begun. For a few minutes, I ponder the disease and its possible remedy, but I find nothing—nothing but a wild urge to stray even further. My mind is off, wandering the narrow alleys of the internet, seeking something it cannot name.
 
