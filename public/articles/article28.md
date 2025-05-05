@@ -38,4 +38,4 @@ In the myth of Biliku (a female spider), the mother figure represents protection
 
 One might say that the marginalisation of the feminine, the reduction of her role to procreation, and the denial of her sexual agency all stem from this ambiguous relationship between mother and son. On one hand, there is the son’s fear of and desire for the mother; on the other, the mother’s control, her protective nature—and her penis envy, expressed through a persistent drive to compensate for lack.
 
-To be continued: Religion… and the Projection of Infantile Instincts—Part II
+To be continued: [Religion… and the Projection of Infantile Instincts—Part II](article29.md)
