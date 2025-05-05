@@ -1,8 +1,10 @@
 <h4>Ardi Between Darwin and Religion</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 17 October 2009
+
 
 I have long wondered why Arab societies remain distant from scientific facts, and why myth and religious legend continue to exert such magnetic pull. Over time, I’ve come to see that the root of the problem lies in the inability of our journalists and editors to relay information with accuracy. Instead, they often distort facts to align with their personal beliefs and psychological predispositions.
 
@@ -27,9 +29,7 @@ In ancient societies, the unique experiences of certain individuals—whether th
 But what, exactly, are the rules of magic?
 
 James Frazer divided magic into two categories:
-
 – a negative form, expressed through taboos,
-
 – and a positive form, expressed through sorcery.
 
 Together, these formed the structural pillars of the divine.
@@ -40,7 +40,9 @@ Taboo warns: “Do not do this, or misfortune will befall you.”
 
 In both cases, the goal is the same: to secure what is desirable and avoid what is harmful. In this sense, the objectives of magic and religion are identical. Just as magic calls for rituals, chants, and sometimes sacrifices, religion demands worship and devotion.
 
-The sorcerer’s power depended on upholding magical rites. Through this control of ritual, he was able to secure his place within the tribe and often ascend to political or spiritual leadership. The god, too, sustains his dominance through the worship of individuals and groups. Magical rituals gradually evolved into religious rites, but the function remained largely unchanged. Faith became a tool to control both body and mind. The deeper people sank into religious devotion, the more their psychological constitution yielded to illusion and myth. This not only impaired their ability to absorb scientific knowledge, but also eroded their capacity to understand others. Trapped in a narrow mental space, they became prisoners of their own fearful imaginings.
+The sorcerer’s power depended on upholding magical rites. Through this control of ritual, he was able to secure his place within the tribe and often ascend to political or spiritual leadership. The god, too, sustains his dominance through the worship of individuals and groups. Magical rituals gradually evolved into religious rites, but the function remained largely unchanged. Faith became a tool to control both body and mind. 
+
+The deeper people sank into religious devotion, the more their psychological constitution yielded to illusion and myth. This not only impaired their ability to absorb scientific knowledge, but also eroded their capacity to understand others. Trapped in a narrow mental space, they became prisoners of their own fearful imaginings.
 
 One can easily understand why, in later periods, religion turned against magic. The two had coexisted for some time, often working in tandem. But eventually, religion emerged as the dominant force. Still, their foundations remain linked. Just as the sorcerer once claimed to mediate with spirits, so too does the religious authority today—only now, it is not just the clerics, but much of Arab society that serves as agents for religion and its god.
 
