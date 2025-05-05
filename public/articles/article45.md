@@ -1,8 +1,10 @@
 <h4>An Anthropological Perspective on the Origins of Morality</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 16 June 2009
+
 
 We continue to chase after words, manuscripts, and myths in pursuit of a history steeped in mystery. Few things are more essential to the human condition than the thirst for knowledge. It is this yearning that prevents us from halting midway or reconciling religion with science—for science marks an evolution in human consciousness, moving beyond the early religious phases. Religions, after all, derive their texts from earlier periods shaped by magic, mana, totems, and other such frameworks. These narratives and myths, crafted by humans, often emerged from real events which were later magnified, allowing the human mind to venture into boundless realms of creativity and imagination.
 
@@ -25,9 +27,7 @@ One must recall that the unconscious mind constantly oscillates between satisfyi
 We may therefore assert that instinctual behaviour is not a product of education but a form of organised organic maturation. The continual struggle—at times to fulfil desires, at others to restrain them for the benefit of the group—helped instil basic principles that served the greater good.
 
 Freud believed that taboo originated as an unconscious drive externalised by early humans in the form of prohibitions designed to suppress instinctual urges. The earliest and most important taboos, he argued, centred around two fundamental prohibitions tied to the totem:
-
 1. The prohibition against killing the totemic being—be it animal or plant.
-
 2. The prohibition of sexual relations among members of the same totem.
 
 Freud concluded that fear is the essential engine of morality. Just as taboo represents a forbidden act, its purpose is to regulate human relations. Taboo was born from emotional conflict, and fear—driven by ignorance—transformed those emotions into a powerful force that controlled behaviour and perpetuated ignorance.

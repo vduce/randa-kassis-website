@@ -1,8 +1,10 @@
 <h4>The “Group” Effect</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 10 June 2008
+
 
 From the moment he is born, the Arab citizen remains bound to his destiny and to the society in which he places an unquestioned and absolute faith. As a result, he rejects the psychological evolution that challenges him, depriving himself of the ability to be open to external ideas. In doing so, he cuts himself off from self-discovery and from becoming part of a greater whole.
 
@@ -21,5 +23,3 @@ A society draws its originality and creativity from its members. In many culture
 In Arab societies, the opposite often occurs: the collective destroys any sign of individuality, seeking instead to display a single, unified “face” in which everyone becomes interchangeable. The mass becomes the one, and the one becomes the mass. Individuals are no longer unique contributors to a whole but rather replaceable fragments of it.
 
 The Arab “mass” proves largely incapable of renewing its image, clinging instead to uniformity at all costs—leading ultimately to the repression of the self. It is from this condition that the constant search for a saviour, or for God, emerges—along with the hope of a brighter afterlife to make sense of present constraints.
-
-Translated from: أثر سلبية الكتلة على الفرد

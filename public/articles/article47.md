@@ -1,8 +1,10 @@
 <h4>The Fourth Order of Racism</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 26 August 2008
+
 
 Over the ages, humankind has endured various forms of self-inflicted violence and oppression. With the gradual establishment of principles promoting social justice and equality, this age-old tendency towards violence and self-destruction has been tempered—but not entirely overcome. Narrow self-interest still animates the ego, driving individuals to cling to racist doctrines and acts of discrimination.
 

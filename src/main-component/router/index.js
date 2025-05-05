@@ -40,8 +40,8 @@ import ArticleDetails from "../ArticlesPage/ArticleDetails";
 import MyStory from "../MyStory/MyStory";
 import Paintings from "../Paintings/Paintings";
 import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
-import EncAndDialFullWidth from "../EncounterAndDialogue/EncAndDialFull";
-import EncAndDialDetails from "../EncounterAndDialogue/EncAndDialDetails";
+import EncAndDialFullWidth from "../EncounterAndDialoguePage/EncAndDialFull";
+import EncAndDialDetails from "../EncounterAndDialoguePage/EncAndDialDetails";
 
 const AllRoute = () => {
   return (

@@ -1,8 +1,10 @@
 <h4>Infinite Slumber</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 13 December 2009
+
 
 Let me begin by addressing our religious friends who persist in preaching the virtues of their tolerant faith—declaring its openness to all the straying souls who have wandered from God’s flock. If God is indeed so merciful and generous, then surely His followers must exhibit patience towards those who hesitate—those who seek the truth not through blind adherence, but through their own intellectual effort and introspection, rather than rushing into the comfortable complacency of a preordained faith. And if this strong and mighty God is capable of guiding whomever He wishes, would that not suggest that one of the expressions of His divine wisdom is to bring forth individuals who do not believe in Him at all? If so, then believers ought to refrain from preaching, fall into silence, and surrender to the will of their God—He who, presumably, best understands the mysterious workings of the unknown.
 

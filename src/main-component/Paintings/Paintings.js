@@ -184,7 +184,7 @@ const Paintings = () => {
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} Logo={Logo} />
       <PageTitle pageTitle={sections[currentPage]?.title} />
-      <div className="wpo-service-single-area section-padding">
+      <div className="wpo-service-single-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-12">

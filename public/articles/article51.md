@@ -1,8 +1,10 @@
 <h4>The Search for the Creator</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 16 June 2008
+
 
 This human machine awakens from a prolonged slumber, striving to retrieve its history and return to memories buried deep within for thousands of years. Yet it fails to grasp the imprints of its past—those inscribed within nature itself. Desperately, it turns to its stones, seeking to triumph over nature and assert itself as the pioneer. But it freezes each time it attempts to reach into the depths of its own self. Enraged, it unleashes its fury upon its own limbs, cursing the individual and surrendering to mythic fantasy. It declares wars between its parts, as each seeks to prove its superiority over the other.
 

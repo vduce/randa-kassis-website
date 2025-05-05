@@ -4,6 +4,8 @@ import Scrollbar from "../../components/scrollbar/scrollbar.js";
 import Footer from "../../components/footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
 import articles from "../../api/articles.json";
+import encounterAndDialogues from "../../api/encounterAndDialogue.json";
+import EdList from "../../components/EncounterAndDialogue/EdList.js";
 import ArticlesList from "../../components/Articles/ArticlesList.js";
 
 const EncAndDialFullWidth = () => {
@@ -11,10 +13,10 @@ const EncAndDialFullWidth = () => {
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} />
       <PageTitle pageTitle={""} pagesub={"Blog"} />
-      <ArticlesList
+      <EdList
         blLeft={"d-none"}
         blRight={"col-lg-10 offset-lg-1 col-12"}
-        services={articles.articles}
+        services={encounterAndDialogues.articles}
       />
       <Footer />
       <Scrollbar />

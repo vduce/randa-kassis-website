@@ -1,8 +1,10 @@
 <h4>The Flip Side of Religion</h4>
 
+
 Published in Al-Hiwar al-Mutamaddin
 <br>
 22 February 2010
+
 
 We often speak rashly of fables and myths, ridiculing their meaning and principles as relics of a bygone era. Yet what many fail to recognise is their omnipresence and their elusive, enduring influence. It is often difficult to grasp the extent to which they are embedded in our everyday practices and firmly held beliefs. This failure of recognition is, in part, due to the silent absorption of myths and fables into religion, where they have been preserved, nurtured, and reinvented as divine miracles.
 
