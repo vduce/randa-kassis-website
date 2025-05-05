@@ -1,4 +1,4 @@
-<h4>The American Mirage: Between the Illusion of Guardianship and the Naïvety of Dualism</h4>
+<h4>The American Mirage: Between the Illusion of Guardianship and the Naivety of Dualism</h4>
 
 
 Published in Al-Ahram Newspaper
