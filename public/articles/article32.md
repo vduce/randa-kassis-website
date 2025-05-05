@@ -41,5 +41,5 @@ Here, I find a meaningful parallel between de Vries’s conclusions and Ferenczi
 
 Sex, from this perspective, is far more than a physical act—it is a symbolic endeavour to reverse the foundational expulsion from the womb and to reconnect with the serenity and totality of pre-birth existence. Though such a return is forever barred, the human being remains driven to simulate it—through the body, through the unconscious, and through symbolic rituals of desire, separation, and the eternal longing for origin.
 
-<footer> </footer>
+<hr class="note-divider" />
 Note: The paragraph marked with an asterisk *—which addresses the idea of the female’s desire to possess the male organ as a symbolic substitute for returning to the womb—belongs to a specific tradition within Freudian psychoanalysis. It does not claim to offer a universal interpretation of femininity or gender, but rather reflects a symbolic reading shaped by particular cultural and theoretical contexts of its time.
