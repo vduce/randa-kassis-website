@@ -128,6 +128,14 @@ img {
     }
 }
 
+.section-padding-bottom {
+    padding: 10px 0;
+
+    @include media-query(767px) {
+        padding-bottom: 80px;
+    }
+}
+
 .pt-100 {
     padding-top: 100px;
 

@@ -1,47 +1,47 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import articles from "../../api/articles.json";
+import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
 };
 
-const ArticlesList = (props) => {
+const EdList = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
-  const [articleContents, setArticleContents] = useState([]);
+  const [edContents, setEdContents] = useState([]);
 
   // Fetch content from markdown files
   useEffect(() => {
-    const fetchArticles = async () => {
-      const fetchedArticles = await Promise.all(
-        articles.map(async (article) => {
+    const fetchEd = async () => {
+      const fetchedEd = await Promise.all(
+        encounterAndDialogues.map(async (ed) => {
           try {
-            const response = await fetch(`/articles/${article.filename}`);
+            const response = await fetch(`/encounters/${ed.filename}`);
             const content = await response.text();
-            return { ...article, content };
+            return { ...ed, content };
           } catch (error) {
-            console.error(`Error fetching ${article.filename}:`, error);
-            return { ...article, description: "Error loading content." };
+            console.error(`Error fetching ${ed.filename}:`, error);
+            return { ...ed, description: "Error loading content." };
           }
         })
       );
-      setArticleContents(fetchedArticles);
+      setEdContents(fetchedEd);
     };
 
-    fetchArticles();
+    fetchEd();
   }, []);
 
   // Calculate the posts to show on the current page
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentArticles = articleContents.slice(indexOfFirstPost, indexOfLastPost);
+  const currentEds = edContents.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // Calculate the range of page numbers to show in pagination
-  const totalPages = Math.ceil(articleContents.length / postsPerPage);
+  const totalPages = Math.ceil(edContents.length / postsPerPage);
   let pageNumbers = [];
 
   for (let i = 1; i <= totalPages; i++) {
@@ -91,7 +91,7 @@ const ArticlesList = (props) => {
         <div className="row">
           <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>
             <div className="wpo-blog-content">
-              {currentArticles.map((article, index) => (
+              {currentEds.map((currentEd, index) => (
                 <div
                   className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
                   key={index}
@@ -100,9 +100,9 @@ const ArticlesList = (props) => {
                     className="entry-details"
                     style={{ display: "flex", flexDirection: "column" }}
                   >
-                    <h5 dangerouslySetInnerHTML={{ __html: article.title }}></h5>
+                    <h5 dangerouslySetInnerHTML={{ __html: currentEd.title }}></h5>
                     <label style={{ fontSize: "14px", color: "#848892" }}>
-                      {article.publishedIn}{" "}
+                      {currentEd.publishedIn}{" "}
                     </label>
                     {/* <br /> */}
                     <label
@@ -112,20 +112,20 @@ const ArticlesList = (props) => {
                         marginBottom: "15px",
                       }}
                     >
-                      {article.publishedAt}{" "}
+                      {currentEd.publishedAt}{" "}
                     </label>
                     {/* <br /> */}
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: article.description.substring(0, 200),
+                          __html: currentEd.description.substring(0, 200),
                         }}
                       ></span>
-                      {article.description.length > 200 && "..."}
+                      {currentEd.description.length > 200 && "..."}
                     </p>
                     <Link
                       onClick={ClickHandler}
-                      to={`/article-single/${article.id}`}
+                      to={`/encounter-and-dialogue-single/${currentEd.id}`}
                       className="read-more"
                       style={{ fontSize: "15px" }}
                     >
@@ -186,4 +186,4 @@ const ArticlesList = (props) => {
   );
 };
 
-export default ArticlesList;
+export default EdList;

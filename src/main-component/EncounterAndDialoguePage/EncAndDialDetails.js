@@ -3,14 +3,14 @@ import PageTitle from "../../components/pagetitle/PageTitle.js";
 import Scrollbar from "../../components/scrollbar/scrollbar.js";
 import Footer from "../../components/footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
-import ArticleSingle from "../../components/Articles/ArticleSingle.js";
+import EdSingle from "../../components/EncounterAndDialogue/EdSingle.js";
 
 const EncAndDialDetails = () => {
   return (
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} />
-      <PageTitle pageTitle={""} pagesub={"Article"} />
-      <ArticleSingle />
+      <PageTitle pageTitle={""} pagesub={"Encounter And Dialogue"} />
+      <EdSingle />
       <Footer />
       <Scrollbar />
     </Fragment>
