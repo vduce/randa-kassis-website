@@ -154,9 +154,113 @@
   {
     "id": 20,
     "filename": "ed20.md",
-    "title": "Private Dinner in Paris: CPFA Hosts Donald Trump Jr. ",
+    "title": "Private Dinner in Paris: CPFA Hosts Donald Trump Jr.",
     "publishedIn": "CPFA, Paris",
     "publishedAt": "11 October 2016",
     "description": "The Centre for Political and Foreign Affairs (CPFA) organised a private dinner and seminar at the Ritz Hotel in Paris, with Donald Trump Jr. attending as the keynote guest. The event, held just weeks before the US presidential election,..."
+  },
+  {
+    "id": 21,
+    "filename": "ed21.md",
+    "title": "High-Level Dialogue in Paris: CPFA Hosts Roundtable with Abdullah Gül on Syria and Regional Challenges",
+    "publishedIn": "CPFA, Paris",
+    "publishedAt": "21 September 2016",
+    "description": "The Centre for Political and Foreign Affairs (CPFA) hosted a high-level roundtable in Paris, bringing together prominent political and intellectual figures for a confidential discussion on the future of Syria and broader Middle Eastern dynamics."
+  },
+  {
+    "id": 22,
+    "filename": "ed22.md",
+    "title": "Russian Deputy Foreign Minister Holds Talks with Syrian Opposition Representatives",
+    "publishedIn": "Russian Ministry of Foreign Affairs (MID), Moscow",
+    "publishedAt": "9 September 2016",
+    "description": "The Russian Foreign Ministry announced on Friday, that Mikhail Bogdanov, Deputy Foreign Minister and Special Presidential Envoy for the Middle East and North Africa, held a series of meetings in Moscow with representatives of the Syrian opposition."
+  },
+  {
+    "id": 23,
+    "filename": "ed23.md",
+    "title": "International Conference in Paris Addresses Nuclear Security and Syrian Crisis",
+    "publishedIn": "CPFA, Paris",
+    "publishedAt": "6 June 2016",
+    "description": "The Centre for Political and Foreign Affairs (CPFA) held a high-level conference in Paris on nuclear non-proliferation and global security, chaired by former UN Secretary-General and Nobel Peace Prize laureate Kofi Annan."
+  },
+  {
+    "id": 24,
+    "filename": "ed24.md",
+    "title": "The Roots and Causes of Islamic Violence: Secularism as the Solution",
+    "publishedIn": "ADHOC Organisation, Brussels",
+    "publishedAt": "22 May 2016",
+    "description": "The first conference of the ADHOC organisation was held in Brussels in May 2016, under the presidency of Randa Kassis, co-founder and president of the initiative. Bringing together a broad spectrum of Arab intellectuals, ..."
+  },
+  {
+    "id": 25,
+    "filename": "ed25.md",
+    "title": "Lavrov Meets Opposition Leaders",
+    "publishedIn": "Ritz-Carlton Hotel, Vienna",
+    "publishedAt": "16 May 2016",
+    "description": "Foreign Minister Sergey Lavrov met with several Syrian opposition leaders, including Randa Kassis, President of the Astana Platform; Khalid Issa, representative of the Kurdish Democratic Union Party; Qadri Jamil, representative of the Popular Front for Change; and Elian Masaad, coordinator of the internal Damascus Platform."
+  },
+  {
+    "id": 26,
+    "filename": "ed26.md",
+    "title": "Geneva Intra-Syrian Talks",
+    "publishedIn": "United Nations Office at Geneva",
+    "publishedAt": "13-27 April 2016 Third round",
+    "description": "Foreign Minister Sergey Lavrov met with several Syrian opposition leaders, including Randa Kassis, President of the Astana Platform; Khalid Issa, representative of the Kurdish Democratic Union Party; Qadri Jamil, representative of the Popular Front for Change; and Elian Masaad, coordinator of the internal Damascus Platform."
+  },
+  {
+    "id": 27,
+    "filename": "ed27.md",
+    "title": "Geneva Intra-Syrian Talks",
+    "publishedIn": "United Nations Office at Geneva",
+    "publishedAt": "14-24 March 2016 Second round",
+    "description": "The intra-Syrian negotiations, known as the Geneva III talks, commenced on 14 March 2016 in Geneva under the auspices of the United Nations and the facilitation of Special Envoy Staffan de Mistura."
+  },
+  {
+    "id": 28,
+    "filename": "ed28.md",
+    "title": "Meeting between Sergey Lavrov and Randa Kassis on Syria",
+    "publishedIn": "Ministry of Foreign Affairs of the Russian Federation (MID), Moscow",
+    "publishedAt": "10 March 2016",
+    "description": "Russian Foreign Minister Sergey Lavrov met with Randa Kassis, President of the Movement for a Pluralistic Society, in Moscow to discuss the Syrian peace process."
+  },
+  {
+    "id": 29,
+    "filename": "ed29.md",
+    "title": "Geneva Intra-Syrian Talks",
+    "publishedIn": "United Nations Office at Geneva",
+    "publishedAt": "29 January-5 February 2016 First Round",
+    "description": "The first round of the Geneva intra-Syrian talks opened on 29 January 2016 under the auspices of the United Nations and Special Envoy Staffan de Mistura, based on UN Security Council Resolution 2254 (2015)."
+  },
+  {
+    "id": 30,
+    "filename": "ed30.md",
+    "title": "The Failure of the Global War against Terrorism",
+    "publishedIn": "MEDays Forum, Tangier, Morocco",
+    "publishedAt": "14 November 2015",
+    "description": "Kassis contributed her analysis of the inadequacy of prevailing approaches to combating terrorism, particularly within the context of the Syrian conflict. She emphasised that military solutions alone were insufficient and highlighted the need for inclusive political strategies."
+  },
+  {
+    "id": 31,
+    "filename": "ed31.md",
+    "title": "Astana II Meeting on Syria",
+    "publishedIn": "Rixos Hotel, Astana",
+    "publishedAt": "2-4 October 2015",
+    "description": "The second Astana Conference on Syria, organised by the Centre of Political and Foreign Affairs (CPFA) in collaboration with the Kazakh authorities, built upon the earlier Kazakhstan Peace Talks initiated by Randa Kassis."
+  },
+  {
+    "id": 32,
+    "filename": "ed32.md",
+    "title": "Kazakhstan Peace Talks",
+    "publishedIn": "Presidential Palace, Senate and Rixos Hotel, Astana",
+    "publishedAt": "17-18 September 2015",
+    "description": "The Kazakhstan Peace Talks, organised by the Centre of Political and Foreign Affairs (CPFA) in cooperation with the Kazakh authorities, took place in September 2015 in Astana. This event was distinct from the later formal Astana II meeting."
+  },
+  {
+    "id": 33,
+    "filename": "ed33.md",
+    "title": "Geneva Consultations",
+    "publishedIn": "United Nations Office at Geneva",
+    "publishedAt": "13 May 2015",
+    "description": "The discussions focused on exploring various perspectives and initiatives to support the Syrian people in their pursuit of peace and in their efforts to realise their aspirations. They also addressed the deteriorating situation in Syria and the escalating humanitarian crisis across the country."
   }
 ]
