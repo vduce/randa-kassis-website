@@ -86,7 +86,7 @@ const ArticlesList = (props) => {
   };
 
   return (
-    <section className="wpo-blog-pg-section section-padding">
+    <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
         <div className="row">
           <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>

@@ -47,7 +47,7 @@ const ServiceSectionS2 = () => {
                   toggle("3");
                 }}
               >
-                Entcounters and Dialogues
+                Encounters and Dialogues
               </NavLink>
             </NavItem>
           </Nav>
