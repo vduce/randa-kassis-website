@@ -44,4 +44,4 @@ She taught me, too, how to transform pain into wisdom. She taught me… and yet,
 
 I am overwhelmed by conflicting thoughts, so very like this city herself—reflected in the personality of each one of her inhabitants. She is the dazzling beauty in the eyes of the naïve, and the decadent ruin in the eyes of those who cannot see her for who she is. To some, she is a charming thief of fleeting virtues. As for me—I see her as I see myself. She is change. She is the embodiment of change. She contains every expression—beauty and ugliness, shallowness and depth—all at once. She is the sighs and cries of agony from her lovers and her torturers. She is the eternal and ever-changing beloved—forever on the run from the chains of her own captor.
 
-To read: [Paris and What it Means to Me — Part 1](article36.md)
+To read: [Paris and What it Means to Me - Part 1](article36.md)

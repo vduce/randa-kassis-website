@@ -12,7 +12,7 @@ The meeting focused on regional stability, the role of religious leadership in f
 
 Both sides underlined the need for sustained engagement based on mutual respect, and for protecting religious and cultural diversity in the face of mounting regional challenges.
 
-![](1.JPG)
+![](1.jpg)
 ![](2.JPG)
-
+<p></p>
 

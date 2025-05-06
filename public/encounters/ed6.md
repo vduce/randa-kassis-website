@@ -17,7 +17,8 @@ The roadmap, resulting from this collaborative initiative, was intended to be pr
 ![](12.JPG)
 ![](13.JPG)
 ![](14.JPG)
-![](15.JPG)
+![](15.jpeg)
 ![](16.JPG)
+<p></p>
 
 PDF 17

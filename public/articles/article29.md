@@ -32,4 +32,4 @@ This is particularly evident in Christianity, where the mother is symbolically r
 
 So God represents an act of sublimation of a masculinity built on the complex of guilt born out of a forbidden sexual relation between mother and son, while the invention of demons and monsters reflects the original condition of the child’s pure sexual drives according to the analysis of experts in psychological anthropology. This in turn has been proved by many psychoanalysts through various clinical analyses carried out on different children, best summed up in the child’s desire to penetrate the mother’s body which also results in psychological anxiety. This condition which affects the child pushes him to seek refuge in imagination and fantasies which invent stories of goblins, demons and monsters.
 
-To read: [Religion… and the Projection of Infantile Instincts—Part I](article28.md)
+To read: [Religion… and the Projection of Infantile Instincts - Part I](article28.md)

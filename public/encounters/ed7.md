@@ -13,3 +13,4 @@ Randa Kassis, President of the Astana Platform, met in Geneva with senior member
 The discussions centred on the formation of the Syrian Constitutional Committee and the broader framework for advancing a political resolution to the conflict. Kassis reaffirmed the Astana Platform’s commitment to supporting a pragmatic and inclusive process grounded in international cooperation and national reconciliation.
 
 ![](18.JPG)
+<p></p>

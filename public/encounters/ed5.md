@@ -15,6 +15,7 @@ The event was honoured by the presence of General Sir Mark Carleton-Smith, forme
 The meeting provided a platform for strategic dialogue on the risks of legitimising a regime widely condemned for human rights violations, while also addressing the potential repercussions for international security and the principles underpinning a just political resolution in Syria.
 
 ![](9.JPG)
-![](10.JPG)
-![](11.JPG)
+![](10.jpg)
+![](11.jpg)
+<p></p>
 
