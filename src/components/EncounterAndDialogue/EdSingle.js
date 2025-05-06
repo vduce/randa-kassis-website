@@ -47,7 +47,7 @@ const EdSingle = () => {
           src={`/encounters/photos/${img.src}`}
           alt={img.alt}
           className="w-full h-auto rounded-lg shadow-lg"
-          style={{ width: "350px", height: "400px" }}
+          style={{ width: "250px", height: "300px" }}
         />
         {img.alt && <figcaption className="text-sm text-gray-500 mt-2">{img.alt}</figcaption>}
       </figure>
