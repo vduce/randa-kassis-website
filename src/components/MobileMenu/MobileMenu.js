@@ -25,7 +25,7 @@ const menus = [
   {
     id: 4,
     title: "Encounters & dialogues",
-    link: "/404",
+    link: "/encounter-and-dialogue",
   },
   {
     id: 5,

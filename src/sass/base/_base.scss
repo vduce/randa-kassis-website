@@ -322,3 +322,32 @@ img {
     border-top: 1px solid #333333;
     margin: 20px 0;
 }
+
+.pdf-fullscreen {
+    z-index: 1001 !important;
+}
+
+body.pdf-open {
+    overflow: hidden;
+}
+
+body.pdf-open .navbar {
+    display: none;
+}
+
+.pdf-grid {
+    margin: 2rem 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.pdf-pages-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pdf-page {
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
