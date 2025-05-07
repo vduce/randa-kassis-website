@@ -1,7 +1,5 @@
 <h4>Randa Kassis Presents Syrian Opposition Roadmap at Sant’Egidio</h4>
-
 Sant’Egidio, Rome  
-<br>
 26-29 October 2018
 Second round
 
