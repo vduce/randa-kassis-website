@@ -1,5 +1,5 @@
 <h4>Randa Kassis and CPFA Delegation Meet Druze Spiritual Leader Sheikh Mouafaq Tarif</h4>  
-London  
+London</br>
 21 March 2025  
 
 <h4>Summary:</h4>
