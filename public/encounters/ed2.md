@@ -1,7 +1,6 @@
 <h4>Randa Kassis and Fabien Baussart Meet Iraqi Leaders to Discuss Regional Security and Strategies to Counter Jihadist Threats</h4>
 
-Bagdad, Iraq 
-<br>
+Bagdad, Iraq <br>
 13-15 February 2025
 
 <h4>Summary:</h4>
