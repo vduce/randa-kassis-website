@@ -1,10 +1,7 @@
 <h4>Randa Kassis Discusses Syrian Constitutional Process with Russian Delegation in Geneva</h4>
 
-
-Russia’s Permanent Mission to the UN in Geneva
-<br>
+Russia’s Permanent Mission to the UN in Geneva<br>
 9 October 2018
-
 
 <h4>Summary:</h4>
 
