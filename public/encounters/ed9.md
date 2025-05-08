@@ -1,10 +1,7 @@
 <h4>Randa Kassis Holds Talks with Russian Delegation in Geneva on Advancing the Syrian Political Process</h4>
 
-
-Russia’s Permanent Mission to the UN in Geneva  
-<br>
+Russia’s Permanent Mission to the UN in Geneva<br>
 18 June 2018
-
 
 <h4>Summary:</h4>
 
