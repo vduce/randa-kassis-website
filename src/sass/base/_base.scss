@@ -339,6 +339,10 @@ body.pdf-open .navbar {
     margin: 2rem 0;
     align-items: center;
     justify-items: center;
+
+    @include media-query(767px) {
+        margin: 1rem 0;
+    }
 }
 
 .pdf-pages-container {

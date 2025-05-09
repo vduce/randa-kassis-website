@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -18,11 +18,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 const EdSingle = () => {
   const { id } = useParams(); // Get the encounter and dialogue ID from the URL
   const navigate = useNavigate();
+  const { state } = useLocation();
   const [encounterAndDialogue, setEncounterAndDialogue] = useState(null);
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
   // const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
+  console.log(state); // Debug
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -181,6 +184,17 @@ const EdSingle = () => {
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
       <div className="container">
+        <div className="row mb-2">
+          <div className={`col col-lg-2 col-2`}>
+            <Link
+              to="/encounter-and-dialogue"
+              state={{ pageNum: state.pageNumber }}
+              className="theme-btn"
+            >
+              Back
+            </Link>
+          </div>
+        </div>
         <div className="row">
           <div className={`col col-lg-12 col-12`}>
             <div className="wpo-blog-content">
