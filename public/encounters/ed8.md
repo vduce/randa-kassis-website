@@ -1,7 +1,9 @@
 <h4>Randa Kassis Launches First Round of Collaborative Dialogue with Sant’Egidio</h4>
 
 Sant’Egidio, Rome<br>
-5-6 September 2018<br>                                                                                                                           First Round
+5-6 September 2018           
+First Round
+
 
 <h4>Summary:</h4>
 

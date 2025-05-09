@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 
-const ClickHandler = () => {
-  window.scrollTo(10, 0);
-};
-
 const EdList = (props) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const { state } = useLocation();
+  const [currentPage, setCurrentPage] = useState(state?.pageNum || 1);
   const postsPerPage = 10;
   const [edContents, setEdContents] = useState([]);
 
@@ -85,6 +82,10 @@ const EdList = (props) => {
     borderColor: "#ff8024",
   };
 
+  const ClickHandler = () => {
+    window.scrollTo(10, 0);
+  };
+
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
@@ -126,6 +127,7 @@ const EdList = (props) => {
                     <Link
                       onClick={ClickHandler}
                       to={`/encounter-and-dialogue-single/${currentEd.id}`}
+                      state={{ pageNumber: currentPage }}
                       className="read-more"
                       style={{ fontSize: "15px" }}
                     >
