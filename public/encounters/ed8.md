@@ -1,11 +1,10 @@
 <h4>Randa Kassis Launches First Round of Collaborative Dialogue with Sant’Egidio</h4>
 
 Sant’Egidio, Rome<br>
-5-6 September 2018           
+5-6 September 2018<br>           
 First Round
 
-
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 Randa Kassis, President of the Astana Platform, initiated the first round of a collaborative dialogue with the Community of Sant’Egidio in Rome. The meeting brought together a diverse group of Syrian opposition figures, religious leaders, and international experts to examine potential pathways towards a political resolution to the Syrian conflict.
 
