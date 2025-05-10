@@ -1,9 +1,9 @@
 <h4>Patriarch of Antioch Meets with a delegation of the CPFA and President of the Astana Platform in Paris</h4>
 
-Mariamite Cathedral, Damascus <br>
+Mariamite Cathedral, Damascus<br>
 10 January 2025
 
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 The Patriarch of Antioch, John X, held a significant meeting with a delegation of CPFA headed byFabien Baussart, and Randa Kassis, President of the Astana Platform.
 
