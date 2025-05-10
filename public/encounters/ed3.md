@@ -1,9 +1,9 @@
 <h4>Randa Kassis and Fabien Baussart Meet Druze Spiritual Leader</h4>
 
-Qanawat, Syria <br>
+Qanawat, Syria<br>
 18 January 2025
 
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 Randa Kassis, President of the Astana Platform and the Movement for a Pluralistic Society, together with Fabien Baussart, President of the Centre for Political and Foreign Affairs (CPFA), met with His Eminence Sheikh Hikmat al-Hijri, the spiritual leader of the Druze community, at his residence in the town of Qanawat.
 
