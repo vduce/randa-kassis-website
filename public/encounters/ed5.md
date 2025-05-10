@@ -3,7 +3,7 @@
 CPFA, London<br>
 26 June 2023 
 
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 As the Middle East undergoes a shifting regional realignment, certain states are considering the normalisation of relations with Syria—a country still engulfed in civil war and facing an escalating Captagon crisis. In this context, the Centre for Political and Foreign Affairs (CPFA) convened a high-level meeting to voice opposition to any normalisation with the Assad regime and to assess the broader geopolitical implications such moves could have for regional stability and European security.
 
