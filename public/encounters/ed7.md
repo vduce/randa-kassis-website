@@ -3,7 +3,7 @@
 Russia’s Permanent Mission to the UN in Geneva<br>
 9 October 2018
 
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 Randa Kassis, President of the Astana Platform, met in Geneva with senior members of the Russian delegation, including Alexander Lavrentiev, Special Envoy of President Vladimir Putin for Syria, and Deputy Foreign Minister Sergey Vershinin. Also present were General S. Afanasiev; Mario Giro, former Italian Deputy Foreign Minister and representative of the Community of Sant’Egidio; and Fabien Baussart, President of the Centre for Political and Foreign Affairs (CPFA).
 
