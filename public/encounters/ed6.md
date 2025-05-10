@@ -1,10 +1,10 @@
 <h4>Randa Kassis Presents Syrian Opposition Roadmap at Sant’Egidio</h4>
 
-Sant’Egidio, Rome <br>
-26-29 October 2018 <br>
+Sant’Egidio, Rome<br>
+26-29 October 2018<br>
 Second round
 
-<h4>Summary:</h4>
+<b>Summary:</b>
 
 Randa Kassis, President of the Astana Platform, participated in the second round of dialogue co-organised with the Community of Sant’Egidio in Rome. This meeting brought together 15 delegates representing various Syrian opposition groups and minority communities, with the aim of advancing a political solution to the Syrian conflict.
 
