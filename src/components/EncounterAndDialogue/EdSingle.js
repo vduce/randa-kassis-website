@@ -15,6 +15,25 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
+function PdfThumbnail({ file, onClick }) {
+  const [numPages, setNumPages] = useState(null);
+
+  return (
+    <div
+      className="pdf-preview pdf-grid"
+      style={{ width: 250, height: 300, cursor: "pointer" }}
+      onClick={onClick}
+    >
+      <Document
+        file={`/encounters/pdfs/${file}`}
+        onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+      >
+        <Page pageNumber={1} width={250} />
+      </Document>
+    </div>
+  );
+}
+
 const EdSingle = () => {
   const { id } = useParams(); // Get the encounter and dialogue ID from the URL
   const navigate = useNavigate();
@@ -23,9 +42,6 @@ const EdSingle = () => {
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
-  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
-
-  console.log(state); // Debug
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,79 +76,79 @@ const EdSingle = () => {
     }
   }, [pdfToShow]);
 
-  let imageBuffer = [];
-  const flushImages = () => {
-    if (imageBuffer.length === 0) return null;
+  let mediaBuffer = [];
 
-    const images = imageBuffer.map((img, index) => (
-      <figure key={index} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
-        <img
-          src={`/encounters/photos/${img.src}`}
-          alt={img.alt}
-          className="w-full rounded-lg shadow-lg"
-          style={{ width: "250px", height: "300px", objectFit: "cover" }}
-        />
-        {img.alt && <figcaption className="text-sm text-gray-500 mt-2">{img.alt}</figcaption>}
-      </figure>
-    ));
-    imageBuffer = [];
+  const flushMedia = () => {
+    if (mediaBuffer.length === 0) return null;
+
+    const nodes = mediaBuffer;
+    mediaBuffer = [];
+
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">{images}</div>
+      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
+        {nodes.map((node, i) => (
+          <React.Fragment key={i}>{node}</React.Fragment>
+        ))}
+      </div>
     );
   };
 
-  let pdfBuffer = [];
-
-  const flushPDFs = () => {
-    if (pdfBuffer.length === 0) return null;
-
-    const pdfs = pdfBuffer.map((pdf, index) => (
-      <div
-        key={index}
-        className="pdf-preview"
-        style={{ width: "250px", height: "300px", cursor: "pointer" }}
-        onClick={() => setPdfToShow(pdf.data)}
-      >
-        <Document
-          file={`/encounters/pdfs/${pdf.data}`}
-          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        >
-          <Page pageNumber={1} width={250} />
-        </Document>
-      </div>
-    ));
-
-    return <div className="pdf-grid">{pdfs}</div>;
-  };
-
   const components = {
-    img: ({ src, alt, ...props }) => {
-      // console.log("Processing image:", { src, alt, props }); // Debug
-      if (src && src.endsWith(".pdf")) {
-        console.log("Processing PDF:", { src, alt, props }); // Debug
-        pdfBuffer.push({ data: src });
+    img: ({ src, alt }) => {
+      if (src?.endsWith(".pdf")) {
+        // wrap PdfThumbnail in exactly the same figure classes:
+        mediaBuffer.push(
+          <PdfThumbnail
+            key={src}
+            file={src}
+            onClick={() => {
+              setPdfToShow(src);
+              setNumPages(null);
+            }}
+            className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
+            style={{ width: 250, height: 300 }}
+          />
+        );
         return null;
       }
-      imageBuffer.push({ src, alt });
+
+      // a normal image:
+      mediaBuffer.push(
+        <figure className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
+          <img
+            src={`/encounters/photos/${src}`}
+            alt={alt}
+            className="w-full rounded-lg shadow-lg object-cover"
+            style={{ width: 250, height: 300 }}
+          />
+          {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
+        </figure>
+      );
       return null;
     },
+
     p: ({ children }) => {
-      const flushImagesResult = flushImages();
-      const flushPDFsResult = flushPDFs();
+      // flush *all* media (imgs + pdfs) at once
+      const media = flushMedia();
+
+      // check if there's any real text in this paragraph:
       const hasText = React.Children.toArray(children).some(
-        (child) => typeof child === "string" || (child?.type && child.type !== "img")
+        (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
       );
+
       if (hasText) {
         return (
           <>
-            {flushImagesResult}
-            {flushPDFsResult}
+            {media}
             <p className="mb-4">{children}</p>
           </>
         );
       }
-      return flushImagesResult || flushPDFsResult || null; // Flush images for empty paragraphs
+
+      // no real text? just spit out the media container
+      return media;
     },
+
     a: ({ href, children }) => {
       if (href.endsWith(".md")) {
         const edId = href.replace("ed", "").replace(".md", "");
@@ -154,8 +170,7 @@ const EdSingle = () => {
   };
 
   const renderMarkdown = (content) => {
-    imageBuffer = [];
-    pdfBuffer = [];
+    mediaBuffer = [];
     const rendered = (
       <Markdown
         rehypePlugins={[rehypeRaw]}
@@ -165,14 +180,11 @@ const EdSingle = () => {
         {content}
       </Markdown>
     );
-    // console.log("pdf buffer before flush:", pdfBuffer);
-    const flushedImages = flushImages();
-    const flushedPDFs = flushPDFs();
+    const flushedMedia = flushMedia();
     return (
       <>
         {rendered}
-        {flushedImages}
-        {flushedPDFs}
+        {flushedMedia}
       </>
     );
   };
@@ -188,10 +200,10 @@ const EdSingle = () => {
           <div className={`col col-lg-2 col-2`}>
             <Link
               to="/encounter-and-dialogue"
-              state={{ pageNum: state.pageNumber }}
-              className="theme-btn"
+              state={{ pageNum: state?.pageNumber || 1 }}
+              className="btn btn-area"
             >
-              Back
+              Previous
             </Link>
           </div>
         </div>
@@ -233,13 +245,8 @@ const EdSingle = () => {
             onLoadSuccess={({ numPages }) => setNumPages(numPages)}
           >
             <div className="pdf-pages-container">
-              {Array.from(new Array(numPages), (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  width={800}
-                  className="pdf-page"
-                />
+              {Array.from({ length: numPages || 0 }, (_, i) => (
+                <Page key={i} pageNumber={i + 1} width={800} className="pdf-page" />
               ))}
             </div>
           </Document>

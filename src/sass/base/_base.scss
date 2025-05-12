@@ -335,16 +335,6 @@ body.pdf-open .navbar {
     display: none;
 }
 
-.pdf-grid {
-    margin: 2rem 0;
-    align-items: center;
-    justify-items: center;
-
-    @include media-query(767px) {
-        margin: 1rem 0;
-    }
-}
-
 .pdf-pages-container {
     max-width: 800px;
     margin: 0 auto;
@@ -354,4 +344,32 @@ body.pdf-open .navbar {
 .pdf-page {
     margin-bottom: 2rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+
+    @include media-query(767px) {
+        margin: 1rem 0;
+    }
+}
+
+.pdf-page-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.pdf-page-controls button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 0 0.5rem;
 }
