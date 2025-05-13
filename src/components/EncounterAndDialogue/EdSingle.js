@@ -15,22 +15,43 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-function PdfThumbnail({ file, onClick }) {
+function PdfThumbnail({ file, fileName, onClick }) {
+  console.log(file);
   const [numPages, setNumPages] = useState(null);
+  const [fileSize, setFileSize] = useState(null);
+
+  useEffect(() => {
+    const computeFileSize = async () => {
+      try {
+        const response = await fetch(`/encounters/pdfs/${file}`);
+        const blob = await response.blob();
+        const sizeInBytes = blob.size;
+        const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
+        setFileSize(`${sizeInMB.toFixed(2)} MB`);
+      } catch (error) {
+        console.error("Error fetching file size:", error);
+        setFileSize("Unknown size");
+      }
+    };
+    computeFileSize();
+  }, [file]);
 
   return (
-    <div
-      className="pdf-preview pdf-grid"
-      style={{ width: 250, height: 300, cursor: "pointer" }}
-      onClick={onClick}
-    >
-      <Document
-        file={`/encounters/pdfs/${file}`}
-        onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-      >
-        <Page pageNumber={1} width={250} />
-      </Document>
-    </div>
+    <figure className="pdf-thumbnail">
+      <div className="pdf-preview" onClick={onClick}>
+        <Document
+          file={`/encounters/pdfs/${file}`}
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        >
+          <Page pageNumber={1} width={250} />
+        </Document>
+      </div>
+
+      {/* filename and filesize below the thumb */}
+      <figcaption className="pdf-info">
+        PDF &middot; {fileSize ? fileSize : "Loading..."}
+      </figcaption>
+    </figure>
   );
 }
 
@@ -38,6 +59,8 @@ const EdSingle = () => {
   const { id } = useParams(); // Get the encounter and dialogue ID from the URL
   const navigate = useNavigate();
   const { state } = useLocation();
+  const [currentElement, setCurrentElement] = useState(state?.currentElement || 1);
+  const [pageNumber, setPageNumber] = useState(state?.pageNumber || 1);
   const [encounterAndDialogue, setEncounterAndDialogue] = useState(null);
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
@@ -76,6 +99,15 @@ const EdSingle = () => {
     }
   }, [pdfToShow]);
 
+  // calculate page number based on currentElement
+  useEffect(() => {
+    const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
+    if (index !== -1) {
+      const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
+      setPageNumber(pageNum);
+    }
+  }, [currentElement]);
+
   let mediaBuffer = [];
 
   const flushMedia = () => {
@@ -101,6 +133,7 @@ const EdSingle = () => {
           <PdfThumbnail
             key={src}
             file={src}
+            filename={src}
             onClick={() => {
               setPdfToShow(src);
               setNumPages(null);
@@ -193,6 +226,24 @@ const EdSingle = () => {
     return <p>Encounter and dialogue not found.</p>;
   }
 
+  const handlePrevious = () => {
+    if (currentElement > 1) {
+      setCurrentElement(currentElement - 1);
+      navigate(`/encounter-and-dialogue-single/${currentElement - 1}`, {
+        state: { pageNumber, currentElement: currentElement - 1 },
+      });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentElement < encounterAndDialogues.length - 1) {
+      setCurrentElement(currentElement + 1);
+      navigate(`/encounter-and-dialogue-single/${currentElement + 1}`, {
+        state: { pageNumber, currentElement: currentElement + 1 },
+      });
+    }
+  };
+
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
       <div className="container">
@@ -200,10 +251,10 @@ const EdSingle = () => {
           <div className={`col col-lg-2 col-2`}>
             <Link
               to="/encounter-and-dialogue"
-              state={{ pageNum: state?.pageNumber || 1 }}
+              state={{ pageNum: pageNumber, currentElement }}
               className="btn btn-area"
             >
-              Previous
+              Back
             </Link>
           </div>
         </div>
@@ -215,6 +266,30 @@ const EdSingle = () => {
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                       <div className="max-w-2xl mx-auto p-3">{renderMarkdown(content || "")}</div>
+                      <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                        <button
+                          onClick={handlePrevious}
+                          disabled={currentElement === 1}
+                          className={`btn btn-area ${
+                            currentElement === 1
+                              ? "bg-gray-300 cursor-not-allowed"
+                              : "bg-blue-500 hover:bg-blue-600"
+                          }`}
+                        >
+                          Previous
+                        </button>
+                        <button
+                          onClick={handleNext}
+                          disabled={currentElement === encounterAndDialogues.length}
+                          className={`btn btn-area ${
+                            currentElement === encounterAndDialogues.length
+                              ? "bg-gray-300 cursor-not-allowed"
+                              : "bg-blue-500 hover:bg-blue-600"
+                          }`}
+                        >
+                          {currentElement === encounterAndDialogues.length ? "Completed" : "Next"}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
