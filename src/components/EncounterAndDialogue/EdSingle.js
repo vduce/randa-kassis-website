@@ -118,7 +118,6 @@ const EdSingle = () => {
       document.body.classList.remove("pdf-open");
     }
   }, [pdfToShow, setPdfToShow]);
-  
 
   // calculate page number based on currentElement
   useEffect(() => {
@@ -346,6 +345,13 @@ const EdSingle = () => {
             file={`/encounters/pdfs/${pdfToShow}`}
             onLoadSuccess={({ numPages }) => setNumPages(numPages)}
           >
+            <style>
+              {`
+                .react-pdf__Page__canvas {
+                  height: auto !important;
+                }
+              `}
+            </style>
             <div className="pdf-pages-container">
               {Array.from({ length: numPages || 0 }, (_, i) => (
                 <Page
