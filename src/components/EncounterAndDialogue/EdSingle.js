@@ -16,7 +16,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function PdfThumbnail({ file, fileName, onClick }) {
-  console.log(file);
   const [numPages, setNumPages] = useState(null);
   const [fileSize, setFileSize] = useState(null);
 
