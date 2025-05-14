@@ -58,7 +58,7 @@ const EdSingle = () => {
   const { id } = useParams(); // Get the encounter and dialogue ID from the URL
   const navigate = useNavigate();
   const { state } = useLocation();
-  const [currentElement, setCurrentElement] = useState(state?.currentElement || 1);
+  const [currentElement, setCurrentElement] = useState(Number(id) || 1);
   const [pageNumber, setPageNumber] = useState(state?.pageNumber || 1);
   const [encounterAndDialogue, setEncounterAndDialogue] = useState(null);
   const [content, setContent] = useState("");
@@ -91,12 +91,34 @@ const EdSingle = () => {
   }, [id]);
 
   useEffect(() => {
+    // Manage body class
     if (pdfToShow) {
       document.body.classList.add("pdf-open");
+
+      // Push a new state to the browser history
+      window.history.pushState({ pdfOpen: true }, "");
+
+      // Handler for back/forward navigation
+      const handlePopState = (event) => {
+        if (pdfToShow) {
+          setPdfToShow(null);
+          // Prevent further navigation by pushing state again
+          window.history.pushState({ pdfOpen: true }, "");
+        }
+      };
+
+      window.addEventListener("popstate", handlePopState);
+
+      // Cleanup function
+      return () => {
+        document.body.classList.remove("pdf-open");
+        window.removeEventListener("popstate", handlePopState);
+      };
     } else {
       document.body.classList.remove("pdf-open");
     }
-  }, [pdfToShow]);
+  }, [pdfToShow, setPdfToShow]);
+  
 
   // calculate page number based on currentElement
   useEffect(() => {
@@ -138,7 +160,7 @@ const EdSingle = () => {
               setNumPages(null);
             }}
             className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
-            style={{ width: 250, height: 300 }}
+            style={{ width: 250, height: 250 }}
           />
         );
         return null;
@@ -151,7 +173,7 @@ const EdSingle = () => {
             src={`/encounters/photos/${src}`}
             alt={alt}
             className="w-full rounded-lg shadow-lg object-cover"
-            style={{ width: 250, height: 300 }}
+            style={{ width: 250, height: 310 }}
           />
           {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
         </figure>
@@ -243,6 +265,12 @@ const EdSingle = () => {
     }
   };
 
+  const calculatePageWidth = () => {
+    const screenWidth = window.innerWidth;
+    const isMobile = screenWidth <= 768;
+    return isMobile ? screenWidth : 800;
+  };
+
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
       <div className="container">
@@ -310,8 +338,8 @@ const EdSingle = () => {
             backgroundColor: "rgba(0, 0, 0, 0.9)",
             display: "flex",
             flexDirection: "column",
-            zIndex: 1001, // Higher than navbar
             overflowY: "auto",
+            zIndex: 1001, // Higher than navbar
           }}
         >
           <Document
@@ -320,7 +348,12 @@ const EdSingle = () => {
           >
             <div className="pdf-pages-container">
               {Array.from({ length: numPages || 0 }, (_, i) => (
-                <Page key={i} pageNumber={i + 1} width={800} className="pdf-page" />
+                <Page
+                  key={i}
+                  pageNumber={i + 1}
+                  width={calculatePageWidth()}
+                  className="pdf-page"
+                />
               ))}
             </div>
           </Document>
