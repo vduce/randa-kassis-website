@@ -127,7 +127,7 @@ const EdList = (props) => {
                     <Link
                       onClick={ClickHandler}
                       to={`/encounter-and-dialogue-single/${currentEd.id}`}
-                      state={{ pageNumber: currentPage, currentElement: currentEd.id }}
+                      state={{ pageNumber: currentPage }}
                       className="read-more"
                       style={{ fontSize: "15px" }}
                     >
