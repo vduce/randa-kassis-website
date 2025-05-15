@@ -58,7 +58,7 @@ const ArticleSingle = () => {
       setCurrentArticle(currentArticle - 1);
       navigate(`/article-single/${currentArticle - 1}`, {
         state: { pageNumber, currentArticle: currentArticle - 1 },
-      });
+      }); 
     }
   };
 
