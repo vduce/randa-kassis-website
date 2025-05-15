@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import articles from "../../api/articles.json";
 
 const ClickHandler = () => {
@@ -7,7 +7,8 @@ const ClickHandler = () => {
 };
 
 const ArticlesList = (props) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const { state } = useLocation();
+ const [currentPage, setCurrentPage] = useState(state?.pageNumber || 1);
   const postsPerPage = 10;
   const [articleContents, setArticleContents] = useState([]);
 

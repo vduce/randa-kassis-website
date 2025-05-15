@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -8,14 +8,15 @@ import articles from "../../api/articles.json";
 
 const ArticleSingle = () => {
   const { id } = useParams(); // Get the article ID from the URL
+  const [currentArticle, setCurrentArticle] = useState(Number(id) || 1);
+  const [pageNumber, setPageNumber] = useState(null);
   const navigate = useNavigate();
   const [article, setArticle] = useState(null); // State to store the article
   const [content, setContent] = useState(""); // State to store the article content
 
   useEffect(() => {
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     // Find the article by ID
@@ -39,13 +40,47 @@ const ArticleSingle = () => {
     }
   }, [id]);
 
+  // calculate page number based on currentArticle
+  useEffect(() => {
+    const index = articles.findIndex((item) => item.id === currentArticle);
+    if (index !== -1) {
+      const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
+      setPageNumber(pageNum);
+    }
+  }, [currentArticle]);
+
   if (!article) {
     return <p>Article not found.</p>;
   }
 
+  const handlePrevious = () => {
+    if (currentArticle > 1) {
+      setCurrentArticle(currentArticle - 1);
+      navigate(`/article-single/${currentArticle - 1}`, {
+        state: { pageNumber, currentArticle: currentArticle - 1 },
+      });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentArticle < articles.length - 1) {
+      setCurrentArticle(currentArticle + 1);
+      navigate(`/article-single/${currentArticle + 1}`, {
+        state: { pageNumber, currentArticle: currentArticle + 1 },
+      });
+    }
+  };
+
   return (
-    <section className="wpo-blog-single-section">
+    <section className="wpo-blog-single-section section-padding-bottom">
       <div className="container">
+        <div className="row mb-4">
+          <div className={`col col-lg-2 col-2`}>
+            <Link to="/articles" state={{ pageNumber }} className="btn btn-area">
+              Back
+            </Link>
+          </div>
+        </div>
         <div className="row">
           <div className={`col col-lg-12 col-12`}>
             <div className="wpo-blog-content">
@@ -81,6 +116,30 @@ const ArticleSingle = () => {
                     >
                       {content}
                     </Markdown>
+                  </div>
+                  <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                    <button
+                      onClick={handlePrevious}
+                      disabled={currentArticle === 1}
+                      className={`btn btn-area ${
+                        currentArticle === 1
+                          ? "bg-gray-300 cursor-not-allowed"
+                          : "bg-blue-500 hover:bg-blue-600"
+                      }`}
+                    >
+                      Previous
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      disabled={currentArticle === articles.length}
+                      className={`btn btn-area ${
+                        currentArticle === articles.length
+                          ? "bg-gray-300 cursor-not-allowed"
+                          : "bg-blue-500 hover:bg-blue-600"
+                      }`}
+                    >
+                      {currentArticle === articles.length ? "Completed" : "Next"}
+                    </button>
                   </div>
                 </div>
               </div>
