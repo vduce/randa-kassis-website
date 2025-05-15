@@ -24,23 +24,17 @@ const About2 = (props) => {
                   <span className="notranslate">Consilium & Vision</span>
                 </div>
                 <p>
-                  My political beliefs have been shaped by a lifetime of intellectual rebellion,
-                  activism, and a deep engagement with history, philosophy, and the realities of
-                  power. I reject all forms of ideological rigidity, recognising that dogma—no
-                  matter its source—inevitably leads to oppression.{" "}
+                  My political beliefs have been shaped by a lifetime of intellectual rebellion, activism, and deep engagement with history, philosophy, and the realities of power. I reject all forms of ideological rigidity, recognising that dogma regardless of its origin inevitably leads to oppression.
                 </p>
                 <p>
                   At my core, I believe in the primacy of individual freedom over collective
-                  identity. I have dedicated my life to challenging the dogmas that shape the Arab
-                  world, advocating for a state that protects personal freedoms rather than imposing
-                  outdated moral codes.{" "}
+                  identity. I have devoted my life to challenging the dogmas that shape the Arab world, advocating for a state that protects personal freedoms rather than enforcing outdated moral codes.
                 </p>
                 <p>
-                  Yet, I am not naive about politics. The pursuit of a utopian system is futile;
+                  Yet I am not naïve about politics. The pursuit of a utopian system is futile;
                   history has shown that every ideological promise of salvation ends in
-                  disillusionment. Instead, I believe in pragmatism—seeking solutions that work,
-                  adapting to realities without sacrificing core principles. Politics, like life, is
-                  fluid, and those who fail to adapt are doomed to irrelevance
+                  disillusionment. I believe instead in pragmatism seeking solutions that work,
+                  adapting to realities without abandoning fundamental principles. Politics, like life, is fluid, and those who fail to adapt are doomed to irrelevance.
                 </p>
                 <Link className="more" to={`/blog/political-beliefs`}>
                   Continue Reading

@@ -58,7 +58,7 @@ const ArticleSingle = () => {
       setCurrentArticle(currentArticle - 1);
       navigate(`/article-single/${currentArticle - 1}`, {
         state: { pageNumber, currentArticle: currentArticle - 1 },
-      }); 
+      });
     }
   };
 
@@ -87,59 +87,63 @@ const ArticleSingle = () => {
               <div className="post format-standard-image">
                 <div className="post2">
                   <div className="max-w-2xl mx-auto mb-3">
-                    <Markdown
-                      rehypePlugins={[rehypeRaw]}
-                      remarkPlugins={[remarkGfm]} // Enable GFM support
-                      components={{
-                        a: ({ href, children }) => {
-                          // Check if the link is a Markdown file
-                          if (href.endsWith(".md")) {
-                            // Extract the article ID from the filename
-                            const articleId = href.replace("article", "").replace(".md", "");
-                            return (
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  navigate(`/article-single/${articleId}`);
-                                  window.scrollTo(0, 0);
-                                }}
-                              >
-                                {children}
-                              </a>
-                            );
-                          }
-                          // Default behavior for other links
-                          return <a href={href}>{children}</a>;
-                        },
-                      }}
-                    >
-                      {content}
-                    </Markdown>
-                  </div>
-                  <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
-                    <button
-                      onClick={handlePrevious}
-                      disabled={currentArticle === 1}
-                      className={`btn btn-area ${
-                        currentArticle === 1
-                          ? "bg-gray-300 cursor-not-allowed"
-                          : "bg-blue-500 hover:bg-blue-600"
-                      }`}
-                    >
-                      Previous
-                    </button>
-                    <button
-                      onClick={handleNext}
-                      disabled={currentArticle === articles.length}
-                      className={`btn btn-area ${
-                        currentArticle === articles.length
-                          ? "bg-gray-300 cursor-not-allowed"
-                          : "bg-blue-500 hover:bg-blue-600"
-                      }`}
-                    >
-                      {currentArticle === articles.length ? "Completed" : "Next"}
-                    </button>
+                    <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
+                      <div className="max-w-2xl mx-auto p-3">
+                        <Markdown
+                          rehypePlugins={[rehypeRaw]}
+                          remarkPlugins={[remarkGfm]} // Enable GFM support
+                          components={{
+                            a: ({ href, children }) => {
+                              // Check if the link is a Markdown file
+                              if (href.endsWith(".md")) {
+                                // Extract the article ID from the filename
+                                const articleId = href.replace("article", "").replace(".md", "");
+                                return (
+                                  <a
+                                    href="#"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      navigate(`/article-single/${articleId}`);
+                                      window.scrollTo(0, 0);
+                                    }}
+                                  >
+                                    {children}
+                                  </a>
+                                );
+                              }
+                              // Default behavior for other links
+                              return <a href={href}>{children}</a>;
+                            },
+                          }}
+                        >
+                          {content}
+                        </Markdown>
+                      </div>
+                      <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                        <button
+                          onClick={handlePrevious}
+                          disabled={currentArticle === 1}
+                          className={`btn btn-area ${
+                            currentArticle === 1
+                              ? "bg-gray-300 cursor-not-allowed"
+                              : "bg-blue-500 hover:bg-blue-600"
+                          }`}
+                        >
+                          Previous
+                        </button>
+                        <button
+                          onClick={handleNext}
+                          disabled={currentArticle === articles.length}
+                          className={`btn btn-area ${
+                            currentArticle === articles.length
+                              ? "bg-gray-300 cursor-not-allowed"
+                              : "bg-blue-500 hover:bg-blue-600"
+                          }`}
+                        >
+                          {currentArticle === articles.length ? "Completed" : "Next"}
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

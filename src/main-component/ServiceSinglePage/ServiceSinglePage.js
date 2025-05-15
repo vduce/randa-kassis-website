@@ -234,16 +234,12 @@ const ServiceSinglePage = () => {
   const serviceDetails = story.find((item) => item.slug === slug);
 
   // Extract current page number from pathname
-  const match = location.pathname.match(
-    /\/blog\/a-rebel-at-heart-my-story(\d*)$/
-  );
+  const match = location.pathname.match(/\/blog\/a-rebel-at-heart-my-story(\d*)$/);
   const currentPage = match && match[1] !== "" ? parseInt(match[1]) : 0;
 
   // Navigation paths
-  const prevPage =
-    currentPage > 0 ? `${BASE_PATH}${currentPage - 1 || ""}` : null;
-  const nextPage =
-    currentPage < MAX_PAGES ? `${BASE_PATH}${currentPage + 1}` : null;
+  const prevPage = currentPage > 0 ? `${BASE_PATH}${currentPage - 1 || ""}` : null;
+  const nextPage = currentPage < MAX_PAGES ? `${BASE_PATH}${currentPage + 1}` : null;
 
   // Scroll to top when navigating
   useEffect(() => {
@@ -350,9 +346,7 @@ const ServiceSinglePage = () => {
                                 </span>
                               </Link>
                             ) : (
-                              <span className="btn completed-btn">
-                                Completed
-                              </span>
+                              <span className="btn completed-btn">Completed</span>
                             )}
                           </li>
                         </ul>

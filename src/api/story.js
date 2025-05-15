@@ -83,8 +83,7 @@ const story = [
   },
   {
     id: "4",
-    title:
-      "The American Mirage: Between the Guardian Illusion and the Naivety of Dualism",
+    title: "The American Mirage: Between the Guardian Illusion and the Naivety of Dualism",
     slug: "the-american-mirage-guardian-illusion-dualism",
     screens: [],
     storyTitle:
@@ -153,8 +152,7 @@ I cannot even ask for your forgiveness, for you have departed this life, and the
   {
     Id: "1",
     screens: sImgS1,
-    title:
-      "Opposition Leader: Resolution of Syrian Crisis Should Be Kick-Started in Sochit",
+    title: "Opposition Leader: Resolution of Syrian Crisis Should Be Kick-Started in Sochit",
     slug: "Opposition-Leader",
     author: "john doe",
     date: "02/05/2024",
@@ -201,8 +199,7 @@ They also discussed the need to support the constructive and balanced approach o
   {
     Id: "3",
     screens: sImgS3,
-    title:
-      "Kassis meets Beibut Atamkulov, Minister of Foreign Affairs of Kazakhstan",
+    title: "Kassis meets Beibut Atamkulov, Minister of Foreign Affairs of Kazakhstan",
     slug: "Kassis-meets-Beibut",
     author: "john doe",
     date: "02/05/2024",
@@ -556,28 +553,27 @@ Those talks were delayed once but have now begun. But without main members of th
     slug: "political-beliefs",
     author: "UNIVERSITY OF ROME, ITALY ",
     date: "02/05/21/06/2013",
-    storyTitle: `My political beliefs have been shaped by a lifetime of intellectual rebellion, activism, and a deep engagement with history, philosophy, and the realities of power. I reject all forms of ideological rigidity, recognising that dogma—no matter its source—inevitably leads to oppression.`,
-    des1: "At my core, I believe in the primacy of individual freedom over collective identity. I have dedicated my life to challenging the dogmas that shape the Arab world, advocating for a state that protects personal freedoms rather than imposing outdated moral codes.",
-    des2: "Yet, I am not naive about politics. The pursuit of a utopian system is futile; history has shown that every ideological promise of salvation ends in disillusionment. Instead, I believe in pragmatism—seeking solutions that work, adapting to realities without sacrificing core principles. Politics, like life, is fluid, and those who fail to adapt are doomed to irrelevance",
-    des3: "I stand against authoritarianism in all its forms, whether it wears the mask of extremism or the guise of a revolutionary movement that seeks to replace one tyranny with another. True liberation comes not from replacing one ruler with another but from dismantling the structures of oppression themselves.",
-    des4: "Leading the secular movement in Syria as a woman is no easy feat. But despite the challenges, we, along with fellow secularists, stand resolute against oppressive forces. Syria was under Bashar al-Assad and is now under Islamist jihadists like al-Jolani, who attempt to drag us back in time. No one ever said Syria's struggle would be easy, but I believe that, with time, we will prevail. I am dedicated to working tirelessly for a just and free society in our country.",
-    des5: "<strong> Vision for Syria and the Region </strong>",
-    des6: "I have been involved in the Syrian revolution for 15 years, advocating for a political transformation that goes beyond removing a regime or replacing one authority with another. From the very beginning, I recognised that Syria needed structural change, not just a change of leadership. The failure of past revolutionary movements was due, in part, to their inability to offer an alternative model that could bring stability, inclusivity, and governance rooted in the interests of all Syrians.",
-    des7: "My vision for Syria is based on decentralised governance, where regions have the autonomy to manage their affairs while remaining part of a cohesive national framework with Damascus as its capital. Establishing autonomous administrative areas is not just a theoretical idea—it is a necessity for breaking the cycle of conflict and ensuring that governance is not monopolised by any single faction, sect, or ideology.",
-    des8: "The northeast of Syria pioneered an autonomous administration model a decade ago, demonstrating that decentralisation is possible. However, while it laid the groundwork, it also exposed its limitations. The challenge now is to build a more sustainable and inclusive model—one that does not privilege one group over another but integrates all components of Syrian society. To succeed, this model must not be confined to a single region; it must expand to other areas where conditions allow.",
-    des9: "The south of Syria and the coastal regions present the most promising starting points for this plan, alongside Damascus. If we manage to establish successful autonomous administration areas in these regions, we will lay the foundation for a broader transformation. These areas would serve as pillars for a new governance model—one that is not imposed by force but built through political consensus and pragmatic leadership.",
+    storyTitle: `My political beliefs have been shaped by a lifetime of intellectual rebellion, activism, and deep engagement with history, philosophy, and the realities of power. I reject all forms of ideological rigidity, recognising that dogma—regardless of its origin—inevitably leads to oppression.`,
+    des1: "At my core, I believe in the primacy of individual freedom over collective identity. I have devoted my life to challenging the dogmas that shape the Arab world, advocating for a state that protects personal freedoms rather than enforcing outdated moral codes.",
+    des2: "Yet I am not naïve about politics. The pursuit of a utopian system is futile; history has shown that every ideological promise of salvation ends in disillusionment. I believe instead in pragmatism—seeking solutions that work, adapting to realities without abandoning fundamental principles. Politics, like life, is fluid, and those who fail to adapt are doomed to irrelevance.",
+    des3: "I stand firmly against authoritarianism in all its forms, whether it wears the mask of extremism or the guise of a revolutionary movement that merely replaces one tyranny with another. True liberation lies not in the replacement of rulers but in the dismantling of the structures of oppression themselves.",
+    des4: "Leading the secular movement in Syria as a woman is no easy feat. Yet despite the challenges, we—alongside fellow secularists—remain resolute in the face of oppressive forces. Syria was once under Bashar al-Assad and now contends with Islamist jihadists like al-Jolani, who seek to drag us backwards in time. No one ever claimed Syria’s struggle would be easy, but I believe that, in time, we shall prevail. I am committed to working tirelessly for a just and free society in our country.",
+    des5: "<strong>Vision for Syria and the Region</strong>",
+    des6: "I have been involved in the Syrian revolution for fifteen years, advocating for a political transformation that transcends the mere replacement of one regime with another. From the outset, I recognised that Syria needed structural reform—not simply a change of leadership. The failure of past revolutionary movements stemmed, in part, from their inability to propose an alternative model that could bring stability, inclusivity, and governance grounded in the interests of all Syrians.",
+    des7: "My vision for Syria is based on decentralised governance, where regions have the autonomy to manage their own affairs while remaining part of a cohesive national framework, with Damascus as the capital. Establishing autonomous administrative areas is not a theoretical ideal—it is a necessity. It offers the only viable path to breaking the cycle of conflict and preventing the monopolisation of governance by any single faction, sect, or ideology.",
+    des8: "A decade ago, the northeast of Syria pioneered an autonomous administration model, proving that decentralisation is achievable. Yet it also exposed its shortcomings. The challenge now is to construct a more inclusive and sustainable model—one that does not privilege any single group but integrates all elements of Syrian society. For such a model to succeed, it must not remain confined to one region; it must extend to others where the conditions allow.",
+    des9: "Southern Syria and the coastal regions are the most promising starting points for this plan, alongside Damascus. Should we succeed in establishing effective autonomous administrations in these regions, they could become the cornerstones of a broader transformation. These areas would form the pillars of a new governance model—one built not through coercion but through political consensus and pragmatic leadership.",
     des10:
-      "The path ahead is long, and the obstacles are many. But I am committed to working towards a Syria where decentralised governance becomes a reality, where political power is distributed rather than concentrated, and where Syrians can reclaim control over their lives without being dictated to by authoritarian rule or extremist ideologies.",
-    des11: "Philosophical Perspective",
+      "The road ahead is long, and the challenges are many. Yet I remain committed to building a Syria where political power is distributed, not concentrated—where Syrians can reclaim their agency, free from authoritarianism and extremism.",
+    des11: "<strong>Philosophical Perspective</strong>",
     des12:
-      "I do not believe in grand, all-encompassing truths. I have always seen life as a series of movements—constant change, uncertainty, and fleeting moments that shape who we are. I do not seek meaning in abstract ideals but in action, in the ability to create, to challenge, and to redefine what is possible.",
+      "I do not believe in grand, all-encompassing truths. I have always seen life as a series of movements—constant change, uncertainty, and fleeting moments that shape who we are. I do not seek meaning in abstract ideals, but in action—in the ability to create, to challenge, and to redefine what is possible.",
     des13:
       "I have never been the type to resign myself to fate. If I had, I would not have fought for what I believe in, nor would I continue to stand against those who seek to dictate the course of our future. While I may reject the illusion of a perfect world, I do not reject the fight to build something better. It is not about clinging to false hopes but about understanding that change is driven by those who refuse to stand still.",
     des14:
-      "Human emotions—our contradictions, struggles, and desires—are what define us. I do not believe in rigid balances or artificial harmony. I accept the full spectrum of human experience, knowing that our contradictions are what drive us forward. That is why I continue to act, to engage, and to fight for what I believe in.",
-    des15:
-      "Meaning does not exist in itself; only actions matter. We shape our own trajectory, not through blind faith in an ideal, but through the choices we make each day. And I choose to fight for a Syria that is free, just, and carried by the voices of all its people.",
-    icon: "flaticon-team-work",
+      "I have never been one to resign myself to fate. Had I done so, I would not have fought for what I believe in, nor would I continue to stand against those who seek to determine our destiny for us. Though I reject the illusion of a perfect world, I do not reject the struggle to build a better one. It is not about clinging to false hopes, but about understanding that change is driven by those who refuse to remain passive.",
+    // des15:
+    //   "Human emotions—our contradictions, struggles, and desires—are what define us. I do not believe in rigid balances or artificial harmony. I embrace the full spectrum of human experience, knowing that it is through our contradictions that we move forward. This is why I continue to act, to engage, and to fight for what I believe in.",
     ssImg1: sImgS3,
     ssImg2: sImgS3,
   },
