@@ -67,7 +67,7 @@ const EdSingle = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     const selectedEd = encounterAndDialogues.find((item) => item.id === parseInt(id));

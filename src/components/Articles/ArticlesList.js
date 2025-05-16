@@ -8,7 +8,7 @@ const ClickHandler = () => {
 
 const ArticlesList = (props) => {
   const { state } = useLocation();
- const [currentPage, setCurrentPage] = useState(state?.pageNumber || 1);
+  const [currentPage, setCurrentPage] = useState(state?.pageNumber || 1);
   const postsPerPage = 10;
   const [articleContents, setArticleContents] = useState([]);
 
@@ -64,9 +64,11 @@ const ArticlesList = (props) => {
     margin: "0",
     display: "flex",
     gap: "10px",
+    overflowX: "auto",
   };
 
   const pageLinkStyles = {
+    display: "inline-block",
     color: "black",
     fontSize: "14px",
     padding: "8px 16px",
