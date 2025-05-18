@@ -14,11 +14,11 @@ Both sides underlined the need for sustained engagement based on mutual respect,
 ![](2.JPG)
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" target="_blank">
-    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" style="flex: 1 1 300px; max-width: 300px; height: 200px; object-fit: cover;">
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" target="_blank" style="display:inline-block; overflow:hidden; border-radius:4px;">
+    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" style="width: 400px; height: 400px; object-fit: cover; transition: transform 0.3s ease, filter 0.3s ease;">
   </a>
-  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" target="_blank">
-    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" style="flex: 1 1 300px; max-width: 300px; height: 200px; object-fit: cover;">
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" target="_blank" style="display:inline-block; overflow:hidden; border-radius:4px;">
+    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" style="width: 400px; height: 400px; object-fit: cover; transition: transform 0.3s ease, filter 0.3s ease;">
   </a>
 </div>
 
