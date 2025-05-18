@@ -1,8 +1,7 @@
-<h4>Randa Kassis and CPFA Delegation Meet Druze Spiritual Leader Sheikh Mouafaq Tarif</h4>  
-
+<span style="font-size: 12px; font-weight: bold;">Randa Kassis and CPFA Delegation Meet Druze Spiritual Leader Sheikh Mouafaq Tarif</span><br>
 London</br>
-21 March 2025  
-
+21 March 2025
+</br></br>
 <b>Summary:</b>
 
 Randa Kassis, President of the Astana Platform, met with Druze spiritual leader Sheikh Mouafaq Tarif as part of a delegation from the Centre for Political and Foreign Affairs (CPFA), led by its President, Fabien Baussart. Sheikh Tarif was accompanied by his delegation, which included former Israeli Minister Salah Tarif.
