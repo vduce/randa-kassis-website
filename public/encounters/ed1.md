@@ -11,10 +11,16 @@ The meeting focused on regional stability, the role of religious leadership in f
 Both sides underlined the need for sustained engagement based on mutual respect, and for protecting religious and cultural diversity in the face of mounting regional challenges.
 
 ![](1.jpg)
-<img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" style="width:50%; height:auto;">
-
 ![](2.JPG)
-<img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" style="width:50%; height:auto;">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" target="_blank">
+    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" style="flex: 1 1 300px; max-width: 300px; height: 200px; object-fit: cover;">
+  </a>
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" target="_blank">
+    <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" style="flex: 1 1 300px; max-width: 300px; height: 200px; object-fit: cover;">
+  </a>
+</div>
 
 <p></p>
 
