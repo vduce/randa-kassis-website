@@ -12,5 +12,24 @@ The meeting underscored the shared responsibility of regional and international 
 
 ![](3.JPG)
 ![](4.JPG)
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/3.jpg" target="_blank">
+    <div style="width: 200px; height: 200px; overflow: hidden; border-radius: 4px;">
+      <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/3.JPG" 
+           alt="Photo 1" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </a>
+
+  <a href="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/4.JPG" target="_blank">
+    <div style="width: 200px; height: 200px; overflow: hidden; border-radius: 4px;">
+      <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/4.JPG" 
+           alt="Photo 2" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </a>
+
+</div>
+
 <p></p>
 
