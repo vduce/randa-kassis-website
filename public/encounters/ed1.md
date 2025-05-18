@@ -14,7 +14,7 @@ Both sides underlined the need for sustained engagement based on mutual respect,
 <img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/1.jpg" style="width:50%; height:auto;">
 
 ![](2.JPG)
-<img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.jpg" style="width:50%; height:auto;">
+<img src="https://github.com/vduce/randa-kassis-website/blob/amardeep/public/encounters/photos/2.JPG" style="width:50%; height:auto;">
 
 <p></p>
 
