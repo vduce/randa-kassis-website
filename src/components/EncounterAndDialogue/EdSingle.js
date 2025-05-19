@@ -171,8 +171,8 @@ const EdSingle = () => {
           <img
             src={`/encounters/photos/${src}`}
             alt={alt}
-            className="w-full rounded-lg shadow-lg object-cover"
-            style={{ width: 250, height: 310 }}
+            className="w-full rounded-lg shadow-lg"
+            style={{ width: 250, height: 310, objectFit: "cover" }}
           />
           {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
         </figure>
