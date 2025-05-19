@@ -1,6 +1,6 @@
 <h4>Randa Kassis and Fabien Baussart Meet Druze Spiritual Leader</h4>
 
-Qanawat, Syria<br>
+Qanawat, Syria  
 18 January 2025
 
 <b>Summary:</b>
