@@ -42,7 +42,7 @@ function PdfThumbnail({ file, fileName, onClick }) {
           file={`/encounters/pdfs/${file}`}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         >
-          <Page pageNumber={1} width={300} />
+          <Page pageNumber={1} width={250} />
         </Document>
       </div>
 
