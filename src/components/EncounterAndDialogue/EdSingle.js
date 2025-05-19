@@ -42,7 +42,7 @@ function PdfThumbnail({ file, fileName, onClick }) {
           file={`/encounters/pdfs/${file}`}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         >
-          <Page pageNumber={1} width={250} />
+          <Page pageNumber={1} width={300} />
         </Document>
       </div>
 
@@ -159,7 +159,7 @@ const EdSingle = () => {
               setNumPages(null);
             }}
             className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
-            style={{ width: 250, height: 250 }}
+            style={{ width: 300, height: 300 }}
           />
         );
         return null;
@@ -172,7 +172,7 @@ const EdSingle = () => {
             src={`/encounters/photos/${src}`}
             alt={alt}
             className="w-full rounded-lg shadow-lg"
-            style={{ width: 250, height: 310, objectFit: "cover" }}
+            style={{ width: 300, height: 300, objectFit: "cover" }}
           />
           {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
         </figure>
