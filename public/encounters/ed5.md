@@ -1,7 +1,7 @@
 <h4>CPFA Convenes High-Level Meeting Opposing Normalisation with the Assad Regime</h4>
 
-CPFA, London<br>
-26 June 2023 
+CPFA, London  
+26 June 2023
 
 <b>Summary:</b>
 

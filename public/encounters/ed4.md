@@ -1,6 +1,6 @@
 <h4>Patriarch of Antioch Meets with a delegation of the CPFA and President of the Astana Platform in Paris</h4>
 
-Mariamite Cathedral, Damascus<br>
+Mariamite Cathedral, Damascus  
 10 January 2025
 
 <b>Summary:</b>
