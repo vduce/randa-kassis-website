@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
+import LightGallery from "lightgallery/react";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import lgAutoplay from "lightgallery/plugins/autoplay";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -9,6 +13,9 @@ import { Document, Page, pdfjs } from "react-pdf";
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -42,7 +49,7 @@ function PdfThumbnail({ file, fileName, onClick }) {
           file={`/encounters/pdfs/${file}`}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         >
-          <Page pageNumber={1} width={250} />
+          <Page pageNumber={1} width={300} />
         </Document>
       </div>
 
@@ -64,6 +71,10 @@ const EdSingle = () => {
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
+  const lightGalleryRef = useRef(null);
+  const imageSrcsRef = useRef([]);
+  const [currentPageImages, setCurrentPageImages] = useState([]);
+  let mediaBuffer = [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -71,9 +82,7 @@ const EdSingle = () => {
 
   useEffect(() => {
     const selectedEd = encounterAndDialogues.find((item) => item.id === parseInt(id));
-    // console.log("Selected encounter and dialogue:", selectedEd); // Debug
     setEncounterAndDialogue(selectedEd);
-
     if (selectedEd && selectedEd.filename) {
       const fetchContent = async () => {
         try {
@@ -85,7 +94,6 @@ const EdSingle = () => {
           setContent("Error loading article content.");
         }
       };
-
       fetchContent();
     }
   }, [id]);
@@ -128,7 +136,28 @@ const EdSingle = () => {
     }
   }, [currentElement]);
 
-  let mediaBuffer = [];
+  useEffect(() => {
+    // Clear buffer first
+    imageSrcsRef.current = [];
+
+    // React will render using updated content and fill imageSrcsRef
+    // So we need to defer updating currentPageImages until after render
+    setTimeout(() => {
+      setCurrentPageImages(
+        imageSrcsRef.current.map((src) => ({
+          src,
+          thumb: src,
+          subHtml: "", // Avoid subHtmlUrl error
+        }))
+      );
+    }, 0);
+  }, [content]);
+
+  const openGallery = (index) => {
+    if (lightGalleryRef.current) {
+      lightGalleryRef.current.openGallery(index);
+    }
+  };
 
   const flushMedia = () => {
     if (mediaBuffer.length === 0) return null;
@@ -148,7 +177,6 @@ const EdSingle = () => {
   const components = {
     img: ({ src, alt }) => {
       if (src?.endsWith(".pdf")) {
-        // wrap PdfThumbnail in exactly the same figure classes:
         mediaBuffer.push(
           <PdfThumbnail
             key={src}
@@ -165,7 +193,9 @@ const EdSingle = () => {
         return null;
       }
 
-      // a normal image:
+      const imageSrc = `/encounters/photos/${src}`;
+      const index = imageSrcsRef.current.length;
+      imageSrcsRef.current.push(imageSrc);
       mediaBuffer.push(
         <figure className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
           <img
@@ -173,10 +203,13 @@ const EdSingle = () => {
             alt={alt}
             className="w-full rounded-lg shadow-lg"
             style={{ width: 300, height: 300, objectFit: "cover" }}
+            onClick={() => openGallery(index)}
           />
           {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
         </figure>
       );
+      const currentImage = { src: `/encounters/photos/${src}`, thumb: `/encounters/photos/${src}` };
+      currentPageImages.push(currentImage);
       return null;
     },
 
@@ -324,6 +357,21 @@ const EdSingle = () => {
           </div>
         </div>
       </div>
+      <LightGallery
+        dynamic
+        dynamicEl={currentPageImages}
+        onInit={(detail) => {
+          lightGalleryRef.current = detail.instance;
+        }}
+        plugins={[lgZoom, lgThumbnail, lgAutoplay]}
+        speed={500}
+        autoplay={false}
+        settings={{
+          closable: true,
+          backdropDuration: 300,
+        }}
+        zoom={true}
+      />
       {pdfToShow && (
         <div
           className="pdf-fullscreen"

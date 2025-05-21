@@ -94,7 +94,7 @@ const ExibitionMoments = () => {
           src={`/exhibitions/photos/${src}`} // Ensure this path is correct
           alt={alt || ""}
           className="w-full mx-auto rounded shadow-sm"
-          style={{ width: "250px", height: "300px" }}
+          style={{ width: "250px", height: "300px", objectFit: "cover" }}
         />
         {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
       </figure>
