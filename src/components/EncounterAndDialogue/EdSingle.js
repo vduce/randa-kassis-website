@@ -4,6 +4,7 @@ import LightGallery from "lightgallery/react";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import lgAutoplay from "lightgallery/plugins/autoplay";
+import lgVideo from "lightgallery/plugins/video";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -15,7 +16,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-thumbnail.css"
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -137,17 +138,13 @@ const EdSingle = () => {
   }, [currentElement]);
 
   useEffect(() => {
-    // Clear buffer first
     imageSrcsRef.current = [];
-
-    // React will render using updated content and fill imageSrcsRef
-    // So we need to defer updating currentPageImages until after render
     setTimeout(() => {
       setCurrentPageImages(
         imageSrcsRef.current.map((src) => ({
           src,
           thumb: src,
-          subHtml: "", // Avoid subHtmlUrl error
+          subHtml: "",
         }))
       );
     }, 0);
@@ -166,7 +163,10 @@ const EdSingle = () => {
     mediaBuffer = [];
 
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
+      <div
+        className="d-flex flex-wrap justify-content-center items-start -mx-2"
+        style={{ gap: "6px" }}
+      >
         {nodes.map((node, i) => (
           <React.Fragment key={i}>{node}</React.Fragment>
         ))}
@@ -197,15 +197,15 @@ const EdSingle = () => {
       const index = imageSrcsRef.current.length;
       imageSrcsRef.current.push(imageSrc);
       mediaBuffer.push(
-        <figure className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
+        <figure className="m-0">
           <img
             src={`/encounters/photos/${src}`}
             alt={alt}
             className="w-full rounded-lg shadow-lg"
-            style={{ width: 300, height: 300, objectFit: "cover" }}
+            style={{ height: 320, objectFit: "contain" }}
             onClick={() => openGallery(index)}
           />
-          {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
+          {alt && <figcaption className="text-sm text-gray-500">{alt}</figcaption>}
         </figure>
       );
       const currentImage = { src: `/encounters/photos/${src}`, thumb: `/encounters/photos/${src}` };
@@ -363,7 +363,7 @@ const EdSingle = () => {
         onInit={(detail) => {
           lightGalleryRef.current = detail.instance;
         }}
-        plugins={[lgZoom, lgThumbnail, lgAutoplay]}
+        plugins={[lgZoom, lgThumbnail, lgAutoplay, lgVideo]}
         speed={500}
         autoplay={false}
         settings={{
