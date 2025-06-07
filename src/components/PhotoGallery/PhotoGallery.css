@@ -1,0 +1,118 @@
+.gallery-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin: 0;
+}
+
+.gallery-grid-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 0;
+}
+
+.gallery-grid-three-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 0;
+}
+
+.gallery-top-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.gallery-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.gallery-grid-five-plus-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 0;
+}
+
+.gallery-grid-five-plus-photos .gallery-top-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.gallery-grid-five-plus-photos .gallery-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.right-grid-three-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.right-grid-five-plus-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Enforce 1:1 aspect ratio */
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-item-tall {
+  position: relative;
+  width: 100%;
+  padding-top: 210%; /* Adjusted for taller left image (unused now) */
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}

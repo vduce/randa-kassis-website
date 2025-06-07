@@ -7,6 +7,7 @@ import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // Added for GFM support
 import StyledVideo from "./StoryVideo";
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 
 const storySections = [
   {
@@ -154,19 +155,28 @@ const MyStory = () => {
     if (imageBuffer.length === 0) return null;
 
     const imgs = imageBuffer.map(({ src, alt }, i) => (
-      <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
-        <img
-          src={`/photos/${src}`} // Ensure this path is correct
-          alt={alt || ""}
-          className="w-full mx-auto rounded shadow-sm"
-          style={{ width: "250px", height: "300px", objectFit: "cover" }} // Adjust size as needed
-        />
-        {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
-      </figure>
+      // <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
+      //   <img
+      //     src={`/photos/${src}`} // Ensure this path is correct
+      //     alt={alt || ""}
+      //     className="w-full mx-auto rounded shadow-sm"
+      //     style={{ width: "250px", height: "300px", objectFit: "cover" }} // Adjust size as needed
+      //   />
+      //   {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
+      // </figure>
+      {
+        key: i,
+        src: `/photos/${src}`, // Ensure this path is correct
+        alt: alt || "",
+        className: "w-full mx-auto rounded shadow-sm",
+        style: { width: "250px", height: "300px", objectFit: "cover" }, // Adjust size as needed
+      }
     ));
     imageBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">{imgs}</div>
+      <div className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2">
+        <PhotoGallery photos={imgs} />
+      </div>
     );
   };
 

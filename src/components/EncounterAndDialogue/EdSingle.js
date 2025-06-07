@@ -8,15 +8,14 @@ import lgVideo from "lightgallery/plugins/video";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-
 import { Document, Page, pdfjs } from "react-pdf";
-
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css"
+import "lightgallery/css/lg-thumbnail.css";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -53,17 +52,15 @@ function PdfThumbnail({ file, fileName, onClick }) {
           <Page pageNumber={1} width={300} />
         </Document>
       </div>
-
-      {/* filename and filesize below the thumb */}
       <figcaption className="pdf-info">
-        PDF &middot; {fileSize ? fileSize : "Loading..."}
+        PDF · {fileSize ? fileSize : "Loading..."}
       </figcaption>
     </figure>
   );
 }
 
 const EdSingle = () => {
-  const { id } = useParams(); // Get the encounter and dialogue ID from the URL
+  const { id } = useParams();
   const navigate = useNavigate();
   const { state } = useLocation();
   const [currentElement, setCurrentElement] = useState(Number(id) || 1);
@@ -76,6 +73,7 @@ const EdSingle = () => {
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
   let mediaBuffer = [];
+  const [galleryPhotos, setGalleryPhotos] = useState([]); // State to store photos for PhotoGallery
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -100,25 +98,16 @@ const EdSingle = () => {
   }, [id]);
 
   useEffect(() => {
-    // Manage body class
     if (pdfToShow) {
       document.body.classList.add("pdf-open");
-
-      // Push a new state to the browser history
       window.history.pushState({ pdfOpen: true }, "");
-
-      // Handler for back/forward navigation
       const handlePopState = (event) => {
         if (pdfToShow) {
           setPdfToShow(null);
-          // Prevent further navigation by pushing state again
           window.history.pushState({ pdfOpen: true }, "");
         }
       };
-
       window.addEventListener("popstate", handlePopState);
-
-      // Cleanup function
       return () => {
         document.body.classList.remove("pdf-open");
         window.removeEventListener("popstate", handlePopState);
@@ -128,11 +117,10 @@ const EdSingle = () => {
     }
   }, [pdfToShow, setPdfToShow]);
 
-  // calculate page number based on currentElement
   useEffect(() => {
     const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
     if (index !== -1) {
-      const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
+      const pageNum = Math.floor(index / 10) + 1;
       setPageNumber(pageNum);
     }
   }, [currentElement]);
@@ -158,15 +146,10 @@ const EdSingle = () => {
 
   const flushMedia = () => {
     if (mediaBuffer.length === 0) return null;
-
     const nodes = mediaBuffer;
     mediaBuffer = [];
-
     return (
-      <div
-        className="d-flex flex-wrap justify-content-center items-start -mx-2"
-        style={{ gap: "6px" }}
-      >
+      <div className="d-flex flex-wrap justify-content-center items-start -mx-2" style={{ gap: "6px" }}>
         {nodes.map((node, i) => (
           <React.Fragment key={i}>{node}</React.Fragment>
         ))}
@@ -194,34 +177,20 @@ const EdSingle = () => {
       }
 
       const imageSrc = `/encounters/photos/${src}`;
-      const index = imageSrcsRef.current.length;
       imageSrcsRef.current.push(imageSrc);
-      mediaBuffer.push(
-        <figure className="m-0">
-          <img
-            src={`/encounters/photos/${src}`}
-            alt={alt}
-            className="w-full rounded-lg shadow-lg"
-            style={{ height: 320, objectFit: "contain" }}
-            onClick={() => openGallery(index)}
-          />
-          {alt && <figcaption className="text-sm text-gray-500">{alt}</figcaption>}
-        </figure>
-      );
-      const currentImage = { src: `/encounters/photos/${src}`, thumb: `/encounters/photos/${src}` };
-      currentPageImages.push(currentImage);
-      return null;
+      // Collect photos for PhotoGallery
+      setGalleryPhotos((prevPhotos) => {
+        const photo = { src: imageSrc, alt: alt || "" };
+        return prevPhotos.some((p) => p.src === photo.src) ? prevPhotos : [...prevPhotos, photo];
+      });
+      return null; // PhotoGallery will render the images
     },
 
     p: ({ children }) => {
-      // flush *all* media (imgs + pdfs) at once
       const media = flushMedia();
-
-      // check if there's any real text in this paragraph:
       const hasText = React.Children.toArray(children).some(
         (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
       );
-
       if (hasText) {
         return (
           <>
@@ -230,8 +199,6 @@ const EdSingle = () => {
           </>
         );
       }
-
-      // no real text? just spit out the media container
       return media;
     },
 
@@ -258,11 +225,7 @@ const EdSingle = () => {
   const renderMarkdown = (content) => {
     mediaBuffer = [];
     const rendered = (
-      <Markdown
-        rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm]} // Added GFM support
-        components={components}
-      >
+      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} components={components}>
         {content}
       </Markdown>
     );
@@ -271,6 +234,7 @@ const EdSingle = () => {
       <>
         {rendered}
         {flushedMedia}
+        {galleryPhotos.length > 0 && <PhotoGallery photos={galleryPhotos} />}
       </>
     );
   };
@@ -386,7 +350,7 @@ const EdSingle = () => {
             display: "flex",
             flexDirection: "column",
             overflowY: "auto",
-            zIndex: 1001, // Higher than navbar
+            zIndex: 1001,
           }}
         >
           <Document
