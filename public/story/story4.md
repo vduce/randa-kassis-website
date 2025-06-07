@@ -7,8 +7,8 @@ Since the age of fourteen, I had engaged my friends in Damascus in debates over 
 
 At fifteen, my rebellion deepened. I made acquaintances with French employees at the French Cultural Centre, where I found an intellectual and cultural connection that was absent among my own friends. At the same time, I travelled across Syria with friends my age, engaging in endless debates about God, religions, and the taboos that society tried to impose on us.
 
-![](10.jpeg)
-![](11.jpeg)
+![](10.jpg)
+![](11.jpg)
 ![](12.jpeg)
 ![](13.jpeg)
 
