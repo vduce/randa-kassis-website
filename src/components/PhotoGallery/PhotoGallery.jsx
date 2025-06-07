@@ -18,7 +18,7 @@ const PhotoGallery = ({ photos }) => {
     const images = photos.map((photo) => ({
       src: photo.src,
       thumb: photo.src,
-      subHtml: photo.alt || '',
+      subHtml: photo.alt || photo.caption || '',
     }));
     setCurrentPageImages(images);
   }, [photos]);
@@ -49,6 +49,7 @@ const PhotoGallery = ({ photos }) => {
               alt={photos[0].alt || `Gallery image 1`}
               className="gallery-image"
             />
+            {photos[0].caption && <span className="caption">{photos[0].caption}</span>}
           </div>
         </div>
       );
@@ -68,6 +69,7 @@ const PhotoGallery = ({ photos }) => {
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-image"
               />
+              {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
           ))}
         </div>
@@ -89,6 +91,7 @@ const PhotoGallery = ({ photos }) => {
                   alt={photo.alt || `Gallery image ${index + 1}`}
                   className="gallery-image"
                 />
+                {photo.caption && <span className="caption">{photo.caption}</span>}
               </div>
             ))}
           </div>
@@ -102,6 +105,7 @@ const PhotoGallery = ({ photos }) => {
                 alt={photos[2].alt || `Gallery image 3`}
                 className="gallery-image"
               />
+              {photos[2].caption && <span className="caption">{photos[2].caption}</span>}
             </div>
           </div>
         </div>
@@ -122,6 +126,7 @@ const PhotoGallery = ({ photos }) => {
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-image"
               />
+              {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
           ))}
         </div>
@@ -142,6 +147,7 @@ const PhotoGallery = ({ photos }) => {
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-image"
               />
+              {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
           ))}
         </div>
@@ -157,6 +163,7 @@ const PhotoGallery = ({ photos }) => {
                 alt={photo.alt || `Gallery image ${index + 4}`}
                 className="gallery-image"
               />
+              {photo.caption && <span className="caption">{photo.caption}</span>}
               {index === 1 && extraPhotosCount > 0 && (
                 <div className="overlay">
                   +{extraPhotosCount}
