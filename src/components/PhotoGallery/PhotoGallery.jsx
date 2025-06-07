@@ -12,8 +12,8 @@ const PhotoGallery = ({ photos }) => {
   const extraPhotosCount = photos.length > maxDisplayPhotos ? photos.length - maxDisplayPhotos + 1 : 0;
   const lightGalleryRef = useRef(null);
   const [currentPageImages, setCurrentPageImages] = useState([]);
+  const photoCount = Math.min(photos.length, maxDisplayPhotos);
 
-  // Prepare currentPageImages when photos change
   useEffect(() => {
     const images = photos.map((photo) => ({
       src: photo.src,
@@ -23,14 +23,12 @@ const PhotoGallery = ({ photos }) => {
     setCurrentPageImages(images);
   }, [photos]);
 
-  // Ensure lightGallery reinitializes when currentPageImages change
   useEffect(() => {
     if (lightGalleryRef.current) {
       lightGalleryRef.current.refresh();
     }
   }, [currentPageImages]);
 
-  // Don't render if there are no photos
   if (!photos || photos.length === 0) {
     return null;
   }
@@ -42,9 +40,6 @@ const PhotoGallery = ({ photos }) => {
   };
 
   const renderGallery = () => {
-    const photoCount = Math.min(photos.length, maxDisplayPhotos);
-
-    // 1 Photo: Full width
     if (photoCount === 1) {
       return (
         <div className="gallery-grid-single">
@@ -59,7 +54,6 @@ const PhotoGallery = ({ photos }) => {
       );
     }
 
-    // 2 Photos: Side by side
     if (photoCount === 2) {
       return (
         <div className="gallery-grid">
@@ -80,7 +74,6 @@ const PhotoGallery = ({ photos }) => {
       );
     }
 
-    // 3 Photos: Two on top, one on bottom
     if (photoCount === 3) {
       return (
         <div className="gallery-grid-three-photos">
@@ -115,7 +108,6 @@ const PhotoGallery = ({ photos }) => {
       );
     }
 
-    // 4 Photos: 2x2 grid
     if (photoCount === 4) {
       return (
         <div className="gallery-grid">
@@ -136,7 +128,6 @@ const PhotoGallery = ({ photos }) => {
       );
     }
 
-    // 5 or more Photos: 3 on top, 2 on bottom
     return (
       <div className="gallery-grid-five-plus-photos">
         <div className="gallery-top-row">
@@ -179,7 +170,7 @@ const PhotoGallery = ({ photos }) => {
   };
 
   return (
-    <div className="gallery-container">
+    <div className={`gallery-container ${photoCount === 1 || photoCount === 2 ? 'gallery-container-single-row' : 'gallery-container-two-rows'}`}>
       {renderGallery()}
       <LightGallery
         dynamic

@@ -3,7 +3,7 @@ import PageTitle from "../../components/pagetitle/PageTitle.js";
 import Scrollbar from "../../components/scrollbar/scrollbar.js";
 import Footer from "../../components/footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
-import EdSingle from "../../components/EncounterAndDialogue/EdSingle.js";
+import EdSingle from "../../components/EncounterAndDialogue/EdSingle.jsx";
 
 const EncAndDialDetails = () => {
   return (

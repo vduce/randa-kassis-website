@@ -9,13 +9,13 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Document, Page, pdfjs } from "react-pdf";
+import PhotoGallery from "../PhotoGallery/PhotoGallery"; // Import PhotoGallery component
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
-import PhotoGallery from "../PhotoGallery/PhotoGallery";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -73,7 +73,8 @@ const EdSingle = () => {
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
   let mediaBuffer = [];
-  const [galleryPhotos, setGalleryPhotos] = useState([]); // State to store photos for PhotoGallery
+  let photoBuffer = []; // Buffer for consecutive images
+  const lastElementType = useRef(null); // Track the last rendered element type
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -145,8 +146,13 @@ const EdSingle = () => {
   };
 
   const flushMedia = () => {
-    if (mediaBuffer.length === 0) return null;
-    const nodes = mediaBuffer;
+    if (mediaBuffer.length === 0 && photoBuffer.length === 0) return null;
+    const nodes = [...mediaBuffer];
+    if (photoBuffer.length > 0) {
+      console.log("Flushing PhotoGallery with photos:", photoBuffer); // Debug log
+      nodes.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+      photoBuffer = []; // Clear the buffer after flushing
+    }
     mediaBuffer = [];
     return (
       <div className="d-flex flex-wrap justify-content-center items-start -mx-2" style={{ gap: "6px" }}>
@@ -160,6 +166,10 @@ const EdSingle = () => {
   const components = {
     img: ({ src, alt }) => {
       if (src?.endsWith(".pdf")) {
+        if (photoBuffer.length > 0) {
+          mediaBuffer.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+          photoBuffer = [];
+        }
         mediaBuffer.push(
           <PdfThumbnail
             key={src}
@@ -173,17 +183,21 @@ const EdSingle = () => {
             style={{ width: 300, height: 300 }}
           />
         );
+        lastElementType.current = "pdf";
         return null;
+      }
+
+      // Flush buffer if the last element was not an image
+      if (photoBuffer.length > 0 && lastElementType.current !== "img") {
+        mediaBuffer.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+        photoBuffer = [];
       }
 
       const imageSrc = `/encounters/photos/${src}`;
       imageSrcsRef.current.push(imageSrc);
-      // Collect photos for PhotoGallery
-      setGalleryPhotos((prevPhotos) => {
-        const photo = { src: imageSrc, alt: alt || "" };
-        return prevPhotos.some((p) => p.src === photo.src) ? prevPhotos : [...prevPhotos, photo];
-      });
-      return null; // PhotoGallery will render the images
+      photoBuffer.push({ src: imageSrc, alt: alt || "" });
+      lastElementType.current = "img";
+      return null; // Will be flushed later
     },
 
     p: ({ children }) => {
@@ -192,6 +206,7 @@ const EdSingle = () => {
         (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
       );
       if (hasText) {
+        lastElementType.current = "p";
         return (
           <>
             {media}
@@ -205,6 +220,7 @@ const EdSingle = () => {
     a: ({ href, children }) => {
       if (href.endsWith(".md")) {
         const edId = href.replace("ed", "").replace(".md", "");
+        lastElementType.current = "a";
         return (
           <a
             href="#"
@@ -218,23 +234,53 @@ const EdSingle = () => {
           </a>
         );
       }
+      lastElementType.current = "a";
       return <a href={href}>{children}</a>;
+    },
+
+    h4: ({ children }) => {
+      lastElementType.current = "h4";
+      return <h4>{children}</h4>;
+    },
+
+    b: ({ children }) => {
+      lastElementType.current = "b";
+      return <b>{children}</b>;
+    },
+
+    text: ({ value }) => {
+      if (value.trim()) {
+        lastElementType.current = "text";
+        return <span>{value}</span>;
+      }
+      return null;
+    },
+
+    center: ({ children }) => {
+      lastElementType.current = "center";
+      return <center>{children}</center>;
+    },
+
+    iframe: ({ src, ...props }) => {
+      lastElementType.current = "iframe";
+      return <iframe src={src} {...props} />;
     },
   };
 
   const renderMarkdown = (content) => {
     mediaBuffer = [];
+    photoBuffer = []; // Reset photo buffer for each render
+    lastElementType.current = null; // Reset last element type
     const rendered = (
       <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} components={components}>
         {content}
       </Markdown>
     );
-    const flushedMedia = flushMedia();
+    const flushedMedia = flushMedia(); // Flush any remaining photos
     return (
       <>
         {rendered}
         {flushedMedia}
-        {galleryPhotos.length > 0 && <PhotoGallery photos={galleryPhotos} />}
       </>
     );
   };
