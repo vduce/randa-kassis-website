@@ -9,7 +9,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Document, Page, pdfjs } from "react-pdf";
-import PhotoGallery from "../PhotoGallery/PhotoGallery"; // Import PhotoGallery component
+import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd"; // Import PhotoGallery component
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -150,7 +150,7 @@ const EdSingle = () => {
     const nodes = [...mediaBuffer];
     if (photoBuffer.length > 0) {
       console.log("Flushing PhotoGallery with photos:", photoBuffer); // Debug log
-      nodes.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+      nodes.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
       photoBuffer = []; // Clear the buffer after flushing
     }
     mediaBuffer = [];
@@ -167,7 +167,7 @@ const EdSingle = () => {
     img: ({ src, alt }) => {
       if (src?.endsWith(".pdf")) {
         if (photoBuffer.length > 0) {
-          mediaBuffer.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+          mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
           photoBuffer = [];
         }
         mediaBuffer.push(
@@ -189,7 +189,7 @@ const EdSingle = () => {
 
       // Flush buffer if the last element was not an image
       if (photoBuffer.length > 0 && lastElementType.current !== "img") {
-        mediaBuffer.push(<PhotoGallery key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+        mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
         photoBuffer = [];
       }
 
