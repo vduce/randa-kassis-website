@@ -12,6 +12,8 @@
 
 .gallery-ed-container-single-row {
   height: 300px; /* For 1 or 2 photos */
+  width: -webkit-fill-available;
+  max-width: 900px;
 }
 
 .gallery-ed-container-two-rows {
