@@ -299,7 +299,9 @@ const EdSingle = () => {
   };
 
   const handleNext = () => {
-    if (currentElement < encounterAndDialogues.length - 1) {
+    console.log("Current Element:", currentElement);
+    console.log("Total Elements:", encounterAndDialogues.length);
+    if (currentElement < encounterAndDialogues.length) {
       setCurrentElement(currentElement + 1);
       navigate(`/encounter-and-dialogue-single/${currentElement + 1}`, {
         state: { pageNumber, currentElement: currentElement + 1 },

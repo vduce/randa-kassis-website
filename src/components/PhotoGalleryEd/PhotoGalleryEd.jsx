@@ -154,6 +154,9 @@ const PhotoGalleryEd = ({ photos }) => {
 
   return (
     <div
+      style={{
+        maxWidth: photoCount === 1 ? "400px" : "700px",
+      }}
       className={`gallery-ed-container ${
         photoCount === 1 || photoCount === 2
           ? "gallery-ed-container-single-row"
