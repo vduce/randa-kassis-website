@@ -84,7 +84,6 @@ const PhotoGalleryEd = ({ photos }) => {
               src={photos[0].src}
               alt={photos[0].alt || `Gallery image 1`}
               className="gallery-ed-image"
-              style={getImageStyle(0)}
             />
             {photos[0].caption && <span className="caption">{photos[0].caption}</span>}
           </div>
