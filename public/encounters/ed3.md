@@ -11,6 +11,7 @@ The discussion focused on the current situation in Syria and the urgent need to 
 
 This meeting formed part of broader efforts to support a democratic and pluralistic Syria, one that reflects the aspirations of its people and lays the groundwork for lasting peace, reconciliation, and institutional reform.
 
+
 ![](5.JPG)
 ![](6.JPG)
 <p></p>
