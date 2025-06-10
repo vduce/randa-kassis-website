@@ -12,6 +12,7 @@ Co-organised by Kassis and Sant’Egidio, the gathering sought to foster inclusi
 
 This initial round laid the groundwork for ongoing informal diplomacy, encouraging mutual understanding and trust-building, and reaffirmed the role of civil society initiatives in contributing meaningfully to the broader peace process.
 
+
 ![](19.JPG)
 ![](20.JPG)
 ![](21.JPG)
