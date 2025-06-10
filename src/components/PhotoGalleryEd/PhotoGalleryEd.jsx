@@ -13,7 +13,26 @@ const PhotoGalleryEd = ({ photos }) => {
     photos.length > maxDisplayPhotos ? photos.length - maxDisplayPhotos + 1 : 0;
   const lightGalleryRef = useRef(null);
   const [currentPageImages, setCurrentPageImages] = useState([]);
+  const [imageOrientations, setImageOrientations] = useState([]);
   const photoCount = Math.min(photos.length, maxDisplayPhotos);
+
+  const getImageOrientation = (src) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        const isPortrait = img.height > img.width;
+        resolve({
+          src,
+          isPortrait,
+          aspectRatio: img.width / img.height,
+        });
+      };
+      img.onerror = () => {
+        resolve({ src, isPortrait: false, aspectRatio: 1 });
+      };
+      img.src = src;
+    });
+  };
 
   useEffect(() => {
     const images = photos.map((photo) => ({
@@ -22,6 +41,13 @@ const PhotoGalleryEd = ({ photos }) => {
       subHtml: photo.alt || photo.caption || "",
     }));
     setCurrentPageImages(images);
+
+    const loadOrientations = async () => {
+      const orientations = await Promise.all(photos.map((photo) => getImageOrientation(photo.src)));
+      setImageOrientations(orientations);
+    };
+
+    loadOrientations();
   }, [photos]);
 
   useEffect(() => {
@@ -40,6 +66,15 @@ const PhotoGalleryEd = ({ photos }) => {
     }
   };
 
+  const getImageStyle = (index) => {
+    const orientation = imageOrientations[index];
+    if (!orientation) return {};
+
+    return {
+      objectPosition: orientation.isPortrait ? "center top" : "center center",
+    };
+  };
+
   const renderGallery = () => {
     if (photoCount === 1) {
       return (
@@ -49,6 +84,7 @@ const PhotoGalleryEd = ({ photos }) => {
               src={photos[0].src}
               alt={photos[0].alt || `Gallery image 1`}
               className="gallery-ed-image"
+              style={getImageStyle(0)}
             />
             {photos[0].caption && <span className="caption">{photos[0].caption}</span>}
           </div>
@@ -65,6 +101,7 @@ const PhotoGalleryEd = ({ photos }) => {
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-ed-image"
+                style={getImageStyle(index)}
               />
               {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
@@ -83,6 +120,7 @@ const PhotoGalleryEd = ({ photos }) => {
                   src={photo.src}
                   alt={photo.alt || `Gallery image ${index + 1}`}
                   className="gallery-ed-image"
+                  style={getImageStyle(index)}
                 />
                 {photo.caption && <span className="caption">{photo.caption}</span>}
               </div>
@@ -94,6 +132,7 @@ const PhotoGalleryEd = ({ photos }) => {
                 src={photos[2].src}
                 alt={photos[2].alt || `Gallery image 3`}
                 className="gallery-ed-image"
+                style={getImageStyle(2)}
               />
               {photos[2].caption && <span className="caption">{photos[2].caption}</span>}
             </div>
@@ -111,6 +150,7 @@ const PhotoGalleryEd = ({ photos }) => {
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-ed-image"
+                style={getImageStyle(index)}
               />
               {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
@@ -128,6 +168,7 @@ const PhotoGalleryEd = ({ photos }) => {
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
                 className="gallery-ed-image"
+                style={getImageStyle(index)}
               />
               {photo.caption && <span className="caption">{photo.caption}</span>}
             </div>
@@ -140,6 +181,7 @@ const PhotoGalleryEd = ({ photos }) => {
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 4}`}
                 className="gallery-ed-image"
+                style={getImageStyle(index + 3)}
               />
               {photo.caption && <span className="caption">{photo.caption}</span>}
               {index === 1 && extraPhotosCount > 0 && (

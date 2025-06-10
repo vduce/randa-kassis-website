@@ -139,12 +139,6 @@ const EdSingle = () => {
     }, 0);
   }, [content]);
 
-  const openGallery = (index) => {
-    if (lightGalleryRef.current) {
-      lightGalleryRef.current.openGallery(index);
-    }
-  };
-
   const flushMedia = () => {
     if (mediaBuffer.length === 0 && photoBuffer.length === 0) return null;
     const nodes = [...mediaBuffer];
