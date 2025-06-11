@@ -91,7 +91,7 @@ const ExibitionMoments = () => {
     const imgs = imageBuffer.map(({ src, alt }, i) => (
       <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
         <img
-          src={`/exhibitions/photos/${src}`} // Ensure this path is correct
+          src={`https://randa-kassis-website.b-cdn.net/exhibitions/photos/${src}`}
           alt={alt || ""}
           className="w-full mx-auto rounded shadow-sm"
           style={{ width: "250px", height: "300px", objectFit: "cover" }}

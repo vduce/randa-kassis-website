@@ -154,7 +154,7 @@ const MyStory = () => {
   const flushImages = () => {
     if (imageBuffer.length === 0) return null;
 
-    const imgs = imageBuffer.map(({ src, alt }, i) => (
+    const imgs = imageBuffer.map(({ src, alt }, i) =>
       // <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
       //   <img
       //     src={`/photos/${src}`} // Ensure this path is correct
@@ -164,15 +164,15 @@ const MyStory = () => {
       //   />
       //   {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
       // </figure>
-      {
+      ({
         key: i,
-        src: `/photos/${src}`, // Ensure this path is correct
+        src: `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`,
         alt: alt || "",
         caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
         className: "w-full mx-auto rounded shadow-sm",
         style: { width: "250px", height: "300px", objectFit: "cover" }, // Adjust size as needed
-      }
-    ));
+      })
+    );
     imageBuffer = [];
     return (
       <div className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2">
