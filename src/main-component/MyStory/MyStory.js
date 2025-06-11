@@ -170,7 +170,7 @@ const MyStory = () => {
         alt: alt || "",
         caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
         className: "w-full mx-auto rounded shadow-sm",
-        style: { width: "250px", height: "300px", objectFit: "cover" }, // Adjust size as needed
+        style: { width: "250px", height: "300px", objectFit: "cover" },
       })
     );
     imageBuffer = [];
