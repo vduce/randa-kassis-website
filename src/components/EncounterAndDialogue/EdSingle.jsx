@@ -252,7 +252,7 @@ const EdSingle = () => {
 
     center: ({ children }) => {
       lastElementType.current = "center";
-      return <center>{children}</center>;
+      return <div className="d-flex justify-content-center mb-3">{children}</div>;
     },
 
     iframe: ({ src, ...props }) => {
