@@ -29,7 +29,9 @@ function PdfThumbnail({ file, fileName, onClick }) {
   useEffect(() => {
     const computeFileSize = async () => {
       try {
-        const response = await fetch(`/encounters/pdfs/${file}`);
+        const response = await fetch(
+          `https://randa-kassis-website.b-cdn.net/encounters/pdfs/${file}`
+        );
         const blob = await response.blob();
         const sizeInBytes = blob.size;
         const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
@@ -46,15 +48,13 @@ function PdfThumbnail({ file, fileName, onClick }) {
     <figure className="pdf-thumbnail">
       <div className="pdf-preview" onClick={onClick}>
         <Document
-          file={`/encounters/pdfs/${file}`}
+          file={`https://randa-kassis-website.b-cdn.net/encounters/pdfs/${file}`}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         >
           <Page pageNumber={1} width={300} />
         </Document>
       </div>
-      <figcaption className="pdf-info">
-        PDF · {fileSize ? fileSize : "Loading..."}
-      </figcaption>
+      <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
     </figure>
   );
 }
@@ -187,7 +187,7 @@ const EdSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `/encounters/photos/${src}`;
+      const imageSrc = `https://randa-kassis-website.b-cdn.net/encounters/photos/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
@@ -396,7 +396,7 @@ const EdSingle = () => {
           }}
         >
           <Document
-            file={`/encounters/pdfs/${pdfToShow}`}
+            file={`https://randa-kassis-website.b-cdn.net/encounters/pdfs/${pdfToShow}`}
             onLoadSuccess={({ numPages }) => setNumPages(numPages)}
           >
             <style>
