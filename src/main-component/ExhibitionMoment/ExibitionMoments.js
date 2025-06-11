@@ -140,7 +140,7 @@ const ExibitionMoments = () => {
     const rendered = (
       <Markdown
         rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm]} // Added GFM support
+        remarkPlugins={[remarkGfm]}
         components={components}
       >
         {content}
