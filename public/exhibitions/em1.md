@@ -53,7 +53,7 @@ In April 1996, I embarked on a different kind of experience. Alongside a directo
 ![](30.JPG)
 ![](31.JPG)
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/aHxk2S0ODx4?si=nhfc3dXD9pQBfTGG" frameborder="0" allowfullscreen></iframe></center>
+<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/451828/3d1679a2-77c9-463e-9ea3-797ad730fc32?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 I was incredibly active at the time, as if driven by an instinctive feeling that I would soon be distanced from my paintings and artistic lifestyle.” I organised another exhibition in
 Damascus from 3 to 13 October, under the patronage of the Syrian Minister of Information, Mohamad Salman.
