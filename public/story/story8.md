@@ -37,7 +37,7 @@ Determined to continue my fight for a secular, pluralistic Syria, I established 
 
 One of the key political initiatives I led was the Astana Platform, which I launched with Fabien in 2015 after requesting that the President of Kazakhstan create a space to bring together moderate Syrian opposition figures.
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/XYN2H_2E5W4" frameborder="0" allowfullscreen></iframe></center>
+Video 1
 
 
 I took part in the 2016 Geneva Peace Talks as a member of the Moscow/Astana groups, serving as Co-President alongside Qadri Jamil within the Syrian secular and democratic opposition delegation.
@@ -48,10 +48,7 @@ I took part in the 2016 Geneva Peace Talks as a member of the Moscow/Astana grou
 
 Once again, both allies and adversaries conspired to exclude me from the Geneva negotiations in 2017. However, Fabien and I responded by launching a new initiative to establish a constitutional committee. This effort was made possible with the support of former Italian Foreign Minister Giulio Terzi and former Turkish Foreign Minister Yaşar Yakış, as well as the collaboration of Syrian and French constitutional experts.
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_BDVw_0xXIo" frameborder="0" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nIbriciFyRo" frameborder="0" allowfullscreen></iframe>
-</center>
+Video 2, 3
 
 
  
