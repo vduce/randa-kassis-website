@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function createMarkdownFiles() {
-  const folderPath = path.join(__dirname, 'public', 'encounters');
+  const folderPath = path.join(__dirname, "public", "politician");
   console.log(`Creating files in: ${folderPath}`);
   
   // Ensure the folder exists
@@ -10,8 +10,8 @@ function createMarkdownFiles() {
     fs.mkdirSync(folderPath, { recursive: true });
   }
 
-  for (let i = 1; i <= 60; i++) {
-    const fileName = `ed${i}.md`;
+  for (let i = 1; i <= 2; i++) {
+    const fileName = `politician${i}.md`;
     const filePath = path.join(folderPath, fileName);
     
     // Create the file if it doesn't exist
@@ -22,4 +22,4 @@ function createMarkdownFiles() {
   }
 }
 
-// createMarkdownFiles();
+createMarkdownFiles();
