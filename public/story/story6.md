@@ -6,6 +6,7 @@ Between 1997 and 2007, I balanced motherhood, art, and self-discipline. I had se
 
 I drove her to her activities, to see friends—we travelled together, went out often, even with my own friends. I was never absent from her life. But at the same time, I pursued my own path, refusing to let motherhood define me entirely.
 
+
 ![](30.jpeg)
 ![](31.jpeg)
 ![](32.jpeg)
@@ -15,18 +16,22 @@ I drove her to her activities, to see friends—we travelled together, went out 
 ![](36.jpeg)
 ![](37.jpeg)
 ![](38.jpeg)
-
-Alongside this, I trained in kickboxing and Muay Thai—not just for self-defence, but for self-control. The discipline I gained in combat extended beyond the ring, shaping how I approached life itself.
-
 ![](39.jpeg)
 ![](40.jpeg)
 ![](41.jpeg)
-
-Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself in performance and storytelling. Theatre gave me a voice—a structured yet liberating way to channel my thoughts and emotions. It was through this experience that I later began writing for Al Hiwar Al Mutamadin.
-
 ![](42.jpeg)
+
+Alongside this, I trained in kickboxing and Muay Thai—not just for self-defence, but for self-control. The discipline I gained in combat extended beyond the ring, shaping how I approached life itself.
+
 ![](43.jpeg)
 ![](44.jpeg)
 ![](45.jpeg)
+
+Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself in performance and storytelling. Theatre gave me a voice—a structured yet liberating way to channel my thoughts and emotions. It was through this experience that I later began writing for Al Hiwar Al Mutamadin.
+
+![](46.jpeg)
+![](47.jpeg)
+![](48.jpeg)
+![](49.jpeg)
 
 <p></p>
