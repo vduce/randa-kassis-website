@@ -51,7 +51,7 @@ function PdfThumbnail({ file, fileName, onClick }) {
           file={`https://randa-kassis-website.b-cdn.net/encounters/pdfs/${file}`}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         >
-          <Page pageNumber={1} width={300} />
+          <Page pageNumber={1} width={260} />
         </Document>
       </div>
       <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
