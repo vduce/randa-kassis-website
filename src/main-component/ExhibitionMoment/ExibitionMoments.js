@@ -8,6 +8,7 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import StyledVideo from "../MyStory/StoryVideo";
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
+import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 
 const ExibitionMomentSections = [
   {
@@ -102,7 +103,7 @@ const ExibitionMoments = () => {
     imageBuffer = [];
     return (
       <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
-        <PhotoGallery photos={imgs} />
+        <PhotoGalleryEd photos={imgs} />
       </div>
     );
   };
