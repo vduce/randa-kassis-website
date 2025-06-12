@@ -6,7 +6,6 @@ My first exhibition took place in Damascus from 15 to 25 March 1995. I chose my 
 
 Later that year, in June 1995, I travelled to London to exhibit my paintings, drawn by the city’s longstanding tradition of supporting the arts, dating back to the patronage of the 17th century. London has always inspired artists with its cosmopolitan atmosphere and rich artistic heritage.
 
-![](5.JPG)
 ![](6.JPG)
 ![](7.JPG)
 
