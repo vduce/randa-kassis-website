@@ -71,7 +71,7 @@ Damascus from 3 to 13 October, under the patronage of the Syrian Minister of Inf
 Looking back, that period feels like a fleeting blaze—intense, unrelenting, and full of purpose. I was carried by a wave I neither questioned nor tried to tame, as if I already sensed that a rupture was inevitable. By the end of 1996, I was pregnant and soon entirely absorbed by the demands and beauty of motherhood. My brushes fell silent—not by choice, but because life had taken a different course.
 It wasn’t until mid-1998 that I attempted to return, organising an exhibition in Juan-les-Pins, France. Although I wasn’t present at the vernissage, it marked a quiet attempt to reconnect with the world I had temporarily left behind. The urgency of that earlier time never returned in quite the same way, but its spirit still lingers—a testament to a time when art was not merely a vocation, but a state of being.
 
-![](39.jpg)
+39 PDF
 
 That reconnection continued on 2 February 1999, when I returned to London to exhibit at the Kufa Gallery until 8 February. Though the fervour of the earlier period never fully returned, its essence remained within me.
 
