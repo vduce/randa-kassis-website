@@ -9,7 +9,7 @@ At the time, platforms like Al Hiwar Al Mutamadin (Civil Discourse) were among t
 
 My activism wasn’t confined to words—it was action. I helped ex-Muslims escape persecution—providing financial and logistical support, and at times, offering them refuge when they had nowhere else to turn.
 
-![](46.jpeg)
-![](47.jpeg)
-![](48.jpeg)
+![](50.jpeg)
+![](51.jpeg)
+![](52.jpeg)
 <p></p>
