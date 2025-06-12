@@ -1,4 +1,3 @@
-  
 My first exhibition took place in Damascus from 15 to 25 March 1995. I chose my birthplace as the starting point of my artistic journey—not out of a sense of identity, but to engage with its culture and society.
 ![](1.JPG)
 ![](2.JPG)
@@ -53,7 +52,12 @@ In April 1996, I embarked on a different kind of experience. Alongside a directo
 ![](30.JPG)
 ![](31.JPG)
 
-<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/451828/3d1679a2-77c9-463e-9ea3-797ad730fc32?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/451828/3d1679a2-77c9-463e-9ea3-797ad730fc32?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+<br />
 
 I was incredibly active at the time, as if driven by an instinctive feeling that I would soon be distanced from my paintings and artistic lifestyle.” I organised another exhibition in
 Damascus from 3 to 13 October, under the patronage of the Syrian Minister of Information, Mohamad Salman.
@@ -87,6 +91,7 @@ Between 26 May and 17 June 2000, my brother Jean and I curated an exhibition at 
 The following year, from 17 to 27 February 2001, Jean and I organised another exhibition in Paris, this time at Artimus Gallery.
 
 <!-- ![](48.jpg) -->
+
 ![](49.jpg)
 ![](50.JPG)
 

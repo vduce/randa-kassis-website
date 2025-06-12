@@ -1,15 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-import LightGallery from 'lightgallery/react';
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import './PhotoGallery.css';
+import React, { useEffect, useRef, useState } from "react";
+import LightGallery from "lightgallery/react";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgZoom from "lightgallery/plugins/zoom";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import "./PhotoGallery.css";
 
 const PhotoGallery = ({ photos }) => {
   const maxDisplayPhotos = 5;
-  const extraPhotosCount = photos.length > maxDisplayPhotos ? photos.length - maxDisplayPhotos + 1 : 0;
+  const extraPhotosCount =
+    photos.length > maxDisplayPhotos ? photos.length - maxDisplayPhotos + 1 : 0;
   const lightGalleryRef = useRef(null);
   const [currentPageImages, setCurrentPageImages] = useState([]);
   const photoCount = Math.min(photos.length, maxDisplayPhotos);
@@ -18,7 +19,7 @@ const PhotoGallery = ({ photos }) => {
     const images = photos.map((photo) => ({
       src: photo.src,
       thumb: photo.src,
-      subHtml: photo.alt || photo.caption || '',
+      subHtml: photo.alt || photo.caption || "",
     }));
     setCurrentPageImages(images);
   }, [photos]);
@@ -59,11 +60,7 @@ const PhotoGallery = ({ photos }) => {
       return (
         <div className="gallery-grid">
           {photos.slice(0, 2).map((photo, index) => (
-            <div
-              key={index}
-              className="gallery-item"
-              onClick={() => openGallery(index)}
-            >
+            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
               <img
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
@@ -81,11 +78,7 @@ const PhotoGallery = ({ photos }) => {
         <div className="gallery-grid-three-photos">
           <div className="gallery-top-row">
             {photos.slice(0, 2).map((photo, index) => (
-              <div
-                key={index}
-                className="gallery-item"
-                onClick={() => openGallery(index)}
-              >
+              <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
                 <img
                   src={photo.src}
                   alt={photo.alt || `Gallery image ${index + 1}`}
@@ -96,10 +89,7 @@ const PhotoGallery = ({ photos }) => {
             ))}
           </div>
           <div className="gallery-bottom-row">
-            <div
-              className="gallery-item"
-              onClick={() => openGallery(2)}
-            >
+            <div className="gallery-item" onClick={() => openGallery(2)}>
               <img
                 src={photos[2].src}
                 alt={photos[2].alt || `Gallery image 3`}
@@ -116,11 +106,7 @@ const PhotoGallery = ({ photos }) => {
       return (
         <div className="gallery-grid">
           {photos.slice(0, 4).map((photo, index) => (
-            <div
-              key={index}
-              className="gallery-item"
-              onClick={() => openGallery(index)}
-            >
+            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
               <img
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
@@ -137,11 +123,7 @@ const PhotoGallery = ({ photos }) => {
       <div className="gallery-grid-five-plus-photos">
         <div className="gallery-top-row">
           {photos.slice(0, 3).map((photo, index) => (
-            <div
-              key={index}
-              className="gallery-item"
-              onClick={() => openGallery(index)}
-            >
+            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
               <img
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 1}`}
@@ -153,11 +135,7 @@ const PhotoGallery = ({ photos }) => {
         </div>
         <div className="gallery-bottom-row">
           {photos.slice(3, 5).map((photo, index) => (
-            <div
-              key={index + 3}
-              className="gallery-item"
-              onClick={() => openGallery(index + 3)}
-            >
+            <div key={index + 3} className="gallery-item" onClick={() => openGallery(index + 3)}>
               <img
                 src={photo.src}
                 alt={photo.alt || `Gallery image ${index + 4}`}
@@ -165,9 +143,7 @@ const PhotoGallery = ({ photos }) => {
               />
               {photo.caption && <span className="caption">{photo.caption}</span>}
               {index === 1 && extraPhotosCount > 0 && (
-                <div className="overlay">
-                  +{extraPhotosCount}
-                </div>
+                <div className="overlay">+{extraPhotosCount}</div>
               )}
             </div>
           ))}
@@ -177,7 +153,13 @@ const PhotoGallery = ({ photos }) => {
   };
 
   return (
-    <div className={`gallery-container ${photoCount === 1 || photoCount === 2 ? 'gallery-container-single-row' : 'gallery-container-two-rows'}`}>
+    <div
+      className={`gallery-container ${
+        photoCount === 1 || photoCount === 2
+          ? "gallery-container-single-row"
+          : "gallery-container-two-rows"
+      }`}
+    >
       {renderGallery()}
       <LightGallery
         dynamic
