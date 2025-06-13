@@ -16,7 +16,7 @@ Algeria was my second birth. It was there that I first saw myself clearly, as th
 
 Since childhood, I had wrestled with life’s most perplexing questions: What is life? Why do we cling to it so fiercely? Is it driven by our egocentrism, or merely the cowardice to sever what procreation has set in motion?
 
-![](7.jpeg)
-![](8.jpeg)
-![](9.jpeg)
+![](9.jpg)
+![](7.jpg)
+![](8.jpg)
 <p></p>
