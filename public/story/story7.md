@@ -11,5 +11,5 @@ My activism wasn’t confined to words—it was action. I helped ex-Muslims esca
 
 ![](51.jpeg)
 ![](52.jpeg)
-![](50.jpg)
+![](48.jpg)
 <p></p>
