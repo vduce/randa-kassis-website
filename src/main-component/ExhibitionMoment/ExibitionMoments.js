@@ -6,9 +6,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import StyledVideo from "../MyStory/StoryVideo";
-import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
+import { Document, Page, pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
 
 const ExibitionMomentSections = [
   {
@@ -18,9 +22,48 @@ const ExibitionMomentSections = [
   },
 ];
 
+function PdfThumbnail({ file, fileName, onClick }) {
+  const [numPages, setNumPages] = useState(null);
+  const [fileSize, setFileSize] = useState(null);
+
+  useEffect(() => {
+    const computeFileSize = async () => {
+      try {
+        const response = await fetch(
+          `https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${file}`
+        );
+        const blob = await response.blob();
+        const sizeInBytes = blob.size;
+        const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
+        setFileSize(`${sizeInMB.toFixed(2)} MB`);
+      } catch (error) {
+        console.error("Error fetching file size:", error);
+        setFileSize("Unknown size");
+      }
+    };
+    computeFileSize();
+  }, [file]);
+
+  return (
+    <figure className="pdf-thumbnail">
+      <div className="pdf-preview" onClick={onClick}>
+        <Document
+          file={`https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${file}`}
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        >
+          <Page pageNumber={1} width={230} />
+        </Document>
+      </div>
+      <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
+    </figure>
+  );
+}
+
 const ExibitionMoments = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
+  const [pdfToShow, setPdfToShow] = useState(null);
+  const [numPages, setNumPages] = useState(null);
 
   // Calculate initial page and validate sectionId
   const getPageIndex = (id) => {
@@ -51,6 +94,26 @@ const ExibitionMoments = () => {
     };
     fetchMarkdown();
   }, []);
+
+  useEffect(() => {
+    if (pdfToShow) {
+      document.body.classList.add("pdf-open");
+      window.history.pushState({ pdfOpen: true }, "");
+      const handlePopState = (event) => {
+        if (pdfToShow) {
+          setPdfToShow(null);
+          window.history.pushState({ pdfOpen: true }, "");
+        }
+      };
+      window.addEventListener("popstate", handlePopState);
+      return () => {
+        document.body.classList.remove("pdf-open");
+        window.removeEventListener("popstate", handlePopState);
+      };
+    } else {
+      document.body.classList.remove("pdf-open");
+    }
+  }, [pdfToShow, setPdfToShow]);
 
   useEffect(() => {
     const newPage = getPageIndex(sectionId);
@@ -90,16 +153,14 @@ const ExibitionMoments = () => {
   const flushImages = () => {
     if (imageBuffer.length === 0) return null;
 
-    const imgs = imageBuffer.map(({ src, alt }, i) =>
-      ({
-        key: i,
-        src: `https://randa-kassis-website.b-cdn.net/exhibitions/photos/${src}`,
-        alt: alt || "",
-        caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
-        className: "w-full mx-auto rounded shadow-sm",
-        style: { width: "250px", height: "300px", objectFit: "cover" },
-      })
-    );
+    const imgs = imageBuffer.map(({ src, alt }, i) => ({
+      key: i,
+      src: `https://randa-kassis-website.b-cdn.net/exhibitions/photos/${src}`,
+      alt: alt || "",
+      caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
+      className: "w-full mx-auto rounded shadow-sm",
+      style: { width: "250px", height: "300px", objectFit: "cover" },
+    }));
     imageBuffer = [];
     return (
       <div className="d-flex flex-wrap justify-content-center items-start mb-6 -mx-2">
@@ -111,12 +172,17 @@ const ExibitionMoments = () => {
   let lastWasMedia = false;
 
   const components = {
-    img: ({ src, alt, ...props }) => {
-      // console.log("Processing image:", { src, alt, props }); // Debug
-      const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
-      if (isVideo) {
-        lastWasMedia = true;
-        return <StyledVideo url={src} isMobile={window.innerWidth < 768} />;
+    img: ({ src, alt }) => {
+      // console.log("Image component called with src:", src); // Debug
+      if (src?.endsWith(".pdf")) {
+        return (
+          <div
+            onClick={() => setPdfToShow(src)}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <PdfThumbnail file={src} fileName={alt} onClick={() => setPdfToShow(src)} />
+          </div>
+        );
       }
       imageBuffer.push({ src, alt });
       return null;
@@ -141,11 +207,7 @@ const ExibitionMoments = () => {
   const renderMarkdown = (content) => {
     imageBuffer = [];
     const rendered = (
-      <Markdown
-        rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm]}
-        components={components}
-      >
+      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} components={components}>
         {content}
       </Markdown>
     );
@@ -157,6 +219,12 @@ const ExibitionMoments = () => {
         {flushed}
       </>
     );
+  };
+
+  const calculatePageWidth = () => {
+    const screenWidth = window.innerWidth;
+    const isMobile = screenWidth <= 768;
+    return isMobile ? screenWidth : 800;
   };
 
   return (
@@ -206,6 +274,48 @@ const ExibitionMoments = () => {
           </div>
         </div>
       </div>
+
+      {pdfToShow && (
+        <div
+          className="pdf-fullscreen"
+          onClick={() => setPdfToShow(null)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            display: "flex",
+            flexDirection: "column",
+            overflowY: "auto",
+            zIndex: 1001,
+          }}
+        >
+          <Document
+            file={`https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${pdfToShow}`}
+            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+          >
+            <style>
+              {`
+                .react-pdf__Page__canvas {
+                  height: auto !important;
+                }
+              `}
+            </style>
+            <div className="pdf-pages-container">
+              {Array.from({ length: numPages || 0 }, (_, i) => (
+                <Page
+                  key={i}
+                  pageNumber={i + 1}
+                  width={calculatePageWidth()}
+                  className="pdf-page"
+                />
+              ))}
+            </div>
+          </Document>
+        </div>
+      )}
     </Fragment>
   );
 };

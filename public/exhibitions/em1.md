@@ -41,14 +41,14 @@ My final exhibition of 1995 took place in Abu Dhabi from 24 to 29 December, unde
 One month later, encouraged by the success in Abu Dhabi, I organised another exhibition in Al Ain in January 1996.
 
 ![](25.jpg)
-![](26.jpg)
+![](26.jpeg)
 
 In April 1996, I embarked on a different kind of experience. Alongside a director and his team, we began filming a video clip about art, aiming to create a piece that explored the idea of art’s immortality. While all living beings exist only briefly, art endures—like eternity itself. Fittingly, the title of the video clip was Eternity.
 
 ![](27.JPG)
 ![](28.JPG)
 ![](29.JPG)
-![](30.JPG)
+![](30.jpeg)
 ![](31.JPG)
 
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
