@@ -6,7 +6,7 @@ Later, as an adolescent, I repeated the act—not out of naïvety, but with full
 
 Even before I understood rebellion in an intellectual sense, I had already lived it. Algeria shaped me in ways I could never have anticipated. It was there that I grasped the nature of power—how it operates, how it can be resisted. I had moved from a relatively sheltered world into an environment where survival meant more than just existing; it required assertion, defiance, a willingness to stand one’s ground. I was not born a fighter, but Algeria made me one.
 
-
+![](3.jpeg)
 ![](4.jpeg)
 ![](5.jpeg)
 ![](6.jpeg)
