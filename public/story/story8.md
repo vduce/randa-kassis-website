@@ -37,20 +37,47 @@ Determined to continue my fight for a secular, pluralistic Syria, I established 
 
 One of the key political initiatives I led was the Astana Platform, which I launched with Fabien in 2015 after requesting that the President of Kazakhstan create a space to bring together moderate Syrian opposition figures.
 
-Video 1
-
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/450696/63c57e59-832b-4cfc-889e-6799ed621cb0?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>
+<p></p>
+<br>
 
 I took part in the 2016 Geneva Peace Talks as a member of the Moscow/Astana groups, serving as Co-President alongside Qadri Jamil within the Syrian secular and democratic opposition delegation.
 
 ![](67.jpeg)
-![](68.jpeg)
 ![](69.jpeg)
+![](68.jpeg)
 
 Once again, both allies and adversaries conspired to exclude me from the Geneva negotiations in 2017. However, Fabien and I responded by launching a new initiative to establish a constitutional committee. This effort was made possible with the support of former Italian Foreign Minister Giulio Terzi and former Turkish Foreign Minister Yaşar Yakış, as well as the collaboration of Syrian and French constitutional experts.
 
-Video 2, 3
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/450696/2574c6dc-c64f-4ec9-a659-9b74ab7d4e9a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>
+<p></p>
 
+<br>
 
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/450696/c5a46a3a-ad20-44e5-8c8e-ebf512c660de?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>
+<p></p>
+<br>
  
 On 13 January 2018, I, along with other members of the Astana Platform, took part in the Syrian National Congress as President of the Astana Platform. There, I emphasised the urgency of establishing a constitutional committee to facilitate Syria’s peace process. The proposal was later adopted by the United Nations and the Astana Troika (Russia, Iran, and Turkey), marking a significant step towards a political resolution.
 

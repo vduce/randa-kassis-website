@@ -7,7 +7,7 @@ import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // Added for GFM support
 import StyledVideo from "./StoryVideo";
-import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
+import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 
 const storySections = [
   {
@@ -176,7 +176,7 @@ const MyStory = () => {
     imageBuffer = [];
     return (
       <div className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2">
-        <PhotoGallery photos={imgs} />
+        <PhotoGalleryEd photos={imgs} />
       </div>
     );
   };
