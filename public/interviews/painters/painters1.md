@@ -68,10 +68,10 @@
 ![Damascus 1995](48-Damascus1995.pdf)
 ![Damascus 1995](45-Damascus1995.pdf)
 
-![AbuDhab 1995](29-AbuDhab1995.pdf)
-![AbuDhab 1995](28-AbuDhab1995.pdf)
-![AbuDhab 1995](27-AbuDhab1995.pdf)
-![AbuDhab 1995](26-AbuDhab1995.pdf)
+![AbuDhabi 1995](29-AbuDhabi1995.pdf)
+![AbuDhabi 1995](28-AbuDhabi1995.pdf)
+![AbuDhabi 1995](27-AbuDhabi1995.pdf)
+![AbuDhabi 1995](26-AbuDhabi1995.pdf)
 
 ![Dubai 1995](25-Dubai995.pdf)
 ![Dubai 1995](24-Dubai1995.pdf)
