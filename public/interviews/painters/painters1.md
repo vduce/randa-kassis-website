@@ -56,6 +56,7 @@
 ![Damascus 1996](41-Damascus1996.pdf)
 ![Damascus 1996](40-Damascus1996.pdf)
 ![Damascus 1996](39-Damascus1996.pdf)
+![Damascus 1996](45-Damascus1996.pdf)
 ![Video Clip 1996](38-videoclip1996.pdf)
 ![Video Clip 1996](37-videoclip1996.pdf)
 ![Alain 1996](36-Alain1996.pdf)
@@ -68,7 +69,6 @@
 ![Abu Dhabi 1996](31-AbuDhabi1996.pdf)
 ![Abu Dhabi 1996](30-AbuDhabi1996.pdf)
 ![Damascus 1995](48-Damascus1995.pdf)
-![Damascus 1995](45-Damascus1995.pdf)
 
 ![AbuDhabi 1995](29-AbuDhabi1995.pdf)
 ![AbuDhabi 1995](28-AbuDhabi1995.pdf)
