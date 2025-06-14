@@ -34,6 +34,7 @@ import Paintings from "../Paintings/Paintings";
 import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
 import EncAndDialFullWidth from "../EncounterAndDialoguePage/EncAndDialFull";
 import EncAndDialDetails from "../EncounterAndDialoguePage/EncAndDialDetails";
+import ThePainter from "../Interview/ThePainter";
 
 const AllRoute = () => {
   return (
@@ -76,6 +77,7 @@ const AllRoute = () => {
           <Route path="privacy" element={<PrivacyPage />} />
           <Route path="terms" element={<TermsPage />} />
           <Route path="media" element={<Media />} />
+          <Route path="interview/the-painter" element={<ThePainter />} />
           <Route path="404" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
