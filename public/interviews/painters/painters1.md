@@ -56,6 +56,8 @@
 ![Damascus 1996](41-Damascus1996.pdf)
 ![Damascus 1996](40-Damascus1996.pdf)
 ![Damascus 1996](39-Damascus1996.pdf)
+![Video Clip 1996](38-videoclip1996.pdf)
+![Video Clip 1996](37-videoclip1996.pdf)
 ![Alain 1996](36-Alain1996.pdf)
 
 ![Alain 1996](35-Alain1996.pdf)
