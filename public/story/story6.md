@@ -31,7 +31,7 @@ Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself i
 
 ![](46.jpeg)
 ![](47.jpeg)
-![](50.jpeg)
+![](48.jpeg)
 ![](49.jpeg)
 
 <p></p>
