@@ -1,8 +1,8 @@
 <h4>Interview with Randa Kassis</h4>
 
-Newspaper Al-Watan 
+Newspaper Al-Watan
 <br>
-19 February 2020 
+19 February 2020
 <br>
 By Rania Suleiman
 
