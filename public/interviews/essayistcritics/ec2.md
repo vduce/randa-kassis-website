@@ -1,4 +1,4 @@
-<h4>Interview with Randa Kassis</h4>h4> 
+<h4>Interview with Randa Kassis</h4>
 
 Newspaper Al-Watan 
 <br>
@@ -7,8 +7,10 @@ Newspaper Al-Watan
 By Rania Suleiman
 
 Randa Kassis is a leading figure in the Syrian opposition and president of the Astana Platform. She began her career as an artist, but later felt compelled to change direction, studying theatre in Paris, where she discovered a passion for writing. Her work has explored religion, the rights of Arab women, the breaking of taboos in the Arab world, and the defence of freedom of speech and individual liberties. She is also a committed advocate for animal welfare and, in 2016, established a shelter for stray dogs and cats in the Peloponnese, Greece.
+
 In this interview, Syrian politician and writer Randa Kassis—now regarded as one of the most prominent intellectual voices in the Arab world—discusses her journey and vision for reform in Arab societies.
-To begin with: from art to writing, and then to politics… in which of these chapters did you most recognise yourself?
+
+<b>To begin with: from art to writing, and then to politics… in which of these chapters did you most recognise yourself?</b>
 I see myself in all of them. But I would say that politics has enabled me to bring together all the tools I’ve acquired and apply them in service of the cause I believe in. Politics became the natural continuation of my evolving convictions—both those already formed and those still emerging.
 I believe political engagement fosters a more expansive and adaptive understanding of life. My rebellion against societal constraints has always driven me to question social behaviour and seek change—through encouraging awareness of alternative cultural frameworks that may lead us to a freer, more conscious mode of existence. This idea has inspired me to explore different tools and experiences at every stage of my life, allowing me to refine my emotions and, consequently, reshape my consciousness and worldview. Politics, in this context, is the tangible means through which one can translate vision into action on the ground.
 Have you not become weary of political work—especially after some long and difficult years?
