@@ -100,4 +100,4 @@ Although her academic work was sometimes criticised for lacking rigour, such cri
 Mernissi wrote extensively in French, English, and Arabic. Her major works include Beyond the Veil, Islam and Democracy, Women’s Dreams of the Harem, and Dreams of Trespass. In 2003, she was awarded the Prince of Asturias Award for Literature alongside Susan Sontag, and in 2004 she received the Erasmus Prize. She passed away in Rabat in November 2015.
 
 ![](1.pdf)
-
+<p></p>
