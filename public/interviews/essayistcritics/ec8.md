@@ -1,10 +1,8 @@
 <h4>Randa Kassis: “In Syria, the West is Blind”</h4>
 
-Valeurs Actuelles
-<br>
-23 March 2015
-<br>
-By Frédéric Pons
+Valeurs Actuelles  
+23 March 2015  
+By Frédéric Pons  
 
 Interview with Randa Kassis. A courageous voice of Syria’s secular opposition, Kassis reflects on the state of her country, the real stakes of the conflict, and the West’s dangerously misguided posture.
 
