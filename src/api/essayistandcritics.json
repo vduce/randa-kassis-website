@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "filename": "article1.md",
+    "filename": "ec1.md",
     "title": "The American Mirage: Between the Guardian Illusion and the Naivety of Dualism",
     "publishedIn": "Published in Al-Ahram Newspaper",
     "publishedAt": "28 February 2022",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "filename": "article2.md",
+    "filename": "ec2.md",
     "title": "Who Will Win \u201cHumanity\u201d?",
     "publishedIn": "Published in Al-Ahram Newspaper",
     "publishedAt": "9 February 2022",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "filename": "article3.md",
+    "filename": "ec3.md",
     "title": "The Parrot Syndrome",
     "publishedIn": "Published in Al-Shorouk Newspaper",
     "publishedAt": "1 February 2022",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "filename": "article4.md",
+    "filename": "ec4.md",
     "title": "Turkey \u2013 Spring of Peace, or a Fountain of Death and Destruction?",
     "publishedIn": "Published in Al-Shorouk Newspaper",
     "publishedAt": "19 October 2019",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "filename": "article5.md",
+    "filename": "ec5.md",
     "title": "In Syria: Revolt and Secularity",
     "publishedIn": "10 June 2015",
     "publishedAt": "",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "filename": "article6.md",
+    "filename": "ec6.md",
     "title": "Turkey: Is It Still Our Ally?",
     "publishedIn": "Published in Le Figaro",
     "publishedAt": "24 September 2014",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "filename": "article7.md",
+    "filename": "ec7.md",
     "title": "The Arab Spring: Caught Between a Siberian Winter and a Desert Summer \u2013 A Crisis of Extremes",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "4 August 2013",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "filename": "article8.md",
+    "filename": "ec8.md",
     "title": "Syria\u2019s Identity: The Richness of Minorities",
     "publishedIn": "Published in Fikra Forum",
     "publishedAt": "2 August 2012",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "filename": "article9.md",
+    "filename": "ec9.md",
     "title": "The Islamisation of the Uprising and the Loss of Syria",
     "publishedIn": "Published in Fikra Forum",
     "publishedAt": "27 April 2012",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "filename": "article10.md",
+    "filename": "ec10.md",
     "title": "Arab Revolutions and Political Islam",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "12 July 2011",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "filename": "article11.md",
+    "filename": "ec11.md",
     "title": "Memory and Consciousness \u2013 Part I",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "24 May 2011",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "filename": "article12.md",
+    "filename": "ec12.md",
     "title": "Memory and Consciousness \u2013 Part II",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "29 May 2011",
@@ -97,7 +97,7 @@
   },
   {
     "id": 13,
-    "filename": "article13.md",
+    "filename": "ec13.md",
     "title": "The Syrian Regime and the Philosophy of Despotism",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "14 April 2011",
@@ -105,7 +105,7 @@
   },
   {
     "id": 14,
-    "filename": "article14.md",
+    "filename": "ec14.md",
     "title": "Political Islam and Ideology: Two Faces of Tyranny",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "19 March 2011",
@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "filename": "article15.md",
+    "filename": "ec15.md",
     "title": "The Street\u2019s Revolt and the New Artisan of Peoples\u2019 Destiny",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "13 February 2011",
@@ -121,7 +121,7 @@
   },
   {
     "id": 16,
-    "filename": "article16.md",
+    "filename": "ec16.md,
     "title": "Samurai Wisdom and the Islamist Threat",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "27 January 2011",
@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "filename": "article17.md",
+    "filename": "ec17.md",
     "title": "Tunisia on Life Support",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "11 January 2011",
@@ -137,7 +137,7 @@
   },
   {
     "id": 18,
-    "filename": "article18.md",
+    "filename": "ec18.md",
     "title": "Bouazizi\u2019s Revolt: The Birth of a New Life Project",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "1 January 2011",
@@ -145,7 +145,7 @@
   },
   {
     "id": 19,
-    "filename": "article19.md",
+    "filename": "ec19.md",
     "title": "In the Beginning Was the Totem Animal \u2013 Part I",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "5 December 2010",
@@ -153,7 +153,7 @@
   },
   {
     "id": 20,
-    "filename": "article20.md",
+    "filename": "ec20.md",
     "title": "In the Beginning was the Totem Animal \u2013 Part II",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "28 November 2010",
@@ -161,7 +161,7 @@
   },
   {
     "id": 21,
-    "filename": "article21.md",
+    "filename": "ec21.md",
     "title": "Where Does Arab Culture Stand in Relation to Secularism?",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "21 November 2010",
@@ -169,7 +169,7 @@
   },
   {
     "id": 22,
-    "filename": "article22.md",
+    "filename": "ec22.md",
     "title": "The Right to Differ in the Methodology of Thought",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "14 September 2010",
@@ -177,7 +177,7 @@
   },
   {
     "id": 23,
-    "filename": "article23.md",
+    "filename": "ec23.md",
     "title": "Argument for a National Deflower Day",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "9 September 2010",
@@ -185,7 +185,7 @@
   },
   {
     "id": 24,
-    "filename": "article24.md",
+    "filename": "ec24.md",
     "title": "Men of the Cloth and Their Neuroses",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "3 September 2010",
@@ -193,7 +193,7 @@
   },
   {
     "id": 25,
-    "filename": "article25.md",
+    "filename": "ec25.md",
     "title": "The Dysfunction of Perception in the Presence of the Absolute",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "23 August 2010",
@@ -201,7 +201,7 @@
   },
   {
     "id": 26,
-    "filename": "article26.md",
+    "filename": "ec26.md",
     "title": "The Pinnacle of Pleasure and Consonance",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "30 July 2010",
@@ -209,7 +209,7 @@
   },
   {
     "id": 27,
-    "filename": "article27.md",
+    "filename": "ec27.md",
     "title": "Religion in Its Relation to Verbal Aggression",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "12 July 2010",
@@ -217,7 +217,7 @@
   },
   {
     "id": 28,
-    "filename": "article28.md",
+    "filename": "ec28.md",
     "title": "Religion\u2026 and the Projection of Infantile Instincts \u2013 Part I",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "21 June 2010",
@@ -225,7 +225,7 @@
   },
   {
     "id": 29,
-    "filename": "article29.md",
+    "filename": "ec29.md",
     "title": "Religion\u2026 and the Projection of Infantile Instincts \u2013 Part II",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "25 June 2010",
@@ -233,7 +233,7 @@
   },
   {
     "id": 30,
-    "filename": "article30.md",
+    "filename": "ec30.md",
     "title": "Reviving the God from Within: The Roots of Inner Conflict",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "7 June 2010",
@@ -241,7 +241,7 @@
   },
   {
     "id": 31,
-    "filename": "article31.md",
+    "filename": "ec31.md",
     "title": "The Ego\u2019s Enmity Towards Freedom",
     "publishedIn": "Published in Elaph",
     "publishedAt": "30 May 2010",
@@ -249,170 +249,11 @@
   },
   {
     "id": 32,
-    "filename": "article32.md",
+    "filename": "ec32.md",
     "title": "Sexual Intercourse and the Return to the Womb",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "28 May 2010",
     "description": "In a previous article, \u201cThe Sex and Death Syndrome\u201d, I explored the underlying fear within the male psyche of losing his genital organ. In this piece, I turn to examine the psychological roots of that fear, commonly known in psychoanalysis as the castration complex. Otto Rank proposed that the origi"
-  },
-  {
-    "id": 33,
-    "filename": "article33.md",
-    "title": "The Belligerence of the Abrahamic Covenant",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "14 May 2010",
-    "description": "My mind drifts, then collapses\u2014it betrays me. I can neither focus nor accomplish anything. I attempt to rearrange my thoughts, to organise facts, only to falter before I\u2019ve even begun. For a few minutes, I ponder the disease and its possible remedy, but I find nothing\u2014nothing but a wild urge to stra"
-  },
-  {
-    "id": 34,
-    "filename": "article34.md",
-    "title": "The Sex \u2013 Death Syndrome",
-    "publishedIn": "Published in Elaph",
-    "publishedAt": "2 May 2010",
-    "description": "Over the years, many psychologists and anthropologists have delved into ancient belief systems, and some have concluded that understanding the human sexual instinct is key to deciphering the myths that gave rise to spirituality and religion. According to this view, the genital region lies at the sym"
-  },
-  {
-    "id": 35,
-    "filename": "article35.md",
-    "title": "No Freedom for the Thieves of Freedom",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "23 April 2010",
-    "description": "Whilst boasting of their god\u2019s forbearance, \u201cbelievers\u201d are often the first to cast accusations at those who differ from them. They perpetually whinge and whine, claiming to be victims of moral persecution\u2014especially when they constitute a religious minority in foreign societies which, according to "
-  },
-  {
-    "id": 36,
-    "filename": "article36.md",
-    "title": "Paris and What it Means to Me \u2013 Part 1",
-    "publishedIn": "Published in Elaph",
-    "publishedAt": "15 April 2010",
-    "description": "The quest for something lost and found after many years has long stirred my imagination. It has been a major driving force throughout my life. I was seeking a kind of freedom\u2014one that allows the self to inhabit every being and become one with Mother Nature, much like a child who, without understandi"
-  },
-  {
-    "id": 37,
-    "filename": "article37.md",
-    "title": "Paris and What it Means to Me \u2013 Part 2",
-    "publishedIn": "Published in Elaph",
-    "publishedAt": "21 April 2010",
-    "description": "France, in the context of the reflections above, appears to me as a sum of contradictory emotions stirred each time I utter her name. I feel lost here. Her history of struggle, which led to the downfall of monarchical tyranny and the rejection of any constraint on the freedom of the French people, g"
-  },
-  {
-    "id": 38,
-    "filename": "article38.md",
-    "title": "The Sons of Sin",
-    "publishedIn": "Published in Elaph",
-    "publishedAt": "7 April 2010",
-    "description": "Our Arab societies, one notices, are suffering from a culture shaped by the sin complex, which is firmly and strongly established in our religious doctrines and value systems. We are the grandsons and granddaughters of a culture of self-crucifixion and knowledge-flogging, inheritors of the original "
-  },
-  {
-    "id": 39,
-    "filename": "article39.md",
-    "title": "Thought and Religion: Two Separate Paths",
-    "publishedIn": "Published in Elaph",
-    "publishedAt": "31 March 2010",
-    "description": "In Arab societies, the rational individual aspires to separate religion from politics, hoping to replicate the secularisation experienced elsewhere. Yet upon closer examination, it becomes clear that a more urgent demand precedes this political aim: the total and unconditional separation of religion"
-  },
-  {
-    "id": 40,
-    "filename": "article40.md",
-    "title": "The Delirium of Prophets",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "13 March 2010",
-    "description": "Human beings engage with their environment through two interwoven perceptual experiences. The first is internal, arising from sensory interaction with the external world. Over time, however, this internal experience is shaped by collective structures and environmental influences, eventually forming "
-  },
-  {
-    "id": 41,
-    "filename": "article41.md",
-    "title": "The Flip Side of Religion",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "22 February 2010",
-    "description": "We often speak rashly of fables and myths, ridiculing their meaning and principles as relics of a bygone era. Yet what many fail to recognise is their omnipresence and their elusive, enduring influence. It is often difficult to grasp the extent to which they are embedded in our everyday practices an"
-  },
-  {
-    "id": 42,
-    "filename": "article42.md",
-    "title": "The Unconscious: Between the Fixed and the Fluid",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "6 February 2010",
-    "description": "Psychology, in its various schools and branches, has offered us a deeper understanding of the self and of our inner psychological stirrings. Yet some still cast doubt on its status as a science\u2014a scepticism which, in my view, arises less from objective reasoning than from deeply rooted beliefs and p"
-  },
-  {
-    "id": 43,
-    "filename": "article43.md",
-    "title": "Infinite Slumber",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "13 December 2009",
-    "description": "Let me begin by addressing our religious friends who persist in preaching the virtues of their tolerant faith\u2014declaring its openness to all the straying souls who have wandered from God\u2019s flock. If God is indeed so merciful and generous, then surely His followers must exhibit patience towards those "
-  },
-  {
-    "id": 44,
-    "filename": "article44.md",
-    "title": "Ardi Between Darwin and Religion",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "17 October 2009",
-    "description": "I have long wondered why Arab societies remain distant from scientific facts, and why myth and religious legend continue to exert such magnetic pull. Over time, I\u2019ve come to see that the root of the problem lies in the inability of our journalists and editors to relay information with accuracy. Inst"
-  },
-  {
-    "id": 45,
-    "filename": "article45.md",
-    "title": "An Anthropological Perspective on the Origins of Morality",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "16 June 2009",
-    "description": "We continue to chase after words, manuscripts, and myths in pursuit of a history steeped in mystery. Few things are more essential to the human condition than the thirst for knowledge. It is this yearning that prevents us from halting midway or reconciling religion with science\u2014for science marks an "
-  },
-  {
-    "id": 46,
-    "filename": "article46.md",
-    "title": "The Deification of the Superego",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "15 October 2008",
-    "description": "For much of human history, people lived in a state of unconsciousness, driven by primal urges and the instinctive pursuit of their satisfaction. Yet the need for safety\u2014and protection from predatory creatures\u2014compelled humans to seek refuge in the collective. Thus began a long journey towards indivi"
-  },
-  {
-    "id": 47,
-    "filename": "article47.md",
-    "title": "The Fourth Order of Racism",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "26 August 2008",
-    "description": "Over the ages, humankind has endured various forms of self-inflicted violence and oppression. With the gradual establishment of principles promoting social justice and equality, this age-old tendency towards violence and self-destruction has been tempered\u2014but not entirely overcome. Narrow self-inter"
-  },
-  {
-    "id": 48,
-    "filename": "article48.md",
-    "title": "The Influence of Chinese Philosophy on Eighteenth-Century Europe",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "13 July 2008",
-    "description": "There is little doubt that societies pass through various phases and undergo profound upheavals that lead to pivotal shifts in their structure. These transformations result in the emergence of new characteristics that help societies expand and progress. Such transitional periods are often accompanie"
-  },
-  {
-    "id": 49,
-    "filename": "article49.md",
-    "title": "Sectarian Thought and Intellectual Sterility",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "23 June 2008",
-    "description": "If sectarianism constitutes the most acute form of psychological isolation among individuals and groups, it likewise represents the most advanced stage of intellectual sterility. The mind enclosed within the confines of sectarian identity is deprived of renewal and creativity. As Nietzsche once obse"
-  },
-  {
-    "id": 50,
-    "filename": "article50.md",
-    "title": "In the Swoon of Arab Societies",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "18 June 2008",
-    "description": "Arab societies appear as immovable and unchanging entities\u2014resistant to transformation, retreating into isolation, intolerant of the \u201cother\u201d, and unwilling to engage with difference. This results in a persistent tendency to draw nationalist distinctions, a division between \u201cus\u201d and \u201cthem\u201d. Ironicall"
-  },
-  {
-    "id": 51,
-    "filename": "article51.md",
-    "title": "The Search for the Creator",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "16 June 2008",
-    "description": "This human machine awakens from a prolonged slumber, striving to retrieve its history and return to memories buried deep within for thousands of years. Yet it fails to grasp the imprints of its past\u2014those inscribed within nature itself. Desperately, it turns to its stones, seeking to triumph over na"
-  },
-  {
-    "id": 52,
-    "filename": "article52.md",
-    "title": "The \u201cGroup\u201d Effect",
-    "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
-    "publishedAt": "10 June 2008",
-    "description": "From the moment he is born, the Arab citizen remains bound to his destiny and to the society in which he places an unquestioned and absolute faith. As a result, he rejects the psychological evolution that challenges him, depriving himself of the ability to be open to external ideas. In doing so, he "
   }
 ]
+  
