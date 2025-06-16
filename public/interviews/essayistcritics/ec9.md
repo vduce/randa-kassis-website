@@ -1,10 +1,8 @@
 <h4>Under the Spotlight – Sex and the Arabs: The Great Confusion!</h4>
 
-An-Nahar Newspaper
-<br>
-14 July 2014
-<br>
-By Hamid Zanar
+An-Nahar Newspaper  
+14 July 2014  
+By Hamid Zanar  
 
 Arab thinkers – and even jurists – of earlier centuries were neither repressed by nor uncomfortable with the subject of sex and sexuality. Their approach was open and unembarrassment, especially in contrast with contemporary attitudes. Their stance was open and liberated in comparison to what we see today. So why and how did Arab societies shift from openly embracing pleasure to a life of secrecy and prohibition? What caused this regression? In this survey, several Arab researchers provide elements of an answer.
 
