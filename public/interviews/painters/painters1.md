@@ -74,8 +74,8 @@
 ![AbuDhabi 1995](28-AbuDhabi1995.pdf)
 
 ![AbuDhabi 1995](27-AbuDhabi1995.pdf)
-![AbuDhabi 1995](26-AbuDhabi1995.pdf)
-![Dubai 1995](25-Dubai995.pdf)
+![AbuDhabi 1995](26-AbuDhabu1995.pdf)
+![Dubai 1995](25-Dubai1995.pdf)
 ![Dubai 1995](24-Dubai1995.pdf)
 
 ![Dubai 1995](23-Dubai1995.pdf)
