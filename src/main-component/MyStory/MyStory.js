@@ -8,6 +8,49 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // Added for GFM support
 import StyledVideo from "./StoryVideo";
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
+
+function PdfThumbnail({ file, fileName, onClick }) {
+  const [numPages, setNumPages] = useState(null);
+  const [fileSize, setFileSize] = useState(null);
+
+  useEffect(() => {
+    const computeFileSize = async () => {
+      try {
+        const response = await fetch(`https://randa-kassis-website.b-cdn.net/mystory/pdf/${file}`);
+        const blob = await response.blob();
+        const sizeInBytes = blob.size;
+        const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
+        setFileSize(`${sizeInMB.toFixed(2)} MB`);
+      } catch (error) {
+        console.error("Error fetching file size:", error);
+        setFileSize("Unknown size");
+      }
+    };
+    computeFileSize();
+  }, [file]);
+
+  return (
+    <figure className="pdf-thumbnail">
+      <div className="pdf-preview" onClick={onClick}>
+        <Document
+          file={`https://randa-kassis-website.b-cdn.net/mystory/pdf/${file}`}
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        >
+          <Page pageNumber={1} width={230} />
+        </Document>
+      </div>
+      <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
+    </figure>
+  );
+}
 
 const storySections = [
   {
@@ -85,6 +128,8 @@ const storySections = [
 const MyStory = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
+  const [pdfToShow, setPdfToShow] = useState(null);
+  const [numPages, setNumPages] = useState(null);
 
   // Calculate initial page and validate sectionId
   const getPageIndex = (id) => {
@@ -115,6 +160,26 @@ const MyStory = () => {
     };
     fetchMarkdown();
   }, []);
+
+  useEffect(() => {
+    if (pdfToShow) {
+      document.body.classList.add("pdf-open");
+      window.history.pushState({ pdfOpen: true }, "");
+      const handlePopState = (event) => {
+        if (pdfToShow) {
+          setPdfToShow(null);
+          window.history.pushState({ pdfOpen: true }, "");
+        }
+      };
+      window.addEventListener("popstate", handlePopState);
+      return () => {
+        document.body.classList.remove("pdf-open");
+        window.removeEventListener("popstate", handlePopState);
+      };
+    } else {
+      document.body.classList.remove("pdf-open");
+    }
+  }, [pdfToShow, setPdfToShow]);
 
   useEffect(() => {
     const newPage = getPageIndex(sectionId);
@@ -154,30 +219,17 @@ const MyStory = () => {
   const flushImages = () => {
     if (imageBuffer.length === 0) return null;
 
-    const imgs = imageBuffer.map(({ src, alt }, i) =>
-      // <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
-      //   <img
-      //     src={`/photos/${src}`} // Ensure this path is correct
-      //     alt={alt || ""}
-      //     className="w-full mx-auto rounded shadow-sm"
-      //     style={{ width: "250px", height: "300px", objectFit: "cover" }} // Adjust size as needed
-      //   />
-      //   {alt && <figcaption className="text-sm text-gray-500 mt-2">{alt}</figcaption>}
-      // </figure>
-      ({
-        key: i,
-        src: `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`,
-        alt: alt || "",
-        caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
-        className: "w-full mx-auto rounded shadow-sm",
-        style: { width: "250px", height: "300px", objectFit: "cover" },
-      })
-    );
+    const imgs = imageBuffer.map(({ src, alt }, i) => ({
+      key: i,
+      src: `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`,
+      alt: alt || "",
+      caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
+      className: "w-full mx-auto rounded shadow-sm",
+      style: { width: "250px", height: "300px", objectFit: "cover" },
+    }));
     imageBuffer = [];
     return (
-      <div
-        className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2"
-      >
+      <div className="d-flex flex-wrap justify-content-center items-start mx-2">
         <PhotoGalleryEd photos={imgs} />
       </div>
     );
@@ -186,12 +238,16 @@ const MyStory = () => {
   let lastWasMedia = false;
 
   const components = {
-    img: ({ src, alt, ...props }) => {
-      // console.log("Processing image:", { src, alt, props }); // Debug
-      const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
-      if (isVideo) {
-        lastWasMedia = true;
-        return <StyledVideo url={src} />;
+    img: ({ src, alt }) => {
+      if (src?.endsWith(".pdf")) {
+        return (
+          <div
+            onClick={() => setPdfToShow(src)}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <PdfThumbnail file={src} fileName={alt} onClick={() => setPdfToShow(src)} />
+          </div>
+        );
       }
       imageBuffer.push({ src, alt });
       return null;
@@ -224,7 +280,6 @@ const MyStory = () => {
         {content}
       </Markdown>
     );
-    console.log("Image buffer before flush:", imageBuffer); // Debug
     const flushed = flushImages();
     return (
       <>
@@ -232,6 +287,12 @@ const MyStory = () => {
         {flushed}
       </>
     );
+  };
+
+  const calculatePageWidth = () => {
+    const screenWidth = window.innerWidth;
+    const isMobile = screenWidth <= 768;
+    return isMobile ? screenWidth : 800;
   };
 
   return (
@@ -281,6 +342,48 @@ const MyStory = () => {
           </div>
         </div>
       </div>
+
+      {pdfToShow && (
+        <div
+          className="pdf-fullscreen"
+          onClick={() => setPdfToShow(null)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            display: "flex",
+            flexDirection: "column",
+            overflowY: "auto",
+            zIndex: 1001,
+          }}
+        >
+          <Document
+            file={`https://randa-kassis-website.b-cdn.net/mystory/pdf/${pdfToShow}`}
+            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+          >
+            <style>
+              {`
+                      .react-pdf__Page__canvas {
+                        height: auto !important;
+                      }
+                    `}
+            </style>
+            <div className="pdf-pages-container">
+              {Array.from({ length: numPages || 0 }, (_, i) => (
+                <Page
+                  key={i}
+                  pageNumber={i + 1}
+                  width={calculatePageWidth()}
+                  className="pdf-page"
+                />
+              ))}
+            </div>
+          </Document>
+        </div>
+      )}
     </Fragment>
   );
 };

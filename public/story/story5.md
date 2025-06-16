@@ -12,9 +12,9 @@ I never cared for perfect symmetry or predictable aesthetics. I paint to merge c
 
 I’ve exhibited my work in different places, seen people stare, question, sometimes even recoil. And I embrace that. Art should be unsettling. It should gnaw at something inside you—push you to see beyond the surface. 
 
-![](25.jpeg)
 ![](26.jpeg)
 ![](27.jpeg)
 ![](28.jpeg)
+![](25.jpeg)
 ![](29.jpeg)
 <p></p>

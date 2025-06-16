@@ -1,7 +1,7 @@
 <center><h4>Prologue</h4></center>
 
 ![died 26 February 2025](1.jpg)
-![died 24 June 1990](2.jpeg)
+![died 24 June 1990](2.jpg)
 
 I have no right to weep for you, for I was never by your side. I have no right to speak of pain, for I was always far from you.
 

@@ -143,7 +143,6 @@ const EdSingle = () => {
     if (mediaBuffer.length === 0 && photoBuffer.length === 0) return null;
     const nodes = [...mediaBuffer];
     if (photoBuffer.length > 0) {
-      console.log("Flushing PhotoGallery with photos:", photoBuffer); // Debug log
       nodes.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
       photoBuffer = []; // Clear the buffer after flushing
     }
