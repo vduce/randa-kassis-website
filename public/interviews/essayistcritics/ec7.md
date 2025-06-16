@@ -1,8 +1,7 @@
 <h4>Randa Kassis: “I do not believe in moderate Islam.”</h4>
 
-La Baule
-<br>
-24 March 2015
+La Baule  
+24 March 2015  
 
 Randa Kassis is a woman of exceptional courage. She is the founder of the Movement for a Pluralistic Society in Syria and once held a seat on the Syrian National Council (SNC), representing the Syrian Secular Coalition. However, she was later excluded from the Council for being the first to speak openly about the Islamist threat within the Syrian opposition. At the time, few were willing to listen. In retrospect, however, events have vindicated her warnings.
 
