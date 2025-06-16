@@ -29,7 +29,7 @@ Yet, over time, I found myself caught between two forces—one that compelled me
 
 ![](18.jpeg)
 ![](19.jpeg)
-![](20.jpeg)
+![](00020.JPG)
 
 I met a young Israeli woman, the same age as me, and we became very close. Her life was a tragedy in itself—a mother who had survived the Shoah, a father who refused to acknowledge her, and the wreckage of two failed love stories. Over time, life became increasingly unbearable for her, and depression consumed her until, one day, she chose to surrender herself to death.
 

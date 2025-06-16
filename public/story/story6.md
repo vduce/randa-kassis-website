@@ -24,7 +24,7 @@ I drove her to her activities, to see friends—we travelled together, went out 
 Alongside this, I trained in kickboxing and Muay Thai—not just for self-defence, but for self-control. The discipline I gained in combat extended beyond the ring, shaping how I approached life itself.
 
 
-![](45.jpeg)
+![](45.jpg)
 ![](44.jpeg)
 ![](43.jpeg)
 
