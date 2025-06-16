@@ -23,9 +23,10 @@ I drove her to her activities, to see friends—we travelled together, went out 
 
 Alongside this, I trained in kickboxing and Muay Thai—not just for self-defence, but for self-control. The discipline I gained in combat extended beyond the ring, shaping how I approached life itself.
 
-![](43.jpeg)
+
+![](45.jpeg)
 ![](44.jpeg)
-![](45.jpg)
+![](43.jpeg)
 
 Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself in performance and storytelling. Theatre gave me a voice—a structured yet liberating way to channel my thoughts and emotions. It was through this experience that I later began writing for Al Hiwar Al Mutamadin.
 
