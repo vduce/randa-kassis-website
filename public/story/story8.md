@@ -51,8 +51,8 @@ One of the key political initiatives I led was the Astana Platform, which I laun
 I took part in the 2016 Geneva Peace Talks as a member of the Moscow/Astana groups, serving as Co-President alongside Qadri Jamil within the Syrian secular and democratic opposition delegation.
 
 ![](67.jpeg)
+![](68.jpg)
 ![](69.jpeg)
-![](68.jpeg)
 
 Once again, both allies and adversaries conspired to exclude me from the Geneva negotiations in 2017. However, Fabien and I responded by launching a new initiative to establish a constitutional committee. This effort was made possible with the support of former Italian Foreign Minister Giulio Terzi and former Turkish Foreign Minister Yaşar Yakış, as well as the collaboration of Syrian and French constitutional experts.
 
