@@ -1,10 +1,8 @@
 <h4>ISIS in Palmyra</h4>
 
-HuffPost
-<br>
-27 May 2015
-<br>
-By Umberto De Giovannangeli 
+HuffPost  
+27 May 2015  
+By Umberto De Giovannangeli  
 
 “Now more than ever, the primary imperative must be to confront the Islamic State. The world recoils at the prospect of Palmyra’s destruction, but beside those millennia-old ruins — a cultural heritage of humanity — lie the mutilated bodies of 400 human beings, many of them women and children, slaughtered by al-Baghdadi’s militants. It is not enough to mourn the victims. The free world has a moral duty to act — not only by intensifying airstrikes against ISIS, but also by rearming the Kurdish militias, who are today the only force in Syria and Iraq capable of resisting and defeating the Islamic State.”
 
