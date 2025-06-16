@@ -1,10 +1,8 @@
 <h4>The Islamic State in Palmyra: Blind Destruction or Systematic Looting?</h4>                                    
 
-Art & Critique
-<br>
-17 September 2019
-<br>
-By Guillaume de Sardes
+Art & Critique  
+17 September 2019  
+By Guillaume de Sardes  
 
 The successive destruction of Palmyra by the Islamic State in 2015 and 2017 has often been interpreted as an attempt to purge Syria’s ancient history. Maamoun AbdelKarim, then Director-General of Antiquities and Museums in Syria, once remarked: “The battle for Palmyra is cultural, not political.” However, this perspective overlooks the political dimension of what was—in truth, and perhaps above all—a systematic campaign of plundering. Franco-Syrian essayist and politician Randa Kassis makes this point emphatically.
 
