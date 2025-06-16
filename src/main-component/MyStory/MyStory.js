@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Markdown from "react-markdown";
 import Logo from "../../images/logo.png";
@@ -130,6 +130,10 @@ const MyStory = () => {
   const navigate = useNavigate();
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
+  const imageSrcsRef = useRef([]);
+  let mediaBuffer = [];
+  let photoBuffer = []; // Buffer for consecutive images
+  const lastElementType = useRef(null); // Track the last rendered element type
 
   // Calculate initial page and validate sectionId
   const getPageIndex = (id) => {
@@ -214,50 +218,69 @@ const MyStory = () => {
     }
   };
 
-  let imageBuffer = [];
-
-  const flushImages = () => {
-    if (imageBuffer.length === 0) return null;
-
-    const imgs = imageBuffer.map(({ src, alt }, i) => ({
-      key: i,
-      src: `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`,
-      alt: alt || "",
-      caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
-      className: "w-full mx-auto rounded shadow-sm",
-      style: { width: "250px", height: "300px", objectFit: "cover" },
-    }));
-    imageBuffer = [];
+  const flushMedia = () => {
+    if (mediaBuffer.length === 0 && photoBuffer.length === 0) return null;
+    const nodes = [...mediaBuffer];
+    if (photoBuffer.length > 0) {
+      nodes.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+      photoBuffer = []; // Clear the buffer after flushing
+    }
+    mediaBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mx-2">
-        <PhotoGalleryEd photos={imgs} />
+      <div
+        className="d-flex flex-wrap justify-content-center items-start -mx-2"
+        style={{ gap: "6px" }}
+      >
+        {nodes.map((node, i) => (
+          <React.Fragment key={i}>{node}</React.Fragment>
+        ))}
       </div>
     );
   };
 
-  let lastWasMedia = false;
-
   const components = {
     img: ({ src, alt }) => {
       if (src?.endsWith(".pdf")) {
-        return (
-          <div
-            onClick={() => setPdfToShow(src)}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            <PdfThumbnail file={src} fileName={alt} onClick={() => setPdfToShow(src)} />
-          </div>
+        if (photoBuffer.length > 0) {
+          mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+          photoBuffer = [];
+        }
+        mediaBuffer.push(
+          <PdfThumbnail
+            key={src}
+            file={src}
+            filename={src}
+            onClick={() => {
+              setPdfToShow(src);
+              setNumPages(null);
+            }}
+            className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
+            style={{ width: 300, height: 300 }}
+          />
         );
+        lastElementType.current = "pdf";
+        return null;
       }
-      imageBuffer.push({ src, alt });
-      return null;
+
+      // Flush buffer if the last element was not an image
+      if (photoBuffer.length > 0 && lastElementType.current !== "img") {
+        mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
+        photoBuffer = [];
+      }
+
+      const imageSrc = `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`;
+      imageSrcsRef.current.push(imageSrc);
+      photoBuffer.push({ src: imageSrc, alt: alt || "" });
+      lastElementType.current = "img";
+      return null; // Will be flushed later
     },
     p: ({ children }) => {
-      const flush = flushImages();
+      const flush = flushMedia();
       const hasText = React.Children.toArray(children).some(
         (child) => typeof child === "string" || (child?.type && child.type !== "img")
       );
       if (hasText) {
+        lastElementType.current = "p";
         return (
           <>
             {flush}
@@ -270,7 +293,8 @@ const MyStory = () => {
   };
 
   const renderMarkdown = (content) => {
-    imageBuffer = [];
+    mediaBuffer = [];
+    photoBuffer = []; // Reset photo buffer for each render
     const rendered = (
       <Markdown
         rehypePlugins={[rehypeRaw]}
@@ -280,7 +304,7 @@ const MyStory = () => {
         {content}
       </Markdown>
     );
-    const flushed = flushImages();
+    const flushed = flushMedia();
     return (
       <>
         {rendered}
