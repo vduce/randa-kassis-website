@@ -48,7 +48,7 @@ function PdfThumbnail({ file, alt, onClick }) {
       </div>
       <figcaption className="pdf-info">
         <h5 className="pdf-title">{alt || file}</h5>
-        <p className="pdf-size">
+        <p style={{ fontSize: '15px', color: '#666' }}>
           PDF · {fileSize ? fileSize : "Loading..."}
         </p>
       </figcaption>

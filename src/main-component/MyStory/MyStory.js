@@ -175,7 +175,9 @@ const MyStory = () => {
     );
     imageBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2">
+      <div
+        className="d-flex flex-wrap justify-content-center items-start mb-6 mx-2"
+      >
         <PhotoGalleryEd photos={imgs} />
       </div>
     );
