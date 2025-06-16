@@ -18,5 +18,5 @@ Since childhood, I had wrestled with life’s most perplexing questions: What is
 
 ![](9.jpg)
 ![](7.jpg)
-![](8.jpg)
+![](8.JPG)
 <p></p>

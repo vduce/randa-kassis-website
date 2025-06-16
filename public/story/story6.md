@@ -10,7 +10,7 @@ I drove her to her activities, to see friends—we travelled together, went out 
 ![](30.jpeg)
 ![](31.jpeg)
 ![](32.jpeg)
-![](33.jpeg)
+![](33.jpg)
 ![](34.jpeg)
 ![](35.jpeg)
 ![](36.jpeg)
@@ -25,7 +25,7 @@ Alongside this, I trained in kickboxing and Muay Thai—not just for self-defenc
 
 ![](43.jpeg)
 ![](44.jpeg)
-![](45.jpeg)
+![](45.jpg)
 
 Seeking another artistic outlet, I enrolled at Cours Florent, immersing myself in performance and storytelling. Theatre gave me a voice—a structured yet liberating way to channel my thoughts and emotions. It was through this experience that I later began writing for Al Hiwar Al Mutamadin.
 
