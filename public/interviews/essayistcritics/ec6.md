@@ -12,5 +12,11 @@ BFMTV
 
 On Thursday, Islamic State launched an offensive on the ancient Syrian city of Palmyra. The fighting has already resulted in hundreds of deaths, and the toll may is expected to rise, particularly with the threat of irreparable damage to its invaluable cultural heritage. The city is home to an archaeological site recognised as a UNESCO World Heritage Site.
 
+<p></p>
+<center>
+<div style="position:relative;width: 520px;height: 300px;"><iframe src="(https://iframe.mediadelivery.net/play/455361/207ff757-d173-4170-a46b-926f3ef2f62f)" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+</center>  
+<p></p>
+
 Video 6
 
