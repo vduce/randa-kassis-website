@@ -1,10 +1,8 @@
 <h4>The Successors to Arab Women’s Struggles in the 21st Century</h4> 
 
-Sada El-Baled
-<br>
-11 May 2020
-<br>
-By Majid Fathi
+Sada El-Baled  
+11 May 2020  
+By Majid Fathi  
 
 Since the Egyptian feminist movement began extending its hand to other Arab nations in the late 1930s and 1940s, the Egyptian Feminist Union played a pivotal role in institutionalising feminism across the Arab world. At the time, women’s issues reflected a broader concern shared by Arab countries in the twentieth century: the revival of Arab identity and the expulsion of colonial powers.
 
