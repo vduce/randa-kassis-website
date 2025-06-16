@@ -1,8 +1,7 @@
 <h4>Palmyra: “A Loss to Our Shared Historical Memory”</h4>
 
-BFMTV
-<br>
-21 May 2015
+BFMTV  
+21 May 2015  
 
 <b>Summary:</b>
 
