@@ -1,8 +1,7 @@
 <h4>Arab Freethinkers United Against the Violence of Islam</h4>
 
-La Verita
-<br>
-29 October 2016
+La Verita  
+29 October 2016  
 
 Tomorrow in Rome, from 9:30 a.m. to 2:00 p.m., the international conference The Right to Blasphemy: No to Medieval Trials will take place at the Hotel Nazionale, Piazza Monte Citorio 131. The event is organised by the association Ad Hoc, in collaboration with Una Via per Oriana, chaired by Armando Manocchia.
 
