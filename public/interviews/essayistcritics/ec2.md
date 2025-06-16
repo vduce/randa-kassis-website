@@ -1,10 +1,8 @@
 <h4>Interview with Randa Kassis</h4>
 
-Newspaper Al-Watan
-<br>
-19 February 2020
-<br>
-By Rania Suleiman
+Newspaper Al-Watan  
+19 February 2020  
+By Rania Suleiman  
 
 Randa Kassis is a leading figure in the Syrian opposition and president of the Astana Platform. She began her career as an artist, but later felt compelled to change direction, studying theatre in Paris, where she discovered a passion for writing. Her work has explored religion, the rights of Arab women, the breaking of taboos in the Arab world, and the defence of freedom of speech and individual liberties. She is also a committed advocate for animal welfare and, in 2016, established a shelter for stray dogs and cats in the Peloponnese, Greece.
 
