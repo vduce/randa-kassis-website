@@ -95,7 +95,7 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} className="text-capitalize" to="/media">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/interview/the-painter">
                         Interviews
                       </Link>
                       <ul className="sub-menu">
