@@ -35,6 +35,8 @@ import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
 import EncAndDialFullWidth from "../EncounterAndDialoguePage/EncAndDialFull";
 import EncAndDialDetails from "../EncounterAndDialoguePage/EncAndDialDetails";
 import ThePainter from "../Interview/ThePainter";
+import TheCriticsLayout from "../Interview/TheCritics/TheCriticsLayout";
+import TheCriticsDetail from "../Interview/TheCritics/TheCriticsDetail";
 
 const AllRoute = () => {
   return (
@@ -78,6 +80,8 @@ const AllRoute = () => {
           <Route path="terms" element={<TermsPage />} />
           <Route path="media" element={<Media />} />
           <Route path="interview/the-painter" element={<ThePainter />} />
+          <Route path="interview/the-essayist-the-critic" element={<TheCriticsLayout />} />
+          <Route path="critics-single/:id" element={<TheCriticsDetail />} />
           <Route path="404" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

@@ -6,7 +6,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // Added for GFM support
-import StyledVideo from "./StoryVideo";
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
