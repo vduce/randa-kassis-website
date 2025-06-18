@@ -61,17 +61,19 @@ Raif Badawi, a Saudi blogger, was sentenced in 2003 to ten years in prison and 1
 
 Not to mention Asia Bibi in Pakistan—on whose behalf rivers of ink have been spilled and countless demonstrations of solidarity held worldwide. She was sentenced to death for allegedly ‘offending Islam’ by drinking from a Muslim well and refusing to convert.
 
-Alber Saber, an Egyptian Christian, was arrested after being identified as an administrator of a Facebook group titled Egyptian Atheists. The page had shared a trailer for the controvesial film The Innocence of Muslims. According to Masrawy.com, his arrest was triggered by a tip from a Muslim acquitance.
+Alber Saber, an Egyptian Christian, was arrested after being identified as an administrator of a Facebook group titled “Egyptian Atheists”. The page had shared a trailer for the controversial film The Innocence of Muslims. According to Masrawy.com, his arrest was triggered by a tip-off from a Muslim acquaintance.
 
-Saeed Malekpour, an Iranian-Canadian web developper, was arrested during a visit to Iran because a programme he had created was used—without his knowledge—to upload images to adult websites. Accused of ‘desecrating Islam’, he was tortured and sentenced to death in 2010 by the Revolutionary Court. The verdict was upheld by the Iranian Supreme Court in 2011.
+Saeed Malekpour, an Iranian-Canadian web developer, was arrested during a visit to Iran because a programme he had created was used—without his knowledge—to upload images to adult websites. Accused of ‘desecrating Islam’, he was tortured and sentenced to death in 2010 by the Revolutionary Court. The verdict was upheld by the Iranian Supreme Court in 2011.
 
 Even Erdoğan’s Turkey is treading a similarly obscurantist path. Many Turkish intellectuals—anti-Islamic, Kemalist, secular, and progressive—are not only threatened by radical Islamists, as has long been the case, but are now also condemned by Turkish courts and the neo-Ottoman Islamist government of Erdoğan’s AKP party.
 
-It is clear that this phenomenon is no longer confined to the Arab world; all Islamic lands are increasingly falling under the sway of totalitarian Islamic obscurantism. If we do not act, matters will deteriorate further, and even the ‘enclaves of Islam’ in the West will be affected—rendering the integration of Muslim immigrants ever more challenging.</b>
+It is clear that this phenomenon is no longer confined to the Arab world; all Islamic lands are increasingly falling under the sway of totalitarian Islamic obscurantism. If we do not act, matters will deteriorate further, and even the ‘enclaves of Islam’ in the West will be affected—rendering the integration of Muslim immigrants ever more challenging.
+</b>
 
 Kassis: Indeed, we observe that the primary victims of fundamentalist Islamic intolerance are Muslims themselves—atheists, liberals, and freethinkers. All those who dare to think differently and in an ‘Islamically incorrect’ manner are accused of ‘blasphemy’ and face threats of imprisonment or death.
 
 This is totalitarianism in its starkest form, and it will not cease unless intellectuals begin to denounce it—even at the risk of their lives. Fear is the linchpin of this theocratic-totalitarian system. Thus, the renowned intellectual and writer Nawal El Saadawi was murdered.
+
 I would also recall the case of the Egyptian writer and poet Fatima Naoot, who was forced to flee Egypt after being sentenced to three years’ imprisonment for merely criticising Eid al-Adha—the traditional slaughter of sheep—on Facebook, describing it as ‘the greatest massacre committed by human beings’.
 
 Those who escape assassination or incarceration must live in fear—such as the eminent intellectual Sayyid Al-Qemany, an advisor to our Ad Hoc organisation. We might also mention Kasem El-Ghazzali, who will be in Rome tomorrow. He is a secular writer and one of the few Moroccans to have publicly declared his atheism. El-Ghazzali is the author of the Bahmut blog, one of the most debated platforms in the Arab world, and has received numerous death threats due to his views. During the twenty-fifth session of the Human Rights Council, El-Ghazzali denounced the paradox whereby several intolerant Muslim states—including Saudi Arabia, which sentences ‘blasphemous apostates’ to death—are members of the United Nations Human Rights Commission.
@@ -82,13 +84,13 @@ We must also speak of the courageous Egyptian intellectual Sayyid Al-Qemany, ano
 
 Kassis: Absolutely. Our organisation believes that terrorism can never be vanquished—and groups such as ISIS, Al-Qaeda, and others will never be defeated—so long as Muslim thinkers and Arab intellectuals remain under the threat of blasphemy laws.
 
-The term ‘Islamophobia’, was originally coined by Iranian clerics and later adopted by the Organisatiom of Islamic Cooperation (OIC), sponsored by Saudi Arabia, which effectively serves as the United Nations of the Islamic world. The term has been strategically employed to suppress freedom of expression under the false pretext of combating religious discrimination, paving the way for a new form of  censorship and an Islamist inquisition.
+The term ‘Islamophobia’, was originally coined by Iranian clerics and later adopted by the Organisation of Islamic Cooperation (OIC), sponsored by Saudi Arabia, which effectively serves as the United Nations of the Islamic world. The term has been strategically employed to suppress freedom of expression under the false pretext of combating religious discrimination, paving the way for a new form of  censorship and an Islamist inquisition.
 
-If intellectuals are silenced—by threats, imprisonment, exile, or assassination—who will be left to challenge Islamic extremism? Even in the West, Islam has become the only religion that provokes such danger in criticism. Why? Because the more radical Islamists succeed in spreading fear—whether through psychological intimidation, legally warfare (so-called ‘jihad by court’ or outright terror—the less criticism there is. In turn, public discourse surrenders space to a creeping submission masked as tolerance.
+If intellectuals are silenced—by threats, imprisonment, exile, or assassination—who will remain to challenge Islamic extremism? Even in the West, Islam has become the only religion whose criticism provokes such danger. Why? Because the more radical Islamists succeed in spreading fear—whether through psychological intimidation, legal warfare (so-called ‘jihad by court’), or outright terror—the less criticism there is. In turn, public discourse cedes space to a creeping submission, masked as tolerance.
 
-If secular intellectuals like those participating in the Rome conference are not supported by democratic societies, then who will defend our values and delegitimise the radicals who threaten, persecute, exile, imprison, or kill in the name of sharia? In my view, the role of these intellectuals is paramount. If we do not support them, who will?
+If secular intellectuals—like those participating in the Rome conference—are not supported by democratic societies, then who will defend our values and delegitimise the radicals who threaten, persecute, exile, imprison, or kill in the name of sharia? In my view, the role of these intellectuals is paramount. If we do not support them, who will?
 
-Our failure to do so would, through cowardice, deprive our society of the benefit of their contributions. In doing so, we eliminate any counterbalance to the propagandists of bloodshed, the purveyors of hatred, and the extremists who, as a result, continue to dominate the discourse in the Arab-Islamic world. The fight against terrorism is inextricably linked to the abolition of blasphemy laws
+Our failure to do so would, through cowardice, deprive our society of the benefit of their contributions. In doing so, we eliminate any counterbalance to the propagandists of bloodshed, the purveyors of hatred, and the extremists who, as a result, continue to dominate the discourse in the Arab-Islamic world. The fight against terrorism is inextricably linked to the abolition of blasphemy laws.
 
 ![](4.pdf)
 <p></p>
