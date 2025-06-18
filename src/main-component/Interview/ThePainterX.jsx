@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import Logo from "../../images/logo.png";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -14,18 +14,27 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-// Detect mobile devices
-const isMobile = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+// Detect iOS devices
+const isIOS = () => {
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
 };
 
-const PDF_OPTIONS = {
-  disableAutoFetch: false,
-  disableStream: false,
-  verbosity: 0,
-  cMapUrl: "https://unpkg.com/pdfjs-dist@3.11.174/cmaps/",
-  cMapPacked: true,
-  standardFontDataUrl: "https://unpkg.com/pdfjs-dist@3.11.174/standard_fonts/",
+// Configure PDF.js options based on device
+const getPdfOptions = () => {
+  const iOS = isIOS();
+  return {
+    cMapUrl: "https://unpkg.com/pdfjs-dist@3.11.174/cmaps/",
+    cMapPacked: true,
+    standardFontDataUrl: "https://unpkg.com/pdfjs-dist@3.11.174/standard_fonts/",
+    disableWorker: iOS,
+    verbosity: 0,
+    disableFontFace: iOS, // Disable font face on iOS
+    maxImageSize: iOS ? 1024 * 1024 : -1, // Limit image size on iOS
+    isEvalSupported: !iOS, // Disable eval on iOS
+  };
 };
 
 function PdfThumbnail({ file, alt, onClick, index }) {
@@ -34,31 +43,21 @@ function PdfThumbnail({ file, alt, onClick, index }) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
-  const documentRef = useRef(null);
-  const timeoutRef = useRef(null);
-  const isMountedRef = useRef(true);
 
-  // Staggered loading
+  // Lazy loading with delay for iOS
   useEffect(() => {
-    const mobile = isMobile();
-    const delay = mobile ? index * 300 : index * 150; // Reduced delays
+    const iOS = isIOS();
+    const delay = iOS ? index * 400 : index * 150; // Longer delay for iOS
 
-    timeoutRef.current = setTimeout(() => {
-      if (isMountedRef.current) {
-        setShouldRender(true);
-      }
+    const timer = setTimeout(() => {
+      setShouldRender(true);
     }, delay);
 
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
+    return () => clearTimeout(timer);
   }, [index]);
 
   useEffect(() => {
     if (!shouldRender) return;
-
     const computeFileSize = async () => {
       try {
         const response = await fetch(
@@ -69,53 +68,30 @@ function PdfThumbnail({ file, alt, onClick, index }) {
           }
         );
         const contentLength = response.headers.get("content-length");
-        if (contentLength && isMountedRef.current) {
+        if (contentLength) {
           const sizeInMB = parseInt(contentLength) / (1024 * 1024);
           setFileSize(`${sizeInMB.toFixed(2)} MB`);
-        } else if (isMountedRef.current) {
+        } else {
           setFileSize("Unknown size");
         }
       } catch (error) {
         console.error("Error fetching file size:", error);
-        if (isMountedRef.current) {
-          setFileSize("Unknown size");
-        }
+        setFileSize("Unknown size");
       }
     };
     computeFileSize();
   }, [file, shouldRender]);
 
   const handleLoadSuccess = useCallback(({ numPages }) => {
-    if (isMountedRef.current) {
-      setNumPages(numPages);
-      setIsLoading(false);
-      setHasError(false);
-    }
+    setNumPages(numPages);
+    setIsLoading(false);
+    setHasError(false);
   }, []);
 
   const handleLoadError = useCallback((error) => {
     console.error("PDF load error:", error);
-    if (isMountedRef.current) {
-      setHasError(true);
-      setIsLoading(false);
-    }
-  }, []);
-
-  // Cleanup function
-  useEffect(() => {
-    return () => {
-      isMountedRef.current = false;
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      if (documentRef.current && documentRef.current.destroy) {
-        try {
-          documentRef.current.destroy();
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-    };
+    setHasError(true);
+    setIsLoading(false);
   }, []);
 
   if (!shouldRender) {
@@ -158,13 +134,13 @@ function PdfThumbnail({ file, alt, onClick, index }) {
           }}
         >
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "48px" }}>📄</div>
+            <div>📄</div>
             <div style={{ fontSize: "12px", marginTop: "5px" }}>Click to view PDF</div>
           </div>
         </div>
         <figcaption className="pdf-info">
           <h5 className="pdf-title">{alt || file}</h5>
-          <p style={{ fontSize: "15px", color: "#666" }}>PDF · {fileSize || "Unknown"}</p>
+          <p style={{ fontSize: "15px", color: "#666" }}>PDF · {fileSize || "Loading..."}</p>
         </figcaption>
       </figure>
     );
@@ -174,7 +150,6 @@ function PdfThumbnail({ file, alt, onClick, index }) {
     <figure className="pdf-thumbnail" style={{ height: "346px" }}>
       <div className="pdf-preview" onClick={onClick}>
         <Document
-          key={file} // Add key to prevent document reuse
           file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${file}`}
           onLoadSuccess={handleLoadSuccess}
           onLoadError={handleLoadError}
@@ -185,45 +160,30 @@ function PdfThumbnail({ file, alt, onClick, index }) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background: "#f5f5f5",
               }}
             >
               Loading PDF...
             </div>
           }
-          options={PDF_OPTIONS} // Use memoized options
-          onSourceError={(error) => {
-            console.error("PDF source error:", error);
-            if (isMountedRef.current) {
-              setHasError(true);
-            }
-          }}
+          options={getPdfOptions()}
         >
           <Page
             pageNumber={1}
             width={230}
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
+            renderTextLayer={false} // Disable text layer for better performance
+            renderAnnotationLayer={false} // Disable annotation layer
             loading={
               <div
                 style={{
                   height: "230px",
-                  width: "230px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: "#f5f5f5",
                 }}
               >
                 Rendering...
               </div>
             }
-            onRenderError={(error) => {
-              console.error("Page render error:", error);
-              if (isMountedRef.current) {
-                setHasError(true);
-              }
-            }}
           />
         </Document>
       </div>
@@ -239,14 +199,9 @@ const ThePainter = () => {
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
-  const fullscreenDocRef = useRef(null);
-  const isMountedRef = useRef(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    return () => {
-      isMountedRef.current = false;
-    };
   }, []);
 
   useEffect(() => {
@@ -254,14 +209,10 @@ const ThePainter = () => {
       try {
         const response = await fetch(`/interviews/painters/painters1.md`);
         const text = await response.text();
-        if (isMountedRef.current) {
-          setContent(text);
-        }
+        setContent(text);
       } catch (error) {
         console.error("Error fetching painter content:", error);
-        if (isMountedRef.current) {
-          setContent("Error loading painter content.");
-        }
+        setContent("Error loading painter content.");
       }
     };
     fetchContent();
@@ -270,32 +221,22 @@ const ThePainter = () => {
   useEffect(() => {
     if (pdfToShow) {
       document.body.classList.add("pdf-open");
-      document.body.style.overflow = "hidden";
-
-      const handleKeyDown = (event) => {
-        if (event.key === "Escape") {
+      window.history.pushState({ pdfOpen: true }, "");
+      const handlePopState = (event) => {
+        if (pdfToShow) {
           setPdfToShow(null);
+          window.history.pushState({ pdfOpen: true }, "");
         }
       };
-
-      document.addEventListener("keydown", handleKeyDown);
-
+      window.addEventListener("popstate", handlePopState);
       return () => {
         document.body.classList.remove("pdf-open");
-        document.body.style.overflow = "auto";
-        document.removeEventListener("keydown", handleKeyDown);
-
-        // Cleanup fullscreen document
-        if (fullscreenDocRef.current && fullscreenDocRef.current.destroy) {
-          try {
-            fullscreenDocRef.current.destroy();
-          } catch (error) {
-            // Ignore cleanup errors
-          }
-        }
+        window.removeEventListener("popstate", handlePopState);
       };
+    } else {
+      document.body.classList.remove("pdf-open");
     }
-  }, [pdfToShow]);
+  }, [pdfToShow, setPdfToShow]);
 
   const renderedContent = useMemo(() => {
     let mediaBuffer = [];
@@ -307,8 +248,8 @@ const ThePainter = () => {
       mediaBuffer = [];
       return (
         <div
-          className="d-flex flex-wrap justify-content-center items-start"
-          style={{ gap: "15px", margin: "20px 0" }}
+          className="d-flex flex-wrap justify-content-center items-start -mx-2"
+          style={{ gap: "6px" }}
         >
           {nodes.map((node, i) => (
             <React.Fragment key={i}>{node}</React.Fragment>
@@ -323,14 +264,17 @@ const ThePainter = () => {
           const currentIndex = pdfIndex++;
           mediaBuffer.push(
             <PdfThumbnail
-              key={`pdf-${currentIndex}-${src}`} // More unique key
+              key={src}
               file={src}
+              filename={src}
               onClick={() => {
                 setPdfToShow(src);
                 setNumPages(null);
               }}
               alt={alt}
               index={currentIndex}
+              className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
+              style={{ width: 300, height: 300 }}
             />
           );
           return null;
@@ -383,30 +327,12 @@ const ThePainter = () => {
 
   const calculatePageWidth = () => {
     const screenWidth = window.innerWidth;
-    const mobile = isMobile();
-    if (mobile) {
-      return Math.min(screenWidth - 40, 350);
-    }
-    return Math.min(screenWidth - 100, 800);
+    const isMobile = screenWidth <= 768;
+    return isMobile ? screenWidth : 800;
   };
 
-  const handlePdfClose = useCallback((e) => {
-    e?.stopPropagation();
+  const handlePdfClose = useCallback(() => {
     setPdfToShow(null);
-  }, []);
-
-  const handleFullscreenLoadSuccess = useCallback(({ numPages }) => {
-    if (isMountedRef.current) {
-      setNumPages(numPages);
-    }
-  }, []);
-
-  const handleFullscreenLoadError = useCallback((error) => {
-    console.error("Fullscreen PDF load error:", error);
-    if (isMountedRef.current) {
-      alert("Error loading PDF. Please try again.");
-      setPdfToShow(null);
-    }
   }, []);
 
   return (
@@ -435,129 +361,106 @@ const ThePainter = () => {
         {pdfToShow && (
           <div
             className="pdf-fullscreen"
+            onClick={handlePdfClose}
             style={{
               position: "fixed",
               top: 0,
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.95)",
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
               display: "flex",
               flexDirection: "column",
               overflowY: "auto",
-              zIndex: 9999,
+              zIndex: 1001,
             }}
-            onClick={handlePdfClose}
           >
             <div
               style={{
-                position: "fixed",
+                position: "absolute",
                 top: "20px",
                 right: "20px",
                 color: "white",
-                fontSize: "30px",
+                fontSize: "24px",
                 cursor: "pointer",
-                zIndex: 10000,
-                background: "rgba(255,255,255,0.2)",
+                zIndex: 1002,
+                background: "rgba(0,0,0,0.5)",
                 borderRadius: "50%",
-                width: "50px",
-                height: "50px",
+                width: "40px",
+                height: "40px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                userSelect: "none",
               }}
               onClick={handlePdfClose}
             >
-              ✕
+              ×
             </div>
-
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                padding: "60px 20px 20px",
+            <Document
+              file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${pdfToShow}`}
+              onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+              onLoadError={(error) => {
+                console.error("Fullscreen PDF load error:", error);
+                setPdfToShow(null);
               }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Document
-                key={pdfToShow} // Add key to prevent document reuse
-                file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${pdfToShow}`}
-                onLoadSuccess={handleFullscreenLoadSuccess}
-                onLoadError={handleFullscreenLoadError}
-                options={PDF_OPTIONS} // Use memoized options
-                loading={
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "50vh",
-                      color: "white",
-                    }}
-                  >
-                    <div style={{ textAlign: "center" }}>
-                      <div style={{ fontSize: "18px", marginBottom: "10px" }}>Loading PDF...</div>
-                      <div style={{ fontSize: "14px", opacity: 0.7 }}>Please wait</div>
-                    </div>
-                  </div>
-                }
-                onSourceError={(error) => {
-                  console.error("Fullscreen PDF source error:", error);
-                  if (isMountedRef.current) {
-                    setPdfToShow(null);
-                  }
-                }}
-              >
-                <style>
-                  {`
-                  .react-pdf__Page__canvas {
-                    max-width: 100% !important;
-                    height: auto !important;
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-                    margin-bottom: 20px;
-                  }
-                  .pdf-pages-container {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                  }
-                `}
-                </style>
-                <div className="pdf-pages-container">
-                  {Array.from({ length: numPages || 0 }, (_, i) => (
-                    <Page
-                      key={`fullscreen-page-${i}-${pdfToShow}`} // More unique key
-                      pageNumber={i + 1}
-                      width={calculatePageWidth()}
-                      renderTextLayer={false}
-                      renderAnnotationLayer={false}
-                      loading={
-                        <div
-                          style={{
-                            width: calculatePageWidth(),
-                            height: "400px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            background: "rgba(255,255,255,0.1)",
-                            color: "white",
-                            marginBottom: "20px",
-                          }}
-                        >
-                          Loading page {i + 1}...
-                        </div>
-                      }
-                      onRenderError={(error) => {
-                        console.error(`Page ${i + 1} render error:`, error);
-                      }}
-                    />
-                  ))}
+              options={getPdfOptions()}
+              loading={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100vh",
+                    color: "white",
+                  }}
+                >
+                  Loading PDF...
                 </div>
-              </Document>
-            </div>
+              }
+            >
+              <style>
+                {`
+                .react-pdf__Page__canvas {
+                  height: auto !important;
+                  max-width: 100% !important;
+                }
+                .pdf-pages-container {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px;
+                  gap: 20px;
+                }
+              `}
+              </style>
+              <div className="pdf-pages-container">
+                {Array.from({ length: numPages || 0 }, (_, i) => (
+                  <Page
+                    key={`page-${i}`}
+                    pageNumber={i + 1}
+                    width={calculatePageWidth()}
+                    className="pdf-page"
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                    loading={
+                      <div
+                        style={{
+                          width: calculatePageWidth(),
+                          height: "600px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "#f0f0f0",
+                          color: "#666",
+                        }}
+                      >
+                        Loading page {i + 1}...
+                      </div>
+                    }
+                  />
+                ))}
+              </div>
+            </Document>
           </div>
         )}
       </section>
