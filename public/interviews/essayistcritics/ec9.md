@@ -4,7 +4,7 @@ An-Nahar Newspaper
 14 July 2014  
 By Hamid Zanar  
 
-Arab thinkers – and even jurists – of earlier centuries were neither repressed by nor uncomfortable with the subject of sex and sexuality. Their approach was open and unembarrassment, especially in contrast with contemporary attitudes. Their stance was open and liberated in comparison to what we see today. So why and how did Arab societies shift from openly embracing pleasure to a life of secrecy and prohibition? What caused this regression? In this survey, several Arab researchers provide elements of an answer.
+Arab thinkers — and even jurists — of earlier centuries were neither repressed by nor uncomfortable with the subject of sex and sexuality. Their approach was open and unembarrassed, especially in contrast with contemporary attitudes. Their stance was liberated in comparison to what we see today. So why — and how — did Arab societies shift from openly embracing pleasure to a life of secrecy and prohibition? What caused this regression? In this survey, several Arab researchers offer elements of an answer.
 
 <b>Saeed Nachid (Moroccan researcher):</b>
 
@@ -28,7 +28,7 @@ My grandfather returned from France in the early 1980s, bringing with him, among
 
 In the 1990s, a group of armed Islamists stormed our house. The first thing they did was tear down the picture and trample it underfoot, declaring it forbidden. I entered Setif University in 1996 and saw for the first time the statue of Ain El Fouara – a beautiful nude figure, whose delicately sculpted form seemed to emerge from the stone itself. Erected over 90 years earlier, it had become something akin to a shrine. A year later, terrorists blew it up, again on the grounds that it was forbidden.
 
-Last year I read Qutb al-Surur fi Awsaf al-Anbidhah wa al-Khumur (The Pinnacle of Joy in Describing Beverages and Wines) by the delicate jurist of Kairouan. In the preface, he explained that he approached the topic as a cultural theme. So where are we today in relation to that? Wahhabi ideology is among the gravest afflictions to have plagued Muslim civilisation. 
+Last year I read Qutb al-Surur fi Awsaf al-Anbidhah wa al-Khumur (The Pinnacle of Joy in Describing Beverages and Wines) by the delicate jurist of Kairouan. In the preface, he explained that he approached the topic as a cultural theme. So where are we today in relation to that? Wahhabi ideology is among the gravest afflictions to have plagued Muslim civilisation.
 
 <b>Randa Kassis (Syrian anthropologist):</b>
 
@@ -36,7 +36,7 @@ All Abrahamic religions, to varying degrees, present original sin as rooted in a
 
 After the expulsion from the Garden of Eden, according to the religious myth, Adam and Eve bore their first son, Cain – the first human child – thus initiating the transmission of original sin through reproduction. It is from here that we can say Abrahamic religions were founded on the conflation of two acts: sex and sin (undoubtedly inherited from earlier totemic systems). We also know that memory plays a crucial role in passing down cultural heritage across generations. Therefore, the collective memory classified this act – sex – along with its associated sin, thereby granting it a dominant place in the psychological realm—one charged with fear and guilt each time the act is performed.
 
-In Surah Ta-Ha, verse 117, we see how hardship is linked to the sexual act: “O Adam, indeed this is an enemy to you and your wife. So let him not remove you from Paradise so you would suffer. Indeed, it is [promised] for you not to be hungry therein or be unclothed. And indeed, you will not be thirsty therein or be hot.” Or, “Then get out of it, for indeed, you are expelled, and indeed upon you is My curse until the Day of Judgement.”
+In Surah Ta-Ha, verse 117, we see how hardship is linked to the sexual act: “O Adam, indeed this is an enemy to you and your wife. So let him not remove you from Paradise so you would suffer. Indeed, it is \[promised\] for you not to be hungry therein or be unclothed. And indeed, you will not be thirsty therein or be hot.” Or, “Then get out of it, for indeed, you are expelled, and indeed upon you is My curse until the Day of Judgement.”
 
 We also know that any cultural inheritance takes generations to be firmly rooted within any group. If we examine Christianity, we notice that in the time of the first Pope in the first century, women could preside over Eucharistic meals – a rite derived from the Jewish “Todah” or thanksgiving prayer—signalling the progressive decline of women’s roles within early Christianity. The prohibition of sex for clergy came later. In 306, a decree from the Council of Elvira in Spain forbade priests from engaging in sex on the eve of mass, with dismissal as punishment. In 325, marriage was banned for ordained priests. Then, in 590, Pope Gregory the Great issued a decree forbidding sexual intercourse and even outlawing sexual desire itself.
 
