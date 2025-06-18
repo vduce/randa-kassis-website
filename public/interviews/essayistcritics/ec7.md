@@ -5,7 +5,7 @@ La Baule
 
 Randa Kassis is a woman of exceptional courage. She is the founder of the Movement for a Pluralistic Society in Syria and once held a seat on the Syrian National Council (SNC), representing the Syrian Secular Coalition. However, she was later excluded from the Council for being the first to speak openly about the Islamist threat within the Syrian opposition. At the time, few were willing to listen. In retrospect, however, events have vindicated her warnings.
 
-Although she remains an opponent of Bashar al-Assad, she no longer calls for his immediate departure—at least, not under present conditions. Instead, she advocates the formation of a national unity government to avert the fail of Damascus to Islamist factions.
+Although she remains an opponent of Bashar al-Assad, she no longer calls for his immediate departure—at least, not under present conditions. Instead, she advocates the formation of a national unity government to avert the fall of Damascus to Islamist factions.
 
 Randa Kassis has just published, together with essayist and geopolitical consultant Alexandre del Valle, a book titled The Syrian Chaos: Arab Springs and Minorities Confronted with Islamism. The work is compelling, as the authors argue that the Syrian crisis has become the epicentre of a globalised confrontation—one that pits Sunni Muslims against Shiites, and Arab nationalism against a utopian vision of the caliphate with global ambitions.
 
