@@ -44,7 +44,7 @@ The consequence has been a transformation: many of these rebels have rejected th
 
 This vision, steeped in Saudi Wahhabism, seeks to impose an ultra-traditionalist and obscurantist interpretation of Islam upon the world. Syria’s future must lie in the hands of Syrians — and this principle, let me be clear, also applies to Iran, a backer of Assad.
 
-<b>You were once a leading figure in the Syrian National Coalition, but later left to establish the Movement for a Pluralistic Society. Why?</b>
+**You were once a leading figure in the Syrian National Coalition, but later left to establish the Movement for a Pluralistic Society. Why?**
 
 It was a bitter realisation: the Coalition was becoming increasingly dominated by Islamist factions. Moreover, its leadership and policies were being dictated from abroad. Any movement that seeks to defend national sovereignty cannot accept outside control — no matter who exerts it.
 
@@ -52,17 +52,17 @@ I still believe in the importance of finding common ground among opposition grou
 
 I say this both as a Syrian and as a Christian.
 
-<b>Meanwhile, Syria is dying. The toll of over four years of war grows more devastating by the day.</b>
+**Meanwhile, Syria is dying. The toll of over four years of war grows more devastating by the day.**
 
 The situation is beyond tragic — it is the greatest humanitarian disaster since the Second World War. More than four million Syrians have been forced to flee their homes, escaping towns and villages reduced to rubble.
 
 The international community should have assumed its responsibility long ago — for instance, by opening humanitarian corridors. But that never happened. And so my people continue to die or to flee.
 
-<b>What does a pluralistic Syria mean to you, especially at the level of the state?</b>
+**What does a pluralistic Syria mean to you, especially at the level of the state?**
 
 I envision a complete separation of religion and state. What should bind us is our shared identity as Syrians — before being Muslim, Christian, Arab, or Kurdish. We must unite not through ethnic or religious affiliation but through common values: secularism and democracy.
 
-We must oppose all forms of totalitarianism, regardless of the ideology they espouse — including Islamism. 
+We must oppose all forms of totalitarianism, regardless of the ideology they espouse — including Islamism.
 
 I’m well aware that building such a Syria will take time. The war has caused deep societal fractures, which may take generations to heal.
 
@@ -70,7 +70,8 @@ Today, anyone with a different vision is instantly branded a traitor or a foreig
 
 We must come to see difference not as a threat, but as a source of national enrichment.
 
-<b>Assad draws strength from his Alawite base, yet even within the opposition, many consider the Alawites complicit. But you advocate dialogue.</b>
+**Assad draws strength from his Alawite base, yet even within the opposition, many consider the Alawites complicit. But you advocate dialogue.**
+
 Yes, for two reasons. One is tactical; the other concerns my broader vision for Syria. From a tactical standpoint, if we are to isolate and weaken the Assad “clan”, we must acknowledge that without a defection from within the Alawite community, the civil war will not end.
 
 <b>Finally, on diplomacy. Unlike the Syrian National Coalition, you advocate involving Russia in mediation. But Moscow supports Assad.</b>
@@ -81,11 +82,12 @@ No one — certainly not I — underestimates Assad’s responsibility. But no o
 
 We must seek a compromise — one that leads to the release of political prisoners and real steps towards national reconciliation.
 
-In this effort, Russia has a critical role to play — as do Europe, the United States, and regional actors. Let me add one last point: there is no family left in Syria untouched by grief.
+In this effort, Russia has a critical role to play — as do Europe, the United States, and regional actors. Let me add one final point: there is no family left in Syria untouched by grief.
 
 But if we want to offer a future to this extraordinary people — if we wish to keep Syria united — then we must seek justice, not vengeance.
 
 We must heed the lesson of Iraq: the removal of a dictator must not be conflated with the dismantling of the state. What happened in Iraq should serve as a warning — to raze everything to the ground is to pave the way for collapse, for militias and tribal fragmentation.
+
 
 ![](5.pdf)
 <p></p>
