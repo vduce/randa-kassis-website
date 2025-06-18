@@ -13,6 +13,12 @@ On Thursday, Islamic State launched an offensive on the ancient Syrian city of P
 
 <p></p>
 <center>
+<div style="position:relative;width: 520px;height: 300px;"><iframe src="(https://iframe.mediadelivery.net/play/455361/207ff757-d173-4170-a46b-926f3ef2f62f)" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+</center>  
+<p></p>
+
+<p></p>
+<center>
 <div style="position:relative;width: 520px;height: 300px;"><iframe src="https://iframe.mediadelivery.net/play/455361/207ff757-d173-4170-a46b-926f3ef2f62f" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
 </center>  
 <p></p>
