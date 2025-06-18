@@ -22,7 +22,7 @@ The resolution is undoubtedly significant, yet it remains limited in both scope 
 
 Heritage restoration should be fully integrated into the wider political process. It is for this reason that, in my capacity as President of the Astana Platform, I have been working with a range of stakeholders to develop a political and cultural strategy that can offer a way out of the current deadlock.
 
-Regrettably, I no longer place much hope in the United Nations, which has repeatedly proven incapable of producing even a single viable idea to address global crises. With each passing day, the UN comes to resemble more closely the machin—the “thing”—mocked by General de Gaulle, a lumbering mechanism recycling failed politicians or diplomats cast off by their own countries.
+Regrettably, I no longer place much hope in the United Nations, which has repeatedly demonstrated its inability to produce even a single viable idea for addressing global crises. With each passing day, the UN increasingly resembles the “machin”—the “thing” derided by General de Gaulle—a lumbering apparatus recycling failed politicians and diplomats cast off by their own countries.
 
 In my view, a truly effective political process and lasting reconciliation can only emerge through a cultural renaissance and the reconstruction of a shared historical memory.
 
