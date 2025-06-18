@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useMemo, useState } from "react";
 import Logo from "../../images/logo.png";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -100,75 +100,77 @@ const ThePainter = () => {
     }
   }, [pdfToShow, setPdfToShow]);
 
-  const flushMedia = () => {
-    if (mediaBuffer.length === 0) return null;
-    const nodes = [...mediaBuffer];
-    mediaBuffer = [];
-    return (
-      <div
-        className="d-flex flex-wrap justify-content-center items-start -mx-2"
-        style={{ gap: "6px" }}
-      >
-        {nodes.map((node, i) => (
-          <React.Fragment key={i}>{node}</React.Fragment>
-        ))}
-      </div>
-    );
-  };
+  // Memoize the rendered content to prevent re-processing when pdfToShow changes
+  const renderedContent = useMemo(() => {
+    let mediaBuffer = [];
 
-  const components = {
-    img: ({ src, alt }) => {
-      if (src?.endsWith(".pdf")) {
-        mediaBuffer.push(
-          <PdfThumbnail
-            key={src}
-            file={src}
-            filename={src}
-            onClick={() => {
-              setPdfToShow(src);
-              setNumPages(null);
-            }}
-            alt={alt}
-            className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
-            style={{ width: 300, height: 300 }}
-          />
-        );
-        return null;
-      }
-      return <img src={src} alt={alt} />;
-    },
-
-    p: ({ children }) => {
-      const media = flushMedia();
-      const hasText = React.Children.toArray(children).some(
-        (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
+    const flushMedia = () => {
+      if (mediaBuffer.length === 0) return null;
+      const nodes = [...mediaBuffer];
+      mediaBuffer = [];
+      return (
+        <div
+          className="d-flex flex-wrap justify-content-center items-start -mx-2"
+          style={{ gap: "6px" }}
+        >
+          {nodes.map((node, i) => (
+            <React.Fragment key={i}>{node}</React.Fragment>
+          ))}
+        </div>
       );
-      if (hasText) {
-        return (
-          <>
-            {media}
-            <p className="mb-4">{children}</p>
-          </>
+    };
+
+    const components = {
+      img: ({ src, alt }) => {
+        if (src?.endsWith(".pdf")) {
+          mediaBuffer.push(
+            <PdfThumbnail
+              key={src}
+              file={src}
+              filename={src}
+              onClick={() => {
+                setPdfToShow(src);
+                setNumPages(null);
+              }}
+              alt={alt}
+              className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
+              style={{ width: 300, height: 300 }}
+            />
+          );
+          return null;
+        }
+        return <img src={src} alt={alt} />;
+      },
+
+      p: ({ children }) => {
+        const media = flushMedia();
+        const hasText = React.Children.toArray(children).some(
+          (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
         );
-      }
-      return media;
-    },
+        if (hasText) {
+          return (
+            <>
+              {media}
+              <p className="mb-4">{children}</p>
+            </>
+          );
+        }
+        return media;
+      },
 
-    h4: ({ children }) => {
-      return <h4>{children}</h4>;
-    },
+      h4: ({ children }) => {
+        return <h4>{children}</h4>;
+      },
 
-    b: ({ children }) => {
-      return <b>{children}</b>;
-    },
+      b: ({ children }) => {
+        return <b>{children}</b>;
+      },
 
-    center: ({ children }) => {
-      return <div className="d-flex justify-content-center mb-3">{children}</div>;
-    },
-  };
+      center: ({ children }) => {
+        return <div className="d-flex justify-content-center mb-3">{children}</div>;
+      },
+    };
 
-  const renderMarkdown = (content) => {
-    mediaBuffer = [];
     const rendered = (
       <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} components={components}>
         {content}
@@ -181,7 +183,7 @@ const ThePainter = () => {
         {flushedMedia}
       </>
     );
-  };
+  }, [content]);
 
   const calculatePageWidth = () => {
     const screenWidth = window.innerWidth;
@@ -192,7 +194,7 @@ const ThePainter = () => {
   return (
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} Logo={Logo} />
-      <PageTitle pageTitle="The Painter - Press Coverage" />
+      <PageTitle pageTitle="The Painter" />
       <section className="wpo-blog-single-section section-padding-bottom">
         <div className="container">
           <div className="row">
@@ -202,9 +204,7 @@ const ThePainter = () => {
                   <div className="post2">
                     <div className="max-w-2xl mx-auto mb-3">
                       <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
-                        <div className="max-w-2xl mx-auto p-3">
-                          {renderMarkdown(content || "")}
-                        </div>
+                        <div className="max-w-2xl mx-auto p-3">{renderedContent}</div>
                       </div>
                     </div>
                   </div>

@@ -148,7 +148,10 @@ const EdSingle = () => {
     }
     mediaBuffer = [];
     return (
-      <div className="d-flex flex-wrap justify-content-center items-start -mx-2" style={{ gap: "6px" }}>
+      <div
+        className="d-flex flex-wrap justify-content-center items-start -mx-2"
+        style={{ gap: "6px" }}
+      >
         {nodes.map((node, i) => (
           <React.Fragment key={i}>{node}</React.Fragment>
         ))}
