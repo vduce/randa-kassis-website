@@ -20,6 +20,7 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18.0.0",
     "react-fancybox": "^0.2.5",
+    "react-intersection-observer": "^9.16.0",
     "react-markdown": "^10.1.0",
     "react-medium-image-zoom": "^4.3.4",
     "react-modal-video": "^1.2.3",

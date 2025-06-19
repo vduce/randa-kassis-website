@@ -34,7 +34,7 @@ import Paintings from "../Paintings/Paintings";
 import ExibitionMoments from "../ExhibitionMoment/ExibitionMoments";
 import EncAndDialFullWidth from "../EncounterAndDialoguePage/EncAndDialFull";
 import EncAndDialDetails from "../EncounterAndDialoguePage/EncAndDialDetails";
-import ThePainter from "../Interview/ThePainter";
+import ThePainter from "../Interview/ThePainter/ThePainter";
 import TheCriticsLayout from "../Interview/TheCritics/TheCriticsLayout";
 import TheCriticsDetail from "../Interview/TheCritics/TheCriticsDetail";
 
