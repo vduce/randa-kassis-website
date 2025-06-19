@@ -9,6 +9,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import Navbar from "../../../components/Navbar/Navbar";
 import PageTitle from "../../../components/pagetitle/PageTitle";
 import { useInView } from "react-intersection-observer";
+import { useSwipeable } from "react-swipeable";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -162,6 +163,8 @@ const ThePainter = () => {
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
   const isMountedRef = useRef(true);
+  const [pdfList, setPdfList] = useState([]);
+  const [currentPdfIndex, setCurrentPdfIndex] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -170,6 +173,14 @@ const ThePainter = () => {
       isMountedRef.current = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!content) return;
+    const pdfSources = (content.match(/!\[.*?\]\((.*?\.pdf)\)/g) || []).map(
+      (line) => line.match(/\((.*?\.pdf)\)/)[1]
+    );
+    setPdfList(pdfSources);
+  }, [content]);
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -208,7 +219,19 @@ const ThePainter = () => {
         document.removeEventListener("keydown", handleKeyDown);
       };
     }
-  }, [pdfToShow]);
+  }, [pdfToShow, currentPdfIndex, pdfList]);
+
+  const handleThumbnailClick = useCallback(
+    (src) => {
+      const index = pdfList.findIndex((p) => p === src);
+      if (index !== -1) {
+        setCurrentPdfIndex(index);
+        setPdfToShow(src);
+        setNumPages(null);
+      }
+    },
+    [pdfList]
+  );
 
   const renderedContent = useMemo(() => {
     let mediaBuffer = [];
@@ -233,15 +256,11 @@ const ThePainter = () => {
     const components = {
       img: ({ src, alt }) => {
         if (src?.endsWith(".pdf")) {
-          const currentIndex = pdfIndex++;
           mediaBuffer.push(
             <PdfThumbnail
-              key={`pdf-${currentIndex}-${src}`} // More unique key
+              key={`pdf-${pdfIndex++}-${src}`} // More unique key
               file={src}
-              onClick={() => {
-                setPdfToShow(src);
-                setNumPages(null);
-              }}
+              onClick={() => handleThumbnailClick(src)}
               alt={alt}
             />
           );
@@ -291,7 +310,7 @@ const ThePainter = () => {
         {flushedMedia}
       </>
     );
-  }, [content]);
+  }, [content, handleThumbnailClick]);
 
   const calculatePageWidth = () => {
     const screenWidth = window.innerWidth;
@@ -305,7 +324,30 @@ const ThePainter = () => {
   const handlePdfClose = useCallback((e) => {
     e?.stopPropagation();
     setPdfToShow(null);
+    setCurrentPdfIndex(null);
   }, []);
+
+  const handleNextPdf = useCallback(() => {
+    if (currentPdfIndex === null || currentPdfIndex >= pdfList.length - 1) return;
+    const nextIndex = currentPdfIndex + 1;
+    setCurrentPdfIndex(nextIndex);
+    setPdfToShow(pdfList[nextIndex]);
+  }, [currentPdfIndex, pdfList]);
+
+  const handlePreviousPdf = useCallback(() => {
+    if (currentPdfIndex === null || currentPdfIndex <= 0) return;
+    const prevIndex = currentPdfIndex - 1;
+    setCurrentPdfIndex(prevIndex);
+    setPdfToShow(pdfList[prevIndex]);
+  }, [currentPdfIndex, pdfList]);
+
+  // Setup swipe handlers
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleNextPdf(),
+    onSwipedRight: () => handlePreviousPdf(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: false,
+  });
 
   const handleFullscreenLoadSuccess = useCallback(({ numPages }) => {
     if (isMountedRef.current) {
@@ -320,6 +362,20 @@ const ThePainter = () => {
       setPdfToShow(null);
     }
   }, []);
+
+  const arrowButtonStyles = {
+    position: "fixed",
+    top: "50%",
+    transform: "translateY(-50%)",
+    background: "rgba(0,0,0,0.3)",
+    color: "white",
+    border: "none",
+    fontSize: "48px",
+    cursor: "pointer",
+    zIndex: 10001,
+    padding: "10px",
+    userSelect: "none",
+  };
 
   return (
     <Fragment>
@@ -347,6 +403,7 @@ const ThePainter = () => {
         {pdfToShow && (
           <div
             className="pdf-fullscreen"
+            {...swipeHandlers} // Apply swipe handlers to the container
             style={{
               position: "fixed",
               top: 0,
@@ -359,8 +416,8 @@ const ThePainter = () => {
               overflowY: "auto",
               zIndex: 9999,
             }}
-            onClick={handlePdfClose}
           >
+            {/* Close Button */}
             <div
               style={{
                 position: "fixed",
@@ -369,7 +426,7 @@ const ThePainter = () => {
                 color: "white",
                 fontSize: "30px",
                 cursor: "pointer",
-                zIndex: 10000,
+                zIndex: 10001,
                 background: "rgba(255,255,255,0.2)",
                 borderRadius: "50%",
                 width: "50px",
@@ -383,6 +440,32 @@ const ThePainter = () => {
             >
               ✕
             </div>
+
+            {/* Previous/Next Arrow Buttons for Desktop */}
+            {!isMobile() && (
+              <>
+                <button
+                  style={{ ...arrowButtonStyles, left: "20px" }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handlePreviousPdf();
+                  }}
+                  disabled={currentPdfIndex <= 0}
+                >
+                  &#8249;
+                </button>
+                <button
+                  style={{ ...arrowButtonStyles, right: "20px" }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleNextPdf();
+                  }}
+                  disabled={currentPdfIndex >= pdfList.length - 1}
+                >
+                  &#8250;
+                </button>
+              </>
+            )}
 
             <div
               style={{
