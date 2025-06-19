@@ -8,56 +8,14 @@ import lgVideo from "lightgallery/plugins/video";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { Document, Page, pdfjs } from "react-pdf";
-import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd"; // Import PhotoGallery component
+import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
+import PdfViewer from "../PdfViewer/PdfViewer";
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
-
-function PdfThumbnail({ file, fileName, onClick }) {
-  const [numPages, setNumPages] = useState(null);
-  const [fileSize, setFileSize] = useState(null);
-
-  useEffect(() => {
-    const computeFileSize = async () => {
-      try {
-        const response = await fetch(
-          `https://randa-kassis-website.b-cdn.net/encounters/pdfs/${file}`
-        );
-        const blob = await response.blob();
-        const sizeInBytes = blob.size;
-        const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
-        setFileSize(`${sizeInMB.toFixed(2)} MB`);
-      } catch (error) {
-        console.error("Error fetching file size:", error);
-        setFileSize("Unknown size");
-      }
-    };
-    computeFileSize();
-  }, [file]);
-
-  return (
-    <figure className="pdf-thumbnail">
-      <div className="pdf-preview" onClick={onClick}>
-        <Document
-          file={`https://randa-kassis-website.b-cdn.net/encounters/pdfs/${file}`}
-          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        >
-          <Page pageNumber={1} width={230} />
-        </Document>
-      </div>
-      <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
-    </figure>
-  );
-}
 
 const EdSingle = () => {
   const { id } = useParams();
@@ -67,8 +25,6 @@ const EdSingle = () => {
   const [pageNumber, setPageNumber] = useState(state?.pageNumber || 1);
   const [encounterAndDialogue, setEncounterAndDialogue] = useState(null);
   const [content, setContent] = useState("");
-  const [pdfToShow, setPdfToShow] = useState(null);
-  const [numPages, setNumPages] = useState(null);
   const lightGalleryRef = useRef(null);
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
@@ -97,26 +53,6 @@ const EdSingle = () => {
       fetchContent();
     }
   }, [id]);
-
-  useEffect(() => {
-    if (pdfToShow) {
-      document.body.classList.add("pdf-open");
-      window.history.pushState({ pdfOpen: true }, "");
-      const handlePopState = (event) => {
-        if (pdfToShow) {
-          setPdfToShow(null);
-          window.history.pushState({ pdfOpen: true }, "");
-        }
-      };
-      window.addEventListener("popstate", handlePopState);
-      return () => {
-        document.body.classList.remove("pdf-open");
-        window.removeEventListener("popstate", handlePopState);
-      };
-    } else {
-      document.body.classList.remove("pdf-open");
-    }
-  }, [pdfToShow, setPdfToShow]);
 
   useEffect(() => {
     const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
@@ -167,16 +103,10 @@ const EdSingle = () => {
           photoBuffer = [];
         }
         mediaBuffer.push(
-          <PdfThumbnail
+          <PdfViewer
             key={src}
             file={src}
-            filename={src}
-            onClick={() => {
-              setPdfToShow(src);
-              setNumPages(null);
-            }}
-            className="w-full sm:w-1/2 md:w-1/3 p-2 text-center"
-            style={{ width: 300, height: 300 }}
+            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/encounters/pdfs"
           />
         );
         lastElementType.current = "pdf";
@@ -380,47 +310,6 @@ const EdSingle = () => {
         }}
         zoom={true}
       />
-      {pdfToShow && (
-        <div
-          className="pdf-fullscreen"
-          onClick={() => setPdfToShow(null)}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            display: "flex",
-            flexDirection: "column",
-            overflowY: "auto",
-            zIndex: 1001,
-          }}
-        >
-          <Document
-            file={`https://randa-kassis-website.b-cdn.net/encounters/pdfs/${pdfToShow}`}
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-          >
-            <style>
-              {`
-                .react-pdf__Page__canvas {
-                  height: auto !important;
-                }
-              `}
-            </style>
-            <div className="pdf-pages-container">
-              {Array.from({ length: numPages || 0 }, (_, i) => (
-                <Page
-                  key={i}
-                  pageNumber={i + 1}
-                  width={calculatePageWidth()}
-                  className="pdf-page"
-                />
-              ))}
-            </div>
-          </Document>
-        </div>
-      )}
     </section>
   );
 };

@@ -9,6 +9,7 @@ import PageTitle from "../../../components/pagetitle/PageTitle";
 import Footer from "../../../components/footer/Footer";
 import Scrollbar from "../../../components/scrollbar/scrollbar";
 import Navbar from "../../../components/Navbar/Navbar";
+import PdfViewer from "../../../components/PdfViewer/PdfViewer";
 
 const TheCriticsDetail = () => {
   const { id } = useParams(); // Get the article ID from the URL
@@ -84,7 +85,7 @@ const TheCriticsDetail = () => {
           <div className="row mb-4">
             <div className={`col col-lg-2 col-2`}>
               <Link
-                to="/articles"
+                to="/interview/the-essayist-the-critic"
                 state={{ pageNumber }}
                 className="btn btn-area"
               >
@@ -104,21 +105,27 @@ const TheCriticsDetail = () => {
                             rehypePlugins={[rehypeRaw]}
                             remarkPlugins={[remarkGfm]} // Enable GFM support
                             components={{
+                              img: ({ src, alt }) => {
+                                if (src?.endsWith(".pdf")) {
+                                  return (
+                                    <div style={{ display: "flex", justifyContent: "center" }}>
+                                      <PdfViewer
+                                        file={src}
+                                        cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/interviews/essayistcritics/pdfs"
+                                      />
+                                    </div>
+                                  );
+                                }                                
+                              },
                               a: ({ href, children }) => {
-                                // Check if the link is a Markdown file
                                 if (href && href.endsWith(".md")) {
-                                  // Extract the article ID from the filename
-                                  const articleId = href
-                                    .replace("article", "")
-                                    .replace(".md", "");
+                                  const articleId = href.replace("article", "").replace(".md", "");
                                   return (
                                     <a
                                       href="#"
                                       onClick={(e) => {
                                         e.preventDefault();
-                                        navigate(
-                                          `/critics-single/${articleId}`
-                                        );
+                                        navigate(`/critics-single/${articleId}`);
                                         window.scrollTo(0, 0);
                                       }}
                                     >
@@ -126,7 +133,6 @@ const TheCriticsDetail = () => {
                                     </a>
                                   );
                                 }
-                                // Default behavior for other links
                                 return <a href={href}>{children}</a>;
                               },
                             }}
@@ -134,10 +140,7 @@ const TheCriticsDetail = () => {
                             {content}
                           </Markdown>
                         </div>
-                        <div
-                          className="d-flex mt-6"
-                          style={{ justifyContent: "space-between" }}
-                        >
+                        <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                           <button
                             onClick={handlePrevious}
                             disabled={currentArticle === 1}
@@ -158,9 +161,7 @@ const TheCriticsDetail = () => {
                                 : "bg-blue-500 hover:bg-blue-600"
                             }`}
                           >
-                            {currentArticle === articles.length
-                              ? "Completed"
-                              : "Next"}
+                            {currentArticle === articles.length ? "Completed" : "Next"}
                           </button>
                         </div>
                       </div>
