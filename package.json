@@ -33,6 +33,7 @@
     "react-scroll": "^1.7.16",
     "react-slick": "^0.28.1",
     "react-sticky-header": "^0.2.0",
+    "react-swipeable": "^7.0.2",
     "react-toastify": "^8.2.0",
     "react-tooltip": "^5.11.1",
     "reactjs-countdown": "0.0.8",
