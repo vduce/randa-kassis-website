@@ -7,12 +7,7 @@ import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
-import { Document, Page, pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
+import PdfViewer from "../../components/PdfViewer/PdfViewer";
 
 const ExibitionMomentSections = [
   {
@@ -22,48 +17,9 @@ const ExibitionMomentSections = [
   },
 ];
 
-function PdfThumbnail({ file, fileName, onClick }) {
-  const [numPages, setNumPages] = useState(null);
-  const [fileSize, setFileSize] = useState(null);
-
-  useEffect(() => {
-    const computeFileSize = async () => {
-      try {
-        const response = await fetch(
-          `https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${file}`
-        );
-        const blob = await response.blob();
-        const sizeInBytes = blob.size;
-        const sizeInMB = sizeInBytes / (1024 * 1024); // Convert to MB
-        setFileSize(`${sizeInMB.toFixed(2)} MB`);
-      } catch (error) {
-        console.error("Error fetching file size:", error);
-        setFileSize("Unknown size");
-      }
-    };
-    computeFileSize();
-  }, [file]);
-
-  return (
-    <figure className="pdf-thumbnail">
-      <div className="pdf-preview" onClick={onClick}>
-        <Document
-          file={`https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${file}`}
-          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        >
-          <Page pageNumber={1} width={230} />
-        </Document>
-      </div>
-      <figcaption className="pdf-info">PDF · {fileSize ? fileSize : "Loading..."}</figcaption>
-    </figure>
-  );
-}
-
 const ExibitionMoments = () => {
   const { sectionId } = useParams();
   const navigate = useNavigate();
-  const [pdfToShow, setPdfToShow] = useState(null);
-  const [numPages, setNumPages] = useState(null);
 
   // Calculate initial page and validate sectionId
   const getPageIndex = (id) => {
@@ -73,7 +29,6 @@ const ExibitionMoments = () => {
   };
 
   const [currentPage, setCurrentPage] = useState(getPageIndex(sectionId));
-
   const [sections, setSections] = useState(ExibitionMomentSections);
 
   useEffect(() => {
@@ -96,35 +51,8 @@ const ExibitionMoments = () => {
   }, []);
 
   useEffect(() => {
-    if (pdfToShow) {
-      document.body.classList.add("pdf-open");
-      window.history.pushState({ pdfOpen: true }, "");
-      const handlePopState = (event) => {
-        if (pdfToShow) {
-          setPdfToShow(null);
-          window.history.pushState({ pdfOpen: true }, "");
-        }
-      };
-      window.addEventListener("popstate", handlePopState);
-      return () => {
-        document.body.classList.remove("pdf-open");
-        window.removeEventListener("popstate", handlePopState);
-      };
-    } else {
-      document.body.classList.remove("pdf-open");
-    }
-  }, [pdfToShow, setPdfToShow]);
-
-  useEffect(() => {
     const newPage = getPageIndex(sectionId);
-    if (
-      !sectionId ||
-      isNaN(sectionId) ||
-      parseInt(sectionId) !== sectionId ||
-      parseInt(sectionId) < 1
-    ) {
-      // Redirect to /paintings/1 if sectionId is invalid or missing
-      // navigate("/paintings/1", { replace: true });
+    if (!sectionId || isNaN(sectionId) || parseInt(sectionId) < 1) {
       setCurrentPage(newPage);
     } else if (newPage !== currentPage) {
       setCurrentPage(newPage);
@@ -177,10 +105,12 @@ const ExibitionMoments = () => {
       if (src?.endsWith(".pdf")) {
         return (
           <div
-            onClick={() => setPdfToShow(src)}
             style={{ display: "flex", justifyContent: "center" }}
           >
-            <PdfThumbnail file={src} fileName={alt} onClick={() => setPdfToShow(src)} />
+            <PdfViewer
+              file={src}
+              cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/exhibitions/pdfs"
+            />
           </div>
         );
       }
@@ -274,48 +204,6 @@ const ExibitionMoments = () => {
           </div>
         </div>
       </div>
-
-      {pdfToShow && (
-        <div
-          className="pdf-fullscreen"
-          onClick={() => setPdfToShow(null)}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            display: "flex",
-            flexDirection: "column",
-            overflowY: "auto",
-            zIndex: 1001,
-          }}
-        >
-          <Document
-            file={`https://randa-kassis-website.b-cdn.net/exhibitions/pdfs/${pdfToShow}`}
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-          >
-            <style>
-              {`
-                .react-pdf__Page__canvas {
-                  height: auto !important;
-                }
-              `}
-            </style>
-            <div className="pdf-pages-container">
-              {Array.from({ length: numPages || 0 }, (_, i) => (
-                <Page
-                  key={i}
-                  pageNumber={i + 1}
-                  width={calculatePageWidth()}
-                  className="pdf-page"
-                />
-              ))}
-            </div>
-          </Document>
-        </div>
-      )}
     </Fragment>
   );
 };
