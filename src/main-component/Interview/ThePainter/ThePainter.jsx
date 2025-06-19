@@ -1,13 +1,14 @@
 import React, { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Logo from "../../images/logo.png";
+import Logo from "../../../images/logo.png";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
-import Navbar from "../../components/Navbar/Navbar";
-import PageTitle from "../../components/pagetitle/PageTitle";
+import Navbar from "../../../components/Navbar/Navbar";
+import PageTitle from "../../../components/pagetitle/PageTitle";
+import { useInView } from "react-intersection-observer";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -28,36 +29,26 @@ const PDF_OPTIONS = {
   standardFontDataUrl: "https://unpkg.com/pdfjs-dist@3.11.174/standard_fonts/",
 };
 
-function PdfThumbnail({ file, alt, onClick, index }) {
+function PdfThumbnail({ file, alt, onClick }) {
   const [numPages, setNumPages] = useState(null);
   const [fileSize, setFileSize] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [shouldRender, setShouldRender] = useState(false);
-  const documentRef = useRef(null);
-  const timeoutRef = useRef(null);
   const isMountedRef = useRef(true);
 
-  // Staggered loading
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "200px 0px",
+  });
+
   useEffect(() => {
-    const mobile = isMobile();
-    const delay = mobile ? index * 300 : index * 150; // Reduced delays
-
-    timeoutRef.current = setTimeout(() => {
-      if (isMountedRef.current) {
-        setShouldRender(true);
-      }
-    }, delay);
-
+    isMountedRef.current = true;
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      isMountedRef.current = false;
     };
-  }, [index]);
+  }, []);
 
   useEffect(() => {
-    if (!shouldRender) return;
+    if (!inView) return; // Don't do anything until it's in view
 
     const computeFileSize = async () => {
       try {
@@ -83,67 +74,44 @@ function PdfThumbnail({ file, alt, onClick, index }) {
       }
     };
     computeFileSize();
-  }, [file, shouldRender]);
+  }, [file, inView]);
 
   const handleLoadSuccess = useCallback(({ numPages }) => {
     if (isMountedRef.current) {
       setNumPages(numPages);
-      setIsLoading(false);
       setHasError(false);
     }
   }, []);
 
   const handleLoadError = useCallback((error) => {
-    console.error("PDF load error:", error);
+    console.error("PDF thumbnail load error:", error);
     if (isMountedRef.current) {
       setHasError(true);
-      setIsLoading(false);
     }
   }, []);
 
-  // Cleanup function
-  useEffect(() => {
-    return () => {
-      isMountedRef.current = false;
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      if (documentRef.current && documentRef.current.destroy) {
-        try {
-          documentRef.current.destroy();
-        } catch (error) {
-          // Ignore cleanup errors
-        }
-      }
-    };
-  }, []);
+  const Placeholder = () => (
+    <div
+      style={{
+        height: "346px",
+        width: "230px",
+        backgroundColor: "#f0f0f0",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        borderRadius: "4px",
+      }}
+    >
+      <div style={{ color: "#888" }}>Loading PDF...</div>
+    </div>
+  );
 
-  if (!shouldRender) {
-    return (
-      <figure className="pdf-thumbnail" style={{ height: "346px" }}>
-        <div
-          className="pdf-preview"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#f5f5f5",
-            height: "230px",
-          }}
-        >
-          <div>Loading...</div>
-        </div>
-        <figcaption className="pdf-info">
-          <h5 className="pdf-title">{alt || file}</h5>
-          <p style={{ fontSize: "15px", color: "#666" }}>PDF · Loading...</p>
-        </figcaption>
-      </figure>
-    );
-  }
-
-  if (hasError) {
-    return (
-      <figure className="pdf-thumbnail" style={{ height: "346px" }}>
+  return (
+    <figure ref={ref} className="pdf-thumbnail" style={{ height: "346px" }}>
+      {!inView ? (
+        <Placeholder />
+      ) : hasError ? (
         <div
           className="pdf-preview"
           onClick={onClick}
@@ -162,71 +130,25 @@ function PdfThumbnail({ file, alt, onClick, index }) {
             <div style={{ fontSize: "12px", marginTop: "5px" }}>Click to view PDF</div>
           </div>
         </div>
-        <figcaption className="pdf-info">
-          <h5 className="pdf-title">{alt || file}</h5>
-          <p style={{ fontSize: "15px", color: "#666" }}>PDF · {fileSize || "Unknown"}</p>
-        </figcaption>
-      </figure>
-    );
-  }
-
-  return (
-    <figure className="pdf-thumbnail" style={{ height: "346px" }}>
-      <div className="pdf-preview" onClick={onClick}>
-        <Document
-          key={file} // Add key to prevent document reuse
-          file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${file}`}
-          onLoadSuccess={handleLoadSuccess}
-          onLoadError={handleLoadError}
-          loading={
-            <div
-              style={{
-                height: "230px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#f5f5f5",
-              }}
-            >
-              Loading PDF...
-            </div>
-          }
-          options={PDF_OPTIONS} // Use memoized options
-          onSourceError={(error) => {
-            console.error("PDF source error:", error);
-            if (isMountedRef.current) {
-              setHasError(true);
-            }
-          }}
-        >
-          <Page
-            pageNumber={1}
-            width={230}
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
-            loading={
-              <div
-                style={{
-                  height: "230px",
-                  width: "230px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#f5f5f5",
-                }}
-              >
-                Rendering...
-              </div>
-            }
-            onRenderError={(error) => {
-              console.error("Page render error:", error);
-              if (isMountedRef.current) {
-                setHasError(true);
-              }
-            }}
-          />
-        </Document>
-      </div>
+      ) : (
+        <div className="pdf-preview" onClick={onClick}>
+          <Document
+            key={file}
+            file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${file}`}
+            onLoadSuccess={handleLoadSuccess}
+            onLoadError={handleLoadError}
+            loading={<Placeholder />}
+            options={PDF_OPTIONS}
+          >
+            <Page
+              pageNumber={1}
+              width={230}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+            />
+          </Document>
+        </div>
+      )}
       <figcaption className="pdf-info">
         <h5 className="pdf-title">{alt || file}</h5>
         <p style={{ fontSize: "15px", color: "#666" }}>PDF · {fileSize || "Loading..."}</p>
@@ -239,11 +161,11 @@ const ThePainter = () => {
   const [content, setContent] = useState("");
   const [pdfToShow, setPdfToShow] = useState(null);
   const [numPages, setNumPages] = useState(null);
-  const fullscreenDocRef = useRef(null);
   const isMountedRef = useRef(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    isMountedRef.current = true;
     return () => {
       isMountedRef.current = false;
     };
@@ -284,15 +206,6 @@ const ThePainter = () => {
         document.body.classList.remove("pdf-open");
         document.body.style.overflow = "auto";
         document.removeEventListener("keydown", handleKeyDown);
-
-        // Cleanup fullscreen document
-        if (fullscreenDocRef.current && fullscreenDocRef.current.destroy) {
-          try {
-            fullscreenDocRef.current.destroy();
-          } catch (error) {
-            // Ignore cleanup errors
-          }
-        }
       };
     }
   }, [pdfToShow]);
@@ -330,7 +243,6 @@ const ThePainter = () => {
                 setNumPages(null);
               }}
               alt={alt}
-              index={currentIndex}
             />
           );
           return null;
@@ -482,11 +394,11 @@ const ThePainter = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <Document
-                key={pdfToShow} // Add key to prevent document reuse
+                key={pdfToShow}
                 file={`https://randa-kassis-website.b-cdn.net/interviews/painters/${pdfToShow}`}
                 onLoadSuccess={handleFullscreenLoadSuccess}
                 onLoadError={handleFullscreenLoadError}
-                options={PDF_OPTIONS} // Use memoized options
+                options={PDF_OPTIONS}
                 loading={
                   <div
                     style={{
@@ -503,12 +415,6 @@ const ThePainter = () => {
                     </div>
                   </div>
                 }
-                onSourceError={(error) => {
-                  console.error("Fullscreen PDF source error:", error);
-                  if (isMountedRef.current) {
-                    setPdfToShow(null);
-                  }
-                }}
               >
                 <style>
                   {`
@@ -529,7 +435,7 @@ const ThePainter = () => {
                 <div className="pdf-pages-container">
                   {Array.from({ length: numPages || 0 }, (_, i) => (
                     <Page
-                      key={`fullscreen-page-${i}-${pdfToShow}`} // More unique key
+                      key={`fullscreen-page-${i}-${pdfToShow}`}
                       pageNumber={i + 1}
                       width={calculatePageWidth()}
                       renderTextLayer={false}
@@ -550,9 +456,6 @@ const ThePainter = () => {
                           Loading page {i + 1}...
                         </div>
                       }
-                      onRenderError={(error) => {
-                        console.error(`Page ${i + 1} render error:`, error);
-                      }}
                     />
                   ))}
                 </div>
