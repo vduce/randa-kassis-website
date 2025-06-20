@@ -136,7 +136,7 @@ const ServiceSectionS2 = () => {
                           <div className="wpo-campaign-text-top">
                             <h2>
                               <Link onClick={ClickHandler} to={`/article-single/${service.id}`}>
-                                {service.title.slice(0, 30)}...
+                                {service.title.slice(0, 27)}...
                               </Link>
                             </h2>
                             <p>{service.description.slice(0, 150)} </p>

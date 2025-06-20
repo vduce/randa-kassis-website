@@ -91,32 +91,72 @@ const PdfViewer = ({ file, cdnUrlPrefix }) => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            backgroundColor: "rgba(0, 0, 0, 0.95)",
             display: "flex",
             flexDirection: "column",
             overflowY: "auto",
             zIndex: 1001,
           }}
         >
-          <Document file={pdfUrl} onLoadSuccess={({ numPages }) => setViewerNumPages(numPages)}>
-            <style>
-              {`
+          {/* Close Button */}
+          <div
+            style={{
+              position: "fixed",
+              top: "20px",
+              right: "20px",
+              color: "white",
+              fontSize: "30px",
+              cursor: "pointer",
+              zIndex: 1002,
+              background: "rgba(255,255,255,0.2)",
+              borderRadius: "50%",
+              width: "50px",
+              height: "50px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              userSelect: "none",
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              closeViewer();
+            }}
+          >
+            ✕
+          </div>
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              flex: 1,
+              display: "flex",
+              justifyContent: "center",
+              padding: "60px 20px 20px",
+            }}
+          >
+            <Document file={pdfUrl} onLoadSuccess={({ numPages }) => setViewerNumPages(numPages)}>
+              <style>
+                {`
                 .react-pdf__Page__canvas {
+                  max-width: 100% !important;
                   height: auto !important;
+                  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+                  margin-bottom: 20px;
                 }
               `}
-            </style>
-            <div className="pdf-pages-container">
-              {Array.from({ length: viewerNumPages || 0 }, (_, i) => (
-                <Page
-                  key={i}
-                  pageNumber={i + 1}
-                  width={calculatePageWidth()}
-                  className="pdf-page"
-                />
-              ))}
-            </div>
-          </Document>
+              </style>
+              <div className="pdf-pages-container">
+                {Array.from({ length: viewerNumPages || 0 }, (_, i) => (
+                  <Page
+                    key={i}
+                    pageNumber={i + 1}
+                    width={calculatePageWidth()}
+                    className="pdf-page"
+                  />
+                ))}
+              </div>
+            </Document>
+          </div>
         </div>
       )}
     </>
