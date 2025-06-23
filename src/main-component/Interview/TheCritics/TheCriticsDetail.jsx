@@ -68,7 +68,7 @@ const TheCriticsDetail = () => {
   };
 
   const handleNext = () => {
-    if (currentArticle < articles.length - 1) {
+    if (currentArticle < articles.length) {
       setCurrentArticle(currentArticle + 1);
       navigate(`/critics-single/${currentArticle + 1}`, {
         state: { pageNumber, currentArticle: currentArticle + 1 },
@@ -82,7 +82,7 @@ const TheCriticsDetail = () => {
       <PageTitle pageTitle={""} pagesub={"Article"} />
       <section className="wpo-blog-single-section section-padding-bottom">
         <div className="container">
-          <div className="row mb-4">
+          <div className="row mb-2">
             <div className={`col col-lg-2 col-2`}>
               <Link
                 to="/interview/the-essayist-the-critic"
@@ -100,7 +100,7 @@ const TheCriticsDetail = () => {
                   <div className="post2">
                     <div className="max-w-2xl mx-auto mb-3">
                       <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
-                        <div className="max-w-2xl mx-auto p-3">
+                        <div className="max-w-2xl mx-auto p-3 break-words">
                           <Markdown
                             rehypePlugins={[rehypeRaw]}
                             remarkPlugins={[remarkGfm]} // Enable GFM support
@@ -115,7 +115,7 @@ const TheCriticsDetail = () => {
                                       />
                                     </div>
                                   );
-                                }                                
+                                }
                               },
                               a: ({ href, children }) => {
                                 if (href && href.endsWith(".md")) {
@@ -129,6 +129,13 @@ const TheCriticsDetail = () => {
                                         window.scrollTo(0, 0);
                                       }}
                                     >
+                                      {children}
+                                    </a>
+                                  );
+                                }
+                                if (href && href.startsWith("http")) {
+                                  return (
+                                    <a href={href} target="_blank" rel="noopener noreferrer">
                                       {children}
                                     </a>
                                   );

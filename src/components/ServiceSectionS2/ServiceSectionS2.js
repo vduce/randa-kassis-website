@@ -33,11 +33,14 @@ const Encounters = [
       "Tunisia is facing numerous challenges one year after the revolution. TEDxENSI will present new ideas aimed at addressing these issues and contributing to the construction of a renewed society—one grounded in a strong social fabric and civic values.",
   },
   {
+    id: 3,
+    title: "Randa Kassis and Fabien Baussart Meet Druze Spiritual Leader",
+    description:
+      "Randa Kassis, President of the Astana Platform and the Movement for a Pluralistic Society, together with Fabien Baussart, President of the Centre for Political and Foreign Affairs (CPFA), met with His Eminence Sheikh Hikmat al-Hijri, the spiritual leader of the Druze community, at his residence in the town of Qanawat.",
+  },
+  {
     id: 32,
-    filename: "ed32.md",
     title: "Kazakhstan Peace Talks",
-    publishedIn: "Presidential Palace, Senate and Rixos Hotel, Astana",
-    publishedAt: "17\u201318 September 2015",
     description:
       "The Kazakhstan Peace Talks, organised by the Centre of Political and Foreign Affairs (CPFA) in cooperation with the Kazakh authorities, took place in September 2015 in Astana. This event was distinct from the later formal Astana II meeting.",
   },
@@ -159,18 +162,18 @@ const ServiceSectionS2 = () => {
             </TabPane>
             <TabPane tabId="3">
               <Row>
-                {Services.slice(4, 7).map((service, srv) => (
-                  <div className="col-lg-4 col-md-6 col-12" key={srv}>
+                {Encounters.map((service) => (
+                  <div className="col-lg-4 col-md-6 col-12" key={service.id}>
                     <div className="wpo-campaign-single">
                       <div className="wpo-campaign-item">
-                        <div className="wpo-campaign-img">
-                          <img src={service.screens} alt="" />
-                        </div>
                         <div className="wpo-campaign-content">
                           <div className="wpo-campaign-text-top">
                             <h2>
-                              <Link onClick={ClickHandler} to={`/blog-single/${service.slug}`}>
-                                {service.title.slice(0, 30)}...
+                              <Link
+                                onClick={ClickHandler}
+                                to={`/encounter-and-dialogue-single/${service.id}`}
+                              >
+                                {service.title.slice(0, 27)}...
                               </Link>
                             </h2>
                             <p>{service.description.slice(0, 150)} </p>
@@ -178,7 +181,7 @@ const ServiceSectionS2 = () => {
                               <Link
                                 className="more"
                                 onClick={ClickHandler}
-                                to={`/blog-single/${service.slug}`}
+                                to={`/encounter-and-dialogue-single/${service.id}`}
                               >
                                 Read more...
                               </Link>
