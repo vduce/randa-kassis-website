@@ -74,7 +74,7 @@ const ArticleSingle = () => {
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
       <div className="container">
-        <div className="row mb-4">
+        <div className="row mb-2">
           <div className={`col col-lg-2 col-2`}>
             <Link to="/articles" state={{ pageNumber }} className="btn btn-area">
               Back
