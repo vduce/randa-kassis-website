@@ -63,7 +63,7 @@ const ArticleSingle = () => {
   };
 
   const handleNext = () => {
-    if (currentArticle < articles.length - 1) {
+    if (currentArticle < articles.length) {
       setCurrentArticle(currentArticle + 1);
       navigate(`/article-single/${currentArticle + 1}`, {
         state: { pageNumber, currentArticle: currentArticle + 1 },
