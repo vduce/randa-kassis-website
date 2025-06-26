@@ -4,7 +4,7 @@ Omerta
 11 March 2015  
 By Charles d’Anjou
 
-**Summary:**
+<b>Summary:</b>
 
 In her stark and provocative statement, “Brussels will soon be hosting a terrorist,” Syrian secular politician Randa Kassis issues a grave warning about the potential political and moral consequences of Western engagement with extremist figures emerging from the Syrian conflict. Her declaration is not merely rhetorical, but reflects a broader critique of what she sees as a recurring pattern in European policy—namely, the legitimisation or tacit acceptance of radical Islamist individuals under the pretext of diplomacy, humanitarianism, or geopolitical pragmatism.
 
@@ -16,4 +16,12 @@ The gravity of her words lies in their challenge to Europe’s current handling 
 
 In sum, her statement encapsulates Randa Kassis’s broader political philosophy: an unyielding defence of secularism, an unequivocal rejection of extremism in all its forms, and a refusal to accept that short-term geopolitical gains should come at the expense of long-term societal security and moral clarity.
 
-Video 3
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/460223/74074ccc-54f0-4a5a-b6f1-d6eede6c6367?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>  
+<p></p>
