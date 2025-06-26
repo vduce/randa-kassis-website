@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Al-Joulani’s Syria: Falsely Moderate, Truly Islamist – An Exclusive Account by Syrian Opposition Leader Randa Kassis** _Le Diplomate_ 18 February 2025 By Angélique Bouchard
 
 Randa Kassis, anthropologist, Franco-Syrian politician and writer, and president of the Movement for a Pluralistic Society, is a prominent figure within the opposition to the former Ba’athist regime of Bashar al-Assad—toppled not by democratic forces, but by coalitions of Islamist and jihadist Sunni rebels, primarily backed by Qatar and, above all, Turkey.
@@ -111,3 +112,8 @@ Regarding Iran, Trump is now negotiating over the nuclear file—a striking turn
 In that light, it is entirely plausible that Trump might backtrack on Gaza—not out of empathy, but because reaching a nuclear agreement with Iran takes precedence. Such a deal would have far greater implications for regional and global stability.
 
 PDF 4
+=======
+# po4
+
+This is the content for po4.md
+>>>>>>> d0a72e6 (md files)

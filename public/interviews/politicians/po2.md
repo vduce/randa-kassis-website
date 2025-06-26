@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Syria: Transition on Tyranny?** _WGI WORLD_ 8 May 2025
 
 World Geostrategic Insights interview with Randa Kassis on the current situation in Syria and future prospects, the position of European chancelleries and institutions towards the jihadist-led government, and her vision and commitment to a secular and pluralistic Syria.
@@ -77,3 +78,8 @@ This model is not about fragmentation, but about coexistence through autonomy. E
 This vision can only be achieved through a gradual, strategic process. It begins by building alliances between regions such as the coast, Suwaida, and Hauran to secure their right to auto-administration. That is precisely what I—and many others—am actively working to achieve. Once this model is successfully implemented in these areas, we will expand step by step, region by region. I am not claiming that we can establish a federal system across the entire Syrian territory overnight. It will take years, careful coordination, and the political will of those committed to a truly inclusive and stable Syria.
 
 PDF 2
+=======
+# po2
+
+This is the content for po2.md
+>>>>>>> d0a72e6 (md files)

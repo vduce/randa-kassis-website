@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Brussels Will Soon Be Hosting a Terrorist** _Omerta_ 11 March 2015 By Charles d’Anjou
 
 **Summary:**
@@ -13,3 +14,8 @@ The gravity of her words lies in their challenge to Europe’s current handling 
 In sum, her statement encapsulates Randa Kassis’s broader political philosophy: an unyielding defence of secularism, an unequivocal rejection of extremism in all its forms, and a refusal to accept that short-term geopolitical gains should come at the expense of long-term societal security and moral clarity.
 
 Video 3
+=======
+# po3
+
+This is the content for po3.md
+>>>>>>> d0a72e6 (md files)
