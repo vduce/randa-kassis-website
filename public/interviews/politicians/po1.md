@@ -1,6 +1,6 @@
 <h4>Al-Joulani Endorsed by Macron and Trump: “A Deeply Irresponsible Act”</h4>
 
-Omerta
+Omerta  
 26 May 2025
 
 Randa Kassis, a Franco-Syrian anthropologist, politician, and writer, and president of the Movement for a Pluralistic Society, is a leading figure in the opposition—initially to the former Ba’athist regime of Bashar al-Assad, and now to that of Ahmed al-Charaa, also known as Abu Mohammed al-Joulani, the head of the so-called “moderate butchers” of HTS, who has just been endorsed by Presidents Macron and Trump.
