@@ -1,4 +1,7 @@
-**Al-Joulani Endorsed by Macron and Trump: “A Deeply Irresponsible Act”** _Omerta_ 26 May 2025
+<h4>Al-Joulani Endorsed by Macron and Trump: “A Deeply Irresponsible Act”</h4>
+
+Omerta
+26 May 2025
 
 Randa Kassis, a Franco-Syrian anthropologist, politician, and writer, and president of the Movement for a Pluralistic Society, is a leading figure in the opposition—initially to the former Ba’athist regime of Bashar al-Assad, and now to that of Ahmed al-Charaa, also known as Abu Mohammed al-Joulani, the head of the so-called “moderate butchers” of HTS, who has just been endorsed by Presidents Macron and Trump.
 
@@ -84,4 +87,5 @@ Yes, Syria faces a real risk of implosion if al-Joulani’s regime — already w
 
 We do not have the luxury of time: fragmentation is accelerating, and tensions are worsening. Yet I firmly believe in this project because it is being led by Syrians themselves — and it will be financed and developed without dependence on external agendas.
 
-PDF 1
+![](1-Omerta.pdf)
+<p></p>
