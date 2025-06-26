@@ -24,7 +24,7 @@ It is worth highlighting that the majority of brigades within the Syrian Nationa
 
 Furthermore, it is important to point out that Macron’s phone call to Joulani took place just two days after the CEO of CMA CGM—the French shipping company headed by Franco-Lebanese businessman Rodolphe Saadé—was appointed to manage the port of Latakia…
 
-<b>What should we take away from the recent official visit of Russian Deputy Foreign Minister Mikhail Bogdanov to Syria? Do the Russians still believe their military bases in Tartus and Hmeimim can be maintained or renegotiated?<b>
+<b>What should we take away from the recent official visit of Russian Deputy Foreign Minister Mikhail Bogdanov to Syria? Do the Russians still believe their military bases in Tartus and Hmeimim can be maintained or renegotiated?</b>
 
 To my knowledge, the Russians are indeed engaged in ongoing negotiations to retain their two strategic military bases in Syria. However, the compensation demands put forward by Al-Charaa / Joulani are not entirely to their liking. The fundamental issue lies in Al-Charaa’s lack of understanding of international political dynamics. While he may currently enjoy the support of two or three regional powers, such backing is far from sufficient to navigate the complexities of today’s geopolitical landscape.
 
