@@ -1,5 +1,4 @@
 <h4>New Syrian Power: “Moderate Beheaders” or “Inclusive Islamists”?</h4>
-
 Atlantico  
 11 February 2025
 
