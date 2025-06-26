@@ -1,4 +1,8 @@
-**Brussels Will Soon Be Hosting a Terrorist** _Omerta_ 11 March 2015 By Charles d’Anjou
+<h4>Brussels Will Soon Be Hosting a Terrorist</h4>
+
+Omerta  
+11 March 2015  
+By Charles d’Anjou
 
 **Summary:**
 
