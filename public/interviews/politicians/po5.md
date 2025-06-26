@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **New Syrian Power: “Moderate Beheaders” or “Inclusive Islamists”?** _Atlantico_ 11 February 2025
 
 Randa Kassis – anthropologist, Franco-Syrian politician and writer, and President of the Movement for a Pluralistic Society – is a well-known figure in the opposition to the former Baathist regime of Bashar al-Assad, which was overthrown by coalitions of Islamist and Sunni jihadist rebels backed by Qatar and, above all, Turkey. Since then, Western media and European capitals have tirelessly sought mitigating factors and signs of “moderation” to justify the gradual international recognition of HTS’s so-called “moderate beheaders” and their leader, Abu Mohammed al-Joulani – now rebranded as Ahmed al-Charaa – ever since donning a suit and tie in a bid to project a respectable image of himself and his new regime. His primary motivation, of course, is the lifting of international sanctions, particularly American ones (notably the “Caesar Act”), which obstruct the country’s reconstruction and hinder imports, exports, and international financial transactions.
@@ -86,8 +85,3 @@ As for Trump’s “Gaza stunt”, it is patently absurd. Such a proposal would 
 Regarding the first part of your question, Trump is currently negotiating with Iran on the nuclear issue – ironically, given that he himself scrapped the original agreement during his first term. Now, he seeks a new compromise, aware that Iran could, according to some estimates, develop four to five nuclear warheads within weeks. Such a prospect would render any pre-emptive strike ineffective. In this context, it is not inconceivable that Trump might abandon his Gaza proposal if he manages to strike a deal with Iran over its nuclear programme.
 
 PDF 5
-=======
-# po5
-
-This is the content for po5.md
->>>>>>> d0a72e6 (md files)

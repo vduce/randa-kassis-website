@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **War In Syria** _Ria Novosti_ 12 December 2024
 
 Syrians Believe the Leader of the Armed Opposition Will Not Share Power The Opposition in Syria Doubts al-Joulani’s Willingness to Share Power
@@ -26,8 +25,3 @@ The Astana Platform was established by representatives of the external Syrian op
 In 2017, the head of the Astana Platform, Randa Kassis, launched an initiative to draft a new Syrian constitution, involving Syrian academics and political figures—an effort that was, at the time, supported by the Russian Foreign Ministry.
 
 PDF 9
-=======
-# po9
-
-This is the content for po9.md
->>>>>>> d0a72e6 (md files)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **“Secular Federalism” Is the Key to Syria’s Stability** _Al Dostor_ 22 December 2024 By Samira Ibrahim
 
 Following the fall of the Assad regime, Syria has experienced profound divisions within the opposition, with divergent visions emerging regarding the country’s future. The role of regional and international powers in supporting peace and reconstruction has come increasingly into focus.
@@ -90,8 +89,3 @@ At present, it is difficult to determine with certainty the fate of Russia’s m
 That said, this does not imply a full withdrawal from Syria. Rather, it suggests that Russia is seeking to protect its military assets—including warships and fighter aircraft—especially in light of the uncertainty surrounding the future of al-Sharaa’s government. In my assessment, Russia is adopting a wait-and-see approach, closely monitoring Syria’s political and military developments before making any decisive moves regarding its continued presence.
 
 PDF 7
-=======
-# po7
-
-This is the content for po7.md
->>>>>>> d0a72e6 (md files)

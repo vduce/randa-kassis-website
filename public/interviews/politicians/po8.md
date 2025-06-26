@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **EXCLUSIVE INTERVIEW – Randa Kassis: “Federalism is the key to preserving Syria’s pluralism and unity”** _Le Diplomate_ 13 December 2024 By Roland Lombardi and Alexandre del Valle
 
 Interview with Randa Kassis, Franco-Syrian anthropologist, political leader, writer, and president of the Movement for a Pluralistic Society
@@ -58,8 +57,3 @@ Without American military backing, it will be extremely difficult for the Kurds 
 We must remain open to dialogue with all parties. At the same time, Syria’s political forces must find common ground and agree on the future structure of the state. I continue to advocate federalism, which I believe is the most realistic solution for preserving territorial integrity while safeguarding Syria’s pluralism. I also hope that Israel will respect Syrian sovereignty. I have already initiated dialogue with some members of the incoming American administration and remain optimistic that we can work together constructively.
 
 PDF 8
-=======
-# po8
-
-This is the content for po8.md
->>>>>>> d0a72e6 (md files)

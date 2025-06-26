@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 **From Damascus – Interview with Randa Kassis on the Situation in Syria** _RT Arabic_ 15 January 2025
 
 Summary:
@@ -14,8 +13,3 @@ On the international front, Kassis stresses the need to balance the interests of
 Despite the daunting challenges, Kassis remains cautiously optimistic. She affirms that with inclusive participation and international cooperation, Syria may yet chart a path to recovery. Nonetheless, she warns that extremist threats, geopolitical entanglements, and institutional exclusion continue to pose significant risks.
 
 Video 6
-=======
-# po6
-
-This is the content for po6.md
->>>>>>> d0a72e6 (md files)
