@@ -28,7 +28,6 @@ That year, I was brimming with energy and had no desire to pause after all I had
 ![](16.jpg)
 ![](17.jpg)
 ![](18.jpg)
-![](19.jpg)
 ![](20.jpg)
 
 My final exhibition of 1995 took place in Abu Dhabi from 24 to 29 December, under the patronage of Sheikh Said bin Tahnoun Al Nahyan, a member of the Executive Council. The opening was attended by several ambassadors, including the Syrian ambassador.
