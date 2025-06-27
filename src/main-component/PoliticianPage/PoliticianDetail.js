@@ -3,22 +3,17 @@ import PageTitle from "../../components/pagetitle/PageTitle.js";
 import Scrollbar from "../../components/scrollbar/scrollbar.js";
 import Footer from "../../components/footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
-import encounterAndDialogues from "../../api/encounterAndDialogue.json";
-import EdList from "../../components/EncounterAndDialogue/EdList.js";
+import EdSingle from "../../components/EncounterAndDialogue/EdSingle.jsx";
 
-const EncAndDialFullWidth = () => {
+const EncAndDialDetails = () => {
   return (
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} />
-      <PageTitle pageTitle={""} pagesub={"Blog"} />
-      <EdList
-        blLeft={"d-none"}
-        blRight={"col-lg-10 offset-lg-1 col-12"}
-        services={encounterAndDialogues.articles}
-      />
+      <PageTitle pageTitle={""} pagesub={"Encounter And Dialogue"} />
+      <EdSingle />
       <Footer />
       <Scrollbar />
     </Fragment>
   );
 };
-export default EncAndDialFullWidth;
+export default EncAndDialDetails;
