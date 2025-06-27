@@ -3,17 +3,17 @@ import PageTitle from "../../components/pagetitle/PageTitle.js";
 import Scrollbar from "../../components/scrollbar/scrollbar.js";
 import Footer from "../../components/footer/Footer.js";
 import Navbar from "../../components/Navbar/Navbar.js";
-import EdSingle from "../../components/EncounterAndDialogue/EdSingle.jsx";
+import PoliticianSingle from "../../components/Politician/PoliticianSingle.jsx";
 
-const EncAndDialDetails = () => {
+const PoliticianDetails = () => {
   return (
     <Fragment>
       <Navbar hclass={"wpo-site-header-s1"} />
-      <PageTitle pageTitle={""} pagesub={"Encounter And Dialogue"} />
-      <EdSingle />
+      <PageTitle pageTitle={""} pagesub={"Politician"} />
+      <PoliticianSingle />
       <Footer />
       <Scrollbar />
     </Fragment>
   );
 };
-export default EncAndDialDetails;
+export default PoliticianDetails;

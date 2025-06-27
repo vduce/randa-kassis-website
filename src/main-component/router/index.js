@@ -37,6 +37,8 @@ import EncAndDialDetails from "../EncounterAndDialoguePage/EncAndDialDetails";
 import ThePainter from "../Interview/ThePainter/ThePainter";
 import TheCriticsLayout from "../Interview/TheCritics/TheCriticsLayout";
 import TheCriticsDetail from "../Interview/TheCritics/TheCriticsDetail";
+import PoliticianDetails from "../PoliticianPage/PoliticianDetail";
+import PoliticianFullWidth from "../PoliticianPage/PoliticianFull";
 
 const AllRoute = () => {
   return (
@@ -82,6 +84,8 @@ const AllRoute = () => {
           <Route path="interview/the-painter" element={<ThePainter />} />
           <Route path="interview/the-essayist-the-critic" element={<TheCriticsLayout />} />
           <Route path="critics-single/:id" element={<TheCriticsDetail />} />
+          <Route path="interview/the-politician" element={<PoliticianFullWidth />} />
+          <Route path="politician-single/:id" element={<PoliticianDetails />} />
           <Route path="404" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

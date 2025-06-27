@@ -23,7 +23,7 @@ const PoliticianList = (props) => {
           }
         })
       );
-      setEdContents(fetched);
+      setPoliticianContents(fetched);
     };
 
     fetchPoliticians();

@@ -42,7 +42,7 @@ const PoliticianSingle = () => {
     if (selectedPolitician && selectedPolitician.filename) {
       const fetchContent = async () => {
         try {
-          const response = await fetch(`/interview/politician/${selectedPolitician.filename}`);
+          const response = await fetch(`/interviews/politicians/${selectedPolitician.filename}`);
           const text = await response.text();
           setContent(text);
         } catch (error) {
@@ -106,7 +106,7 @@ const PoliticianSingle = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/encounters/pdfs"
+            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/interviews/politicians/pdfs"
           />
         );
         lastElementType.current = "pdf";
@@ -119,7 +119,7 @@ const PoliticianSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/encounters/photos/${src}`;
+      const imageSrc = `https://randa-kassis-website.b-cdn.net/interviews/politicians/photos/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
@@ -152,7 +152,7 @@ const PoliticianSingle = () => {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              navigate(`/encounter-and-dialogue-single/${edId}`);
+              navigate(`/politician-single/${edId}`);
               window.scrollTo(0, 0);
             }}
           >
@@ -211,14 +211,14 @@ const PoliticianSingle = () => {
     );
   };
 
-  if (!encounterAndDialogue) {
-    return <p>Encounter and dialogue not found.</p>;
+  if (!politician) {
+    return <p>Politician not found.</p>;
   }
 
   const handlePrevious = () => {
     if (currentElement > 1) {
       setCurrentElement(currentElement - 1);
-      navigate(`/encounter-and-dialogue-single/${currentElement - 1}`, {
+      navigate(`/politician-single/${currentElement - 1}`, {
         state: { pageNumber, currentElement: currentElement - 1 },
       });
     }
@@ -229,16 +229,10 @@ const PoliticianSingle = () => {
     console.log("Total Elements:", politicians.length);
     if (currentElement < politicians.length) {
       setCurrentElement(currentElement + 1);
-      navigate(`/encounter-and-dialogue-single/${currentElement + 1}`, {
+      navigate(`/politician-single/${currentElement + 1}`, {
         state: { pageNumber, currentElement: currentElement + 1 },
       });
     }
-  };
-
-  const calculatePageWidth = () => {
-    const screenWidth = window.innerWidth;
-    const isMobile = screenWidth <= 768;
-    return isMobile ? screenWidth : 800;
   };
 
   return (
@@ -247,7 +241,7 @@ const PoliticianSingle = () => {
         <div className="row mb-2">
           <div className={`col col-lg-2 col-2`}>
             <Link
-              to="/encounter-and-dialogue"
+              to="/interview/the-politician"
               state={{ pageNum: pageNumber, currentElement }}
               className="btn btn-area"
             >
@@ -262,8 +256,13 @@ const PoliticianSingle = () => {
                 <div className="post2">
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
-                      <div className="max-w-2xl mx-auto p-3">{renderMarkdown(content || "")}</div>
-                      <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                      <div className="max-w-2xl mx-auto p-3">
+                        {renderMarkdown(content || "")}
+                      </div>
+                      <div
+                        className="d-flex mt-6"
+                        style={{ justifyContent: "space-between" }}
+                      >
                         <button
                           onClick={handlePrevious}
                           disabled={currentElement === 1}
@@ -284,7 +283,9 @@ const PoliticianSingle = () => {
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
                         >
-                          {currentElement === politicians.length ? "Completed" : "Next"}
+                          {currentElement === politicians.length
+                            ? "Completed"
+                            : "Next"}
                         </button>
                       </div>
                     </div>
@@ -314,4 +315,4 @@ const PoliticianSingle = () => {
   );
 };
 
-export default EdSingle;
+export default PoliticianSingle;
