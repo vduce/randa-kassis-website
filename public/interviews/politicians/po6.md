@@ -1,6 +1,9 @@
-**From Damascus – Interview with Randa Kassis on the Situation in Syria** _RT Arabic_ 15 January 2025
+<h4>From Damascus – Interview with Randa Kassis on the Situation in Syria</h4>
 
-Summary:
+RT Arabic  
+15 January 2025
+
+<b>Summary:</b>
 
 In a wide-ranging interview from Damascus, Randa Kassis, President of the Pluralistic Society Movement, discusses Syria’s critical transitional phase following the collapse of the former regime and the rise of Hay’at Tahrir al-Sham (HTS) as the de facto governing authority. She addresses the mounting political, security, economic, and social challenges confronting the new rulers, amidst widespread uncertainty over the country’s future.
 
@@ -12,4 +15,12 @@ On the international front, Kassis stresses the need to balance the interests of
 
 Despite the daunting challenges, Kassis remains cautiously optimistic. She affirms that with inclusive participation and international cooperation, Syria may yet chart a path to recovery. Nonetheless, she warns that extremist threats, geopolitical entanglements, and institutional exclusion continue to pose significant risks.
 
-Video 6
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/460223/0f5673e8-2e1f-42b8-aade-a25410a4885a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>  
+<p></p>
