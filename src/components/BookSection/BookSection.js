@@ -1,12 +1,10 @@
-import React from "react";
-import blogs from "../../api/blogs";
-import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 import img1 from "../../images/books/1.jpg";
 import img2 from "../../images/books/2.jpg";
 import img3 from "../../images/books/4.jpg";
 import img4 from "../../images/books/5.jpg";
+import img5 from "../../images/books/3.jpg";
 
 const handleLink = (link) => {
   // Open the URL in a new tab
@@ -59,10 +57,19 @@ const BookSection = () => {
       size: "Xl",
       link: "https://www.amazon.fr/Crypts-Gods-Randa-Kassis/dp/1492880604",
     },
+    {
+      id: 5,
+      proImg: img5,
+      title: "Syria and the Return of Russia",
+      slug: "syria-and-the-return-of-russia",
+      price: "340.00",
+      delPrice: "380.00",
+      brand: "Gucci",
+      size: "Xl",
+      link: "https://www.amazon.fr/Syrie-retour-Russie-Randa-Kassis/dp/2940523630",
+    },
   ];
-  const handleLInk = (product) => {
-    window.open(product.link);
-  };
+  
   return (
     <section className="wpo-shop-section  section-padding1">
       <div className="container">

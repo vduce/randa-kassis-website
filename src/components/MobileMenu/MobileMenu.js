@@ -4,6 +4,7 @@ import ListItem from "@material-ui/core/List";
 import Collapse from "@material-ui/core/Collapse";
 import { NavLink } from "react-router-dom";
 import "./style.css";
+import { useMenu } from "../../context/MenuContext";
 
 
 const menus = [
@@ -156,13 +157,13 @@ const menus = [
 
 const MobileMenu = () => {
   const [openId, setOpenId] = useState(0);
-  const [menuActive, setMenuState] = useState(false);
+  const { menuActive, setMenuActive } = useMenu();
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
-    setMenuState(false);
+    setMenuActive(false);
   };
 
   useEffect(() => {
@@ -174,7 +175,7 @@ const MobileMenu = () => {
         buttonRef.current &&
         !buttonRef.current.contains(e.target)
       ) {
-        setMenuState(false);
+        setMenuActive(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -188,14 +189,18 @@ const MobileMenu = () => {
         ref={menuRef}
       >
         <div className="menu-close">
-          <div className="clox" onClick={() => setMenuState(!menuActive)}>
+          <div className="clox" onClick={() => setMenuActive(!menuActive)}>
             <i className="ti-close"></i>
           </div>
         </div>
         <ul className="responsivemenu">
           {menus.map((item, mn) => {
             return (
-              <ListItem className={item.id === openId ? "active" : null} key={mn}>
+              <ListItem
+                className={item.id === openId ? "active" : null}
+                key={mn}
+                onClick={() => setMenuActive(!menuActive)}
+              >
                 {item.submenu ? (
                   <Fragment>
                     <p
@@ -237,7 +242,7 @@ const MobileMenu = () => {
       </div>
       <div
         className="showmenu"
-        onClick={() => setMenuState(!menuActive)}
+        onClick={() => setMenuActive(!menuActive)}
         ref={buttonRef}
       >
         <button type="button" className="navbar-toggler open-btn">
