@@ -190,8 +190,8 @@ const ServiceSectionS2 = () => {
               <Row>
                 {Encounters.map((service) => (
                   <div className="col-lg-4 col-md-6 col-12" key={service.id}>
-                    <div className="wpo-campaign-single">
-                      <div className="wpo-campaign-item">
+                    <div className="wpo-campaign-single" style={{ height: "309px" }}>
+                      <div className="wpo-campaign-item h-100">
                         <div className="wpo-campaign-content">
                           <div className="wpo-campaign-text-top">
                             <h2>
@@ -202,7 +202,7 @@ const ServiceSectionS2 = () => {
                                 {service.title.slice(0, 27)}...
                               </Link>
                             </h2>
-                            <p>{service.description.slice(0, 150)} </p>
+                            <p style={{ height: "161px" }}>{service.description.slice(0, 150)} </p>
                             <span>
                               <Link
                                 className="more"

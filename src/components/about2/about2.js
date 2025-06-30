@@ -14,7 +14,7 @@ const About2 = (props) => {
               <div className="wpo-about-img">
                 <div className="funfact-video mt-0">
                   <img src={Hero2} alt="" />
-                  <VideoModal props={"MizSgMy-Fxs"} />
+                  <VideoModal props={"c17ff124-c660-4001-9005-a737bb661884"} />
                 </div>
               </div>
             </div>
@@ -24,17 +24,23 @@ const About2 = (props) => {
                   <span className="notranslate">Consilium & Vision</span>
                 </div>
                 <p>
-                  My political beliefs have been shaped by a lifetime of intellectual rebellion, activism, and deep engagement with history, philosophy, and the realities of power. I reject all forms of ideological rigidity, recognising that dogma regardless of its origin inevitably leads to oppression.
+                  My political beliefs have been shaped by a lifetime of intellectual rebellion,
+                  activism, and deep engagement with history, philosophy, and the realities of
+                  power. I reject all forms of ideological rigidity, recognising that dogma
+                  regardless of its origin inevitably leads to oppression.
                 </p>
                 <p>
                   At my core, I believe in the primacy of individual freedom over collective
-                  identity. I have devoted my life to challenging the dogmas that shape the Arab world, advocating for a state that protects personal freedoms rather than enforcing outdated moral codes.
+                  identity. I have devoted my life to challenging the dogmas that shape the Arab
+                  world, advocating for a state that protects personal freedoms rather than
+                  enforcing outdated moral codes.
                 </p>
                 <p>
                   Yet I am not naïve about politics. The pursuit of a utopian system is futile;
                   history has shown that every ideological promise of salvation ends in
                   disillusionment. I believe instead in pragmatism seeking solutions that work,
-                  adapting to realities without abandoning fundamental principles. Politics, like life, is fluid, and those who fail to adapt are doomed to irrelevance.
+                  adapting to realities without abandoning fundamental principles. Politics, like
+                  life, is fluid, and those who fail to adapt are doomed to irrelevance.
                 </p>
                 <Link className="more" to={`/blog/political-beliefs`}>
                   Continue Reading
