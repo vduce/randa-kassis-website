@@ -109,22 +109,24 @@
   }
 
   .book-section-grids {
-    .grid {
-      height: 440px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-
-      .img-holder {
-        height: 350px;
+    @media (min-width: 992px) {
+      .grid {
+        height: 440px;
         overflow: hidden;
-      }
-
-      .details {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-grow: 1;
+
+        .img-holder {
+          height: 350px;
+          overflow: hidden;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex-grow: 1;
+        }
       }
     }
   }
