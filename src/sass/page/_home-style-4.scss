@@ -45,55 +45,6 @@
   }
 
   .wpo-campaign-wrap {
-    // ul {
-    //     justify-content: center;
-    //     margin-bottom: 40px;
-    //     border: 0;
-
-    //     @media(max-width:575px){
-    //         justify-content: center;
-    //     }
-
-    //     li {
-    //         flex-basis: 25%;
-
-    //         @media(max-width:575px){
-    //             flex-basis: 30%;
-    //         }
-
-    //         @media(max-width:450px){
-    //             flex-basis: 33%;
-    //         }
-
-    //         a {
-    //             border: 1px solid $border-color;
-    //             padding: 20px 30px;
-    //             text-align: center;
-    //             font-weight: 450;
-    //             font-size: 25px;
-    //             line-height: 32px;
-    //             font-family: $heading-font;
-    //             color: $dark-gray;
-    //             border-radius: 0;
-    //             margin: -1px;
-    //             cursor: pointer;
-
-    //             @media(max-width:1199px){
-    //                 padding: 12px;
-    //                 font-size: 18px;
-    //             }
-    //             @media(max-width:767px){
-    //                 padding: 10px;
-    //                 font-size: 14px;
-    //             }
-
-    //             &.active {
-    //                 background:  linear-gradient(to bottom, #773093, #2C1237) ;
-    //                 color: $white;
-    //             }
-    //         }
-    //     }
-    // }
     ul {
       display: flex;
       justify-content: center;
@@ -137,6 +88,74 @@
             padding: 9px 10px;
             font-size: 15px;
             line-height: 20px;
+          }
+
+          &.active {
+            background: linear-gradient(to bottom, #773093, #2c1237);
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wpo-campaign-area-s4 {
+  padding-top: 0;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+  .wpo-campaign-wrap-gallery {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; // for edge case fallback
+      margin-bottom: 40px;
+      border: 0;
+
+      li {
+        flex-basis: auto;
+        cursor: pointer;
+
+        @media (max-width: 767px) {
+          flex-basis: auto;
+        }
+
+        a {
+          border: 1px solid $border-color;
+          padding: 14px 30px;
+          text-align: center;
+          font-weight: 450;
+          font-size: 25px;
+          line-height: 32px;
+          font-family: $heading-font;
+          color: $dark-gray;
+          border-radius: 0;
+          margin: -1px;
+          cursor: pointer;
+
+          @media (max-width: 1199px) {
+            padding: 10px 25px;
+            font-size: 27px;
+          }
+
+          @media (max-width: 992px) {
+            padding: 10px 12px;
+            font-size: 25px;
+          }
+
+          @media (max-width: 767px) {
+            padding: 9px 4px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          @media (max-width: 450px) {
+            padding: 9px 4px;
+            font-size: 12px;
+            line-height: 17px;
           }
 
           &.active {

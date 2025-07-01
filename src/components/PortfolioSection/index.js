@@ -4,7 +4,7 @@ import "react-fancybox/lib/fancybox.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from "reactstrap";
+import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
 
 const ClickHandler = () => {
@@ -23,8 +23,7 @@ const PortfolioSection = ({ props }) => {
       id="gallery"
     >
       <div className="container">
-        <div className="wpo-campaign-wrap">
-          {props.length < 7 ? <SectionTitle subTitle={"Photos"} Title={"Gallery"} /> : <></>}
+        <div className="wpo-campaign-wrap-gallery">
           <Nav tabs>
             <NavItem>
               <NavLink

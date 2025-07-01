@@ -12,7 +12,7 @@ const handleLink = (link) => {
 };
 
 const BookSection = () => {
-  const products = [
+  const Books = [
     {
       id: 1,
       proImg: img1,
@@ -69,7 +69,7 @@ const BookSection = () => {
       link: "https://www.amazon.fr/Syrie-retour-Russie-Randa-Kassis/dp/2940523630",
     },
   ];
-  
+
   return (
     <section className="wpo-shop-section  section-padding1">
       <div className="container">
@@ -77,19 +77,19 @@ const BookSection = () => {
 
         <div className="row">
           <div className="col col-xs-12">
-            <div className="shop-grids clearfix">
-              {products.length > 0 &&
-                products.slice(0, 12).map((product, pitem) => (
+            <div className="shop-grids clearfix book-section-grids">
+              {Books.length > 0 &&
+                Books.slice(0, 12).map((book, pitem) => (
                   <div
-                    onClick={() => handleLink(product.link)} // Pass the product link to handleLink
+                    onClick={() => handleLink(book.link)} // Pass the book link to handleLink
                     className="grid"
                     key={pitem}
                   >
                     <div className="img-holder">
-                      <img src={product.proImg} alt={product.title} />
+                      <img src={book.proImg} alt={book.title} />
                     </div>
                     <div className="details">
-                      <h3>{product.title}</h3>
+                      <h3>{book.title}</h3>
                     </div>
                   </div>
                 ))}
