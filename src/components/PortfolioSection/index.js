@@ -42,7 +42,8 @@ const PortfolioSection = ({ props }) => {
                   toggle("2");
                 }}
               >
-                The Beauty I witness
+                {" "}
+                My Four-Pawed Companions
               </NavLink>
             </NavItem>
             <NavItem>
@@ -52,7 +53,7 @@ const PortfolioSection = ({ props }) => {
                   toggle("3");
                 }}
               >
-                My Four-Pawed Companions
+                Through My Eyes
               </NavLink>
             </NavItem>
           </Nav>

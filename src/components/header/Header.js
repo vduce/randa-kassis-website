@@ -33,10 +33,18 @@ const Header = (props) => {
   };
 
   const galleryList = {
-    1: "Section 1",
-    2: "Section 2",
-    3: "Section 3",
-    4: "Section 4",
+    1: "In the Arena",
+    2: "My Four-Pawed Companions",
+    3: "Through My Eyes",
+  };
+
+  const throughMyEyes = {
+    1: "Art in Motion",
+    2: "In Their Gaze",
+    3: "Ruins That Speak",
+    4: "Testaments in Stone",
+    5: "The Pulse of the Earth",
+    6: "Traces of Atrocity"
   };
 
   const beyondPolitics = {
@@ -115,10 +123,7 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link
-                        onClick={ClickHandler}
-                        className="text-capitalize"
-                      >
+                      <Link onClick={ClickHandler} className="text-capitalize">
                         Beyond Politics
                       </Link>
                       <ul className="sub-menu">
@@ -136,10 +141,7 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link
-                        onClick={ClickHandler}
-                        className="text-capitalize"
-                      >
+                      <Link onClick={ClickHandler} className="text-capitalize">
                         My Story
                       </Link>
                       <ul className="sub-menu">
@@ -175,27 +177,30 @@ const Header = (props) => {
                         ))}
                       </ul>
                     </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} className="text-capitalize" to="/gallery">
+                        Through My Eyes
+                      </Link>
+                      <ul className="sub-menu">
+                        {Object.entries(throughMyEyes).map(([key, value]) => (
+                          <li key={key}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/gallery/${key}`}
+                            >
+                              {value}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-3 col-2">
                 <div className="header-right">
-                  <div className="header-search-form-wrapper">
-                    {/* <div className="cart-search-contact">
-                                            <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
-                                                className={`fi ti-search ${menuActive ? "ti-close" : "fi "}`}></i></button>
-                                            <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
-                                                <form onSubmit={SubmitHandler}>
-                                                    <div>
-                                                        <input type="text" className="form-control"
-                                                            placeholder="Search here..." />
-                                                        <button type="submit"><i
-                                                            className="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div> */}
-                  </div>
+                  <div className="header-search-form-wrapper"></div>
                   <div className="close-form">
                     <Link onClick={ClickHandler} className="theme-btn" to="/contact">
                       <span className="text">Contact</span>
