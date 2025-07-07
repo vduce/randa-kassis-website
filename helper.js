@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function createMarkdownFiles() {
-  const folderPath = path.join(__dirname, "public", "gallery", "companion");
+  const folderPath = path.join(__dirname, "public", "gallery", "myeyes");
   console.log(`Creating files in: ${folderPath}`);
   
   // Ensure the folder exists
@@ -11,7 +11,7 @@ function createMarkdownFiles() {
   }
 
   for (let i = 1; i <= 5; i++) {
-    const fileName = `companion${i}.md`;
+    const fileName = `myeyes${i}.md`;
     const filePath = path.join(folderPath, fileName);
     
     // Create the file if it doesn't exist
