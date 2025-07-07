@@ -4,6 +4,39 @@ import classnames from "classnames";
 import { Link } from "react-router-dom";
 import Services from "../../api/service";
 
+const Interviews = [
+  {
+    id: 1,
+    filename: "po1.md",
+    title: "Al-Joulani Endorsed by Macron and Trump: “A Deeply Irresponsible Act”",
+    publishedIn: "Omerta",
+    publishedAt: "26 May 2025",
+    src: "/politician-single/1",
+    description:
+      "Randa Kassis, a Franco-Syrian anthropologist, politician, and writer, and president of the Movement for a Pluralistic Society, is a leading figure in the opposition—initially to the former Ba’athist regime of Bashar al-Assad, and now to that of Ahmed al-Charaa, also known as Abu Mohammed al-Joulani, the head of the so-called “moderate butchers” of HTS, who has just been endorse...",
+  },
+  {
+    id: 14,
+    filename: "ec14.md",
+    title: "Randa Kassis in Conversation with al-Mutawassit on The Crypts of the Gods",
+    publishedIn: "Al-Mutawassit",
+    publishedAt: "15 June 2012",
+    src: "/critics-single/14",
+    description:
+      "London – Syrian author and researcher Randa Kassis has published a bold and thought-provoking book entitled The Crypts of the Gods, which has attracted considerable attention for the cultural challenge it poses...",
+  },
+  {
+    id: 108,
+    filename: "po108.md",
+    title: "Opinions on the Protests in Syria",
+    publishedIn: "France 24",
+    publishedAt: "29 March 2011",
+    src: "/politician-single/108",
+    description:
+      "Guests: Ammar al-Qurabi & Randa Kassis The discussion addresses the deepening political unrest in Syria, rooted in long-standing repression, unfulfilled promises of reform, and the absence of democratic legitimacy under Bashar al-Assad. While early demonstrations were driven by hopes for change—such as lifting the emergency law, releasing political prisoners, an...",
+  },
+];
+
 const Articles = [
   {
     id: 14,
@@ -97,27 +130,20 @@ const ServiceSectionS2 = () => {
           <TabContent activeTab={activeTab}>
             <TabPane tabId="1">
               <div className="row">
-                {Services.slice(0, 3).map((service, srv) => (
+                {Interviews.slice(0, 3).map((service, srv) => (
                   <div className="col-lg-4 col-md-6 col-12" key={srv}>
                     <div className="wpo-campaign-single">
                       <div className="wpo-campaign-item">
-                        <div className="wpo-campaign-img">
-                          <img src={service.screens} alt="" />
-                        </div>
                         <div className="wpo-campaign-content">
                           <div className="wpo-campaign-text-top">
                             <h2>
-                              <Link onClick={ClickHandler} to={`/blog-single/${service.slug}`}>
-                                {service.title.slice(0, 30)}...
+                              <Link onClick={ClickHandler} to={service.src}>
+                                {service.title.slice(0, 50)}...
                               </Link>
                             </h2>
                             <p>{service.description.slice(0, 150)} </p>
                             <span>
-                              <Link
-                                className="more"
-                                onClick={ClickHandler}
-                                to={`/blog-single/${service.slug}`}
-                              >
+                              <Link className="more" onClick={ClickHandler} to={service.src}>
                                 Read more...
                               </Link>
                             </span>
@@ -139,7 +165,7 @@ const ServiceSectionS2 = () => {
                           <div className="wpo-campaign-text-top">
                             <h2>
                               <Link onClick={ClickHandler} to={`/article-single/${service.id}`}>
-                                {service.title.slice(0, 27)}...
+                                {service.title.slice(0, 50)}...
                               </Link>
                             </h2>
                             <p>{service.description.slice(0, 150)} </p>
@@ -164,8 +190,8 @@ const ServiceSectionS2 = () => {
               <Row>
                 {Encounters.map((service) => (
                   <div className="col-lg-4 col-md-6 col-12" key={service.id}>
-                    <div className="wpo-campaign-single">
-                      <div className="wpo-campaign-item">
+                    <div className="wpo-campaign-single" style={{ height: "309px" }}>
+                      <div className="wpo-campaign-item h-100">
                         <div className="wpo-campaign-content">
                           <div className="wpo-campaign-text-top">
                             <h2>
@@ -176,7 +202,7 @@ const ServiceSectionS2 = () => {
                                 {service.title.slice(0, 27)}...
                               </Link>
                             </h2>
-                            <p>{service.description.slice(0, 150)} </p>
+                            <p style={{ height: "161px" }}>{service.description.slice(0, 150)} </p>
                             <span>
                               <Link
                                 className="more"

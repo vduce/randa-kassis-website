@@ -4,7 +4,7 @@ import ListItem from "@material-ui/core/List";
 import Collapse from "@material-ui/core/Collapse";
 import { NavLink } from "react-router-dom";
 import "./style.css";
-
+import { useMenu } from "../../context/MenuContext";
 
 const menus = [
   {
@@ -32,7 +32,7 @@ const menus = [
         title: "The Essayist & The Critic",
         link: "/interview/the-essayist-the-critic", // The Essayist & The Critic
       },
-       {
+      {
         id: 3,
         title: "The Painter",
         link: "/interview/the-painter", // The Painter
@@ -145,7 +145,23 @@ const menus = [
   {
     id: 7,
     title: "Gallery",
-    link: "/gallery",
+    submenu: [
+      {
+        id: 1,
+        title: "In the Arena",
+        link: "/gallery/in-the-arena",
+      },
+      {
+        id: 2,
+        title: "My Four-Pawed Companions",
+        link: "/gallery/my-four-pawed-companions",
+      },
+      {
+        id: 3,
+        title: "Through My Eyes",
+        link: "/gallery/through-my-eyes",
+      },
+    ],
   },
   {
     id: 8,
@@ -156,13 +172,13 @@ const menus = [
 
 const MobileMenu = () => {
   const [openId, setOpenId] = useState(0);
-  const [menuActive, setMenuState] = useState(false);
+  const { menuActive, setMenuActive } = useMenu();
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
-    setMenuState(false);
+    setMenuActive(false);
   };
 
   useEffect(() => {
@@ -174,7 +190,7 @@ const MobileMenu = () => {
         buttonRef.current &&
         !buttonRef.current.contains(e.target)
       ) {
-        setMenuState(false);
+        setMenuActive(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -183,19 +199,20 @@ const MobileMenu = () => {
 
   return (
     <div>
-      <div
-        className={`mobileMenu ${menuActive ? "show" : ""}`}
-        ref={menuRef}
-      >
+      <div className={`mobileMenu ${menuActive ? "show" : ""}`} ref={menuRef}>
         <div className="menu-close">
-          <div className="clox" onClick={() => setMenuState(!menuActive)}>
+          <div className="clox" onClick={() => setMenuActive(!menuActive)}>
             <i className="ti-close"></i>
           </div>
         </div>
         <ul className="responsivemenu">
           {menus.map((item, mn) => {
             return (
-              <ListItem className={item.id === openId ? "active" : null} key={mn}>
+              <ListItem
+                className={item.id === openId ? "active" : null}
+                key={mn}
+                onClick={() => setMenuActive(!menuActive)}
+              >
                 {item.submenu ? (
                   <Fragment>
                     <p
@@ -235,11 +252,7 @@ const MobileMenu = () => {
           })}
         </ul>
       </div>
-      <div
-        className="showmenu"
-        onClick={() => setMenuState(!menuActive)}
-        ref={buttonRef}
-      >
+      <div className="showmenu" onClick={() => setMenuActive(!menuActive)} ref={buttonRef}>
         <button type="button" className="navbar-toggler open-btn">
           <span className="icon-bar first-angle"></span>
           <span className="icon-bar middle-angle"></span>

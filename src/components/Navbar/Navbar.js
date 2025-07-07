@@ -1,9 +1,11 @@
 import React from "react";
-import Header from '../header/Header';
-import Logo from '../../images/logo.png'
+import Header from "../header/Header";
+import Logo from "../../images/logo.png";
+import { useMenu } from "../../context/MenuContext";
 
 export default function Navbar(props) {
   const [scroll, setScroll] = React.useState(0);
+  const { menuActive, setMenuActive } = useMenu();
 
   const handleScroll = () => setScroll(document.documentElement.scrollTop);
 
@@ -16,7 +18,7 @@ export default function Navbar(props) {
 
   return (
     <div className={className}>
-        <Header hclass={props.hclass} Logo={Logo} topbarNone={props.topbarNone} />
+      <Header hclass={props.hclass} Logo={Logo} topbarNone={props.topbarNone} />
     </div>
-  ); 
+  );
 }

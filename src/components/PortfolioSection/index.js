@@ -4,7 +4,7 @@ import "react-fancybox/lib/fancybox.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from "reactstrap";
+import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
 
 const ClickHandler = () => {
@@ -23,12 +23,7 @@ const PortfolioSection = ({ props }) => {
       id="gallery"
     >
       <div className="container">
-        <div className="wpo-campaign-wrap">
-          {props.length < 7 ? (
-            <SectionTitle subTitle={"Photos"} Title={"Gallery"} />
-          ) : (
-            <></>
-          )}
+        <div className="wpo-campaign-wrap-gallery">
           <Nav tabs>
             <NavItem>
               <NavLink
@@ -37,7 +32,7 @@ const PortfolioSection = ({ props }) => {
                   toggle("1");
                 }}
               >
-                Section 1
+                In the Arena
               </NavLink>
             </NavItem>
             <NavItem>
@@ -47,7 +42,8 @@ const PortfolioSection = ({ props }) => {
                   toggle("2");
                 }}
               >
-                Section 2
+                {" "}
+                My Four-Pawed Companions
               </NavLink>
             </NavItem>
             <NavItem>
@@ -57,17 +53,7 @@ const PortfolioSection = ({ props }) => {
                   toggle("3");
                 }}
               >
-                Section 3
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === "4" })}
-                onClick={() => {
-                  toggle("4");
-                }}
-              >
-                Section 4
+                Through My Eyes
               </NavLink>
             </NavItem>
           </Nav>
@@ -78,9 +64,7 @@ const PortfolioSection = ({ props }) => {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="portfolio-grids gallery-container clearfix">
-                      <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                      >
+                      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
                           {props.map((image, i) => (
                             <div className="grid" key={i}>
@@ -108,9 +92,7 @@ const PortfolioSection = ({ props }) => {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="portfolio-grids gallery-container clearfix">
-                      <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                      >
+                      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
                           {props.map((image, i) => (
                             <div className="grid" key={i}>
@@ -138,39 +120,7 @@ const PortfolioSection = ({ props }) => {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="portfolio-grids gallery-container clearfix">
-                      <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                      >
-                        <Masonry columnsCount={3} gutter="15px">
-                          {props.map((image, i) => (
-                            <div className="grid" key={i}>
-                              <Link to="/gallery">
-                                <div className="img-holder">
-                                  <ReactFancyBox
-                                    thumbnail={image.Pimg}
-                                    image={image.Pimg}
-                                    style={{ width: "100%", display: "block" }}
-                                  />
-                                </div>
-                              </Link>
-                            </div>
-                          ))}
-                        </Masonry>
-                      </ResponsiveMasonry>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </TabPane>
-            <TabPane tabId="4">
-              <div className="sortable-gallery">
-                <div className="gallery-filters"></div>
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="portfolio-grids gallery-container clearfix">
-                      <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                      >
+                      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
                           {props.map((image, i) => (
                             <div className="grid" key={i}>
