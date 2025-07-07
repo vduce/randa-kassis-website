@@ -33,18 +33,9 @@ const Header = (props) => {
   };
 
   const galleryList = {
-    1: "In the Arena",
-    2: "My Four-Pawed Companions",
-    3: "Through My Eyes",
-  };
-
-  const throughMyEyes = {
-    1: "Art in Motion",
-    2: "In Their Gaze",
-    3: "Ruins That Speak",
-    4: "Testaments in Stone",
-    5: "The Pulse of the Earth",
-    6: "Traces of Atrocity"
+    "in-the-arena": "In the Arena",
+    "my-four-pawed-companions": "My Four-Pawed Companions",
+    "through-my-eyes": "Through My Eyes",
   };
 
   const beyondPolitics = {
@@ -160,29 +151,11 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} className="text-capitalize" to="/gallery">
+                      <Link onClick={ClickHandler} className="text-capitalize">
                         Gallery
                       </Link>
                       <ul className="sub-menu">
                         {Object.entries(galleryList).map(([key, value]) => (
-                          <li key={key}>
-                            <Link
-                              onClick={ClickHandler}
-                              className="text-capitalize"
-                              to={`/gallery/${key}`}
-                            >
-                              {value}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} className="text-capitalize" to="/gallery">
-                        Through My Eyes
-                      </Link>
-                      <ul className="sub-menu">
-                        {Object.entries(throughMyEyes).map(([key, value]) => (
                           <li key={key}>
                             <Link
                               onClick={ClickHandler}

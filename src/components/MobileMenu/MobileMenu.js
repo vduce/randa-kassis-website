@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 import { useMenu } from "../../context/MenuContext";
 
-
 const menus = [
   {
     id: 1,
@@ -33,7 +32,7 @@ const menus = [
         title: "The Essayist & The Critic",
         link: "/interview/the-essayist-the-critic", // The Essayist & The Critic
       },
-       {
+      {
         id: 3,
         title: "The Painter",
         link: "/interview/the-painter", // The Painter
@@ -146,7 +145,23 @@ const menus = [
   {
     id: 7,
     title: "Gallery",
-    link: "/gallery",
+    submenu: [
+      {
+        id: 1,
+        title: "In the Arena",
+        link: "/gallery/in-the-arena",
+      },
+      {
+        id: 2,
+        title: "My Four-Pawed Companions",
+        link: "/gallery/my-four-pawed-companions",
+      },
+      {
+        id: 3,
+        title: "Through My Eyes",
+        link: "/gallery/through-my-eyes",
+      },
+    ],
   },
   {
     id: 8,
@@ -184,10 +199,7 @@ const MobileMenu = () => {
 
   return (
     <div>
-      <div
-        className={`mobileMenu ${menuActive ? "show" : ""}`}
-        ref={menuRef}
-      >
+      <div className={`mobileMenu ${menuActive ? "show" : ""}`} ref={menuRef}>
         <div className="menu-close">
           <div className="clox" onClick={() => setMenuActive(!menuActive)}>
             <i className="ti-close"></i>
@@ -240,11 +252,7 @@ const MobileMenu = () => {
           })}
         </ul>
       </div>
-      <div
-        className="showmenu"
-        onClick={() => setMenuActive(!menuActive)}
-        ref={buttonRef}
-      >
+      <div className="showmenu" onClick={() => setMenuActive(!menuActive)} ref={buttonRef}>
         <button type="button" className="navbar-toggler open-btn">
           <span className="icon-bar first-angle"></span>
           <span className="icon-bar middle-angle"></span>
