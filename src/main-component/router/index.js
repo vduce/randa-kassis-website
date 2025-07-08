@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage4 from "../HomePage4/HomePage4";
-import AboutPage from "../AboutPage/AboutPage";
+// import AboutPage from "../AboutPage/AboutPage";
 import CampaignPage from "../CampaignPage/CampaignPage";
 import CampaignPageS2 from "../CampaignPageS2/CampaignPageS2";
 import CampaignPageS3 from "../CampaignPageS3/CampaignPageS3";
@@ -46,7 +46,7 @@ const AllRoute = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage4 />} />
-          <Route path="about" element={<AboutPage />} />
+          {/* <Route path="about" element={<AboutPage />} /> */}
           <Route path="campaign" element={<CampaignPage />} />
           <Route path="campaign-2" element={<CampaignPageS2 />} />
           <Route path="campaign-3" element={<CampaignPageS3 />} />

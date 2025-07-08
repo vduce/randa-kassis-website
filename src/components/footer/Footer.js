@@ -87,20 +87,24 @@ const Footer = (props) => {
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/media">
-                      Media
-                    </Link>
-                  </li>
-                  <li>
                     <Link onClick={ClickHandler} to="/articles">
                       Articles
                     </Link>
                   </li>
-                  {/* <li><Link onClick={ClickHandler} to="/service-fullwidth">Conference And Symposiums</Link></li> */}
                   <li>
-                    <Link onClick={ClickHandler} to="/gallery">
-                      Gallery
+                    <Link onClick={ClickHandler} to="/encounter-and-dialogue">
+                      Encounters and Dialogues
                     </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="https://mspsy.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={ClickHandler}
+                    >
+                      Movement for a Pluralistic Society
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -108,22 +112,22 @@ const Footer = (props) => {
             <div className="col col-lg-4 col-md-6 col-12 col-md-6 col-sm-12 col-12">
               <div className="widget link-widget s2">
                 <div className="widget-title">
-                  <h3>Media</h3>
+                  <h3>Interviews</h3>
                 </div>
                 <ul>
                   <li>
-                    <Link onClick={ClickHandler} to="/media">
-                      News
+                    <Link onClick={ClickHandler} to="/interview/the-politician">
+                      The Politician
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/media">
-                      Interviews
+                    <Link onClick={ClickHandler} to="/interview/the-essayist-the-critic">
+                      The Essayist & The Critic
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={ClickHandler} to="/media">
-                      Program Tv
+                    <Link onClick={ClickHandler} to="/interview/the-painter">
+                      The Painter
                     </Link>
                   </li>
                 </ul>

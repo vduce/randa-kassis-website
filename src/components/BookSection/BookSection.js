@@ -17,7 +17,6 @@ const BookSection = () => {
       id: 1,
       proImg: img1,
       title: "رندا قسيس سراديب الآلهة",
-      slug: "رندا قسيس سراديب الآلهة",
       price: "176.00",
       delPrice: "178.00",
       brand: "Gucci",
@@ -27,8 +26,7 @@ const BookSection = () => {
     {
       id: 2,
       proImg: img2,
-      title: "COMPRENDRE LE CHAOS SYRIEN",
-      slug: "COMPRENDRE-LE-CHAOS-SYRIEN",
+      title: "Comprendre le chaos syrien",
       price: "65.00",
       delPrice: "85.00",
       brand: "Gucci",
@@ -38,8 +36,7 @@ const BookSection = () => {
     {
       id: 3,
       proImg: img3,
-      title: "LE CHAOS SYRIEN",
-      slug: "LE-CHAOS-SYRIEN",
+      title: "Le chaos syrien",
       price: "285.00",
       delPrice: "300.00",
       brand: "Gucci",
@@ -49,8 +46,7 @@ const BookSection = () => {
     {
       id: 4,
       proImg: img4,
-      title: "crypts of the gods",
-      slug: "crypts-of-the-gods",
+      title: "Crypts of the Gods",
       price: "340.00",
       delPrice: "380.00",
       brand: "Gucci",
@@ -60,8 +56,7 @@ const BookSection = () => {
     {
       id: 5,
       proImg: img5,
-      title: "Syria and the Return of Russia",
-      slug: "syria-and-the-return-of-russia",
+      title: "La Syrie et le retour de la Syrie",
       price: "340.00",
       delPrice: "380.00",
       brand: "Gucci",

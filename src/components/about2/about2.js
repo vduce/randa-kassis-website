@@ -21,7 +21,7 @@ const About2 = (props) => {
             <div className="col-lg-6 col-md-12 col-12">
               <div className="wpo-about-text">
                 <div className="wpo-section-title">
-                  <span className="notranslate">Consilium & Vision</span>
+                  <span className="">Consilium & Vision</span>
                 </div>
                 <p>
                   My political beliefs have been shaped by a lifetime of intellectual rebellion,

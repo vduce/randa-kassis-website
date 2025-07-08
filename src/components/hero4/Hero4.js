@@ -44,7 +44,7 @@ const Hero4 = () => {
                   <div className="slide-video-text">
                     <div className="d-flex gap-2">
                       <div>
-                        <h4>Join The Party</h4>
+                        <h4>Join the Party</h4>
                       </div>
                       <div>
                         <a href="https://mspsy.com/" target="blank">
@@ -57,7 +57,7 @@ const Hero4 = () => {
                         </a>
                       </div>
                     </div>
-                    <p>Movement for a pluralistic society</p>
+                    <p>Movement for a Pluralistic Society</p>
                   </div>
                 </div>
               </div>
