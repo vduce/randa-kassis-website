@@ -34,7 +34,7 @@ const Header = (props) => {
 
   const galleryList = {
     "in-the-arena": "In the Arena",
-    "my-four-pawed-companions": "My Four-Pawed Companions",
+    "my-four-pawed-companions/1": "My Four-Pawed Companions",
     "through-my-eyes": "Through My Eyes",
   };
 

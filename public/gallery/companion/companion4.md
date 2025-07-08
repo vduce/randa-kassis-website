@@ -16,13 +16,13 @@ He was mischievous, full of life, and had a knack for winning hearts. Everyone w
 
 And then, as life so often reminds us, joy is fleeting. He vanished – disappeared fifteen days before Bianca did, while we were away – and was never found.
 
-![](40.jpg)
-![](41.jpg)
-![](42.jpg)
-![](43.jpg)
-![](44.jpg)
-![](45.jpg)
-![](46.jpg)
-![](47.jpg)
-![](48.jpg)
+![](40.JPG)
+![](41.JPG)
+![](42.JPG)
+![](43.JPG)
+![](44.JPG)
+![](45.JPG)
+![](46.JPG)
+![](47.JPG)
+![](48.JPG)
 <p></p>

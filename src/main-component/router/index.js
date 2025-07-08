@@ -39,6 +39,7 @@ import TheCriticsLayout from "../Interview/TheCritics/TheCriticsLayout";
 import TheCriticsDetail from "../Interview/TheCritics/TheCriticsDetail";
 import PoliticianDetails from "../PoliticianPage/PoliticianDetail";
 import PoliticianFullWidth from "../PoliticianPage/PoliticianFull";
+import MyCompanion from "../companion/MyCompanion";
 
 const AllRoute = () => {
   return (
@@ -86,6 +87,7 @@ const AllRoute = () => {
           <Route path="critics-single/:id" element={<TheCriticsDetail />} />
           <Route path="interview/the-politician" element={<PoliticianFullWidth />} />
           <Route path="politician-single/:id" element={<PoliticianDetails />} />
+          <Route path="gallery/my-four-pawed-companions/:sectionId" element={<MyCompanion />} />
           <Route path="404" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

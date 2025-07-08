@@ -154,7 +154,7 @@ const menus = [
       {
         id: 2,
         title: "My Four-Pawed Companions",
-        link: "/gallery/my-four-pawed-companions",
+        link: "/gallery/my-four-pawed-companions/1",
       },
       {
         id: 3,
