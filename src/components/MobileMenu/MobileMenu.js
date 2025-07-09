@@ -149,7 +149,7 @@ const menus = [
       {
         id: 1,
         title: "In the Arena",
-        link: "/gallery/in-the-arena",
+        link: "/gallery/in-the-arena/1",
       },
       {
         id: 2,
@@ -208,11 +208,7 @@ const MobileMenu = () => {
         <ul className="responsivemenu">
           {menus.map((item, mn) => {
             return (
-              <ListItem
-                className={item.id === openId ? "active" : null}
-                key={mn}
-                onClick={() => setMenuActive(!menuActive)}
-              >
+              <ListItem className={item.id === openId ? "active" : null} key={mn}>
                 {item.submenu ? (
                   <Fragment>
                     <p
@@ -243,7 +239,11 @@ const MobileMenu = () => {
                     </Collapse>
                   </Fragment>
                 ) : (
-                  <NavLink className="active" to={item.link}>
+                  <NavLink
+                    className="active"
+                    to={item.link}
+                    onClick={() => setMenuActive(!menuActive)}
+                  >
                     {item.title}
                   </NavLink>
                 )}

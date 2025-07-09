@@ -92,11 +92,6 @@ const companionSections = [
     id: 16,
     title: "My Four-Pawed Companions",
     markdownFile: "/gallery/companion/companion16.md",
-  },
-  {
-    id: 17,
-    title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion17.md",
   }
 ];
 
@@ -236,6 +231,10 @@ const MyCompanion = () => {
         );
       }
       return flush || null; // Flush images for empty paragraphs
+    },
+    center: ({ children }) => {
+      lastElementType.current = "center";
+      return <div className="d-flex justify-content-center mb-4">{children}</div>;
     },
   };
 
