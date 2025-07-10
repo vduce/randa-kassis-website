@@ -6,7 +6,7 @@ Published in Al-Hiwar al-Mutamaddin
 12 July 2011
 
 
-Amid the popular uprisings erupting across the Arab world in defiance of tyranny, concerns persist over the ascendancy of Islamist movements and their potential to appropriate these revolutionary currents—particularly given the religious and ideological leanings of the masses involved. In this context, it becomes increasingly plausible that political Islam will seek to exploit the unconscious energies fuelling these revolts, especially in societies that lack clear political vision or well—defined institutional frameworks.
+Amid the popular uprisings erupting across the Arab world in defiance of tyranny, concerns persist over the ascendancy of Islamist movements and their potential to appropriate these revolutionary currents—particularly given the religious and ideological leanings of the masses involved. In this context, it becomes increasingly plausible that political Islam will seek to exploit the unconscious energies fuelling these revolts, especially in societies that lack clear political vision or well-defined institutional frameworks.
 
 It is for this reason that the need to expose these movements becomes ever more urgent. They pose a grave threat—not only to our societies specifically, but also to human thought in general. These movements are fundamentally anti-civilisational, undermining scientific achievement and intellectual freedom, despite their hollow claims of safeguarding knowledge, diversity, and individual liberty.
 
