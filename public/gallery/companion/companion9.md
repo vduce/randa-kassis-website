@@ -1,4 +1,4 @@
-<h4>Now, let’s talk about Tequila—the resident freak with a flair for the dramatic.</h4>
+<h4>Now, let’s talk about Tequila—the resident freak with a flair for the dramatic.</h4>  
 
 Tequila has a very specific hobby: freaking people out, especially her unsuspecting siblings. Approach her too confidently, and you’ll be met with a growl that says, “Think again, mate.” She keeps a strict inner circle: Mum, Dad, a few trusted carers, and the select few who’ve passed her mysterious loyalty test.
 
