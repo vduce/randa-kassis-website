@@ -37,7 +37,7 @@ They were characters. Friends, companions and family who shaped our days. And th
 ![](27.JPG)
 ![](28.JPG)
 ![](29.JPG)
-![](30.JPG)
-![](31.jpg)
+![](30.jpeg)
+![](31.jpeg)
 
 <p></p>

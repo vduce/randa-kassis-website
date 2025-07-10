@@ -159,7 +159,7 @@ const menus = [
       {
         id: 3,
         title: "Through My Eyes",
-        link: "/gallery/through-my-eyes",
+        link: "/gallery/through-my-eyes/1",
       },
     ],
   },

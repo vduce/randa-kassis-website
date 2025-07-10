@@ -19,7 +19,7 @@ Yes, Whitty has the charm of a leading man, just not one written by the BBC. But
 ![](123.JPG)
 ![](124.JPG)
 ![](125.JPG)
-![](126.jpg)
+![](126.jpeg)
 ![](127.JPG)
 ![](128.JPG)
 ![](129.JPG)

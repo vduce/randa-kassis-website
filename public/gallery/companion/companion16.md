@@ -31,7 +31,8 @@ His body gave way, but he left us as he had lived in those final years: quietly,
 ![](152.JPG)
 ![](153.JPG)
 ![](154.JPG)
-![](155.jpg)
+![](155.jpeg)
+
 <p></p>
 
 Together, they were a universe—chaotic, noisy, opinionated, and occasionally deranged. Each had their own rhythm, neuroses, brilliance, charm, and yes, moments of staggering stupidity. They shaped our days one bark, hiss, pounce, or theatrical meltdown at a time. Some are still with us, others have gone, but their memories remain—firmly embedded in the fabric of our lives, and occasionally in the furniture.
@@ -54,7 +55,7 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 ![](171.JPG)
 ![](172.JPG)
 ![](173.JPG)
-![](174.JPG)
+![](174.jpeg)
 ![](175.JPG)
 ![](176.JPG)
 ![](177.JPG)
@@ -79,10 +80,10 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 ![](196.JPG)
 ![](197.JPG)
 ![](198.JPG)
-![](199.JPG)
-![](200.JPG)
-![](201.JPG)
-![](202.JPG)
+![](199.jpeg)
+![](200.jpeg)
+![](201.jpeg)
+![](202.jpeg)
 ![](203.JPG)
 ![](204.JPG)
 ![](205.JPG)
@@ -92,6 +93,7 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 ![](209.JPG)
 ![](210.JPG)
 ![](211.JPG)
+
 <p></p>
 
 
