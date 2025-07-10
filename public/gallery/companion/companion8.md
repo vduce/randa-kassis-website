@@ -1,4 +1,4 @@
-<h4>Let’s begin with Countess Bonnie</h4>
+<h4>Let’s begin with Countess Bonnie</h4>  
 
 To this day, she remains fastidiously concerned with her _figure_—clearly above the vulgar excitement of chasing down treats or scavenging pizza crusts like the common folk. Oh no. Bonnie approaches food as one might approach a suspicious diplomatic offering.
 
