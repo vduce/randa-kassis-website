@@ -6,10 +6,6 @@ Published in Al-Ahram Newspaper
 28 February 2022
 
 
-The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one’s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day “hero”-a figure shaped by fantasies and longings-only to fall prey to propaganda.
-
-This propaganda is by no means exclusive to the United States, but I highlight it here because of its vast cinematic machinery, which has fuelled its rise and prolonged its tiresome narrative—one that no longer captures the imagination of any but the naïve.
-
 As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine—amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia-the West hoisted the banner of “pride and resistance.”
 
 Zelensky appealed to Europe and the United States for unequivocal support, believing-or perhaps merely hoping—that America, in particular, would come to his rescue.
