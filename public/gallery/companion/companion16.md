@@ -1,5 +1,5 @@
 <h4>Greco and Bobbie</h4>
-
+<br/>
 Greco joined our family late in 2016 and passed away in 2023.
 
 Bobbie arrived in early 2017 and left us in June 2021.
