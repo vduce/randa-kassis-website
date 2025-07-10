@@ -1,5 +1,5 @@
 <h4>Whitty—the last male standing.</h4>
-
+<br/>
 The only boy left in the house after the deaths of Nietzsche and Damascius, and the only male from the original litter still with us, following Clyde’s adoption and Winston’s relocation to my daughter’s home**.**
 
 At times, Whitty appears genuinely lost—outnumbered and outmanoeuvred by five powerful females who show no hint of male solidarity. When one of them turns on him (which can happen without warning), there’s no one to defend him. No alliance. No brotherhood. Only the cold, unified front of female consensus. He looks to us with a pitiful, almost Shakespearean expression: eyes lowered, mouth ready to produce that slow, mournful whimper he’s perfected—equal parts tragedy and comedy.
