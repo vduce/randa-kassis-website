@@ -32,11 +32,11 @@ We all dream of personal freedoms—of a life where individuals can sing their o
 
 To reach such a place, we must undertake a conscious act of resuscitation—of both the isolated individual and the suffocating reality that encircles them. They must be freed from the narrow confines that rob them of breath.
 
-From this perspective, no one who holds freedom as their highest goal can lend support to any authority that represses the self or shackles the imagination under the pretext of fighting the “other devil” of religious fundamentalism.
+From this perspective, no one who holds freedom as their highest goal can lend support to any authority that represses the self or shackles the imagination under the pretext of fighting the 'other devil' of religious fundamentalism.
 
 Many societies—including Arab ones—are plagued by neurotic anxieties, especially the fear of religious extremism. To overcome such disorders and uproot authoritarian thought at its core, we must confront what we fear. Only by facing it can we dissolve the deep-seated mental images infused with accumulated dread of the unknown.
 
-Turning to the “coping” theory proposed by Folkman and Lazarus—which helps us understand how individuals behave within their environments—we find that people are not passive before external demands. Rather, they actively engage with their surroundings, interpreting events and developing strategies to adapt. Some of these strategies focus on solving the problem directly; others address the underlying conditions that give rise to it.
+Turning to the 'coping' theory proposed by Folkman and Lazarus—which helps us understand how individuals behave within their environments—we find that people are not passive before external demands. Rather, they actively engage with their surroundings, interpreting events and developing strategies to adapt. Some of these strategies focus on solving the problem directly; others address the underlying conditions that give rise to it.
 
 Rebellion, then, in all its forms, is the individual’s positive declaration of selfhood—an eruption after all strategies of accommodation and quiet change have failed.
 
