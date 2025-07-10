@@ -6,7 +6,7 @@ Published in Al-Ahram Newspaper
 9 February 2022
 
 
-Over the past decade—ever since social media infiltrated nearly every home, bar, and street corner—we’ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of 'humanity.' These medals, of course, are nothing more than symbolic gestures—emojis, empty phrases, and at best, dotless, hollow expressions.
+Over the past decade—ever since social media infiltrated nearly every home, bar, and street corner—we’ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of 'humanity'. These medals, of course, are nothing more than symbolic gestures—emojis, empty phrases, and at best, dotless, hollow expressions.
 
 Social networks have constructed a new social order—one partly driven by collective emotional exaggeration—giving rise to grand gestures, noble declarations, and what are touted as elevated 'human values'. But the foundation of these values lies in fantasy: a kind of escapist illusion that feeds an inflated 'great ego.' And that ego is easily gratified—after all, such values demand no more than a few clichéd words or symbols.
 
