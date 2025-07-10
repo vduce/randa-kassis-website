@@ -1,5 +1,5 @@
 <h4>I couldn’t speak about Winston and Solaia—my great children.</h4>
-
+<br/>
 They now belong more to my daughter’s world than mine. She knows them far better, and it is her voice that has the right to tell their story. Still, each time I visit her, I see traces—undeniable ones—of who they are and who they’ve become.
 
 I remember when they came to visit us in Rome, just a few months before the Covid lockdown. What was meant to be a short stay at granny and grandpa’s turned into an unplanned one-year exile. They suddenly found themselves living among a full house of siblings—an experience that, let’s say, wasn’t exactly Solaia’s dream scenario. Winston, of course, thought it was paradise—he played endlessly, as if he’d been handed an all-access pass to the best theme park in the canine world.
