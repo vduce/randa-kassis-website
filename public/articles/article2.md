@@ -18,7 +18,7 @@ And so, other children might rightly wonder what this 'humanity' means for them�
 
 None of these children can hope to inspire the kind of noble, global sentiment we recently witnessed. Because 'humanity', as it now functions, requires emotionally charged, individual stories. It cannot survive constant exposure to systemic suffering. To avoid emotional collapse, it must ration its sympathy.
 
-So 'humanity', in its need for self—preservation, reveals itself in herd—like behaviour—crossing borders, fuelled by sensory globalisation. It performs empathy on demand.
+So 'humanity', in its need for self-preservation, reveals itself in herd-like behaviour—crossing borders, fuelled by sensory globalisation. It performs empathy on demand.
 
 And it’s not only individuals. Television networks, too, compete: who can add the most pathos to the script? Which presenter can cry more believably, perform the most heartfelt gesture? Who can win the title of Most Human? It would not be surprising to one day see a televised contest called 'Who Will Win Humanity?'
 
@@ -30,5 +30,5 @@ This is not the first, nor will it be the last, tragic incident of its kind. Lif
 
 A person who is truly conscious of life and death does not need to follow the crowd, nor become an echo, simply to prove they care. The amplified, theatrical emotions we now witness—steeped in hypocrisy and herd instinct—are no proof of anything. They reflect only a deep inability to generate change or to carve out new paths for humanity. They offer nothing more than melodrama, performed before a stone.
 
-For years now, we’ve heard endless talk of 'new' human values—limitless, borderless, all—embracing. Yet we remain caught in the same cycle of emojis, hashtags, and body language. Real values are not acrobatic displays, tearful theatrics, or reactive posturing. They are a form of sustained awareness—one that is neither fragmented nor conditioned by context.
+For years now, we’ve heard endless talk of 'new' human values—limitless, borderless, all-embracing. Yet we remain caught in the same cycle of emojis, hashtags, and body language. Real values are not acrobatic displays, tearful theatrics, or reactive posturing. They are a form of sustained awareness—one that is neither fragmented nor conditioned by context.
 
