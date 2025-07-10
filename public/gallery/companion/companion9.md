@@ -1,5 +1,5 @@
 <h4>Now, let’s talk about Tequila—the resident freak with a flair for the dramatic.</h4>  
-
+<br/>
 Tequila has a very specific hobby: freaking people out, especially her unsuspecting siblings. Approach her too confidently, and you’ll be met with a growl that says, “Think again, mate.” She keeps a strict inner circle: Mum, Dad, a few trusted carers, and the select few who’ve passed her mysterious loyalty test.
 
 Trust with Tequila is an uphill climb. But once you’re in, you’re in for life. She’s fiercely loyal—no backstabbing, but she loves drama, especially when she wants something.
