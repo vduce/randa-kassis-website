@@ -1,7 +1,7 @@
 <h4>The Syrian Regime and the Philosophy of Despotism</h4>
 
 
-Published in Al-Hiwar al-Mutamaddin
+Published in Al—Hiwar al—Mutamaddin
 <br>
 14 April 2011
 
