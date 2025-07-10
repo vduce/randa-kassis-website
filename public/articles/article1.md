@@ -6,7 +6,7 @@ Published in Al-Ahram Newspaper
 28 February 2022
 
 
-As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine—amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia—the West hoisted the banner of 'pride and resistance.'
+As the crescendo of Ride of the Valkyries echoed and ground forces began advancing into Ukraine—amid Western condemnation and threats of economic and military sanctions aimed at isolating Russia—the West hoisted the banner of 'pride and resistance'.
 
 Zelensky appealed to Europe and the United States for unequivocal support, believing—or perhaps merely hoping—that America, in particular, would come to his rescue.
 
