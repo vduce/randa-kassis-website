@@ -1,5 +1,5 @@
 <h4>Ah, Agathe. What a marvellous character.</h4>
-
+<br/>
 She could fool you in a heartbeat, convincing you she’s the very picture of innocence—quiet, composed, gentle as a breeze. An angel, really. Until, of course, she decides otherwise.
 
 When Agathe acts, she does so without warning or fuss. No dramatic build-up, no rumbling growl—just a silent, surgical decision. Whether it’s a bark, a bite, or a sudden dash, it happens swiftly and without negotiation.
