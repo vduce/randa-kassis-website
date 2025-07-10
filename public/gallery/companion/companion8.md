@@ -1,5 +1,6 @@
-<h4>Let’s begin with Countess Bonnie</h4>  
+<h4>Let’s begin with Countess Bonnie</h4>
 
+<br/>
 To this day, she remains fastidiously concerned with her _figure_—clearly above the vulgar excitement of chasing down treats or scavenging pizza crusts like the common folk. Oh no. Bonnie approaches food as one might approach a suspicious diplomatic offering.
 
 First, she gives it a cautious sniff. Then, in true aristocratic fashion, she observes the others—does anyone collapse after eating it? Any sudden drama? No? Only then, perhaps, will she deign to _taste_ a morsel. And should she actually _swallow_ it instead of spitting it out—well, it’s a triumph worth recording in the family archive.
