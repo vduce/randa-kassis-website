@@ -14,7 +14,7 @@ We saw this flood of 'humanity' in recent days with the tragic story of the Moro
 
 Rayan died, and all of 'humanity' mourned—wiping its tears, raising its hands in prayer, drained by its collective emotional labour. The child died, and 'humanity' once more slipped into a coma, briefly awakened by his cries before returning to sleep.
 
-And so, other children might rightly wonder what this 'humanity' means for them—especially those whose deaths go unnoticed, perhaps because they perish in groups rather than as individuals. Children in Syria, Yemen, Libya, Iraq—dying in droves from hunger, cold, disease—do not qualify for such coverage. They are no longer 'newsworthy'. Nor are African children, some killed by tragic incidents—trampled by a hippo, or simply by poverty and lack of basic necessities. They, too, have become 'old stories.'
+And so, other children might rightly wonder what this 'humanity' means for them—especially those whose deaths go unnoticed, perhaps because they perish in groups rather than as individuals. Children in Syria, Yemen, Libya, Iraq—dying in droves from hunger, cold, disease—do not qualify for such coverage. They are no longer 'newsworthy'. Nor are African children, some killed by tragic incidents—trampled by a hippo, or simply by poverty and lack of basic necessities. They, too, have become 'old stories'.
 
 None of these children can hope to inspire the kind of noble, global sentiment we recently witnessed. Because 'humanity', as it now functions, requires emotionally charged, individual stories. It cannot survive constant exposure to systemic suffering. To avoid emotional collapse, it must ration its sympathy.
 
