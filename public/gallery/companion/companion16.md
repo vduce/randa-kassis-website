@@ -8,7 +8,7 @@ Bobbie arrived in early 2017 and left us in June 2021.
 
 Greco was a wild cat when he first came to us. Untouchable. You couldn’t get near him. But as we all know, food is the only reliable way to corrupt—even cats. Slowly, he softened.
 
-Then came Bobbie—an older cat, with an unusual, almost austere appearance, and a deeply ingrained mistrust of humans. He would hiss forcefully at the mere sight of a person. In truth, I couldn’t blame him. His suspicion seemed entirely reasonable, even wise. But something unexpected happened: Greco adopted him**.** And Bobbie, over time, began to let go of his suspicion, as though borrowing a little courage from his companion. He stopped hissing. He started trusting.
+Then came Bobbie—an older cat, with an unusual, almost austere appearance, and a deeply ingrained mistrust of humans. He would hiss forcefully at the mere sight of a person. In truth, I couldn’t blame him. His suspicion seemed entirely reasonable, even wise. But something unexpected happened: Greco adopted him. And Bobbie, over time, began to let go of his suspicion, as though borrowing a little courage from his companion. He stopped hissing. He started trusting.
 
 In Rome, Greco and Bobbie were inseparable. They claimed their room entirely—no other cats dared enter, and only persons were permitted in only to clean and feed them. They lived like an eccentric old couple—utterly devoted, delightfully territorial.
 
@@ -16,7 +16,7 @@ They stayed together until June 2021, when Bobbie’s health began to deteriorat
 
 We worried for Greco. He had lost his other half. And yet, life, as ever, insists on adaptation. Greco did his best to adjust. He reached out—first to Socrates (whom we still call Beria for reasons best not printed), and to Roxy, the silent one. He found no peace with Socrates, but he managed to form an unlikely alliance with Roxy, who accepted him in her own quiet way. He even held his own when Socrates—ever the bully—tried to assert dominance.
 
-But life hadn’t finished with him yet. Before we moved to the UK, Greco was diagnosed with cancer. By then, it had already spread throughout his body. Despite every treatment—even chemotherapy—nothing could stop its course**.**
+But life hadn’t finished with him yet. Before we moved to the UK, Greco was diagnosed with cancer. By then, it had already spread throughout his body. Despite every treatment—even chemotherapy—nothing could stop its course.
 
 His body gave way, but he left us as he had lived in those final years: quietly, and with dignity. He died in our arms, in a British clinic, with familiar hands holding him until the very end.
 
