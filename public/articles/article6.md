@@ -6,13 +6,13 @@ Published in Le Figaro
 24 September 2014
 
 
-To combat the Islamic State (IS)—that totalitarian monstrosity intent on subjugating the Middle East and, ultimately, the world—ten regional powers signed the 'Jeddah Communiqué', pledging to support President Barack Obama’s campaign against IS. But one key signature was missing: that of Turkey under President Recep Tayyip Erdoğan.
+To combat the Islamic State (IS)—that totalitarian monstrosity intent on subjugating the Middle East and, ultimately, the regional powers from around the worls signed the 'Jeddah Communiqué', pledging to support President Barack Obama’s campaign against IS. But one key signature was missing: that of Turkey under President Recep Tayyip Erdoğan.
 
 When US Secretary of Defense Chuck Hagel attempted to persuade Turkey to join the international coalition, Ankara flatly refused. In doing so, it disrupted the core of Atlantic solidarity. Not only did Turkey decline to participate militarily, but it also prohibited American and NATO aircraft—those best placed to reach Iraq—from taking off from its airbases.
 
 Let us recall: the Turkish air force is equipped with cutting-edge American military technology, its pilots are trained by the United States, and Turkey hosts 24 NATO bases. Until 20 September, Erdoğan’s official justification was the fate of 46 Turkish hostages captured by IS in Mosul in July. We now know they were released in exchange for Turkish assistance to jihadist forces fighting Kurds in Syria.
 
-This hostage narrative concealed a far more troubling reality—one utterly incompatible with the values of an ally' that claims to oppose terrorism, seeks EU membership, and remains a pillar of NATO. Erdoğan’s Turkey has actively supported Islamist terrorist groups in both Syria and Iraq, including IS, which counts over 1,000 Turkish nationals among its ranks.
+This hostage narrative concealed a far more troubling reality—one utterly incompatible with the values of an ally that claims to oppose terrorism, seeks EU membership, and remains a pillar of NATO. Erdoğan’s Turkey has actively supported Islamist terrorist groups in both Syria and Iraq, including IS, which counts over 1,000 Turkish nationals among its ranks.
 
 Since the outbreak of the Syrian civil war, Ankara has turned a blind eye to IS training camps on Syrian soil and has facilitated the flow of weapons and jihadists through its territory. These fighters, hailing from across the globe, pass freely through Turkey en route to the battlefields of Syria and Iraq. Many are recruited openly, in mosques, schools, and even among Turkey’s security services.
 
