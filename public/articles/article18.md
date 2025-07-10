@@ -26,7 +26,7 @@ This autonomy, however, can only be born from an individual process of fulfilmen
 
 It is these rewards that compel individuals to embrace collective values, work to perpetuate them, and even sacrifice in their name. But when such rewards vanish, so too do the meanings and values the collective once instilled. Without them, life loses coherence—especially when the collective exercises total control, extinguishing the last refuge of individuality: the imagination.
 
-At this point, the individual loses all internal motivation to pursue fulfilment or sufficiency. As Henri Laborit observed, “Satisfaction can only be attained through an act of fulfilment. When fulfilment becomes impossible, crisis ensues—manifesting as violence when it affects an individual, or as revolution when it affects a broader class.”
+At this point, the individual loses all internal motivation to pursue fulfilment or sufficiency. As Henri Laborit observed, 'Satisfaction can only be attained through an act of fulfilment. When fulfilment becomes impossible, crisis ensues—manifesting as violence when it affects an individual, or as revolution when it affects a broader class'.
 
 For this reason, I believe it is legitimate—indeed essential—to re-examine the meaning of life and death within Arab societies, where even the right to meet one’s basic needs is absent. Can life be defended when its primary engine—desire, drive, fulfilment—has been severed?
 
