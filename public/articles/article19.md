@@ -1,4 +1,4 @@
-<h4>In the Beginning Was the Totem Animal—Part I</h4>
+<h4>In the Beginning Was the Totem Animal – Part I</h4>
 
 
 Published in Al-Hiwar al-Mutamaddin
@@ -34,4 +34,4 @@ If we consult the writings of Robertson Smith and Salomon Reinach on the sacrali
 
 I have not yet exhausted my list of examples supporting the deep-rootedness of totemic systems within our cultures, and there is more to come in the second part of this article.
 
-To be continued : [In the Beginning Was the Totem Animal–Part II](article20.md)
+To be continued : [In the Beginning Was the Totem Animal – Part II](article20.md)
