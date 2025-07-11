@@ -55,7 +55,7 @@ const Footer = (props) => {
                   <ul>
                     <li>
                       <a
-                        href="https://www.facebook.com/randakassis.co"
+                        href="https://www.facebook.com/share/1EsVifAg1M/?mibextid=wwXIfr"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -64,7 +64,16 @@ const Footer = (props) => {
                     </li>
                     <li>
                       <a
-                        href="https://www.youtube.com/user/helene237"
+                        href="https://www.linkedin.com/in/randa-kassis?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fi flaticon-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://youtube.com/@helene237?si=PfARWlPaQXcsDWwd"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
