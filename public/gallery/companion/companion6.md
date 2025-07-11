@@ -20,14 +20,14 @@ When he died in May 2021, after a slow and dignified decline, the vet estimated 
 
 Damascius was not just our companion. He was, in his own silent and stubborn way, a philosopher. He taught us what it means to resist without anger, to endure without bitterness, and to live—not forever, but fully, while it lasts.
 
-![](67.jpg)
+![](67.JPG)
 ![](68.JPG)
-![](69.jpg)
+![](69.JPG)
 ![](70.JPG)
-![](71.jpg)
+![](71.JPG)
 ![](72.JPG)
-![](73.jpg)
+![](73.JPG)
 ![](74.JPG)
-![](75.jpg)
+![](75.JPG)
 ![](76.JPG)
 <p></p>

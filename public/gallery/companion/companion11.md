@@ -21,12 +21,12 @@ With age, Grace still greets us in a stampede of limbs and wild enthusiasm—but
 Grace isn’t just a dog. She’s a self-appointed institution, quietly authoritarian, entirely self-assured, and absolutely convinced that without her, the household would slide into utter anarchy. And, inconveniently… she might be right.
 
 ![](104.jpg)
-![](105.JPG)
-![](106.jpg)
+![](105.jpg)
+![](106.JPG)
 ![](107.JPG)
-![](108.jpg)
+![](108.JPG)
 ![](109.JPG)
-![](110.jpg)
+![](110.JPG)
 ![](111.JPG)
 ![](112.JPG)
 <p></p>
