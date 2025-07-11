@@ -89,11 +89,6 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/c88537c2-d387-4998-a1ab-b7588ba4a121?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -109,12 +104,6 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/6ecd2056-2b6b-4339-ab20-9ecc46092b50?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -130,11 +119,6 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/1e028d00-875b-4653-85e8-d0659ebe00e3?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
