@@ -14,7 +14,7 @@ She is not a follower, nor a show-off. She is what happens when silence learns t
 
 ![](113.jpg)
 ![](114.JPG)
-![](115.jpg)
+![](115.jpeg)
 ![](116.JPG)
 ![](117.JPG)
 ![](118.JPG)
