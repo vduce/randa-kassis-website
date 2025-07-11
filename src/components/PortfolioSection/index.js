@@ -119,7 +119,7 @@ const PortfolioSection = ({ props }) => {
                         <Masonry columnsCount={3} gutter="15px">
                           {companionPics.map((image, i) => (
                             <div className="grid" key={i}>
-                              <Link to="/gallery">
+                              <Link to="/gallery/my-four-pawed-companions/1">
                                 <div className="img-holder">
                                   <img
                                     style={{
