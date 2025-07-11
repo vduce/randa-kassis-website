@@ -237,11 +237,6 @@ Perhaps some things are not meant to be recorded, only received—silently, humb
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/56ebd9a0-fdd6-4cb2-8744-6d5ff78d7433?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -257,11 +252,6 @@ Perhaps some things are not meant to be recorded, only received—silently, humb
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/6c34f3bd-6abf-4d82-90a6-0de7b8f62da5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -277,12 +267,6 @@ Perhaps some things are not meant to be recorded, only received—silently, humb
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/d7f2be21-c7b8-4e53-aea7-814382afcfaf?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -298,12 +282,6 @@ Perhaps some things are not meant to be recorded, only received—silently, humb
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/22b90185-6e67-4233-b38c-df95f701bf8e?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
