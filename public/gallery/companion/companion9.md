@@ -14,10 +14,10 @@ From time to time, we wonder whether we should have chosen different names—one
 
 ![](88.jpg)
 ![](89.JPG)
-![](90.jpg)
+![](90.JPG)
 ![](91.JPG)
 ![](92.jpg)
 ![](93.JPG)
-![](94.jpg)
+![](94.JPG)
 ![](95.JPG)
 <p></p>
