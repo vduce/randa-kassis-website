@@ -6,13 +6,14 @@ Published in Al-Hiwar al-Mutamaddin
 28 May 2010
 
 
-In a previous article, “The Sex and Death Syndrome”, I explored the underlying fear within the male psyche of losing his genital organ. In this piece, I turn to examine the psychological roots of that fear, commonly known in psychoanalysis as the castration complex.
+In a previous article, 'The Sex and Death Syndrome', I explored the underlying fear within the male psyche of losing his genital organ. In this piece, I turn to examine the psychological roots of that fear, commonly known in psychoanalysis as the castration complex.
 
 Otto Rank proposed that the origin of this complex lies not merely in the threat of genital loss but in the foundational trauma of birth—specifically, the moment of separation from the mother. This interpretation draws upon ontogenesis, the study of an organism’s development from conception onwards. Building on this notion, Ferenczi theorised that the act of sexual intercourse, from an ontogenetic perspective, is an unconscious attempt to release the psychic tension associated with birth and to recapture the emotional warmth and completeness of prenatal existence.
 
 The concept of alloplastic adaptation, as formulated by Freud, Ferenczi, and Alexander Franz, rests on the idea that the organism adapts to external pressures in one of two ways:
 
 • Through internal transformations in response to its environment, a process known as autoplastic adaptation;
+
 • Or by actively reshaping the external world to better suit its needs, which constitutes alloplastic adaptation.
 
 Returning to the notion of re-entering the womb, we observe this desire manifesting symbolically in the sexual act across species. For example, copulation among certain spiders can last several hours, while in some parasitic species, the male remains embedded within the female’s body in a state of permanent union.
@@ -37,7 +38,7 @@ Palaeontology continues to confirm the radical transformations that living organ
 
 For instance, those sceptical of Lamarck’s environmental adaptation or Darwin’s natural selection would do well to consider the theory of the Irish botanist Hugo de Vries, who argued that biological change occurs not gradually, but through abrupt, discontinuous mutations. These spontaneous leaps give rise to new traits, after which natural selection filters the most suitable adaptations over extended periods.
 
-Here, I find a meaningful parallel between de Vries’s conclusions and Ferenczi’s hypothesis. Both attribute the origins of transformation to crisis: in the case of de Vries, to phylogenetic catastrophes that leave lasting traces within the living cell; in Ferenczi’s, to personal traumas that imprint themselves in the genital organs and are released through the act of intercourse.
+Here, I find a meaningful parallel between de Vries’s conclusions and Ferenczi’s hypothesis. Both attribute the origins of transformation to crisis: in the case of de Vries, to phylogenetic catastrophes that leave lasting traces within the living cell; Ferenczi to personal traumas that imprint themselves in the genital organs and are released through the act of intercourse.
 
 Sex, from this perspective, is far more than a physical act—it is a symbolic endeavour to reverse the foundational expulsion from the womb and to reconnect with the serenity and totality of pre-birth existence. Though such a return is forever barred, the human being remains driven to simulate it—through the body, through the unconscious, and through symbolic rituals of desire, separation, and the eternal longing for origin.
 

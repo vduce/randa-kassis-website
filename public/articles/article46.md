@@ -33,7 +33,6 @@ Christ, for instance, challenged the religious establishment of his time, just a
 Thus, those who rebelled against the dominant cultural order were, in a sense, responding to a latent collective desire for transformation—though they may have misunderstood the full implications of their mission.
 
 This leads us to a pressing question:
-
 Why has the Middle East, more than any other region, produced so many prophets and divine figures?
 
 Was it because the cultures of this region were particularly repressive, expressing unconscious human drives more intensely?
@@ -42,6 +41,6 @@ Or was it that the strong individual egos of these prophets drove them to bind c
 
 What is certain is that the conflation of culture and divinity became deeply embedded in the collective unconscious of the region’s inhabitants. As a result, the existence of both individual and community became inextricably linked to the existence of God. And with this came a profound obstacle: any individual attempt to break free from this collective destiny is met not with curiosity, but with rejection—and often, erasure.
 
-I can only conclude with Nietzsche’s words: “Man cannot rise high if he remains ignorant of his destiny.”
+I can only conclude with Nietzsche’s words: 'Man cannot rise high if he remains ignorant of his destiny'.
 
 

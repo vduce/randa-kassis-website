@@ -11,6 +11,24 @@ const ClickHandler = () => {
   window.scrollTo(10, 0);
 };
 
+const arenaPics = [
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/1.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/2.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6-.jpeg" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/8.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/13.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/5.JPG" },
+];
+
+const companionPics = [
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/1.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/27.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/149.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/179.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/159.JPG" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/168.JPG" },
+];
+
 const PortfolioSection = ({ props }) => {
   const [activeTab, setActiveTab] = useState("1");
 
@@ -66,14 +84,19 @@ const PortfolioSection = ({ props }) => {
                     <div className="portfolio-grids gallery-container clearfix">
                       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
-                          {props.map((image, i) => (
+                          {arenaPics.map((image, i) => (
                             <div className="grid" key={i}>
-                              <Link to="/gallery">
+                              <Link to="/gallery/in-the-arena/1">
                                 <div className="img-holder">
-                                  <ReactFancyBox
-                                    thumbnail={image.Pimg}
-                                    image={image.Pimg}
-                                    style={{ width: "100%", display: "block" }}
+                                  <img
+                                    style={{
+                                      width: "100%",
+                                      display: "block",
+                                      minHeight: "320px",
+                                      objectFit: "cover",
+                                    }}
+                                    src={image.Pimg}
+                                    alt={`Gallery Image ${i + 1}`}
                                   />
                                 </div>
                               </Link>
@@ -94,14 +117,19 @@ const PortfolioSection = ({ props }) => {
                     <div className="portfolio-grids gallery-container clearfix">
                       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
-                          {props.map((image, i) => (
+                          {companionPics.map((image, i) => (
                             <div className="grid" key={i}>
                               <Link to="/gallery">
                                 <div className="img-holder">
-                                  <ReactFancyBox
-                                    thumbnail={image.Pimg}
-                                    image={image.Pimg}
-                                    style={{ width: "100%", display: "block" }}
+                                  <img
+                                    style={{
+                                      width: "425px",
+                                      display: "block",
+                                      height: "320px",
+                                      objectFit: "cover",
+                                    }}
+                                    src={image.Pimg}
+                                    alt={`Gallery Image ${i + 1}`}
                                   />
                                 </div>
                               </Link>

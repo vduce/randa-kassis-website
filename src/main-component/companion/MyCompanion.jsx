@@ -11,7 +11,6 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
 
-
 const companionSections = [
   {
     id: 1,
@@ -92,7 +91,7 @@ const companionSections = [
     id: 16,
     title: "My Four-Pawed Companions",
     markdownFile: "/gallery/companion/companion16.md",
-  }
+  },
 ];
 
 const MyCompanion = () => {
@@ -235,7 +234,10 @@ const MyCompanion = () => {
     center: ({ children }) => {
       lastElementType.current = "center";
       return (
-        <div className="d-flex flex-column flex-md-row justify-content-center mb-4 align-items-center" style={{ gap: "1rem" }}>
+        <div
+          className="d-flex flex-column flex-md-row justify-content-center mb-4 align-items-center"
+          style={{ gap: "1rem" }}
+        >
           {children}
         </div>
       );

@@ -1,4 +1,4 @@
-<h4>Turkey — A Spring of Peace, or a Fountain of Death and Destruction?</h4>
+<h4>Turkey—A Spring of Peace, or a Fountain of Death and Destruction?</h4>
 
 
 Published in Al-Shorouk Newspaper
@@ -16,7 +16,7 @@ In reality, these human time bombs are set to become bargaining chips in Turkey�
 
 President Erdoğan still clings to the delusion of becoming a leader of the Islamist world—a modern-day caliph. We see this clearly in his determination to establish extremist institutions across northern Syria, particularly in areas under Turkish military occupation and the control of its Syrian proxies.
 
-Against this grim backdrop, the United Nations chases the mirage of a “constitutional committee”, while doing nothing to condemn Turkey’s blatant aggression on Syrian soil. But one should hardly be surprised by such inaction from a tired, antiquated institution that repeatedly demonstrates its inability to respond meaningfully to global crises. The UN has become little more than a revolving door for incompetent politicians and diplomats whom their governments are eager to discard.
+Against this grim backdrop, the United Nations chases the mirage of a 'constitutional committee', while doing nothing to condemn Turkey’s blatant aggression on Syrian soil. But one should hardly be surprised by such inaction from a tired, antiquated institution that repeatedly demonstrates its inability to respond meaningfully to global crises. The UN has become little more than a revolving door for incompetent politicians and diplomats whom their governments are eager to discard.
 
 Since the appointment of Geir Pedersen—whom I had thought could not possibly fare worse than his predecessor, Staffan de Mistura—it has become painfully clear that we have yet to hit rock bottom. Rather than act with urgency or vision, the new envoy confined himself for nearly a year to engaging with opposition figures, most of whom are beholden to belligerent Turkey. This alone reveals both his naivety and his failure to craft fresh approaches to an increasingly complex conflict.
 
@@ -24,4 +24,4 @@ What hope is there when a UN envoy seeks to build trust between a deranged regim
 
 And what can one reasonably expect from António Guterres—the current UN Secretary-General—who previously failed spectacularly in resolving the Cyprus conflict during his tenure as special envoy?
 
-In a final, bitter irony, the long-delayed constitutional committee—after one year and seven months of repeated stillbirths—was finally brought into being, malformed and impotent, just days before Turkey launched its assault. And one of the guarantors of this very committee is a state actively working to carve up and annex Syrian territory under the cynical banner of “Operation Peace Spring”—more truthfully named the Fountain of Death and Destruction.
+In a final, bitter irony, the long-delayed constitutional committee—after one year and seven months of repeated stillbirths—was finally brought into being, malformed and impotent, just days before Turkey launched its assault. And one of the guarantors of this very committee is a state actively working to carve up and annex Syrian territory under the cynical banner of 'Operation Peace Spring'—more truthfully named the Fountain of Death and Destruction.

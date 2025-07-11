@@ -1,4 +1,4 @@
-<h4>Paris and What it Means to Me — Part 1</h4>
+<h4>Paris and What it Means to Me – Part 1</h4>
 
 
 Published in Elaph
@@ -28,10 +28,10 @@ Our varied human experiences have taught us that the turning points in history a
 
 I hold both criticism and admiration for Western societies, and for France in particular. It was here that I learned to breathe in polluted air and exhale something cleaner—air that opens the heart and clears the mind. But I must also address a malignant problem now afflicting both the West and humanity as a whole. This problem spreads like a virus, and many avoid speaking of it openly, constrained by rigid laws surrounding political correctness and racism—laws which often silence reasoned voices and thoughtful critique. Paradoxically, racism and supremacist attitudes are on the rise, having found fertile ground in a dangerous and insidious form of chauvinism, which I believe is the worst manifestation of racism.
 
-When we examine chauvinism closely, we see racism as a developed expression of ethnic egocentrism. In using the word “developed,” I do not mean progressed, for development is not always synonymous with progress. Primitive forms of ethnic identity have evolved from the same root of xenophobia—an instinctual hatred of the foreign. This tendency emerged alongside the formation of social groups, and can be observed among other social creatures as well. In returning to racism, we witness humanity’s regression into an animalistic state. Our accumulated knowledge and philosophical insights have yet to fully tame this primitive impulse, which persists as societies grow and organise themselves.
+When we examine chauvinism closely, we see racism as a developed expression of ethnic egocentrism. In using the word 'developed', I do not mean progressed, for development is not always synonymous with progress. Primitive forms of ethnic identity have evolved from the same root of xenophobia—an instinctual hatred of the foreign. This tendency emerged alongside the formation of social groups, and can be observed among other social creatures as well. In returning to racism, we witness humanity’s regression into an animalistic state. Our accumulated knowledge and philosophical insights have yet to fully tame this primitive impulse, which persists as societies grow and organise themselves.
 
 It is true that all peoples and cultures grapple with some aspect of this ancestral inheritance. Humanity is universal, but what sets us apart is our capacity for free thought. What distinguishes one society from another is the extent to which it enshrines civil liberties and human rights in concrete laws that protect individuals—regardless of how radically their thoughts may differ from the prevailing social norms.
 
 In my view, the Western populace has failed to live up to the universal values it claims to defend. Chauvinism remains a potent weapon wielded by philistines—those who boast of nothing but their nationality, their legislation, and their intellectual forebears. Today, more than ever, we need an intellectual awakening to restrain Western governments from stoking chauvinism within their native populations through a media that is increasingly tabloid-driven and feudal in tone. Complacency and pride are among the greatest enemies of human progress—and this applies equally, if not more so, to the Western variety.
 
-To be continued: [Paris and What it Means to Me - Part 2](article37.md)
+To be continued: [Paris and What it Means to Me – Part 2](article37.md)

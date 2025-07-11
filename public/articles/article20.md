@@ -1,4 +1,4 @@
-<h4>In the Beginning was the Totem Animal — Part II</h4>
+<h4>In the Beginning was the Totem Animal – Part II</h4>
 
 
 Published in Al-Hiwar al-Mutamaddin
@@ -30,8 +30,8 @@ Given the deep entrenchment of taboo in the fabric of social organisation, it is
 
 This fear of contagion became the primary catalyst for the emergence of guilt within human societies, linking closely with the idea of purification and the expiation of sin. In the Akakios tribe in Africa, sinners undergo rigorous rituals to rid themselves of guilt. They confess to the tribal sorcerer, who oversees a ceremony beginning with the sinner vomiting—a symbolic purging of inner corruption. This association between the physical act of emptying the body and the spiritual notion of cleansing suggests that guilt was once conceived as a corporeal affliction, not a matter of conscience. Here again, we encounter the concept of the scapegoat: rather than punishing the guilty party, an innocent animal is sacrificed to redeem the sin.
 
-The scapegoat motif appears in many societies that pre-date the Abrahamic religions. Plutarch recounts a public punishment in the city of Chaeronea in which a slave’s genitals were whipped while his tormentors cried: ‘Depart from our city, oh famine, and come to us, oh health and plenty!’
+The scapegoat motif appears in many societies that pre-date the Abrahamic religions. Plutarch recounts a public punishment in the city of Chaeronea, in which a slave’s genitals were whipped while his tormentors cried: ‘Depart from our city, O famine, and come to us, O health and plenty!’
 
 Though these customs may seem absurd to us today, they emerged during the agricultural phase of human evolution. Totemic remnants were gradually transformed into spiritual doctrines, evolving into ideas of divine punishment and reward, and manifesting in religious rituals—from scapegoating to collective prayer for rain. Climate, too, played a crucial role in maintaining these totemic beliefs. More significantly, however, we find that the natural and cultural environment continues to reinforce them. In societies where basic needs and desires are met, the longing for deeper understanding tends to flourish. The fulfilment of biological necessities often paves the way for a more vibrant and inquisitive intellectual life.
 
-To read: [In the Beginning was the Totem Animal - Part I](article19.md)
+To read: [In the Beginning was the Totem Animal – Part I](article19.md)

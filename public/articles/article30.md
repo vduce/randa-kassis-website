@@ -18,7 +18,7 @@ After extensive fieldwork among Australian tribes, the anthropologist and psycho
 
 Among the Pitjantjatjara tribe in Australia, for example, women are affectionate and tender with their children, yet are said to consume the weaker among them, offering greater care to the stronger ones. This form of selection mirrors patterns in the animal world and resonates with the theory of natural selection.
 
-Such practices also spark in children a buried urge for revenge. Some specialists suggest that demons and spirits symbolise the child’s repressed desire to penetrate and devour the mother’s body. As the psychoanalyst Melanie Klein explained, “The child projects their aggression first onto the mother, then the father, becoming immersed in fantasies of bodily destruction.”
+Such practices also spark in children a buried urge for revenge. Some specialists suggest that demons and spirits symbolise the child’s repressed desire to penetrate and devour the mother’s body. As the psychoanalyst Melanie Klein explained, 'The child projects their aggression first onto the mother, then the father, becoming immersed in fantasies of bodily destruction'.
 
 It is likely that the very bond between mother and child—from conception in the womb to the trauma of birth—played a central role in producing childhood anxiety, which later fed into mythological and, eventually, religious storytelling.
 
@@ -28,4 +28,4 @@ By contrast, the person who surrenders unquestioningly to their god and religion
 
 We notice, then, that associating divinity with certain grandiose terms does little to help individuals distinguish between illusion and experience. It impedes the pursuit of a more profound understanding—one that transcends demons, sorcerers, and deities altogether. These exalted terms form a linguistic barrier that obstructs our conscious will to examine history and its ailments, and to craft new frameworks that address our biological and psychological needs, without necessarily clashing with collective values.
 
-Thus, control over individuals is often exercised through linguistic pathways embedded in memory, becoming automatic responses devoid of empirical grounding. If one asks, “Who is God?”, the answer often arrives instantly—yet it is usually empty of analysis. God has become the ready answer for anyone who cannot, or will not, engage their mind.
+Thus, control over individuals is often exercised through linguistic pathways embedded in memory, becoming automatic responses devoid of empirical grounding. If one asks, 'Who is God?', the answer often arrives instantly—yet it is usually empty of analysis. God has become the ready answer for anyone who cannot, or will not, engage their mind.

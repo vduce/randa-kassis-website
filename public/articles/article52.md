@@ -1,4 +1,4 @@
-<h4>The “Group” Effect</h4>
+<h4>The 'Group' Effect</h4>
 
 
 Published in Al-Hiwar al-Mutamaddin
@@ -20,6 +20,6 @@ This persona replicates itself among individuals through the subconscious. As Ju
 
 A society draws its originality and creativity from its members. In many cultures, individuality is nurtured and safeguarded, with the understanding that it can produce positive outcomes. Individuals belong to the collective while still preserving their personal traits.
 
-In Arab societies, the opposite often occurs: the collective destroys any sign of individuality, seeking instead to display a single, unified “face” in which everyone becomes interchangeable. The mass becomes the one, and the one becomes the mass. Individuals are no longer unique contributors to a whole but rather replaceable fragments of it.
+In Arab societies, the opposite often occurs: the collective destroys any sign of individuality, seeking instead to display a single, unified 'face' in which everyone becomes interchangeable. The mass becomes the one, and the one becomes the mass. Individuals are no longer unique contributors to a whole but rather replaceable fragments of it.
 
-The Arab “mass” proves largely incapable of renewing its image, clinging instead to uniformity at all costs—leading ultimately to the repression of the self. It is from this condition that the constant search for a saviour, or for God, emerges—along with the hope of a brighter afterlife to make sense of present constraints.
+The Arab 'mass' proves largely incapable of renewing its image, clinging instead to uniformity at all costs—leading ultimately to the repression of the self. It is from this condition that the constant search for a saviour, or for God, emerges—along with the hope of a brighter afterlife to make sense of present constraints.
