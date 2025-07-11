@@ -14,21 +14,21 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 ![](10.jpg)
 ![](11.jpg)
 ![](12.jpg)
-![](13.jpg)
+![](13.JPG)
 ![](14.jpg)
 ![](15.jpg)
 ![](16.jpg)
-![](17.jpg)
-![](18.jpg)
-![](19.jpg)
-![](20.jpg)
-![](21.jpg)
+![](17.JPG)
+![](18.JPG)
+![](19.JPG)
+![](20.JPG)
+![](21.JPG)
 ![](22.jpg)
 ![](23.jpg)
 ![](24.jpg)
 ![](25.jpg)
 ![](26.jpg)
-![](27.jpg)
+![](27.jpeg)
 ![](28.jpg)
 ![](29.jpg)
 ![](30.jpg)
@@ -36,10 +36,10 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 ![](32.jpg)
 ![](33.jpg)
 ![](34.jpg)
-![](35.jpg)
-![](36.jpg)
-![](37.jpg)
-![](38.jpg)
+![](35.JPG)
+![](36.JPG)
+![](37.JPG)
+![](38.JPG)
 ![](39.jpg)
 <p></p>
 
@@ -51,12 +51,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/60ade51f-97ba-4b40-a0fd-b2f16fb8eb32?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -72,11 +66,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/2d2554f8-a699-4a94-8267-62b5dd6b2fc4?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -92,11 +81,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/29c8f24e-3246-47c3-b9ef-c464b09e9241?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -112,12 +96,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/4e467d97-7a03-4ceb-abac-680fd1330c73?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -134,12 +112,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/b030bb00-219e-4b48-95d7-81f663ce7194?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -148,7 +120,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 </center>  
 <p></p>	
 
-
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
@@ -156,11 +127,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/4531bdb2-151c-4617-8bce-9389cb81c829?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -169,7 +135,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 </center>  
 <p></p>	
 
-
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
@@ -177,12 +142,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/7196222e-5e05-4a33-8a28-8b5241e86406?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -192,7 +151,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 <p></p>	
 
 
-
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
@@ -200,15 +158,10 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/8f5d3ebf-a590-4170-9f85-0904cab39455?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
 </center>  
-<p></p>	
+<p></p>
