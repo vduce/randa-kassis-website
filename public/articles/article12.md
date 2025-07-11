@@ -1,4 +1,4 @@
-<h4>Memory and Consciousness—Part II</h4>
+<h4>Memory and Consciousness – Part II</h4>
 
 
 Published in Al-Hiwar al-Mutamaddin
@@ -42,4 +42,4 @@ When considering these modern theories, it becomes evident that our engagement w
 
 Over millions of years, evolution has selected for learning mechanisms that enable living organisms to adapt to varying environments. Thus, morality—emerging from our perceptual evaluation of phenomena—is not static, but evolves as our perception shifts, either generating new values or abandoning those no longer suited to the changing external context.
 
-To read: [Memory and Consciousness–Part I](article11.md)
+To read: [Memory and Consciousness – Part I](article11.md)
