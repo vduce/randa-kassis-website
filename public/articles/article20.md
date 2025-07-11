@@ -34,4 +34,4 @@ The scapegoat motif appears in many societies that pre-date the Abrahamic religi
 
 Though these customs may seem absurd to us today, they emerged during the agricultural phase of human evolution. Totemic remnants were gradually transformed into spiritual doctrines, evolving into ideas of divine punishment and reward, and manifesting in religious rituals—from scapegoating to collective prayer for rain. Climate, too, played a crucial role in maintaining these totemic beliefs. More significantly, however, we find that the natural and cultural environment continues to reinforce them. In societies where basic needs and desires are met, the longing for deeper understanding tends to flourish. The fulfilment of biological necessities often paves the way for a more vibrant and inquisitive intellectual life.
 
-To read: [In the Beginning was the Totem Animal - Part I](article19.md)
+To read: [In the Beginning was the Totem Animal-Part I](article19.md)
