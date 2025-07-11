@@ -1,42 +1,42 @@
 <p>
 
-![Randa Kassis attending the third meeting of the Group of Friends of the Syrian People, alongside President François Hollande and Foreign Minister Laurent Fabius.](1.jpg)
-![Randa Kassis with Ugandan President Yoweri Museveni, First Lady Janet Museveni, and the CPFA delegation led by Fabien Baussart, during an official meeting in Uganda held amid the COVID-19 pandemic.](2.jpg)
+![Randa Kassis attending the third meeting of the Group of Friends of the Syrian People, alongside President François Hollande and Foreign Minister Laurent Fabius.](1.JPG)
+![Randa Kassis with Ugandan President Yoweri Museveni, First Lady Janet Museveni, and the CPFA delegation led by Fabien Baussart, during an official meeting in Uganda held amid the COVID-19 pandemic.](2.JPG)
 
-![Randa Kassis with Sheikh Hikmat al-Hijri, spiritual leader of the Syrian Druze community, joined by Fabien Baussart and delegation members during a visit to Suwayda.](3.jpg)
-![Randa Kassis, Fabien Baussart, and Kelly Kassis with Patriarch John X of Antioch during a meeting at the Greek Orthodox Patriarchate of Antioch.](4.jpg)
+![Randa Kassis with Sheikh Hikmat al-Hijri, spiritual leader of the Syrian Druze community, joined by Fabien Baussart and delegation members during a visit to Suwayda.](3.JPG)
+![Randa Kassis, Fabien Baussart, and Kelly Kassis with Patriarch John X of Antioch during a meeting at the Greek Orthodox Patriarchate of Antioch.](4.JPG)
 
-![Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.](5.jpg)
-![Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.](6.jpg)
+![Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.](5.JPG)
+![Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.](6.jpeg)
 
-![Randa Kassis and Fabien Baussart meeting Ekrem İmamoğlu, Mayor of Istanbul at the Istanbul Metropolitan Municipality.](7.jpg)
-![Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.](8.jpg)
+![Randa Kassis and Fabien Baussart meeting Ekrem İmamoğlu, Mayor of Istanbul at the Istanbul Metropolitan Municipality.](7.JPG)
+![Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.](8.JPG)
 
-![Randa Kassis and Fabien Baussart with Gennady Gatilov, Deputy Minister of Foreign Affairs of the Russian Federation.](9.jpg)
-![Meeting between Beibut Atamkulov, Foreign Minister of Kazakhstan, Randa Kassis, and Fabien Baussart.](10.jpg)
+![Randa Kassis and Fabien Baussart with Gennady Gatilov, Deputy Minister of Foreign Affairs of the Russian Federation.](9.jpeg)
+![Meeting between Beibut Atamkulov, Foreign Minister of Kazakhstan, Randa Kassis, and Fabien Baussart.](10.jpeg)
 
 ![Meeting between Sergei Lavrov, Russian Foreign Minister, and Randa Kassis](11.jpg)
-![Randa Kassis with Kofi Annan.](12.jpg)
+![Randa Kassis with Kofi Annan.](12.jpeg)
 
-![Randa Kassis and Fabien Baussart taking part in high-level discussions alongside President Nursultan Nazarbayev, and Nobel Peace Laureates.](13.jpg)
+![Randa Kassis and Fabien Baussart taking part in high-level discussions alongside President Nursultan Nazarbayev, and Nobel Peace Laureates.](13.JPG)
 ![Randa Kassis and Fabien Baussart during a meeting with Mahmoud Abbas, President of the State of Palestine](14.jpg)
 
 ![Randa Kassis with Mynak Tulku, a senior Bhutanese lama, during an informal meeting in Bhutan](15.jpg)
 ![Randa Kassis and Fabien Baussart with Kairat Abdrakhmanov, Foreign Minister of Kazakhstan, during an official meeting in Astana](16.jpg)
 
-![Randa Kassis with Alexander Lavrentiev, Russian Special Presidential Envoy for Syria, Deputy Foreign Minister Sergey Vershinin, and Fabien Baussart during a meeting on the Syrian peace process](17.jpg)
+![Randa Kassis with Alexander Lavrentiev, Russian Special Presidential Envoy for Syria, Deputy Foreign Minister Sergey Vershinin, and Fabien Baussart during a meeting on the Syrian peace process](17.jpeg)
 ![Randa Kassis and Fabien Baussart with Sheikh Mowafaq Tarif, spiritual leader of the Druze community in Israel, accompanied by Saleh Tarif, former Minister and Kelly Kassis, during a meeting in London](18.jpg)
 
-![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Sergey Vershinin, General Afanasiev, and Mario Giro during discussions on the Syrian peace process](19.jpg)
+![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Sergey Vershinin, General Afanasiev, and Mario Giro during discussions on the Syrian peace process](19.jpeg)
 ![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Russian Presidential Special Envoy for Syria, and Deputy Foreign Minister Sergey Vershinin.](20.jpg)
 
-![Randa Kassis with Lakhdar Brahimi, United Nations Special Envoy for Syria.](21.jpg)
+![Randa Kassis with Lakhdar Brahimi, United Nations Special Envoy for Syria.](21.jpeg)
 ![Meeting between Randa Kassis, UN Special Envoy for Syria Staffan de Mistura, and Antoine Lahham.](22.jpg)
 
 ![Randa Kassis with José Luis Rodríguez Zapatero, former Prime Minister of Spain.](23.jpg)
 ![Yanis Varoufakis between Randa Kassis and Fabien Baussart](24.jpg)
 
 ![Randa Kassis with Mikhail Bogdanov, Russian Special Representative for the Middle East and Africa.](25.jpg)
-![Private lunch with Randa Kassis, Fabien Baussart and Donald Trump Jr.](26.jpg)
+![Private lunch with Randa Kassis, Fabien Baussart and Donald Trump Jr.](26.JPG)
 
 </p>
