@@ -1,5 +1,5 @@
 <h4>Ah, Agathe. What a marvellous character.</h4>
-
+<br/>
 She could fool you in a heartbeat, convincing you she’s the very picture of innocence—quiet, composed, gentle as a breeze. An angel, really. Until, of course, she decides otherwise.
 
 When Agathe acts, she does so without warning or fuss. No dramatic build-up, no rumbling growl—just a silent, surgical decision. Whether it’s a bark, a bite, or a sudden dash, it happens swiftly and without negotiation.
@@ -16,12 +16,12 @@ I was mortified. The thought of turning up to the groomer as if nothing had happ
 
 And yet, despite her _episodes_, my sweet Agathe remains mostly calm—calm with the occasional dash of chaos. We’ve all learned to work around her quirks, staying vigilant whenever she’s out and about. Not out of fear, but out of a shared understanding: that even angels have moments. Especially the hunting kind.
 
-![](96.JPG)
+![](96.jpg)
 ![](97.JPG)
-![](98.JPG)
+![](98.jpg)
 ![](99.JPG)
-![](100.JPG)
+![](100.jpg)
 ![](101.JPG)
-![](102.JPG)
+![](102.jpg)
 ![](103.JPG)
 <p></p>

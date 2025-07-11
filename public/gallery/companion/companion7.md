@@ -17,6 +17,6 @@ I am now, quite officially, a great-mother. Yes, to dogs. Two utterly spoiled gr
 In the end, we kept six of the puppies—along with Nietzsche and Damascius.
 
 
-![](77.JPG)
+![](77.jpg)
 ![](78.JPG)
 <p></p>

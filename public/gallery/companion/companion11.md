@@ -1,6 +1,6 @@
 <h4>And now we come to Grace—the household’s very own police officer.</h4>
-
-Though in truth, she operates somewhere between law enforcement and organised crime. If reincarnation were real—and no, I don’t believe in such notions—I’d wager Grace was once an American politician of the particularly delusional variety**:** the sort who mistakes mediocrity for genius and speaks of freedom while quietly auctioning off the country behind closed doors.
+<br/>
+Though in truth, she operates somewhere between law enforcement and organised crime. If reincarnation were real—and no, I don’t believe in such notions—I’d wager Grace was once an American politician of the particularly delusional variety: the sort who mistakes mediocrity for genius and speaks of freedom while quietly auctioning off the country behind closed doors.
 
 She radiates that very particular brand of self-importance—the belief that she alone is holding civilisation together, from the front gate to the far end of the garden. All that’s missing is a flag-draped podium and a ghost-written autobiography titled _Grace: A Legacy of Barking_.
 
@@ -20,13 +20,13 @@ With age, Grace still greets us in a stampede of limbs and wild enthusiasm—but
 
 Grace isn’t just a dog. She’s a self-appointed institution, quietly authoritarian, entirely self-assured, and absolutely convinced that without her, the household would slide into utter anarchy. And, inconveniently… she might be right.
 
-![](104.JPG)
+![](104.jpg)
 ![](105.JPG)
-![](106.JPG)
+![](106.jpg)
 ![](107.JPG)
-![](108.JPG)
+![](108.jpg)
 ![](109.JPG)
-![](110.JPG)
+![](110.jpg)
 ![](111.JPG)
 ![](112.JPG)
 <p></p>

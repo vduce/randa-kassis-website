@@ -35,8 +35,8 @@ At memorial museums, I do not find solace—only the echo of absence formalised.
 ![](28.jpg)
 ![](29.jpg)
 ![](30.jpg)
-![](c27d5608-bf80-4117-82e1-8bed3f15a63f.JPG)
-![](IMG_2542.jpeg)
-![](IMG_2543.jpeg)
+![](31.JPG)
+![](32.jpeg)
+![](33.jpeg)
 
 <p></p>
