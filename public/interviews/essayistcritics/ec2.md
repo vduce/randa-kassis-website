@@ -22,6 +22,10 @@ Painting, by contrast, belongs to an earlier state of mind—one suspended betwe
 
 <b>How did you cope with the challenges encountered along your path—from art, to writing, to politics?</b>
 
+Challenges are inevitable, but they are precisely what compel me to continue and to pursue my goals. Artistic, intellectual, and political challenges differ in nature, yet all require the same inner resources: time, resilience, and cultivated awareness.
+
+<b>In your view, what form should a political solution in Syria take today?</b>
+
 It is now broadly accepted that only a political solution can offer a way forward. However, some parties continue to believe they have emerged victorious. I would argue that military success is no triumph over reality. Change in Syria is inevitable, especially as the economy remains crippled under sanctions.
 
 The only viable path is through a political process that initiates gradual, meaningful transformation. That said, the solution does not lie solely in Syrian hands. It also rests with powerful states involved in the geopolitical theatre. As members of the opposition, we bear the responsibility of generating new frameworks and initiatives.
@@ -36,12 +40,6 @@ The continuing conflict and military tension in the north and north-east reflect
 I believe the conflict will persist as long as certain actors refuse to acknowledge the need for a genuine, transformative political solution—not a superficial one devised to sidestep the present economic crisis. War is not Syria’s only challenge. Beyond the horrors of armed conflict, the repercussions are no less severe than the economic collapse afflicting individuals, communities, and the country’s future.
 
 <b>How do you believe a secular democratic regime—the foundation of your political programme—could provide a solution to the Syrian crisis?</b>
-A secular state treats all citizens equally, regardless of religion or belief—and this is precisely what Syria needs, being a mosaic of diverse doctrines and identities. We cannot build an open, inclusive society capable of empowering individuals and communities without ensuring the freedom to choose, free from imposed taboos.
-
-Of course, I don’t imagine a perfectly neutral state. The future Syrian state must acknowledge and respect the country’s varied communities, enabling them to express themselves freely—within the framework of a united Syria.
-
-<b>How do you believe a secular democratic regime—the foundation of your political programme—could provide a solution to the Syrian crisis?</b>
-
 A secular state treats all citizens equally, regardless of religion or belief—and this is precisely what Syria needs, being a mosaic of diverse doctrines and identities. We cannot build an open, inclusive society capable of empowering individuals and communities without ensuring the freedom to choose, free from imposed taboos.
 
 Of course, I don’t imagine a perfectly neutral state. The future Syrian state must acknowledge and respect the country’s varied communities, enabling them to express themselves freely—within the framework of a united Syria.
