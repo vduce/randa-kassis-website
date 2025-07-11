@@ -24,4 +24,4 @@ Let us pause briefly to consider the relationship between genes and natural sele
 
 To shed further light on the development of neural structures in the brain, it will also be useful to examine the history of how consciousness itself emerged and evolved.
 
-To be continued: [Memory and Consciousness — Part II](article12.md)
+To be continued: [Memory and Consciousness—Part II](article12.md)
