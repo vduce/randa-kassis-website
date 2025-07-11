@@ -31,7 +31,7 @@ His body gave way, but he left us as he had lived in those final years: quietly,
 ![](152.jpg)
 ![](153.JPG)
 ![](154.jpg)
-![](155.JPG)
+![](155.jpg)
 <p></p>
 
 Together, they were a universe—chaotic, noisy, opinionated, and occasionally deranged. Each had their own rhythm, neuroses, brilliance, charm, and yes, moments of staggering stupidity. They shaped our days one bark, hiss, pounce, or theatrical meltdown at a time. Some are still with us, others have gone, but their memories remain—firmly embedded in the fabric of our lives, and occasionally in the furniture.
@@ -102,11 +102,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/94b98d9f-ecbe-458c-9d31-1567cbb0bc7d?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -122,11 +117,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/7190d7d0-4651-424f-9460-a2b8b26fc4f5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -142,11 +132,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/96e5250b-fb10-49c7-9eca-0a23d5791e8c?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -162,12 +147,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/d46b743c-639e-4823-9ea4-563cbd35f9df?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -183,11 +162,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/be78b47b-7025-4c8b-8042-9cc79fb6726a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -203,11 +177,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/2a72381a-adb2-48db-be06-f21634157a9e?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -224,11 +193,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/dcac2695-ff5d-4e43-9a7f-fbda6fe9c99b?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -245,11 +209,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/ab9ec7de-63b3-4a2d-83f3-6e1691711de9?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -265,12 +224,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/2aeaa675-ec36-43a4-a856-db87068fa262?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -287,11 +240,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/9e127bf9-8978-4f43-9b61-3157ef44c589?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -307,11 +255,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/cf16c7b1-d269-4079-895d-1f4086bf2697?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
@@ -327,11 +270,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/3597eb01-5153-4c9b-8370-010891dbefd8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"

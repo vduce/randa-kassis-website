@@ -234,7 +234,11 @@ const MyCompanion = () => {
     },
     center: ({ children }) => {
       lastElementType.current = "center";
-      return <div className="d-flex justify-content-center mb-4">{children}</div>;
+      return (
+        <div className="d-flex flex-column flex-md-row justify-content-center mb-4 align-items-center" style={{ gap: "1rem" }}>
+          {children}
+        </div>
+      );
     },
   };
 

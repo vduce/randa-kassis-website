@@ -84,7 +84,7 @@ const BookSection = () => {
                       <img src={book.proImg} alt={book.title} />
                     </div>
                     <div className="details">
-                      <h3>{book.title}</h3>
+                      <h4>{book.title}</h4>
                     </div>
                   </div>
                 ))}
