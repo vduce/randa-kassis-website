@@ -17,11 +17,11 @@ I was mortified. The thought of turning up to the groomer as if nothing had happ
 And yet, despite her _episodes_, my sweet Agathe remains mostly calm—calm with the occasional dash of chaos. We’ve all learned to work around her quirks, staying vigilant whenever she’s out and about. Not out of fear, but out of a shared understanding: that even angels have moments. Especially the hunting kind.
 
 ![](96.jpg)
-![](97.JPG)
-![](98.jpg)
+![](97.jpg)
+![](98.JPG)
 ![](99.JPG)
-![](100.jpg)
+![](100.JPG)
 ![](101.JPG)
-![](102.jpg)
+![](102.JPG)
 ![](103.JPG)
 <p></p>
