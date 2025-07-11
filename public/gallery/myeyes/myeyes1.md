@@ -5,7 +5,7 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
 
 ![](1.jpg)
 ![](2.jpg)
-![](3.jpg)
+![](3.jpeg)
 ![](4.jpg)
 ![](5.jpg)
 ![](6.jpg)
