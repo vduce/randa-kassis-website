@@ -14,13 +14,13 @@ It’s not that Whitty is theatrical—it’s that he thinks he is. He performs 
 
 Yes, Whitty has the charm of a leading man, just not one written by the BBC. But we love him nonetheless. His softness, his shamelessness, his unshakable belief that one day someone in the house will actually take his side—all of it makes him, somehow, our dear little tragic star.
 
-![](121.jpg)
+![](121.JPG)
 ![](122.JPG)
-![](123.jpg)
+![](123.JPG)
 ![](124.JPG)
-![](125.jpg)
-![](126.JPG)
-![](127.jpg)
+![](125.JPG)
+![](126.jpeg)
+![](127.JPG)
 ![](128.JPG)
 ![](129.JPG)
 <p></p>
