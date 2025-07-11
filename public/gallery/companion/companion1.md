@@ -14,17 +14,17 @@ In his final years, my daughter became more than a sister to him—she was his m
 
 No one was saved—except, perhaps, Nestor, from ever having to suffer a toddler again.
 
-![](1.jpg)
-![](2.jpg)
-![](3.jpg)
+![](1.JPG)
+![](2.JPG)
+![](3.JPG)
 ![](4.jpg)
-![](5.jpg)
-![](6.jpg)
-![](7.jpg)
+![](5.JPG)
+![](6.JPG)
+![](7.JPG)
 ![](8.jpg)
-![](9.jpg)
-![](10.jpg)
-![](11.jpg)
-![](12.jpg)
+![](9.JPG)
+![](10.JPG)
+![](11.JPG)
+![](12.JPG)
 
 <p></p>
