@@ -4,7 +4,7 @@ Art & Critique
 17 September 2019  
 By Guillaume de Sardes  
 
-The successive destruction of Palmyra by the Islamic State in 2015 and 2017 has often been interpreted as an attempt to purge Syria’s ancient history. Maamoun AbdelKarim, then Director-General of Antiquities and Museums in Syria, once remarked: “The battle for Palmyra is cultural, not political.” However, this perspective overlooks the political dimension of what was—in truth, and perhaps above all—a systematic campaign of plundering. Franco-Syrian essayist and politician Randa Kassis makes this point emphatically.
+The successive destruction of Palmyra by the Islamic State in 2015 and 2017 has often been interpreted as an attempt to purge Syria’s ancient history. Maamoun AbdelKarim, then Director-General of Antiquities and Museums in Syria, once remarked: 'The battle for Palmyra is cultural, not political'. However, this perspective overlooks the political dimension of what was—in truth, and perhaps above all—a systematic campaign of plundering. Franco-Syrian essayist and politician Randa Kassis makes this point emphatically.
 
 <b>Western media have largely fixated on the symbolic aspect of Palmyra’s devastation. Yet during the recapture of occupied territories, it became evident that ISIS’s financial networks had been illicitly granting excavation rights at archaeological sites. In exchange, the organisation levied taxes on the artefacts sold. How do you assess this trafficking?</b>
 
@@ -22,7 +22,7 @@ The resolution is undoubtedly significant, yet it remains limited in both scope 
 
 Heritage restoration should be fully integrated into the wider political process. It is for this reason that, in my capacity as President of the Astana Platform, I have been working with a range of stakeholders to develop a political and cultural strategy that can offer a way out of the current deadlock.
 
-Regrettably, I no longer place much hope in the United Nations, which has repeatedly demonstrated its inability to produce even a single viable idea for addressing global crises. With each passing day, the UN increasingly resembles the “machin”—the “thing” derided by General de Gaulle—a lumbering apparatus recycling failed politicians and diplomats cast off by their own countries.
+Regrettably, I no longer place much hope in the United Nations, which has repeatedly demonstrated its inability to produce even a single viable idea for addressing global crises. With each passing day, the UN increasingly resembles the 'machin'—the 'thing' derided by General de Gaulle—a lumbering apparatus recycling failed politicians and diplomats cast off by their own countries.
 
 In my view, a truly effective political process and lasting reconciliation can only emerge through a cultural renaissance and the reconstruction of a shared historical memory.
 
