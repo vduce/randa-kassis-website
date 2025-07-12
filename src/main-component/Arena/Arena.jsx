@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 
 const InTheArenaSections = [
   {
@@ -74,7 +74,7 @@ const InTheArena = () => {
     imageBuffer = [];
     return (
       <div className="d-flex flex-wrap gap-4 mb-3">
-        <PhotoGalleryEd photos={imgs} />
+        <PhotoGallery photos={imgs} />
       </div>
     );
   };
@@ -133,28 +133,6 @@ const InTheArena = () => {
                   <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                     <div className="max-w-2xl mx-auto p-3">
                       {renderMarkdown(sections[currentPage]?.content || "")}
-                    </div>
-                    <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
-                      <button
-                        disabled={currentPage === 0}
-                        className={`btn btn-area ${
-                          currentPage === 0
-                            ? "bg-gray-300 cursor-not-allowed"
-                            : "bg-blue-500 hover:bg-blue-600"
-                        }`}
-                      >
-                        Previous
-                      </button>
-                      <button
-                        disabled={currentPage === sections.length - 1}
-                        className={`btn btn-area ${
-                          currentPage === sections.length - 1
-                            ? "bg-gray-300 cursor-not-allowed"
-                            : "bg-blue-500 hover:bg-blue-600"
-                        }`}
-                      >
-                        {currentPage === sections.length - 1 ? "Completed" : "Next"}
-                      </button>
                     </div>
                   </div>
                 </div>
