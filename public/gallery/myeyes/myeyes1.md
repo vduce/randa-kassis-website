@@ -60,7 +60,7 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
 ![](55.jpg)
 ![](56.jpg)
 ![](57.jpeg)
-![](58.jpg)
+![](58.jpeg)
 ![](59.jpg)
 ![](60.jpeg)
 ![](61.JPG)
@@ -74,9 +74,9 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
 ![](69.jpeg)
 ![](70.jpeg)
 ![](71.jpeg)
-![](72.jpg)
-![](73.jpg)
-![](74.JPG)
+![](72.jpeg)
+![](73.jpeg)
+![](74.jpeg)
 <p></p>
 
 
