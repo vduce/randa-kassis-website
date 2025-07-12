@@ -8,12 +8,8 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import "./PhotoGallery.css";
 
 const PhotoGallery = ({ photos }) => {
-  const maxDisplayPhotos = 5;
-  const extraPhotosCount =
-    photos.length > maxDisplayPhotos ? photos.length - maxDisplayPhotos + 1 : 0;
   const lightGalleryRef = useRef(null);
   const [currentPageImages, setCurrentPageImages] = useState([]);
-  const photoCount = Math.min(photos.length, maxDisplayPhotos);
 
   useEffect(() => {
     const images = photos.map((photo) => ({
@@ -41,125 +37,25 @@ const PhotoGallery = ({ photos }) => {
   };
 
   const renderGallery = () => {
-    if (photoCount === 1) {
-      return (
-        <div className="gallery-grid-single">
-          <div className="gallery-item" onClick={() => openGallery(0)}>
+    // render 2 pics in each row
+    return (
+      <div className="gallery-grid">
+        {currentPageImages.map((photo, index) => (
+          <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
             <img
-              src={photos[0].src}
-              alt={photos[0].alt || `Gallery image 1`}
+              src={photo.src}
+              alt={photo.alt || `Gallery image ${index + 1}`}
               className="gallery-image"
             />
-            {photos[0].caption && <span className="caption">{photos[0].caption}</span>}
+            {photo.subHtml && <span className="caption">{photo.subHtml}</span>}
           </div>
-        </div>
-      );
-    }
-
-    if (photoCount === 2) {
-      return (
-        <div className="gallery-grid">
-          {photos.slice(0, 2).map((photo, index) => (
-            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
-              <img
-                src={photo.src}
-                alt={photo.alt || `Gallery image ${index + 1}`}
-                className="gallery-image"
-              />
-              {photo.caption && <span className="caption">{photo.caption}</span>}
-            </div>
-          ))}
-        </div>
-      );
-    }
-
-    if (photoCount === 3) {
-      return (
-        <div className="gallery-grid-three-photos">
-          <div className="gallery-top-row">
-            {photos.slice(0, 2).map((photo, index) => (
-              <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
-                <img
-                  src={photo.src}
-                  alt={photo.alt || `Gallery image ${index + 1}`}
-                  className="gallery-image"
-                />
-                {photo.caption && <span className="caption">{photo.caption}</span>}
-              </div>
-            ))}
-          </div>
-          <div className="gallery-bottom-row">
-            <div className="gallery-item" onClick={() => openGallery(2)}>
-              <img
-                src={photos[2].src}
-                alt={photos[2].alt || `Gallery image 3`}
-                className="gallery-image"
-              />
-              {photos[2].caption && <span className="caption">{photos[2].caption}</span>}
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    if (photoCount === 4) {
-      return (
-        <div className="gallery-grid">
-          {photos.slice(0, 4).map((photo, index) => (
-            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
-              <img
-                src={photo.src}
-                alt={photo.alt || `Gallery image ${index + 1}`}
-                className="gallery-image"
-              />
-              {photo.caption && <span className="caption">{photo.caption}</span>}
-            </div>
-          ))}
-        </div>
-      );
-    }
-
-    return (
-      <div className="gallery-grid-five-plus-photos">
-        <div className="gallery-top-row">
-          {photos.slice(0, 3).map((photo, index) => (
-            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
-              <img
-                src={photo.src}
-                alt={photo.alt || `Gallery image ${index + 1}`}
-                className="gallery-image"
-              />
-              {photo.caption && <span className="caption">{photo.caption}</span>}
-            </div>
-          ))}
-        </div>
-        <div className="gallery-bottom-row">
-          {photos.slice(3, 5).map((photo, index) => (
-            <div key={index + 3} className="gallery-item" onClick={() => openGallery(index + 3)}>
-              <img
-                src={photo.src}
-                alt={photo.alt || `Gallery image ${index + 4}`}
-                className="gallery-image"
-              />
-              {photo.caption && <span className="caption">{photo.caption}</span>}
-              {index === 1 && extraPhotosCount > 0 && (
-                <div className="overlay">+{extraPhotosCount}</div>
-              )}
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     );
   };
 
   return (
-    <div
-      className={`gallery-container ${
-        photoCount === 1 || photoCount === 2
-          ? "gallery-container-single-row"
-          : "gallery-container-two-rows"
-      }`}
-    >
+    <div className="gallery-container">
       {renderGallery()}
       <LightGallery
         dynamic

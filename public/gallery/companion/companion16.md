@@ -81,7 +81,7 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 ![](198.JPG)
 ![](199.jpg)
 ![](200.jpg)
-![](201.jpg)
+![](201.jpeg)
 ![](202.jpg)
 ![](203.JPG)
 ![](204.JPG)
