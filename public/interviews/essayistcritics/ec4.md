@@ -7,21 +7,21 @@ Tomorrow in Rome, from 9:30 a.m. to 2:00 p.m., the international conference The 
 
 Randa Kassis, founder of Ad Hoc, and intellectual Alexandre del Valle have written the following exchange for La Verità, addressing the central themes of the forthcoming Roman conference.
 
-<b>Del Valle: Randa, your foundation is convening an international conference in Rome tomorrow on the provocative theme of “The Right to Blasphemy.” Several prominent Arab intellectuals—liberal, reformist, or branded as ‘apostates’, many of whom face persecution or death threats, will be in attendance. What message do you hope to convey?</b>
+<b>Del Valle: Randa, your foundation is convening an international conference in Rome tomorrow on the provocative theme of 'The Right to Blasphemy'. Several prominent Arab intellectuals—liberal, reformist, or branded as ‘apostates’, many of whom face persecution or death threats, will be in attendance. What message do you hope to convey?</b>
 
 Kassis: The organisation Ad Hoc, which I chair, identifies as secular, modernist, and pluralist. It is an international NGO headquartered in London, with branches in several countries. Our aim is to promote a modern civic culture in the Middle East and North Africa—one rooted in free thought, tolerance, and pluralism.
 
-Naturally, one of our principal goals is to support the development of progressive civil societies in which religion is separated from politics, in order to prevent the abuses and discrimination often justified in the name of “culture”.
+Naturally, one of our principal goals is to support the development of progressive civil societies in which religion is separated from politics, in order to prevent the abuses and discrimination often justified in the name of 'culture'.
 
-As for tomorrow’s conference, its primary aim is to protest against Islamic laws which—under the pretext of “defending the honour of Islam” and combating blasphemy, apostasy, or “offences” against the faith—are used to suppress religious and intellectual freedom, along with the right to freedom of conscience—employing fear and repression as instruments of control.
+As for tomorrow’s conference, its primary aim is to protest against Islamic laws which—under the pretext of 'defending the honour of Islam' and combating blasphemy, apostasy, or 'offences' against the faith—are used to suppress religious and intellectual freedom, along with the right to freedom of conscience—employing fear and repression as instruments of control.
 
 <b>Del Valle: Could you provide some concrete examples?</b>
 
 Kassis: Take the case of Asia Bibi, a poor Christian mother in Pakistan, sentenced to death for alleged blasphemy and left to languish in prison for years in a state of constant fear.
 
-Countless others—Christians, Druze, Sufis, free thinkers, secularists, progressives, minorities, and intellectuals—face imprisonment, persecution, murder, condemnation, or social ostracism under the same guise.
+Countless others—Christians, Druze, Sufis, freethinkers, secularists, progressives, minorities, and intellectuals—face imprisonment, persecution, murder, condemnation, or social ostracism under the same guise.
 
-While the phrase “right to blasphemy” may offend some Italian Catholics—and I understand why—it is not about promoting disrespect towards religion. Rather, it is a response to the persecution of free thinkers who are too often silenced by blasphemy accusations.
+While the phrase 'right to blasphemy' may offend some Italian Catholics—and I understand why—it is not about promoting disrespect towards religion. Rather, it is a response to the persecution of freethinkers who are too often silenced by blasphemy accusations.
 
 This accusation has become a rallying cry for radical Islamists—whether terrorist groups or fundamentalist regimes—aiming to banish all forms of freedom of conscience and thought.
 
@@ -29,19 +29,19 @@ This accusation has become a rallying cry for radical Islamists—whether terror
 
 Kassis: Since the Arab Spring in 2011, history has accelerated—both for better and for worse. On one hand, we have witnessed the rise of ISIS in Syria, Iraq, and Libya. Radical Islamists have gained ground and even won elections in Egypt, Tunisia, and Morocco.
 
-On the other, a growing number of intellectuals and bloggers are beginning to publicly embrace secularism and reject religious fundamentalism. Some have gone so far as to declare theocratic, totalitarian Islam—now dominant—as unreformable due to the entrenched influence of those who manufacture religious fanaticism”.
+On the other, a growing number of intellectuals and bloggers are beginning to publicly embrace secularism and reject religious fundamentalism. Some have gone so far as to declare theocratic, totalitarian Islam—now dominant—as unreformable due to the entrenched influence of those who manufacture religious fanaticism.
 
 Chief among these are the Muslim Brotherhood and Saudi Arabia, which controls the holy cities of Mecca and Medina, along with the majority of Islamic institutions worldwide.
 
 Since the Arab Spring, a widening chasm has appeared between those who, under the banner of religion, seek to drag societies backwards by centuries, and those who advocate for open societies grounded in secularism, pluralism, and modernity.
 
-<b>Del Valle: I recently published a book in France revisiting Karl Popper’s concept of the “open society,” which you’ve referenced. Would you agree that Islamic fundamentalism is not merely one form of religious extremism, but a theocratic, neo-imperialist form of totalitarianism?</b>
+<b>Del Valle: I recently published a book in France revisiting Karl Popper’s concept of the 'open society', which you’ve referenced. Would you agree that Islamic fundamentalism is not merely one form of religious extremism, but a theocratic, neo-imperialist form of totalitarianism?</b>
 
 Kassis: Absolutely. I stand firmly against all forms of intolerance, fanaticism, and fundamentalism. Yet today, no religion is more afflicted, radicalised, or infected by totalitarianism and violent extremism than Islam.
 
 The intellectuals joining us in Rome were all raised as Muslims—many still identify as such—but they reject the obscurantist and medieval trajectory that their societies have taken in recent decades.
 
-They want to make it clear that the rise of Islamic extremism in Europe cannot simply be explained by “social exclusion” or “post-colonial guilt”. It is part of a broader global wave—a tsunami—sweeping across the Middle East, North Africa, and beyond. ISIS is the most brutal manifestation of this extremism, but it is far from alone.
+They want to make it clear that the rise of Islamic extremism in Europe cannot simply be explained by 'social exclusion' or 'post-colonial guilt'. It is part of a broader global wave—a tsunami—sweeping across the Middle East, North Africa, and beyond. ISIS is the most brutal manifestation of this extremism, but it is far from alone.
 
 <b>Del Valle: So ISIS is just one component of a much wider problem?</b>
 
@@ -61,7 +61,7 @@ Raif Badawi, a Saudi blogger, was sentenced in 2003 to ten years in prison and 1
 
 Not to mention Asia Bibi in Pakistan—on whose behalf rivers of ink have been spilled and countless demonstrations of solidarity held worldwide. She was sentenced to death for allegedly ‘offending Islam’ by drinking from a Muslim well and refusing to convert.
 
-Alber Saber, an Egyptian Christian, was arrested after being identified as an administrator of a Facebook group titled “Egyptian Atheists”. The page had shared a trailer for the controversial film The Innocence of Muslims. According to Masrawy.com, his arrest was triggered by a tip-off from a Muslim acquaintance.
+Alber Saber, an Egyptian Christian, was arrested after being identified as an administrator of a Facebook group titled 'Egyptian Atheists'. The page had shared a trailer for the controversial film The Innocence of Muslims. According to Masrawy.com, his arrest was triggered by a tip-off from a Muslim acquaintance.
 
 Saeed Malekpour, an Iranian-Canadian web developer, was arrested during a visit to Iran because a programme he had created was used—without his knowledge—to upload images to adult websites. Accused of ‘desecrating Islam’, he was tortured and sentenced to death in 2010 by the Revolutionary Court. The verdict was upheld by the Iranian Supreme Court in 2011.
 
@@ -72,7 +72,7 @@ It is clear that this phenomenon is no longer confined to the Arab world; all Is
 
 Kassis: Indeed, we observe that the primary victims of fundamentalist Islamic intolerance are Muslims themselves—atheists, liberals, and freethinkers. All those who dare to think differently and in an ‘Islamically incorrect’ manner are accused of ‘blasphemy’ and face threats of imprisonment or death.
 
-This is totalitarianism in its starkest form, and it will not cease unless intellectuals begin to denounce it—even at the risk of their lives. Fear is the linchpin of this theocratic-totalitarian system. Thus, the renowned intellectual and writer Nawal El Saadawi was murdered.
+This is totalitarianism in its starkest form, and it will not cease unless intellectuals begin to denounce it—even at the risk of their lives. Fear is the linchpin of this theocratic-totalitarian system.
 
 I would also recall the case of the Egyptian writer and poet Fatima Naoot, who was forced to flee Egypt after being sentenced to three years’ imprisonment for merely criticising Eid al-Adha—the traditional slaughter of sheep—on Facebook, describing it as ‘the greatest massacre committed by human beings’.
 
