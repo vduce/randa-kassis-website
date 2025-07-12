@@ -14,7 +14,7 @@ const ClickHandler = () => {
 const arenaPics = [
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/1.JPG" },
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/2.JPG" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6-.jpeg" },
+  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpeg" },
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/8.JPG" },
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/13.JPG" },
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/5.JPG" },
