@@ -1,4 +1,4 @@
-<h4>Randa Kassis: “I do not believe in moderate Islam.”</h4>
+<h4>Randa Kassis: 'I do not believe in moderate Islam'</h4>
 
 La Baule  
 24 March 2015  
@@ -9,7 +9,7 @@ Although she remains an opponent of Bashar al-Assad, she no longer calls for his
 
 Randa Kassis has just published, together with essayist and geopolitical consultant Alexandre del Valle, a book titled The Syrian Chaos: Arab Springs and Minorities Confronted with Islamism. The work is compelling, as the authors argue that the Syrian crisis has become the epicentre of a globalised confrontation—one that pits Sunni Muslims against Shiites, and Arab nationalism against a utopian vision of the caliphate with global ambitions.
 
-Solutions do exist to combat this “green totalitarianism”, but this requires pragmatism and, above all, a nuanced understanding of the threat.
+Solutions do exist to combat this 'green totalitarianism', but this requires pragmatism and, above all, a nuanced understanding of the threat.
 
 Randa Kassis was the guest of Yannick Urrien on Kernews 91.5 FM on Friday, 13 February. This exclusive and exceptional interview was conducted for Kernews and La Baule.
 
@@ -17,7 +17,7 @@ The Syrian Chaos: Arab Springs and Minorities Confronted with Islamism, by Randa
 
 <b>There are still few people who truly understand the Arab world, and much of the West continues to cling to caricatures…</b>
 
-Yes, that’s because certain so-called experts view the Arab world through their own particular lens. They present themselves as experts, yet have scarcely explored the complexities of the region… These peoples are not all Arabs, and their societies differ greatly from one another. Conversely, some Arabs speak of the West as though it were a single country, a single culture, a single history. So, one cannot truly speak of a singular “Western world” or “Arab world”.
+Yes, that’s because certain so-called experts view the Arab world through their own particular lens. They present themselves as experts, yet have scarcely explored the complexities of the region… These peoples are not all Arabs, and their societies differ greatly from one another. Conversely, some Arabs speak of the West as though it were a single country, a single culture, a single history. So, one cannot truly speak of a singular 'Western world' or 'Arab world'.
 
 <b>In your book, you revisit Syria’s history in order to help us understand why the country cannot simply be described as an Arab and Muslim state…</b>
 
