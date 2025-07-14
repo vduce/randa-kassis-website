@@ -17,7 +17,7 @@ Security remains elusive. The rule of law has disintegrated in many areas, repla
 
 The economic situation is equally dire. Most public employees have not received their salaries for months, and a large number of Alawites have been dismissed from their posts, fuelling resentment and further polarisation. Electricity remains a major crisis throughout the country, despite earlier promises from Qatar to offer support—promises that have amounted to little in practice.
 
-In a striking echo of Assad’s tactics, Jolani now presents himself as the only bulwark against “worse jihadists”, recycling the old narrative of “me or chaos”. This dangerous rhetoric risks replacing one form of tyranny with another, while the Syrian people continue to suffer under new masks of oppression.
+In a striking echo of Assad’s tactics, Jolani now presents himself as the only bulwark against 'worse jihadists', recycling the old narrative of 'me or chaos'. This dangerous rhetoric risks replacing one form of tyranny with another, while the Syrian people continue to suffer under new masks of oppression.
 
 **More specifically, how would you explain the current tensions between the Syrian government and the Druze communities, which are negotiating their integration into the Syrian state while seeking a degree of autonomy?**
 
@@ -47,9 +47,9 @@ Nomination of a single woman and three members of minority communities does not 
 
 This is not a transition. It is a rebranding of tyranny.
 
-**What is your opinion on the position of European chancelleries and institutions that seem to have legitimized the new Syrian government? Should Joulani’s past be ignored for the sake of supposed stability in Syria and a change in its relations with Iran and Russia?** 
+**What is your opinion on the position of European chancelleries and institutions that seem to have legitimised the new Syrian government? Should Joulani’s past be ignored for the sake of supposed stability in Syria and a change in its relations with Iran and Russia?** 
 
-The position of certain European chancelleries and institutions in extending implicit or explicit legitimacy to the so-called transitional government led by Jolani is not only short-sighted—it is morally and politically bankrupt. By engaging with a man who built his power through jihadist violence, led an al-Qaeda affiliate, and whose forces continue to perpetrate human rights violations, Europe is abandoning its own values under the pretext of “stability”.
+The position of certain European chancelleries and institutions in extending implicit or explicit legitimacy to the so-called transitional government led by Jolani is not only short-sighted—it is morally and politically bankrupt. By engaging with a man who built his power through jihadist violence, led an al-Qaeda affiliate, and whose forces continue to perpetrate human rights violations, Europe is abandoning its own values under the pretext of 'stability'.
 
 Furthermore, let us not be deceived by the name change. Al-Jolani, now presenting himself as Ahmed al-Sharaa, will revert to being al-Jolani the moment he tightens his grip on Syria. The threat he poses is not confined to Syria alone—he represents a broader danger to the entire region and to Europe itself. We need only recall how the Taliban treated women in Afghanistan, despite all their empty promises to the international community. The same pattern of deception is unfolding here.
 
@@ -63,7 +63,7 @@ No serious high-ranking American officer is going to advocate lifting sanctions 
 
 Yes, we may well see someone like Macron welcome him—another example of Western blindness disguised as pragmatism. But diplomatic smiles and carefully staged meetings won’t erase Jolani’s past or his present. Only a fool could believe this man represents peace, stability, or legitimate leadership for Syria. Even if some Western countries engage with Jolani through mediation by certain Gulf states, it will not result in any meaningful progress towards lifting sanctions or advancing reconstruction. We have already seen how Arab states, some European governments, and even members of parliament attempted to reintegrate Assad—without any success.
 
-**How do you see the future of Syria? Is it justified the concern about a possible Islamization of  the country? A return to military dictatorship?**
+**How do you see the future of Syria? Is it justified the concern about a possible Islamisation of  the country? A return to military dictatorship?**
 
 This is no longer a concern about the Islamisation of Syria—it is the Islamisation of Syria. At the centre of it stands Jolani, a jihadist rebranding himself as a statesman while entrenching a regime rooted in ideological extremism. He is not a transitional figure—he is Syria’s next dictator, and worse, a jihadist one.
 
