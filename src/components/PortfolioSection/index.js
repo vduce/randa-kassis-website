@@ -197,6 +197,7 @@ const PortfolioSection = ({ props }) => {
                                     src={image.Pimg}
                                     alt={image.caption}
                                   />
+                                  {image.caption && <div className="caption">{image.caption}</div>}
                                 </div>
                               </Link>
                             </div>
