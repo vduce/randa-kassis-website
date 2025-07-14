@@ -105,7 +105,7 @@ Whenever I find myself before such ruins, my memory and emotions are transported
 ![](100.jpeg)
 ![](101.jpeg)
 ![](102.jpeg)
-![](103.jpg)
-![](104.jpg)
+![](103.jpeg)
+![](104.jpeg)
 ![](105.jpg)
 <p></p>
