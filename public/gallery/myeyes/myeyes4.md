@@ -15,7 +15,7 @@ It was not transcendence I pursued, but the echo of human hands and hopes etched
 ![](9.JPG)
 ![](10.jpeg)
 ![](11.jpeg)
-![](12.jpeg)
+![](12.jpg)
 ![](13.JPG)
 ![](14.jpg)
 ![](15.jpg)
