@@ -29,6 +29,39 @@ const companionPics = [
   { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/168.JPG" },
 ];
 
+const throughMyEyesPics = [
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/intheirgaze/photos/3.jpeg",
+    caption: "In Their Gaze",
+    to: "/gallery/through-my-eyes/1",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/artinmotion/photos/11.jpeg",
+    caption: "Art in Motion",
+    to: "/gallery/through-my-eyes/2",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/testamentsinstone/photos/18.jpg",
+    caption: "Ruins That Speak",
+    to: "/gallery/through-my-eyes/3",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/testamentsinstone/photos/2.JPG",
+    caption: "Testaments in Stone",
+    to: "/gallery/through-my-eyes/4",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/pulseofearth/photos/88.jpg",
+    caption: "The Pulse of the Earth",
+    to: "/gallery/through-my-eyes/5",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/tracyofatrocity/photos/1.jpeg",
+    caption: "Traces of Atrocity",
+    to: "/gallery/through-my-eyes/6",
+  },
+];
+
 const PortfolioSection = ({ props }) => {
   const [activeTab, setActiveTab] = useState("1");
 
@@ -150,14 +183,19 @@ const PortfolioSection = ({ props }) => {
                     <div className="portfolio-grids gallery-container clearfix">
                       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
                         <Masonry columnsCount={3} gutter="15px">
-                          {props.map((image, i) => (
+                          {throughMyEyesPics.map((image, i) => (
                             <div className="grid" key={i}>
-                              <Link to="/gallery">
+                              <Link to={image.to}>
                                 <div className="img-holder">
-                                  <ReactFancyBox
-                                    thumbnail={image.Pimg}
-                                    image={image.Pimg}
-                                    style={{ width: "100%", display: "block" }}
+                                  <img
+                                    style={{
+                                      width: "100%",
+                                      display: "block",
+                                      minHeight: "320px",
+                                      objectFit: "cover",
+                                    }}
+                                    src={image.Pimg}
+                                    alt={image.caption}
                                   />
                                 </div>
                               </Link>
