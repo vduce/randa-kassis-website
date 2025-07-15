@@ -1,7 +1,8 @@
-<h4>In Their Gaze</h4>
+<h4>Testaments in Stone</h4>
 
-When we find ourselves immersed in nature—surrounded by animals and far from the bustling human world—our breath becomes lighter, and life more joyful. Watching a wild animal in its element, sensing the climax of a moment suspended between life and death, reminds us that existence is not a straight line, but a pulse: tense, fleeting, and fiercely present.  
-Even when we encounter stray dogs and cats, life seems to take on another meaning. Yet, sadly, we are forced to confront the reality that the human being is often a calamity from which life must continually emerge and defend itself.
+Every testament reflects human thought—whether it was Buddha, Brahma, Moses, Jesus, Muhammad, Ali, Zarathustra, countless unnamed shamans, or even an architect. Some reflect the need to conquer or to defend; others express the urge to believe, to heal, or to transcend. Yet all emerged from distinct environments that shaped their roles as cultural representatives or creators. Some were rebels, others political strategists or spiritual reformers. They carried with them the codes, fears, and aspirations of their time, seeking not only to articulate a vision of the world but to enclose humanity within a framework defined by their own civilisation. Through their teachings and legacies, they attempted to impose meaning, to stabilise the chaos of existence, and to anchor human life to a higher order—real or imagined.  
+As I stood before their monuments—temples, shrines, mosques, and sanctuaries—I did not seek the divine, but the trace of those who built them: the silent labour, the longing for permanence, and the profoundly human need to render belief in stone.  
+It was not transcendence I pursued, but the echo of human hands and hopes etched into the material of time.
 
 ![](1.jpg)
 ![](2.jpg)
@@ -77,50 +78,54 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
 ![](72.jpg)
 ![](73.jpg)
 ![](74.jpg)
+![](75.jpg)
+![](76.jpg)
+![](77.jpg)
+![](78.jpg)
+![](79.jpg)
+![](80.jpg)
+![](81.jpg)
+![](82.jpg)
+![](83.jpg)
+![](84.jpg)
+![](85.jpg)
+![](86.jpg)
+![](87.jpg)
+![](88.jpg)
+![](89.jpg)
+![](90.jpg)
+![](91.jpg)
+![](92.jpg)
+![](93.jpg)
+![](94.jpg)
+![](95.jpg)
+![](96.jpg)
+![](97.jpg)
+![](98.jpg)
+![](99.jpg)
+![](100.jpg)
+![](101.jpg)
+![](102.jpg)
+![](103.jpg)
+![](104.jpg)
+![](105.jpg)
+![](106.jpg)
+![](107.jpg)
+![](108.jpg)
+![](109.jpg)
+![](110.jpg)
+![](111.jpg)
+![](112.jpg)
+![](113.jpg)
+![](114.jpg)
+![](115.jpg)
+![](116.jpg)
+![](117.jpg)
+![](118.jpg)
+![](119.jpg)
+![](120.jpg)
+![](121.jpg)
+![](122.jpg)
+![](123.jpg)
+![](124.jpg)
 <p></p>
-
-
-<p></p>
-<center>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/4e7130d4-0fdc-45cd-a33f-e1fb8af55fa1?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/c88537c2-d387-4998-a1ab-b7588ba4a121?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/aa90691d-9bf7-4e29-8651-3512270228f7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/6ecd2056-2b6b-4339-ab20-9ecc46092b50?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/196bb6d5-0e5a-4fbd-a343-a4baa673abe7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/1e028d00-875b-4653-85e8-d0659ebe00e3?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-</center>  
-<p></p>	
