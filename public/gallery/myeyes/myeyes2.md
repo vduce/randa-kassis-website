@@ -154,11 +154,6 @@ Nothing remains but art—whether music, dance, or painting. In every era, we wi
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/f8228242-edd9-4d10-8fa0-91a63518151a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464704/8f5d3ebf-a590-4170-9f85-0904cab39455?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
