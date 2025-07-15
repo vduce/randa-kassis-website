@@ -118,7 +118,7 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464701/7190d7d0-4651-424f-9460-a2b8b26fc4f5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    src="https://iframe.mediadelivery.net/embed/464701/6a1376d6-eaab-42b9-a234-707b1663baf8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
@@ -127,159 +127,149 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 
 <p></p>
 <center>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464701/6a1376d6-eaab-42b9-a234-707b1663baf8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/96e5250b-fb10-49c7-9eca-0a23d5791e8c?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/dc559053-8966-4864-9052-b70cdb6d1e10?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/d46b743c-639e-4823-9ea4-563cbd35f9df?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/b8579405-f816-42bf-a49e-7b25daa75ea0?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/be78b47b-7025-4c8b-8042-9cc79fb6726a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/794aaa09-78cb-4c62-be0c-7b0d41986f2a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/2a72381a-adb2-48db-be06-f21634157a9e?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/2996cb2e-8613-4a3d-b760-0fef31231d6a?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/dcac2695-ff5d-4e43-9a7f-fbda6fe9c99b?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/7a6170b9-b1c5-4c39-abe9-7a228fe2e495?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/ab9ec7de-63b3-4a2d-83f3-6e1691711de9?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/75efb3e7-a67e-45bc-a3ca-072770709ffa?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/2aeaa675-ec36-43a4-a856-db87068fa262?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/18e6bf1e-cd89-483e-9303-34f097c7dfe2?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/9e127bf9-8978-4f43-9b61-3157ef44c589?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/a962523a-e3d4-4441-8251-9d08327878ec?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
+</center>  
+<p></p>	
+
+<p></p>
+<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/cf16c7b1-d269-4079-895d-1f4086bf2697?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-</center>  
-<p></p>	
-
-<p></p>
-<center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/896752c7-8f1d-4d0a-8109-a2a20bbaf47c?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464701/3597eb01-5153-4c9b-8370-010891dbefd8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
 </center>  
 <p></p>	
 
 <p></p>
 <center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/464701/3597eb01-5153-4c9b-8370-010891dbefd8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/c506c844-0818-47b1-8093-e20d209b44f5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
