@@ -94,22 +94,6 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 ![](211.JPG)
 <p></p>
 
-
-<p></p>
-<center>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464701/ccd49dcd-be52-435d-a309-ea772ee4d652?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464701/94b98d9f-ecbe-458c-9d31-1567cbb0bc7d?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-    loading="lazy" style="border:0;height:100%;width: 520px;"
-    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-</div>
-</center>  
-<p></p>	
-
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
@@ -272,6 +256,16 @@ Together, they were a universe—chaotic, noisy, opinionated, and occasionally d
 </div>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
     src="https://iframe.mediadelivery.net/embed/464701/c506c844-0818-47b1-8093-e20d209b44f5?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    loading="lazy" style="border:0;height:100%;width: 520px;"
+    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+</div>
+</center>  
+<p></p>
+
+<p></p>
+<center>
+<div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
+    src="https://iframe.mediadelivery.net/embed/464701/94b98d9f-ecbe-458c-9d31-1567cbb0bc7d?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
