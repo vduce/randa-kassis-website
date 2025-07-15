@@ -169,7 +169,7 @@ Perhaps some things are not meant to be recorded, only received—silently, humb
 ![](164.jpg)
 ![](165.JPG)
 ![](166.JPG)
-![](167.jpg)
+![](167.jpeg)
 ![](168.jpeg)
 ![](169.jpeg)
 ![](170.jpeg)
