@@ -15,7 +15,7 @@ const throughMyEyesSections = [
   {
     id: 1,
     title: "Through My Eyes",
-    sectionName: "intheirgaze/photos",
+    sectionName: "intheirgaze/compressed",
     markdownFile: "/gallery/myeyes/myeyes1.md",
   },
   {
@@ -27,19 +27,19 @@ const throughMyEyesSections = [
   {
     id: 3,
     title: "Through My Eyes",
-    sectionName: "ruinsthatspeaks/photos",
+    sectionName: "ruinsthatspeaks/compressed",
     markdownFile: "/gallery/myeyes/myeyes3.md",
   },
   {
     id: 4,
     title: "Through My Eyes",
-    sectionName: "testamentsinstone/photos",
+    sectionName: "testamentsinstone/compressed",
     markdownFile: "/gallery/myeyes/myeyes4.md",
   },
   {
     id: 5,
     title: "Through My Eyes",
-    sectionName: "pulseofearth/photos",
+    sectionName: "pulseofearth/compressed",
     markdownFile: "/gallery/myeyes/myeyes5.md",
   },
   {
@@ -47,24 +47,6 @@ const throughMyEyesSections = [
     title: "Through My Eyes",
     sectionName: "tracyofatrocity/photos",
     markdownFile: "/gallery/myeyes/myeyes6.md",
-  },
-  {
-    id: 7,
-    title: "Through My Eyes",
-    sectionName: "testamentsinstone/compressed",
-    markdownFile: "/gallery/myeyes/myeyes7.md",
-  },
-  {
-    id: 8,
-    title: "Through My Eyes",
-    sectionName: "pulseofearth/compressed",
-    markdownFile: "/gallery/myeyes/myeyes8.md",
-  },
-  {
-    id: 9,
-    title: "Through My Eyes",
-    sectionName: "pulseofearth/compressed",
-    markdownFile: "/gallery/myeyes/myeyes9.md",
   },
 ];
 
