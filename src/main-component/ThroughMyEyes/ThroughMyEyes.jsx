@@ -60,6 +60,12 @@ const throughMyEyesSections = [
     sectionName: "pulseofearth/compressed",
     markdownFile: "/gallery/myeyes/myeyes8.md",
   },
+  {
+    id: 9,
+    title: "Through My Eyes",
+    sectionName: "pulseofearth/compressed",
+    markdownFile: "/gallery/myeyes/myeyes9.md",
+  },
 ];
 
 const ThroughMyEyes = () => {
