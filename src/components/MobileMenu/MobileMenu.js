@@ -154,12 +154,124 @@ const menus = [
       {
         id: 2,
         title: "My Four-Pawed Companions",
-        link: "/gallery/my-four-pawed-companions/1",
+        subsubmenu: [
+          {
+            id: 1,
+            title: "Nestor",
+            link: "/gallery/my-four-pawed-companions/1",
+          },
+          {
+            id: 2,
+            title: "Bianca & Roxy",
+            link: "/gallery/my-four-pawed-companions/2",
+          },
+          {
+            id: 3,
+            title: "Socrates",
+            link: "/gallery/my-four-pawed-companions/3",
+          },
+          {
+            id: 4,
+            title: "Aristotle",
+            link: "/gallery/my-four-pawed-companions/4",
+          },
+          {
+            id: 5,
+            title: "Nietzsche",
+            link: "/gallery/my-four-pawed-companions/5",
+          },
+          {
+            id: 6,
+            title: "Damascius",
+            link: "/gallery/my-four-pawed-companions/6",
+          },
+          {
+            id: 7,
+            title: "The Litter of Nine",
+            link: "/gallery/my-four-pawed-companions/7",
+          },
+          {
+            id: 8,
+            title: "Countess Bonnie",
+            link: "/gallery/my-four-pawed-companions/8",
+          },
+          {
+            id: 9,
+            title: "Tequila—the resident",
+            link: "/gallery/my-four-pawed-companions/9",
+          },
+          {
+            id: 10,
+            title: "Ah, Agathe. Marvellous character",
+            link: "/gallery/my-four-pawed-companions/10",
+          },
+          {
+            id: 11,
+            title: "Grace—the household’s",
+            link: "/gallery/my-four-pawed-companions/11",
+          },
+          {
+            id: 12,
+            title: "Vodka, strategist—the war planner",
+            link: "/gallery/my-four-pawed-companions/12",
+          },
+          {
+            id: 13,
+            title: "Whitty—the last male",
+            link: "/gallery/my-four-pawed-companions/13",
+          },
+          {
+            id: 14,
+            title: "Winston and Solaia",
+            link: "/gallery/my-four-pawed-companions/14",
+          },
+          {
+            id: 15,
+            title: "Clyde",
+            link: "/gallery/my-four-pawed-companions/15",
+          },
+          {
+            id: 16,
+            title: "Greco and Bobbie",
+            link: "/gallery/my-four-pawed-companions/16",
+          },
+        ],
       },
       {
         id: 3,
         title: "Through My Eyes",
-        link: "/gallery/through-my-eyes/1",
+        subsubmenu: [
+          {
+            id: 1,
+            title: "In Their Gaze",
+            link: "/gallery/through-my-eyes/1",
+          },
+          {
+            id: 2,
+            title: "Art in Motion",
+            link: "/gallery/through-my-eyes/2",
+          },
+          {
+            id: 3,
+            title: "Ruins That Speak",
+            link: "/gallery/through-my-eyes/3",
+          },
+          {
+            id: 4,
+            title: "Testaments in Stone",
+            link: "/gallery/through-my-eyes/4",
+          },
+          {
+            id: 5,
+            title: "The Pulse of the Earth",
+            link: "/gallery/through-my-eyes/5",
+          },
+          {
+            id: 6,
+            title: "Traces of Atrocity",
+            link: "/gallery/through-my-eyes/6",
+          },
+        ],
       },
     ],
   },
@@ -171,7 +283,8 @@ const menus = [
 ];
 
 const MobileMenu = () => {
-  const [openId, setOpenId] = useState(0);
+  const [openMainId, setOpenMainId] = useState(0);
+  const [openSubId, setOpenSubId] = useState(0);
   const { menuActive, setMenuActive } = useMenu();
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
@@ -208,29 +321,62 @@ const MobileMenu = () => {
         <ul className="responsivemenu">
           {menus.map((item, mn) => {
             return (
-              <ListItem className={item.id === openId ? "active" : null} key={mn}>
+              <ListItem className={item.id === openMainId ? "active" : null} key={mn}>
                 {item.submenu ? (
                   <Fragment>
                     <p
-                      onClick={() => setOpenId(item.id === openId ? 0 : item.id)}
+                      onClick={() => setOpenMainId(item.id === openMainId ? 0 : item.id)}
                       style={{ marginBottom: "0px" }}
                     >
                       {item.title}
-                      <i className={item.id === openId ? "fa fa-angle-up" : "fa fa-angle-down"}></i>
+                      <i
+                        className={item.id === openMainId ? "fa fa-angle-up" : "fa fa-angle-down"}
+                      ></i>
                     </p>
-                    <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
+                    <Collapse in={item.id === openMainId} timeout="auto" unmountOnExit>
                       <List className="subMenu">
                         <Fragment>
                           {item.submenu.map((submenu, i) => {
                             return (
                               <ListItem key={i}>
-                                <NavLink
-                                  onClick={ClickHandler}
-                                  className="active"
-                                  to={submenu.link}
-                                >
-                                  {submenu.title}
-                                </NavLink>
+                                {submenu.subsubmenu ? (
+                                  <Fragment>
+                                    <p
+                                      onClick={() =>
+                                        setOpenSubId(submenu.id === openSubId ? 0 : submenu.id)
+                                      }
+                                      style={{ marginBottom: "0px" }}
+                                    >
+                                      {submenu.title}
+                                      <i
+                                        className={
+                                          submenu.id === openSubId
+                                            ? "fa fa-angle-up"
+                                            : "fa fa-angle-down"
+                                        }
+                                      ></i>
+                                    </p>
+                                    <Collapse
+                                      in={submenu.id === openSubId}
+                                      timeout="auto"
+                                      unmountOnExit
+                                    >
+                                      <List className="ps-4 pe-0">
+                                        {submenu.subsubmenu.map((subsubmenu, j) => (
+                                          <ListItem key={j} className="px-0">
+                                            <NavLink to={subsubmenu.link} onClick={ClickHandler}>
+                                              {subsubmenu.title}
+                                            </NavLink>
+                                          </ListItem>
+                                        ))}
+                                      </List>
+                                    </Collapse>
+                                  </Fragment>
+                                ) : (
+                                  <NavLink to={submenu.link} onClick={ClickHandler}>
+                                    {submenu.title}
+                                  </NavLink>
+                                )}
                               </ListItem>
                             );
                           })}
