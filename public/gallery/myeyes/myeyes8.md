@@ -1,4 +1,3 @@
-
 <h4>The Pulse of the Earth</h4>
 
 Each time I am overcome by the majesty of a landscape, I rush to capture it with my phone—as if framing it might preserve the feeling. But no lens can rival the eye, nor can technology translate wonder. The camera flattens what the soul perceives in full depth. Neither the beauty nor the sensation can be reproduced. What I feel in that moment—the pulse of the Earth—remains uncapturable, alive only in presence.  
