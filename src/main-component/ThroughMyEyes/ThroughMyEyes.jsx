@@ -15,38 +15,50 @@ const throughMyEyesSections = [
   {
     id: 1,
     title: "Through My Eyes",
-    sectionName: "intheirgaze",
+    sectionName: "intheirgaze/photos",
     markdownFile: "/gallery/myeyes/myeyes1.md",
   },
   {
     id: 2,
     title: "Through My Eyes",
-    sectionName: "artinmotion",
+    sectionName: "artinmotion/photos",
     markdownFile: "/gallery/myeyes/myeyes2.md",
   },
   {
     id: 3,
     title: "Through My Eyes",
-    sectionName: "ruinsthatspeaks",
+    sectionName: "ruinsthatspeaks/photos",
     markdownFile: "/gallery/myeyes/myeyes3.md",
   },
   {
     id: 4,
     title: "Through My Eyes",
-    sectionName: "testamentsinstone",
+    sectionName: "testamentsinstone/photos",
     markdownFile: "/gallery/myeyes/myeyes4.md",
   },
   {
     id: 5,
     title: "Through My Eyes",
-    sectionName: "pulseofearth",
+    sectionName: "pulseofearth/photos",
     markdownFile: "/gallery/myeyes/myeyes5.md",
   },
   {
     id: 6,
     title: "Through My Eyes",
-    sectionName: "tracyofatrocity",
+    sectionName: "tracyofatrocity/photos",
     markdownFile: "/gallery/myeyes/myeyes6.md",
+  },
+  {
+    id: 7,
+    title: "Through My Eyes",
+    sectionName: "testamentsinstone/compressed",
+    markdownFile: "/gallery/myeyes/myeyes7.md",
+  },
+  {
+    id: 8,
+    title: "Through My Eyes",
+    sectionName: "pulseofearth/compressed",
+    markdownFile: "/gallery/myeyes/myeyes8.md",
   },
 ];
 
@@ -156,7 +168,7 @@ const ThroughMyEyes = () => {
       }
 
       const currentSectionname = sections[currentPage]?.sectionName;
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/${currentSectionname}/photos/${src}`;
+      const imageSrc = `https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/${currentSectionname}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
