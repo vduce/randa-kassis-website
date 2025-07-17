@@ -1,4 +1,4 @@
-<h4>“Secular Federalism” Is the Key to Syria’s Stability</h4>
+<h4>'Secular Federalism' Is the Key to Syria’s Stability</h4>
 
 Al Dostor  
 22 December 2024  
