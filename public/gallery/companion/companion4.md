@@ -14,7 +14,7 @@ Once in Italy, Aristotle asserted himself without hesitation, even among our dog
 
 He was mischievous, full of life, and had a knack for winning hearts. Everyone who met him wanted to adopt him. But he was ours–undeniably, unapologetically part of our eccentric family.
 
-And then, as life so often reminds us, joy is fleeting. He vanished – disappeared fifteen days before Bianca did, while we were away – and was never found.
+And then, as life so often reminds us, joy is fleeting. He vanished–disappeared fifteen days before Bianca did, while we were away – and was never found.
 
 ![](40.JPG)
 ![](41.JPG)
