@@ -1,6 +1,6 @@
 <h4>Nestor</h4>
 
-Born January 1997 – Died November 2013
+Born January 1997–Died November 2013
 
 He came into this world the same year as my daughter, and I still remember how utterly depressed he looked after she was born—as if he sensed competition and immediately went on a hunger strike. The vet handed me syringes and medication, and off I went, force-feeding a dramatic furball with all the enthusiasm of a Victorian wet nurse.
 
