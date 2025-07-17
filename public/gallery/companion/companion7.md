@@ -2,11 +2,11 @@
 
 Born May 2016
 
-As is customary in our absence, the universe decided to deliver chaos straight to our gate. This time, it came in the form of nine puppies, barely a month old, mysteriously deposited between our home and the  residence of the former Greek king—presumably by someone who thought, “Well, they already have a zoo, what’s nine more?”
+As is customary in our absence, the universe decided to deliver chaos straight to our gate. This time, it came in the form of nine puppies, barely a month old, mysteriously deposited between our home and the  residence of the former Greek king—presumably by someone who thought, 'Well, they already have a zoo, what’s nine more?'
 
 No one claimed them, of course. No one _except_ us. Naturally.
 
-We received the call while away: “There’s a small situation at your gate.” Upon returning, we were greeted not by a situation but by an ecstatic, four-legged stampede—nine balls of fur bouncing in every direction, biting ankles with joy, and ambushing anything that moved. It was less a litter, more a coordinated invasion.
+We received the call while away: 'There’s a small situation at your gate'. Upon returning, we were greeted not by a situation but by an ecstatic, four-legged stampede—nine balls of fur bouncing in every direction, biting ankles with joy, and ambushing anything that moved. It was less a litter, more a coordinated invasion.
 
 We decided to keep them—temporarily, we said, as one does when staring down a wall of puppy eyes. But even we had to admit that eleven dogs and four cats might just be one dog short of an intervention.
 
