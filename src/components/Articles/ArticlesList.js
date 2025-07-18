@@ -29,6 +29,8 @@ const ArticlesList = (props) => {
       );
       setArticleContents(fetchedArticles);
     };
+    // scroll to top on component mount
+    window.scrollTo(0, 0);
 
     fetchArticles();
   }, []);
