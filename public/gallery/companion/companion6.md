@@ -1,6 +1,6 @@
 <h4>Damascius</h4>
 
-Adopted in March 2016 – Died May 2021
+Adopted in March 2016–Died May 2021
 
 Some choices in life arise not from deliberation, but from instinct—as if shaped by an unseen thread of meaning. So it was when I named an old, skeletal, ailing dog Damascius. The name seemed to emerge from nowhere, and yet, in hindsight, it could not have been more fitting.
 

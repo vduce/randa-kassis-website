@@ -1,6 +1,6 @@
 <h4>Nietzsche</h4>
 
-Adopted in November 2015 – Died in September 2022
+Adopted in November 2015–Died in September 2022
 
 A few months after we arrived in Greece, I began encountering several stray dogs. Each time I returned home, I searched for them in the streets and feed them.
 

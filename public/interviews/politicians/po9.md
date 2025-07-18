@@ -5,15 +5,15 @@ Ria Novosti
 
 Syrians Believe the Leader of the Armed Opposition Will Not Share Power The Opposition in Syria Doubts al-Joulani’s Willingness to Share Power
 
-MOSCOW, 12 Dec – RIA Novosti. The leader of the armed opposition in Syria, Ahmad al-Sharaa (better known as Abu Mohammad al-Joulani), is unlikely to allow the political opposition to assume a significant role in the governance of the country, said Randa Kassis, head of the Syrian opposition “Astana Platform”, in a statement to RIA Novosti.
+MOSCOW, 12 Dec – RIA Novosti. The leader of the armed opposition in Syria, Ahmad al-Sharaa (better known as Abu Mohammad al-Joulani), is unlikely to allow the political opposition to assume a significant role in the governance of the country, said Randa Kassis, head of the Syrian opposition 'Astana Platform', in a statement to RIA Novosti.
 
-“At present, al-Joulani is capitalising on the situation by appointing his own officials based on an established organisational structure and his administrative experience in \[Idlib province – ed.\]. However, there is little chance that the political opposition—whether based in Istanbul or represented by other platforms such as ours—will be granted any meaningful role,” Kassis stated.
+'At present, al-Joulani is capitalising on the situation by appointing his own officials based on an established organisational structure and his administrative experience in \[Idlib province – ed.\]. However, there is little chance that the political opposition—whether based in Istanbul or represented by other platforms such as ours—will be granted any meaningful role', Kassis stated.
 
-According to the opposition figure, engaging with al-Sharaa is proving rather difficult, primarily due to his past. “It remains to be seen in practice whether he has genuinely become a secular figure—especially given that he now controls territories far larger in scale than Idlib,” she added.
+According to the opposition figure, engaging with al-Sharaa is proving rather difficult, primarily due to his past. 'It remains to be seen in practice whether he has genuinely become a secular figure—especially given that he now controls territories far larger in scale than Idlib', she added.
 
 Kassis emphasised the importance of the external political opposition remaining open to dialogue, albeit with heightened caution.
 
-“Al-Joulani may make certain concessions, such as dropping the requirement for women to wear the hijab, but the extent of his pragmatism is still in question. The fall of Bashar al-Assad gave rise to hope, yet the challenges Syria faces in the coming period are immense,” Kassis explained.
+'Al-Joulani may make certain concessions, such as dropping the requirement for women to wear the hijab, but the extent of his pragmatism is still in question. The fall of Bashar al-Assad gave rise to hope, yet the challenges Syria faces in the coming period are immense', Kassis explained.
 
 The head of the Astana opposition platform called on all opposition forces to convene a general assembly to establish a unified vision for Syria’s future, including proposed amendments to the new constitution. In her view, such a gathering should mark the first step towards a comprehensive political transition.
 

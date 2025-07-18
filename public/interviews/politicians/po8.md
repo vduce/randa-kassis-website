@@ -1,4 +1,4 @@
-<h4>EXCLUSIVE INTERVIEW – Randa Kassis: “Federalism is the key to preserving Syria’s pluralism and unity”</h4>
+<h4>EXCLUSIVE INTERVIEW – Randa Kassis: 'Federalism is the key to preserving Syria’s pluralism and unity'</h4>
 
 Le Diplomate  
 13 December 2024  
@@ -18,13 +18,13 @@ Joulani struck at the ideal moment: Iran and its proxy Hezbollah were in a weake
 
 Bashar informed few within his family of his departure. His brother Maher, who only discovered the escape belatedly, is believed to have fled—likely to Iraq—possibly accompanied by 2,000 loyal troops to continue, among other things, his Captagon trafficking. It is uncertain whether he remains there. The other two brothers died some time ago, and their sister Bouchra resettled in Dubai following the mysterious death of her husband. Soulaymane Hilal al-Assad, a cousin, was reportedly hanged in public on Monday in an Alawite town. Numerous businessmen and Syrian officials, including Ali Mamlouk, fled to Beirut. The Makhlouf family also escaped to Lebanon, though Rami’s brother was killed during a shootout on the Lebanese border. It appears his mother and one of his brothers were also wounded. As for Samer al-Assad, he committed suicide while under siege.
 
-<b>Is it true that HTS has carried out summary executions, despite its initial claims of “moderation” after taking power with minimal resistance?</b>
+<b>Is it true that HTS has carried out summary executions, despite its initial claims of 'moderation' after taking power with minimal resistance?</b>
 
 Yes, summary executions have indeed occurred in Hama in recent days, although we do not yet have the full picture. In certain Alawite villages, fighters stormed in and disarmed residents. I am in contact with individuals on the ground via Elie Afaq, secretary-general of the Movement for a Pluralistic Society, which I chair. They fear a massacre, fully aware that Abu Mohammad al-Joulani cannot entirely control all his fighters—many of whom are hardline jihadists.
 
 <b>Have the Israelis taken steps to expand their territory, given they have recently seized positions in the Syrian part of the Golan Heights, Joulani’s place of origin? Who are HTS’s main internal and external enemies today?</b>
 
-Israel has already used the situation to destroy remnants of the old Syrian army’s arsenal and has extended its borders into Syrian territory, asserting that this expansion is temporary. I remain highly sceptical of that claim, as what is labelled “temporary” may well become permanent, depending on how the international community responds and how regional dynamics evolve. HTS currently lacks the capability to push Israeli forces out of the Golan. I fear that Israel will annex additional territory under the pretext of ensuring its own security. Joulani will soon face formidable adversaries, including Russia, the United States, and Iran.
+Israel has already used the situation to destroy remnants of the old Syrian army’s arsenal and has extended its borders into Syrian territory, asserting that this expansion is temporary. I remain highly sceptical of that claim, as what is labelled 'temporary' may well become permanent, depending on how the international community responds and how regional dynamics evolve. HTS currently lacks the capability to push Israeli forces out of the Golan. I fear that Israel will annex additional territory under the pretext of ensuring its own security. Joulani will soon face formidable adversaries, including Russia, the United States, and Iran.
 
 <b>Can we assess the relative military strength of the HTS and ANS coalitions?</b>
 
