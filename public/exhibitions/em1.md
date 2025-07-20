@@ -57,7 +57,7 @@ In April 1996, I embarked on a different kind of experience. Alongside a directo
 </div>
 <br />
 
-I was incredibly active at the time, as if driven by an instinctive feeling that I would soon be distanced from my paintings and artistic lifestyle.” I organised another exhibition in
+I was incredibly active at the time, as if driven by an instinctive feeling that I would soon be distanced from my paintings and artistic 'lifestyle'. I organised another exhibition in
 Damascus from 3 to 13 October, under the patronage of the Syrian Minister of Information, Mohamad Salman.
 
 ![](33.jpg)
