@@ -16,7 +16,7 @@ The first collateral consequence of this looting and destruction is the erasure 
 
 We must acknowledge the fundamental importance of preserving our heritage. It can offer Syrians a means of transcending their suffering and rebuilding a national identity rooted in the richness of their historical legacy. For this reason, the restoration of Syria’s cultural heritage must be made a priority the moment a genuine political process is underway.
 
-<b>In 2017, the UN Security Council unanimously adopted a resolution to enhance protections for endangered cultural sites in conflict zones. The resolution noted that attacks on cultural or religious heritage “may constitute, in some circumstances and under international law, war crimes.” What is your view of this resolution and its limitations?</b>
+<b>In 2017, the UN Security Council unanimously adopted a resolution to enhance protections for endangered cultural sites in conflict zones. The resolution noted that attacks on cultural or religious heritage 'may constitute, in some circumstances and under international law, war crimes'. What is your view of this resolution and its limitations?</b>
 
 The resolution is undoubtedly significant, yet it remains limited in both scope and impact. We are all aware that very few artefacts will ever be recovered unless states demonstrate a genuine commitment to combating this illegal trade. Such commitment must include the imposition of severe penalties on traffickers and buyers, and, above all, intensified efforts to expose the concealment of antiquities and to dismantle this market within Europe.
 
