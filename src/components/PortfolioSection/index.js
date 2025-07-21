@@ -12,12 +12,42 @@ const ClickHandler = () => {
 };
 
 const arenaPics = [
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/1.JPG" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/2.JPG" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpeg" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/8.JPG" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/13.JPG" },
-  { Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/5.JPG" },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/1.JPG",
+    caption:
+      "Randa Kassis attending the third meeting of the Group of Friends of the Syrian People, alongside President François Hollande and Foreign Minister Laurent Fabius.",
+    to: "/gallery/in-the-arena/1",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/2.JPG",
+    caption:
+      "Randa Kassis with Ugandan President Yoweri Museveni, First Lady Janet Museveni, and the CPFA delegation led by Fabien Baussart, during an official meeting in Uganda held amid the COVID-19 pandemic.",
+    to: "/gallery/in-the-arena/2",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpeg",
+    caption:
+      "Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.",
+    to: "/gallery/in-the-arena/6",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/8.JPG",
+    caption:
+      "Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.",
+    to: "/gallery/in-the-arena/8",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/13.JPG",
+    caption:
+      "Randa Kassis and Fabien Baussart taking part in high-level discussions alongside President Nursultan Nazarbayev, and Nobel Peace Laureates.",
+    to: "/gallery/in-the-arena/13",
+  },
+  {
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/5.JPG",
+    caption:
+      "Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.",
+    to: "/gallery/in-the-arena/5",
+  },
 ];
 
 const companionPics = [
@@ -129,8 +159,9 @@ const PortfolioSection = ({ props }) => {
                                       objectFit: "cover",
                                     }}
                                     src={image.Pimg}
-                                    alt={`Gallery Image ${i + 1}`}
+                                    alt={image.caption}
                                   />
+                                  {image.caption && <div className="caption">{image.caption}</div>}
                                 </div>
                               </Link>
                             </div>
