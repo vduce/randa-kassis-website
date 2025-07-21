@@ -6,7 +6,7 @@ Published in Al-Hiwar al-Mutamaddin
 18 June 2008
 
 
-Arab societies appear as immovable and unchanging entities—resistant to transformation, retreating into isolation, intolerant of the “other”, and unwilling to engage with difference. This results in a persistent tendency to draw nationalist distinctions, a division between “us” and “them”. Ironically, many Arab societies apply this same logic of exclusion and discrimination internally, turning it against their own people.
+Arab societies appear as immovable and unchanging entities—resistant to transformation, retreating into isolation, intolerant of the 'other', and unwilling to engage with difference. This results in a persistent tendency to draw nationalist distinctions, a division between 'us' and 'them'. Ironically, many Arab societies apply this same logic of exclusion and discrimination internally, turning it against their own people.
 
 These societies are, in effect, in a coma. Their capacity for production and motion is paralysed—stifled by the repeated traumas of historical defeat over the past centuries. The collapse of certain political ideologies has only deepened this paralysis, giving rise instead to a form of religious and moral hysteria. Efforts to adapt to a new world order are being carried out with the same comatose mindset. One could say these societies are in a pre-conscious state, akin to a child attempting to outgrow infancy. It is at this very moment that old narratives of past glories and humiliations resurface and reassert themselves in the collective psyche. Rather than confronting the disappointments of history, these societies attempt to conceal them beneath the carpet of the unconscious.
 
