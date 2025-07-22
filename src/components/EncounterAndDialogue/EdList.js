@@ -98,18 +98,10 @@ const EdList = (props) => {
           <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>
             <div className="wpo-blog-content">
               {currentEds.map((currentEd, index) => (
-                <div
-                  className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
-                  key={index}
-                >
-                  <div
-                    className="entry-details"
-                    style={{ display: "flex", flexDirection: "column" }}
-                  >
+                <div className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg" key={index}>
+                  <div className="entry-details" style={{ display: "flex", flexDirection: "column" }}>
                     <h5 dangerouslySetInnerHTML={{ __html: currentEd.title }}></h5>
-                    <label style={{ fontSize: "14px", color: "#848892" }}>
-                      {currentEd.publishedIn}{" "}
-                    </label>
+                    <label style={{ fontSize: "14px", color: "#848892" }}>{currentEd.publishedIn} </label>
                     {/* <br /> */}
                     <label
                       style={{
@@ -143,18 +135,10 @@ const EdList = (props) => {
               ))}
 
               {/* Pagination */}
-              <div
-                className="pagination-wrapper pagination-wrapper-left"
-                style={paginationWrapperStyles}
-              >
+              <div className="pagination-wrapper pagination-wrapper-left" style={paginationWrapperStyles}>
                 <ul style={paginationStyles}>
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Previous"
-                      onClick={() => currentPage > 1 && paginate(currentPage - 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Previous" onClick={() => currentPage > 1 && paginate(currentPage - 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-left"></i>
                     </Link>
                   </li>
@@ -163,23 +147,14 @@ const EdList = (props) => {
                       <Link
                         to="#"
                         onClick={() => paginate(number)}
-                        style={
-                          currentPage === number
-                            ? { ...pageLinkStyles, ...activePageStyles }
-                            : pageLinkStyles
-                        }
+                        style={currentPage === number ? { ...pageLinkStyles, ...activePageStyles } : pageLinkStyles}
                       >
                         {number}
                       </Link>
                     </li>
                   ))}
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Next"
-                      onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Next" onClick={() => currentPage < totalPages && paginate(currentPage + 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-right"></i>
                     </Link>
                   </li>

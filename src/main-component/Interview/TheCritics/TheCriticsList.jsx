@@ -41,8 +41,12 @@ const TheCriticsList = (props) => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(articleContents.length / postsPerPage);
@@ -98,18 +102,10 @@ const TheCriticsList = (props) => {
           <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>
             <div className="wpo-blog-content">
               {currentArticles.map((article, index) => (
-                <div
-                  className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
-                  key={index}
-                >
-                  <div
-                    className="entry-details"
-                    style={{ display: "flex", flexDirection: "column" }}
-                  >
+                <div className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg" key={index}>
+                  <div className="entry-details" style={{ display: "flex", flexDirection: "column" }}>
                     <h5 dangerouslySetInnerHTML={{ __html: article.title }}></h5>
-                    <label style={{ fontSize: "14px", color: "#848892" }}>
-                      {article.publishedIn}{" "}
-                    </label>
+                    <label style={{ fontSize: "14px", color: "#848892" }}>{article.publishedIn} </label>
                     {/* <br /> */}
                     <label
                       style={{
@@ -129,12 +125,7 @@ const TheCriticsList = (props) => {
                       ></span>
                       {article.description.length > 200 && "..."}
                     </p>
-                    <Link
-                      onClick={ClickHandler}
-                      to={`/critics-single/${article.id}`}
-                      className="read-more"
-                      style={{ fontSize: "15px" }}
-                    >
+                    <Link onClick={ClickHandler} to={`/critics-single/${article.id}`} className="read-more" style={{ fontSize: "15px" }}>
                       Read more...
                     </Link>
                   </div>
@@ -142,18 +133,10 @@ const TheCriticsList = (props) => {
               ))}
 
               {/* Pagination */}
-              <div
-                className="pagination-wrapper pagination-wrapper-left"
-                style={paginationWrapperStyles}
-              >
+              <div className="pagination-wrapper pagination-wrapper-left" style={paginationWrapperStyles}>
                 <ul style={paginationStyles}>
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Previous"
-                      onClick={() => currentPage > 1 && paginate(currentPage - 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Previous" onClick={() => currentPage > 1 && paginate(currentPage - 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-left"></i>
                     </Link>
                   </li>
@@ -162,23 +145,14 @@ const TheCriticsList = (props) => {
                       <Link
                         to="#"
                         onClick={() => paginate(number)}
-                        style={
-                          currentPage === number
-                            ? { ...pageLinkStyles, ...activePageStyles }
-                            : pageLinkStyles
-                        }
+                        style={currentPage === number ? { ...pageLinkStyles, ...activePageStyles } : pageLinkStyles}
                       >
                         {number}
                       </Link>
                     </li>
                   ))}
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Next"
-                      onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Next" onClick={() => currentPage < totalPages && paginate(currentPage + 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-right"></i>
                     </Link>
                   </li>
