@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import critics from "../../../api/essayistandcritics.json"
+import critics from "../../../api/essayistandcritics.json";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -39,7 +39,10 @@ const TheCriticsList = (props) => {
   const currentArticles = articleContents.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(articleContents.length / postsPerPage);
