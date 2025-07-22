@@ -44,14 +44,25 @@
   object-fit: cover;
   display: block;
   border-radius: 4px;
+}
 
-  @media screen and (max-width: 767px) and (min-width: 601px) {
+@media screen and (max-width: 767px) and (min-width: 601px) {
+  .gallery-image {
     max-width: 447px;
-  };
+  }
+}
 
-  @media screen and (max-width: 991px) and (min-width: 768px) {
-    max-width: 317px;
-  };
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .gallery-image {
+    max-width: 296px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .caption {

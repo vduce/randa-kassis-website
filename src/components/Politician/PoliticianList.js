@@ -35,7 +35,10 @@ const PoliticianList = (props) => {
   const currentPoliticians = PoliticianContents.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(PoliticianContents.length / postsPerPage);

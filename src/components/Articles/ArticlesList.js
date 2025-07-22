@@ -29,6 +29,8 @@ const ArticlesList = (props) => {
       );
       setArticleContents(fetchedArticles);
     };
+    // scroll to top on component mount
+    window.scrollTo(0, 0);
 
     fetchArticles();
   }, []);
@@ -39,7 +41,10 @@ const ArticlesList = (props) => {
   const currentArticles = articleContents.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(articleContents.length / postsPerPage);
