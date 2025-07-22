@@ -8,7 +8,7 @@ Even now, she’s the only one in the house with a seemingly inexhaustible suppl
 
 Tequila believes we belong to her. And if she wants something—be it food, attention, or a change in the cosmic order—she will whinge. Not for a minute. Not for ten. But for a full hour, complete with sighs, grumbles, and the occasional dramatic stare.
 
-Once upon a time, back in Italy, she was brilliant at agility—fast, focused, and quite possibly convinced she was auditioning for a spy film. But then came the great disruption: Covid lockdown, six months of daycare closure, and with it, a noticeable decline in her enthusiasm for showbiz. Since then, she’s declared agility “a bit passé” and has opted for a more casual approach to movement.
+Once upon a time, back in Italy, she was brilliant at agility—fast, focused, and quite possibly convinced she was auditioning for a spy film. But then came the great disruption: Covid lockdown, six months of daycare closure, and with it, a noticeable decline in her enthusiasm for showbiz. Since then, she’s declared agility 'a bit passé' and has opted for a more casual approach to movement.
 
 From time to time, we wonder whether we should have chosen different names—ones more suited to each character. But with Tequila, we got it just right. Like the drink, she hits hard, lingers long, and leaves everyone slightly dizzy but oddly charmed. No doubt about it—she earned her name. And much like her namesake, she’s not for the faint-hearted.
 
