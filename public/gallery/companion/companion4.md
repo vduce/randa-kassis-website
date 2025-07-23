@@ -1,6 +1,6 @@
 <h4>Aristotle</h4>
 
-Adopted in October 2015—she sadly disappeared two weeks before Bianca’s vanishing in 2021.
+Adopted in October 2015—he sadly disappeared two weeks before Bianca’s vanishing in 2021.
 
 It all began on the island of Spetses, at a seaside taverna where the air was as crisp as it was kind. There we came across a mother cat and her three kittens, lounging about as if they ran the place. One of the kittens–worryingly thin and rather unkempt–jumped onto Fabien’s lap and made himself perfectly comfortable. Strangely, he had no interest in food, which led us to wonder whether he belonged to the restaurant.
 
