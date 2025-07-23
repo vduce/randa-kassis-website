@@ -297,12 +297,7 @@ const MobileMenu = () => {
   useEffect(() => {
     if (!menuActive) return;
     const handleClickOutside = (e) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(e.target) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(e.target)
-      ) {
+      if (menuRef.current && !menuRef.current.contains(e.target) && buttonRef.current && !buttonRef.current.contains(e.target)) {
         setMenuActive(false);
       }
     };
@@ -324,14 +319,9 @@ const MobileMenu = () => {
               <ListItem className={item.id === openMainId ? "active" : null} key={mn}>
                 {item.submenu ? (
                   <Fragment>
-                    <p
-                      onClick={() => setOpenMainId(item.id === openMainId ? 0 : item.id)}
-                      style={{ marginBottom: "0px" }}
-                    >
+                    <p onClick={() => setOpenMainId(item.id === openMainId ? 0 : item.id)} style={{ marginBottom: "0px" }}>
                       {item.title}
-                      <i
-                        className={item.id === openMainId ? "fa fa-angle-up" : "fa fa-angle-down"}
-                      ></i>
+                      <i className={item.id === openMainId ? "fa fa-angle-up" : "fa fa-angle-down"}></i>
                     </p>
                     <Collapse in={item.id === openMainId} timeout="auto" unmountOnExit>
                       <List className="subMenu">
@@ -341,26 +331,11 @@ const MobileMenu = () => {
                               <ListItem key={i}>
                                 {submenu.subsubmenu ? (
                                   <Fragment>
-                                    <p
-                                      onClick={() =>
-                                        setOpenSubId(submenu.id === openSubId ? 0 : submenu.id)
-                                      }
-                                      style={{ marginBottom: "0px" }}
-                                    >
+                                    <p onClick={() => setOpenSubId(submenu.id === openSubId ? 0 : submenu.id)} style={{ marginBottom: "0px" }}>
                                       {submenu.title}
-                                      <i
-                                        className={
-                                          submenu.id === openSubId
-                                            ? "fa fa-angle-up"
-                                            : "fa fa-angle-down"
-                                        }
-                                      ></i>
+                                      <i className={submenu.id === openSubId ? "fa fa-angle-up" : "fa fa-angle-down"}></i>
                                     </p>
-                                    <Collapse
-                                      in={submenu.id === openSubId}
-                                      timeout="auto"
-                                      unmountOnExit
-                                    >
+                                    <Collapse in={submenu.id === openSubId} timeout="auto" unmountOnExit>
                                       <List className="ps-4 pe-0">
                                         {submenu.subsubmenu.map((subsubmenu, j) => (
                                           <ListItem key={j} className="px-0">
@@ -385,11 +360,7 @@ const MobileMenu = () => {
                     </Collapse>
                   </Fragment>
                 ) : (
-                  <NavLink
-                    className="active"
-                    to={item.link}
-                    onClick={() => setMenuActive(!menuActive)}
-                  >
+                  <NavLink className="active" to={item.link} onClick={() => setMenuActive(!menuActive)}>
                     {item.title}
                   </NavLink>
                 )}
