@@ -26,14 +26,12 @@ const arenaPics = [
   },
   {
     Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpeg",
-    caption:
-      "Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.",
+    caption: "Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.",
     to: "/gallery/in-the-arena/6",
   },
   {
     Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/8.JPG",
-    caption:
-      "Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.",
+    caption: "Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.",
     to: "/gallery/in-the-arena/8",
   },
   {
@@ -44,8 +42,7 @@ const arenaPics = [
   },
   {
     Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/5.JPG",
-    caption:
-      "Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.",
+    caption: "Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.",
     to: "/gallery/in-the-arena/5",
   },
 ];
@@ -99,10 +96,7 @@ const PortfolioSection = ({ props }) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
   return (
-    <section
-      className={`gallery-section wpo-portfolio-section section-padding1 wpo-campaign-area-s4 mt-4`}
-      id="gallery"
-    >
+    <section className={`gallery-section wpo-portfolio-section section-padding1 wpo-campaign-area-s4 mt-4`} id="gallery">
       <div className="container">
         <div className="wpo-campaign-wrap-gallery">
           <Nav tabs>
@@ -130,6 +124,7 @@ const PortfolioSection = ({ props }) => {
             <NavItem>
               <NavLink
                 className={classnames({ active: activeTab === "3" })}
+                Interviews
                 onClick={() => {
                   toggle("3");
                 }}
@@ -240,8 +235,18 @@ const PortfolioSection = ({ props }) => {
                 </div>
               </div>
             </TabPane>
+            <div className="text-center">
+              <Link
+                onClick={ClickHandler}
+                to={`/gallery/${activeTab === "3" ? "through-my-eyes/1" : activeTab === "2" ? "my-four-pawed-companions/1" : "in-the-arena/1"}`}
+                className="more"
+              >
+                For more... continue
+              </Link>
+            </div>
           </TabContent>
         </div>
+        <div></div>
       </div>
     </section>
   );
