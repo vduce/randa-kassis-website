@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Logo from "../../images/logo.png";
-import { useNavigate } from "react-router-dom";
-import { useMenu } from "../../context/MenuContext";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import Collapse from "@material-ui/core/Collapse";
 
 const Header = (props) => {
-  const navigate = useNavigate();
-  const { menuActive, setMenuActive } = useMenu();
+  const [openSubId, setOpenSubId] = useState(0);
 
   const storyList = {
     1: "Prologue",
@@ -33,18 +33,138 @@ const Header = (props) => {
   };
 
   const galleryList = {
-    "in-the-arena/1": "In the Arena",
-    "my-four-pawed-companions/1": "My Four-Pawed Companions",
-    "through-my-eyes/1": "Through My Eyes",
+    "in-the-arena/1": {
+      id: 1,
+      title: "In the Arena",
+      submenu: null,
+    },
+    "my-four-pawed-companions/1": {
+      id: 2,
+      title: "My Four-Pawed Companions",
+      submenu: [
+        {
+          id: 1,
+          title: "Nestor",
+          link: "/gallery/my-four-pawed-companions/1",
+        },
+        {
+          id: 2,
+          title: "Bianca & Roxy",
+          link: "/gallery/my-four-pawed-companions/2",
+        },
+        {
+          id: 3,
+          title: "Socrates",
+          link: "/gallery/my-four-pawed-companions/3",
+        },
+        {
+          id: 4,
+          title: "Aristotle",
+          link: "/gallery/my-four-pawed-companions/4",
+        },
+        {
+          id: 5,
+          title: "Nietzsche",
+          link: "/gallery/my-four-pawed-companions/5",
+        },
+        {
+          id: 6,
+          title: "Damascius",
+          link: "/gallery/my-four-pawed-companions/6",
+        },
+        {
+          id: 7,
+          title: "The Litter of Nine",
+          link: "/gallery/my-four-pawed-companions/7",
+        },
+        {
+          id: 8,
+          title: "Countess Bonnie",
+          link: "/gallery/my-four-pawed-companions/8",
+        },
+        {
+          id: 9,
+          title: "Tequila—the resident",
+          link: "/gallery/my-four-pawed-companions/9",
+        },
+        {
+          id: 10,
+          title: "Ah, Agathe. Marvellous character",
+          link: "/gallery/my-four-pawed-companions/10",
+        },
+        {
+          id: 11,
+          title: "Grace—the household’s",
+          link: "/gallery/my-four-pawed-companions/11",
+        },
+        {
+          id: 12,
+          title: "Vodka, strategist—the war planner",
+          link: "/gallery/my-four-pawed-companions/12",
+        },
+        {
+          id: 13,
+          title: "Whitty—the last male",
+          link: "/gallery/my-four-pawed-companions/13",
+        },
+        {
+          id: 14,
+          title: "Winston and Solaia",
+          link: "/gallery/my-four-pawed-companions/14",
+        },
+        {
+          id: 15,
+          title: "Clyde",
+          link: "/gallery/my-four-pawed-companions/15",
+        },
+        {
+          id: 16,
+          title: "Greco and Bobbie",
+          link: "/gallery/my-four-pawed-companions/16",
+        },
+      ],
+    },
+    "through-my-eyes/1": {
+      id: 3,
+      title: "Through My Eyes",
+      submenu: [
+        {
+          id: 1,
+          title: "In Their Gaze",
+          link: "/gallery/through-my-eyes/1",
+        },
+        {
+          id: 2,
+          title: "Art in Motion",
+          link: "/gallery/through-my-eyes/2",
+        },
+        {
+          id: 3,
+          title: "Ruins That Speak",
+          link: "/gallery/through-my-eyes/3",
+        },
+        {
+          id: 4,
+          title: "Testaments in Stone",
+          link: "/gallery/through-my-eyes/4",
+        },
+        {
+          id: 5,
+          title: "The Pulse of the Earth",
+          link: "/gallery/through-my-eyes/5",
+        },
+        {
+          id: 6,
+          title: "Traces of Atrocity",
+          link: "/gallery/through-my-eyes/6",
+        },
+      ],
+    },
   };
 
   const beyondPolitics = {
     "the-politician": "Paintings",
     "the-essayist-the-critic": "Exhibitions & Moments",
-  };
-
-  const SubmitHandler = (e) => {
-    e.preventDefault();
   };
 
   const ClickHandler = () => {
@@ -93,11 +213,7 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(interviewList).map(([key, value]) => (
                           <li key={key}>
-                            <Link
-                              onClick={ClickHandler}
-                              className="text-capitalize"
-                              to={`/interview/${key}`}
-                            >
+                            <Link onClick={ClickHandler} className="text-capitalize" to={`/interview/${key}`}>
                               {value}
                             </Link>
                           </li>
@@ -105,11 +221,7 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li>
-                      <Link
-                        className="text-capitalize"
-                        onClick={ClickHandler}
-                        to="/encounter-and-dialogue"
-                      >
+                      <Link className="text-capitalize" onClick={ClickHandler} to="/encounter-and-dialogue">
                         Encounters & Dialogues
                       </Link>
                     </li>
@@ -120,11 +232,7 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(beyondPolitics).map(([key, value]) => (
                           <li key={key}>
-                            <Link
-                              onClick={ClickHandler}
-                              className="text-capitalize"
-                              to={`/beyondPolitics/${key}/${1}`}
-                            >
+                            <Link onClick={ClickHandler} className="text-capitalize" to={`/beyondPolitics/${key}/${1}`}>
                               {value}
                             </Link>
                           </li>
@@ -138,12 +246,7 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(storyList).map(([key, value]) => (
                           <li key={key}>
-                            <Link
-                              onClick={ClickHandler}
-                              className="text-capitalize"
-                              to={`/story/${key}`}
-                              replace={true}
-                            >
+                            <Link onClick={ClickHandler} className="text-capitalize" to={`/story/${key}`} replace={true}>
                               {value}
                             </Link>
                           </li>
@@ -157,13 +260,39 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(galleryList).map(([key, value]) => (
                           <li key={key}>
-                            <Link
-                              onClick={ClickHandler}
-                              className="text-capitalize"
-                              to={`/gallery/${key}`}
-                            >
-                              {value}
+                            <Link onClick={() => setOpenSubId(value.id === openSubId ? 0 : value.id)} className="text-capitalize">
+                              {value.title}
+                              {value?.submenu && (
+                                <i
+                                  className={`${value.id === openSubId ? "fa fa-angle-up" : "fa fa-angle-down"} position-absolute`}
+                                  style={{
+                                    right: "10px",
+                                    top: "15px",
+                                  }}
+                                />
+                              )}
                             </Link>
+                            {value?.submenu && (
+                              <Collapse
+                                className=" overflow-y-auto"
+                                style={{
+                                  maxHeight: "60vh",
+                                }}
+                                in={value.id === openSubId}
+                                timeout="auto"
+                                unmountOnExit
+                              >
+                                <List className="ps-4 pe-0 py-0">
+                                  {value?.submenu?.map((m, i) => (
+                                    <ListItem key={i} className="px-0 py-1">
+                                      <NavLink to={m.link} onClick={ClickHandler} className="py-1 text-capitalize">
+                                        {m.title}
+                                      </NavLink>
+                                    </ListItem>
+                                  ))}
+                                </List>
+                              </Collapse>
+                            )}
                           </li>
                         ))}
                       </ul>
