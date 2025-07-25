@@ -213,7 +213,11 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(interviewList).map(([key, value]) => (
                           <li key={key}>
-                            <Link onClick={ClickHandler} className="text-capitalize" to={`/interview/${key}`}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/interview/${key}`}
+                            >
                               {value}
                             </Link>
                           </li>
@@ -221,7 +225,11 @@ const Header = (props) => {
                       </ul>
                     </li>
                     <li>
-                      <Link className="text-capitalize" onClick={ClickHandler} to="/encounter-and-dialogue">
+                      <Link
+                        className="text-capitalize"
+                        onClick={ClickHandler}
+                        to="/encounter-and-dialogue"
+                      >
                         Encounters & Dialogues
                       </Link>
                     </li>
@@ -232,7 +240,11 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(beyondPolitics).map(([key, value]) => (
                           <li key={key}>
-                            <Link onClick={ClickHandler} className="text-capitalize" to={`/beyondPolitics/${key}/${1}`}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/beyondPolitics/${key}/${1}`}
+                            >
                               {value}
                             </Link>
                           </li>
@@ -246,7 +258,12 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(storyList).map(([key, value]) => (
                           <li key={key}>
-                            <Link onClick={ClickHandler} className="text-capitalize" to={`/story/${key}`} replace={true}>
+                            <Link
+                              onClick={ClickHandler}
+                              className="text-capitalize"
+                              to={`/story/${key}`}
+                              replace={true}
+                            >
                               {value}
                             </Link>
                           </li>
@@ -260,18 +277,31 @@ const Header = (props) => {
                       <ul className="sub-menu">
                         {Object.entries(galleryList).map(([key, value]) => (
                           <li key={key}>
-                            <Link onClick={() => setOpenSubId(value.id === openSubId ? 0 : value.id)} className="text-capitalize">
-                              {value.title}
-                              {value?.submenu && (
+                            {value.submenu ? (
+                              <Link
+                                onClick={() => setOpenSubId(value.id === openSubId ? 0 : value.id)}
+                                className="text-capitalize"
+                              >
+                                {value.title}
                                 <i
-                                  className={`${value.id === openSubId ? "fa fa-angle-up" : "fa fa-angle-down"} position-absolute`}
+                                  className={`${
+                                    value.id === openSubId ? "fa fa-angle-up" : "fa fa-angle-down"
+                                  } position-absolute`}
                                   style={{
                                     right: "10px",
                                     top: "15px",
                                   }}
                                 />
-                              )}
-                            </Link>
+                              </Link>
+                            ) : (
+                              <Link
+                                onClick={ClickHandler}
+                                className="text-capitalize"
+                                to={`/gallery/${key}`}
+                              >
+                                {value.title}
+                              </Link>
+                            )}
                             {value?.submenu && (
                               <Collapse
                                 className=" overflow-y-auto"
@@ -285,7 +315,11 @@ const Header = (props) => {
                                 <List className="ps-4 pe-0 py-0">
                                   {value?.submenu?.map((m, i) => (
                                     <ListItem key={i} className="px-0 py-1">
-                                      <NavLink to={m.link} onClick={ClickHandler} className="py-1 text-capitalize">
+                                      <NavLink
+                                        to={m.link}
+                                        onClick={ClickHandler}
+                                        className="py-1 text-capitalize"
+                                      >
                                         {m.title}
                                       </NavLink>
                                     </ListItem>

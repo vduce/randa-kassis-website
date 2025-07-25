@@ -80,6 +80,15 @@ const Footer = (props) => {
                         <i className="fi flaticon-youtube"></i>
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href="https://x.com/kassis_randa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fi flaticon-twitter"></i>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
