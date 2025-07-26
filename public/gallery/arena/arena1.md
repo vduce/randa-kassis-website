@@ -22,7 +22,7 @@
 ![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Russian Presidential Special Envoy for Syria, and Deputy Foreign Minister Sergey Vershinin.](20.jpg)
 ![Randa Kassis with Lakhdar Brahimi, United Nations Special Envoy for Syria.](21.jpeg)
 ![Meeting between Randa Kassis, UN Special Envoy for Syria Staffan de Mistura, and Antoine Lahham.](22.jpg)
-![Randa Kassis with José Luis Rodríguez Zapatero, former Prime Minister of Spain.](23.jpg)
+![Randa Kassis and Fabien Baussart seated alongside Kazakh Defence Minister Amangali Tasmagambetov and Mohamed ElBaradei at a formal luncheon in Astana, during a high-level diplomatic gathering.](23.jpg)
 ![Yanis Varoufakis between Randa Kassis and Fabien Baussart](24.jpg)
 ![Randa Kassis with Mikhail Bogdanov, Russian Special Representative for the Middle East and Africa.](25.jpg)
 ![Private lunch with Randa Kassis, Fabien Baussart and Donald Trump Jr.](26.jpg)
