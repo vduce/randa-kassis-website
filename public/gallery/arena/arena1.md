@@ -11,7 +11,7 @@
 ![Randa Kassis and Fabien Baussart with Gennady Gatilov, Deputy Minister of Foreign Affairs of the Russian Federation.](9.jpeg)
 ![Meeting between Beibut Atamkulov, Foreign Minister of Kazakhstan, Randa Kassis, and Fabien Baussart.](10.jpeg)
 ![Meeting between Sergei Lavrov, Russian Foreign Minister, and Randa Kassis](11.jpg)
-![Randa Kassis with Kofi Annan.](12.jpg)
+![Randa Kassis speaking with Kofi Annan and Yaşar Yakış, former Foreign Minister of Turkey, during a formal diplomatic gathering.](12.jpg)
 ![Randa Kassis and Fabien Baussart taking part in high-level discussions alongside President Nursultan Nazarbayev, and Nobel Peace Laureates.](13.JPG)
 ![Randa Kassis and Fabien Baussart during a meeting with Mahmoud Abbas, President of the State of Palestine](14.jpg)
 ![Randa Kassis with Mynak Tulku, a senior Bhutanese lama, during an informal meeting in Bhutan](15.jpg)
