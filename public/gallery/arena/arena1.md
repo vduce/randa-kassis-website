@@ -27,5 +27,6 @@
 ![Randa Kassis with Mikhail Bogdanov, Russian Special Representative for the Middle East and Africa.](25.jpg)
 ![Private lunch with Randa Kassis, Fabien Baussart and Donald Trump Jr.](26.jpg)
 ![Randa Kassis and Fabien Baussart with Sir Carlton Smith during a CPFA event.](27.jpg)
+![Randa Kassis and Fabien Baussart with Sir Richard Dearlove, former head of MI6, during a CPFA event.](28.jpg)
 
 </p>
