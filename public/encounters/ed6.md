@@ -13,8 +13,6 @@ Speaking on behalf of the Syrian delegation, Kassis introduced a jointly develop
 The roadmap, resulting from this collaborative initiative, was intended to be presented to key international stakeholders, including Russia, Turkey, and the European Union, as a foundation for a renewed political process.
 
 
-![](12.JPG)
-![](13.JPG)
 ![](14.JPG)
 ![](15.jpeg)
 ![](16.JPG)
