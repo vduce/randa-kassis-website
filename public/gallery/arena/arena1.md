@@ -5,7 +5,7 @@
 ![Randa Kassis with Sheikh Hikmat al-Hijri, spiritual leader of the Syrian Druze community, joined by Fabien Baussart and delegation members during a visit to Suwayda.](3.JPG)
 ![Randa Kassis, Fabien Baussart, and Kelly Kassis with Patriarch John X of Antioch during a meeting at the Greek Orthodox Patriarchate of Antioch.](4.JPG)
 ![Abdullah Gül, the 11th President of Turkey, with Randa Kassis and Syrian poet and writer Adonis.](5.JPG)
-![Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.](6.jpeg)
+![Randa Kassis with President Kassym-Jomart Tokayev of Kazakhstan at an official reception.](6.jpg)
 ![Randa Kassis and Fabien Baussart meeting Ekrem İmamoğlu, Mayor of Istanbul at the Istanbul Metropolitan Municipality.](7.JPG)
 ![Randa Kassis and Fabien Baussart with Mahmoud al-Mashhadani, President of the Iraqi Parliament, during a meeting in Baghdad.](8.JPG)
 ![Randa Kassis and Fabien Baussart with Gennady Gatilov, Deputy Minister of Foreign Affairs of the Russian Federation.](9.jpeg)
