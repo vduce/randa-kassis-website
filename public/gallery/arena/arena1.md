@@ -26,5 +26,5 @@
 ![Yanis Varoufakis between Randa Kassis and Fabien Baussart](24.jpg)
 ![Randa Kassis with Mikhail Bogdanov, Russian Special Representative for the Middle East and Africa.](25.jpg)
 ![Private lunch with Randa Kassis, Fabien Baussart and Donald Trump Jr.](26.jpg)
-
+![Randa Kassis and Fabien Baussart with Sir Carlton Smith during a CPFA event.](27.jpg)
 </p>
