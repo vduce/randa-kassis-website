@@ -16,7 +16,7 @@
 ![Randa Kassis and Fabien Baussart during a meeting with Mahmoud Abbas, President of the State of Palestine](14.jpg)
 ![Randa Kassis with Mynak Tulku, a senior Bhutanese lama, during an informal meeting in Bhutan](15.jpg)
 ![Randa Kassis and Fabien Baussart with Kairat Abdrakhmanov, Foreign Minister of Kazakhstan, during an official meeting in Astana](16.jpg)
-![Randa Kassis and Ahmad Jarba, positioned between Renaud Girard and Fabien Baussart, during a CPFA event.](17.jpeg)
+![Randa Kassis and Ahmad Jarba, positioned between Renaud Girard and Fabien Baussart, during a CPFA event.](17.jpg)
 ![Randa Kassis and Fabien Baussart with Sheikh Mowafaq Tarif, spiritual leader of the Druze community in Israel, accompanied by Saleh Tarif, former Minister and Kelly Kassis, during a meeting in London](18.jpg)
 ![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Sergey Vershinin, General Afanasiev, and Mario Giro during discussions on the Syrian peace process](19.jpeg)
 ![Randa Kassis and Fabien Baussart with Alexander Lavrentiev, Russian Presidential Special Envoy for Syria, and Deputy Foreign Minister Sergey Vershinin.](20.jpg)
