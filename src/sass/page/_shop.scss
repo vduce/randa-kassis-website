@@ -109,15 +109,31 @@
   }
 
   .book-section-grids {
+
+    @media (min-width: 1200px) {
+      .grid {
+        width: calc(20% - 30px) !important;
+        float: left;
+        margin: 0 15px 30px !important;
+        height: 450px !important;
+
+        .img-holder {
+          height: 350px !important;
+        }
+      }
+    }
+
     @media (min-width: 992px) {
       .grid {
-        height: 440px;
+        width: calc(33% - 30px);
+        margin: 0 12px 23px;
+        height: 477px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
 
         .img-holder {
-          height: 350px;
+          height: 393px;
           overflow: hidden;
 
           img {

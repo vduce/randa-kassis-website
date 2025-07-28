@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.png";
+import XLogo from "./xlogo";
 import Services from "../../api/service";
 import { useEffect } from "react";
 import GoogleTranslate from "../translate/GoogleTranslate";
@@ -86,7 +87,7 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <i className="fi flaticon-twitter"></i>
+                        <XLogo />
                       </a>
                     </li>
                   </ul>

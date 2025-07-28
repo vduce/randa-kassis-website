@@ -25,7 +25,7 @@ const arenaPics = [
     to: "/gallery/in-the-arena/2",
   },
   {
-    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpeg",
+    Pimg: "https://randa-kassis-website.b-cdn.net/gallery/inthearena/6.jpg",
     caption: "Randa Kassis and Fabien Baussart with President Kassym-Jomart Tokayev of Kazakhstan during an official reception.",
     to: "/gallery/in-the-arena/6",
   },
