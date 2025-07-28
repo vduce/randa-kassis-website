@@ -6,9 +6,7 @@ This small collection reflects a moment where the cosmic and the earthly interse
 The suspended forms are not meteors—they are metaphysical artefacts, broken pieces of a once-whole self. This painting captures a liminal state: between form and dissolution, earth and ether, solitude and transcendence. It is a meditation on fragmentation, on belonging nowhere and everywhere at once.
 
 ![](47.jpg)
-![](48.jpg)
 ![](49.jpg)
-![](50.jpg)
 ![](51.jpg)
 ![](52.jpg)
 ![](53.jpg)
