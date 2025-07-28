@@ -21,6 +21,11 @@ The naked female body in my paintings is neither an object of desire nor a symbo
 ![](12.jpg)
 ![](13.jpg)
 ![](14.jpg)
+
+These paintings portray more than bodily confinement—they expose the deeper captivity of identity and desire under cultural surveillance. In many Middle Eastern contexts, the body becomes both threat and spectacle. The barred figures suggest not just physical constraint, but internalised repression—a woman taught to censor herself. The droplets evoke sorrow and suppression, yet the body endures: fragmented, luminous, and defiant in its visibility.
+
+![](48.jpg)
+![](50.jpg)
 <p></p>
 
 
