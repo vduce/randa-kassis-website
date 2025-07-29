@@ -17,8 +17,7 @@ const Footer = (props) => {
   useEffect(() => {
     if (!window.googleTranslateLoaded) {
       const script = document.createElement("script");
-      script.src =
-        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       document.body.appendChild(script);
 
@@ -26,10 +25,7 @@ const Footer = (props) => {
 
       window.googleTranslateElementInit = () => {
         if (window.google.translate) {
-          new window.google.translate.TranslateElement(
-            { pageLanguage: "en", autoDisplay: false },
-            "google_translate_element"
-          );
+          new window.google.translate.TranslateElement({ pageLanguage: "en", autoDisplay: false }, "google_translate_element");
         }
       };
     }
@@ -48,18 +44,14 @@ const Footer = (props) => {
                   </Link>
                 </div>
                 <ul className="info">
-                  <li>Email: contact@mail.com</li>
+                  <li>Email: office@randakassis.com</li>
                   {/* <li>Address: 22/1 Melborane city austria,
                                         human resoerch, Canada</li> */}
                 </ul>
                 <div className="social">
                   <ul>
                     <li>
-                      <a
-                        href="https://www.facebook.com/share/1EsVifAg1M/?mibextid=wwXIfr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="https://www.facebook.com/share/1EsVifAg1M/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
                         <i className="fi flaticon-facebook-app-symbol"></i>
                       </a>
                     </li>
@@ -73,20 +65,12 @@ const Footer = (props) => {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://youtube.com/@helene237?si=PfARWlPaQXcsDWwd"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="https://youtube.com/@helene237?si=PfARWlPaQXcsDWwd" target="_blank" rel="noopener noreferrer">
                         <i className="fi flaticon-youtube"></i>
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://x.com/kassis_randa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="https://x.com/kassis_randa" target="_blank" rel="noopener noreferrer">
                         <XLogo />
                       </a>
                     </li>
@@ -116,12 +100,7 @@ const Footer = (props) => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://mspsy.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={ClickHandler}
-                    >
+                    <a href="https://mspsy.com/" target="_blank" rel="noopener noreferrer" onClick={ClickHandler}>
                       Movement for a Pluralistic Society
                     </a>
                   </li>
