@@ -37,8 +37,12 @@ const EdList = (props) => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [paginate, currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(edContents.length / postsPerPage);
