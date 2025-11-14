@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import HomePage4 from "../HomePage4/HomePage4";
 // import AboutPage from "../AboutPage/AboutPage";
@@ -43,12 +43,40 @@ import MyCompanion from "../companion/MyCompanion";
 import InTheArena from "../Arena/Arena";
 import ThroughMyEyes from "../ThroughMyEyes/ThroughMyEyes";
 
+// Admin components
+import { AuthProvider } from "../../context/AuthContext";
+import LoginPage from "../../components/admin/LoginPage";
+import AdminDashboard from "../../components/admin/AdminDashboard";
+import MarkdownEditor from "../../components/admin/MarkdownEditor";
+import ProtectedRoute from "../../components/admin/ProtectedRoute";
+
 const AllRoute = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage4 />} />
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<HomePage4 />} />
+            
+            {/* Admin routes */}
+            <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
+            <Route path="/admin/login" element={<LoginPage />} />
+            <Route 
+              path="/admin/dashboard" 
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/editor" 
+              element={
+                <ProtectedRoute>
+                  <MarkdownEditor />
+                </ProtectedRoute>
+              } 
+            />
           {/* <Route path="about" element={<AboutPage />} /> */}
           <Route path="campaign" element={<CampaignPage />} />
           <Route path="campaign-2" element={<CampaignPageS2 />} />
@@ -93,7 +121,8 @@ const AllRoute = () => {
           <Route path="gallery/in-the-arena/:sectionId" element={<InTheArena />} />
           <Route path="gallery/through-my-eyes/:sectionId" element={<ThroughMyEyes />} />
           <Route path="404" element={<ErrorPage />} />
-        </Routes>
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );
