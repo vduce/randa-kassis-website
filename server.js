@@ -21,7 +21,7 @@ app.use(express.text({ limit: "10mb", type: "text/markdown" }));
 app.use('/', proxyRoutes);
 
 // Serve your frontend files (if using static HTML/build)
-const publicDir = path.join(__dirname, 'public');
+const publicDir = path.join(__dirname, 'build');
 app.use(express.static(publicDir));
 
 // Default homepage route (adjust based on your website needs)
