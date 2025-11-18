@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import critics from "../../../api/essayistandcritics.json";
+import { getCdnUrl } from "../../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -18,7 +19,7 @@ const TheCriticsList = (props) => {
       const fetchCriticsList = await Promise.all(
         critics.map(async (critic) => {
           try {
-            const response = await fetch(`/interviews/essayistcritics/${critic.filename}`);
+            const response = await fetch(getCdnUrl(`interviews/essayistcritics/${critic.filename}`));
             const content = await response.text();
             return { ...critic, content };
           } catch (error) {

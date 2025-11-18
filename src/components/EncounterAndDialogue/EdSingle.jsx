@@ -11,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
 import PdfViewer from "../PdfViewer/PdfViewer";
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
@@ -42,7 +43,7 @@ const EdSingle = () => {
     if (selectedEd && selectedEd.filename) {
       const fetchContent = async () => {
         try {
-          const response = await fetch(`/encounters/${selectedEd.filename}`);
+          const response = await fetch(getCdnUrl(`encounters/${selectedEd.filename}`));
           const text = await response.text();
           setContent(text);
         } catch (error) {
@@ -106,7 +107,7 @@ const EdSingle = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/encounters/pdfs"
+            cdnUrlPrefix={CDN_PATHS.encounters.pdfs}
           />
         );
         lastElementType.current = "pdf";
@@ -119,7 +120,7 @@ const EdSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/encounters/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.encounters.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";

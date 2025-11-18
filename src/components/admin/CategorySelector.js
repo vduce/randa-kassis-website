@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { listFiles } from '../../services/unifiedFileOperations';
 import './CategorySelector.css';
 
 // Content categories configuration
@@ -69,6 +70,39 @@ const CONTENT_CATEGORIES = [
 ];
 
 const CategorySelector = ({ selectedCategory, onSelectCategory }) => {
+  const [fileCounts, setFileCounts] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  // Fetch file counts for all categories
+  useEffect(() => {
+    const fetchFileCounts = async () => {
+      setLoading(true);
+      const counts = {};
+
+      // Fetch counts for all categories in parallel
+      await Promise.all(
+        CONTENT_CATEGORIES.map(async (category) => {
+          try {
+            const result = await listFiles(category.path);
+            if (result.success) {
+              counts[category.key] = result.data.count;
+            } else {
+              counts[category.key] = 0;
+            }
+          } catch (error) {
+            console.error(`Error fetching count for ${category.key}:`, error);
+            counts[category.key] = 0;
+          }
+        })
+      );
+
+      setFileCounts(counts);
+      setLoading(false);
+    };
+
+    fetchFileCounts();
+  }, []);
+
   const handleCategoryClick = (category) => {
     onSelectCategory(category);
   };
@@ -88,7 +122,9 @@ const CategorySelector = ({ selectedCategory, onSelectCategory }) => {
             <span className="category-icon">{category.icon}</span>
             <div className="category-info">
               <span className="category-label">{category.label}</span>
-              <span className="category-count">0 files</span>
+              <span className="category-count">
+                {loading ? '...' : `${fileCounts[category.key] || 0} file${fileCounts[category.key] === 1 ? '' : 's'}`}
+              </span>
             </div>
           </button>
         ))}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import articles from "../../api/articles.json";
+import { getCdnUrl } from "../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -18,7 +19,7 @@ const ArticlesList = (props) => {
       const fetchedArticles = await Promise.all(
         articles.map(async (article) => {
           try {
-            const response = await fetch(`/articles/${article.filename}`);
+            const response = await fetch(getCdnUrl(`articles/${article.filename}`));
             const content = await response.text();
             return { ...article, content };
           } catch (error) {

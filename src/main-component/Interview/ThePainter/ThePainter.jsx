@@ -10,6 +10,7 @@ import Navbar from "../../../components/Navbar/Navbar";
 import PageTitle from "../../../components/pagetitle/PageTitle";
 import { useInView } from "react-intersection-observer";
 import { useSwipeable } from "react-swipeable";
+import { getCdnUrl } from "../../../config/cdn";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -185,7 +186,7 @@ const ThePainter = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const response = await fetch(`/interviews/painters/painters1.md`);
+        const response = await fetch(getCdnUrl(`interviews/painters/painters1.md`));
         const text = await response.text();
         if (isMountedRef.current) {
           setContent(text);

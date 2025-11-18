@@ -10,6 +10,7 @@ import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 
 
 const storySections = [
@@ -109,7 +110,7 @@ const MyStory = () => {
       const updatedSections = await Promise.all(
         storySections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
             const content = await response.text();
             return { ...section, content };
           } catch (error) {
@@ -187,7 +188,7 @@ const MyStory = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/mystory/pdf"
+            cdnUrlPrefix={CDN_PATHS.story.pdfs}
           />
         );
         lastElementType.current = "pdf";
@@ -200,7 +201,7 @@ const MyStory = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/mystory/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.story.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";

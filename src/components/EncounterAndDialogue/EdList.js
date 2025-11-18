@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import encounterAndDialogues from "../../api/encounterAndDialogue.json";
+import { getCdnUrl } from "../../config/cdn";
 
 const EdList = (props) => {
   const { state } = useLocation();
@@ -14,7 +15,7 @@ const EdList = (props) => {
       const fetchedEd = await Promise.all(
         encounterAndDialogues.map(async (ed) => {
           try {
-            const response = await fetch(`/encounters/${ed.filename}`);
+            const response = await fetch(getCdnUrl(`encounters/${ed.filename}`));
             const content = await response.text();
             return { ...ed, content };
           } catch (error) {

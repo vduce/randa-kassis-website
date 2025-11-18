@@ -5,7 +5,7 @@ import CategorySelector from './CategorySelector';
 import FileList from './FileList';
 import ConfirmDialog from './ConfirmDialog';
 import FileUpload from './FileUpload';
-import { deleteFile } from '../../services/fileOperations';
+import { deleteFile } from '../../services/unifiedFileOperations';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {

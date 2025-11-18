@@ -10,6 +10,7 @@ import Footer from "../../../components/footer/Footer";
 import Scrollbar from "../../../components/scrollbar/scrollbar";
 import Navbar from "../../../components/Navbar/Navbar";
 import PdfViewer from "../../../components/PdfViewer/PdfViewer";
+import { getCdnUrl } from "../../../config/cdn";
 
 const TheCriticsDetail = () => {
   const { id } = useParams(); // Get the article ID from the URL
@@ -32,7 +33,7 @@ const TheCriticsDetail = () => {
     if (selectedArticle && selectedArticle.filename) {
       const fetchContent = async () => {
         try {
-          const response = await fetch(`/interviews/essayistcritics/${selectedArticle.filename}`);
+          const response = await fetch(getCdnUrl(`interviews/essayistcritics/${selectedArticle.filename}`));
           const text = await response.text();
           setContent(text);
         } catch (error) {

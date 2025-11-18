@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { readFile, createFile, updateFile, generateNextFilename } from '../../services/fileOperations';
+import { readFile, createFile, updateFile, generateNextFilename } from '../../services/unifiedFileOperations';
 import { getJSONIndexEntry, updateJSONIndexEntry } from '../../services/jsonIndexService';
 import MarkdownPreview from './MarkdownPreview';
 import './MarkdownEditor.css';

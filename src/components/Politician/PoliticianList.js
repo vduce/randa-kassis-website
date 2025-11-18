@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import politicians from "../../api/politicians.json";
+import { getCdnUrl } from "../../config/cdn";
 
 const PoliticianList = (props) => {
   const { state } = useLocation();
@@ -14,7 +15,7 @@ const PoliticianList = (props) => {
       const fetched = await Promise.all(
         politicians.map(async (pol) => {
           try {
-            const response = await fetch(`/encounters/${pol.filename}`);
+            const response = await fetch(getCdnUrl(`interviews/politicians/${pol.filename}`));
             const content = await response.text();
             return { ...pol, content };
           } catch (error) {

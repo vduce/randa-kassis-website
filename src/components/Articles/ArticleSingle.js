@@ -5,6 +5,7 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
 import articles from "../../api/articles.json";
+import { getCdnUrl } from "../../config/cdn";
 
 const ArticleSingle = () => {
   const { id } = useParams(); // Get the article ID from the URL
@@ -27,7 +28,7 @@ const ArticleSingle = () => {
     if (selectedArticle && selectedArticle.filename) {
       const fetchContent = async () => {
         try {
-          const response = await fetch(`/articles/${selectedArticle.filename}`);
+          const response = await fetch(getCdnUrl(`articles/${selectedArticle.filename}`));
           const text = await response.text();
           setContent(text);
         } catch (error) {

@@ -5,19 +5,20 @@ import remarkGfm from 'remark-gfm';
 import './MarkdownPreview.css';
 
 // CDN URL mapping for different content categories
-const CDN_BASE_URL = 'https://randa-kassis-website.b-cdn.net';
+// Always use production CDN for images
+const PRODUCTION_CDN = 'https://randa-kassis-website.b-cdn.net';
 
 const getCdnPath = (categoryKey) => {
   const cdnPaths = {
-    'encounters': `${CDN_BASE_URL}/encounters/photos`,
-    'interviews_politicians': `${CDN_BASE_URL}/interviews/politicians/photos`,
-    'interviews_painters': `${CDN_BASE_URL}/interviews/painters/photos`,
-    'interviews_critics': `${CDN_BASE_URL}/interviews/essayistcritics/photos`,
-    'story': `${CDN_BASE_URL}/story/photos`,
-    'paintings': `${CDN_BASE_URL}/paintings/photos`,
-    'exhibitions': `${CDN_BASE_URL}/exhibitions/photos`,
-    'throughMyEyes': `${CDN_BASE_URL}/gallery/myeyes/photos`,
-    'articles': `${CDN_BASE_URL}/articles/photos`,
+    'encounters': `${PRODUCTION_CDN}/encounters/photos`,
+    'interviews_politicians': `${PRODUCTION_CDN}/interviews/politicians/photos`,
+    'interviews_painters': `${PRODUCTION_CDN}/interviews/painters/photos`,
+    'interviews_critics': `${PRODUCTION_CDN}/interviews/essayistcritics/photos`,
+    'story': `${PRODUCTION_CDN}/story/photos`,
+    'paintings': `${PRODUCTION_CDN}/paintings/photos`,
+    'exhibitions': `${PRODUCTION_CDN}/exhibitions/photos`,
+    'throughMyEyes': `${PRODUCTION_CDN}/gallery/myeyes/photos`,
+    'articles': `${PRODUCTION_CDN}/articles/photos`,
   };
   
   return cdnPaths[categoryKey] || null;

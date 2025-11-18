@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { listFiles, sortFiles, filterFiles, paginateFiles } from '../../services/fileOperations';
+import { listFiles, sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFileOperations';
 import './FileList.css';
 
 const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger }) => {

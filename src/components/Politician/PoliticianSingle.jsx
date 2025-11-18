@@ -11,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
 import PdfViewer from "../PdfViewer/PdfViewer";
 import politicians from "../../api/politicians.json";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
@@ -42,7 +43,7 @@ const PoliticianSingle = () => {
     if (selectedPolitician && selectedPolitician.filename) {
       const fetchContent = async () => {
         try {
-          const response = await fetch(`/interviews/politicians/${selectedPolitician.filename}`);
+          const response = await fetch(getCdnUrl(`interviews/politicians/${selectedPolitician.filename}`));
           const text = await response.text();
           setContent(text);
         } catch (error) {
@@ -106,7 +107,7 @@ const PoliticianSingle = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/interviews/politicians/pdfs"
+            cdnUrlPrefix={CDN_PATHS.politicians.pdfs}
           />
         );
         lastElementType.current = "pdf";
@@ -119,7 +120,7 @@ const PoliticianSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/interviews/politicians/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.politicians.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
