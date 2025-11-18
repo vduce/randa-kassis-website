@@ -16,7 +16,7 @@ const ENDPOINT = process.env.REACT_APP_BUNNY_STORAGE_ENDPOINT || 'https://storag
 
 // Allow CORS for local testing + production
 router.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3036', 'https://randakassis.com'],
+  origin: ['http://localhost:3036', 'https://randakassis.com', 'https://dev.randakassis.com'],
   credentials: true
 }));
 
