@@ -88,7 +88,7 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/c88537c2-d387-4998-a1ab-b7588ba4a121?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    src="https://iframe.mediadelivery.net/embed/464704/b237712b-c0cf-431c-906d-7af4a70df6c7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
@@ -98,7 +98,7 @@ Even when we encounter stray dogs and cats, life seems to take on another meanin
 <p></p>
 <center>
 <div style="display: flex; justify-content: center; position:relative;width: 100%;height: 300px;"><iframe
-    src="https://iframe.mediadelivery.net/embed/464704/aa90691d-9bf7-4e29-8651-3512270228f7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+    src="https://iframe.mediadelivery.net/embed/464704/78325c8a-0732-4f0b-9aaa-94b9d9ece3b9?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
     loading="lazy" style="border:0;height:100%;width: 520px;"
     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
 </div>
