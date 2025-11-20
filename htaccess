@@ -1,0 +1,21 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/randakas/dev.randakassis.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/randakas/nodevenv/dev.randakassis.com/20/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Don't touch real files or directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Don't rewrite API routes - let Express handle them
+  RewriteCond %{REQUEST_URI} !^/api/
+
+  # Catch ALL other paths for React Router
+  RewriteRule . /index.html [L]
+</IfModule>

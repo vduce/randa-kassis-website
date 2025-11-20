@@ -250,8 +250,26 @@ const publicDir = path.join(__dirname, 'build');
 app.use(express.static(publicDir));
 
 // Catch-all route for React Router (must be last)
+// Only serve index.html for non-API routes
 app.get('*', (req, res) => {
-  res.sendFile('index.html');
+  // Don't serve index.html for API routes
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ 
+      error: 'API endpoint not found',
+      path: req.path,
+      availableEndpoints: [
+        'GET /api',
+        'GET /api/storage/health',
+        'GET /api/storage/list?path=public/articles',
+        'GET /api/storage/read?path=public/articles/article1.md',
+        'PUT /api/storage/write',
+        'DELETE /api/storage/delete?path=public/articles/article1.md'
+      ]
+    });
+  }
+  
+  // Serve React app for all other routes
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 // Start server
