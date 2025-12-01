@@ -203,11 +203,22 @@ app.put('/api/storage/write', async (req, res) => {
 });
 
 /**
- * Helper function to extract article number from path
+ * Helper function to extract file number from path
+ * Supports multiple filename patterns: article1.md, ec1.md, po1.md, ed1.md, etc.
  */
-function extractArticleNumber(filePath) {
-  const match = filePath.match(/article(\d+)\.md$/);
+function extractFileNumber(filePath) {
+  // Match patterns like: article1.md, ec1.md, po1.md, ed1.md, etc.
+  const match = filePath.match(/(?:article|ec|po|ed)(\d+)\.md$/);
   return match ? parseInt(match[1]) : null;
+}
+
+/**
+ * Helper function to get file prefix from path
+ * Returns: 'article', 'ec', 'po', 'ed', etc.
+ */
+function getFilePrefix(filePath) {
+  const match = filePath.match(/(article|ec|po|ed)\d+\.md$/);
+  return match ? match[1] : null;
 }
 
 /**
@@ -216,8 +227,8 @@ function extractArticleNumber(filePath) {
 function getCategoryFromPath(filePath) {
   if (filePath.includes('public/articles/')) return 'articles';
   if (filePath.includes('public/encounters/')) return 'encounterAndDialogue';
-  if (filePath.includes('public/politicians/')) return 'politicians';
-  if (filePath.includes('public/essayists/')) return 'essayistandcritics';
+  if (filePath.includes('public/interviews/politicians/')) return 'politicians';
+  if (filePath.includes('public/interviews/essayistcritics/')) return 'essayistandcritics';
   return null;
 }
 
@@ -235,9 +246,10 @@ function getMetadataFilename(category) {
 }
 
 /**
- * Renumber articles after deletion
+ * Renumber files after deletion
+ * Works with all file types: articles, encounters, politicians, essayist critics
  */
-async function renumberArticles(deletedNumber, category, basePath) {
+async function renumberFiles(deletedNumber, category, basePath, filePrefix) {
   const results = {
     success: true,
     deletedNumber,
@@ -258,18 +270,18 @@ async function renumberArticles(deletedNumber, category, basePath) {
     const metadataContent = fs.readFileSync(metadataPath, 'utf8');
     let metadata = JSON.parse(metadataContent);
 
-    // Find the maximum article number
+    // Find the maximum file number
     const maxNumber = Math.max(...metadata.map(item => {
-      const num = extractArticleNumber(item.filename);
+      const num = extractFileNumber(item.filename);
       return num || 0;
     }));
 
-    console.log(`📋 Renumbering: deleted=${deletedNumber}, max=${maxNumber}`);
+    console.log(`📋 Renumbering: deleted=${deletedNumber}, max=${maxNumber}, prefix=${filePrefix}`);
 
     // Renumber files on Bunny Storage (from deletedNumber+1 to maxNumber)
     for (let i = deletedNumber + 1; i <= maxNumber; i++) {
-      const oldFilename = `article${i}.md`;
-      const newFilename = `article${i - 1}.md`;
+      const oldFilename = `${filePrefix}${i}.md`;
+      const newFilename = `${filePrefix}${i - 1}.md`;
       const oldPath = `${basePath}/${oldFilename}`;
       const newPath = `${basePath}/${newFilename}`;
 
@@ -324,18 +336,18 @@ async function renumberArticles(deletedNumber, category, basePath) {
 
     // Update metadata: remove deleted entry and renumber subsequent entries
     metadata = metadata.filter(item => {
-      const num = extractArticleNumber(item.filename);
+      const num = extractFileNumber(item.filename);
       return num !== deletedNumber;
     });
 
     // Renumber the metadata entries
     metadata = metadata.map(item => {
-      const num = extractArticleNumber(item.filename);
+      const num = extractFileNumber(item.filename);
       if (num && num > deletedNumber) {
         return {
           ...item,
           id: item.id - 1,
-          filename: `article${num - 1}.md`
+          filename: `${filePrefix}${num - 1}.md`
         };
       }
       return item;
@@ -366,19 +378,20 @@ async function renumberArticles(deletedNumber, category, basePath) {
 /**
  * Delete file
  * DELETE /api/storage/delete?path=public/articles/article1.md
- * Supports automatic renumbering for articles
+ * Supports automatic renumbering for articles, encounters, politicians, essayist critics
  */
 app.delete('/api/storage/delete', async (req, res) => {
   try {
     const filePath = req.query.path;
     if (!filePath) return res.status(400).json({ error: "Path required" });
 
-    // Check if this is an article that needs renumbering
-    const articleNumber = extractArticleNumber(filePath);
+    // Check if this is a file that needs renumbering
+    const fileNumber = extractFileNumber(filePath);
+    const filePrefix = getFilePrefix(filePath);
     const category = getCategoryFromPath(filePath);
 
-    if (articleNumber && category) {
-      console.log(`🗑️  Delete with renumbering: article${articleNumber}.md`);
+    if (fileNumber && filePrefix && category) {
+      console.log(`🗑️  Delete with renumbering: ${filePrefix}${fileNumber}.md (category: ${category})`);
 
       // First, delete the target file
       const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
@@ -392,20 +405,21 @@ app.delete('/api/storage/delete', async (req, res) => {
         throw new Error(`HTTP ${response.status}`);
       }
 
-      console.log(`✅ Deleted: article${articleNumber}.md`);
+      console.log(`✅ Deleted: ${filePrefix}${fileNumber}.md`);
 
-      // Then renumber all subsequent articles
+      // Then renumber all subsequent files
       const basePath = filePath.substring(0, filePath.lastIndexOf('/'));
-      const renumberResults = await renumberArticles(articleNumber, category, basePath);
+      const renumberResults = await renumberFiles(fileNumber, category, basePath, filePrefix);
 
       res.json({
         success: true,
-        deleted: `article${articleNumber}.md`,
+        deleted: `${filePrefix}${fileNumber}.md`,
+        category: category,
         renumbering: renumberResults
       });
 
     } else {
-      // Simple delete for non-article files
+      // Simple delete for files that don't need renumbering
       const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
       console.log('🗑️  Delete request:', url);
 
