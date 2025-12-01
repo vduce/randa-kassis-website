@@ -203,29 +203,226 @@ app.put('/api/storage/write', async (req, res) => {
 });
 
 /**
+ * Helper function to extract article number from path
+ */
+function extractArticleNumber(filePath) {
+  const match = filePath.match(/article(\d+)\.md$/);
+  return match ? parseInt(match[1]) : null;
+}
+
+/**
+ * Helper function to get category name from path
+ */
+function getCategoryFromPath(filePath) {
+  if (filePath.includes('public/articles/')) return 'articles';
+  if (filePath.includes('public/encounters/')) return 'encounterAndDialogue';
+  if (filePath.includes('public/politicians/')) return 'politicians';
+  if (filePath.includes('public/essayists/')) return 'essayistandcritics';
+  return null;
+}
+
+/**
+ * Helper function to get metadata filename from category
+ */
+function getMetadataFilename(category) {
+  const mapping = {
+    'articles': 'articles.json',
+    'encounterAndDialogue': 'encounterAndDialogue.json',
+    'politicians': 'politicians.json',
+    'essayistandcritics': 'essayistandcritics.json'
+  };
+  return mapping[category];
+}
+
+/**
+ * Renumber articles after deletion
+ */
+async function renumberArticles(deletedNumber, category, basePath) {
+  const results = {
+    success: true,
+    deletedNumber,
+    renamedFiles: [],
+    metadataUpdated: false,
+    errors: []
+  };
+
+  try {
+    // Read metadata file
+    const metadataFilename = getMetadataFilename(category);
+    const metadataPath = path.join(__dirname, 'metadata', metadataFilename);
+    
+    if (!fs.existsSync(metadataPath)) {
+      throw new Error(`Metadata file not found: ${metadataFilename}`);
+    }
+
+    const metadataContent = fs.readFileSync(metadataPath, 'utf8');
+    let metadata = JSON.parse(metadataContent);
+
+    // Find the maximum article number
+    const maxNumber = Math.max(...metadata.map(item => {
+      const num = extractArticleNumber(item.filename);
+      return num || 0;
+    }));
+
+    console.log(`📋 Renumbering: deleted=${deletedNumber}, max=${maxNumber}`);
+
+    // Renumber files on Bunny Storage (from deletedNumber+1 to maxNumber)
+    for (let i = deletedNumber + 1; i <= maxNumber; i++) {
+      const oldFilename = `article${i}.md`;
+      const newFilename = `article${i - 1}.md`;
+      const oldPath = `${basePath}/${oldFilename}`;
+      const newPath = `${basePath}/${newFilename}`;
+
+      try {
+        // Read the old file
+        const readUrl = `${ENDPOINT}/${STORAGE_ZONE}/${oldPath}`;
+        const readResponse = await makeRequest(readUrl, {
+          headers: { AccessKey: API_KEY }
+        });
+
+        if (!readResponse.ok) {
+          throw new Error(`Failed to read ${oldFilename}: HTTP ${readResponse.status}`);
+        }
+
+        const content = await readResponse.text();
+
+        // Write to new filename
+        const writeUrl = `${ENDPOINT}/${STORAGE_ZONE}/${newPath}`;
+        const writeResponse = await makeRequest(writeUrl, {
+          method: 'PUT',
+          headers: {
+            AccessKey: API_KEY,
+            'Content-Type': 'text/markdown',
+            'Content-Length': Buffer.byteLength(content)
+          },
+          body: content
+        });
+
+        if (!writeResponse.ok) {
+          throw new Error(`Failed to write ${newFilename}: HTTP ${writeResponse.status}`);
+        }
+
+        // Delete the old file
+        const deleteUrl = `${ENDPOINT}/${STORAGE_ZONE}/${oldPath}`;
+        const deleteResponse = await makeRequest(deleteUrl, {
+          method: 'DELETE',
+          headers: { AccessKey: API_KEY }
+        });
+
+        if (!deleteResponse.ok) {
+          throw new Error(`Failed to delete ${oldFilename}: HTTP ${deleteResponse.status}`);
+        }
+
+        results.renamedFiles.push({ from: oldFilename, to: newFilename });
+        console.log(`✅ Renamed: ${oldFilename} → ${newFilename}`);
+
+      } catch (err) {
+        results.errors.push(`Error renaming ${oldFilename}: ${err.message}`);
+        console.error(`❌ Error renaming ${oldFilename}:`, err.message);
+      }
+    }
+
+    // Update metadata: remove deleted entry and renumber subsequent entries
+    metadata = metadata.filter(item => {
+      const num = extractArticleNumber(item.filename);
+      return num !== deletedNumber;
+    });
+
+    // Renumber the metadata entries
+    metadata = metadata.map(item => {
+      const num = extractArticleNumber(item.filename);
+      if (num && num > deletedNumber) {
+        return {
+          ...item,
+          id: item.id - 1,
+          filename: `article${num - 1}.md`
+        };
+      }
+      return item;
+    });
+
+    // Sort by id to maintain order
+    metadata.sort((a, b) => a.id - b.id);
+
+    // Write updated metadata
+    let jsonContent = JSON.stringify(metadata, null, 2);
+    jsonContent = jsonContent.replace(/[\u007F-\uFFFF]/g, (char) => {
+      return '\\u' + ('0000' + char.charCodeAt(0).toString(16)).slice(-4);
+    });
+
+    fs.writeFileSync(metadataPath, jsonContent, 'utf8');
+    results.metadataUpdated = true;
+    console.log(`✅ Metadata updated: ${metadataFilename}`);
+
+  } catch (err) {
+    results.success = false;
+    results.errors.push(`Metadata update error: ${err.message}`);
+    console.error('❌ Renumbering error:', err.message);
+  }
+
+  return results;
+}
+
+/**
  * Delete file
  * DELETE /api/storage/delete?path=public/articles/article1.md
+ * Supports automatic renumbering for articles
  */
 app.delete('/api/storage/delete', async (req, res) => {
   try {
-    const path = req.query.path;
-    if (!path) return res.status(400).json({ error: "Path required" });
+    const filePath = req.query.path;
+    if (!filePath) return res.status(400).json({ error: "Path required" });
 
-    const url = `${ENDPOINT}/${STORAGE_ZONE}/${path}`;
-    console.log('🗑️  Delete request:', url);
-    
-    const response = await makeRequest(url, {
-      method: 'DELETE',
-      headers: { AccessKey: API_KEY }
-    });
+    // Check if this is an article that needs renumbering
+    const articleNumber = extractArticleNumber(filePath);
+    const category = getCategoryFromPath(filePath);
 
-    if (!response.ok) {
-      console.error('Delete failed:', response.status);
-      throw new Error(`HTTP ${response.status}`);
+    if (articleNumber && category) {
+      console.log(`🗑️  Delete with renumbering: article${articleNumber}.md`);
+
+      // First, delete the target file
+      const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
+      const response = await makeRequest(url, {
+        method: 'DELETE',
+        headers: { AccessKey: API_KEY }
+      });
+
+      if (!response.ok) {
+        console.error('Delete failed:', response.status);
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      console.log(`✅ Deleted: article${articleNumber}.md`);
+
+      // Then renumber all subsequent articles
+      const basePath = filePath.substring(0, filePath.lastIndexOf('/'));
+      const renumberResults = await renumberArticles(articleNumber, category, basePath);
+
+      res.json({
+        success: true,
+        deleted: `article${articleNumber}.md`,
+        renumbering: renumberResults
+      });
+
+    } else {
+      // Simple delete for non-article files
+      const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
+      console.log('🗑️  Delete request:', url);
+
+      const response = await makeRequest(url, {
+        method: 'DELETE',
+        headers: { AccessKey: API_KEY }
+      });
+
+      if (!response.ok) {
+        console.error('Delete failed:', response.status);
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      console.log('✅ File deleted');
+      res.json({ success: true });
     }
 
-    console.log('✅ File deleted');
-    res.json({ success: true });
   } catch (err) {
     console.error('❌ Delete error:', err.message);
     res.status(500).json({ error: err.message });
@@ -401,7 +598,7 @@ app.use(express.static(publicDir));
 
 // Catch-all route for React Router (must be last)
 // Only serve index.html for non-API and non-metadata routes
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
   // Don't serve index.html for API or metadata routes
   if (req.path.startsWith('/api') || req.path.startsWith('/metadata')) {
     return res.status(404).json({ 
