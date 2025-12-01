@@ -10,7 +10,8 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
 import PdfViewer from "../PdfViewer/PdfViewer";
-import politicians from "../../api/politicians.json";
+import { fetchPoliticians } from "../../services/cdnJsonService";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
@@ -24,7 +25,9 @@ const PoliticianSingle = () => {
   const [currentElement, setCurrentElement] = useState(Number(id) || 1);
   const [pageNumber, setPageNumber] = useState(state?.pageNumber || 1);
   const [politician, setPolitician] = useState(null);
+  const [politicians, setPoliticians] = useState([]);
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(true);
   const lightGalleryRef = useRef(null);
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
@@ -37,30 +40,43 @@ const PoliticianSingle = () => {
   }, [id]);
 
   useEffect(() => {
-    const selectedPolitician = politicians.find((item) => item.id === parseInt(id));
-    setPolitician(selectedPolitician);
-    if (selectedPolitician && selectedPolitician.filename) {
-      const fetchContent = async () => {
-        try {
-          const response = await fetch(`/interviews/politicians/${selectedPolitician.filename}`);
+    const loadPolitician = async () => {
+      setLoading(true);
+      try {
+        // Fetch politicians from server
+        const politiciansData = await fetchPoliticians();
+        setPoliticians(politiciansData);
+        
+        // Find the politician by ID
+        const selectedPolitician = politiciansData.find((item) => item.id === parseInt(id));
+        setPolitician(selectedPolitician);
+
+        // Fetch the content of the Markdown file
+        if (selectedPolitician && selectedPolitician.filename) {
+          const response = await fetch(getCdnUrl(`interviews/politicians/${selectedPolitician.filename}`));
           const text = await response.text();
           setContent(text);
-        } catch (error) {
-          console.error("Error fetching article content:", error);
-          setContent("Error loading article content.");
         }
-      };
-      fetchContent();
-    }
+      } catch (error) {
+        console.error("Error loading politician:", error);
+        setContent("Error loading content.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadPolitician();
   }, [id]);
 
   useEffect(() => {
-    const index = politicians.findIndex((item) => item.id === currentElement);
-    if (index !== -1) {
-      const pageNum = Math.floor(index / 10) + 1;
-      setPageNumber(pageNum);
+    if (politicians.length > 0) {
+      const index = politicians.findIndex((item) => item.id === currentElement);
+      if (index !== -1) {
+        const pageNum = Math.floor(index / 10) + 1;
+        setPageNumber(pageNum);
+      }
     }
-  }, [currentElement]);
+  }, [currentElement, politicians]);
 
   useEffect(() => {
     imageSrcsRef.current = [];
@@ -106,7 +122,7 @@ const PoliticianSingle = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/interviews/politicians/pdfs"
+            cdnUrlPrefix={CDN_PATHS.politicians.pdfs}
           />
         );
         lastElementType.current = "pdf";
@@ -119,7 +135,7 @@ const PoliticianSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/interviews/politicians/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.politicians.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
@@ -210,6 +226,10 @@ const PoliticianSingle = () => {
       </>
     );
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   if (!politician) {
     return <p>Politician not found.</p>;

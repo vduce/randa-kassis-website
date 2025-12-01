@@ -4,12 +4,13 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
-import articles from "../../../api/essayistandcritics.json"; // Import the articles data
+import { fetchCritics } from "../../../services/cdnJsonService";
 import PageTitle from "../../../components/pagetitle/PageTitle";
 import Footer from "../../../components/footer/Footer";
 import Scrollbar from "../../../components/scrollbar/scrollbar";
 import Navbar from "../../../components/Navbar/Navbar";
 import PdfViewer from "../../../components/PdfViewer/PdfViewer";
+import { getCdnUrl } from "../../../config/cdn";
 
 const TheCriticsDetail = () => {
   const { id } = useParams(); // Get the article ID from the URL
@@ -17,45 +18,84 @@ const TheCriticsDetail = () => {
   const [pageNumber, setPageNumber] = useState(null);
   const navigate = useNavigate();
   const [article, setArticle] = useState(undefined); // State to store the article
+  const [articles, setArticles] = useState([]); // State to store all articles
   const [content, setContent] = useState(""); // State to store the article content
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
 
   useEffect(() => {
-    // Find the article by ID
-    const selectedArticle = articles.find((item) => item.id === parseInt(id ?? ""));
-    setArticle(selectedArticle);
+    const loadCritic = async () => {
+      setLoading(true);
+      try {
+        // Fetch critics from server
+        const criticsData = await fetchCritics();
+        setArticles(criticsData);
+        
+        // Find the article by ID
+        const selectedArticle = criticsData.find((item) => item.id === parseInt(id ?? ""));
+        setArticle(selectedArticle);
 
-    // Fetch the content of the article's Markdown file
-    if (selectedArticle && selectedArticle.filename) {
-      const fetchContent = async () => {
-        try {
-          const response = await fetch(`/interviews/essayistcritics/${selectedArticle.filename}`);
+        // Fetch the content of the Markdown file
+        if (selectedArticle && selectedArticle.filename) {
+          const response = await fetch(getCdnUrl(`interviews/essayistcritics/${selectedArticle.filename}`));
           const text = await response.text();
           setContent(text);
-        } catch (error) {
-          console.error("Error fetching article content:", error);
-          setContent("Error loading article content.");
         }
-      };
+      } catch (error) {
+        console.error("Error loading critic:", error);
+        setContent("Error loading content.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      fetchContent();
-    }
+    loadCritic();
   }, [id]);
 
   // calculate page number based on currentArticle
   useEffect(() => {
-    const index = articles.findIndex((item) => item.id === currentArticle);
-    if (index !== -1) {
-      const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
-      setPageNumber(pageNum);
+    if (articles.length > 0) {
+      const index = articles.findIndex((item) => item.id === currentArticle);
+      if (index !== -1) {
+        const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
+        setPageNumber(pageNum);
+      }
     }
-  }, [currentArticle]);
+  }, [currentArticle, articles]);
+
+  if (loading) {
+    return (
+      <Fragment>
+        <Navbar hclass={"wpo-site-header-s1"} />
+        <PageTitle pageTitle={""} pagesub={"Article"} />
+        <section className="wpo-blog-single-section section-padding-bottom">
+          <div className="container">
+            <p>Loading...</p>
+          </div>
+        </section>
+        <Footer />
+        <Scrollbar />
+      </Fragment>
+    );
+  }
 
   if (!article) {
-    return <p>Article not found.</p>;
+    return (
+      <Fragment>
+        <Navbar hclass={"wpo-site-header-s1"} />
+        <PageTitle pageTitle={""} pagesub={"Article"} />
+        <section className="wpo-blog-single-section section-padding-bottom">
+          <div className="container">
+            <p>Article not found.</p>
+          </div>
+        </section>
+        <Footer />
+        <Scrollbar />
+      </Fragment>
+    );
   }
 
   const handlePrevious = () => {

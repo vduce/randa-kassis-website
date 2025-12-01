@@ -1,32 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import politicians from "../../api/politicians.json";
+import { fetchPoliticians } from "../../services/cdnJsonService";
+import { getCdnUrl } from "../../config/cdn";
 
 const PoliticianList = (props) => {
   const { state } = useLocation();
   const [currentPage, setCurrentPage] = useState(state?.pageNum || 1);
   const postsPerPage = 10;
   const [PoliticianContents, setPoliticianContents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch content from markdown files
+  // Fetch politicians from server then fetch markdown content
   useEffect(() => {
-    const fetchPoliticians = async () => {
-      const fetched = await Promise.all(
-        politicians.map(async (pol) => {
-          try {
-            const response = await fetch(`/encounters/${pol.filename}`);
-            const content = await response.text();
-            return { ...pol, content };
-          } catch (error) {
-            console.error(`Error fetching ${pol.filename}:`, error);
-            return { ...pol, description: "Error loading content." };
-          }
-        })
-      );
-      setPoliticianContents(fetched);
+    const loadPoliticians = async () => {
+      setLoading(true);
+      try {
+        // First fetch the politicians list from server metadata
+        const politiciansData = await fetchPoliticians();
+        
+        // Then fetch markdown content for each politician
+        const politiciansWithContent = await Promise.all(
+          politiciansData.map(async (pol) => {
+            try {
+              const response = await fetch(getCdnUrl(`interviews/politicians/${pol.filename}`));
+              const content = await response.text();
+              return { ...pol, content };
+            } catch (error) {
+              console.error(`Error fetching ${pol.filename}:`, error);
+              return { ...pol, description: "Error loading content." };
+            }
+          })
+        );
+        setPoliticianContents(politiciansWithContent);
+      } catch (error) {
+        console.error("Error loading politicians:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchPoliticians();
+    loadPoliticians();
   }, []);
 
   // Calculate the posts to show on the current page
@@ -37,8 +50,11 @@ const PoliticianList = (props) => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [paginate, currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(PoliticianContents.length / postsPerPage);
@@ -91,6 +107,16 @@ const PoliticianList = (props) => {
     window.scrollTo(10, 0);
   };
 
+  if (loading) {
+    return (
+      <section className="wpo-blog-pg-section section-padding-bottom">
+        <div className="container">
+          <p>Loading...</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
@@ -98,18 +124,10 @@ const PoliticianList = (props) => {
           <div className={`col col-lg-5 col-5 ${props.blRight} mt-1`}>
             <div className="wpo-blog-content">
               {currentPoliticians.map((currentPolitician, index) => (
-                <div
-                  className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg"
-                  key={index}
-                >
-                  <div
-                    className="entry-details"
-                    style={{ display: "flex", flexDirection: "column" }}
-                  >
+                <div className="post format-standard-image max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg" key={index}>
+                  <div className="entry-details" style={{ display: "flex", flexDirection: "column" }}>
                     <h5 dangerouslySetInnerHTML={{ __html: currentPolitician.title }}></h5>
-                    <label style={{ fontSize: "14px", color: "#848892" }}>
-                      {currentPolitician.publishedIn}{" "}
-                    </label>
+                    <label style={{ fontSize: "14px", color: "#848892" }}>{currentPolitician.publishedIn} </label>
                     {/* <br /> */}
                     <label
                       style={{
@@ -143,18 +161,10 @@ const PoliticianList = (props) => {
               ))}
 
               {/* Pagination */}
-              <div
-                className="pagination-wrapper pagination-wrapper-left"
-                style={paginationWrapperStyles}
-              >
+              <div className="pagination-wrapper pagination-wrapper-left" style={paginationWrapperStyles}>
                 <ul style={paginationStyles}>
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Previous"
-                      onClick={() => currentPage > 1 && paginate(currentPage - 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Previous" onClick={() => currentPage > 1 && paginate(currentPage - 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-left"></i>
                     </Link>
                   </li>
@@ -163,23 +173,14 @@ const PoliticianList = (props) => {
                       <Link
                         to="#"
                         onClick={() => paginate(number)}
-                        style={
-                          currentPage === number
-                            ? { ...pageLinkStyles, ...activePageStyles }
-                            : pageLinkStyles
-                        }
+                        style={currentPage === number ? { ...pageLinkStyles, ...activePageStyles } : pageLinkStyles}
                       >
                         {number}
                       </Link>
                     </li>
                   ))}
                   <li>
-                    <Link
-                      to="#"
-                      aria-label="Next"
-                      onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
-                      style={pageLinkStyles}
-                    >
+                    <Link to="#" aria-label="Next" onClick={() => currentPage < totalPages && paginate(currentPage + 1)} style={pageLinkStyles}>
                       <i className="fi ti-angle-right"></i>
                     </Link>
                   </li>

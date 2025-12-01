@@ -5,12 +5,12 @@
     "title": "The American Mirage: Between the Guardian Illusion and the Naivety of Dualism",
     "publishedIn": "Published in Al-Ahram Newspaper",
     "publishedAt": "28 February 2022",
-    "description": "The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one’s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day “hero”—a figure shaped by fantasies and longings—only to fall prey to propaganda."
+    "description": "The individual has long since surrendered to the notion of guardianship. In many societies, from birth, one falls under the authority of one\u2019s parents, only to be subsumed later by society, and then by the state. It is no surprise, then, that one ends up chasing the mirage of a modern-day \u201chero\u201d\u2014a figure shaped by fantasies and longings\u2014only to fall prey to propaganda."
   },
   {
     "id": 2,
     "filename": "article2.md",
-    "title": "Who Will Win \u0027Humanity\u0027?",
+    "title": "Who Will Win 'Humanity'?",
     "publishedIn": "Published in Al-Ahram Newspaper",
     "publishedAt": "9 February 2022",
     "description": "Over the past decade \u2014 ever since social media infiltrated nearly every home, bar, and street corner \u2014 we\u2019ve seen a surge in words and phrases (regardless of their linguistic merit or expressive depth), freely offered by their creators and generously rewarded by followers and online friends with medals of"
@@ -133,7 +133,7 @@
     "title": "Tunisia on Life Support",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "11 January 2011",
-    "description": "For decades, Arab regimes have succeeded in numbing the collective consciousness of their peoples through a range of tactics: repression, violence, exile—whether abroad or beneath the soil—and the systematic marginalisation of those who remained on the land. All this has served one ultimate goal: the entrenchment of absolute power."
+    "description": "For decades, Arab regimes have succeeded in numbing the collective consciousness of their peoples through a range of tactics: repression, violence, exile\u2014whether abroad or beneath the soil\u2014and the systematic marginalisation of those who remained on the land. All this has served one ultimate goal: the entrenchment of absolute power."
   },
   {
     "id": 18,
@@ -410,9 +410,17 @@
   {
     "id": 52,
     "filename": "article52.md",
-    "title": "The \u0027Group\u0027 Effect",
+    "title": "The 'Group' Effect",
     "publishedIn": "Published in Al-Hiwar al-Mutamaddin",
     "publishedAt": "10 June 2008",
     "description": "From the moment he is born, the Arab citizen remains bound to his destiny and to the society in which he places an unquestioned and absolute faith. As a result, he rejects the psychological evolution that challenges him, depriving himself of the ability to be open to external ideas. In doing so, he "
+  },
+  {
+    "id": 53,
+    "filename": "article53.md",
+    "title": "533",
+    "publishedIn": "53rd",
+    "publishedAt": "53 dsate",
+    "description": ""
   }
 ]

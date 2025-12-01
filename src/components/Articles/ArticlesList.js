@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import articles from "../../api/articles.json";
+import { fetchArticles } from "../../services/cdnJsonService";
+import { getCdnUrl } from "../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -11,28 +12,42 @@ const ArticlesList = (props) => {
   const [currentPage, setCurrentPage] = useState(state?.pageNumber || 1);
   const postsPerPage = 10;
   const [articleContents, setArticleContents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch content from markdown files
+  // Fetch articles JSON from CDN, then fetch markdown content
   useEffect(() => {
-    const fetchArticles = async () => {
-      const fetchedArticles = await Promise.all(
-        articles.map(async (article) => {
-          try {
-            const response = await fetch(`/articles/${article.filename}`);
-            const content = await response.text();
-            return { ...article, content };
-          } catch (error) {
-            console.error(`Error fetching ${article.filename}:`, error);
-            return { ...article, description: "Error loading content." };
-          }
-        })
-      );
-      setArticleContents(fetchedArticles);
+    const loadArticles = async () => {
+      setLoading(true);
+      try {
+        // First fetch the articles JSON from CDN
+        const articlesData = await fetchArticles();
+        
+        // Then fetch content for each article
+        const fetchedArticles = await Promise.all(
+          articlesData.map(async (article) => {
+            try {
+              const response = await fetch(getCdnUrl(`articles/${article.filename}`));
+              const content = await response.text();
+              return { ...article, content };
+            } catch (error) {
+              console.error(`Error fetching ${article.filename}:`, error);
+              return { ...article, description: "Error loading content." };
+            }
+          })
+        );
+        setArticleContents(fetchedArticles);
+      } catch (error) {
+        console.error("Error loading articles:", error);
+        setArticleContents([]);
+      } finally {
+        setLoading(false);
+      }
     };
+    
     // scroll to top on component mount
     window.scrollTo(0, 0);
 
-    fetchArticles();
+    loadArticles();
   }, []);
 
   // Calculate the posts to show on the current page
@@ -48,7 +63,7 @@ const ArticlesList = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
+  }, [paginate, currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(articleContents.length / postsPerPage);

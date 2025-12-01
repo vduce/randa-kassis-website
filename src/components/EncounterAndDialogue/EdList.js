@@ -1,32 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import encounterAndDialogues from "../../api/encounterAndDialogue.json";
+import { fetchEncounters } from "../../services/cdnJsonService";
+import { getCdnUrl } from "../../config/cdn";
 
 const EdList = (props) => {
   const { state } = useLocation();
   const [currentPage, setCurrentPage] = useState(state?.pageNum || 1);
   const postsPerPage = 10;
   const [edContents, setEdContents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch content from markdown files
+  // Fetch encounters from server then fetch markdown content
   useEffect(() => {
-    const fetchEd = async () => {
-      const fetchedEd = await Promise.all(
-        encounterAndDialogues.map(async (ed) => {
-          try {
-            const response = await fetch(`/encounters/${ed.filename}`);
-            const content = await response.text();
-            return { ...ed, content };
-          } catch (error) {
-            console.error(`Error fetching ${ed.filename}:`, error);
-            return { ...ed, description: "Error loading content." };
-          }
-        })
-      );
-      setEdContents(fetchedEd);
+    const loadEncounters = async () => {
+      setLoading(true);
+      try {
+        // First fetch the encounters list from server metadata
+        const encountersData = await fetchEncounters();
+        
+        // Then fetch markdown content for each encounter
+        const encountersWithContent = await Promise.all(
+          encountersData.map(async (ed) => {
+            try {
+              const response = await fetch(getCdnUrl(`encounters/${ed.filename}`));
+              const content = await response.text();
+              return { ...ed, content };
+            } catch (error) {
+              console.error(`Error fetching ${ed.filename}:`, error);
+              return { ...ed, description: "Error loading content." };
+            }
+          })
+        );
+        setEdContents(encountersWithContent);
+      } catch (error) {
+        console.error("Error loading encounters:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchEd();
+    loadEncounters();
   }, []);
 
   // Calculate the posts to show on the current page
@@ -37,8 +50,12 @@ const EdList = (props) => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [paginate, currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(edContents.length / postsPerPage);
@@ -90,6 +107,16 @@ const EdList = (props) => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
+
+  if (loading) {
+    return (
+      <section className="wpo-blog-pg-section section-padding-bottom">
+        <div className="container">
+          <p>Loading...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">

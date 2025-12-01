@@ -10,7 +10,8 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
 import PdfViewer from "../PdfViewer/PdfViewer";
-import encounterAndDialogues from "../../api/encounterAndDialogue.json";
+import { fetchEncounters } from "../../services/cdnJsonService";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
@@ -24,7 +25,9 @@ const EdSingle = () => {
   const [currentElement, setCurrentElement] = useState(Number(id) || 1);
   const [pageNumber, setPageNumber] = useState(state?.pageNumber || 1);
   const [encounterAndDialogue, setEncounterAndDialogue] = useState(null);
+  const [encounterAndDialogues, setEncounterAndDialogues] = useState([]);
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(true);
   const lightGalleryRef = useRef(null);
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
@@ -37,30 +40,43 @@ const EdSingle = () => {
   }, [id]);
 
   useEffect(() => {
-    const selectedEd = encounterAndDialogues.find((item) => item.id === parseInt(id));
-    setEncounterAndDialogue(selectedEd);
-    if (selectedEd && selectedEd.filename) {
-      const fetchContent = async () => {
-        try {
-          const response = await fetch(`/encounters/${selectedEd.filename}`);
+    const loadEncounter = async () => {
+      setLoading(true);
+      try {
+        // Fetch encounters from server
+        const encountersData = await fetchEncounters();
+        setEncounterAndDialogues(encountersData);
+        
+        // Find the encounter by ID
+        const selectedEd = encountersData.find((item) => item.id === parseInt(id));
+        setEncounterAndDialogue(selectedEd);
+
+        // Fetch the content of the Markdown file
+        if (selectedEd && selectedEd.filename) {
+          const response = await fetch(getCdnUrl(`encounters/${selectedEd.filename}`));
           const text = await response.text();
           setContent(text);
-        } catch (error) {
-          console.error("Error fetching article content:", error);
-          setContent("Error loading article content.");
         }
-      };
-      fetchContent();
-    }
+      } catch (error) {
+        console.error("Error loading encounter:", error);
+        setContent("Error loading content.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEncounter();
   }, [id]);
 
   useEffect(() => {
-    const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
-    if (index !== -1) {
-      const pageNum = Math.floor(index / 10) + 1;
-      setPageNumber(pageNum);
+    if (encounterAndDialogues.length > 0) {
+      const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
+      if (index !== -1) {
+        const pageNum = Math.floor(index / 10) + 1;
+        setPageNumber(pageNum);
+      }
     }
-  }, [currentElement]);
+  }, [currentElement, encounterAndDialogues]);
 
   useEffect(() => {
     imageSrcsRef.current = [];
@@ -106,7 +122,7 @@ const EdSingle = () => {
           <PdfViewer
             key={src}
             file={src}
-            cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/encounters/pdfs"
+            cdnUrlPrefix={CDN_PATHS.encounters.pdfs}
           />
         );
         lastElementType.current = "pdf";
@@ -119,7 +135,7 @@ const EdSingle = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/encounters/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.encounters.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";
@@ -210,6 +226,10 @@ const EdSingle = () => {
       </>
     );
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   if (!encounterAndDialogue) {
     return <p>Encounter and dialogue not found.</p>;

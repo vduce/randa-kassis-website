@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import critics from "../../../api/essayistandcritics.json";
+import { fetchCritics } from "../../../services/cdnJsonService";
+import { getCdnUrl } from "../../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -11,26 +12,38 @@ const TheCriticsList = (props) => {
   const [currentPage, setCurrentPage] = useState(state?.pageNumber || 1);
   const postsPerPage = 10;
   const [articleContents, setArticleContents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch content from markdown files
+  // Fetch critics from server then fetch markdown content
   useEffect(() => {
-    const fetchCritics = async () => {
-      const fetchCriticsList = await Promise.all(
-        critics.map(async (critic) => {
-          try {
-            const response = await fetch(`/interviews/essayistcritics/${critic.filename}`);
-            const content = await response.text();
-            return { ...critic, content };
-          } catch (error) {
-            console.error(`Error fetching ${critic.filename}:`, error);
-            return { ...critic, description: "Error loading content." };
-          }
-        })
-      );
-      setArticleContents(fetchCriticsList);
+    const loadCritics = async () => {
+      setLoading(true);
+      try {
+        // First fetch the critics list from server metadata
+        const criticsData = await fetchCritics();
+        
+        // Then fetch markdown content for each critic
+        const criticsWithContent = await Promise.all(
+          criticsData.map(async (critic) => {
+            try {
+              const response = await fetch(getCdnUrl(`interviews/essayistcritics/${critic.filename}`));
+              const content = await response.text();
+              return { ...critic, content };
+            } catch (error) {
+              console.error(`Error fetching ${critic.filename}:`, error);
+              return { ...critic, description: "Error loading content." };
+            }
+          })
+        );
+        setArticleContents(criticsWithContent);
+      } catch (error) {
+        console.error("Error loading critics:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchCritics();
+    loadCritics();
   }, []);
 
   // Calculate the posts to show on the current page
@@ -46,7 +59,7 @@ const TheCriticsList = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
+  }, [paginate, currentPage]);
 
   // Calculate the range of page numbers to show in pagination
   const totalPages = Math.ceil(articleContents.length / postsPerPage);
@@ -94,6 +107,16 @@ const TheCriticsList = (props) => {
     fontWeight: "bold",
     borderColor: "#ff8024",
   };
+
+  if (loading) {
+    return (
+      <section className="wpo-blog-pg-section section-padding-bottom">
+        <div className="container">
+          <p>Loading...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">

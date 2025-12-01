@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm"; // Added for GFM support
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 
 
 const throughMyEyesSections = [
@@ -74,7 +75,7 @@ const ThroughMyEyes = () => {
       const updatedSections = await Promise.all(
         throughMyEyesSections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
             const content = await response.text();
             return { ...section, content };
           } catch (error) {
@@ -156,7 +157,8 @@ const ThroughMyEyes = () => {
       }
 
       const currentSectionname = sections[currentPage]?.sectionName;
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/${currentSectionname}/${src}`;
+      // Build proper CDN path: https://randa-kassis-website.b-cdn.net/gallery/throughmyeyes/intheirgaze/compressed/2.jpg
+      const imageSrc = `${CDN_PATHS.throughMyEyes.photos}/${currentSectionname}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";

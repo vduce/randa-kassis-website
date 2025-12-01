@@ -4,7 +4,8 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
-import articles from "../../api/articles.json";
+import { fetchArticles } from "../../services/cdnJsonService";
+import { getCdnUrl } from "../../config/cdn";
 
 const ArticleSingle = () => {
   const { id } = useParams(); // Get the article ID from the URL
@@ -12,42 +13,57 @@ const ArticleSingle = () => {
   const [pageNumber, setPageNumber] = useState(null);
   const navigate = useNavigate();
   const [article, setArticle] = useState(null); // State to store the article
+  const [articles, setArticles] = useState([]); // State to store all articles
   const [content, setContent] = useState(""); // State to store the article content
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
 
   useEffect(() => {
-    // Find the article by ID
-    const selectedArticle = articles.find((item) => item.id === parseInt(id));
-    setArticle(selectedArticle);
+    const loadArticle = async () => {
+      setLoading(true);
+      try {
+        // Fetch articles from server
+        const articlesData = await fetchArticles();
+        setArticles(articlesData);
+        
+        // Find the article by ID
+        const selectedArticle = articlesData.find((item) => item.id === parseInt(id));
+        setArticle(selectedArticle);
 
-    // Fetch the content of the article's Markdown file
-    if (selectedArticle && selectedArticle.filename) {
-      const fetchContent = async () => {
-        try {
-          const response = await fetch(`/articles/${selectedArticle.filename}`);
+        // Fetch the content of the article's Markdown file
+        if (selectedArticle && selectedArticle.filename) {
+          const response = await fetch(getCdnUrl(`articles/${selectedArticle.filename}`));
           const text = await response.text();
           setContent(text);
-        } catch (error) {
-          console.error("Error fetching article content:", error);
-          setContent("Error loading article content.");
         }
-      };
+      } catch (error) {
+        console.error("Error loading article:", error);
+        setContent("Error loading article content.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      fetchContent();
-    }
+    loadArticle();
   }, [id]);
 
   // calculate page number based on currentArticle
   useEffect(() => {
-    const index = articles.findIndex((item) => item.id === currentArticle);
-    if (index !== -1) {
-      const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
-      setPageNumber(pageNum);
+    if (articles.length > 0) {
+      const index = articles.findIndex((item) => item.id === currentArticle);
+      if (index !== -1) {
+        const pageNum = Math.floor(index / 10) + 1; // Assuming 10 items per page
+        setPageNumber(pageNum);
+      }
     }
-  }, [currentArticle]);
+  }, [currentArticle, articles]);
+
+  if (loading) {
+    return <p>Loading article...</p>;
+  }
 
   if (!article) {
     return <p>Article not found.</p>;
