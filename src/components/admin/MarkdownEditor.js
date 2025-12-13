@@ -29,6 +29,12 @@ const MarkdownEditor = () => {
     publishedAt: '',
     description: ''
   });
+  const [originalMetadata, setOriginalMetadata] = useState({
+    title: '',
+    publishedIn: '',
+    publishedAt: '',
+    description: ''
+  });
 
   // Load file content if editing
   useEffect(() => {
@@ -42,10 +48,17 @@ const MarkdownEditor = () => {
     }
   }, []);
 
-  // Track dirty state
+  // Track dirty state (content OR metadata changes)
   useEffect(() => {
-    setIsDirty(content !== originalContent);
-  }, [content, originalContent]);
+    const contentChanged = content !== originalContent;
+    const metadataChanged = 
+      metadata.title !== originalMetadata.title ||
+      metadata.publishedIn !== originalMetadata.publishedIn ||
+      metadata.publishedAt !== originalMetadata.publishedAt ||
+      metadata.description !== originalMetadata.description;
+    
+    setIsDirty(contentChanged || metadataChanged);
+  }, [content, originalContent, metadata, originalMetadata]);
 
   // Auto-save to localStorage
   useEffect(() => {
@@ -74,12 +87,14 @@ const MarkdownEditor = () => {
         // Load metadata from JSON index
         const metadataResult = await getJSONIndexEntry(category.key, file.name);
         if (metadataResult.success) {
-          setMetadata({
+          const loadedMetadata = {
             title: metadataResult.data.title || '',
             publishedIn: metadataResult.data.publishedIn || '',
             publishedAt: metadataResult.data.publishedAt || '',
             description: metadataResult.data.description || ''
-          });
+          };
+          setMetadata(loadedMetadata);
+          setOriginalMetadata(loadedMetadata);
         }
         
         // Check for draft
@@ -199,6 +214,7 @@ const MarkdownEditor = () => {
         }
         
         setOriginalContent(content);
+        setOriginalMetadata({ ...metadata });
         setOriginalModified(result.data.modified);
         clearDraft(filename);
         
@@ -214,6 +230,7 @@ const MarkdownEditor = () => {
             const retryResult = await updateFile(category.path, filename, content, null);
             if (retryResult.success) {
               setOriginalContent(content);
+              setOriginalMetadata({ ...metadata });
               clearDraft(filename);
               alert('File saved successfully!');
               navigate('/admin/dashboard');
