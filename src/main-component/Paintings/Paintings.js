@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 
 const paintingSections = [
   {
@@ -65,7 +66,7 @@ const Paintings = () => {
       const updatedSections = await Promise.all(
         paintingSections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
             const content = await response.text();
             return { ...section, content };
           } catch (error) {
@@ -120,7 +121,7 @@ const Paintings = () => {
     const imgs = imageBuffer.map(({ src, alt }, i) => (
       <figure key={i} className="w-full sm:w-1/2 md:w-1/3 p-2 text-center">
         <img
-          src={`https://randa-kassis-website.b-cdn.net/paintings/photos/${src}`}
+          src={`${CDN_PATHS.paintings.photos}/${src}`}
           alt={alt || ""}
           className="w-full mx-auto rounded shadow-sm"
           style={{ width: "250px", height: "300px" }}

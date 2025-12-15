@@ -12,7 +12,7 @@ const InTheArenaSections = [
   {
     id: 1,
     title: "In The Arena",
-    markdownFile: "/gallery/arena/arena1.md",
+    markdownFile: "https://pgcdn.b-cdn.net/public/public/gallery/arena/arena1.md",
   },
 ];
 

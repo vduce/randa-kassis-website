@@ -8,6 +8,7 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 
 const ExibitionMomentSections = [
   {
@@ -36,7 +37,7 @@ const ExibitionMoments = () => {
       const updatedSections = await Promise.all(
         ExibitionMomentSections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
             const content = await response.text();
             return { ...section, content };
           } catch (error) {
@@ -83,7 +84,7 @@ const ExibitionMoments = () => {
 
     const imgs = imageBuffer.map(({ src, alt }, i) => ({
       key: i,
-      src: `https://randa-kassis-website.b-cdn.net/exhibitions/photos/${src}`,
+      src: `${CDN_PATHS.exhibitions.photos}/${src}`,
       alt: alt || "",
       caption: alt ? <span className="text-sm text-gray-500 mt-2">{alt}</span> : null,
       className: "w-full mx-auto rounded shadow-sm",
@@ -109,7 +110,7 @@ const ExibitionMoments = () => {
           >
             <PdfViewer
               file={src}
-              cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/exhibitions/pdfs"
+              cdnUrlPrefix={CDN_PATHS.exhibitions.pdfs}
             />
           </div>
         );
