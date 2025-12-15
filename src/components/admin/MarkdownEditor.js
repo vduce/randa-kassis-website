@@ -8,7 +8,17 @@ import './MarkdownEditor.css';
 const MarkdownEditor = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { category, file, mode } = location.state || {};
+  const { category, file, mode, currentPage } = location.state || {};
+
+  // Helper to navigate back with state
+  const navigateBack = () => {
+    navigate('/admin/dashboard', {
+      state: {
+        selectedCategoryKey: category?.key,
+        currentPage: currentPage || 1
+      }
+    });
+  };
 
   const [content, setContent] = useState('');
   const [filename, setFilename] = useState('');
@@ -221,8 +231,8 @@ const MarkdownEditor = () => {
         // Show success message
         alert('File saved successfully!');
         
-        // Navigate back to dashboard
-        navigate('/admin/dashboard');
+        // Navigate back to dashboard with category and page
+        navigateBack();
       } else {
         if (result.error.code === 'CONCURRENT_MODIFICATION') {
           if (window.confirm('The file has been modified by another process. Do you want to overwrite it?')) {
@@ -233,7 +243,7 @@ const MarkdownEditor = () => {
               setOriginalMetadata({ ...metadata });
               clearDraft(filename);
               alert('File saved successfully!');
-              navigate('/admin/dashboard');
+              navigateBack();
             } else {
               setError(`Failed to save: ${retryResult.error.message}`);
             }
@@ -252,10 +262,10 @@ const MarkdownEditor = () => {
   const handleCancel = () => {
     if (isDirty) {
       if (window.confirm('You have unsaved changes. Are you sure you want to leave?')) {
-        navigate('/admin/dashboard');
+        navigateBack();
       }
     } else {
-      navigate('/admin/dashboard');
+      navigateBack();
     }
   };
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { listFiles, sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFileOperations';
 import './FileList.css';
 
-const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger }) => {
+const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger, initialPage = 1, onPageChange }) => {
   const [files, setFiles] = useState([]);
   const [filteredFiles, setFilteredFiles] = useState([]);
   const [paginatedData, setPaginatedData] = useState(null);
@@ -11,9 +11,19 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [sortOrder, setSortOrder] = useState('asc');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [pageSize] = useState(20);
   const [hasPermission, setHasPermission] = useState(false);
+  
+  // Track previous search/sort values to detect actual changes
+  const prevSearchTerm = useRef(searchTerm);
+  const prevSortBy = useRef(sortBy);
+  const prevSortOrder = useRef(sortOrder);
+
+  // Update currentPage when initialPage changes (e.g., returning from editor)
+  useEffect(() => {
+    setCurrentPage(initialPage);
+  }, [initialPage]);
 
   // Load files when category changes or refresh is triggered
   useEffect(() => {
@@ -37,8 +47,18 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
       
       setFilteredFiles(result);
       
-      // Reset to page 1 when filters change
-      setCurrentPage(1);
+      // Reset to page 1 only when search or sort actually changes (not on initial load)
+      const searchChanged = prevSearchTerm.current !== searchTerm;
+      const sortChanged = prevSortBy.current !== sortBy || prevSortOrder.current !== sortOrder;
+      
+      if (searchChanged || sortChanged) {
+        setCurrentPage(1);
+      }
+      
+      // Update refs
+      prevSearchTerm.current = searchTerm;
+      prevSortBy.current = sortBy;
+      prevSortOrder.current = sortOrder;
     } else {
       setFilteredFiles([]);
     }
@@ -105,6 +125,10 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
+    // Notify parent of page change
+    if (onPageChange) {
+      onPageChange(newPage);
+    }
   };
 
   const formatFileSize = (bytes) => {
@@ -147,7 +171,7 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
             <span className="button-icon">📤</span>
             Upload
           </button>
-          <button className="add-new-button" onClick={onAddNew}>
+          <button className="add-new-button" onClick={() => onAddNew(currentPage)}>
             <span className="button-icon">+</span>
             Add New
           </button>
@@ -245,7 +269,7 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
                     <td className="file-actions">
                       <button
                         className="action-button edit-button"
-                        onClick={() => onSelectFile(file)}
+                        onClick={() => onSelectFile(file, currentPage)}
                         title="Edit file"
                       >
                         ✏️ Edit

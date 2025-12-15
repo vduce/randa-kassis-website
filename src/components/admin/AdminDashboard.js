@@ -1,22 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import CategorySelector from './CategorySelector';
 import FileList from './FileList';
 import ConfirmDialog from './ConfirmDialog';
 import FileUpload from './FileUpload';
 import { deleteFile } from '../../services/unifiedFileOperations';
+import { CONTENT_CATEGORIES } from './CategorySelector';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [fileToDelete, setFileToDelete] = useState(null);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [showUpload, setShowUpload] = useState(false);
+
+  // Restore category and page from navigation state
+  useEffect(() => {
+    if (location.state?.selectedCategoryKey) {
+      const category = CONTENT_CATEGORIES.find(c => c.key === location.state.selectedCategoryKey);
+      if (category) {
+        setSelectedCategory(category);
+      }
+    }
+    if (location.state?.currentPage) {
+      setCurrentPage(location.state.currentPage);
+    }
+  }, [location.state]);
 
   const handleLogout = () => {
     logout();
@@ -27,25 +43,31 @@ const AdminDashboard = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleSelectFile = (file) => {
-    // Navigate to editor with file data
+  const handleSelectFile = (file, page) => {
+    // Navigate to editor with file data and current page
     navigate('/admin/editor', {
       state: {
         category: selectedCategory,
         file: file,
-        mode: 'edit'
+        mode: 'edit',
+        currentPage: page
       }
     });
   };
 
-  const handleAddNew = () => {
-    // Navigate to editor for new file
+  const handleAddNew = (page) => {
+    // Navigate to editor for new file with current page
     navigate('/admin/editor', {
       state: {
         category: selectedCategory,
-        mode: 'create'
+        mode: 'create',
+        currentPage: page
       }
     });
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   const handleDeleteFile = (file) => {
@@ -218,6 +240,8 @@ const AdminDashboard = () => {
                 onDeleteFile={handleDeleteFile}
                 onAddNew={handleAddNew}
                 refreshTrigger={refreshTrigger}
+                initialPage={currentPage}
+                onPageChange={handlePageChange}
               />
             </div>
           )}
