@@ -10,87 +10,88 @@ import PhotoGalleryEd from "../../components/PhotoGalleryEd/PhotoGalleryEd";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
+import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
 
 const companionSections = [
   {
     id: 1,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion1.md",
+    markdownFile: "gallery/companion/companion1.md",
   },
   {
     id: 2,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion2.md",
+    markdownFile: "gallery/companion/companion2.md",
   },
   {
     id: 3,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion3.md",
+    markdownFile: "gallery/companion/companion3.md",
   },
   {
     id: 4,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion4.md",
+    markdownFile: "gallery/companion/companion4.md",
   },
   {
     id: 5,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion5.md",
+    markdownFile: "gallery/companion/companion5.md",
   },
   {
     id: 6,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion6.md",
+    markdownFile: "gallery/companion/companion6.md",
   },
   {
     id: 7,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion7.md",
+    markdownFile: "gallery/companion/companion7.md",
   },
   {
     id: 8,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion8.md",
+    markdownFile: "gallery/companion/companion8.md",
   },
   {
     id: 9,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion9.md",
+    markdownFile: "gallery/companion/companion9.md",
   },
   {
     id: 10,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion10.md",
+    markdownFile: "gallery/companion/companion10.md",
   },
   {
     id: 11,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion11.md",
+    markdownFile: "gallery/companion/companion11.md",
   },
   {
     id: 12,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion12.md",
+    markdownFile: "gallery/companion/companion12.md",
   },
   {
     id: 13,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion13.md",
+    markdownFile: "gallery/companion/companion13.md",
   },
   {
     id: 14,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion14.md",
+    markdownFile: "gallery/companion/companion14.md",
   },
   {
     id: 15,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion15.md",
+    markdownFile: "gallery/companion/companion15.md",
   },
   {
     id: 16,
     title: "My Four-Pawed Companions",
-    markdownFile: "/gallery/companion/companion16.md",
+    markdownFile: "gallery/companion/companion16.md",
   },
 ];
 
@@ -118,7 +119,7 @@ const MyCompanion = () => {
       const updatedSections = await Promise.all(
         companionSections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
             const content = await response.text();
             return { ...section, content };
           } catch (error) {
@@ -209,7 +210,7 @@ const MyCompanion = () => {
         photoBuffer = [];
       }
 
-      const imageSrc = `https://randa-kassis-website.b-cdn.net/gallery/my4pawedcompanion/photos/${src}`;
+      const imageSrc = `${CDN_PATHS.companion.photos}/${src}`;
       imageSrcsRef.current.push(imageSrc);
       photoBuffer.push({ src: imageSrc, alt: alt || "" });
       lastElementType.current = "img";

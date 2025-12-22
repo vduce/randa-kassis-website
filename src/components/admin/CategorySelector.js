@@ -66,6 +66,13 @@ const CONTENT_CATEGORIES = [
     path: 'public/gallery/myeyes',
     icon: '👁️',
     description: 'Personal photography and observations'
+  },
+  {
+    key: 'companion',
+    label: 'My Four-Pawed Companions',
+    path: 'public/gallery/companion',
+    icon: '🐾',
+    description: 'Pet companions gallery'
   }
 ];
 

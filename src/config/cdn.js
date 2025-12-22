@@ -71,6 +71,10 @@ export const CDN_PATHS = {
     content: `${CONTENT_CDN}/gallery/myeyes`,
     photos: `${PRODUCTION_CDN}/gallery/throughmyeyes`, // Base path for subsections
   },
+  companion: {
+    content: `${CONTENT_CDN}/gallery/companion`,
+    photos: `${PRODUCTION_CDN}/gallery/my4pawedcompanion/photos`,
+  },
 };
 
 export default {
