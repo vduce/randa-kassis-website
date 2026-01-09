@@ -102,7 +102,7 @@
   border: 2px solid #e0e0e0;
   border-radius: 6px;
   font-size: 14px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   min-width: 200px;
   transition: border-color 0.3s ease;
 }
@@ -190,7 +190,7 @@
   flex: 1;
   padding: 20px;
   border: none;
-  font-family: 'Courier New', Consolas, Monaco, monospace;
+  font-family: "Courier New", Consolas, Monaco, monospace;
   font-size: 14px;
   line-height: 1.6;
   resize: none;
@@ -213,8 +213,9 @@
 /* Preview Pane */
 .preview-pane {
   background: white;
-  overflow-y: auto;
+  overflow: auto;
   border-left: 1px solid #e0e0e0;
+  /* min-width: 750px;   Ensures gallery renders at proper width */
 }
 
 /* Responsive */
@@ -222,7 +223,7 @@
   .editor-toolbar {
     padding: 12px 16px;
   }
-  
+
   .markdown-textarea {
     padding: 18px;
   }
@@ -239,7 +240,7 @@
     flex: 1 1 100%;
     order: 1;
   }
-  
+
   .toolbar-center {
     order: 2;
     flex: 0 0 auto;
@@ -256,7 +257,7 @@
     width: 100%;
     max-width: 300px;
   }
-  
+
   .metadata-button {
     display: none;
   }
@@ -269,6 +270,7 @@
   .editor-container.view-split .preview-pane {
     width: 100% !important;
     height: 50%;
+    min-width: unset; /* Remove min-width on mobile */
   }
 
   .pane-divider {
@@ -276,7 +278,7 @@
     height: 1px;
     cursor: row-resize;
   }
-  
+
   .metadata-content {
     padding: 20px 16px;
   }
@@ -292,11 +294,11 @@
     padding: 8px 12px;
     font-size: 13px;
   }
-  
+
   .back-button {
     padding: 8px;
   }
-  
+
   .toolbar-left {
     gap: 8px;
   }
@@ -317,50 +319,50 @@
   .dirty-indicator {
     display: none;
   }
-  
+
   .view-mode-toggle {
     padding: 2px;
   }
-  
+
   .toggle-button {
     padding: 8px 10px;
     font-size: 14px;
   }
-  
+
   .cancel-button {
     padding: 8px 12px;
   }
-  
+
   .save-button {
     padding: 8px 16px;
   }
-  
+
   .metadata-content {
     padding: 16px 12px;
   }
-  
+
   .metadata-content h3 {
     font-size: 16px;
   }
-  
+
   .metadata-help {
     font-size: 12px;
   }
-  
+
   .metadata-form {
     gap: 14px;
   }
-  
+
   .metadata-form label {
     font-size: 13px;
   }
-  
+
   .metadata-input,
   .metadata-textarea {
     padding: 10px;
     font-size: 13px;
   }
-  
+
   .editor-error {
     padding: 10px 12px;
     font-size: 13px;
@@ -374,22 +376,22 @@
     min-height: 44px;
     min-width: 44px;
   }
-  
+
   .filename-input,
   .metadata-input {
     min-height: 44px;
   }
-  
+
   .markdown-textarea {
     font-size: 16px; /* Prevent zoom on iOS */
     line-height: 1.6;
   }
-  
+
   /* Larger touch targets for mobile */
   .view-mode-toggle {
     gap: 4px;
   }
-  
+
   .toggle-button {
     padding: 10px 14px;
   }

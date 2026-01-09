@@ -1,9 +1,17 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { readFile, createFile, updateFile, generateNextFilename } from '../../services/unifiedFileOperations';
-import { getJSONIndexEntry, updateJSONIndexEntry } from '../../services/serverJsonService';
-import MarkdownPreview from './MarkdownPreview';
-import './MarkdownEditor.css';
+import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import {
+  readFile,
+  createFile,
+  updateFile,
+  generateNextFilename,
+} from "../../services/unifiedFileOperations";
+import {
+  getJSONIndexEntry,
+  updateJSONIndexEntry,
+} from "../../services/serverJsonService";
+import MarkdownPreview from "./MarkdownPreview";
+import "./MarkdownEditor.css";
 
 const MarkdownEditor = () => {
   const navigate = useNavigate();
@@ -12,61 +20,61 @@ const MarkdownEditor = () => {
 
   // Helper to navigate back with state
   const navigateBack = () => {
-    navigate('/admin/dashboard', {
+    navigate("/admin/dashboard", {
       state: {
         selectedCategoryKey: category?.key,
-        currentPage: currentPage || 1
-      }
+        currentPage: currentPage || 1,
+      },
     });
   };
 
-  const [content, setContent] = useState('');
-  const [filename, setFilename] = useState('');
-  const [originalContent, setOriginalContent] = useState('');
+  const [content, setContent] = useState("");
+  const [filename, setFilename] = useState("");
+  const [originalContent, setOriginalContent] = useState("");
   const [originalModified, setOriginalModified] = useState(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
   const [isDirty, setIsDirty] = useState(false);
-  const [viewMode, setViewMode] = useState('split'); // 'split', 'editor', 'preview'
-  const [paneSize, setPaneSize] = useState(50); // Percentage for left pane
+  const [viewMode, setViewMode] = useState("split"); // 'split', 'editor', 'preview'
+  const [paneSize, setPaneSize] = useState(50); // Percentage for left pane (35% editor, 65% preview)
   const [showMetadata, setShowMetadata] = useState(false);
-  
+
   // Metadata fields
   const [metadata, setMetadata] = useState({
-    title: '',
-    publishedIn: '',
-    publishedAt: '',
-    description: ''
+    title: "",
+    publishedIn: "",
+    publishedAt: "",
+    description: "",
   });
   const [originalMetadata, setOriginalMetadata] = useState({
-    title: '',
-    publishedIn: '',
-    publishedAt: '',
-    description: ''
+    title: "",
+    publishedIn: "",
+    publishedAt: "",
+    description: "",
   });
 
   // Load file content if editing
   useEffect(() => {
-    if (mode === 'edit' && file && category) {
+    if (mode === "edit" && file && category) {
       loadFileContent();
-    } else if (mode === 'create' && category) {
+    } else if (mode === "create" && category) {
       initializeNewFile();
     } else {
       // No valid state, redirect back
-      navigate('/admin/dashboard');
+      navigate("/admin/dashboard");
     }
   }, []);
 
   // Track dirty state (content OR metadata changes)
   useEffect(() => {
     const contentChanged = content !== originalContent;
-    const metadataChanged = 
+    const metadataChanged =
       metadata.title !== originalMetadata.title ||
       metadata.publishedIn !== originalMetadata.publishedIn ||
       metadata.publishedAt !== originalMetadata.publishedAt ||
       metadata.description !== originalMetadata.description;
-    
+
     setIsDirty(contentChanged || metadataChanged);
   }, [content, originalContent, metadata, originalMetadata]);
 
@@ -93,27 +101,27 @@ const MarkdownEditor = () => {
         setOriginalContent(result.data.content);
         setOriginalModified(result.data.modified);
         setFilename(file.name);
-        
+
         // Load metadata from JSON index
         const metadataResult = await getJSONIndexEntry(category.key, file.name);
         if (metadataResult.success) {
           const loadedMetadata = {
-            title: metadataResult.data.title || '',
-            publishedIn: metadataResult.data.publishedIn || '',
-            publishedAt: metadataResult.data.publishedAt || '',
-            description: metadataResult.data.description || ''
+            title: metadataResult.data.title || "",
+            publishedIn: metadataResult.data.publishedIn || "",
+            publishedAt: metadataResult.data.publishedAt || "",
+            description: metadataResult.data.description || "",
           };
           setMetadata(loadedMetadata);
           setOriginalMetadata(loadedMetadata);
         }
-        
+
         // Check for draft
         checkForDraft(file.name);
       } else {
         setError(`Failed to load file: ${result.error.message}`);
       }
     } catch (err) {
-      setError('An unexpected error occurred while loading the file.');
+      setError("An unexpected error occurred while loading the file.");
     } finally {
       setLoading(false);
     }
@@ -125,16 +133,19 @@ const MarkdownEditor = () => {
     try {
       // Generate next filename based on category pattern
       const patterns = {
-        articles: { pattern: /article(\d+)\.md/, prefix: 'article' },
-        encounters: { pattern: /ed(\d+)\.md/, prefix: 'ed' },
-        interviews_politicians: { pattern: /po(\d+)\.md/, prefix: 'po' },
-        interviews_painters: { pattern: /painters(\d+)\.md/, prefix: 'painters' },
-        interviews_critics: { pattern: /ec(\d+)\.md/, prefix: 'ec' },
-        story: { pattern: /story(\d+)\.md/, prefix: 'story' },
-        paintings: { pattern: /painting(\d+)\.md/, prefix: 'painting' },
-        exhibitions: { pattern: /em(\d+)\.md/, prefix: 'em' },
-        throughMyEyes: { pattern: /myeyes(\d+)\.md/, prefix: 'myeyes' },
-        companion: { pattern: /companion(\d+)\.md/, prefix: 'companion' }
+        articles: { pattern: /article(\d+)\.md/, prefix: "article" },
+        encounters: { pattern: /ed(\d+)\.md/, prefix: "ed" },
+        interviews_politicians: { pattern: /po(\d+)\.md/, prefix: "po" },
+        interviews_painters: {
+          pattern: /painters(\d+)\.md/,
+          prefix: "painters",
+        },
+        interviews_critics: { pattern: /ec(\d+)\.md/, prefix: "ec" },
+        story: { pattern: /story(\d+)\.md/, prefix: "story" },
+        paintings: { pattern: /painting(\d+)\.md/, prefix: "painting" },
+        exhibitions: { pattern: /em(\d+)\.md/, prefix: "em" },
+        throughMyEyes: { pattern: /myeyes(\d+)\.md/, prefix: "myeyes" },
+        companion: { pattern: /companion(\d+)\.md/, prefix: "companion" },
       };
 
       const categoryPattern = patterns[category.key];
@@ -142,17 +153,17 @@ const MarkdownEditor = () => {
         const nextFilename = await generateNextFilename(
           category.path,
           categoryPattern.pattern,
-          categoryPattern.prefix
+          categoryPattern.prefix,
         );
         setFilename(nextFilename);
       } else {
-        setFilename('new-file.md');
+        setFilename("new-file.md");
       }
 
-      setContent('# New Document\n\nStart writing your content here...');
-      setOriginalContent('');
+      setContent("# New Document\n\nStart writing your content here...");
+      setOriginalContent("");
     } catch (err) {
-      setError('Failed to initialize new file.');
+      setError("Failed to initialize new file.");
     } finally {
       setLoading(false);
     }
@@ -160,23 +171,28 @@ const MarkdownEditor = () => {
 
   const saveDraft = () => {
     const draftKey = `draft_${category.key}_${filename}`;
-    localStorage.setItem(draftKey, JSON.stringify({
-      content,
-      timestamp: Date.now()
-    }));
+    localStorage.setItem(
+      draftKey,
+      JSON.stringify({
+        content,
+        timestamp: Date.now(),
+      }),
+    );
   };
 
   const checkForDraft = (fname) => {
     const draftKey = `draft_${category.key}_${fname}`;
     const draft = localStorage.getItem(draftKey);
-    
+
     if (draft) {
       const { content: draftContent, timestamp } = JSON.parse(draft);
       const age = Date.now() - timestamp;
-      
+
       // If draft is less than 24 hours old
       if (age < 24 * 60 * 60 * 1000) {
-        if (window.confirm('A draft was found. Would you like to restore it?')) {
+        if (
+          window.confirm("A draft was found. Would you like to restore it?")
+        ) {
           setContent(draftContent);
         } else {
           clearDraft(fname);
@@ -194,12 +210,12 @@ const MarkdownEditor = () => {
 
   const handleSave = async () => {
     if (!filename.trim()) {
-      alert('Please enter a filename');
+      alert("Please enter a filename");
       return;
     }
 
-    if (!filename.endsWith('.md')) {
-      alert('Filename must end with .md');
+    if (!filename.endsWith(".md")) {
+      alert("Filename must end with .md");
       return;
     }
 
@@ -209,41 +225,59 @@ const MarkdownEditor = () => {
     try {
       let result;
 
-      if (mode === 'create') {
+      if (mode === "create") {
         result = await createFile(category.path, filename, content);
       } else {
-        result = await updateFile(category.path, filename, content, originalModified);
+        result = await updateFile(
+          category.path,
+          filename,
+          content,
+          originalModified,
+        );
       }
 
       if (result.success) {
         // Update JSON index with metadata
-        const jsonResult = await updateJSONIndexEntry(category.key, filename, metadata);
-        
+        const jsonResult = await updateJSONIndexEntry(
+          category.key,
+          filename,
+          metadata,
+        );
+
         if (!jsonResult.success) {
-          console.warn('Failed to update JSON index:', jsonResult.error);
+          console.warn("Failed to update JSON index:", jsonResult.error);
           // Continue anyway - file was saved successfully
         }
-        
+
         setOriginalContent(content);
         setOriginalMetadata({ ...metadata });
         setOriginalModified(result.data.modified);
         clearDraft(filename);
-        
+
         // Show success message
-        alert('File saved successfully!');
-        
+        alert("File saved successfully!");
+
         // Navigate back to dashboard with category and page
         navigateBack();
       } else {
-        if (result.error.code === 'CONCURRENT_MODIFICATION') {
-          if (window.confirm('The file has been modified by another process. Do you want to overwrite it?')) {
+        if (result.error.code === "CONCURRENT_MODIFICATION") {
+          if (
+            window.confirm(
+              "The file has been modified by another process. Do you want to overwrite it?",
+            )
+          ) {
             // Retry without modification check
-            const retryResult = await updateFile(category.path, filename, content, null);
+            const retryResult = await updateFile(
+              category.path,
+              filename,
+              content,
+              null,
+            );
             if (retryResult.success) {
               setOriginalContent(content);
               setOriginalMetadata({ ...metadata });
               clearDraft(filename);
-              alert('File saved successfully!');
+              alert("File saved successfully!");
               navigateBack();
             } else {
               setError(`Failed to save: ${retryResult.error.message}`);
@@ -254,7 +288,7 @@ const MarkdownEditor = () => {
         }
       }
     } catch (err) {
-      setError('An unexpected error occurred while saving the file.');
+      setError("An unexpected error occurred while saving the file.");
     } finally {
       setSaving(false);
     }
@@ -262,7 +296,11 @@ const MarkdownEditor = () => {
 
   const handleCancel = () => {
     if (isDirty) {
-      if (window.confirm('You have unsaved changes. Are you sure you want to leave?')) {
+      if (
+        window.confirm(
+          "You have unsaved changes. Are you sure you want to leave?",
+        )
+      ) {
         navigateBack();
       }
     } else {
@@ -302,31 +340,33 @@ const MarkdownEditor = () => {
               onChange={handleFilenameChange}
               className="filename-input"
               placeholder="filename.md"
-              disabled={mode === 'edit'}
+              disabled={mode === "edit"}
             />
           </div>
-          {isDirty && <span className="dirty-indicator">● Unsaved changes</span>}
+          {isDirty && (
+            <span className="dirty-indicator">● Unsaved changes</span>
+          )}
         </div>
 
         <div className="toolbar-center">
           <div className="view-mode-toggle">
             <button
-              className={`toggle-button ${viewMode === 'editor' ? 'active' : ''}`}
-              onClick={() => setViewMode('editor')}
+              className={`toggle-button ${viewMode === "editor" ? "active" : ""}`}
+              onClick={() => setViewMode("editor")}
               title="Editor only"
             >
               📝
             </button>
             <button
-              className={`toggle-button ${viewMode === 'split' ? 'active' : ''}`}
-              onClick={() => setViewMode('split')}
+              className={`toggle-button ${viewMode === "split" ? "active" : ""}`}
+              onClick={() => setViewMode("split")}
               title="Split view"
             >
               ⚌
             </button>
             <button
-              className={`toggle-button ${viewMode === 'preview' ? 'active' : ''}`}
-              onClick={() => setViewMode('preview')}
+              className={`toggle-button ${viewMode === "preview" ? "active" : ""}`}
+              onClick={() => setViewMode("preview")}
               title="Preview only"
             >
               👁️
@@ -335,14 +375,17 @@ const MarkdownEditor = () => {
         </div>
 
         <div className="toolbar-right">
-          <button 
-            className="toolbar-button metadata-button" 
+          <button
+            className="toolbar-button metadata-button"
             onClick={() => setShowMetadata(!showMetadata)}
             title="Toggle metadata editor"
           >
-            {showMetadata ? '📝 Hide Metadata' : '📋 Edit Metadata'}
+            {showMetadata ? "📝 Hide Metadata" : "📋 Edit Metadata"}
           </button>
-          <button className="toolbar-button cancel-button" onClick={handleCancel}>
+          <button
+            className="toolbar-button cancel-button"
+            onClick={handleCancel}
+          >
             Cancel
           </button>
           <button
@@ -350,7 +393,7 @@ const MarkdownEditor = () => {
             onClick={handleSave}
             disabled={saving || !isDirty}
           >
-            {saving ? 'Saving...' : 'Save'}
+            {saving ? "Saving..." : "Save"}
           </button>
         </div>
       </div>
@@ -360,8 +403,10 @@ const MarkdownEditor = () => {
         <div className="metadata-panel">
           <div className="metadata-content">
             <h3>Content Metadata</h3>
-            <p className="metadata-help">This information will be saved to the JSON index file</p>
-            
+            <p className="metadata-help">
+              This information will be saved to the JSON index file
+            </p>
+
             <div className="metadata-form">
               <div className="form-group">
                 <label htmlFor="meta-title">Title *</label>
@@ -369,7 +414,9 @@ const MarkdownEditor = () => {
                   id="meta-title"
                   type="text"
                   value={metadata.title}
-                  onChange={(e) => setMetadata({ ...metadata, title: e.target.value })}
+                  onChange={(e) =>
+                    setMetadata({ ...metadata, title: e.target.value })
+                  }
                   placeholder="Enter article title"
                   className="metadata-input"
                 />
@@ -381,7 +428,9 @@ const MarkdownEditor = () => {
                   id="meta-published-in"
                   type="text"
                   value={metadata.publishedIn}
-                  onChange={(e) => setMetadata({ ...metadata, publishedIn: e.target.value })}
+                  onChange={(e) =>
+                    setMetadata({ ...metadata, publishedIn: e.target.value })
+                  }
                   placeholder="e.g., Published in Al-Ahram Newspaper"
                   className="metadata-input"
                 />
@@ -393,7 +442,9 @@ const MarkdownEditor = () => {
                   id="meta-published-at"
                   type="text"
                   value={metadata.publishedAt}
-                  onChange={(e) => setMetadata({ ...metadata, publishedAt: e.target.value })}
+                  onChange={(e) =>
+                    setMetadata({ ...metadata, publishedAt: e.target.value })
+                  }
                   placeholder="e.g., 28 February 2022"
                   className="metadata-input"
                 />
@@ -404,7 +455,9 @@ const MarkdownEditor = () => {
                 <textarea
                   id="meta-description"
                   value={metadata.description}
-                  onChange={(e) => setMetadata({ ...metadata, description: e.target.value })}
+                  onChange={(e) =>
+                    setMetadata({ ...metadata, description: e.target.value })
+                  }
                   placeholder="Enter a brief description or excerpt"
                   className="metadata-textarea"
                   rows="4"
@@ -425,8 +478,11 @@ const MarkdownEditor = () => {
 
       {/* Editor and Preview */}
       <div className={`editor-container view-${viewMode}`}>
-        {(viewMode === 'editor' || viewMode === 'split') && (
-          <div className="editor-pane" style={{ width: viewMode === 'split' ? `${paneSize}%` : '100%' }}>
+        {(viewMode === "editor" || viewMode === "split") && (
+          <div
+            className="editor-pane"
+            style={{ width: viewMode === "split" ? `${paneSize}%` : "100%" }}
+          >
             <textarea
               className="markdown-textarea"
               value={content}
@@ -437,12 +493,15 @@ const MarkdownEditor = () => {
           </div>
         )}
 
-        {viewMode === 'split' && (
-          <div className="pane-divider" />
-        )}
+        {viewMode === "split" && <div className="pane-divider" />}
 
-        {(viewMode === 'preview' || viewMode === 'split') && (
-          <div className="preview-pane" style={{ width: viewMode === 'split' ? `${100 - paneSize}%` : '100%' }}>
+        {(viewMode === "preview" || viewMode === "split") && (
+          <div
+            className="preview-pane"
+            style={{
+              width: viewMode === "split" ? `${100 - paneSize}%` : "100%",
+            }}
+          >
             <MarkdownPreview content={content} category={category} />
           </div>
         )}

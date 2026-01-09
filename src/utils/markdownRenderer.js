@@ -206,6 +206,11 @@ export const createMarkdownRenderer = (categoryKey, options = {}) => {
       return <a href={href}>{children}</a>;
     },
 
+    b: ({ children }) => {
+      lastElementType = "b";
+      return <b>{children}</b>;
+    },
+
     h4: ({ children }) => {
       lastElementType = "h4";
       return <h4>{children}</h4>;

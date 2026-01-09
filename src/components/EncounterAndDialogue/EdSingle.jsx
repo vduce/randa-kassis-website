@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
 import LightGallery from "lightgallery/react";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -8,10 +8,9 @@ import lgVideo from "lightgallery/plugins/video";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import PhotoGalleryEd from "../PhotoGalleryEd/PhotoGalleryEd";
-import PdfViewer from "../PdfViewer/PdfViewer";
 import { fetchEncounters } from "../../services/cdnJsonService";
-import { getCdnUrl, CDN_PATHS } from "../../config/cdn";
+import { getCdnUrl } from "../../config/cdn";
+import { createMarkdownRenderer } from "../../utils/markdownRenderer";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "lightgallery/css/lightgallery.css";
@@ -31,9 +30,21 @@ const EdSingle = () => {
   const lightGalleryRef = useRef(null);
   const imageSrcsRef = useRef([]);
   const [currentPageImages, setCurrentPageImages] = useState([]);
-  let mediaBuffer = [];
-  let photoBuffer = []; // Buffer for consecutive images
-  const lastElementType = useRef(null); // Track the last rendered element type
+
+  // Navigation handler for .md links
+  const handleMdNavigation = (href) => {
+    const edId = href.replace("ed", "").replace(".md", "");
+    navigate(`/encounter-and-dialogue-single/${edId}`);
+    window.scrollTo(0, 0);
+  };
+
+  // Create markdown renderer with shared logic
+  const renderer = useMemo(() => {
+    return createMarkdownRenderer("encounters", {
+      onNavigate: handleMdNavigation,
+      imageSrcsRef: imageSrcsRef,
+    });
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,17 +54,18 @@ const EdSingle = () => {
     const loadEncounter = async () => {
       setLoading(true);
       try {
-        // Fetch encounters from server
         const encountersData = await fetchEncounters();
         setEncounterAndDialogues(encountersData);
-        
-        // Find the encounter by ID
-        const selectedEd = encountersData.find((item) => item.id === parseInt(id));
+
+        const selectedEd = encountersData.find(
+          (item) => item.id === parseInt(id),
+        );
         setEncounterAndDialogue(selectedEd);
 
-        // Fetch the content of the Markdown file
         if (selectedEd && selectedEd.filename) {
-          const response = await fetch(getCdnUrl(`encounters/${selectedEd.filename}`));
+          const response = await fetch(
+            getCdnUrl(`encounters/${selectedEd.filename}`),
+          );
           const text = await response.text();
           setContent(text);
         }
@@ -70,7 +82,9 @@ const EdSingle = () => {
 
   useEffect(() => {
     if (encounterAndDialogues.length > 0) {
-      const index = encounterAndDialogues.findIndex((item) => item.id === currentElement);
+      const index = encounterAndDialogues.findIndex(
+        (item) => item.id === currentElement,
+      );
       if (index !== -1) {
         const pageNum = Math.floor(index / 10) + 1;
         setPageNumber(pageNum);
@@ -86,144 +100,17 @@ const EdSingle = () => {
           src,
           thumb: src,
           subHtml: "",
-        }))
+        })),
       );
     }, 0);
   }, [content]);
 
-  const flushMedia = () => {
-    if (mediaBuffer.length === 0 && photoBuffer.length === 0) return null;
-    const nodes = [...mediaBuffer];
-    if (photoBuffer.length > 0) {
-      nodes.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
-      photoBuffer = []; // Clear the buffer after flushing
-    }
-    mediaBuffer = [];
-    return (
-      <div
-        className="d-flex flex-wrap justify-content-center items-start -mx-2"
-        style={{ gap: "6px" }}
-      >
-        {nodes.map((node, i) => (
-          <React.Fragment key={i}>{node}</React.Fragment>
-        ))}
-      </div>
-    );
-  };
-
-  const components = {
-    img: ({ src, alt }) => {
-      if (src?.endsWith(".pdf")) {
-        if (photoBuffer.length > 0) {
-          mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
-          photoBuffer = [];
-        }
-        mediaBuffer.push(
-          <PdfViewer
-            key={src}
-            file={src}
-            cdnUrlPrefix={CDN_PATHS.encounters.pdfs}
-          />
-        );
-        lastElementType.current = "pdf";
-        return null;
-      }
-
-      // Flush buffer if the last element was not an image
-      if (photoBuffer.length > 0 && lastElementType.current !== "img") {
-        mediaBuffer.push(<PhotoGalleryEd key={`gallery-${Date.now()}`} photos={photoBuffer} />);
-        photoBuffer = [];
-      }
-
-      const imageSrc = `${CDN_PATHS.encounters.photos}/${src}`;
-      imageSrcsRef.current.push(imageSrc);
-      photoBuffer.push({ src: imageSrc, alt: alt || "" });
-      lastElementType.current = "img";
-      return null; // Will be flushed later
-    },
-
-    p: ({ children }) => {
-      const media = flushMedia();
-      const hasText = React.Children.toArray(children).some(
-        (c) => typeof c === "string" || (React.isValidElement(c) && c.type !== "img")
-      );
-      if (hasText) {
-        lastElementType.current = "p";
-        return (
-          <>
-            {media}
-            <p className="mb-4">{children}</p>
-          </>
-        );
-      }
-      return media;
-    },
-
-    a: ({ href, children }) => {
-      if (href.endsWith(".md")) {
-        const edId = href.replace("ed", "").replace(".md", "");
-        lastElementType.current = "a";
-        return (
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              navigate(`/encounter-and-dialogue-single/${edId}`);
-              window.scrollTo(0, 0);
-            }}
-          >
-            {children}
-          </a>
-        );
-      }
-      lastElementType.current = "a";
-      return <a href={href}>{children}</a>;
-    },
-
-    h4: ({ children }) => {
-      lastElementType.current = "h4";
-      return <h4>{children}</h4>;
-    },
-
-    b: ({ children }) => {
-      lastElementType.current = "b";
-      return <b>{children}</b>;
-    },
-
-    text: ({ value }) => {
-      if (value.trim()) {
-        lastElementType.current = "text";
-        return <span>{value}</span>;
-      }
-      return null;
-    },
-
-    center: ({ children }) => {
-      lastElementType.current = "center";
-      return <div className="d-flex justify-content-center mb-3">{children}</div>;
-    },
-
-    iframe: ({ src, ...props }) => {
-      lastElementType.current = "iframe";
-      return <iframe src={src} {...props} />;
-    },
-  };
-
-  const renderMarkdown = (content) => {
-    mediaBuffer = [];
-    photoBuffer = []; // Reset photo buffer for each render
-    lastElementType.current = null; // Reset last element type
-    const rendered = (
-      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} components={components}>
-        {content}
-      </Markdown>
-    );
-    const flushedMedia = flushMedia(); // Flush any remaining photos
-    return (
-      <>
-        {rendered}
-        {flushedMedia}
-      </>
+  const renderMarkdown = (markdownContent) => {
+    return renderer.renderMarkdown(
+      markdownContent,
+      Markdown,
+      [rehypeRaw],
+      [remarkGfm],
     );
   };
 
@@ -245,20 +132,12 @@ const EdSingle = () => {
   };
 
   const handleNext = () => {
-    console.log("Current Element:", currentElement);
-    console.log("Total Elements:", encounterAndDialogues.length);
     if (currentElement < encounterAndDialogues.length) {
       setCurrentElement(currentElement + 1);
       navigate(`/encounter-and-dialogue-single/${currentElement + 1}`, {
         state: { pageNumber, currentElement: currentElement + 1 },
       });
     }
-  };
-
-  const calculatePageWidth = () => {
-    const screenWidth = window.innerWidth;
-    const isMobile = screenWidth <= 768;
-    return isMobile ? screenWidth : 800;
   };
 
   return (
@@ -282,8 +161,13 @@ const EdSingle = () => {
                 <div className="post2">
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
-                      <div className="max-w-2xl mx-auto p-3">{renderMarkdown(content || "")}</div>
-                      <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
+                      <div className="max-w-2xl mx-auto p-3">
+                        {renderMarkdown(content || "")}
+                      </div>
+                      <div
+                        className="d-flex mt-6"
+                        style={{ justifyContent: "space-between" }}
+                      >
                         <button
                           onClick={handlePrevious}
                           disabled={currentElement === 1}
@@ -297,14 +181,18 @@ const EdSingle = () => {
                         </button>
                         <button
                           onClick={handleNext}
-                          disabled={currentElement === encounterAndDialogues.length}
+                          disabled={
+                            currentElement === encounterAndDialogues.length
+                          }
                           className={`btn btn-area ${
                             currentElement === encounterAndDialogues.length
                               ? "bg-gray-300 cursor-not-allowed"
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
                         >
-                          {currentElement === encounterAndDialogues.length ? "Completed" : "Next"}
+                          {currentElement === encounterAndDialogues.length
+                            ? "Completed"
+                            : "Next"}
                         </button>
                       </div>
                     </div>
