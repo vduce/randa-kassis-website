@@ -46,6 +46,10 @@ export const getCategoryPaths = (categoryKey) => {
       photos: CDN_PATHS.throughMyEyes.photos,
       pdfs: null,
     },
+    arena: {
+      photos: CDN_PATHS.arena.photos,
+      pdfs: null,
+    },
   };
 
   return pathMap[categoryKey] || { photos: null, pdfs: null };

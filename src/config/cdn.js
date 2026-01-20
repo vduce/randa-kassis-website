@@ -4,10 +4,10 @@
  */
 
 // Production CDN for images, PDFs, and videos
-export const PRODUCTION_CDN = 'https://randa-kassis-website.b-cdn.net';
+export const PRODUCTION_CDN = "https://randa-kassis-website.b-cdn.net";
 
 // Temporary CDN for markdown content files
-export const CONTENT_CDN = 'https://pgcdn.b-cdn.net/public/public';
+export const CONTENT_CDN = "https://pgcdn.b-cdn.net/public/public";
 
 // When ready to move markdown to production, change CONTENT_CDN to:
 // export const CONTENT_CDN = 'https://randa-kassis-website.b-cdn.net';
@@ -19,7 +19,7 @@ export const CONTENT_CDN = 'https://pgcdn.b-cdn.net/public/public';
  */
 export const getCdnUrl = (path) => {
   // Remove leading slash if present to avoid double slashes
-  const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+  const cleanPath = path.startsWith("/") ? path.substring(1) : path;
   return `${CONTENT_CDN}/${cleanPath}`;
 };
 
@@ -74,6 +74,10 @@ export const CDN_PATHS = {
   companion: {
     content: `${CONTENT_CDN}/gallery/companion`,
     photos: `${PRODUCTION_CDN}/gallery/my4pawedcompanion/photos`,
+  },
+  arena: {
+    content: `${CONTENT_CDN}/gallery/arena`,
+    photos: `${PRODUCTION_CDN}/gallery/inthearena`,
   },
 };
 

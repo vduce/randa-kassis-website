@@ -146,6 +146,7 @@ const MarkdownEditor = () => {
         exhibitions: { pattern: /em(\d+)\.md/, prefix: "em" },
         throughMyEyes: { pattern: /myeyes(\d+)\.md/, prefix: "myeyes" },
         companion: { pattern: /companion(\d+)\.md/, prefix: "companion" },
+        arena: { pattern: /arena(\d+)\.md/, prefix: "arena" },
       };
 
       const categoryPattern = patterns[category.key];

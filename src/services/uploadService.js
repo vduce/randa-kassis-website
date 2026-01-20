@@ -3,7 +3,7 @@
  * Handles file upload processing including reading, metadata extraction, and file creation
  */
 
-import { createFile, generateNextFilename, fileExists } from './fileOperations';
+import { createFile, generateNextFilename, fileExists } from "./fileOperations";
 
 /**
  * Extract metadata from markdown content
@@ -11,14 +11,14 @@ import { createFile, generateNextFilename, fileExists } from './fileOperations';
  */
 const extractMetadata = (content, filename) => {
   const metadata = {
-    title: '',
-    publishedIn: '',
-    publishedAt: '',
-    date: '',
-    location: '',
-    chapter: '',
-    year: '',
-    medium: ''
+    title: "",
+    publishedIn: "",
+    publishedAt: "",
+    date: "",
+    location: "",
+    chapter: "",
+    year: "",
+    medium: "",
   };
 
   // Extract title from <h4> tag
@@ -74,7 +74,7 @@ const extractMetadata = (content, filename) => {
 
   // If no title found, use filename as fallback
   if (!metadata.title) {
-    metadata.title = filename.replace(/\.md$/, '').replace(/[-_]/g, ' ');
+    metadata.title = filename.replace(/\.md$/, "").replace(/[-_]/g, " ");
   }
 
   return metadata;
@@ -83,18 +83,27 @@ const extractMetadata = (content, filename) => {
 /**
  * Generate appropriate filename based on category and existing files
  */
-const generateFilename = async (categoryPath, categoryKey, originalFilename = null) => {
+const generateFilename = async (
+  categoryPath,
+  categoryKey,
+  originalFilename = null,
+) => {
   // Define filename patterns for each category
   const patterns = {
-    articles: { pattern: /article(\d+)\.md/, prefix: 'article' },
-    encounters: { pattern: /ed(\d+)\.md/, prefix: 'ed' },
-    interviews_politicians: { pattern: /politician(\d+)\.md/, prefix: 'politician' },
-    interviews_painters: { pattern: /painter(\d+)\.md/, prefix: 'painter' },
-    interviews_critics: { pattern: /critic(\d+)\.md/, prefix: 'critic' },
-    story: { pattern: /story(\d+)\.md/, prefix: 'story' },
-    paintings: { pattern: /painting(\d+)\.md/, prefix: 'painting' },
-    exhibitions: { pattern: /em(\d+)\.md/, prefix: 'em' },
-    throughMyEyes: { pattern: /tme(\d+)\.md/, prefix: 'tme' }
+    articles: { pattern: /article(\d+)\.md/, prefix: "article" },
+    encounters: { pattern: /ed(\d+)\.md/, prefix: "ed" },
+    interviews_politicians: {
+      pattern: /politician(\d+)\.md/,
+      prefix: "politician",
+    },
+    interviews_painters: { pattern: /painter(\d+)\.md/, prefix: "painter" },
+    interviews_critics: { pattern: /critic(\d+)\.md/, prefix: "critic" },
+    story: { pattern: /story(\d+)\.md/, prefix: "story" },
+    paintings: { pattern: /painting(\d+)\.md/, prefix: "painting" },
+    exhibitions: { pattern: /em(\d+)\.md/, prefix: "em" },
+    throughMyEyes: { pattern: /tme(\d+)\.md/, prefix: "tme" },
+    companion: { pattern: /companion(\d+)\.md/, prefix: "companion" },
+    arena: { pattern: /arena(\d+)\.md/, prefix: "arena" },
   };
 
   const config = patterns[categoryKey];
@@ -104,7 +113,11 @@ const generateFilename = async (categoryPath, categoryKey, originalFilename = nu
   }
 
   // Generate next filename in sequence
-  return await generateNextFilename(categoryPath, config.pattern, config.prefix);
+  return await generateNextFilename(
+    categoryPath,
+    config.pattern,
+    config.prefix,
+  );
 };
 
 /**
@@ -114,24 +127,26 @@ const validateFile = (file) => {
   const errors = [];
 
   // Check file type
-  if (!file.name.endsWith('.md')) {
-    errors.push('Only .md (markdown) files are allowed');
+  if (!file.name.endsWith(".md")) {
+    errors.push("Only .md (markdown) files are allowed");
   }
 
   // Check file size (max 5MB)
   const maxSize = 5 * 1024 * 1024; // 5MB in bytes
   if (file.size > maxSize) {
-    errors.push(`File size exceeds maximum limit of 5MB (current: ${(file.size / 1024 / 1024).toFixed(2)}MB)`);
+    errors.push(
+      `File size exceeds maximum limit of 5MB (current: ${(file.size / 1024 / 1024).toFixed(2)}MB)`,
+    );
   }
 
   // Check if file is empty
   if (file.size === 0) {
-    errors.push('File is empty');
+    errors.push("File is empty");
   }
 
   return {
     valid: errors.length === 0,
-    errors
+    errors,
   };
 };
 
@@ -166,9 +181,9 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
         success: false,
         filename: file.name,
         error: {
-          code: 'VALIDATION_ERROR',
-          message: validation.errors.join(', ')
-        }
+          code: "VALIDATION_ERROR",
+          message: validation.errors.join(", "),
+        },
       };
     }
 
@@ -181,9 +196,9 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
         success: false,
         filename: file.name,
         error: {
-          code: 'READ_ERROR',
-          message: error.message
-        }
+          code: "READ_ERROR",
+          message: error.message,
+        },
       };
     }
 
@@ -192,23 +207,31 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
 
     // Generate appropriate filename
     let targetFilename = file.name;
-    
+
     // Check if file already exists
     const existsResult = await fileExists(categoryPath, targetFilename);
     if (existsResult.success && existsResult.data.exists) {
       // Generate new filename to avoid overwriting
-      targetFilename = await generateFilename(categoryPath, categoryKey, file.name);
+      targetFilename = await generateFilename(
+        categoryPath,
+        categoryKey,
+        file.name,
+      );
     }
 
     // Create the file
-    const createResult = await createFile(categoryPath, targetFilename, content);
-    
+    const createResult = await createFile(
+      categoryPath,
+      targetFilename,
+      content,
+    );
+
     if (!createResult.success) {
       return {
         success: false,
         filename: file.name,
         targetFilename: targetFilename,
-        error: createResult.error
+        error: createResult.error,
       };
     }
 
@@ -218,16 +241,18 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
       targetFilename: targetFilename,
       metadata: metadata,
       size: createResult.data.size,
-      created: true
+      created: true,
     };
   } catch (error) {
     return {
       success: false,
       filename: file.name,
       error: {
-        code: 'PROCESSING_ERROR',
-        message: error.message || 'An unexpected error occurred during file processing'
-      }
+        code: "PROCESSING_ERROR",
+        message:
+          error.message ||
+          "An unexpected error occurred during file processing",
+      },
     };
   }
 };
@@ -235,13 +260,18 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
 /**
  * Process batch file upload
  */
-const processBatchUpload = async (files, categoryPath, categoryKey, onProgress = null) => {
+const processBatchUpload = async (
+  files,
+  categoryPath,
+  categoryKey,
+  onProgress = null,
+) => {
   const results = [];
   const totalFiles = files.length;
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    
+
     // Process file
     const result = await processFileUpload(file, categoryPath, categoryKey);
     results.push(result);
@@ -253,14 +283,14 @@ const processBatchUpload = async (files, categoryPath, categoryKey, onProgress =
         total: totalFiles,
         percentage: Math.round(((i + 1) / totalFiles) * 100),
         currentFile: file.name,
-        result: result
+        result: result,
       });
     }
   }
 
   // Calculate summary
-  const successful = results.filter(r => r.success).length;
-  const failed = results.filter(r => !r.success).length;
+  const successful = results.filter((r) => r.success).length;
+  const failed = results.filter((r) => !r.success).length;
 
   return {
     success: failed === 0,
@@ -269,8 +299,9 @@ const processBatchUpload = async (files, categoryPath, categoryKey, onProgress =
       total: totalFiles,
       successful: successful,
       failed: failed,
-      successRate: totalFiles > 0 ? Math.round((successful / totalFiles) * 100) : 0
-    }
+      successRate:
+        totalFiles > 0 ? Math.round((successful / totalFiles) * 100) : 0,
+    },
   };
 };
 
@@ -281,14 +312,14 @@ const validateBatchUpload = (files) => {
   const validFiles = [];
   const invalidFiles = [];
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const validation = validateFile(file);
     if (validation.valid) {
       validFiles.push(file);
     } else {
       invalidFiles.push({
         file: file,
-        errors: validation.errors
+        errors: validation.errors,
       });
     }
   });
@@ -300,8 +331,8 @@ const validateBatchUpload = (files) => {
     summary: {
       total: files.length,
       valid: validFiles.length,
-      invalid: invalidFiles.length
-    }
+      invalid: invalidFiles.length,
+    },
   };
 };
 
@@ -312,5 +343,5 @@ export {
   readFileContent,
   processFileUpload,
   processBatchUpload,
-  validateBatchUpload
+  validateBatchUpload,
 };
