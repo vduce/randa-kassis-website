@@ -48,14 +48,14 @@ const CONTENT_CATEGORIES = [
   },
   {
     key: "paintings",
-    label: "Paintings",
+    label: "BPoli - Paintings",
     path: "public/paintings",
     icon: "🖼️",
     description: "Painting descriptions and details",
   },
   {
     key: "exhibitions",
-    label: "Exhibitions",
+    label: "BPoli - Exhibitions",
     path: "public/exhibitions",
     icon: "🏛️",
     description: "Exhibition moments and events",
@@ -78,7 +78,7 @@ const CONTENT_CATEGORIES = [
     key: "arena",
     label: "In the Arena",
     path: "public/gallery/arena",
-    icon: "🏛️",
+    icon: "⚔️",
     description: "In the arena gallery",
   },
 ];
