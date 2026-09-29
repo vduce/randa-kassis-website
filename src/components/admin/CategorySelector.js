@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { listFiles } from "../../services/unifiedFileOperations";
+import { Link } from "react-router-dom";
+import { getCachedFileList, loadCachedFileList } from "../../services/adminFileCache";
 import "./CategorySelector.css";
 
 // Content categories configuration
@@ -83,39 +84,32 @@ const CONTENT_CATEGORIES = [
   },
 ];
 
-const CategorySelector = ({ selectedCategory, onSelectCategory }) => {
-  const [fileCounts, setFileCounts] = useState({});
-  const [loading, setLoading] = useState(true);
+const CategorySelector = ({ selectedCategory, onSelectCategory, refreshTrigger }) => {
+  const [fileCounts, setFileCounts] = useState(() => CONTENT_CATEGORIES.reduce((counts, category) => {
+    const cached = getCachedFileList(category.path);
+    if (cached?.success) counts[category.key] = cached.data.count;
+    return counts;
+  }, {}));
 
   // Fetch file counts for all categories
   useEffect(() => {
     const fetchFileCounts = async () => {
-      setLoading(true);
-      const counts = {};
-
-      // Fetch counts for all categories in parallel
       await Promise.all(
         CONTENT_CATEGORIES.map(async (category) => {
           try {
-            const result = await listFiles(category.path);
+            const result = await loadCachedFileList(category.path);
             if (result.success) {
-              counts[category.key] = result.data.count;
-            } else {
-              counts[category.key] = 0;
+              setFileCounts(previous => ({ ...previous, [category.key]: result.data.count }));
             }
           } catch (error) {
             console.error(`Error fetching count for ${category.key}:`, error);
-            counts[category.key] = 0;
           }
         }),
       );
-
-      setFileCounts(counts);
-      setLoading(false);
     };
 
     fetchFileCounts();
-  }, []);
+  }, [refreshTrigger]);
 
   const handleCategoryClick = (category) => {
     onSelectCategory(category);
@@ -125,8 +119,9 @@ const CategorySelector = ({ selectedCategory, onSelectCategory }) => {
     <div className="category-selector">
       <nav className="category-list">
         {CONTENT_CATEGORIES.map((category) => (
-          <button
+          <Link
             key={category.key}
+            to={`/admin/dashboard?category=${category.key}`}
             className={`category-item ${
               selectedCategory?.key === category.key ? "active" : ""
             }`}
@@ -137,12 +132,12 @@ const CategorySelector = ({ selectedCategory, onSelectCategory }) => {
             <div className="category-info">
               <span className="category-label">{category.label}</span>
               <span className="category-count">
-                {loading
-                  ? "..."
-                  : `${fileCounts[category.key] || 0} file${fileCounts[category.key] === 1 ? "" : "s"}`}
+                {Number.isInteger(fileCounts[category.key])
+                  ? `${fileCounts[category.key]} file${fileCounts[category.key] === 1 ? "" : "s"}`
+                  : "… files"}
               </span>
             </div>
-          </button>
+          </Link>
         ))}
       </nav>
     </div>

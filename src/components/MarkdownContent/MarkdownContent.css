@@ -1,0 +1,80 @@
+.shared-markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shared-markdown-content {
+  color: #525252;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+}
+
+.shared-markdown-content p {
+  margin: 0 0 27px;
+  color: #525252;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.markdown-media-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.markdown-pdf {
+  display: flex;
+  justify-content: center;
+}
+
+.markdown-painting-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.markdown-painting-item {
+  padding: 8px;
+  text-align: center;
+}
+
+.markdown-painting-item img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.markdown-painting-item figcaption {
+  margin-top: 8px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.markdown-center {
+  gap: 1rem;
+}
+
+.shared-markdown-content iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .markdown-painting-item,
+  .markdown-painting-item img {
+    width: 100%;
+  }
+
+  .markdown-painting-item img {
+    height: auto;
+  }
+}

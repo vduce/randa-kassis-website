@@ -10,6 +10,7 @@ import Footer from "../../../components/footer/Footer";
 import Scrollbar from "../../../components/scrollbar/scrollbar";
 import Navbar from "../../../components/Navbar/Navbar";
 import PdfViewer from "../../../components/PdfViewer/PdfViewer";
+import MarkdownContent from "../../../components/MarkdownContent/MarkdownContent";
 import { getCdnUrl } from "../../../config/cdn";
 
 const TheCriticsDetail = () => {
@@ -141,51 +142,7 @@ const TheCriticsDetail = () => {
                     <div className="max-w-2xl mx-auto mb-3">
                       <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                         <div className="max-w-2xl mx-auto p-3 break-words">
-                          <Markdown
-                            rehypePlugins={[rehypeRaw]}
-                            remarkPlugins={[remarkGfm]} // Enable GFM support
-                            components={{
-                              img: ({ src, alt }) => {
-                                if (src?.endsWith(".pdf")) {
-                                  return (
-                                    <div style={{ display: "flex", justifyContent: "center" }}>
-                                      <PdfViewer
-                                        file={src}
-                                        cdnUrlPrefix="https://randa-kassis-website.b-cdn.net/interviews/essayistcritics/pdfs"
-                                      />
-                                    </div>
-                                  );
-                                }
-                              },
-                              a: ({ href, children }) => {
-                                if (href && href.endsWith(".md")) {
-                                  const articleId = href.replace("article", "").replace(".md", "");
-                                  return (
-                                    <a
-                                      href="#"
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        navigate(`/critics-single/${articleId}`);
-                                        window.scrollTo(0, 0);
-                                      }}
-                                    >
-                                      {children}
-                                    </a>
-                                  );
-                                }
-                                if (href && href.startsWith("http")) {
-                                  return (
-                                    <a href={href} target="_blank" rel="noopener noreferrer">
-                                      {children}
-                                    </a>
-                                  );
-                                }
-                                return <a href={href}>{children}</a>;
-                              },
-                            }}
-                          >
-                            {content}
-                          </Markdown>
+                          <MarkdownContent content={content} categoryKey="interviews_critics" filename={article.filename} />
                         </div>
                         <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                           <button

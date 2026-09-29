@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import MarkdownContent from "../MarkdownContent/MarkdownContent";
 import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
 import LightGallery from "lightgallery/react";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -277,7 +278,7 @@ const PoliticianSingle = () => {
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                       <div className="max-w-2xl mx-auto p-3">
-                        {renderMarkdown(content || "")}
+                      <MarkdownContent content={content || ""} categoryKey="interviews_politicians" filename={politician?.filename} />
                       </div>
                       <div
                         className="d-flex mt-6"

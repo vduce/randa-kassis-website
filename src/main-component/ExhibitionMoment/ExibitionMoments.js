@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
+import MarkdownContent from "../../components/MarkdownContent/MarkdownContent";
 import { useParams, useNavigate } from "react-router-dom";
 import Markdown from "react-markdown";
 import Logo from "../../images/logo.png";
@@ -172,7 +173,7 @@ const ExibitionMoments = () => {
                   <div className="wpo-service-single-title"></div>
                   <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                     <div className="max-w-2xl mx-auto p-3">
-                      {renderMarkdown(sections[currentPage]?.content || "")}
+                      <MarkdownContent content={sections[currentPage]?.content || ""} categoryKey="exhibitions" filename={sections[currentPage]?.markdownFile} />
                     </div>
                     <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                       <button

@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { listFiles, sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFileOperations';
+import React, { useState, useEffect } from 'react';
+import { sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFileOperations';
+import { getCachedFileList, loadCachedFileList } from '../../services/adminFileCache';
 import './FileList.css';
 
-const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger, initialPage = 1, onPageChange }) => {
-  const [files, setFiles] = useState([]);
+const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger, initialPage = 1, onPageChange, onContentReady }) => {
+  const [files, setFiles] = useState(() => getCachedFileList(category.path)?.data.files || []);
   const [filteredFiles, setFilteredFiles] = useState([]);
   const [paginatedData, setPaginatedData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -15,11 +16,6 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
   const [pageSize] = useState(20);
   const [hasPermission, setHasPermission] = useState(false);
   
-  // Track previous search/sort values to detect actual changes
-  const prevSearchTerm = useRef(searchTerm);
-  const prevSortBy = useRef(sortBy);
-  const prevSortOrder = useRef(sortOrder);
-
   // Update currentPage when initialPage changes (e.g., returning from editor)
   useEffect(() => {
     setCurrentPage(initialPage);
@@ -47,18 +43,6 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
       
       setFilteredFiles(result);
       
-      // Reset to page 1 only when search or sort actually changes (not on initial load)
-      const searchChanged = prevSearchTerm.current !== searchTerm;
-      const sortChanged = prevSortBy.current !== sortBy || prevSortOrder.current !== sortOrder;
-      
-      if (searchChanged || sortChanged) {
-        setCurrentPage(1);
-      }
-      
-      // Update refs
-      prevSearchTerm.current = searchTerm;
-      prevSortBy.current = sortBy;
-      prevSortOrder.current = sortOrder;
     } else {
       setFilteredFiles([]);
     }
@@ -74,12 +58,18 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
     }
   }, [filteredFiles, currentPage, pageSize]);
 
-  const loadFiles = async (forceNewPermission = false) => {
-    setLoading(true);
+  useEffect(() => {
+    if (!loading && !error && (paginatedData || files.length === 0)) {
+      onContentReady?.();
+    }
+  }, [loading, error, paginatedData, files.length]);
+
+  const loadFiles = async (forceNewPermission = false, forceRefresh = false) => {
+    setLoading(!getCachedFileList(category.path) || forceRefresh || forceNewPermission);
     setError(null);
     
     try {
-      const result = await listFiles(category.path, forceNewPermission);
+      const result = await loadCachedFileList(category.path, { forceNewPermission, forceRefresh });
       
       if (result.success) {
         setFiles(result.data.files);
@@ -117,10 +107,18 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
       setSortBy(newSortBy);
       setSortOrder('asc');
     }
+    if (currentPage !== 1) {
+      setCurrentPage(1);
+      onPageChange?.(1);
+    }
   };
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+    if (currentPage !== 1) {
+      setCurrentPage(1);
+      onPageChange?.(1);
+    }
   };
 
   const handlePageChange = (newPage) => {

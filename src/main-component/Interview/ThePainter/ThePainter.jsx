@@ -10,6 +10,7 @@ import Navbar from "../../../components/Navbar/Navbar";
 import PageTitle from "../../../components/pagetitle/PageTitle";
 import { useInView } from "react-intersection-observer";
 import { useSwipeable } from "react-swipeable";
+import MarkdownContent from "../../../components/MarkdownContent/MarkdownContent";
 import { getCdnUrl } from "../../../config/cdn";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -391,7 +392,9 @@ const ThePainter = () => {
                   <div className="post2">
                     <div className="max-w-2xl mx-auto mb-3">
                       <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
-                        <div className="max-w-2xl mx-auto p-3">{renderedContent}</div>
+                        <div className="max-w-2xl mx-auto p-3">
+                          <MarkdownContent content={content} categoryKey="interviews_painters" filename="painters1.md" />
+                        </div>
                       </div>
                     </div>
                   </div>

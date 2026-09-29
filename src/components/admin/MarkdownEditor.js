@@ -11,6 +11,7 @@ import {
   updateJSONIndexEntry,
 } from "../../services/serverJsonService";
 import MarkdownPreview from "./MarkdownPreview";
+import { invalidateFileList } from "../../services/adminFileCache";
 import "./MarkdownEditor.css";
 
 const MarkdownEditor = () => {
@@ -20,12 +21,12 @@ const MarkdownEditor = () => {
 
   // Helper to navigate back with state
   const navigateBack = () => {
-    navigate("/admin/dashboard", {
-      state: {
-        selectedCategoryKey: category?.key,
-        currentPage: currentPage || 1,
-      },
-    });
+    if (window.history.state?.idx > 0) {
+      navigate(-1);
+      return;
+    }
+    const categoryQuery = category?.key ? `?category=${category.key}${currentPage > 1 ? `&page=${currentPage}` : ""}` : "";
+    navigate(`/admin/dashboard${categoryQuery}`);
   };
 
   const [content, setContent] = useState("");
@@ -238,6 +239,7 @@ const MarkdownEditor = () => {
       }
 
       if (result.success) {
+        invalidateFileList(category.path);
         // Update JSON index with metadata
         const jsonResult = await updateJSONIndexEntry(
           category.key,
@@ -275,6 +277,7 @@ const MarkdownEditor = () => {
               null,
             );
             if (retryResult.success) {
+              invalidateFileList(category.path);
               setOriginalContent(content);
               setOriginalMetadata({ ...metadata });
               clearDraft(filename);
@@ -503,7 +506,7 @@ const MarkdownEditor = () => {
               width: viewMode === "split" ? `${100 - paneSize}%` : "100%",
             }}
           >
-            <MarkdownPreview content={content} category={category} />
+            <MarkdownPreview content={content} category={category} filename={filename} />
           </div>
         )}
       </div>

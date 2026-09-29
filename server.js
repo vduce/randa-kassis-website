@@ -12,6 +12,9 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
+const metadataDir = fs.existsSync(path.join(__dirname, "metadata"))
+  ? path.join(__dirname, "metadata")
+  : path.join(__dirname, "public", "metadata");
 
 // Trust proxy (important on shared hosting)
 app.set("trust proxy", 1);
@@ -20,6 +23,7 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [
+      "http://localhost:3004",
       "http://localhost:3036",
       "https://randakassis.com",
       "https://dev.randakassis.com",
@@ -270,7 +274,7 @@ async function renumberFiles(deletedNumber, category, basePath, filePrefix) {
   try {
     // Read metadata file
     const metadataFilename = getMetadataFilename(category);
-    const metadataPath = path.join(__dirname, "metadata", metadataFilename);
+    const metadataPath = path.join(metadataDir, metadataFilename);
 
     if (!fs.existsSync(metadataPath)) {
       throw new Error(`Metadata file not found: ${metadataFilename}`);
@@ -469,6 +473,10 @@ app.delete("/api/storage/delete", async (req, res) => {
 // FRONTEND ROUTES
 // ============================================
 
+app.get("/metadata/api/health", (req, res) => {
+  res.json({ status: "ok", message: "Metadata API is ready" });
+});
+
 // Read JSON metadata file
 app.get("/metadata/api/:filename", (req, res) => {
   try {
@@ -485,7 +493,7 @@ app.get("/metadata/api/:filename", (req, res) => {
       return res.status(400).json({ error: "Invalid filename" });
     }
 
-    const filePath = path.join(__dirname, "metadata", filename);
+    const filePath = path.join(metadataDir, filename);
 
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ error: "File not found" });
@@ -524,7 +532,7 @@ app.post("/metadata/api/:filename/update", (req, res) => {
       return res.status(400).json({ error: "Invalid filename" });
     }
 
-    const filePath = path.join(__dirname, "metadata", filename);
+    const filePath = path.join(metadataDir, filename);
     console.log(`📝 Updating JSON entry in: ${filePath}`);
 
     // Read current data
@@ -592,7 +600,7 @@ app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
       return res.status(400).json({ error: "Invalid filename" });
     }
 
-    const filePath = path.join(__dirname, "metadata", filename);
+    const filePath = path.join(metadataDir, filename);
 
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ error: "File not found" });
@@ -621,11 +629,6 @@ app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
   }
 });
 
-// Health check for metadata API
-app.get("/metadata/api/health", (req, res) => {
-  res.json({ status: "ok", message: "Metadata API is ready" });
-});
-
 // Test route
 app.get("/api", (req, res) => {
   res.json({
@@ -643,7 +646,6 @@ app.get("/api", (req, res) => {
 });
 
 // Serve JSON files from metadata folder (outside build)
-const metadataDir = path.join(__dirname, "metadata");
 app.use("/metadata", express.static(metadataDir));
 
 // Serve React build files
@@ -654,15 +656,15 @@ app.use(express.static(publicDir));
 // Only serve index.html for non-API and non-metadata routes
 app.get(/.*/, (req, res) => {
   // Don't serve index.html for API or metadata routes
-  if (req.path.startsWith("/api") || req.path.startsWith("/metadata")) {
-    return res.status(404).json({
-      error: "Endpoint not found",
-      path: req.path,
-    });
-  }
-
+  // if (req.path.startsWith("/api") || req.path.startsWith("/metadata")) {
+  //   return res.status(404).json({
+  //     error: "Endpoint not found",
+  //     path: req.path,
+  //   });
+  // }
+res.json({ message: "HELLo"});
   // Serve React app for all other routes
-  res.sendFile(path.join(publicDir, "index.html"));
+  // res.sendFile(path.join(publicDir, "index.html"));
 });
 
 // Start server

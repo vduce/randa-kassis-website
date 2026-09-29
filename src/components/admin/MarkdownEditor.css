@@ -170,6 +170,7 @@
 .editor-container {
   display: flex;
   flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -213,9 +214,14 @@
 /* Preview Pane */
 .preview-pane {
   background: white;
-  overflow: auto;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
   border-left: 1px solid #e0e0e0;
-  /* min-width: 750px;   Ensures gallery renders at proper width */
+}
+
+.editor-container.view-preview .preview-pane {
+  border-left: 0;
 }
 
 /* Responsive */

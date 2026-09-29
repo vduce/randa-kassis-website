@@ -1,38 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import CategorySelector from './CategorySelector';
 import FileList from './FileList';
 import ConfirmDialog from './ConfirmDialog';
 import FileUpload from './FileUpload';
 import { deleteFile } from '../../services/unifiedFileOperations';
 import { CONTENT_CATEGORIES } from './CategorySelector';
+import { invalidateFileList } from '../../services/adminFileCache';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const restoreFrame = useRef(null);
+  const selectedCategoryKey = searchParams.get('category');
+  const selectedCategory = CONTENT_CATEGORIES.find(category => category.key === selectedCategoryKey) || null;
+  const pageFromUrl = Number.parseInt(searchParams.get('page'), 10);
+  const currentPage = Number.isInteger(pageFromUrl) && pageFromUrl > 0 ? pageFromUrl : 1;
+  const scrollKey = `admin-dashboard-scroll:${selectedCategoryKey || 'home'}:${currentPage}`;
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [fileToDelete, setFileToDelete] = useState(null);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [showUpload, setShowUpload] = useState(false);
 
-  // Restore category and page from navigation state
+  const restoreScrollPosition = () => {
+    const position = Number(sessionStorage.getItem(scrollKey)) || 0;
+    if (restoreFrame.current) window.cancelAnimationFrame(restoreFrame.current);
+    restoreFrame.current = window.requestAnimationFrame(() => {
+      window.scrollTo(0, position);
+      restoreFrame.current = null;
+    });
+  };
+
+  useLayoutEffect(() => {
+    restoreScrollPosition();
+    return () => {
+      if (restoreFrame.current) window.cancelAnimationFrame(restoreFrame.current);
+    };
+  }, [scrollKey]);
+
   useEffect(() => {
-    if (location.state?.selectedCategoryKey) {
-      const category = CONTENT_CATEGORIES.find(c => c.key === location.state.selectedCategoryKey);
-      if (category) {
-        setSelectedCategory(category);
-      }
-    }
-    if (location.state?.currentPage) {
-      setCurrentPage(location.state.currentPage);
-    }
-  }, [location.state]);
+    const saveScroll = () => sessionStorage.setItem(scrollKey, String(window.scrollY));
+    window.addEventListener('scroll', saveScroll, { passive: true });
+    return () => window.removeEventListener('scroll', saveScroll);
+  }, [scrollKey]);
 
   const handleLogout = () => {
     logout();
@@ -44,6 +58,7 @@ const AdminDashboard = () => {
   };
 
   const handleSelectFile = (file, page) => {
+    sessionStorage.setItem(scrollKey, String(window.scrollY));
     // Navigate to editor with file data and current page
     navigate('/admin/editor', {
       state: {
@@ -56,6 +71,7 @@ const AdminDashboard = () => {
   };
 
   const handleAddNew = (page) => {
+    sessionStorage.setItem(scrollKey, String(window.scrollY));
     // Navigate to editor for new file with current page
     navigate('/admin/editor', {
       state: {
@@ -67,7 +83,12 @@ const AdminDashboard = () => {
   };
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
+    const next = new URLSearchParams(searchParams);
+    if (page > 1) next.set('page', String(page));
+    else next.delete('page');
+    sessionStorage.setItem(scrollKey, String(window.scrollY));
+    sessionStorage.setItem(`admin-dashboard-scroll:${selectedCategoryKey}:${page}`, '0');
+    setSearchParams(next);
   };
 
   const handleDeleteFile = (file) => {
@@ -84,6 +105,7 @@ const AdminDashboard = () => {
       const result = await deleteFile(selectedCategory.path, fileToDelete.name);
 
       if (result.success) {
+        invalidateFileList(selectedCategory.path);
         // Close dialog
         setFileToDelete(null);
         // Trigger file list refresh
@@ -108,6 +130,7 @@ const AdminDashboard = () => {
   };
 
   const handleUploadComplete = (result) => {
+    if (selectedCategory) invalidateFileList(selectedCategory.path);
     // Close upload modal
     setShowUpload(false);
     
@@ -176,8 +199,10 @@ const AdminDashboard = () => {
             </div>
             <CategorySelector 
               selectedCategory={selectedCategory}
+              refreshTrigger={refreshTrigger}
               onSelectCategory={(category) => {
-                setSelectedCategory(category);
+                sessionStorage.setItem(scrollKey, String(window.scrollY));
+                sessionStorage.setItem(`admin-dashboard-scroll:${category.key}:1`, '0');
                 // Close sidebar on mobile after selection
                 if (window.innerWidth <= 768) {
                   setIsSidebarOpen(false);
@@ -235,6 +260,7 @@ const AdminDashboard = () => {
               </div>
               
               <FileList
+                key={selectedCategory.key}
                 category={selectedCategory}
                 onSelectFile={handleSelectFile}
                 onDeleteFile={handleDeleteFile}
@@ -242,6 +268,7 @@ const AdminDashboard = () => {
                 refreshTrigger={refreshTrigger}
                 initialPage={currentPage}
                 onPageChange={handlePageChange}
+                onContentReady={restoreScrollPosition}
               />
             </div>
           )}

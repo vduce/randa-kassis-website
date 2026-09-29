@@ -3,7 +3,7 @@
  * Manages JSON metadata files via server API (for production)
  */
 
-const API_URL = process.env.REACT_APP_API_URL || "";
+const API_URL = process.env.REACT_APP_API_URL || process.env.REACT_APP_PROXY_URL || "";
 
 // Map category keys to their JSON filenames
 const JSON_FILENAMES = {
