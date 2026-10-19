@@ -656,15 +656,15 @@ app.use(express.static(publicDir));
 // Only serve index.html for non-API and non-metadata routes
 app.get(/.*/, (req, res) => {
   // Don't serve index.html for API or metadata routes
-  // if (req.path.startsWith("/api") || req.path.startsWith("/metadata")) {
-  //   return res.status(404).json({
-  //     error: "Endpoint not found",
-  //     path: req.path,
-  //   });
-  // }
-res.json({ message: "HELLo"});
+  if (req.path.startsWith("/api") || req.path.startsWith("/metadata")) {
+    return res.status(404).json({
+      error: "Endpoint not found",
+      path: req.path,
+    });
+  }
+
   // Serve React app for all other routes
-  // res.sendFile(path.join(publicDir, "index.html"));
+  res.sendFile(path.join(publicDir, "index.html"));
 });
 
 // Start server
