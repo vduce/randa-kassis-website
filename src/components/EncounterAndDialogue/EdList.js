@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fetchEncounters } from "../../services/cdnJsonService";
-import { getCdnUrl } from "../../config/cdn";
 
 const EdList = (props) => {
   const { state } = useLocation();
@@ -10,7 +9,7 @@ const EdList = (props) => {
   const [edContents, setEdContents] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch encounters from server then fetch markdown content
+  // Lists use metadata; Markdown is loaded only when a detail page opens.
   useEffect(() => {
     const loadEncounters = async () => {
       setLoading(true);
@@ -18,20 +17,7 @@ const EdList = (props) => {
         // First fetch the encounters list from server metadata
         const encountersData = await fetchEncounters();
         
-        // Then fetch markdown content for each encounter
-        const encountersWithContent = await Promise.all(
-          encountersData.map(async (ed) => {
-            try {
-              const response = await fetch(getCdnUrl(`encounters/${ed.filename}`));
-              const content = await response.text();
-              return { ...ed, content };
-            } catch (error) {
-              console.error(`Error fetching ${ed.filename}:`, error);
-              return { ...ed, description: "Error loading content." };
-            }
-          })
-        );
-        setEdContents(encountersWithContent);
+        setEdContents(encountersData);
       } catch (error) {
         console.error("Error loading encounters:", error);
       } finally {
@@ -118,6 +104,8 @@ const EdList = (props) => {
     );
   }
 
+  if (loading) return <p role="status">Loading content...</p>;
+
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
@@ -143,10 +131,10 @@ const EdList = (props) => {
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: currentEd.description.substring(0, 200),
+                          __html: (currentEd.description || "").substring(0, 200),
                         }}
                       ></span>
-                      {currentEd.description.length > 200 && "..."}
+                      {(currentEd.description || "").length > 200 && "..."}
                     </p>
                     <Link
                       onClick={ClickHandler}

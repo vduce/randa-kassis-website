@@ -4,7 +4,8 @@
  */
 
 // Base URL for JSON files (served from /metadata/ folder on server)
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/metadata';
+const API_BASE_URL = (process.env.REACT_APP_METADATA_URL ||
+  `${process.env.REACT_APP_API_URL || process.env.REACT_APP_PROXY_URL || ''}/metadata`).replace(/\/$/, '');
 
 // Cache for JSON data to avoid repeated requests
 const jsonCache = new Map();
@@ -42,6 +43,7 @@ export const fetchJsonFromCdn = async (filename, forceRefresh = false) => {
     }
     
     const data = await response.json();
+    if (!Array.isArray(data)) throw new Error('Invalid metadata response');
     
     // Cache the result
     jsonCache.set(cacheKey, {

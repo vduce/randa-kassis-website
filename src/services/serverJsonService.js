@@ -70,6 +70,7 @@ export const updateJSONIndexEntry = async (
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-Requested-With": "RandaAdmin",
       },
       body: JSON.stringify({
         entryFilename,
@@ -114,6 +115,7 @@ export const removeJSONIndexEntry = async (categoryKey, entryFilename) => {
       `${API_URL}/metadata/api/${filename}/entry/${entryFilename}`,
       {
         method: "DELETE",
+        headers: { "X-Requested-With": "RandaAdmin" },
       },
     );
 

@@ -10,10 +10,7 @@ export const STORAGE_MODE = process.env.REACT_APP_STORAGE_MODE || 'bunny';
 
 // Check if Bunny Storage is configured
 export const isBunnyStorageConfigured = () => {
-  return !!(
-    process.env.REACT_APP_BUNNY_STORAGE_ZONE &&
-    process.env.REACT_APP_BUNNY_STORAGE_API_KEY
-  );
+  return STORAGE_MODE === 'bunny';
 };
 
 // Get active storage mode

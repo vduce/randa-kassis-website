@@ -7,7 +7,7 @@
 export const PRODUCTION_CDN = "https://randa-kassis-website.b-cdn.net";
 
 // Temporary CDN for markdown content files
-export const CONTENT_CDN = "https://pgcdn.b-cdn.net/public/public";
+export const CONTENT_CDN = (process.env.REACT_APP_CONTENT_CDN || "https://pgcdn.b-cdn.net/public/public").replace(/\/$/, '');
 
 // When ready to move markdown to production, change CONTENT_CDN to:
 // export const CONTENT_CDN = 'https://randa-kassis-website.b-cdn.net';

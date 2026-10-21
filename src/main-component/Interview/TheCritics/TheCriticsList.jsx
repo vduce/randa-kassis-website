@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fetchCritics } from "../../../services/cdnJsonService";
-import { getCdnUrl } from "../../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -14,7 +13,7 @@ const TheCriticsList = (props) => {
   const [articleContents, setArticleContents] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch critics from server then fetch markdown content
+  // Lists use metadata; Markdown is loaded only when a detail page opens.
   useEffect(() => {
     const loadCritics = async () => {
       setLoading(true);
@@ -22,20 +21,7 @@ const TheCriticsList = (props) => {
         // First fetch the critics list from server metadata
         const criticsData = await fetchCritics();
         
-        // Then fetch markdown content for each critic
-        const criticsWithContent = await Promise.all(
-          criticsData.map(async (critic) => {
-            try {
-              const response = await fetch(getCdnUrl(`interviews/essayistcritics/${critic.filename}`));
-              const content = await response.text();
-              return { ...critic, content };
-            } catch (error) {
-              console.error(`Error fetching ${critic.filename}:`, error);
-              return { ...critic, description: "Error loading content." };
-            }
-          })
-        );
-        setArticleContents(criticsWithContent);
+        setArticleContents(criticsData);
       } catch (error) {
         console.error("Error loading critics:", error);
       } finally {
@@ -143,10 +129,10 @@ const TheCriticsList = (props) => {
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: article.description.substring(0, 200),
+                          __html: (article.description || "").substring(0, 200),
                         }}
                       ></span>
-                      {article.description.length > 200 && "..."}
+                      {(article.description || "").length > 200 && "..."}
                     </p>
                     <Link onClick={ClickHandler} to={`/critics-single/${article.id}`} className="read-more" style={{ fontSize: "15px" }}>
                       Read more...

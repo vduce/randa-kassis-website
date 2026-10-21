@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fetchPoliticians } from "../../services/cdnJsonService";
-import { getCdnUrl } from "../../config/cdn";
 
 const PoliticianList = (props) => {
   const { state } = useLocation();
@@ -10,7 +9,7 @@ const PoliticianList = (props) => {
   const [PoliticianContents, setPoliticianContents] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch politicians from server then fetch markdown content
+  // Lists use metadata; Markdown is loaded only when a detail page opens.
   useEffect(() => {
     const loadPoliticians = async () => {
       setLoading(true);
@@ -18,20 +17,7 @@ const PoliticianList = (props) => {
         // First fetch the politicians list from server metadata
         const politiciansData = await fetchPoliticians();
         
-        // Then fetch markdown content for each politician
-        const politiciansWithContent = await Promise.all(
-          politiciansData.map(async (pol) => {
-            try {
-              const response = await fetch(getCdnUrl(`interviews/politicians/${pol.filename}`));
-              const content = await response.text();
-              return { ...pol, content };
-            } catch (error) {
-              console.error(`Error fetching ${pol.filename}:`, error);
-              return { ...pol, description: "Error loading content." };
-            }
-          })
-        );
-        setPoliticianContents(politiciansWithContent);
+        setPoliticianContents(politiciansData);
       } catch (error) {
         console.error("Error loading politicians:", error);
       } finally {
@@ -117,6 +103,8 @@ const PoliticianList = (props) => {
     );
   }
 
+  if (loading) return <p role="status">Loading content...</p>;
+
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
@@ -142,10 +130,10 @@ const PoliticianList = (props) => {
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: currentPolitician.description.substring(0, 200),
+                          __html: (currentPolitician.description || "").substring(0, 200),
                         }}
                       ></span>
-                      {currentPolitician.description.length > 200 && "..."}
+                      {(currentPolitician.description || "").length > 200 && "..."}
                     </p>
                     <Link
                       onClick={ClickHandler}

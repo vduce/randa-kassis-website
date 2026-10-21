@@ -48,8 +48,8 @@ const AdminDashboard = () => {
     return () => window.removeEventListener('scroll', saveScroll);
   }, [scrollKey]);
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
+    await logout();
     navigate('/admin/login');
   };
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fetchArticles } from "../../services/cdnJsonService";
-import { getCdnUrl } from "../../config/cdn";
 
 const ClickHandler = () => {
   window.scrollTo(10, 0);
@@ -14,7 +13,7 @@ const ArticlesList = (props) => {
   const [articleContents, setArticleContents] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch articles JSON from CDN, then fetch markdown content
+  // Lists use metadata; Markdown is loaded only when a detail page opens.
   useEffect(() => {
     const loadArticles = async () => {
       setLoading(true);
@@ -22,20 +21,7 @@ const ArticlesList = (props) => {
         // First fetch the articles JSON from CDN
         const articlesData = await fetchArticles();
         
-        // Then fetch content for each article
-        const fetchedArticles = await Promise.all(
-          articlesData.map(async (article) => {
-            try {
-              const response = await fetch(getCdnUrl(`articles/${article.filename}`));
-              const content = await response.text();
-              return { ...article, content };
-            } catch (error) {
-              console.error(`Error fetching ${article.filename}:`, error);
-              return { ...article, description: "Error loading content." };
-            }
-          })
-        );
-        setArticleContents(fetchedArticles);
+        setArticleContents(articlesData);
       } catch (error) {
         console.error("Error loading articles:", error);
         setArticleContents([]);
@@ -112,6 +98,8 @@ const ArticlesList = (props) => {
     borderColor: "#ff8024",
   };
 
+  if (loading) return <p role="status">Loading content...</p>;
+
   return (
     <section className="wpo-blog-pg-section section-padding-bottom">
       <div className="container">
@@ -137,10 +125,10 @@ const ArticlesList = (props) => {
                     <p style={{ marginBottom: "10px", fontSize: "15px" }}>
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: article.description.substring(0, 200),
+                          __html: (article.description || "").substring(0, 200),
                         }}
                       ></span>
-                      {article.description.length > 200 && "..."}
+                      {(article.description || "").length > 200 && "..."}
                     </p>
                     <Link onClick={ClickHandler} to={`/article-single/${article.id}`} className="read-more" style={{ fontSize: "15px" }}>
                       Read more...

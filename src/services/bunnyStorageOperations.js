@@ -5,12 +5,18 @@
 
 import { buildProxyUrl, getHeaders, handleApiError } from './bunnyStorageService';
 
+const contentPath = (categoryPath, filename) => {
+  const root = (process.env.REACT_APP_BUNNY_CONTENT_ROOT || 'public/public').replace(/\/$/, '');
+  const category = categoryPath.replace(/^public\//, '');
+  return `${root}/${category}${filename ? `/${filename}` : ''}`;
+};
+
 /**
  * List files in a directory
  */
 export const listFiles = async (categoryPath) => {
   try {
-    const url = buildProxyUrl('list', { path: `public/${categoryPath}` });
+    const url = buildProxyUrl('list', { path: contentPath(categoryPath) });
     
     const response = await fetch(url, {
       method: 'GET',
@@ -49,7 +55,7 @@ export const listFiles = async (categoryPath) => {
  */
 export const readFile = async (categoryPath, filename) => {
   try {
-    const url = buildProxyUrl('read', { path: `public/${categoryPath}/${filename}` });
+    const url = buildProxyUrl('read', { path: contentPath(categoryPath, filename) });
     
     const response = await fetch(url, {
       method: 'GET',
@@ -133,7 +139,7 @@ export const writeFile = async (categoryPath, filename, content) => {
       method: 'PUT',
       headers: getHeaders('application/json'),
       body: JSON.stringify({
-        path: `public/${categoryPath}/${filename}`,
+        path: contentPath(categoryPath, filename),
         content
       })
     });
@@ -186,7 +192,7 @@ export const updateFile = async (categoryPath, filename, content) => {
  */
 export const deleteFile = async (categoryPath, filename) => {
   try {
-    const url = buildProxyUrl('delete', { path: `public/${categoryPath}/${filename}` });
+    const url = buildProxyUrl('delete', { path: contentPath(categoryPath, filename) });
     
     const response = await fetch(url, {
       method: 'DELETE',

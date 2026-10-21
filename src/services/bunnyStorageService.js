@@ -4,13 +4,13 @@
  */
 
 // Use proxy server to avoid CORS issues
-const PROXY_URL = process.env.REACT_APP_PROXY_URL || 'http://localhost:3001';
+const PROXY_URL = (process.env.REACT_APP_PROXY_URL || '').replace(/\/$/, '');
 
 /**
  * Build proxy API URL
  */
 const buildProxyUrl = (endpoint, params = {}) => {
-  const url = new URL(`${PROXY_URL}/api/storage/${endpoint}`);
+  const url = new URL(`${PROXY_URL}/api/storage/${endpoint}`, window.location.origin);
   Object.keys(params).forEach(key => {
     if (params[key] !== undefined) {
       url.searchParams.append(key, params[key]);
@@ -25,6 +25,7 @@ const buildProxyUrl = (endpoint, params = {}) => {
 const getHeaders = (contentType = 'application/json') => {
   return {
     'Content-Type': contentType,
+    'X-Requested-With': 'RandaAdmin',
   };
 };
 

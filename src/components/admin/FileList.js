@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFileOperations';
 import { getCachedFileList, loadCachedFileList } from '../../services/adminFileCache';
 import './FileList.css';
+import { getStorageMode } from '../../config/storage';
 
 const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger, initialPage = 1, onPageChange, onContentReady }) => {
   const [files, setFiles] = useState(() => getCachedFileList(category.path)?.data.files || []);
@@ -188,7 +189,7 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
       {error && (
         <div className="file-list-error">
           <p className="error-message">{error}</p>
-          {!hasPermission && (
+          {!hasPermission && getStorageMode() === 'local' && (
             <>
               <div className="error-help">
                 <p><strong>Instructions:</strong></p>
@@ -203,7 +204,7 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
               </button>
             </>
           )}
-          {hasPermission && (
+          {(hasPermission || getStorageMode() === 'bunny') && (
             <button className="retry-button" onClick={() => loadFiles(false)}>
               Retry
             </button>

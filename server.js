@@ -9,12 +9,13 @@ const fs = require("fs");
 const https = require("https");
 const http = require("http");
 const cors = require("cors");
-require("dotenv").config();
+require("dotenv").config({ path: path.join(__dirname, '.env') });
 
 const app = express();
-const metadataDir = fs.existsSync(path.join(__dirname, "metadata"))
+app.disable('x-powered-by');
+const metadataDir = process.env.METADATA_DIR || (fs.existsSync(path.join(__dirname, "metadata"))
   ? path.join(__dirname, "metadata")
-  : path.join(__dirname, "public", "metadata");
+  : path.join(__dirname, "public", "metadata"));
 
 // Trust proxy (important on shared hosting)
 app.set("trust proxy", 1);
@@ -35,13 +36,32 @@ app.use(
 // Parse JSON and text
 app.use(express.json({ limit: "10mb" }));
 app.use(express.text({ limit: "10mb", type: "text/markdown" }));
+require('./server/adminAuth')(app);
 
 // Bunny Storage Config
-const STORAGE_ZONE = process.env.REACT_APP_BUNNY_STORAGE_ZONE;
-const API_KEY = process.env.REACT_APP_BUNNY_STORAGE_API_KEY;
+const STORAGE_ZONE = process.env.BUNNY_STORAGE_ZONE || process.env.REACT_APP_BUNNY_STORAGE_ZONE;
+const API_KEY = process.env.BUNNY_STORAGE_API_KEY || process.env.APP_BUNNY_STORAGE_API_KEY || process.env.REACT_APP_BUNNY_STORAGE_API_KEY;
 const ENDPOINT =
+  process.env.BUNNY_STORAGE_ENDPOINT || process.env.APP_BUNNY_STORAGE_ENDPOINT ||
   process.env.REACT_APP_BUNNY_STORAGE_ENDPOINT ||
   "https://storage.bunnycdn.com";
+const CONTENT_ROOT = process.env.BUNNY_CONTENT_ROOT || 'public/public';
+const contentDirectories = ['articles', 'encounters', 'interviews/politicians',
+  'interviews/painters', 'interviews/essayistcritics', 'story', 'paintings',
+  'exhibitions', 'gallery/myeyes', 'gallery/companion', 'gallery/arena'];
+
+app.use('/api/storage', (req, res, next) => {
+  if (req.path === '/health') return next();
+  const requested = req.method === 'PUT' ? req.body?.path : req.query.path;
+  const valid = typeof requested === 'string' && contentDirectories.some(directory => {
+    const base = `${CONTENT_ROOT}/${directory}`;
+    return req.path === '/list' ? requested === base :
+      requested.startsWith(`${base}/`) && /^[a-zA-Z0-9_-]+\.md$/.test(requested.slice(base.length + 1));
+  });
+  if (!valid) return res.status(400).json({ error: 'Invalid content path' });
+  if (!STORAGE_ZONE || !API_KEY) return res.status(503).json({ error: 'Bunny storage is not configured' });
+  next();
+});
 
 /**
  * Helper function to make HTTP requests to Bunny Storage
@@ -82,6 +102,7 @@ function makeRequest(url, options = {}) {
     });
 
     req.on("error", reject);
+    req.setTimeout(20000, () => req.destroy(new Error('Bunny storage request timed out')));
 
     if (options.body) {
       req.write(options.body);
@@ -103,6 +124,7 @@ app.get("/api/storage/health", (req, res) => {
     status: "ok",
     zone: STORAGE_ZONE,
     endpoint: ENDPOINT,
+    contentRoot: CONTENT_ROOT,
     timestamp: new Date().toISOString(),
   });
 });
@@ -184,7 +206,7 @@ app.get("/api/storage/read", async (req, res) => {
 app.put("/api/storage/write", async (req, res) => {
   try {
     const { path, content } = req.body;
-    if (!path || content === undefined) {
+    if (!path || typeof content !== 'string') {
       return res.status(400).json({ error: "Path and content required" });
     }
 
@@ -646,7 +668,9 @@ app.get("/api", (req, res) => {
 });
 
 // Serve JSON files from metadata folder (outside build)
-app.use("/metadata", express.static(metadataDir));
+app.use("/metadata", express.static(metadataDir, {
+  setHeaders: res => res.setHeader('Cache-Control', 'no-cache'),
+}));
 
 // Serve React build files
 const publicDir = path.join(__dirname, "build");
@@ -669,9 +693,10 @@ app.get(/.*/, (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
+if (process.env.NODE_ENV !== 'test') app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📦 Bunny Storage Zone: ${STORAGE_ZONE}`);
   console.log(`🔑 API Key: ${API_KEY ? "***configured***" : "❌ MISSING"}`);
   console.log(`📂 Serving from: ${publicDir}`);
 });
+module.exports = app;
