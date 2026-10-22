@@ -12,6 +12,7 @@ const JSON_FILENAMES = {
   interviews_politicians: "politicians.json",
   interviews_critics: "essayistandcritics.json",
 };
+export const supportsJSONIndex = categoryKey => Boolean(JSON_FILENAMES[categoryKey]);
 
 /**
  * Read JSON index from server

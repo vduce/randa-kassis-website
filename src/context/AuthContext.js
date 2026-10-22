@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
     } catch { /* Keep the current session visible if the server could not log out. */ }
   };
 
-  return <AuthContext.Provider value={{ isAuthenticated: Boolean(user), user, loading, login, logout, checkAuth }}>
+  return <AuthContext.Provider value={{ isAuthenticated: Boolean(user), readOnly: Boolean(user?.readOnly), user, loading, login, logout, checkAuth }}>
     {children}
   </AuthContext.Provider>;
 };

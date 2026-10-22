@@ -127,9 +127,11 @@ const getConfig = (categoryKey, filename) => {
   return config;
 };
 
-const getInternalRoute = (categoryKey, href) => {
+const getInternalRoute = (categoryKey, href, entries) => {
   const stem = getFilenameStem(href);
-  const id = stem.replace(/^(?:article|ed|po|painters|ec|story|painting|em|myeyes|companion|arena)/i, "");
+  const entry = entries?.find(item => item.filename === href.split('/').pop());
+  if (entries && !entry) return null;
+  const id = entry ? entry.id : stem.replace(/^(?:article|ed|po|painters|ec|story|painting|em|myeyes|companion|arena)/i, "");
   const routes = {
     articles: `/article-single/${id}`,
     encounters: `/encounter-and-dialogue-single/${id}`,
@@ -145,7 +147,7 @@ const getInternalRoute = (categoryKey, href) => {
   return routes[categoryKey] || null;
 };
 
-const MarkdownContent = ({ content = "", categoryKey, filename = "" }) => {
+const MarkdownContent = ({ content = "", categoryKey, filename = "", entries }) => {
   const navigate = useNavigate();
   const config = getConfig(categoryKey, filename);
 
@@ -226,7 +228,7 @@ const MarkdownContent = ({ content = "", categoryKey, filename = "" }) => {
     ),
     a: ({ href = "", children, ...props }) => {
       if (href.toLowerCase().endsWith(".md")) {
-        const route = getInternalRoute(categoryKey, href);
+        const route = getInternalRoute(categoryKey, href, entries);
         if (route) {
           return (
             <a

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#341d43">
+  <title>Website update | Randa Kassis</title>
+  <style>
+    :root{color-scheme:light;--ink:#341d43;--muted:#756b77;--paper:#faf8f5;--line:#e5dfe7;--accent:#a58658}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+    header{padding:38px 6vw;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .name{font-family:Georgia,'Times New Roman',serif;font-size:25px;letter-spacing:3px;font-weight:normal}.official{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+    main{flex:1;display:grid;place-items:center;padding:76px 24px 90px;position:relative;overflow:hidden}
+    main:before{content:'';position:absolute;width:560px;height:560px;border:1px solid var(--line);border-radius:50%;right:-330px;top:7%;pointer-events:none}
+    .message{width:min(100%,720px);text-align:center;position:relative}.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:24px;padding:10px 17px;color:#69556c;font-size:11px;letter-spacing:1.8px;text-transform:uppercase}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}.rule{height:1px;background:var(--accent);width:48px;margin:34px auto}
+    h1{font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:clamp(43px,5.2vw,67px);line-height:1.12;letter-spacing:-1.6px;margin:0 0 24px}
+    .description{max-width:490px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.8}.thanks{margin:16px 0 0;color:var(--muted);font-size:16px;line-height:1.7}
+    .actions{display:flex;justify-content:center;align-items:center;gap:27px;flex-wrap:wrap;margin-top:36px}.refresh{display:inline-block;color:#fff;background:var(--ink);border:1px solid var(--ink);border-radius:3px;padding:15px 25px;text-decoration:none;font-size:13px;letter-spacing:.3px}.refresh:hover{background:#50305f}.contact{font-size:13px;color:var(--ink);text-decoration:none;border-bottom:1px solid #baaabc;padding-bottom:4px}
+    a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}footer{margin:0 6vw;padding:24px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px;letter-spacing:.5px}
+    @media(max-width:600px){header{padding:27px 24px}.name{font-size:19px;letter-spacing:2px}.official{display:none}main{padding:60px 24px 75px}.description{font-size:16px}.actions{gap:23px;flex-direction:column}footer{margin:0 24px;flex-direction:column;text-align:center;line-height:1.6}h1{letter-spacing:-1px}}
+  </style>
+</head>
+<body>
+  <header><div class="name">RANDA KASSIS</div><span class="official">Official website</span></header>
+  <main>
+    <section class="message" aria-labelledby="maintenance-title">
+      <div class="status"><span class="dot" aria-hidden="true"></span>Scheduled maintenance</div>
+      <div class="rule" aria-hidden="true"></div>
+      <h1 id="maintenance-title">We’ll be back shortly.</h1>
+      <p class="description">Our website is temporarily unavailable while we make scheduled updates.</p>
+      <p class="thanks">Thank you for your patience.<br>Please check back soon.</p>
+      <div class="actions"><a class="refresh" href="/">Refresh page</a></div>
+    </section>
+  </main>
+  <footer><span>Randa Kassis · Official website</span></footer>
+</body>
+</html>

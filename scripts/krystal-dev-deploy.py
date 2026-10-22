@@ -51,7 +51,7 @@ def package(destination):
     with zipfile.ZipFile(destination, 'w', zipfile.ZIP_DEFLATED) as archive:
         archive.write(__file__, 'deploy.py')
         archive.writestr('settings.json', json.dumps(settings))
-        for name in ('server.js', 'server/adminAuth.js'):
+        for name in ('server.js', 'server/adminAuth.js', 'server/contentTransactions.js'):
             archive.write(root / name, 'payload/' + name)
         for file in (root / 'build').rglob('*'):
             relative = file.relative_to(root / 'build')
@@ -125,6 +125,7 @@ Header set Cache-Control "no-cache"
         os.rename(str(stage / 'payload/build'), str(TARGET / 'build'))
         (TARGET / 'server').mkdir(exist_ok=True)
         shutil.copy2(str(stage / 'payload/server/adminAuth.js'), str(TARGET / 'server/adminAuth.js'))
+        shutil.copy2(str(stage / 'payload/server/contentTransactions.js'), str(TARGET / 'server/contentTransactions.js'))
         shutil.copy2(str(stage / 'payload/server.js'), str(TARGET / 'server.js'))
         (TARGET / '.env').write_text(environment)
         (TARGET / '.env').chmod(0o600)

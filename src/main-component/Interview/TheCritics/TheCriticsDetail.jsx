@@ -1,3 +1,4 @@
+import { getContentNeighbors } from "../../../utils/contentNavigation";
 import React, { useEffect, useState, Fragment } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import Markdown from "react-markdown";
@@ -24,6 +25,7 @@ const TheCriticsDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setCurrentArticle(Number(id));
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -99,23 +101,14 @@ const TheCriticsDetail = () => {
     );
   }
 
-  const handlePrevious = () => {
-    if (currentArticle > 1) {
-      setCurrentArticle(currentArticle - 1);
-      navigate(`/critics-single/${currentArticle - 1}`, {
-        state: { pageNumber, currentArticle: currentArticle - 1 },
-      });
-    }
+  const neighbors = getContentNeighbors(articles, id);
+  const goToNeighbor = target => {
+    if (!target) return;
+    setCurrentArticle(target.id);
+    navigate(`/critics-single/${target.id}`, { state: { pageNumber, currentArticle: target.id } });
   };
-
-  const handleNext = () => {
-    if (currentArticle < articles.length) {
-      setCurrentArticle(currentArticle + 1);
-      navigate(`/critics-single/${currentArticle + 1}`, {
-        state: { pageNumber, currentArticle: currentArticle + 1 },
-      });
-    }
-  };
+  const handlePrevious = () => goToNeighbor(neighbors.previous);
+  const handleNext = () => goToNeighbor(neighbors.next);
 
   return (
     <Fragment>
@@ -142,14 +135,14 @@ const TheCriticsDetail = () => {
                     <div className="max-w-2xl mx-auto mb-3">
                       <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                         <div className="max-w-2xl mx-auto p-3 break-words">
-                          <MarkdownContent content={content} categoryKey="interviews_critics" filename={article.filename} />
+                          <MarkdownContent entries={articles} content={content} categoryKey="interviews_critics" filename={article.filename} />
                         </div>
                         <div className="d-flex mt-6" style={{ justifyContent: "space-between" }}>
                           <button
                             onClick={handlePrevious}
-                            disabled={currentArticle === 1}
+                            disabled={!neighbors.previous}
                             className={`btn btn-area ${
-                              currentArticle === 1
+                              !neighbors.previous
                                 ? "bg-gray-300 cursor-not-allowed"
                                 : "bg-blue-500 hover:bg-blue-600"
                             }`}
@@ -158,14 +151,14 @@ const TheCriticsDetail = () => {
                           </button>
                           <button
                             onClick={handleNext}
-                            disabled={currentArticle === articles.length}
+                            disabled={!neighbors.next}
                             className={`btn btn-area ${
-                              currentArticle === articles.length
+                              !neighbors.next
                                 ? "bg-gray-300 cursor-not-allowed"
                                 : "bg-blue-500 hover:bg-blue-600"
                             }`}
                           >
-                            {currentArticle === articles.length ? "Completed" : "Next"}
+                            {!neighbors.next ? "Completed" : "Next"}
                           </button>
                         </div>
                       </div>

@@ -1,3 +1,4 @@
+import { getContentNeighbors } from "../../utils/contentNavigation";
 import React, { useEffect, useRef, useState } from "react";
 import MarkdownContent from "../MarkdownContent/MarkdownContent";
 import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
@@ -37,6 +38,7 @@ const PoliticianSingle = () => {
   const lastElementType = useRef(null); // Track the last rendered element type
 
   useEffect(() => {
+    setCurrentElement(Number(id));
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -236,25 +238,14 @@ const PoliticianSingle = () => {
     return <p>Politician not found.</p>;
   }
 
-  const handlePrevious = () => {
-    if (currentElement > 1) {
-      setCurrentElement(currentElement - 1);
-      navigate(`/politician-single/${currentElement - 1}`, {
-        state: { pageNumber, currentElement: currentElement - 1 },
-      });
-    }
+  const neighbors = getContentNeighbors(politicians, id);
+  const goToNeighbor = target => {
+    if (!target) return;
+    setCurrentElement(target.id);
+    navigate(`/politician-single/${target.id}`, { state: { pageNumber, currentElement: target.id } });
   };
-
-  const handleNext = () => {
-    console.log("Current Element:", currentElement);
-    console.log("Total Elements:", politicians.length);
-    if (currentElement < politicians.length) {
-      setCurrentElement(currentElement + 1);
-      navigate(`/politician-single/${currentElement + 1}`, {
-        state: { pageNumber, currentElement: currentElement + 1 },
-      });
-    }
-  };
+  const handlePrevious = () => goToNeighbor(neighbors.previous);
+  const handleNext = () => goToNeighbor(neighbors.next);
 
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
@@ -278,7 +269,7 @@ const PoliticianSingle = () => {
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                       <div className="max-w-2xl mx-auto p-3">
-                      <MarkdownContent content={content || ""} categoryKey="interviews_politicians" filename={politician?.filename} />
+                      <MarkdownContent entries={politicians} content={content || ""} categoryKey="interviews_politicians" filename={politician?.filename} />
                       </div>
                       <div
                         className="d-flex mt-6"
@@ -286,9 +277,9 @@ const PoliticianSingle = () => {
                       >
                         <button
                           onClick={handlePrevious}
-                          disabled={currentElement === 1}
+                          disabled={!neighbors.previous}
                           className={`btn btn-area ${
-                            currentElement === 1
+                            !neighbors.previous
                               ? "bg-gray-300 cursor-not-allowed"
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
@@ -297,14 +288,14 @@ const PoliticianSingle = () => {
                         </button>
                         <button
                           onClick={handleNext}
-                          disabled={currentElement === politicians.length}
+                          disabled={!neighbors.next}
                           className={`btn btn-area ${
-                            currentElement === politicians.length
+                            !neighbors.next
                               ? "bg-gray-300 cursor-not-allowed"
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
                         >
-                          {currentElement === politicians.length
+                          {!neighbors.next
                             ? "Completed"
                             : "Next"}
                         </button>

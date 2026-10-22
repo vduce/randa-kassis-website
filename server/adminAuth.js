@@ -7,11 +7,14 @@ module.exports = function installAdminAuth(app) {
   const duration = 12 * 60 * 60 * 1000;
   const cookieName = 'randa_admin';
   const attempts = new Map();
+  const readOnly = process.env.CONTENT_READ_ONLY === 'true' || Boolean(process.env.METADATA_SOURCE_URL) || Boolean(process.env.CONTENT_OVERRIDE_DIR);
+  const localPreview = process.env.LOCAL_PRODUCTION_PREVIEW === 'true' &&
+    process.env.HOST === '127.0.0.1' && /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(process.env.ADMIN_ORIGIN || '') && readOnly;
   const hash = value => crypto.createHash('sha256').update(String(value)).digest();
   const equal = (a, b) => crypto.timingSafeEqual(hash(a), hash(b));
   const sign = value => crypto.createHmac('sha256', secret).update(value).digest('base64url');
   const cookieOptions = req => ({
-    httpOnly: true, secure: req.secure || process.env.NODE_ENV === 'production',
+    httpOnly: true, secure: req.secure || (process.env.NODE_ENV === 'production' && !localPreview),
     sameSite: 'strict', path: '/',
   });
 
@@ -24,7 +27,7 @@ module.exports = function installAdminAuth(app) {
       if (!payload || !signature || !equal(signature, sign(payload))) return null;
       const session = JSON.parse(Buffer.from(payload, 'base64url').toString());
       if (session.email !== email || session.expiresAt <= Date.now()) return null;
-      return { email: session.email, name: 'Admin User' };
+      return { email: session.email, name: 'Admin User', readOnly };
     } catch { return null; }
   }
 
@@ -62,7 +65,7 @@ module.exports = function installAdminAuth(app) {
     const payload = Buffer.from(JSON.stringify({ email, expiresAt: now + duration,
       nonce: crypto.randomBytes(16).toString('hex') })).toString('base64url');
     res.cookie(cookieName, `${payload}.${sign(payload)}`, { ...cookieOptions(req), maxAge: duration });
-    res.json({ success: true, user: { email, name: 'Admin User' } });
+    res.json({ success: true, user: { email, name: 'Admin User', readOnly } });
   });
   app.get('/api/admin/session', (req, res) => {
     const user = getSession(req);

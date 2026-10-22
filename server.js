@@ -9,13 +9,16 @@ const fs = require("fs");
 const https = require("https");
 const http = require("http");
 const cors = require("cors");
-require("dotenv").config({ path: path.join(__dirname, '.env') });
+require("dotenv").config({ path: process.env.RANDA_ENV_FILE || path.join(__dirname, '.env') });
 
+const { atomicWrite, createMutationLock, deleteContent, rememberHighWater } = require('./server/contentTransactions');
 const app = express();
 app.disable('x-powered-by');
-const metadataDir = process.env.METADATA_DIR || (fs.existsSync(path.join(__dirname, "metadata"))
+const metadataDir = process.env.METADATA_DIR ? path.resolve(__dirname, process.env.METADATA_DIR) : (fs.existsSync(path.join(__dirname, "metadata"))
   ? path.join(__dirname, "metadata")
   : path.join(__dirname, "public", "metadata"));
+
+const withMutationLock = createMutationLock(metadataDir);
 
 // Trust proxy (important on shared hosting)
 app.set("trust proxy", 1);
@@ -37,6 +40,13 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 app.use(express.text({ limit: "10mb", type: "text/markdown" }));
 require('./server/adminAuth')(app);
+const READ_ONLY = process.env.CONTENT_READ_ONLY === 'true' || Boolean(process.env.METADATA_SOURCE_URL) || Boolean(process.env.CONTENT_OVERRIDE_DIR);
+app.use(['/api/storage', '/metadata/api'], (req, res, next) => {
+  if (READ_ONLY && !['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {
+    return res.status(403).json({ error: 'Production preview is read-only' });
+  }
+  next();
+});
 
 // Bunny Storage Config
 const STORAGE_ZONE = process.env.BUNNY_STORAGE_ZONE || process.env.REACT_APP_BUNNY_STORAGE_ZONE;
@@ -49,6 +59,44 @@ const CONTENT_ROOT = process.env.BUNNY_CONTENT_ROOT || 'public/public';
 const contentDirectories = ['articles', 'encounters', 'interviews/politicians',
   'interviews/painters', 'interviews/essayistcritics', 'story', 'paintings',
   'exhibitions', 'gallery/myeyes', 'gallery/companion', 'gallery/arena'];
+const metadataFiles = ['articles.json', 'encounterAndDialogue.json', 'politicians.json', 'essayistandcritics.json'];
+const metadataSource = (process.env.METADATA_SOURCE_URL || '').replace(/\/$/, '');
+const overrideDir = process.env.CONTENT_OVERRIDE_DIR && path.resolve(__dirname, process.env.CONTENT_OVERRIDE_DIR);
+
+function validContentPath(relativePath) {
+  return typeof relativePath === 'string' && contentDirectories.some(directory =>
+    relativePath.startsWith(`${directory}/`) && /^[a-zA-Z0-9_-]+\.md$/.test(relativePath.slice(directory.length + 1)));
+}
+
+async function readMetadata(filename) {
+  if (!metadataFiles.includes(filename)) throw new Error('Invalid metadata filename');
+  if (!metadataSource) return JSON.parse(fs.readFileSync(path.join(metadataDir, filename), 'utf8'));
+  const response = await makeRequest(`${metadataSource}/${filename}`);
+  if (!response.ok) throw new Error(`Metadata source returned HTTP ${response.status}`);
+  const data = await response.json();
+  if (!Array.isArray(data)) throw new Error('Metadata source did not return an array');
+  return data;
+}
+
+// Published Markdown is readable without admin credentials; the storage key stays on the server.
+app.get(/^\/api\/content\/(.+)$/, async (req, res) => {
+  const relativePath = req.params[0];
+  if (!validContentPath(relativePath)) return res.status(400).json({ error: 'Invalid content path' });
+  res.set('Cache-Control', 'no-cache');
+  try {
+    const override = overrideDir && path.join(overrideDir, relativePath);
+    if (override && fs.existsSync(override)) return res.type('text/markdown').send(fs.readFileSync(override, 'utf8'));
+    const response = await makeRequest(`${ENDPOINT}/${STORAGE_ZONE}/${CONTENT_ROOT}/${relativePath}`, { headers: { AccessKey: API_KEY } });
+    if (!response.ok) return res.status(response.status).json({ error: `Content returned HTTP ${response.status}` });
+    res.type('text/markdown').send(await response.text());
+  } catch (err) { res.status(502).json({ error: err.message }); }
+});
+
+if (metadataSource) app.get('/metadata/:filename', async (req, res) => {
+  if (!metadataFiles.includes(req.params.filename)) return res.status(404).json({ error: 'File not found' });
+  try { res.set('Cache-Control', 'no-cache').json(await readMetadata(req.params.filename)); }
+  catch (err) { res.status(502).json({ error: err.message }); }
+});
 
 app.use('/api/storage', (req, res, next) => {
   if (req.path === '/health') return next();
@@ -82,6 +130,7 @@ function makeRequest(url, options = {}) {
 
     const req = lib.request(reqOptions, (res) => {
       let data = "";
+      res.setEncoding('utf8');
 
       res.on("data", (chunk) => {
         data += chunk;
@@ -125,6 +174,8 @@ app.get("/api/storage/health", (req, res) => {
     zone: STORAGE_ZONE,
     endpoint: ENDPOINT,
     contentRoot: CONTENT_ROOT,
+    readOnly: READ_ONLY,
+    metadataSource: metadataSource ? 'remote' : 'local',
     timestamp: new Date().toISOString(),
   });
 });
@@ -168,6 +219,13 @@ app.get("/api/storage/read", async (req, res) => {
     const path = req.query.path;
     if (!path) return res.status(400).json({ error: "Path required" });
 
+    const relativePath = path.slice(CONTENT_ROOT.length + 1);
+    const override = overrideDir && require('path').join(overrideDir, relativePath);
+    if (override && fs.existsSync(override)) {
+      const content = fs.readFileSync(override, 'utf8');
+      return res.json({ content, size: Buffer.byteLength(content), lastModified: fs.statSync(override).mtime.toISOString(), source: 'preserved-production' });
+    }
+
     const url = `${ENDPOINT}/${STORAGE_ZONE}/${path}`;
     console.log("📖 Read request:", url);
 
@@ -203,7 +261,7 @@ app.get("/api/storage/read", async (req, res) => {
  * PUT /api/storage/write
  * Body: { path: 'public/articles/article1.md', content: '...' }
  */
-app.put("/api/storage/write", async (req, res) => {
+app.put("/api/storage/write", withMutationLock(async (req, res) => {
   try {
     const { path, content } = req.body;
     if (!path || typeof content !== 'string') {
@@ -234,26 +292,7 @@ app.put("/api/storage/write", async (req, res) => {
     console.error("❌ Write error:", err.message);
     res.status(500).json({ error: err.message });
   }
-});
-
-/**
- * Helper function to extract file number from path
- * Supports multiple filename patterns: article1.md, ec1.md, po1.md, ed1.md, etc.
- */
-function extractFileNumber(filePath) {
-  // Match patterns like: article1.md, ec1.md, po1.md, ed1.md, etc.
-  const match = filePath.match(/(?:article|ec|po|ed)(\d+)\.md$/);
-  return match ? parseInt(match[1]) : null;
-}
-
-/**
- * Helper function to get file prefix from path
- * Returns: 'article', 'ec', 'po', 'ed', etc.
- */
-function getFilePrefix(filePath) {
-  const match = filePath.match(/(article|ec|po|ed)\d+\.md$/);
-  return match ? match[1] : null;
-}
+}));
 
 /**
  * Helper function to get category name from path
@@ -280,216 +319,25 @@ function getMetadataFilename(category) {
   return mapping[category];
 }
 
-/**
- * Renumber files after deletion
- * Works with all file types: articles, encounters, politicians, essayist critics
- */
-async function renumberFiles(deletedNumber, category, basePath, filePrefix) {
-  const results = {
-    success: true,
-    deletedNumber,
-    renamedFiles: [],
-    metadataUpdated: false,
-    errors: [],
-  };
-
+// Delete only the selected document; preserve other filenames and public IDs.
+app.delete("/api/storage/delete", withMutationLock(async (req, res) => {
   try {
-    // Read metadata file
-    const metadataFilename = getMetadataFilename(category);
-    const metadataPath = path.join(metadataDir, metadataFilename);
-
-    if (!fs.existsSync(metadataPath)) {
-      throw new Error(`Metadata file not found: ${metadataFilename}`);
-    }
-
-    const metadataContent = fs.readFileSync(metadataPath, "utf8");
-    let metadata = JSON.parse(metadataContent);
-
-    // Find the maximum file number
-    const maxNumber = Math.max(
-      ...metadata.map((item) => {
-        const num = extractFileNumber(item.filename);
-        return num || 0;
-      }),
-    );
-
-    console.log(
-      `📋 Renumbering: deleted=${deletedNumber}, max=${maxNumber}, prefix=${filePrefix}`,
-    );
-
-    // Renumber files on Bunny Storage (from deletedNumber+1 to maxNumber)
-    for (let i = deletedNumber + 1; i <= maxNumber; i++) {
-      const oldFilename = `${filePrefix}${i}.md`;
-      const newFilename = `${filePrefix}${i - 1}.md`;
-      const oldPath = `${basePath}/${oldFilename}`;
-      const newPath = `${basePath}/${newFilename}`;
-
-      try {
-        // Read the old file
-        const readUrl = `${ENDPOINT}/${STORAGE_ZONE}/${oldPath}`;
-        const readResponse = await makeRequest(readUrl, {
-          headers: { AccessKey: API_KEY },
-        });
-
-        if (!readResponse.ok) {
-          throw new Error(
-            `Failed to read ${oldFilename}: HTTP ${readResponse.status}`,
-          );
-        }
-
-        const content = await readResponse.text();
-
-        // Write to new filename
-        const writeUrl = `${ENDPOINT}/${STORAGE_ZONE}/${newPath}`;
-        const writeResponse = await makeRequest(writeUrl, {
-          method: "PUT",
-          headers: {
-            AccessKey: API_KEY,
-            "Content-Type": "text/markdown",
-            "Content-Length": Buffer.byteLength(content),
-          },
-          body: content,
-        });
-
-        if (!writeResponse.ok) {
-          throw new Error(
-            `Failed to write ${newFilename}: HTTP ${writeResponse.status}`,
-          );
-        }
-
-        // Delete the old file
-        const deleteUrl = `${ENDPOINT}/${STORAGE_ZONE}/${oldPath}`;
-        const deleteResponse = await makeRequest(deleteUrl, {
-          method: "DELETE",
-          headers: { AccessKey: API_KEY },
-        });
-
-        if (!deleteResponse.ok) {
-          throw new Error(
-            `Failed to delete ${oldFilename}: HTTP ${deleteResponse.status}`,
-          );
-        }
-
-        results.renamedFiles.push({ from: oldFilename, to: newFilename });
-        console.log(`✅ Renamed: ${oldFilename} → ${newFilename}`);
-      } catch (err) {
-        results.errors.push(`Error renaming ${oldFilename}: ${err.message}`);
-        console.error(`❌ Error renaming ${oldFilename}:`, err.message);
-      }
-    }
-
-    // Update metadata: remove deleted entry and renumber subsequent entries
-    metadata = metadata.filter((item) => {
-      const num = extractFileNumber(item.filename);
-      return num !== deletedNumber;
+    const category = getCategoryFromPath(req.query.path);
+    const result = await deleteContent({
+      filePath: req.query.path,
+      metadataFilename: category ? getMetadataFilename(category) : null,
+      metadataDir,
+      backupDir: process.env.CONTENT_BACKUP_DIR || path.join(__dirname, '.content-backups'),
+      request: makeRequest,
+      baseUrl: `${ENDPOINT}/${STORAGE_ZONE}`,
+      apiKey: API_KEY,
     });
-
-    // Renumber the metadata entries
-    metadata = metadata.map((item) => {
-      const num = extractFileNumber(item.filename);
-      if (num && num > deletedNumber) {
-        return {
-          ...item,
-          id: item.id - 1,
-          filename: `${filePrefix}${num - 1}.md`,
-        };
-      }
-      return item;
-    });
-
-    // Sort by id to maintain order
-    metadata.sort((a, b) => a.id - b.id);
-
-    // Write updated metadata
-    let jsonContent = JSON.stringify(metadata, null, 2);
-    jsonContent = jsonContent.replace(/[\u007F-\uFFFF]/g, (char) => {
-      return "\\u" + ("0000" + char.charCodeAt(0).toString(16)).slice(-4);
-    });
-
-    fs.writeFileSync(metadataPath, jsonContent, "utf8");
-    results.metadataUpdated = true;
-    console.log(`✅ Metadata updated: ${metadataFilename}`);
+    res.json(result);
   } catch (err) {
-    results.success = false;
-    results.errors.push(`Metadata update error: ${err.message}`);
-    console.error("❌ Renumbering error:", err.message);
+    if (err.code === 'RECOVERY_REQUIRED') res.locals.keepContentLock = true;
+    res.status(err.status || 500).json({ error: err.message, code: err.code, backupId: err.backupId });
   }
-
-  return results;
-}
-
-/**
- * Delete file
- * DELETE /api/storage/delete?path=public/articles/article1.md
- * Supports automatic renumbering for articles, encounters, politicians, essayist critics
- */
-app.delete("/api/storage/delete", async (req, res) => {
-  try {
-    const filePath = req.query.path;
-    if (!filePath) return res.status(400).json({ error: "Path required" });
-
-    // Check if this is a file that needs renumbering
-    const fileNumber = extractFileNumber(filePath);
-    const filePrefix = getFilePrefix(filePath);
-    const category = getCategoryFromPath(filePath);
-
-    if (fileNumber && filePrefix && category) {
-      console.log(
-        `🗑️  Delete with renumbering: ${filePrefix}${fileNumber}.md (category: ${category})`,
-      );
-
-      // First, delete the target file
-      const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
-      const response = await makeRequest(url, {
-        method: "DELETE",
-        headers: { AccessKey: API_KEY },
-      });
-
-      if (!response.ok) {
-        console.error("Delete failed:", response.status);
-        throw new Error(`HTTP ${response.status}`);
-      }
-
-      console.log(`✅ Deleted: ${filePrefix}${fileNumber}.md`);
-
-      // Then renumber all subsequent files
-      const basePath = filePath.substring(0, filePath.lastIndexOf("/"));
-      const renumberResults = await renumberFiles(
-        fileNumber,
-        category,
-        basePath,
-        filePrefix,
-      );
-
-      res.json({
-        success: true,
-        deleted: `${filePrefix}${fileNumber}.md`,
-        category: category,
-        renumbering: renumberResults,
-      });
-    } else {
-      // Simple delete for files that don't need renumbering
-      const url = `${ENDPOINT}/${STORAGE_ZONE}/${filePath}`;
-      console.log("🗑️  Delete request:", url);
-
-      const response = await makeRequest(url, {
-        method: "DELETE",
-        headers: { AccessKey: API_KEY },
-      });
-
-      if (!response.ok) {
-        console.error("Delete failed:", response.status);
-        throw new Error(`HTTP ${response.status}`);
-      }
-
-      console.log("✅ File deleted");
-      res.json({ success: true });
-    }
-  } catch (err) {
-    console.error("❌ Delete error:", err.message);
-    res.status(500).json({ error: err.message });
-  }
-});
+}));
 
 // ============================================
 // FRONTEND ROUTES
@@ -500,7 +348,7 @@ app.get("/metadata/api/health", (req, res) => {
 });
 
 // Read JSON metadata file
-app.get("/metadata/api/:filename", (req, res) => {
+app.get("/metadata/api/:filename", async (req, res) => {
   try {
     const filename = req.params.filename;
 
@@ -515,6 +363,7 @@ app.get("/metadata/api/:filename", (req, res) => {
       return res.status(400).json({ error: "Invalid filename" });
     }
 
+    if (metadataSource) return res.json({ success: true, data: await readMetadata(filename) });
     const filePath = path.join(metadataDir, filename);
 
     if (!fs.existsSync(filePath)) {
@@ -532,7 +381,7 @@ app.get("/metadata/api/:filename", (req, res) => {
 });
 
 // Update JSON metadata file (add or update entry)
-app.post("/metadata/api/:filename/update", (req, res) => {
+app.post("/metadata/api/:filename/update", withMutationLock((req, res) => {
   try {
     const filename = req.params.filename;
     const { entryFilename, metadata } = req.body;
@@ -574,17 +423,18 @@ app.post("/metadata/api/:filename/update", (req, res) => {
       data[existingIndex] = {
         ...data[existingIndex],
         ...metadata,
+        id: data[existingIndex].id,
         filename: entryFilename,
       };
       console.log(`✏️  Updated entry for ${entryFilename}`);
     } else {
       // Add new entry
       const newId =
-        data.length > 0 ? Math.max(...data.map((item) => item.id || 0)) + 1 : 1;
+        rememberHighWater(metadataDir, filename, data, true);
       data.push({
+        ...metadata,
         id: newId,
         filename: entryFilename,
-        ...metadata,
       });
       console.log(`➕ Added new entry for ${entryFilename} with id ${newId}`);
     }
@@ -595,7 +445,7 @@ app.post("/metadata/api/:filename/update", (req, res) => {
       return "\\u" + ("0000" + char.charCodeAt(0).toString(16)).slice(-4);
     });
 
-    fs.writeFileSync(filePath, jsonContent, "utf8");
+    atomicWrite(filePath, jsonContent);
 
     console.log(`✅ Successfully updated ${filename}`);
     res.json({ success: true, data });
@@ -603,10 +453,10 @@ app.post("/metadata/api/:filename/update", (req, res) => {
     console.error("❌ Update JSON error:", error);
     res.status(500).json({ error: error.message });
   }
-});
+}));
 
 // Delete entry from JSON metadata file
-app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
+app.delete("/metadata/api/:filename/entry/:entryFilename", withMutationLock((req, res) => {
   try {
     const filename = req.params.filename;
     const entryFilename = req.params.entryFilename;
@@ -632,6 +482,7 @@ app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
     const content = fs.readFileSync(filePath, "utf8");
     let data = JSON.parse(content);
 
+    rememberHighWater(metadataDir, filename, data);
     // Filter out the entry
     const filteredData = data.filter((item) => item.filename !== entryFilename);
 
@@ -641,7 +492,7 @@ app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
       return "\\u" + ("0000" + char.charCodeAt(0).toString(16)).slice(-4);
     });
 
-    fs.writeFileSync(filePath, jsonContent, "utf8");
+    atomicWrite(filePath, jsonContent);
 
     console.log(`🗑️  Deleted entry ${entryFilename} from ${filename}`);
     res.json({ success: true, data: filteredData });
@@ -649,7 +500,7 @@ app.delete("/metadata/api/:filename/entry/:entryFilename", (req, res) => {
     console.error("❌ Delete JSON entry error:", error);
     res.status(500).json({ error: error.message });
   }
-});
+}));
 
 // Test route
 app.get("/api", (req, res) => {
@@ -673,7 +524,7 @@ app.use("/metadata", express.static(metadataDir, {
 }));
 
 // Serve React build files
-const publicDir = path.join(__dirname, "build");
+const publicDir = path.resolve(__dirname, process.env.BUILD_DIR || 'build');
 app.use(express.static(publicDir));
 
 // Catch-all route for React Router (must be last)
@@ -693,7 +544,7 @@ app.get(/.*/, (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 8000;
-if (process.env.NODE_ENV !== 'test') app.listen(PORT, () => {
+if (process.env.NODE_ENV !== 'test') app.listen(PORT, process.env.HOST || '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📦 Bunny Storage Zone: ${STORAGE_ZONE}`);
   console.log(`🔑 API Key: ${API_KEY ? "***configured***" : "❌ MISSING"}`);

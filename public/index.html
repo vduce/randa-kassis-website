@@ -1,39 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head>
-  <base href="/" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <meta name="description" content="Randa Kassis is a Syrian opposition politician, writer, and artist. Discover her work in secularism, women’s rights, books, and more." />
-  <meta name="keywords" content="Randa Kassis, Syrian opposition politician, Middle Eastern women’s rights, Randa Kassis books, secularism in Syria, Syrian woman politician, رندا قسيس, رندة قسيس, سياسية سورية, نساء سياسيات سوريات, المعارضة السورية, العلمانية في الشرق الأوسط, العلمانية في سوريا" />
-  
-  <meta name="author" content="Randa Kassis" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://randakassis.com" />
-  <title>Randa Kassis | Politician, Writer, Artist</title>
+  <!-- Charset & Viewport -->
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://randakassis.com" />
-  <meta property="og:title" content="Randa Kassis | Politician, Writer, Artist" />
-  <meta property="og:description" content="Randa Kassis is a Syrian opposition politician, writer, and artist. Explore her political work, secular values, women's rights advocacy, and more." />
+  <!-- Title -->
+  <title>Randa Kassis – Politician, Essayist, Anthropologist, Artist</title>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://randakassis.com" />
-  <meta name="twitter:title" content="Randa Kassis | Politician, Writer, Artist" />
-  <meta name="twitter:description" content="Randa Kassis is a Syrian opposition politician, writer, and artist. Explore her political work, secular values, women's rights advocacy, and more." />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://randakassis.com/">
 
-  <!-- Favicon and Manifest -->
-  <link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/png" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <meta name="theme-color" content="#773093" />
+  <!-- Favicon & App Icons (cache-busted) -->
+  <link rel="icon" href="/favicon.ico?v=11" type="image/x-icon" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico?v=11" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=11">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#773093">
+
+   <!-- Primary SEO -->
+  <meta name="description" content="Randa Kassis is a Syrian opposition politician, essayist, anthropologist, writer, and artist. Explore her political work, secular values, and advocacy for women’s rights.">
+  <meta name="keywords" content="Randa Kassis, Syrian opposition politician, women’s rights, secularism, Middle East politics, anthropologist, author, artist, رندا قسيس, رندة قسيس, سياسية سورية, نساء سياسيات سوريات, المعارضة السورية, العلمانية في الشرق الأوسط, العلمانية في سوريا">
+  <meta name="author" content="Randa Kassis">
+  <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://randakassis.com/">
+  <meta property="og:title" content="Randa Kassis – Politician, Essayist, Anthropologist, Writer, Artist">
+  <meta property="og:description" content="Randa Kassis is a Syrian opposition politician, essayist, anthropologist, writer, and artist. Explore her political work, secular values, and advocacy for women’s rights.">
+  <meta property="og:site_name" content="Randa Kassis">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://randakassis.com/images/social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- X (Twitter) Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://randakassis.com/">
+  <meta name="twitter:title" content="Randa Kassis – Politician, Essayist, Anthropologist, Writer, Artist">
+  <meta name="twitter:description" content="Randa Kassis is a Syrian opposition politician, essayist, anthropologist, writer, and artist.">
+  <meta name="twitter:image" content="https://randakassis.com/images/social-share.jpg">
+
+  <!-- Styles -->
+
+
+  <!-- Structured Data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://randakassis.com/#person",
+    "name": "Randa Kassis",
+    "alternateName": ["رندا قسيس", "رندة قسيس"],
+    "jobTitle": ["Politician", "Essayist", "Anthropologist", "Writer", "Artist"],
+    "description": "Randa Kassis is a Syrian politician, anthropologist, writer, and artist who advocates for secularism and women’s rights in the Middle East.",
+    "url": "https://randakassis.com",
+    "image": "https://randakassis.com/images/randa-kassis.jpg",
+    "knowsLanguage": ["en-GB", "ar"],
+    "sameAs": [
+      "https://www.wikidata.org/wiki/xxxxxxxx",
+      "https://www.facebook.com/xxxxxxxx",
+      "https://twitter.com/xxxxxxxx",
+      "https://www.instagram.com/xxxxxxxx",
+      "https://www.linkedin.com/in/xxxxxxxx"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://randakassis.com/#website",
+    "url": "https://randakassis.com/",
+    "name": "Randa Kassis",
+    "inLanguage": "en-GB",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://randakassis.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+ </script>
 </head>
-
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+
+  <!-- Override the two old links to point to the new site -->
+  <script>
+  (function () {
+    var NEW = 'https://mpsyria.com';
+    var OLD_HOSTS = ['mspsy.com','www.mspsy.com'];
+
+    function swapLinks() {
+      document.querySelectorAll('a[href]').forEach(function(a){
+        var href = a.getAttribute('href') || '';
+        var text = (a.textContent || '').trim().toLowerCase();
+        var host = '';
+        try { host = new URL(href, location.origin).hostname; } catch(e){}
+
+        var isOld = OLD_HOSTS.indexOf(host) !== -1;
+        var looksLikeParty = text === 'join the party' ||
+                             text.includes('movement for a pluralistic society');
+
+        if (isOld || looksLikeParty) {
+          a.setAttribute('href', NEW);
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      swapLinks();
+      var i=0, t=setInterval(function(){
+        swapLinks();
+        if(++i>25) clearInterval(t);
+      }, 120);
+    });
+  })();
+  </script>
+
+  <!-- App Script (load once, at the end) -->
+
 </body>
 </html>

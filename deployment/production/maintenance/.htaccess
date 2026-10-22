@@ -1,0 +1,7 @@
+Options -Indexes
+<IfModule mod_passenger.c>
+PassengerEnabled off
+</IfModule>
+<IfModule mod_headers.c>
+Header always set Cache-Control "no-store"
+</IfModule>

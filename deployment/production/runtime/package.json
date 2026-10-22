@@ -1,0 +1,10 @@
+{
+  "name": "randa-kassis-production-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runtime dependencies for the Randa Kassis production server",
+  "main": "server.js",
+  "engines": { "node": ">=22 <23" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "5.1.0", "cors": "2.8.5", "dotenv": "17.2.3" }
+}

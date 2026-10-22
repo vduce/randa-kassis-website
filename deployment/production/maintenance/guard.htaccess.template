@@ -1,0 +1,17 @@
+# BEGIN RANDA MAINTENANCE
+# Keep this before all SPA and Passenger routing rules.
+ErrorDocument 503 /maintenance/index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}/.randa-maintenance -f
+RewriteCond %{REQUEST_URI} !^/maintenance/index\.html$ [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+RewriteCond %{HTTP:X-Randa-Release-Check} !^__OPERATOR_TOKEN__$
+RewriteRule ^ - [R=503,L]
+RewriteRule ^\.randa-maintenance$ - [F,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set Retry-After "600" "expr=%{REQUEST_STATUS} == 503"
+Header always set Cache-Control "no-store" "expr=%{REQUEST_STATUS} == 503"
+</IfModule>
+# END RANDA MAINTENANCE

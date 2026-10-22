@@ -8,12 +8,13 @@ import PageTitle from "../../components/pagetitle/PageTitle";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
+import { getCdnUrl } from '../../config/cdn';
 
 const InTheArenaSections = [
   {
     id: 1,
     title: "In The Arena",
-    markdownFile: "https://pgcdn.b-cdn.net/public/public/gallery/arena/arena1.md",
+    markdownFile: "gallery/arena/arena1.md",
   },
 ];
 
@@ -36,7 +37,8 @@ const InTheArena = () => {
       const updatedSections = await Promise.all(
         InTheArenaSections.map(async (section) => {
           try {
-            const response = await fetch(section.markdownFile);
+            const response = await fetch(getCdnUrl(section.markdownFile));
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const content = await response.text();
             return { ...section, content };
           } catch (error) {

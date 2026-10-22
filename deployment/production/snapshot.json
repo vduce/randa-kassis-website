@@ -1,0 +1,41 @@
+{
+  "capturedAt": "2026-10-22T05:31:35.113327+00:00",
+  "source": "https://randakassis.com",
+  "sourceBundle": "/static/js/main.a416ffed.js",
+  "metadata": {
+    "articles.json": {
+      "count": 52,
+      "sha256": "e033679f4e76b60907e9021b64aaf8193f1871d09469963ac1faf0a64efe0ba0"
+    },
+    "encounterAndDialogue.json": {
+      "count": 60,
+      "sha256": "bf23d01043534e3c930824bd6ee8df8b6f9cf0c0997c1fbba28a6c4bc023ba23"
+    },
+    "essayistandcritics.json": {
+      "count": 32,
+      "sha256": "5e13e7da6ae180e0bdb4008bb1eab95878c2393865e8f865feea6c7fb84aca29"
+    },
+    "politicians.json": {
+      "count": 108,
+      "sha256": "8b163b83f33d6fa4d217290d3d17cf3dfc3f3cc3a1a2a43196bd77e7441939d3"
+    }
+  },
+  "preservedContent": {
+    "encounters/ed1.md": {
+      "liveSha256": "6e656e553a8c4b66a3d7564b518f65f5ad66cb5febba13fbf4422127e96e4172",
+      "bunnySha256": "f1c9acfad4809ec5284122f468ef0d5e79f720c7a7f0bbd553749b94e089f860"
+    },
+    "encounters/ed4.md": {
+      "liveSha256": "12d929695a705c9b400ad5c1e521f47e1b8680f27084a4fc6aa4f23b02f0515f",
+      "bunnySha256": "0fa5a0ed881565e93bafb07bdf297729509be967d0f71bf177dbd98330e1b9c1"
+    },
+    "gallery/myeyes/myeyes1.md": {
+      "liveSha256": "186c4108c3c40c514adf7595125668bf70991ac67323be743a936bc048a68dbd",
+      "bunnySha256": "9c243a15dfc2ae1110f3992f3ac6556373b1764bdef0ee840bf271e838817a8d"
+    },
+    "gallery/myeyes/myeyes5.md": {
+      "liveSha256": "2e72292091771d125fe614c44f91981ce912ac4cf8110df58f69fa3083b16964",
+      "bunnySha256": "7205366bd53f25232f0cd25627bf17feffd746cf25dc5272783076188d95f5f7"
+    }
+  }
+}

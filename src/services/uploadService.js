@@ -3,7 +3,8 @@
  * Handles file upload processing including reading, metadata extraction, and file creation
  */
 
-import { createFile, generateNextFilename, fileExists } from "./fileOperations";
+import { createFile, generateNextFilename, fileExists, getStorageMode } from "./unifiedFileOperations";
+import { updateJSONIndexEntry, supportsJSONIndex } from './serverJsonService';
 
 /**
  * Extract metadata from markdown content
@@ -210,6 +211,7 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
 
     // Check if file already exists
     const existsResult = await fileExists(categoryPath, targetFilename);
+    if (!existsResult.success) return { success: false, filename: file.name, error: existsResult.error };
     if (existsResult.success && existsResult.data.exists) {
       // Generate new filename to avoid overwriting
       targetFilename = await generateFilename(
@@ -232,6 +234,18 @@ const processFileUpload = async (file, categoryPath, categoryKey) => {
         filename: file.name,
         targetFilename: targetFilename,
         error: createResult.error,
+      };
+    }
+
+    if (getStorageMode() === 'bunny' && supportsJSONIndex(categoryKey)) {
+      const description = content.replace(/<h[1-6][^>]*>.*?<\/h[1-6]>/gs, '')
+        .split(/\n\s*\n/).map(part => part.replace(/<[^>]*>/g, '').trim())
+        .find(part => part.length > 60 && !part.startsWith('![')) || '';
+      metadata.description = description.slice(0, 600);
+      const indexResult = await updateJSONIndexEntry(categoryKey, targetFilename, metadata);
+      if (!indexResult.success) return {
+        success: false, filename: file.name, targetFilename, created: true,
+        error: { code: 'METADATA_UPDATE_FAILED', message: `Markdown uploaded, but its website metadata could not be saved. Open ${targetFilename} in the editor and retry saving its metadata.` },
       };
     }
 

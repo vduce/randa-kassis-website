@@ -1,3 +1,4 @@
+import { getContentNeighbors } from "../../utils/contentNavigation";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import MarkdownContent from "../../components/MarkdownContent/MarkdownContent";
 import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
@@ -48,6 +49,7 @@ const EdSingle = () => {
   }, []);
 
   useEffect(() => {
+    setCurrentElement(Number(id));
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -123,23 +125,14 @@ const EdSingle = () => {
     return <p>Encounter and dialogue not found.</p>;
   }
 
-  const handlePrevious = () => {
-    if (currentElement > 1) {
-      setCurrentElement(currentElement - 1);
-      navigate(`/encounter-and-dialogue-single/${currentElement - 1}`, {
-        state: { pageNumber, currentElement: currentElement - 1 },
-      });
-    }
+  const neighbors = getContentNeighbors(encounterAndDialogues, id);
+  const goToNeighbor = target => {
+    if (!target) return;
+    setCurrentElement(target.id);
+    navigate(`/encounter-and-dialogue-single/${target.id}`, { state: { pageNumber, currentElement: target.id } });
   };
-
-  const handleNext = () => {
-    if (currentElement < encounterAndDialogues.length) {
-      setCurrentElement(currentElement + 1);
-      navigate(`/encounter-and-dialogue-single/${currentElement + 1}`, {
-        state: { pageNumber, currentElement: currentElement + 1 },
-      });
-    }
-  };
+  const handlePrevious = () => goToNeighbor(neighbors.previous);
+  const handleNext = () => goToNeighbor(neighbors.next);
 
   return (
     <section className="wpo-blog-single-section section-padding-bottom">
@@ -163,7 +156,7 @@ const EdSingle = () => {
                   <div className="max-w-2xl mx-auto mb-3">
                     <div className="max-w-2xl mx-auto p-3 bg-white shadow-lg rounded-lg">
                       <div className="max-w-2xl mx-auto p-3">
-                      <MarkdownContent content={content || ""} categoryKey="encounters" filename={encounterAndDialogue?.filename} />
+                      <MarkdownContent entries={encounterAndDialogues} content={content || ""} categoryKey="encounters" filename={encounterAndDialogue?.filename} />
                       </div>
                       <div
                         className="d-flex mt-6"
@@ -171,9 +164,9 @@ const EdSingle = () => {
                       >
                         <button
                           onClick={handlePrevious}
-                          disabled={currentElement === 1}
+                          disabled={!neighbors.previous}
                           className={`btn btn-area ${
-                            currentElement === 1
+                            !neighbors.previous
                               ? "bg-gray-300 cursor-not-allowed"
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
@@ -183,15 +176,15 @@ const EdSingle = () => {
                         <button
                           onClick={handleNext}
                           disabled={
-                            currentElement === encounterAndDialogues.length
+                            !neighbors.next
                           }
                           className={`btn btn-area ${
-                            currentElement === encounterAndDialogues.length
+                            !neighbors.next
                               ? "bg-gray-300 cursor-not-allowed"
                               : "bg-blue-500 hover:bg-blue-600"
                           }`}
                         >
-                          {currentElement === encounterAndDialogues.length
+                          {!neighbors.next
                             ? "Completed"
                             : "Next"}
                         </button>

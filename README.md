@@ -1,5 +1,7 @@
 # Randa Kassis website
 
+Production preparation is on `production-prep/20261022`. See [the local production preview guide](deployment/production/README.md) for the running preview, hosted metadata, production content snapshots, and the remaining release steps.
+
 React (Create React App) renders the public website and `/admin`. Express in `server.js` serves `build/`, the writable JSON indexes in `metadata/`, and the authenticated Bunny Storage proxy. Markdown lives in the `parallelglobe` storage zone under `public/public/`; images, videos and PDFs use the separate Randa media CDN. Keep this shared storage root scoped to Randa content.
 
 ## Local commands

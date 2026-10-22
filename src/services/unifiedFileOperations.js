@@ -32,6 +32,14 @@ export const readFile = async (categoryPath, filename) => {
   return await ops.readFile(categoryPath, filename);
 };
 
+export const fileExists = async (categoryPath, filename) => {
+  if (getStorageMode() === 'local') return localOps.fileExists(categoryPath, filename);
+  const result = await bunnyOps.readFile(categoryPath, filename);
+  if (result.success) return { success: true, data: { exists: true } };
+  if (result.error?.code === 'NOT_FOUND') return { success: true, data: { exists: false } };
+  return result;
+};
+
 /**
  * Create a new file
  */

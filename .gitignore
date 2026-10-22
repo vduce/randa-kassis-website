@@ -12,6 +12,13 @@
 /build
 /backup
 /docs
+/build-production
+/build-release
+/.production-release
+/.env.production-release.local
+/.production-preview
+/.content-backups
+/.env.production-preview.local
 
 # misc
 .DS_Store
@@ -29,3 +36,7 @@ package-lock.json
 .idea
 .idea/vcs.xml
 .idea/*
+!deployment/production/runtime/package-lock.json
+
+# Local Python verification artifacts
+/scripts/__pycache__/

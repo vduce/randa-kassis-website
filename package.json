@@ -57,6 +57,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "node scripts/build.js",
+    "prepare:production": "python3 scripts/prepare-production.py",
+    "build:production-preview": "RANDA_ENV_FILE=.env.production-preview.local npm exec --yes --package=node@22.23.3 -- node scripts/build.js",
+    "start:production-preview": "RANDA_ENV_FILE=.env.production-preview.local npm exec --yes --package=node@22.23.3 -- node server.js",
+    "verify:production-preview": "node scripts/verify-production-preview.cjs",
+    "test:server": "node --test server/*.test.cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

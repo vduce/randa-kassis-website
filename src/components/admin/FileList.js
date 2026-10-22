@@ -3,8 +3,10 @@ import { sortFiles, filterFiles, paginateFiles } from '../../services/unifiedFil
 import { getCachedFileList, loadCachedFileList } from '../../services/adminFileCache';
 import './FileList.css';
 import { getStorageMode } from '../../config/storage';
+import { useAuth } from '../../context/AuthContext';
 
 const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigger, initialPage = 1, onPageChange, onContentReady }) => {
+  const { readOnly } = useAuth();
   const [files, setFiles] = useState(() => getCachedFileList(category.path)?.data.files || []);
   const [filteredFiles, setFilteredFiles] = useState([]);
   const [paginatedData, setPaginatedData] = useState(null);
@@ -166,11 +168,11 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
           <span className="search-icon">🔍</span>
         </div>
         <div className="header-actions">
-          <button className="upload-button" onClick={() => window.dispatchEvent(new CustomEvent('openFileUpload'))}>
+          <button disabled={readOnly} className="upload-button" onClick={() => window.dispatchEvent(new CustomEvent('openFileUpload'))}>
             <span className="button-icon">📤</span>
             Upload
           </button>
-          <button className="add-new-button" onClick={() => onAddNew(currentPage)}>
+          <button disabled={readOnly} className="add-new-button" onClick={() => onAddNew(currentPage)}>
             <span className="button-icon">+</span>
             Add New
           </button>
@@ -269,12 +271,13 @@ const FileList = ({ category, onSelectFile, onDeleteFile, onAddNew, refreshTrigg
                       <button
                         className="action-button edit-button"
                         onClick={() => onSelectFile(file, currentPage)}
-                        title="Edit file"
+                        title={readOnly ? 'View file' : 'Edit file'}
                       >
-                        ✏️ Edit
+                        {readOnly ? '👁 View' : '✏️ Edit'}
                       </button>
                       <button
                         className="action-button delete-button"
+                        disabled={readOnly}
                         onClick={() => onDeleteFile(file)}
                         title="Delete file"
                       >

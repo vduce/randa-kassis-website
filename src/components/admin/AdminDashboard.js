@@ -11,7 +11,7 @@ import { invalidateFileList } from '../../services/adminFileCache';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
-  const { user, logout } = useAuth();
+  const { user, logout, readOnly } = useAuth();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const restoreFrame = useRef(null);
@@ -159,6 +159,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
+      {readOnly && <div role="status" style={{ padding: '12px 24px', background: '#fff3cd', color: '#503c00' }}>Production content preview — editing is disabled.</div>}
       {/* Header */}
       <header className="admin-header">
         <div className="header-content">

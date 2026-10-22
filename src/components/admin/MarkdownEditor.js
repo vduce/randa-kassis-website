@@ -9,12 +9,15 @@ import {
 import {
   getJSONIndexEntry,
   updateJSONIndexEntry,
+  supportsJSONIndex,
 } from "../../services/serverJsonService";
 import MarkdownPreview from "./MarkdownPreview";
 import { invalidateFileList } from "../../services/adminFileCache";
 import "./MarkdownEditor.css";
+import { useAuth } from '../../context/AuthContext';
 
 const MarkdownEditor = () => {
+  const { readOnly } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const { category, file, mode, currentPage } = location.state || {};
@@ -211,6 +214,7 @@ const MarkdownEditor = () => {
   };
 
   const handleSave = async () => {
+    if (readOnly) { setError('Production content preview is read-only.'); return; }
     if (!filename.trim()) {
       alert("Please enter a filename");
       return;
@@ -241,15 +245,15 @@ const MarkdownEditor = () => {
       if (result.success) {
         invalidateFileList(category.path);
         // Update JSON index with metadata
-        const jsonResult = await updateJSONIndexEntry(
+        const jsonResult = supportsJSONIndex(category.key) ? await updateJSONIndexEntry(
           category.key,
           filename,
           metadata,
-        );
+        ) : { success: true };
 
         if (!jsonResult.success) {
-          console.warn("Failed to update JSON index:", jsonResult.error);
-          // Continue anyway - file was saved successfully
+          setError('Markdown was saved, but website metadata could not be updated. Please retry Save before leaving the editor.');
+          return;
         }
 
         setOriginalContent(content);
@@ -344,7 +348,7 @@ const MarkdownEditor = () => {
               onChange={handleFilenameChange}
               className="filename-input"
               placeholder="filename.md"
-              disabled={mode === "edit"}
+              disabled={readOnly || mode === "edit"}
             />
           </div>
           {isDirty && (
@@ -395,7 +399,7 @@ const MarkdownEditor = () => {
           <button
             className="toolbar-button save-button"
             onClick={handleSave}
-            disabled={saving || !isDirty}
+            disabled={readOnly || saving || !isDirty}
           >
             {saving ? "Saving..." : "Save"}
           </button>
@@ -417,6 +421,7 @@ const MarkdownEditor = () => {
                 <input
                   id="meta-title"
                   type="text"
+                  disabled={readOnly}
                   value={metadata.title}
                   onChange={(e) =>
                     setMetadata({ ...metadata, title: e.target.value })
@@ -431,6 +436,7 @@ const MarkdownEditor = () => {
                 <input
                   id="meta-published-in"
                   type="text"
+                  disabled={readOnly}
                   value={metadata.publishedIn}
                   onChange={(e) =>
                     setMetadata({ ...metadata, publishedIn: e.target.value })
@@ -445,6 +451,7 @@ const MarkdownEditor = () => {
                 <input
                   id="meta-published-at"
                   type="text"
+                  disabled={readOnly}
                   value={metadata.publishedAt}
                   onChange={(e) =>
                     setMetadata({ ...metadata, publishedAt: e.target.value })
@@ -458,6 +465,7 @@ const MarkdownEditor = () => {
                 <label htmlFor="meta-description">Description *</label>
                 <textarea
                   id="meta-description"
+                  disabled={readOnly}
                   value={metadata.description}
                   onChange={(e) =>
                     setMetadata({ ...metadata, description: e.target.value })
@@ -489,6 +497,7 @@ const MarkdownEditor = () => {
           >
             <textarea
               className="markdown-textarea"
+              readOnly={readOnly}
               value={content}
               onChange={handleContentChange}
               placeholder="Write your markdown content here..."

@@ -7,19 +7,31 @@ const path = require('node:path');
 
 let upstream, server, base, directory, cookie;
 const requests = [];
+const storedFiles = new Map([['/test-zone/public/public/articles/article1.md', '# Test article']]);
 before(async () => {
   directory = fs.mkdtempSync(path.join(os.tmpdir(), 'randa-api-test-'));
   fs.writeFileSync(path.join(directory, 'articles.json'), '[]');
   upstream = http.createServer((req, res) => {
     requests.push({ method: req.method, path: req.url, key: req.headers.accesskey });
     res.setHeader('Content-Type', 'application/json');
-    res.end(req.url.endsWith('/') ? JSON.stringify([{ ObjectName: 'article1.md', IsDirectory: false }]) : '# Test article');
+    if (req.method === 'PUT') {
+      let content = '';
+      req.setEncoding('utf8');
+      req.on('data', chunk => { content += chunk; });
+      req.on('end', () => { storedFiles.set(req.url, content); res.end('{}'); });
+      return;
+    }
+    if (req.method === 'DELETE') { storedFiles.delete(req.url); return res.end('{}'); }
+    if (req.url.endsWith('/')) return res.end(JSON.stringify([{ ObjectName: 'article1.md', IsDirectory: false }]));
+    if (!storedFiles.has(req.url)) { res.statusCode = 404; return res.end('{}'); }
+    res.end(storedFiles.get(req.url));
   });
   await new Promise(resolve => upstream.listen(0, '127.0.0.1', resolve));
   Object.assign(process.env, { NODE_ENV: 'test', ADMIN_EMAIL: 'admin@example.test',
     ADMIN_PASSWORD: 'test-only-password', ADMIN_SESSION_SECRET: 'test-only-session-secret',
     BUNNY_STORAGE_ZONE: 'test-zone', BUNNY_STORAGE_API_KEY: 'test-only-key',
-    BUNNY_STORAGE_ENDPOINT: `http://127.0.0.1:${upstream.address().port}`, METADATA_DIR: directory });
+    BUNNY_STORAGE_ENDPOINT: `http://127.0.0.1:${upstream.address().port}`, METADATA_DIR: directory,
+    CONTENT_BACKUP_DIR: path.join(directory, 'private-backups') });
   server = require('../server').listen(0, '127.0.0.1');
   await new Promise(resolve => server.once('listening', resolve));
   base = `http://127.0.0.1:${server.address().port}`;
@@ -82,5 +94,21 @@ test('writes need the admin request header and update only the isolated metadata
   assert.equal(metadata[0].title, 'Fixture');
   const read = await fetch(`${base}/api/storage/read?path=public/public/articles/article1.md`, { headers: adminHeaders() });
   assert.equal((await read.json()).content, '# Test article');
+
+  // Complete an upload/edit/delete round-trip against the isolated mock storage.
+  const fixturePath = 'public/public/articles/article2.md';
+  for (const content of ['# Uploaded fixture', '# Updated fixture — اختبار']) {
+    const write = await fetch(`${base}/api/storage/write`, { method: 'PUT', headers: adminHeaders(), body: JSON.stringify({ path: fixturePath, content }) });
+    assert.equal(write.status, 200);
+    const loaded = await fetch(`${base}/api/storage/read?path=${fixturePath}`, { headers: adminHeaders() });
+    assert.equal((await loaded.json()).content, content);
+  }
+  assert.equal((await fetch(`${base}/metadata/api/articles.json/update`, { method: 'POST', headers: adminHeaders(),
+    body: JSON.stringify({ entryFilename: 'article2.md', metadata: { title: 'Disposable fixture' } }) })).status, 200);
+  const removed = await fetch(`${base}/api/storage/delete?path=${fixturePath}`, { method: 'DELETE', headers: adminHeaders() });
+  assert.equal(removed.status, 200);
+  assert.equal((await removed.json()).success, true);
+  assert.equal(storedFiles.has('/test-zone/' + fixturePath), false);
+  assert.deepEqual((await (await fetch(`${base}/metadata/articles.json`)).json()).map(x => x.filename), ['article1.md']);
   assert.equal((await fetch(`${base}/api/admin/logout`, { method: 'POST', headers: adminHeaders() })).status, 200);
 });
